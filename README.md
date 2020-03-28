@@ -14,21 +14,19 @@
 ### 2. Other issues
 
 #### 2.1 Exception not caught: [vim-hug-neovim-rpc] requires one of `:pythonx import [pynvim|neovim]` command to work
-## https://github.com/roxma/vim-hug-neovim-rpc
-## install pynvim
 
 > python2.7 -m ensurepip --default-pip
 > python2 -m pip install pynvim --user
 
-#### 2.2 install powerline font
+#### 2.2 Install powerline font
 
-##### iterm2 normal font
+##### set iterm2 normal font to powerline font
 
 ##### https://github.com/powerline/fonts
 
-#### 2.3 nerd tree font
+#### 2.3 Nerd tree font missing
 
-##### iterm2 non-ascii 
+##### set iterm2 non-ascii to nerd tree font 
 
 > brew tap homebrew/cask-fonts
 > brew cask install font-hack-nerd-font
