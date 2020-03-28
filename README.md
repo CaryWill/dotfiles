@@ -30,3 +30,10 @@
 
 > brew tap homebrew/cask-fonts
 > brew cask install font-hack-nerd-font
+
+## Usage
+
+1. nerdtree switch between vim and nerdtree
+
+left: ctrl+w+h
+right: ctrl+w+l
