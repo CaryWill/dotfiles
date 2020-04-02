@@ -131,7 +131,9 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Hom
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-alias c="clear"
+# reset lanuch pad
+alias resetlp="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 
