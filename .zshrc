@@ -132,7 +132,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # reset lanuch pad
-alias resetlp="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
+alias rlp="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
+
+# html to pdf
+alias topdf="wkhtmltopdf"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
