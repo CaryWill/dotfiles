@@ -1,16 +1,6 @@
 {
   "tsserver.enableJavascript": true,
-  "eslint.autoFixOnSave": true,
   "diagnostic.enable": true,
   "diagnostic.warningSign": "⚠",
-  "diagnostic.errorSign": "×",
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "graphql"
-  ]
+  "diagnostic.errorSign": "×"
 }
