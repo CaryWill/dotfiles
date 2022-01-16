@@ -28,7 +28,16 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 "CoC plugin
-let g:coc_global_extensions = ['coc-eslint', 'coc-json', 'coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = [
+	\   'coc-cssmodules',
+	\   'coc-emmet',
+	\   'coc-eslint',
+	\   'coc-git',
+	\   'coc-highlight',
+	\   'coc-json',
+	\   'coc-prettier',
+	\   'coc-tsserver',
+	\ ]
 
 "Key binding
 "Plugin --- start ---
@@ -54,6 +63,7 @@ xmap <leader>f  <Plug>(coc-format-selected) " 格式化"
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> g[ <Plug>(coc-diagnostic-prev)
 nmap <silent> g] <Plug>(coc-diagnostic-next)
+inoremap <silent><expr> <c-@> coc#refresh()
 "CoC plugin --- end ---
 
 "Vim mapping --- start ---
