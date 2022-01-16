@@ -37,3 +37,5 @@
 
 left: ctrl+w+h
 right: ctrl+w+l
+
+  

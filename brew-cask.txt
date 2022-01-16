@@ -1,5 +1,0 @@
-android-platform-tools
-font-hack-nerd-font
-hyper
-tickeys
-wkhtmltopdf

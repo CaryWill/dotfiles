@@ -1,16 +1,6 @@
 {
   "url": "git@github.com:CaryWill/dotfiles.git",
   "readme": "README.md",
-  "entities": [
-    "~/.vimrc",
-    "~/.zshrc",
-    {
-      "i": "~/.config/karabiner/karabiner.json",
-      "o": "karabiner/karabiner.json"
-    },
-    [
-      "brew-cask.txt",
-      "brew cask list"
-    ]
-  ]
+  "entities": ["~/.vim/.vimrc", "~/.vim/coc-settings.json", "~/.tmux.conf"]
 }
+
