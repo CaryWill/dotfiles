@@ -3,18 +3,17 @@ set nocompatible        		"Must be first line
 set encoding=utf-8
 set number              		"Line numbers on
 set ignorecase          		"Case insensitive search
-filetype plugin indent on   "Automatically detect file types.
-syntax on                   "Syntax highlighting
-scriptencoding utf-8
 set clipboard=unnamed 			"vim yank will save to system clipboard
 set tabstop=2 							"tabstop is effectively how many columns of whitespace a \t is worth.
 set expandtab               "Tabs are spaces, not tabs
 set backspace=2 						"可以使用 backspace 来删除"
 set shiftwidth=2 						"Number of spaces to use for each step of (auto)indent 格式化的时候可以用到
-let mapleader = ' ' 				"表示 <leader> 我使用空格当作 leader key
 set cursorline
 set wrap                    "Do wrap long lines
 set hidden
+filetype plugin indent on   "Automatically detect file types.
+syntax on                   "Syntax highlighting
+let mapleader = ' ' 				"表示 <leader> 我使用空格当作 leader key
 
 "Plugin
 call plug#begin('~/.vim/plugged')
