@@ -1,6 +1,6 @@
 {
   "url": "git@github.com:CaryWill/dotfiles.git",
   "readme": "README.md",
-  "entities": ["~/.vimrc", "~/.vim/coc-settings.json", "~/.tmux.conf", "~/.zshrc"]
+  "entities": ["~/.vimrc", "~/.vim/coc-settings.json", "~/.tmux.conf", "~/.zshrc", "~/.bashrc"]
 }
 
