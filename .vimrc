@@ -11,22 +11,27 @@ set shiftwidth=2 						"Number of spaces to use for each step of (auto)indent �
 set cursorline
 set wrap                    "Do wrap long lines
 set hidden
+set autoindent
 filetype plugin indent on   "Automatically detect file types.
 syntax on                   "Syntax highlighting
 let mapleader = ' ' 				"表示 <leader> 我使用空格当作 leader key
+"autocmd TextChanged,TextChangedI <buffer> silent write    "自动写入 buffer 到文件中
 
 "Plugin
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree' "目录树
+  Plug 'Xuyuanp/nerdtree-git-plugin' "文件修改图标显示
 	Plug 'ctrlpvim/ctrlp.vim' "文件搜索
 	Plug 'tpope/vim-commentary' "comment = vscode 里的 cmd+/
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} "Conquer of Completion
 	Plug 'vim-airline/vim-airline'
+  Plug 'vim-scripts/delimitMate.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "CoC plugin
 let g:coc_global_extensions = [
-	\   'coc-pairs',
 	\   'coc-eslint',
 	\   'coc-json',
 	\   'coc-prettier',
@@ -57,6 +62,10 @@ xmap <leader>f  <Plug>(coc-format-selected) " 格式化"
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> g[ <Plug>(coc-diagnostic-prev)
 nmap <silent> g] <Plug>(coc-diagnostic-next)
+"Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+"Function refactor.
+nmap <leader>rf <Plug>(coc-refactor)
 "CoC plugin --- end ---
 
 "Vim mapping --- start ---
