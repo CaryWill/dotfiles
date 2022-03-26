@@ -1,8 +1,0 @@
-{
-  "tsserver.enableJavascript": true,
-  "eslint.autoFixOnSave": true,
-  "diagnostic.enable": true,
-  "diagnostic.warningSign": "⚠",
-  "diagnostic.errorSign": "×",
-  "coc.preferences.formatOnSaveFiletypes": ["*"]
-}
