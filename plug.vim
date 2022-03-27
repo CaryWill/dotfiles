@@ -16,12 +16,13 @@ if has("nvim")
   Plug 'hotoo/pangu.vim' "中文排版
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'folke/lsp-colors.nvim'
-  Plug 'arcticicestudio/nord-vim'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 
   "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } "装这个有问题 先用 nerdtree 好了
   "Plug 'kristijanhusak/defx-icons'
+  "Plug 'arcticicestudio/nord-vim'
 endif
 
 call plug#end()

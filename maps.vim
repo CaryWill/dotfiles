@@ -59,11 +59,11 @@ nmap sv :vsplit<Return><C-w>w
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> " Find merge conflict markers
 
 "Switch next buffer
-  nmap [b :bp<CR>
-  nmap ]b :bn<CR>
+nmap [b :bp<CR>
+nmap ]b :bn<CR>
 
 "Adjust viewports to the same size
-  map <Leader>= <C-w>=
+map <Leader>= <C-w>=
 
 "change root dir
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
