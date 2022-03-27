@@ -5,6 +5,7 @@ endif
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' "Git browse
 Plug 'sheerun/vim-polyglot'
 Plug 'hotoo/pangu.vim' "中文排版
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }

@@ -5,7 +5,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Renamed'   :'R',
                 \ 'Unmerged'  :'═',
                 \ 'Deleted'   :'D',
-                \ 'Dirty'     :'💩',
+                \ 'Dirty'     :'✗',
                 \ 'Ignored'   :'☒',
                 \ 'Clean'     :'O',
                 \ 'Unknown'   :'?',
