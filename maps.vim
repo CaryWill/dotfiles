@@ -18,7 +18,7 @@ command! W w !sudo tee > /dev/null %
 
 "Tabs
 "Open current directory
-nmap te :tabedit<Return>
+nmap te :tabedit "给你输入 tab name 的机会，可以配合 telescope 插件
 nmap <S-Tab> :tabprev<Return> "或者 nmap t[ :tabprev<CR> 
 nmap <Tab> :tabnext<Return> "或者 nmap t] :tabnext<CR>
 
