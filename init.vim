@@ -82,6 +82,7 @@ augroup BgHighlight
 augroup END 
 "}}}
 
+
 " File types "{{{
 " ---------------------------------------------------------------------
 " JavaScript
