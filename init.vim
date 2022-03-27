@@ -55,7 +55,7 @@ set shiftwidth=2
 set tabstop=2
 set ai "Auto indent
 set si "Smart indent
-set nowrap "No Wrap lines
+" set nowrap "No Wrap lines
 set backspace=start,eol,indent
 " Finding files - Search down into subfolders
 set path+=**
