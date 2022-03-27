@@ -29,3 +29,5 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # 默认使用 nvim
 alias vim="nvim"
 alias python='python3'
+
+export TERM="xterm-256color"

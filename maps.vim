@@ -18,7 +18,7 @@ command! W w !sudo tee > /dev/null %
 
 "Tabs
 "Open current directory
-nmap te :tabedit 
+nmap te :tabedit<Return>
 nmap <S-Tab> :tabprev<Return> "或者 nmap t[ :tabprev<CR> 
 nmap <Tab> :tabnext<Return> "或者 nmap t] :tabnext<CR>
 
