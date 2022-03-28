@@ -47,6 +47,7 @@ endif
 set t_BE=
 
 set nosc noru nosm
+lang zh_CN.UTF-8
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 "set showmatch
