@@ -16,7 +16,6 @@ set encoding=utf-8
 set title
 set autoindent
 set background=dark
-set nobackup
 set hlsearch
 set showcmd
 set cmdheight=1
@@ -24,7 +23,15 @@ set laststatus=2
 set scrolloff=10
 set expandtab
 set shell=zsh
-set backupskip=/tmp/*,/private/tmp/*
+
+"Backup files
+"but keep backup files inside /tmp directory
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+" set nobackup
+" set backupskip=/tmp/*,/private/tmp/*
+
 "Vim UI
 set guioptions-=r               " remove right-hand scroll bar
 set guioptions-=l               " remove left-hand scroll bar
