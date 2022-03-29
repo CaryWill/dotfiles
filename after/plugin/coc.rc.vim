@@ -1,22 +1,44 @@
 let g:coc_global_extensions = [
       \   'coc-cssmodules',
-      \   'coc-emmet',
       \   'coc-eslint',
       \   'coc-git',
       \   'coc-highlight',
-      \   'coc-imselect',
       \   'coc-json',
-      \   'coc-lists',
-      \   'coc-marketplace',
-      \   'coc-pairs',
       \   'coc-prettier',
       \   'coc-smartf',
-      \   'coc-stylelintplus',
       \   'coc-terminal',
-      \   'coc-tabnine',
       \   'coc-tsserver',
       \   'coc-yank'
       \ ]
+
+" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
+" unicode characters in the file autoload/float.vim
+set encoding=utf-8
+
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+set backupskip=/tmp/*,/private/tmp/*
+"set backupdir=/tmp/.backup//
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=200
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+    " Recently vim can merge signcolumn and number column into one
+    set signcolumn=number
+else
+    set signcolumn=yes
+endif
       
 inoremap <silent><expr> <TAB>
             \ pumvisible() ? "\<C-n>" :
