@@ -5,9 +5,9 @@ endif
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb' "Git browse
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
