@@ -48,14 +48,10 @@ set nosc noru nosm
 lang zh_CN.UTF-8
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
-"set showmatch
-" How many tenths of a second to blink when matching brackets
-"set mat=2
 " Ignore case when searching
 set ignorecase
 " Be smart when using tabs ;)
 set smarttab
-" indents
 filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
@@ -66,6 +62,11 @@ set backspace=start,eol,indent
 " Finding files - Search down into subfolders
 set path+=**
 set wildignore+=*/node_modules/*
+
+"可以折叠函数了
+set foldmethod=syntax
+set nofoldenable
+set foldlevel=99
 
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste

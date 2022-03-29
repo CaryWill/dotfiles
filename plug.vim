@@ -5,7 +5,6 @@ endif
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
@@ -21,9 +20,6 @@ if has("nvim")
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'folke/lsp-colors.nvim'
   Plug 'nvim-lualine/lualine.nvim'
-  
-  "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } "跑命令报错的话，跑下 `:UpdateRemotePlugins` 命令
-  "Plug 'kristijanhusak/defx-git'
 endif
 
 call plug#end()
