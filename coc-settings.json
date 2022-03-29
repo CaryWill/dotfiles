@@ -3,6 +3,9 @@
   "diagnostic.enable": true,
   "diagnostic.warningSign": "⚠",
   "diagnostic.errorSign": "×",
+  "imselect.defaultInput": "com.apple.keylayout.ABC",
+  "imselect.enableStatusItem": false,
+  "imselect.enableFloating": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "*"
   ],
