@@ -63,8 +63,8 @@ set backspace=start,eol,indent
 set path+=**
 set wildignore+=*/node_modules/*
 
-"可以折叠函数了
-set foldmethod=syntax
+"折叠相同 indent 的内容，比如一个函数 body（如果美化过那就是对齐的）
+set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 
