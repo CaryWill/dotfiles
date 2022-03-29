@@ -30,11 +30,6 @@ set shell=zsh
 set directory=/tmp/.swp//
 set undodir=/tmp/.undo//
 
-"Some servers have issues with backup files, see #649.
-set nobackup
-set backupskip=/tmp/*,/private/tmp/*
-"set backupdir=/tmp/.backup//
-
 "Vim UI
 set guioptions-=r               " remove right-hand scroll bar
 set guioptions-=l               " remove left-hand scroll bar
