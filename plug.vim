@@ -18,10 +18,13 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'github/copilot.vim' "配置完成需要 :Copilot setup
+  "配置完成需要 :Copilot setup
+  Plug 'github/copilot.vim' 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'folke/lsp-colors.nvim'
   Plug 'nvim-lualine/lualine.nvim'
+  "vim esc 的时候切换成英文模式
+  Plug 'brglng/vim-im-select' 
   
   "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } "跑命令报错的话，跑下 `:UpdateRemotePlugins` 命令
   "Plug 'kristijanhusak/defx-git'

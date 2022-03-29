@@ -85,6 +85,9 @@ set formatoptions+=r
 set cursorline
 highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
 highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
+"Marks with non-captured group
+syn match myTodo /\%(FIXME:\)\|\%(TODO:\)/
+hi def link myTodo Todo
 
 augroup BgHighlight
   autocmd!
