@@ -27,11 +27,13 @@ set shell=zsh
 "Backup files
 "but keep backup files inside /tmp directory
 "additional / means create same filename under /tmp directory
-set backupdir=/tmp/.backup//
 set directory=/tmp/.swp//
 set undodir=/tmp/.undo//
-" set nobackup
-" set backupskip=/tmp/*,/private/tmp/*
+
+"Some servers have issues with backup files, see #649.
+set nobackup
+set backupskip=/tmp/*,/private/tmp/*
+"set backupdir=/tmp/.backup//
 
 "Vim UI
 set guioptions-=r               " remove right-hand scroll bar
