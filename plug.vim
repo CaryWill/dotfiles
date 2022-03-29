@@ -7,7 +7,6 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' "Git browse
 Plug 'sheerun/vim-polyglot'
-Plug 'hotoo/pangu.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
