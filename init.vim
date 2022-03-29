@@ -26,9 +26,10 @@ set shell=zsh
 
 "Backup files
 "but keep backup files inside /tmp directory
-set backupdir=/tmp//
-set directory=/tmp//
-set undodir=/tmp//
+"additional / means create same filename under /tmp directory
+set backupdir=/tmp/.backup//
+set directory=/tmp/.swp//
+set undodir=/tmp/.undo//
 " set nobackup
 " set backupskip=/tmp/*,/private/tmp/*
 
@@ -124,11 +125,6 @@ if has("unix")
 endif
 
 runtime ./maps.vim
-"}}}
-
-" Extras "{{{
-" ---------------------------------------------------------------------
-set exrc
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
