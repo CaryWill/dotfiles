@@ -1,5 +1,8 @@
-let mapleader = ' ' 				"表示 <leader> 我使用空格当作 leader key
-let maplocalleader = ' ' 				"localleader
+" The default leader is ' '
+let mapleader = ' '
+
+" The default local leader is ','
+let maplocalleader = ','			"localleader
 
 "Description: Keymaps
 

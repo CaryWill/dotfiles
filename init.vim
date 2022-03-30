@@ -21,7 +21,6 @@ set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
-set expandtab
 
 "Backup files
 "but keep backup files inside /tmp directory
@@ -46,8 +45,10 @@ set lazyredraw
 set ignorecase
 set smarttab
 filetype plugin indent on
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=2                " Use indents of 2 spaces
+set expandtab                   " Tabs are spaces, not tabs
+set tabstop=2                   " An indentation every 2 columns
+set softtabstop=2               " Let backspace delete indent
 set ai "Auto indent
 set si "Smart indent
 set backspace=start,eol,indent
