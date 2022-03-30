@@ -1,4 +1,6 @@
 let mapleader = ' ' 				"表示 <leader> 我使用空格当作 leader key
+let maplocalleader = ' ' 				"localleader
+
 "Description: Keymaps
 
 nnoremap <S-C-p> "0p
