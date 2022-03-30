@@ -9,7 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'projekt0n/github-nvim-theme'
 
 if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
@@ -22,7 +22,9 @@ if has("nvim")
   Plug 'nvim-lualine/lualine.nvim'
 endif
 
+"themes
 "Plug 'morhetz/gruvbox'
+"Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 call plug#end()
 
