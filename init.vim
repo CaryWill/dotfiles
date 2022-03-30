@@ -10,7 +10,7 @@ if !1 | finish | endif
 
 set nocompatible
 set number
-syntax enable
+syntax on
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set title
@@ -22,7 +22,6 @@ set cmdheight=1
 set laststatus=2
 set scrolloff=10
 set expandtab
-set shell=zsh
 
 "Backup files
 "but keep backup files inside /tmp directory
@@ -41,24 +40,19 @@ if has('nvim')
   set inccommand=split
 endif
 
-" Suppress appending <PasteStart> and <PasteEnd> when pasting
-set t_BE=
-
-set nosc noru nosm
 lang zh_CN.UTF-8
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
-" Ignore case when searching
 set ignorecase
-" Be smart when using tabs ;)
 set smarttab
 filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
 set ai "Auto indent
 set si "Smart indent
-" set nowrap "No Wrap lines
 set backspace=start,eol,indent
+set wrap
+
 " Finding files - Search down into subfolders
 set path+=**
 set wildignore+=*/node_modules/*
