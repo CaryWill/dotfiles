@@ -9,6 +9,9 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'projekt0n/github-nvim-theme'
+"Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -22,8 +25,5 @@ endif
 "themes
 "Plug 'morhetz/gruvbox'
 "Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-"Plug 'nvim-lua/plenary.nvim'
-"Plug 'nvim-telescope/telescope.nvim'
-
 call plug#end()
 
