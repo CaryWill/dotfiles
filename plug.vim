@@ -18,7 +18,6 @@ if has("nvim")
   Plug 'github/copilot.vim' 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'folke/lsp-colors.nvim'
 endif
 
 "themes
