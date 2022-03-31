@@ -12,7 +12,6 @@ Plug 'projekt0n/github-nvim-theme'
 
 if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-  Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'github/copilot.vim' 
