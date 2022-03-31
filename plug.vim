@@ -14,8 +14,6 @@ Plug 'junegunn/fzf.vim'
 
 if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-"  Plug 'nvim-lua/plenary.nvim'
-"  Plug 'nvim-telescope/telescope.nvim'
   Plug 'github/copilot.vim' 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-lualine/lualine.nvim'
@@ -24,6 +22,8 @@ endif
 "themes
 "Plug 'morhetz/gruvbox'
 "Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
