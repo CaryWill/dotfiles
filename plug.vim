@@ -23,6 +23,10 @@ call plug#end()
 "themes
 "Plug 'morhetz/gruvbox'
 "Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+
+"highlight
+"Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+"alternate for fzf
 "Plug 'nvim-telescope/telescope.nvim'
 "Plug 'nvim-lua/plenary.nvim' 
-"Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
