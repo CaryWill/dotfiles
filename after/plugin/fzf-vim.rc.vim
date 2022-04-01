@@ -1,3 +1,4 @@
+if !exists('g:loaded_fzf') | finish | endif
 "search for files that is not in .gitignore file
 nnoremap <silent> ;f :GFiles<CR>
 nnoremap <silent> ;r :Rg <CR>
