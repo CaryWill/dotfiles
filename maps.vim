@@ -9,6 +9,7 @@ let maplocalleader = ',' "localleader
 "Tabs
 "Open current directory
 nmap te :tabedit 
+nmap tq :tabclose
 "nmap t[ :tabprev<CR> 
 nmap <S-Tab> :tabprev<Return> 
 "nmap t] :tabnext<CR>
