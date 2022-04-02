@@ -46,9 +46,6 @@ autocmd InsertLeave * set nopaste
 
 " Highlights
 set cursorline
-"Marks with non-captured group
-syn match myTodo /\%(FIXME:\)\|\%(TODO:\)/
-hi def link myTodo Todo
 
 " File types 
 " JavaScript

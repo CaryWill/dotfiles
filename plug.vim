@@ -16,6 +16,7 @@ if has("nvim")
   Plug 'projekt0n/github-nvim-theme'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-lua/plenary.nvim' 
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 
 call plug#end()
@@ -23,9 +24,6 @@ call plug#end()
 "themes
 "Plug 'morhetz/gruvbox'
 "Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-
-"highlight
-"Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 "alternate for fuzzy searching
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
