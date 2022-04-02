@@ -21,22 +21,9 @@ nmap <leader>rf <Plug>(coc-refactor)
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gj <Plug>(coc-float-jump)
 
 " navigate diagnostics
 nmap <silent> ]e <Plug>(coc-diagnostic-next-error)
 nmap <silent> [e <Plug>(coc-diagnostic-prev-error)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-        call CocActionAsync('doHover')
-    else
-        execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-endfunction
