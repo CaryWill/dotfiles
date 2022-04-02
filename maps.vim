@@ -1,18 +1,13 @@
 " The default leader is ' '
 let mapleader = ' '
-
 " The default local leader is ','
 let maplocalleader = ',' "localleader
-
-"Description: Keymaps
 
 "Tabs
 "Open current directory
 nmap te :tabedit 
-nmap tq :tabclose
-"nmap t[ :tabprev<CR> 
+nmap tq :tabclose<Return> 
 nmap <S-Tab> :tabprev<Return> 
-"nmap t] :tabnext<CR>
 nmap <Tab> :tabnext<Return> 
 
 "Move window
@@ -47,9 +42,6 @@ noremap K gk
 "Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
-
-"Git
-map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> " Find merge conflict markers
 
 "Switch next buffer
 nmap [b :bp<CR>
