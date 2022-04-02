@@ -2,24 +2,9 @@
 let mapleader = ' '
 
 " The default local leader is ','
-let maplocalleader = ','			"localleader
+let maplocalleader = ',' "localleader
 
 "Description: Keymaps
-
-nnoremap <S-C-p> "0p
-"Delete without yank
-nnoremap <leader>d "_d
-nnoremap x "_x
-
-"Increment/decrement
-nnoremap + <C-a>
-nnoremap - <C-x>
-
-"Delete a word backwards
-"nnoremap dw vb"_d
-
-"Save with root permission
-command! W w !sudo tee > /dev/null %
 
 "Tabs
 "Open current directory
