@@ -1,5 +1,4 @@
-" Fundamentals "{{{
-" ---------------------------------------------------------------------
+" Fundamentals
 
 " init autocmd
 autocmd!
@@ -14,8 +13,6 @@ syntax on
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set title
-set autoindent
-set background=dark
 set hlsearch
 set showcmd
 set cmdheight=1
@@ -23,35 +20,20 @@ set laststatus=2
 set scrolloff=10
 
 "Backup files
-"but keep backup files inside /tmp directory
-"additional / means create same filename under /tmp directory
+"but keep backup files inside /tmp directory additional / means create same filename under /tmp directory
 set directory=/tmp/.swp//
 set undodir=/tmp/.undo//
 
-"Vim UI
-set guioptions-=r               " remove right-hand scroll bar
-set guioptions-=l               " remove left-hand scroll bar
-set guioptions-=L               " remove left-hand scroll bar even if there is a vertical split
-set guioptions-=b               " remove bottom scroll bar
-
-" incremental substitution (neovim)
-if has('nvim')
-  set inccommand=split
-endif
-
 lang zh_CN.UTF-8
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
 set ignorecase
 set smarttab
 filetype plugin indent on
-set shiftwidth=2                " Use indents of 2 spaces
-set expandtab                   " Tabs are spaces, not tabs
-set tabstop=2                   " An indentation every 2 columns
-set softtabstop=2               " Let backspace delete indent
-set ai "Auto indent
-set si "Smart indent
-set backspace=start,eol,indent
+set shiftwidth=2 
+set expandtab
+set tabstop=2
+set softtabstop=2
+set autoindent
+set smartindent
 set wrap
 
 " Finding files - Search down into subfolders
@@ -65,34 +47,20 @@ set foldlevel=99
 
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
-"}}}
 
-" Highlights "{{{
-" ---------------------------------------------------------------------
+" Highlights
 set cursorline
 "Marks with non-captured group
 syn match myTodo /\%(FIXME:\)\|\%(TODO:\)/
 hi def link myTodo Todo
-"}}}
 
-
-" File types "{{{
-" ---------------------------------------------------------------------
+" File types 
 " JavaScript
 au BufNewFile,BufRead *.es6 setf javascript
 " TypeScript
 au BufNewFile,BufRead *.tsx setf typescriptreact
 
-set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
-
-autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-
-"}}}
-
-" Imports "{{{
-" ---------------------------------------------------------------------
+" Imports
 runtime ./plug.vim
 if has("unix")
   let s:uname = system("uname -s")
@@ -103,6 +71,3 @@ if has("unix")
 endif
 
 runtime ./maps.vim
-"}}}
-
-" vim: set foldmethod=marker foldlevel=0:
