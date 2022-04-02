@@ -1,11 +1,7 @@
-" Fundamentals
-
 " init autocmd
 autocmd!
-" set script encoding
+" set script encoding vimscripts
 scriptencoding utf-8
-" stop loading config if it's on tiny or small
-if !1 | finish | endif
 
 set nocompatible
 set number
@@ -62,12 +58,5 @@ au BufNewFile,BufRead *.tsx setf typescriptreact
 
 " Imports
 runtime ./plug.vim
-if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    runtime ./macos.vim
-  endif
-endif
-
+runtime ./macos.vim
 runtime ./maps.vim
