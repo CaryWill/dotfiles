@@ -25,9 +25,6 @@ ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
 vim +PlugInstall +qall
 
 # oh my fish
-# 自行安装下 fish git 插件
-rm -rf "$(pwd)/../../../.local/share/omf"
-rm -rf "$(pwd)/../../../.config/fish"
-rm -rf "$(pwd)/../../../.config/omf"
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
+#ln -sf "$(pwd)/.config/fish/config.fish" ~/.config/fish/config.fish
+# oh my fish git 插件
+#omf install https://github.com/jhillyerd/plugin-git
