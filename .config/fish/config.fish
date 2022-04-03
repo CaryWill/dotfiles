@@ -16,7 +16,9 @@ set -g theme_hostname always
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.nvm $PATH
 set -gx PATH /usr/local/bin $PATH
+set -gx PATH /opt/homebrew/bin $PATH
 
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
@@ -30,17 +32,13 @@ set -gx PATH $ANDROID_HOME/tools $PATH
 set -gx PATH $ANDROID_HOME/tools/bin $PATH
 set -gx PATH $ANDROID_HOME/platform-tools $PATH
 
-# NVM
-set -g NVM_DIR $HOME/.nvm
-function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-  status --is-command-substitution; and return
-
-  if test -f .nvmrc; and test -r .nvmrc;
-    nvm use
-  else
-  end
-end
-
 # 默认使用 nvim
 alias vim="nvim"
 alias python='python3'
+
+# nvm
+# https://dev.to/carstenbehrens/how-to-fix-unknown-command-nvm-on-linux-2kc4
+# NVM
+function nvm
+   bass source $HOME/.nvm/nvm.sh --no-use ';' nvm $argv
+end
