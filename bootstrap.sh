@@ -8,7 +8,9 @@ brew install fish # fish shell
 #brew install fd # 安装 telescope 的话需要
 
 # 安装 fish shell
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
+fish install --path=~/.local/share/omf --config=~/.config/omf
+# 安装 ohmyfish git 插件
 omf install https://github.com/jhillyerd/plugin-git
 
 # 安装字体

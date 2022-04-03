@@ -9,7 +9,7 @@ git clone git@github.com:CaryWill/dotfiles.git ~/.workspace/github/dotfiles
 > 执行 shell
 
 ```shell
-cd ~/.workspace/github/dotfiles && sh bootstrap.sh
+cd ~/workspace/github/dotfiles && sh bootstrap.sh
 ```
 
 ### Coc.nvim 插件
