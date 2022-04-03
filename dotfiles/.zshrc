@@ -29,12 +29,3 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # 默认使用 nvim
 alias vim="nvim"
 alias python='python3'
-
-export TERM="xterm-256color"
-
-# https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
-# tell FZF to use ripgrep
-if type rg &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='rg --files'
-  export FZF_DEFAULT_OPTS='-m --height 50% --border'
-fi
