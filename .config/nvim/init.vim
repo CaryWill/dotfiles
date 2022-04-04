@@ -43,8 +43,6 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 
-set backspace=indent,eol,start
-
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
