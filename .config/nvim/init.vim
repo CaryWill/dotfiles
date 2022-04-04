@@ -6,21 +6,23 @@ scriptencoding utf-8
 set nocompatible
 set number
 syntax on
-set fileencodings=utf-8,sjis,euc-jp,latin
+set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
+"lang zh_CN.UTF-8 如果再遇到 yank 乱码可以打开这个
 set title
 set hlsearch
 set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
+" 让你可以在当前 buffer 没有保存的情况下可以切换到新的 buffer
+set hidden
 
 "Backup files
 "but keep backup files inside /tmp directory additional / means create same filename under /tmp directory
 set directory=/tmp/.swp//
 set undodir=/tmp/.undo//
 
-lang zh_CN.UTF-8
 set ignorecase
 set smarttab
 filetype plugin indent on
@@ -41,6 +43,8 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 
+set backspace=indent,eol,start
+
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
@@ -57,3 +61,4 @@ au BufNewFile,BufRead *.tsx setf typescriptreact
 runtime ./plug.vim
 runtime ./macos.vim
 runtime ./maps.vim
+runtime ./colors/color.vim
