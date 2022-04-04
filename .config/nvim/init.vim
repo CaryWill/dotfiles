@@ -11,11 +11,15 @@ set encoding=utf-8
 "lang zh_CN.UTF-8 如果再遇到 yank 乱码可以打开这个
 set title
 set hlsearch
-set showcmd
 set cmdheight=1
 set scrolloff=10
 " 让你可以在当前 buffer 没有保存的情况下可以切换到新的 buffer
 set hidden
+set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+" Don't wait so long for the next keypress (particularly in ambigious Leader situations.
+set timeoutlen=500
 
 "Backup files
 "but keep backup files inside /tmp directory additional / means create same filename under /tmp directory
