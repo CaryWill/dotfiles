@@ -13,7 +13,6 @@ set title
 set hlsearch
 set showcmd
 set cmdheight=1
-set laststatus=2
 set scrolloff=10
 " 让你可以在当前 buffer 没有保存的情况下可以切换到新的 buffer
 set hidden
