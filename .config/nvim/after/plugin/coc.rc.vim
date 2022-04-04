@@ -6,7 +6,7 @@ let g:coc_global_extensions = [
       \ ]
       
 " coc-prettier
-" Formatting selected code.
+" Formatting selected code. fp -> format pettier
 vmap <leader>fp <Plug>(coc-format-selected)
 " Apply AutoFix to problem on the current line.
 nmap <leader>fq <Plug>(coc-fix-current)
