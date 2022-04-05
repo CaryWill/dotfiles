@@ -6,7 +6,7 @@ brew install fzf # 安装 fzf 的话需要
 brew install ripgrep # 安装 fzf 的话需要
 brew install bat # 安装 fzf 的话需要
 brew install the_silver_searcher # 安装 fzf 的话需要
-brew install fish # fish shell
+#brew install fish # fish shell
 #brew install fd # 安装 telescope 的话需要
 
 # 安装字体
