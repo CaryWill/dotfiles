@@ -1,6 +1,7 @@
 if !exists('g:loaded_fzf') | finish | endif
 
 nnoremap <silent> ;f :Files<CR>
+"nnoremap <silent> ;fg :GFiles<CR>
 nnoremap <silent> ;r :Rg<CR>
 
 "https://github.com/junegunn/fzf.vim/issues/358#issuecomment-841665170
