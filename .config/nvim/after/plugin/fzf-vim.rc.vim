@@ -1,8 +1,5 @@
 if !exists('g:loaded_fzf') | finish | endif
-"https://github.com/junegunn/fzf.vim/issues/358#issuecomment-841665170
-"https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
-"其他额外的参数可以通过跑 `man fzf` 看到
-let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down"
+
 "Change fzf preview window theme
 "https://www.reddit.com/r/neovim/comments/oz1zpe/comment/h7x28c9/?utm_source=share&utm_medium=web2x&context=3
 "use `bat --list-themes` to get theme list
@@ -40,3 +37,30 @@ nnoremap <silent> ;f :Files<CR>
 nnoremap <silent> ;R :RG<CR>
 "fuzzy finder
 nnoremap <silent> ;r :Rg<CR>
+
+" CTRL-A CTRL-Q to select all and build quickfix list
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+" CTRL-A CTRL-Q to select all and build quickfix list
+" 使用 Rg 来 build vim 的 quickfix list
+" 直接使用 vimgrep 的话，直接卡死，估计是因为 node_module 文件太多
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+"https://github.com/junegunn/fzf.vim/issues/358#issuecomment-841665170
+"https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
+"其他额外的参数可以通过跑 `man fzf` 看到
+let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all"
