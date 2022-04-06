@@ -37,6 +37,6 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 nnoremap <silent> ;f :Files<CR>
 "nnoremap <silent> ;fg :GFiles<CR>
 "Exact finder
-nnoremap <silent> ;r :RG<CR>
+nnoremap <silent> ;R :RG<CR>
 "fuzzy finder
-"nnoremap <silent> ;r :Rg<CR>
+nnoremap <silent> ;r :Rg<CR>
