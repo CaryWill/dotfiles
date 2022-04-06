@@ -66,3 +66,5 @@ let g:fzf_action = {
 "https://github.com/junegunn/fzf.vim/issues/185#issuecomment-322120216
 "其他额外的参数可以通过跑 `man fzf` 看到
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all"
+
+command -nargs=1 Vimgrep vimgrep /<args>/g `git ls-files`
