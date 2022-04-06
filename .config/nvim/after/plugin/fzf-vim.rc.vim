@@ -16,7 +16,7 @@ command! -bang -nargs=* Rg
   \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
 
 "We can tell Vim to use ripgrep instead of grep
-set grepprg=rg\ --vimgrep\ --case-sensitive\ --follow
+"set grepprg=rg\ --vimgrep\ --case-sensitive\ --follow
 
 "默认的话 fzf 只有第一次使用 `:Rg yourquery` 命令后才会 popup
 "让你基于搜索结果进行筛选，如果直接使用 `;r` popup 的话，fzf 只是 fuzzy finder
