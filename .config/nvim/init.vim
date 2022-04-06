@@ -36,6 +36,7 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
+set cursorline
 
 " Finding files - Search down into subfolders
 set path+=**
@@ -49,8 +50,8 @@ set foldlevel=99
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
-" Highlights
-set cursorline
+"built-in vim packages
+packadd cfilter "work with vim quickfix list, 使用 `:Cfilter query` 来进行筛选 quickfix list
 
 " File types 
 " JavaScript
