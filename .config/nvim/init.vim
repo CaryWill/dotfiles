@@ -38,6 +38,13 @@ set smartindent
 set wrap
 set cursorline
 
+"Custom command
+"因为 vimgrep 会搜索 node_module 经常卡死，所以定义一个新的命令，忽略 .gitignore 里的 patterns 进行搜索
+"https://stackoverflow.com/a/59544056/10190407
+"http://vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/
+"下面的 Gvimgrep 命令表示接受一个参数（-nargs=1），执行 `vimgrep /<args>/g `git ls-files` 然后打开调用 copen 命令 打开 quickfix
+command -nargs=1 Gvimgrep vimgrep /<args>/g `git ls-files` | copen
+
 " Finding files - Search down into subfolders
 set path+=**
 set wildignore+=*/node_modules/*
