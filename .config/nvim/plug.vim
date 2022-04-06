@@ -8,11 +8,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim' 
+"Plug 'nvim-lua/popup.nvim'
 
 if has("nvim")
   Plug 'github/copilot.vim' 
@@ -26,8 +27,8 @@ call plug#end()
 "Plug 'projekt0n/github-nvim-theme'
 
 "alternate for fuzzy searching
-"Plug 'nvim-telescope/telescope.nvim'
-"Plug 'nvim-lua/plenary.nvim' 
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 
 "Plug 'airblade/vim-gitgutter'
 "Plug 'nvim-lualine/lualine.nvim'

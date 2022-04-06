@@ -14,7 +14,7 @@ let $FZF_DEFAULT_COMMAND='rg --files'
 
 "不匹配文件名
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case '
+  \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --case-sensitive '
   \.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
 
