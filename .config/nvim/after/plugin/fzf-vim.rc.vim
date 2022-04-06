@@ -48,6 +48,7 @@ endfunction
 " CTRL-A CTRL-Q to select all and build quickfix list
 " 使用 Rg 来 build vim 的 quickfix list
 " 直接使用 vimgrep 的话，直接卡死，估计是因为 node_module 文件太多
+"https://github.com/junegunn/fzf.vim/issues/185#issuecomment-322120216
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
   copen
@@ -62,5 +63,6 @@ let g:fzf_action = {
 
 "https://github.com/junegunn/fzf.vim/issues/358#issuecomment-841665170
 "https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
+"https://github.com/junegunn/fzf.vim/issues/185#issuecomment-322120216
 "其他额外的参数可以通过跑 `man fzf` 看到
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all"
