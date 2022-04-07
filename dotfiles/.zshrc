@@ -30,3 +30,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 TERM="xterm" #防止删除键变成空格键
+export LANG="UTF-8"

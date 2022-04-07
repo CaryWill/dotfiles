@@ -8,7 +8,6 @@ set number
 syntax on
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
-lang zh_CN.UTF-8 "如果再遇到 yank 乱码可以打开这个
 set title
 set hlsearch
 set cmdheight=1
