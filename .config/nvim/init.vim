@@ -63,7 +63,8 @@ set foldlevel=99
 autocmd InsertLeave * set nopaste
 
 "built-in vim packages
-packadd cfilter "work with vim quickfix list, 使用 `:Cfilter query` 来进行筛选 quickfix list
+packadd! cfilter "work with vim quickfix list, 使用 `:Cfilter query` 来进行筛选 quickfix list
+"packadd! justify
 
 " File types 
 " JavaScript
