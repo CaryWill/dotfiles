@@ -1,6 +1,7 @@
 "Common(airline)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_section_z='' "隐藏光标的当前所在位置
 set laststatus=2
 set guioptions-=r               " remove right-hand scroll bar
 set guioptions-=l               " remove left-hand scroll bar
