@@ -2,18 +2,23 @@
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
-
+set guioptions-=r               " remove right-hand scroll bar
+set guioptions-=l               " remove left-hand scroll bar
+set guioptions-=L               " remove left-hand scroll bar even if there is a vertical split
+set guioptions-=b               " remove bottom scroll bar
 
 "--- Spring-night theme ---
-if (has("termguicolors"))
+if (has('termguicolors'))
   set termguicolors
-  let &t_8f = "\<esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<esc>[48;2;%lu;%lu;%lum"
+  let &t_8f = '\<esc>[38;2;%lu;%lu;%lum'
+  let &t_8b = '\<esc>[48;2;%lu;%lu;%lum'
 endif
 
 colorscheme spring-night
 set background=dark
 let g:airline_theme="spring_night"
+set termguicolors
+highlight LineNr guibg=rgb(22,33,49)
 "--- end ---
 
 "--- Jellybeans theme ---
@@ -70,3 +75,11 @@ let g:airline_theme="spring_night"
 " colorscheme gruvbox
 " set background=dark
 " let g:airline_theme="gruvbox"
+
+"--- spaceduck ---
+"colorscheme spaceduck
+"set background=dark
+
+"--- everforest ---
+"set background=dark
+"colorscheme everforest

@@ -31,6 +31,7 @@ endif
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'vim-airline/vim-airline-themes'
 "Plug 'morhetz/gruvbox'
+"Plug 'sainnhe/everforest'
 
 "Plug 'airblade/vim-gitgutter'
 "Plug 'nvim-lualine/lualine.nvim'
