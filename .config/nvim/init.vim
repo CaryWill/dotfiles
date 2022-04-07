@@ -36,6 +36,12 @@ set autoindent
 set smartindent
 set wrap
 set cursorline
+set laststatus=2
+
+"vim help reading setting
+set conceallevel=0
+hi link HelpBar Normal
+hi link HelpStar Normal
 
 "Custom command
 "因为 vimgrep 会搜索 node_module 经常卡死，所以定义一个新的命令，忽略 .gitignore 里的 patterns 进行搜索

@@ -11,33 +11,31 @@ nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return> 
 
 "Move window
-nmap <Space> <C-w>w
-map s<left> <C-w>h
-map s<up> <C-w>k
-map s<down> <C-w>j
-map s<right> <C-w>l
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
+" nmap <Space> <C-w>w
+" map s<left> <C-w>h
+" map s<up> <C-w>k
+" map s<down> <C-w>j
+" map s<right> <C-w>l
+" map sh <C-w>h
+" map sk <C-w>k
+" map sj <C-w>j
+" map sl <C-w>l
 
 "Resize window
-nmap <C-w><left> <C-w><
-nmap <C-w><right> <C-w>>
-nmap <C-w><up> <C-w>+
-nmap <C-w><down> <C-w>-
+" nmap <C-w><left> <C-w><
+" nmap <C-w><right> <C-w>>
+" nmap <C-w><up> <C-w>+
+" nmap <C-w><down> <C-w>-
 
 "Easier moving in splited panes
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
 
-"Wrapped lines goes down/up to next row, rather than next line in file.
+"Wrapped lines goes down/up to next row(screen line), rather than next line in file.
 noremap j gj
 noremap k gk
-noremap J gj
-noremap K gk
 
 "Split window
 nmap ss :split<Return><C-w>w
