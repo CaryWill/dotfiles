@@ -57,7 +57,7 @@ set wildignore+=*/node_modules/*
 "折叠相同 indent 的内容，比如一个函数 body（如果美化过那就是对齐的）
 set foldmethod=indent
 set nofoldenable
-set foldlevel=99
+set foldlevel=99 "小于 99 层(shiftwidth)的嵌套都会直接被压成一层
 
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
