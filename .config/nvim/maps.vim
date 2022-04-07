@@ -27,11 +27,11 @@ nmap <Tab> :tabnext<Return>
 " nmap <C-w><up> <C-w>+
 " nmap <C-w><down> <C-w>-
 
-"Easier moving in splited panes
-" nnoremap <C-J> <C-W><C-J>
-" nnoremap <C-K> <C-W><C-K>
-" nnoremap <C-L> <C-W><C-L>
-" nnoremap <C-H> <C-W><C-H>
+"Easier moving in splited panes vim ctrl-hjkl
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "Wrapped lines goes down/up to next row(screen line), rather than next line in file.
 noremap j gj
