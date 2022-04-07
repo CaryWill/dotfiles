@@ -18,7 +18,9 @@ colorscheme spring-night
 set background=dark
 let g:airline_theme="spring_night"
 set termguicolors
-highlight LineNr guibg=rgb(22,33,49)
+hi LineNr guibg=#162131
+hi SignColumn guibg=#162131
+hi! VertSplit guibg=#63707e guifg=#162131
 "--- end ---
 
 "--- Jellybeans theme ---
