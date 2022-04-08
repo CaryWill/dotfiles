@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-color-spring-night'
 
 if has("nvim")
-  Plug 'github/copilot.vim' 
+  Plug 'github/copilot.vim' "vitrual text neovim feture
 endif
 
 "--alternate for fuzzy searching
