@@ -1,11 +1,10 @@
-" init autocmd
-autocmd!
 " set script encoding vimscripts
 scriptencoding utf-8
 
 set nocompatible
 set number
 syntax on
+set synmaxcol=200
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
 "https://github.com/neovim/neovim/issues/5683#issuecomment-420833679
@@ -37,13 +36,17 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
-set cursorline
 set laststatus=2
 
+"cursor line
+"https://github.com/mhinz/vim-galore#smarter-cursorline
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
+
 "vim help reading setting
-set conceallevel=0
-hi link HelpBar Normal
-hi link HelpStar Normal
+"set conceallevel=0
+"hi link HelpBar Normal
+"hi link HelpStar Normal
 
 "Custom command
 "因为 vimgrep 会搜索 node_module 经常卡死，所以定义一个新的命令，忽略 .gitignore 里的 patterns 进行搜索
