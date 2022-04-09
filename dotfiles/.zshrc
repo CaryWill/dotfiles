@@ -31,3 +31,5 @@ export NVM_DIR="$HOME/.nvm"
 
 TERM="xterm" #防止删除键变成空格键
 export LANG="UTF-8"
+#Use Neovim as preferred editor​​ 
+export VISUAL=nvim
