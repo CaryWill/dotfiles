@@ -30,7 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 TERM="xterm" #防止删除键变成空格键
-export LANG="UTF-8"
+export LANG=en_US.UTF-8
 #Use Neovim as preferred editor
 export VISUAL=nvim
 # Use Neovim instead of Vim
