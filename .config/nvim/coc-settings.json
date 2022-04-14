@@ -6,8 +6,8 @@
   "imselect.defaultInput": "com.apple.keylayout.ABC",
   "imselect.enableStatusItem": false,
   "imselect.enableFloating": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "*"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "prettier.requireConfig": true,
   "coc.preferences.extensionUpdateCheck": "daily"
 }
+

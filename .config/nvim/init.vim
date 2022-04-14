@@ -77,6 +77,9 @@ au BufNewFile,BufRead *.es6 setf javascript
 " TypeScript
 au BufNewFile,BufRead *.tsx setf typescriptreact
 
+" Recently vim can merge signcolumn and number column into one
+set signcolumn=number
+
 " Imports
 runtime ./plug.vim
 runtime ./macos.vim
