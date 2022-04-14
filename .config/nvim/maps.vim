@@ -50,3 +50,6 @@ map <Leader>= <C-w>=
 
 "change root dir
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+"Find merge conflict markers
+map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> 
