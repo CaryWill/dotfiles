@@ -8,6 +8,7 @@
   "imselect.enableFloating": false,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "prettier.requireConfig": true,
+  "prettier.statusItemText": "💅",
   "coc.preferences.extensionUpdateCheck": "daily"
 }
 
