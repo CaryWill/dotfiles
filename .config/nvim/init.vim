@@ -4,7 +4,6 @@ scriptencoding utf-8
 set nocompatible
 set number
 syntax on
-set synmaxcol=200
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
 "https://github.com/neovim/neovim/issues/5683#issuecomment-420833679
