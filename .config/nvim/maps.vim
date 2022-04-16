@@ -32,6 +32,8 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 "Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> 
 
+map <leader>e :source ~/.vimrc<CR>
+
 "Switch next buffer
 " nmap [b :bp<CR>
 " nmap ]b :bn<CR>
