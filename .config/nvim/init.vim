@@ -38,8 +38,9 @@ set laststatus=3
 
 " cursor line
 " https://github.com/mhinz/vim-galore#smarter-cursorline
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter,WinLeave * set nocursorline
+" autocmd InsertLeave,WinEnter * set cursorline
+" autocmd InsertEnter,WinLeave * set nocursorline
+set cursorline
 
 " vim help reading setting
 " set conceallevel=0
