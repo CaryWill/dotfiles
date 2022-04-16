@@ -18,30 +18,28 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"Wrapped lines goes down/up to next row(screen line), rather than next line in file.
+" Wrapped lines goes down/up to next row(screen line), rather than next line in file.
 noremap j gj
 noremap k gk
 
-"Split window
+" Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-"change root dir
+" change root dir
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-"Find merge conflict markers
+" Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> 
 
-map <leader>e :source ~/.vimrc<CR>
-
-"Switch next buffer
+" Switch next buffer
 " nmap [b :bp<CR>
 " nmap ]b :bn<CR>
 
-"Adjust viewports to the same size
+" Adjust viewports to the same size
 " map <Leader>= <C-w>=
 
-"Move window
+" Move window
 " nmap <Space> <C-w>w
 " map s<left> <C-w>h
 " map s<up> <C-w>k
@@ -52,7 +50,7 @@ map <leader>e :source ~/.vimrc<CR>
 " map sj <C-w>j
 " map sl <C-w>l
 
-"Resize window
+" Resize window
 " nmap <C-w><left> <C-w><
 " nmap <C-w><right> <C-w>>
 " nmap <C-w><up> <C-w>+
