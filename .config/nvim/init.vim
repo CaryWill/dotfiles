@@ -14,8 +14,8 @@ set scrolloff=10
 
 set hidden " 让你可以在当前 buffer 没有保存的情况下可以切换到新的 buffer
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set ruler" show the cursor position all the time
+set showcmd" display incomplete commands
 " Dont wait so long for the next keypress (particularly in ambigious Leader situations.
 set timeoutlen=500
 
