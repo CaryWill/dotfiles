@@ -12,6 +12,7 @@ let g:airline_left_sep=' '
 let w:airline_skip_empty_sections = 1
 let airline#extensions#tabline#tabs_label = ''
 let airline#extensions#tabline#show_splits = 0
+" let g:airline#extensions#tabline#left_alt_sep = '|'
 
 if (has('termguicolors'))
   set termguicolors
