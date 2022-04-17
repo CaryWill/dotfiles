@@ -9,7 +9,6 @@ let g:airline_theme='spring_night'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline_right_sep=' '
 let g:airline_left_sep=' '
-let g:airline_detect_iminsert=1
 let w:airline_skip_empty_sections = 1
 let airline#extensions#tabline#tabs_label = ''
 let airline#extensions#tabline#show_splits = 0
