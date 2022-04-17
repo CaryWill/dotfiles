@@ -23,7 +23,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 
 " navigate diagnostics
-nmap <silent> ]e <Plug>(coc-diagnostic-next-error)
-nmap <silent> [e <Plug>(coc-diagnostic-prev-error)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> e] <Plug>(coc-diagnostic-next-error)
+nmap <silent> e[ <Plug>(coc-diagnostic-prev-error)
+nmap <silent> d] <Plug>(coc-diagnostic-next)
+nmap <silent> d[ <Plug>(coc-diagnostic-prev)
