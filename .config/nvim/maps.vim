@@ -32,6 +32,12 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> 
 
+"---------- Plugins mapping ----------
+"--------- Fugitive ---------
+"https://www.reddit.com/r/vim/comments/21f4gm/comment/cgcwh5d/?utm_source=share&utm_medium=web2x&context=3
+nnoremap <Leader>gb :Git blame<CR>
+nnoremap <Leader>q :q<CR>
+
 " Switch next buffer
 " nmap [b :bp<CR>
 " nmap ]b :bn<CR>
