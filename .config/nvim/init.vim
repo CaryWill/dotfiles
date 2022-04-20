@@ -21,8 +21,10 @@ set timeoutlen=500
 
 " Backup files
 " but keep backup files inside /tmp directory additional / means create same filename under /tmp directory
+set undofile
 set directory=/tmp/.swp//
 set undodir=/tmp/.undo//
+set backupdir=/tmp/.backup//
 
 set ignorecase
 set smarttab
