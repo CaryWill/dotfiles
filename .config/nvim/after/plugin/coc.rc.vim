@@ -3,6 +3,7 @@ let g:coc_global_extensions = [
       \   'coc-prettier',
       \   'coc-tsserver',
       \   'coc-imselect',
+      \   'coc-git',
       \ ]
       
 " coc-prettier
@@ -27,3 +28,19 @@ nmap <silent> e] <Plug>(coc-diagnostic-next-error)
 nmap <silent> e[ <Plug>(coc-diagnostic-prev-error)
 nmap <silent> d] <Plug>(coc-diagnostic-next)
 nmap <silent> d[ <Plug>(coc-diagnostic-prev)
+
+" Check docs
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
+endfunction
+
+" Git conflict navigation
+nmap c[ <Plug>(coc-git-prevconflict)
+nmap c] <Plug>(coc-git-nextconflict)

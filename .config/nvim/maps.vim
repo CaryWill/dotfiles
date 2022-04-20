@@ -30,7 +30,7 @@ nmap sv :vsplit<Return><C-w>w
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Find merge conflict markers
-map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> 
+" map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR> 
 
 "---------- Plugins mapping ----------
 "--------- Fugitive ---------
