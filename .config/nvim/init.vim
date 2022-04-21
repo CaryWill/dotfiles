@@ -38,6 +38,7 @@ set smartindent
 set wrap
 set laststatus=3
 set autoread
+set nospell
 
 " cursor line
 " https://github.com/mhinz/vim-galore#smarter-cursorline
