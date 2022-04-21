@@ -1,3 +1,7 @@
+" Airline
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#hunks#coc_git = 1
+
 let g:coc_global_extensions = [
       \   'coc-eslint',
       \   'coc-prettier',
