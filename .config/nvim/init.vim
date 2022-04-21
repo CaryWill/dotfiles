@@ -66,6 +66,10 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99 "小于 99 层(shiftwidth)的嵌套都会直接被压成一层
 
+" 可以使用鼠标滚动
+set mouse=a
+set mousehide
+
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
