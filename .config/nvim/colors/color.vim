@@ -25,3 +25,7 @@ set background=dark
 hi LineNr guibg=#162131
 hi SignColumn guibg=#162131
 hi VertSplit guibg=#63707e guifg=#162131
+hi CocUnusedHighlight ctermbg=NONE guibg=NONE guifg=#8a9199
+hi CocWarningSign ctermfg=130 guifg=#f0e9aa
+hi CocInfoSign    ctermfg=11 guifg=#f1a98a
+hi CocHintSign    ctermfg=12 guifg=#a0c8e1
