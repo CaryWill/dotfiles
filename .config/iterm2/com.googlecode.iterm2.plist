@@ -5,7 +5,7 @@
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
-	<false/>
+	<true/>
 	<key>BadgeRightMargin</key>
 	<integer>10</integer>
 	<key>BadgeTopMargin</key>
@@ -4512,7 +4512,7 @@
 			<key>Minimum Contrast (Light)</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
-			<true/>
+			<false/>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
@@ -4536,7 +4536,7 @@
 			<key>Scrollback With Status Bar</key>
 			<true/>
 			<key>Scrollback in Alternate Screen</key>
-			<false/>
+			<true/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
