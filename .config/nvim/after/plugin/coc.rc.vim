@@ -51,8 +51,8 @@ endfunction
 nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
 " navigate conflicts of current buffer
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
+nmap [x <Plug>(coc-git-prevconflict)
+nmap ]x <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
 nmap gs <Plug>(coc-git-chunkinfo)
 " show commit contains current position
@@ -93,6 +93,5 @@ let terminalHeight = 20
 nnoremap tt :call TermToggle(terminalHeight)<CR>
 inoremap tt <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap tt  <C-\><C-n>:call TermToggle(terminalHeight)<CR>
-" Terminal go back to normal mode
-tnoremap <Esc> <C-\><C-n>
-tnoremap :q <C-\><C-n>:q<CR>
+" tnoremap <Esc> <C-\><C-n>
+" tnoremap :q <C-\><C-n>:q<CR>
