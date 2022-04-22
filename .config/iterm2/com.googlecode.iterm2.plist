@@ -3195,7 +3195,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>B9D8867C-E0C1-4106-9371-2999DA70944F</string>
 	<key>EnterCopyModeAutomatically</key>
-	<false/>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict/>
 	<key>HapticFeedbackForEsc</key>
@@ -3207,7 +3207,7 @@
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>IRMemory</key>
-	<integer>10</integer>
+	<integer>5</integer>
 	<key>MaxVertically</key>
 	<false/>
 	<key>New Bookmarks</key>
@@ -4749,9 +4749,9 @@
 	<key>TerminalVMargin</key>
 	<integer>0</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
-	<false/>
-	<key>UseMetal</key>
 	<true/>
+	<key>UseMetal</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WorkAroundBigSurBug</key>
