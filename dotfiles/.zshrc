@@ -35,3 +35,6 @@ export LANG=en_US.UTF-8
 export VISUAL=nvim
 # Use Neovim instead of Vim
 alias vim=nvim
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
