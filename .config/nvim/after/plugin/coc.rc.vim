@@ -88,7 +88,7 @@ function! TermToggle(height)
     endif
 endfunction
 
-" Toggle terminal on/off (neovim)
+" Toggle terminal on/off
 let terminalHeight = 20
 nnoremap tt :call TermToggle(terminalHeight)<CR>
 inoremap tt <Esc>:call TermToggle(terminalHeight)<CR>
