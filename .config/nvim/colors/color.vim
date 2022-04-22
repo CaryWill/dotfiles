@@ -3,8 +3,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
 let g:airline_section_z='' "隐藏光标的当前所在位置
-" remove separators for empty sections
-let g:airline_skip_empty_sections = 1
+let g:airline_skip_empty_sections = 1 " remove separators for empty sections
 let g:airline_theme='spring_night'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline_right_sep=' '

@@ -13,7 +13,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-color-spring-night'
-Plug 'github/copilot.vim' "vitrual text neovim feature
+Plug 'github/copilot.vim' " vitrual text feature from neovim
 
 call plug#end()
 
