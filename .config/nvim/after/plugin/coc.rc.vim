@@ -93,5 +93,5 @@ let terminalHeight = 20
 nnoremap tt :call TermToggle(terminalHeight)<CR>
 inoremap tt <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap tt  <C-\><C-n>:call TermToggle(terminalHeight)<CR>
-" tnoremap <Esc> <C-\><C-n>
-" tnoremap :q <C-\><C-n>:q<CR>
+tnoremap <Esc> <C-\><C-n>
+tnoremap :q <C-\><C-n>:q<CR>
