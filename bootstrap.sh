@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 安装 vim plugin 依赖
-brew install neovim
+brew install neovim --HEAD
 brew install fzf # 安装 fzf 的话需要
 brew install ripgrep # 安装 fzf 的话需要
 brew install bat # 安装 fzf 的话需要
