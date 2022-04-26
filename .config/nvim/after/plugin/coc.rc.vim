@@ -68,7 +68,7 @@ xmap ag <Plug>(coc-git-chunk-outer)
 " from https://www.reddit.com/r/vim/comments/8n5bzs/comment/dzt3fix/?utm_source=share&utm_medium=web2x&context=3
 let g:term_buf = 0
 let g:term_win = 0
-function! TermToggle(height)
+function TermToggle(height)
     if win_gotoid(g:term_win)
         hide
     else
@@ -88,7 +88,6 @@ function! TermToggle(height)
     endif
 endfunction
 
-" Toggle terminal on/off
 let terminalHeight = 20
 nnoremap tt :call TermToggle(terminalHeight)<CR>
 inoremap tt <Esc>:call TermToggle(terminalHeight)<CR>
