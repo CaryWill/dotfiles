@@ -26,6 +26,10 @@ nmap sv :vsplit<CR><C-w>w
 " Find merge conflict markers
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
 
+" reload nvim 的配置文件
+nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <silent> <leader>e :source $MYVIMRC<CR>
+
 "--------- Fugitive ---------
 "https://www.reddit.com/r/vim/comments/21f4gm/comment/cgcwh5d/?utm_source=share&utm_medium=web2x&context=3
 nnoremap <Leader>gb :Git blame<CR>

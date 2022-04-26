@@ -90,8 +90,8 @@ endfunction
 
 " Toggle terminal on/off
 let terminalHeight = 20
-nnoremap tt :call TermToggle(terminalHeight)<CR>
-inoremap tt <Esc>:call TermToggle(terminalHeight)<CR>
-tnoremap tt  <C-\><C-n>:call TermToggle(terminalHeight)<CR>
+nnoremap <silent><leader>t :call TermToggle(terminalHeight)<CR>
+inoremap <silent><leader>t <Esc>:call TermToggle(terminalHeight)<CR>
+tnoremap <silent><leader>t  <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 tnoremap <Esc> <C-\><C-n>
 " tnoremap :q! <C-\><C-n>:q!<CR>
