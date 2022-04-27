@@ -15,6 +15,7 @@ set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
 set timeoutlen=500 " Dont wait so long for the next keypress
 set ignorecase
+set smartcase
 set smarttab
 set shiftwidth=2 
 set expandtab
