@@ -28,12 +28,6 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 
-" navigate diagnostics
-nmap <silent> ]e <Plug>(coc-diagnostic-next-error)
-nmap <silent> [e <Plug>(coc-diagnostic-prev-error)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-
 " Check docs
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -53,15 +47,6 @@ nmap ]g <Plug>(coc-git-nextchunk)
 " navigate conflicts of current buffer
 nmap [x <Plug>(coc-git-prevconflict)
 nmap ]x <Plug>(coc-git-nextconflict)
-" show chunk diff at current position
-nmap gs <Plug>(coc-git-chunkinfo)
-" show commit contains current position
-nmap gc <Plug>(coc-git-commit)
-" create text object for git chunks
-omap ig <Plug>(coc-git-chunk-inner)
-xmap ig <Plug>(coc-git-chunk-inner)
-omap ag <Plug>(coc-git-chunk-outer)
-xmap ag <Plug>(coc-git-chunk-outer)
 
 " Terminal toggle
 " Terminal Function
@@ -89,8 +74,8 @@ function TermToggle(height)
 endfunction
 
 let terminalHeight = 20
-nnoremap tt :call TermToggle(terminalHeight)<CR>
-inoremap tt <Esc>:call TermToggle(terminalHeight)<CR>
-tnoremap tt  <C-\><C-n>:call TermToggle(terminalHeight)<CR>
+nnoremap ;t :call TermToggle(terminalHeight)<CR>
+inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
+tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 " tnoremap <Esc> <C-\><C-n>
 " tnoremap :q! <C-\><C-n>:q!<CR>
