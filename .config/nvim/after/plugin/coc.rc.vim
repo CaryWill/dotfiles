@@ -13,14 +13,14 @@ let g:coc_global_extensions = [
       
 " coc-prettier
 " Formatting selected code. fp -> format pettier
-vmap <leader>fp <Plug>(coc-format-selected)
+vmap <silent><leader>fp <Plug>(coc-format-selected)
 " Apply AutoFix to problem on the current line.
-nmap <leader>fq <Plug>(coc-fix-current)
+nmap <silent><leader>fq <Plug>(coc-fix-current)
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap <silent><leader>rn <Plug>(coc-rename)
 " Function refactor.
-nmap <leader>rf <Plug>(coc-refactor)
+nmap <silent><leader>rf <Plug>(coc-refactor)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -66,8 +66,8 @@ function TermToggle(height)
 endfunction
 
 let terminalHeight = 20
-nnoremap ;t :call TermToggle(terminalHeight)<CR>
+nnoremap <silent>;t :call TermToggle(terminalHeight)<CR>
 " inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
-tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
+tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 " tnoremap <Esc> <C-\><C-n>
 " tnoremap :q! <C-\><C-n>:q!<CR>

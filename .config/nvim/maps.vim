@@ -1,7 +1,7 @@
 let mapleader = ' '
 let maplocalleader = ','
 
-nnoremap <Leader>q :q<CR>
+nnoremap <silent><Leader>q :q<CR>
 
 " Tabs
 nmap te :tabedit 
@@ -24,10 +24,10 @@ nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
 
 " Find merge conflict markers
-map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
+map <silent><leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
 
 " reload nvim 的配置文件
-nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent> <leader>e :e $MYVIMRC<CR>
 
 " --------- Fugitive ---------
