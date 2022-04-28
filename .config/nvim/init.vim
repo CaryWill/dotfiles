@@ -2,7 +2,7 @@ set nocompatible
 scriptencoding utf-8 
 lang en_US.UTF-8 " https://github.com/neovim/neovim/issues/5683#issuecomment-420833679
 syntax on
-filetype plugin on
+filetype plugin indent on
 
 set number
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
@@ -48,7 +48,6 @@ set nofoldenable
 set foldlevel=99 "小于 99 层(shiftwidth)的嵌套都会直接被压成一层
 
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
-" packadd! cfilter "work with vim quickfix list, 使用 `:Cfilter query` 来进行筛选 quickfix list
 
 " Imports
 runtime ./plug.vim
