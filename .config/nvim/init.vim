@@ -44,7 +44,6 @@ set path+=** " Finding files - Search down into subfolders
 set wildignore+=*/node_modules/*
 
 set foldmethod=indent " 折叠相同 indent 的内容
-set nofoldenable
 set foldlevel=99 "小于 99 层(shiftwidth)的嵌套都会直接被压成一层
 
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert

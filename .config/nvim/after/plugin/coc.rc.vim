@@ -28,7 +28,8 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 
-" Check docs
+" Check docs "{{{
+" ---------------------------------------------------------------------
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
     if (index(['vim','help'], &filetype) >= 0)
@@ -39,12 +40,13 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+"}}}
 
-" Terminal toggle
-" Terminal Function
-" from https://www.reddit.com/r/vim/comments/8n5bzs/comment/dzt3fix/?utm_source=share&utm_medium=web2x&context=3
+" Terminal Function "{{{
+" ---------------------------------------------------------------------
 let g:term_buf = 0
 let g:term_win = 0
+let terminalHeight = 20
 function TermToggle(height)
     if win_gotoid(g:term_win)
         hide
@@ -64,10 +66,14 @@ function TermToggle(height)
         let g:term_win = win_getid()
     endif
 endfunction
+"}}}
+"
 
-let terminalHeight = 20
 nnoremap <silent>;t :call TermToggle(terminalHeight)<CR>
 " inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 " tnoremap <Esc> <C-\><C-n>
 " tnoremap :q! <C-\><C-n>:q!<CR>
+
+" Next line is to enable `modeline` in vim
+" vim: set foldmethod=marker foldlevel=0:
