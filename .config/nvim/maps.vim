@@ -31,4 +31,4 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <silent> <leader>e :e $MYVIMRC<CR>
 
 " --------- Fugitive ---------
-nnoremap <Leader>gb :Git blame<CR>
+nnoremap <silent>gb :Git blame<CR>
