@@ -40,14 +40,6 @@ function! s:show_documentation()
     endif
 endfunction
 
-" Using coc-git
-" navigate chunks of current buffer
-nmap [g <Plug>(coc-git-prevchunk)
-nmap ]g <Plug>(coc-git-nextchunk)
-" navigate conflicts of current buffer
-nmap [x <Plug>(coc-git-prevconflict)
-nmap ]x <Plug>(coc-git-nextconflict)
-
 " Terminal toggle
 " Terminal Function
 " from https://www.reddit.com/r/vim/comments/8n5bzs/comment/dzt3fix/?utm_source=share&utm_medium=web2x&context=3
