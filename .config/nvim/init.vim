@@ -31,6 +31,7 @@ set cursorline
 set mouse=a " 可以使用鼠标滚动
 set signcolumn=number " Recently vim can merge signcolumn and number column into one
 set clipboard+=unnamedplus "neovim
+set foldmethod=indent " 折叠相同 indent 的内容
 
 " Backup files
 set directory=/tmp/.swp//
@@ -42,9 +43,6 @@ command -nargs=1 Gvimgrep vimgrep /<args>/g `git ls-files` | copen
 
 set path+=** " Finding files - Search down into subfolders
 set wildignore+=*/node_modules/*
-
-set foldmethod=indent " 折叠相同 indent 的内容
-set foldlevel=99 "小于 99 层(shiftwidth)的嵌套都会直接被压成一层
 
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 
