@@ -1,15 +1,15 @@
-let mapleader = ' ' " The default leader is ' '
-let maplocalleader = ',' " The default local leader is ','
+let mapleader = ' '
+let maplocalleader = ','
 
 nnoremap <Leader>q :q<CR>
 
-"Tabs
+" Tabs
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
 
-"Easier moving in splited panes vim ctrl-hjkl
+" Easier moving in splited panes vim ctrl-hjkl
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -30,6 +30,5 @@ map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR>
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <silent> <leader>e :source $MYVIMRC<CR>
 
-"--------- Fugitive ---------
-"https://www.reddit.com/r/vim/comments/21f4gm/comment/cgcwh5d/?utm_source=share&utm_medium=web2x&context=3
+" --------- Fugitive ---------
 nnoremap <Leader>gb :Git blame<CR>
