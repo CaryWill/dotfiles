@@ -28,7 +28,7 @@ map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR>
 
 " reload nvim 的配置文件
 nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <silent> <leader>e :source $MYVIMRC<CR>
+nnoremap <silent> <leader>e :e $MYVIMRC<CR>
 
 " --------- Fugitive ---------
 nnoremap <Leader>gb :Git blame<CR>
