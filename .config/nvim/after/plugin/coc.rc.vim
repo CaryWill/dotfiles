@@ -75,7 +75,7 @@ endfunction
 
 let terminalHeight = 20
 nnoremap ;t :call TermToggle(terminalHeight)<CR>
-inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
+" inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 " tnoremap <Esc> <C-\><C-n>
 " tnoremap :q! <C-\><C-n>:q!<CR>
