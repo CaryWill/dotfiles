@@ -10,7 +10,7 @@
 
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "prettier.requireConfig": true,
-  "prettier.statusItemText": "💅  ",
+  "prettier.statusItemText": "💅 ",
 
   "colors.filetypes": ["*"],
   "highlight.colors.enable": true,
