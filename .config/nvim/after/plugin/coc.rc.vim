@@ -76,4 +76,4 @@ tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 " tnoremap :q! <C-\><C-n>:q!<CR>
 
 " Next line is to enable `modeline` in vim
-" vim: set foldmethod=marker foldlevel=0:
+" vim: set foldmethod=marker foldlevel=0 foldenable:

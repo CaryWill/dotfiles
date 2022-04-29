@@ -32,6 +32,7 @@ set mouse=a " 可以使用鼠标滚动
 set signcolumn=number " Recently vim can merge signcolumn and number column into one
 set clipboard+=unnamedplus "neovim
 set foldmethod=indent " 折叠相同 indent 的内容
+set nofoldenable
 
 " Backup files
 set directory=/tmp/.swp//
