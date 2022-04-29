@@ -1,6 +1,6 @@
 set nocompatible
 scriptencoding utf-8 
-lang en_US.UTF-8 " https://github.com/neovim/neovim/issues/5683#issuecomment-420833679
+lang en_US.UTF-8
 syntax on
 filetype plugin indent on
 
@@ -39,8 +39,6 @@ set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
 set undofile
 set undodir=/tmp/.undo//
-
-command -nargs=1 Gvimgrep vimgrep /<args>/g `git ls-files` | copen
 
 set path+=** " Finding files - Search down into subfolders
 set wildignore+=*/node_modules/*
