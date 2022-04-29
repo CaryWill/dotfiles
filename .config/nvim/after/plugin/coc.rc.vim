@@ -11,8 +11,7 @@ let g:coc_global_extensions = [
       \   'coc-highlight',
       \ ]
       
-" coc-prettier
-" Formatting selected code. fp -> format pettier
+" Formatting selected code
 vmap <silent><leader>fp <Plug>(coc-format-selected)
 " Apply AutoFix to problem on the current line.
 nmap <silent><leader>fq <Plug>(coc-fix-current)
@@ -67,7 +66,6 @@ function TermToggle(height)
     endif
 endfunction
 "}}}
-"
 
 nnoremap <silent>;t :call TermToggle(terminalHeight)<CR>
 " inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
