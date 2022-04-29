@@ -49,4 +49,3 @@ autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 runtime ./plug.vim
 runtime ./macos.vim
 runtime ./maps.vim
-runtime ./colors/color.vim
