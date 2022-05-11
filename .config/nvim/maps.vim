@@ -71,11 +71,11 @@ endfunction
 "}}}
 
 nnoremap <silent>;t :call TermToggle(terminalHeight)<CR>
-" inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
+inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 " 不直接使用 <ESC> 的原因是如果在 terminal mode 下进入了 git commit
 " 的时候也就是新开了一个 vim buffer 在 insert mode 了，会冲突
-tnoremap <ESC><ESC> <C-\><C-n>
+tnoremap ;q <C-\><C-n>
 " tnoremap :q! <C-\><C-n>:q!<CR>
 
 " --------- Fugitive ---------
