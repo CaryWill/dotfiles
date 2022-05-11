@@ -1,15 +1,8 @@
 " Airline
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#hunks#coc_git = 1
+" let g:airline#extensions#coc#enabled = 1
+" let g:airline#extensions#hunks#coc_git = 1
 
-let g:coc_global_extensions = [
-      \   'coc-eslint',
-      \   'coc-prettier',
-      \   'coc-tsserver',
-      \   'coc-imselect',
-      \   'coc-git',
-      \   'coc-highlight',
-      \ ]
+let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect'] " 'coc-git','coc-highlight'
       
 " Formatting selected code
 vmap <silent><leader>fp <Plug>(coc-format-selected)

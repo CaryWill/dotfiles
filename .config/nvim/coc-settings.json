@@ -13,7 +13,7 @@
   "prettier.statusItemText": "💅 ",
 
   "colors.filetypes": ["*"],
-  "highlight.colors.enable": true,
+  "highlight.colors.enable": false,
 
   "coc.preferences.extensionUpdateCheck": "daily"
 }
