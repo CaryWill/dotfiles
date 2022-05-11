@@ -46,7 +46,45 @@ set wildignore+=*/node_modules/*
 
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 
+" Coc "{{{
+let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect'] " 'coc-git','coc-highlight'
+"}}}
+
+" NerdCommenter "{{{
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
+let g:NERDSpaceDelims = 1
+" leftAlt 里的 alt 是 alternative 的意思
+let g:NERDCustomDelimiters = {
+      \ 'typescript.tsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+      \ 'javascript.jsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+\ }
+"}}}
+
+" NerdTree "{{{
+let NERDTreeShowHidden = 1
+let g:NERDTreeWinPos = 'right'
+let NERDTreeMinimalMenu=1
+let NERDTreeDirArrowExpandable = " "
+let NERDTreeDirArrowCollapsible = " "
+let NERDTreeIgnore = ['\.swp$', '^\.git$', '^\.svn$', '^\.DS_Store$']
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+  \ 'Modified'  :'M',
+  \ 'Staged'    :'A',
+  \ 'Untracked' :'U',
+  \ 'Renamed'   :'R',
+  \ 'Unmerged'  :'═',
+  \ 'Deleted'   :'D',
+  \ 'Dirty'     :'x',
+  \ 'Ignored'   :'☒',
+  \ 'Clean'     :'O',
+  \ 'Unknown'   :'?',
+  \ }
+"}}}
+
 " Imports
 runtime ./plug.vim
-runtime ./macos.vim
 runtime ./maps.vim
+
+" vim: set foldmethod=marker foldlevel=0 foldenable:

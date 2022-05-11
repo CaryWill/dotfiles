@@ -1,37 +1,31 @@
 let mapleader = ' '
 let maplocalleader = ','
 
-nnoremap <silent><Leader>q :q<CR>
+nnoremap <Leader>q :q<CR>
 
 " Tabs
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
-
 " Easier moving in splited panes vim ctrl-hjkl
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 " Move in screen line
 noremap j gj
 noremap k gk
-
 " Split window
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
-
 " Find merge conflict markers
-map <silent><leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
-
+map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
 " reload nvim 的配置文件
-nnoremap <silent><leader>r :source $MYVIMRC<CR>
-nnoremap <silent><leader>e :e $MYVIMRC<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>e :e $MYVIMRC<CR>
 
 " Check docs Function "{{{
-" ---------------------------------------------------------------------
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
     if (index(['vim','help'], &filetype) >= 0)
@@ -45,7 +39,6 @@ endfunction
 "}}}
 
 " Terminal Function "{{{
-" ---------------------------------------------------------------------
 let g:term_buf = 0
 let g:term_win = 0
 let terminalHeight = 20
@@ -70,16 +63,41 @@ function TermToggle(height)
 endfunction
 "}}}
 
-nnoremap <silent>;t :call TermToggle(terminalHeight)<CR>
+nnoremap ;t :call TermToggle(terminalHeight)<CR>
 inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
-tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
-" 不直接使用 <ESC> 的原因是如果在 terminal mode 下进入了 git commit
-" 的时候也就是新开了一个 vim buffer 在 insert mode 了，会冲突
+tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 tnoremap ;q <C-\><C-n>
-" tnoremap :q! <C-\><C-n>:q!<CR>
 
 " --------- Fugitive ---------
-nnoremap <silent>gb :Git blame<CR>
+nnoremap gb :Git blame<CR>
 
-" Next line is to enable `modeline` in vim
+" --------- Coc ---------
+vmap <leader>fp <Plug>(coc-format-selected)
+nmap <leader>fq <Plug>(coc-fix-current)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rf <Plug>(coc-refactor)
+" Remap keys for gotos
+nmap gd <Plug>(coc-definition)
+nmap gr <Plug>(coc-references)
+nmap gy <Plug>(coc-type-definition)
+nmap gi <Plug>(coc-implementation)
+" Format JSON "{{{
+function Prettify()
+   execute "set filetype=json"
+   execute "CocCommand prettier.forceFormatDocument"
+endfunction
+"}}}
+nmap <leader>p :call Prettify()<CR>
+
+" --------- Nerdtree ---------
+map <C-e> :NERDTreeToggle<CR>
+map <localleader>e :NERDTreeFind<CR>
+
+" --------- Telescope ---------
+nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
+nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
+nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
+nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
+nmap <C-s> <M-q> 
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:

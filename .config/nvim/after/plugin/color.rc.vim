@@ -1,4 +1,4 @@
-" :help airline
+" 可以使用 :help airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='spring_night'
 " let g:airline#extensions#tabline#formatter = 'default'
@@ -13,12 +13,17 @@ let g:airline_theme='spring_night'
 " let g:airline_section_z='' "隐藏光标的当前所在位置
 " let g:airline_skip_empty_sections = 1 " remove separators for empty sections
 
+" --- Coc ---
+" let g:airline#extensions#coc#enabled = 1
+" let g:airline#extensions#hunks#coc_git = 1
+
+
 " 默认使用 256 色
-if (has('termguicolors'))
+" if (has('termguicolors'))
   " set termguicolors
   " let &t_8f = '\<esc>[38;2;%lu;%lu;%lum' " 文字色
   " let &t_8b = '\<esc>[48;2;%lu;%lu;%lum' " 背景色
-endif
+" endif
 
 " https://www.ditig.com/256-colors-cheat-sheet 256颜色表
 colorscheme spring-night
