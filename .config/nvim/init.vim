@@ -33,6 +33,7 @@ set signcolumn=number " Recently vim can merge signcolumn and number column into
 set clipboard+=unnamedplus "neovim
 set foldmethod=indent " 折叠相同 indent 的内容
 set nofoldenable
+set foldlevel=99
 
 " Backup files
 set directory=/tmp/.swp//
