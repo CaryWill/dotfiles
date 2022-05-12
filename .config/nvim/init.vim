@@ -48,7 +48,7 @@ set wildignore+=*/node_modules/*
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 "}}}
 
-" Plugins "{{{
+" Plugin list "{{{
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
@@ -68,6 +68,8 @@ Plug 'rhysd/vim-color-spring-night'
 
 call plug#end()
 "}}}
+
+" Plugin settings "{{{
 
 " Coc "{{{
 let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect'] " 'coc-git','coc-highlight'
@@ -104,6 +106,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Clean'     :'O',
   \ 'Unknown'   :'?',
   \ }
+"}}}
+
 "}}}
 
 " Key Mappings "{{{
