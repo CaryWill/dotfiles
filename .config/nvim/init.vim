@@ -155,7 +155,7 @@ endfunction
 let g:term_buf = 0
 let g:term_win = 0
 let terminalHeight = 20
-function TermToggle(height)
+function! TermToggle(height)
     if win_gotoid(g:term_win)
         hide
     else
