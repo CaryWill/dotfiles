@@ -27,11 +27,8 @@ let g:airline_theme='spring_night'
 
 " https://www.ditig.com/256-colors-cheat-sheet 256颜色表
 colorscheme spring-night
-hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
-hi VertSplit guibg=#63707e guifg=#162131 ctermfg=233 ctermbg=233
 " set background=dark
-" hi LineNr guibg=#162131
-" hi SignColumn guibg=#162131
-" hi CocWarningSign ctermfg=130 guifg=#f0e9aa
-" hi CocInfoSign    ctermfg=11 guifg=#f1a98a
-" hi CocHintSign    ctermfg=12 guifg=#a0c8e1
+hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
+hi VertSplit guibg=#63707e guifg=#162131 ctermfg=233 ctermbg=250
+hi SignColumn guibg=#162131 ctermbg=233 ctermfg=233
+hi LineNr guibg=#162131 ctermbg=233 ctermfg=NONE
