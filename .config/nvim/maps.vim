@@ -70,6 +70,7 @@ tnoremap ;q <C-\><C-n>
 
 " --------- Fugitive ---------
 nnoremap gb :Git blame<CR>
+nnoremap :G :tabedit<CR>:G
 
 " --------- Coc ---------
 vmap <leader>fp <Plug>(coc-format-selected)
