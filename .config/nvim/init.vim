@@ -250,6 +250,10 @@ hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
 " hi SignColumn guibg=#162131 ctermbg=233 ctermfg=233
 " hi VertSplit guibg=#63707e guifg=#162131 ctermfg=233 ctermbg=250
 " hi LineNr guibg=#162131 ctermbg=233 ctermfg=NONE
+hi CocWarningSign ctermfg=130 ctermbg=235 guifg=#f0e9aa
+hi CocInfoSign    ctermfg=11 ctermbg=235 guifg=#f1a98a
+hi CocHintSign    ctermfg=12 ctermbg=235 guifg=#a0c8e1
+hi CocErrorSign   ctermbg=235 
 "}}}
  
 " vim: set foldmethod=marker foldlevel=0 foldenable:
