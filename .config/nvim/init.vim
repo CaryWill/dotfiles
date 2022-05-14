@@ -198,7 +198,7 @@ nmap gr <Plug>(coc-references)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 " Format JSON "{{{
-function Prettify()
+function! Prettify()
    execute "set filetype=json"
    execute "CocCommand prettier.forceFormatDocument"
 endfunction
