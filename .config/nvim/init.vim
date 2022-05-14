@@ -65,8 +65,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'github/copilot.vim' " virtual text feature from neovim
 Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-color-spring-night'
-Plug 'nvim-treesitter/nvim-treesitter'
-
 
 call plug#end()
 "}}}
