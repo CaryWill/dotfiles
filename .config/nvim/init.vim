@@ -223,7 +223,7 @@ let g:airline_left_sep=' '
 let w:airline_skip_empty_sections = 1
 let g:airline_section_z='' "隐藏光标的当前所在位置
 let g:airline_section_y='' 
-let g:airline_section_x='' " hide file type
+" let g:airline_section_x='' " hide file type
 let g:airline_skip_empty_sections = 1 " remove separators for empty sections
 let g:airline#extensions#whitespace#enabled = 0 "turn off the trailing whitespace check
 
@@ -260,10 +260,10 @@ hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
 " hi SignColumn guibg=#162131 ctermbg=233 ctermfg=233
 " hi VertSplit guibg=#63707e guifg=#162131 ctermfg=233 ctermbg=250
 " hi LineNr guibg=#162131 ctermbg=233 ctermfg=NONE
-hi CocWarningSign ctermfg=130 ctermbg=235 guifg=#f0e9aa
-hi CocInfoSign    ctermfg=11 ctermbg=235 guifg=#f1a98a
-hi CocHintSign    ctermfg=12 ctermbg=235 guifg=#a0c8e1
-hi CocErrorSign   ctermbg=235 
+hi CocWarningSign ctermbg=235 
+hi CocInfoSign    ctermbg=235 
+hi CocHintSign    ctermbg=235 
+hi CocErrorSign   ctermbg=235
 "}}}
  
 " vim: set foldmethod=marker foldlevel=0 foldenable:
