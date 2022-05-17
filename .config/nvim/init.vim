@@ -49,9 +49,7 @@ autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 "}}}
 
 " Plugin list "{{{
-if has("nvim")
-  let g:plug_home = stdpath('data') . '/plugged'
-endif
+let g:plug_home = stdpath('data') . '/plugged'
 
 call plug#begin()
 
@@ -65,6 +63,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'github/copilot.vim' " virtual text feature from neovim
 Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-color-spring-night'
+" Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 "}}}
@@ -255,6 +254,7 @@ let g:airline#extensions#tabline#show_tab_type = 0     " disables the weird orna
 
 " https://www.ditig.com/256-colors-cheat-sheet 256颜色表
 colorscheme spring-night
+" colorscheme jellybeans
 " set background=dark
 hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
 " hi SignColumn guibg=#162131 ctermbg=233 ctermfg=233
