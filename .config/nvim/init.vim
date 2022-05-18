@@ -3,7 +3,7 @@ let g:plug_home = stdpath('data') . '/plugged'
 let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect']
 call plug#begin()
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
@@ -46,11 +46,20 @@ set undodir=/tmp/.undo//
 set path+=** " Finding files - Search down into subfolders
 set wildignore+=*/node_modules/*
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 
 " --- Plugins setting ---
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinPos = 'right'
 let NERDTreeMinimalMenu=1
+let NERDTreeDirArrowExpandable = " "
+let NERDTreeDirArrowCollapsible = " "
+let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = {
+  \ 'typescript.tsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+  \ 'javascript.jsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+  \ }
 
 " --- Mapping ---
 let mapleader = ' '
