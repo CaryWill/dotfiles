@@ -1,19 +1,24 @@
-" Settings "{{{
-set nocompatible
+" --- Plugins start ---
+let g:plug_home = stdpath('data') . '/plugged'
+let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect']
+call plug#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+call plug#end()
+
 scriptencoding utf-8 
 lang en_US.UTF-8
 syntax on
 filetype plugin indent on
-
 set number
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
-set hlsearch
-set cmdheight=1
-set hidden " 让你可以在当前 buffer 没有保存的情况下可以切换到新的 buffer
+set hidden 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set ruler " show the cursor position all the time
-set showcmd " display incomplete commands
 set timeoutlen=500 " Dont wait so long for the next keypress
 set ignorecase
 set smartcase
@@ -25,118 +30,47 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
-set laststatus=3 " single line status bar
+set laststatus=3
 set autoread
 set nospell
 set cursorline
-set mouse=a " 可以使用鼠标滚动
-set signcolumn=number " Recently vim can merge signcolumn and number column into one
+set signcolumn=number 
 set clipboard+=unnamedplus "neovim
-set foldmethod=indent " 折叠相同 indent 的内容
+set foldmethod=indent
 set nofoldenable
 set foldlevel=99
-
-" Backup files
 set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
 set undofile
 set undodir=/tmp/.undo//
-
 set path+=** " Finding files - Search down into subfolders
 set wildignore+=*/node_modules/*
-
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
-"}}}
 
-" Plugin list "{{{
-let g:plug_home = stdpath('data') . '/plugged'
-
-call plug#begin()
-
-Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'github/copilot.vim' " virtual text feature from neovim
-Plug 'vim-airline/vim-airline'
-Plug 'rhysd/vim-color-spring-night'
-" Plug 'nanotech/jellybeans.vim'
-
-call plug#end()
-"}}}
-
-" Plugin settings "{{{
-
-" Coc "{{{
-let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect'] " 'coc-git','coc-highlight'
-"}}}
-
-" NerdCommenter "{{{
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
-let g:NERDSpaceDelims = 1
-" leftAlt 里的 alt 是 alternative 的意思
-let g:NERDCustomDelimiters = {
-      \ 'typescript.tsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-      \ 'javascript.jsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-\ }
-"}}}
-
-" NerdTree "{{{
+" --- Plugins setting ---
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinPos = 'right'
 let NERDTreeMinimalMenu=1
-let NERDTreeDirArrowExpandable = " "
-let NERDTreeDirArrowCollapsible = " "
-let NERDTreeIgnore = ['\.swp$', '^\.git$', '^\.svn$', '^\.DS_Store$']
 
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-  \ 'Modified'  :'M',
-  \ 'Staged'    :'A',
-  \ 'Untracked' :'U',
-  \ 'Renamed'   :'R',
-  \ 'Unmerged'  :'═',
-  \ 'Deleted'   :'D',
-  \ 'Dirty'     :'x',
-  \ 'Ignored'   :'☒',
-  \ 'Clean'     :'O',
-  \ 'Unknown'   :'?',
-  \ }
-"}}}
-
-"}}}
-
-" Key Mappings "{{{
+" --- Mapping ---
 let mapleader = ' '
 let maplocalleader = ','
-
 nnoremap <Leader>q :q<CR>
-
-" Tabs
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
-" Easier moving in splited panes vim ctrl-hjkl
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" Move in screen line
 noremap j gj
 noremap k gk
-" Split window
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
-" Find merge conflict markers
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
-" reload nvim 的配置文件
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>e :e $MYVIMRC<CR>
-
 " Check docs Function "{{{
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -149,7 +83,6 @@ function! s:show_documentation()
     endif
 endfunction
 "}}}
-
 " Terminal Function "{{{
 let g:term_buf = 0
 let g:term_win = 0
@@ -174,96 +107,36 @@ function! TermToggle(height)
     endif
 endfunction
 "}}}
-
 nnoremap ;t :call TermToggle(terminalHeight)<CR>
 inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 tnoremap ;q <C-\><C-n>
-
-" --------- Fugitive ---------
 nnoremap gb :Git blame<CR>
 nnoremap :G :tabedit<CR>:G
-
-" --------- Coc ---------
 vmap <leader>fp <Plug>(coc-format-selected)
 nmap <leader>fq <Plug>(coc-fix-current)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>rf <Plug>(coc-refactor)
-" Remap keys for gotos
 nmap gd <Plug>(coc-definition)
 nmap gr <Plug>(coc-references)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
-" Format JSON "{{{
+" JSON format "{{{
 function! Prettify()
    execute "set filetype=json"
    execute "CocCommand prettier.forceFormatDocument"
 endfunction
 "}}}
 nmap <leader>p :call Prettify()<CR>
-
-" --------- Nerdtree ---------
 map <C-e> :NERDTreeToggle<CR>
 map <localleader>e :NERDTreeFind<CR>
-
-" --------- Telescope ---------
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
 nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nmap <C-s> <M-q>
-"}}}
 
-" Theme "{{{
-" 可以使用 :help airline
-let g:airline_theme='spring_night'
-let g:airline_right_sep=' '
-let g:airline_left_sep=' '
-let w:airline_skip_empty_sections = 1
-let g:airline_section_z='' "隐藏光标的当前所在位置
-let g:airline_section_y='' 
-" let g:airline_section_x='' " hide file type
-let g:airline_skip_empty_sections = 1 " remove separators for empty sections
-let g:airline#extensions#whitespace#enabled = 0 "turn off the trailing whitespace check
+" --- Theming ---
+hi TabLineSel ctermfg=236 ctermbg=222 guifg=#435060 guibg=#fedf81
 
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#enabled = 1           " enable airline tabline                                                           
-let g:airline#extensions#tabline#show_close_button = 0 " remove 'X' at the end of the tabline                                            
-let g:airline#extensions#tabline#tabs_label = ''       " can put text here like BUFFERS to denote buffers (I clear it so nothing is shown)
-let g:airline#extensions#tabline#buffers_label = ''    " can put text here like TABS to denote tabs (I clear it so nothing is shown)      
-let g:airline#extensions#tabline#fnamemod = ':t'       " disable file paths in the tab                                                    
-let g:airline#extensions#tabline#show_tab_count = 0    " dont show tab numbers on the right                                                           
-let g:airline#extensions#tabline#show_buffers = 0      " dont show buffers in the tabline                                                 
-let g:airline#extensions#tabline#tab_min_count = 2     " minimum of 2 tabs needed to display the tabline                                  
-let g:airline#extensions#tabline#show_splits = 0       " disables the buffer name that displays on the right of the tabline               
-let g:airline#extensions#tabline#show_tab_nr = 0       " disable tab numbers                                                              
-let g:airline#extensions#tabline#show_tab_type = 0     " disables the weird ornage arrow on the tabline
-
-" --- Coc ---
-" let g:airline#extensions#coc#enabled = 1
-" let g:airline#extensions#hunks#coc_git = 1
-
-
-" 默认使用 256 色
-" if (has('termguicolors'))
-  " set termguicolors
-  " let &t_8f = '\<esc>[38;2;%lu;%lu;%lum' " 文字色
-  " let &t_8b = '\<esc>[48;2;%lu;%lu;%lum' " 背景色
-" endif
-
-" https://www.ditig.com/256-colors-cheat-sheet 256颜色表
-colorscheme spring-night
-" colorscheme jellybeans
-" set background=dark
-hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
-" hi SignColumn guibg=#162131 ctermbg=233 ctermfg=233
-" hi VertSplit guibg=#63707e guifg=#162131 ctermfg=233 ctermbg=250
-" hi LineNr guibg=#162131 ctermbg=233 ctermfg=NONE
-hi CocWarningSign ctermbg=235 
-hi CocInfoSign    ctermbg=235 
-hi CocHintSign    ctermbg=235 
-hi CocErrorSign   ctermbg=235
-"}}}
- 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
