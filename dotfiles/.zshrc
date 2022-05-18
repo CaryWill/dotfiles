@@ -31,9 +31,6 @@ export NVM_DIR="$HOME/.nvm"
 
 TERM="xterm" #防止删除键变成空格键
 export LANG=en_US.UTF-8
-#Use Neovim as preferred editor
-export VISUAL=nvim
-# Use Neovim instead of Vim
 alias vim=nvim
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

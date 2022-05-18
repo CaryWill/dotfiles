@@ -3,7 +3,7 @@ let g:plug_home = stdpath('data') . '/plugged'
 let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect']
 call plug#begin()
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
