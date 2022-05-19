@@ -43,8 +43,6 @@ set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
 set undofile
 set undodir=/tmp/.undo//
-set path+=** " Finding files - Search down into subfolders
-set wildignore+=*/node_modules/*
 autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
@@ -64,7 +62,6 @@ let g:NERDCustomDelimiters = {
 " --- Mapping ---
 let mapleader = ' '
 let maplocalleader = ','
-nnoremap <Leader>q :q<CR>
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
@@ -80,18 +77,6 @@ nmap sv :vsplit<CR><C-w>w
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>e :e $MYVIMRC<CR>
-" Check docs Function "{{{
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-        call CocActionAsync('doHover')
-    else
-        execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-endfunction
-"}}}
 " Terminal Function "{{{
 let g:term_buf = 0
 let g:term_win = 0
@@ -120,7 +105,8 @@ nnoremap ;t :call TermToggle(terminalHeight)<CR>
 inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 tnoremap ;q <C-\><C-n>
-nnoremap gb :Git blame<CR>
+nnoremap <leader>b :Git blame<CR>
+nnoremap <leader>q :q<CR>
 nnoremap :G :tabedit<CR>:G
 vmap <leader>fp <Plug>(coc-format-selected)
 nmap <leader>fq <Plug>(coc-fix-current)
@@ -130,13 +116,6 @@ nmap gd <Plug>(coc-definition)
 nmap gr <Plug>(coc-references)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
-" JSON format "{{{
-function! Prettify()
-   execute "set filetype=json"
-   execute "CocCommand prettier.forceFormatDocument"
-endfunction
-"}}}
-nmap <leader>p :call Prettify()<CR>
 map <C-e> :NERDTreeToggle<CR>
 map <localleader>e :NERDTreeFind<CR>
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
