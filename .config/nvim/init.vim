@@ -43,7 +43,6 @@ set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
 set undofile
 set undodir=/tmp/.undo//
-autocmd InsertLeave * set nopaste " Turn off paste mode when leaving insert
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 
