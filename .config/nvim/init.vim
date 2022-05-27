@@ -113,9 +113,9 @@ tnoremap ;q <C-\><C-n>
 nnoremap <leader>b :Git blame<CR>
 nnoremap <leader>q :q<CR>
 nnoremap :G :tabedit<CR>:G
-vmap <leader>fp <Plug>(coc-format-selected)
-nmap <leader>p :CocCommand prettier.forceFormatDocument<CR>
-nmap <leader>fq <Plug>(coc-fix-current)
+vmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f :CocCommand prettier.forceFormatDocument<CR>
+nmap <leader>x <Plug>(coc-fix-current)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>rf <Plug>(coc-refactor)
 nmap gd <Plug>(coc-definition)
