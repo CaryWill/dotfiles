@@ -8,9 +8,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-" Plug 'github/copilot.vim'
-" Plug 'vim-airline/vim-airline'
-" Plug 'rhysd/vim-color-spring-night'
 call plug#end()
 
 scriptencoding utf-8 
@@ -134,9 +131,10 @@ nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nmap <C-s> <M-q>
 
 " --- Theming ---
-hi TabLineSel ctermfg=236 ctermbg=222 guifg=#435060 guibg=#fedf81
 hi SignColumn guibg=#162131 ctermbg=233 ctermfg=233
 hi VertSplit guibg=#63707e guifg=#162131 ctermfg=233 ctermbg=250
 hi LineNr guibg=#162131 ctermbg=233 ctermfg=NONE
+hi Tabline cterm=none gui=none
+hi TabLineSel ctermfg=236 ctermbg=222 guifg=#435060 guibg=#fedf81
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
