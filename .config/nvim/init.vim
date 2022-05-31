@@ -36,7 +36,6 @@ set wrap
 set laststatus=3
 set autoread
 set nospell
-set cursorline
 set signcolumn=number 
 set clipboard+=unnamedplus "neovim
 set foldmethod=indent
