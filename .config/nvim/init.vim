@@ -8,7 +8,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'rhysd/vim-color-spring-night'
 call plug#end()
 
 scriptencoding utf-8 
@@ -44,6 +46,7 @@ set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
 set undofile
 set undodir=/tmp/.undo//
+" colorscheme spring-night
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 
