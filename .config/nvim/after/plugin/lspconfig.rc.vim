@@ -2,6 +2,8 @@ if !exists('g:lspconfig')
   finish
 endif
 
+vim.lsp.set_log_level("debug")
+
 lua << EOF
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
@@ -16,16 +18,10 @@ local on_attach = function(client, bufnr)
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap=true, silent=false, buffer=bufnr }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', 'gy', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format<CR>', opts)
 
   -- formatting
 -- if client.server_capabilities.documentFormattingProvider then
