@@ -36,5 +36,5 @@ autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 " Imports
 runtime ./plugins.vim
 runtime ./mappings.vim
-runtime ./colors/color.vim
+runtime ./colors.vim
 
