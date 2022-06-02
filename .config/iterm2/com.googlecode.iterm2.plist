@@ -3206,7 +3206,7 @@
 	<array>
 		<dict>
 			<key>ASCII Anti Aliased</key>
-			<false/>
+			<true/>
 			<key>ASCII Ligatures</key>
 			<false/>
 			<key>Allow Change Cursor Blink</key>
@@ -3848,13 +3848,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.070588238537311554</real>
+				<real>0.32301074266433716</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.070588238537311554</real>
+				<real>0.25673499703407288</real>
 				<key>Red Component</key>
-				<real>0.070588238537311554</real>
+				<real>0.19983434677124023</real>
 			</dict>
 			<key>Background Color (Dark)</key>
 			<dict>
@@ -3993,13 +3993,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.99999994039535522</real>
+				<real>0.49100983142852783</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.99999994039535522</real>
+				<real>0.52119022607803345</real>
 				<key>Red Component</key>
-				<real>0.9999966025352478</real>
+				<real>0.93542295694351196</real>
 			</dict>
 			<key>Cursor Color (Dark)</key>
 			<dict>
@@ -4030,7 +4030,7 @@
 			<key>Cursor Guide Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.25</real>
+				<real>0.14874388840024835</real>
 				<key>Blue Component</key>
 				<real>0.99078255891799927</real>
 				<key>Color Space</key>
@@ -4073,13 +4073,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.99999994039535522</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.99999994039535522</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.9999966025352478</real>
 			</dict>
 			<key>Cursor Text Color (Dark)</key>
 			<dict>
@@ -4520,7 +4520,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>DinaRemasterII 16</string>
+			<string>MonoLisa-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
