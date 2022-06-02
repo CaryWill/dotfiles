@@ -34,7 +34,7 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 
 " Imports
-runtime ./plugins.vim
-runtime ./mappings.vim
+runtime ./plug.vim
+runtime ./maps.vim
 runtime ./colors.vim
 

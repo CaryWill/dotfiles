@@ -1,18 +1,3 @@
-let g:plug_home = stdpath('data') . '/plugged'
-let g:coc_global_extensions = ['coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-imselect']
-call plug#begin()
-Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-" Plug 'github/copilot.vim' 
-Plug 'vim-airline/vim-airline'
-Plug 'rhysd/vim-color-spring-night'
-call plug#end()
-
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinPos = 'right'
 let NERDTreeMinimalMenu=1
@@ -24,6 +9,7 @@ let g:NERDCustomDelimiters = {
   \ 'typescript.tsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
   \ 'javascript.jsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
   \ }
+
 let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Modified'  :'M',
   \ 'Staged'    :'A',
@@ -37,4 +23,5 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Unknown'   :'?',
   \ }
 
-" vim: set foldmethod=marker foldlevel=0 foldenable:
+map <C-e> :NERDTreeToggle<CR>
+map <localleader>e :NERDTreeFind<CR>

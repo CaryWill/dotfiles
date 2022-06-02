@@ -51,27 +51,7 @@ tnoremap ;q <C-\><C-n>
 nnoremap <leader>b :Git blame<CR>
 nnoremap <leader>q :q<CR>
 nnoremap :G :tabedit<CR>:G
-vmap <leader>f <Plug>(coc-format-selected)
-nmap <leader>f :CocCommand prettier.forceFormatDocument<CR>
-nmap <leader>x <Plug>(coc-fix-current)
-nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>rf <Plug>(coc-refactor)
-nmap gd <Plug>(coc-definition)
-nmap gr <Plug>(coc-references)
-nmap gy <Plug>(coc-type-definition)
-nmap gi <Plug>(coc-implementation)
-map <C-e> :NERDTreeToggle<CR>
-map <localleader>e :NERDTreeFind<CR>
-nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
-nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
-nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
-nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
-nmap <C-s> <M-q>
-map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
-" navigate diagnostics
-nmap <silent> ]e <Plug>(coc-diagnostic-next-error)
-nmap <silent> [e <Plug>(coc-diagnostic-prev-error)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
 
+" vmap <leader>f <Plug>(coc-format-selected)
+" nmap <leader>f :CocCommand prettier.forceFormatDocument<CR>
 " vim: set foldmethod=marker foldlevel=0 foldenable:
