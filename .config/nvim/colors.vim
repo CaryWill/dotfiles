@@ -30,12 +30,12 @@ hi LineNr guibg=#162131 ctermbg=233 ctermfg=NONE
 hi Tabline cterm=none gui=none
 hi TabLineSel ctermfg=236 ctermbg=222 guifg=#435060 guibg=#fedf81
 
-" 默认使用 256 色
-" if (has('termguicolors'))
-  " set termguicolors
-  " let &t_8f = '\<esc>[38;2;%lu;%lu;%lum' " 文字色
-  " let &t_8b = '\<esc>[48;2;%lu;%lu;%lum' " 背景色
-" endif
+默认使用 256 色
+if (has('termguicolors'))
+  set termguicolors
+  let &t_8f = '\<esc>[38;2;%lu;%lu;%lum' " 文字色
+  let &t_8b = '\<esc>[48;2;%lu;%lu;%lum' " 背景色
+endif
 
 " hi CocUnusedHighlight ctermbg=NONE ctermfg=245 guibg=NONE guifg=#8a9199
 " hi CocWarningSign ctermfg=130 ctermbg=235 guifg=#f0e9aa
