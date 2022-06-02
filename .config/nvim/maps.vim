@@ -31,6 +31,7 @@ function! TermToggle(height)
         set showmode
         set laststatus=3
         set showcmd
+        bufdo e
     else
         botright new
         exec "resize " . a:height
