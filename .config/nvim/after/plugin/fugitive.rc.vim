@@ -6,3 +6,4 @@ if !exists('*fugitive#statusline')
 endif
 
 cnoreabbrev g Git
+nnoremap <leader>b :Git blame<CR>

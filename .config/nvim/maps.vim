@@ -48,9 +48,7 @@ nnoremap ;t :call TermToggle(terminalHeight)<CR>
 inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 tnoremap ;q <C-\><C-n>
-nnoremap <leader>b :Git blame<CR>
 nnoremap <leader>q :q<CR>
-nnoremap :G :tabedit<CR>:G
 
 " vmap <leader>f <Plug>(coc-format-selected)
 " nmap <leader>f :CocCommand prettier.forceFormatDocument<CR>
