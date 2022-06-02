@@ -26,7 +26,11 @@ let g:term_win = 0
 let terminalHeight = 20
 function! TermToggle(height)
     if win_gotoid(g:term_win)
-        hide
+        exec 'q!'
+        set number
+        set showmode
+        set laststatus=3
+        set showcmd
     else
         botright new
         exec "resize " . a:height
@@ -37,17 +41,19 @@ function! TermToggle(height)
             let g:term_buf = bufnr("")
             set nonumber
             set norelativenumber
-            set signcolumn=no
+            set noshowmode
+            set laststatus=0
+            set noshowcmd
         endtry
         startinsert!
         let g:term_win = win_getid()
     endif
 endfunction
 "}}}
-nnoremap ;t :call TermToggle(terminalHeight)<CR>
-inoremap ;t <Esc>:call TermToggle(terminalHeight)<CR>
-tnoremap ;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
-tnoremap ;q <C-\><C-n>
+nnoremap <silent>;t :call TermToggle(terminalHeight)<CR>
+inoremap <silent>;t <Esc>:call TermToggle(terminalHeight)<CR>
+tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
+tnoremap <silent>;q <C-\><C-n>
 nnoremap <leader>q :q<CR>
 
 " vmap <leader>f <Plug>(coc-format-selected)
