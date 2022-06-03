@@ -7,7 +7,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-" Plug 'github/copilot.vim' 
+Plug 'github/copilot.vim' 
 Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-color-spring-night'
 
