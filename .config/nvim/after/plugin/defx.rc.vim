@@ -22,6 +22,8 @@ autocmd FileType defx call s:defx_my_settings()
 	  " Define mappings
     nnoremap <silent><buffer><expr> <CR>
 	  \ defx#do_action('open')
+    nnoremap <silent><buffer><expr> o
+	  \ defx#do_action('open_or_close_tree')
 	  nnoremap <silent><buffer><expr> u
 	  \ defx#do_action('cd', ['..'])
 	  nnoremap <silent><buffer><expr> d
@@ -34,7 +36,7 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('rename')
 	  nnoremap <silent><buffer><expr> c
 	  \ defx#do_action('copy')
-	  nnoremap <silent><buffer><expr> o
+	  nnoremap <silent><buffer><expr> f
 	  \ defx#do_action('execute_command', 'open .')
 	  nnoremap <silent><buffer><expr> a
 	  \ defx#do_action('new_file')
