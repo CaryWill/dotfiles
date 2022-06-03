@@ -58,6 +58,17 @@ inoremap <silent>;t <Esc>:call TermToggle(terminalHeight)<CR>
 tnoremap <silent>;t <C-\><C-n>:call TermToggle(terminalHeight)<CR>
 tnoremap <silent>;q <C-\><C-n>
 nnoremap <leader>q :q<CR>
+nnoremap <S-C-p> "0p
+" Delete without yank
+nnoremap <leader>d "_d
+nnoremap x "_x
+" Increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+" Delete a word backwards
+nnoremap dw vb"_d
+" Select all
+nmap <C-a> gg<S-v>G
 
 " vmap <leader>f <Plug>(coc-format-selected)
 " nmap <leader>f :CocCommand prettier.forceFormatDocument<CR>

@@ -23,5 +23,5 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Unknown'   :'?',
   \ }
 
-map <C-e> :NERDTreeToggle<CR>
-map <localleader>e :NERDTreeFind<CR>
+" map <C-e> :NERDTreeToggle<CR>
+" map <localleader>e :NERDTreeFind<CR>
