@@ -31,6 +31,7 @@ function! TermToggle(height)
         set showmode
         set laststatus=3
         set showcmd
+        set hidden
         bufdo e
     else
         botright new
@@ -45,6 +46,7 @@ function! TermToggle(height)
             set noshowmode
             set laststatus=0
             set noshowcmd
+            set hidden
         endtry
         startinsert!
         let g:term_win = win_getid()
