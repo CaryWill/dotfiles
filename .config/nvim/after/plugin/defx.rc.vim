@@ -8,11 +8,17 @@ map <silent><localleader>e :<C-u>Defx -listed -resume
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
 map <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
+function! s:init() 
+   if &filetype == 'netrw'
+      Defx
+   endif
+endfunction
+autocmd VimEnter * call s:init()
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
-    setl nospell
-    setl signcolumn=no
-    setl nonumber
+    set nospell
+    set signcolumn=no
+    set nonumber
 	  " Define mappings
     nnoremap <silent><buffer><expr> <CR>
 	  \ defx#do_action('open')

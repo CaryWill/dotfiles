@@ -26,7 +26,6 @@ set clipboard+=unnamedplus "neovim
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99
-let g:netrw_banner=0
 
 set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
