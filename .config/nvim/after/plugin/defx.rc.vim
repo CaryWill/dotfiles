@@ -11,14 +11,22 @@ map <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 function! s:init() 
    if &filetype == 'netrw'
       Defx
+      set nonumber
    endif
 endfunction
+
+function! s:configDefx()
+   if &filetype == 'defx'
+      set nonumber
+    else
+      set number
+   endif
+endfunction
+
+autocmd FileType * call s:configDefx()
 autocmd VimEnter * call s:init()
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
-    set nospell
-    set signcolumn=no
-    set nonumber
 	  " Define mappings
     nnoremap <silent><buffer><expr> <CR>
 	  \ defx#do_action('open')
