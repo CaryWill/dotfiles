@@ -8,9 +8,17 @@ map <silent><localleader>e :<C-u>Defx -listed -resume
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
 map <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
+autocmd VimEnter * call s:setAsDefaultFileExplorer()
+  function! s:setAsDefaultFileExplorer() 
+     if &filetype == 'netrw'
+        Defx
+        setlocal nonumber
+     endif
+  endfunction
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
 	  " Define mappings
+    setlocal nonumber
     nnoremap <silent><buffer><expr> <CR>
 	  \ defx#do_action('open')
     nnoremap <silent><buffer><expr> o
@@ -66,10 +74,5 @@ call defx#custom#column('git', 'indicators', {
   \ })
 
 call defx#custom#option('_', {
-      \ 'buffer_name': '',
       \ 'show_ignored_files': 1,
-      \ 'toggle': 1,
-      \ 'resume': 1
       \ })
-
-let g:netrw_banner=0
