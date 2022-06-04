@@ -9,6 +9,11 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Completion
 Plug 'github/copilot.vim' 
+Plug 'Shougo/ddc.vim'
+Plug 'vim-denops/denops.vim'
+"Plug 'Shougo/ddc-nvim-lsp'
+"Plug 'Shougo/ddc-matcher_head'
+"Plug 'Shougo/ddc-sorter_rank'
 
 " Searching
 Plug 'nvim-lua/popup.nvim'

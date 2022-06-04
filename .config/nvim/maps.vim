@@ -60,4 +60,5 @@ tnoremap <silent>;q <C-\><C-n>
 nnoremap <leader>q :q<CR>
 " Select all
 nmap <C-a> gg<S-v>G
+" Completion
 " vim: set foldmethod=marker foldlevel=0 foldenable:
