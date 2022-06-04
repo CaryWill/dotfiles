@@ -8,11 +8,11 @@ Plug 'kristijanhusak/defx-git'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Completion
+Plug 'neovim/nvim-lspconfig'
 Plug 'github/copilot.vim' 
-Plug 'Shougo/ddc.vim'
 Plug 'vim-denops/denops.vim'
+Plug 'Shougo/ddc.vim'
 Plug 'Shougo/ddc-nvim-lsp'
-Plug 'Shougo/ddc-omni'
 Plug 'Shougo/ddc-matcher_head'
 Plug 'Shougo/ddc-sorter_rank'
 
@@ -24,10 +24,8 @@ Plug 'nvim-telescope/telescope.nvim'
 " Theming
 Plug 'EdenEast/nightfox.nvim'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "Plug 'rhysd/vim-color-spring-night'
 "Plug 'vim-airline/vim-airline'
 
-" LSP
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'neovim/nvim-lspconfig'
 call plug#end()
