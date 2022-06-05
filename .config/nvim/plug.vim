@@ -28,4 +28,8 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "Plug 'rhysd/vim-color-spring-night'
 "Plug 'vim-airline/vim-airline'
 
+" Debugging
+"Plug 'mfussenegger/nvim-dap'
+"Plug 'rcarriga/nvim-dap-ui'
+
 call plug#end()
