@@ -15,6 +15,7 @@ Plug 'Shougo/ddc.vim'
 Plug 'Shougo/ddc-nvim-lsp'
 Plug 'Shougo/ddc-matcher_head'
 Plug 'Shougo/ddc-sorter_rank'
+Plug 'williamboman/nvim-lsp-installer'
 
 " Searching
 Plug 'nvim-lua/popup.nvim'

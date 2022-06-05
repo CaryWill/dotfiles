@@ -1,12 +1,12 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-map <C-e> :Defx<CR>
-map <silent><localleader>e :<C-u>Defx -listed -resume
+map <C-e> :Defx -toggle<CR>
+map <silent><localleader>e :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size
       \ -buffer-name=tab`tabpagenr()`
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
-map <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+map <silent>fi :<C-u>Defx -toggle -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
 autocmd VimEnter * call s:setAsDefaultFileExplorer()
   function! s:setAsDefaultFileExplorer() 

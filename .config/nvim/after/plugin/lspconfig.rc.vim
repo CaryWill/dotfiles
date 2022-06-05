@@ -28,10 +28,13 @@ nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
+nvim_lsp.sumneko_lua.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
   init_options = {
     formatters = {
       eslint_d = {
