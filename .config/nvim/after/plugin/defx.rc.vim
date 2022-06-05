@@ -1,7 +1,7 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-map <C-e> :Defx -toggle<CR>
+map <C-e> :<C-U>Defx -toggle<CR>
 map <silent><localleader>e :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size
       \ -buffer-name=tab`tabpagenr()`
@@ -13,6 +13,7 @@ autocmd VimEnter * call s:setAsDefaultFileExplorer()
      if &filetype == 'netrw'
         Defx
         setlocal nonumber
+        only
      endif
   endfunction
 autocmd FileType defx call s:defx_my_settings()
@@ -20,7 +21,10 @@ autocmd FileType defx call s:defx_my_settings()
 	  " Define mappings
     setlocal nonumber
     nnoremap <silent><buffer><expr> <CR>
-	  \ defx#do_action('open')
+    \ defx#is_directory() ? defx#do_action('open') :
+    \ defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
+    nnoremap <silent><buffer><expr> <Space>
+    \ defx#do_action('multi', [['drop', 'split'], 'quit'])
     nnoremap <silent><buffer><expr> o
 	  \ defx#do_action('open_or_close_tree')
 	  nnoremap <silent><buffer><expr> u
@@ -54,6 +58,20 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('redraw')
 	  nnoremap <silent><buffer><expr> cd
 	  \ defx#do_action('change_vim_cwd')
+    nnoremap <silent><buffer><expr> <C-l>
+	  \ defx#do_action('redraw')
+    nnoremap <silent><buffer><expr> <C-g>
+	  \ defx#do_action('print')
+    nnoremap <silent><buffer><expr> cd
+	  \ defx#do_action('change_vim_cwd')
+    nnoremap <silent><buffer><expr> ~
+	  \ defx#do_action('cd')
+    nnoremap <silent><buffer><expr> ;
+	  \ defx#do_action('repeat')
+    nnoremap <silent><buffer><expr> .
+	  \ defx#do_action('toggle_ignored_files')
+    nnoremap <silent><buffer><expr> M
+	  \ defx#do_action('new_multiple_files')
 	endfunction
 
 call defx#custom#column('icon', {
@@ -74,5 +92,11 @@ call defx#custom#column('git', 'indicators', {
   \ })
 
 call defx#custom#option('_', {
+      \ 'winwidth': 40,
+      \ 'split': 'vertical',
+      \ 'direction': 'botright',
       \ 'show_ignored_files': 1,
+      \ 'buffer_name': '',
+      \ 'toggle': 1,
+      \ 'resume': 1
       \ })
