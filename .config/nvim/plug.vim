@@ -7,15 +7,19 @@ Plug 'preservim/nerdcommenter'
 Plug 'kristijanhusak/defx-git'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Completion
+" LSP
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+
+" Completion
 Plug 'github/copilot.vim' 
 Plug 'vim-denops/denops.vim'
 Plug 'Shougo/ddc.vim'
 Plug 'Shougo/ddc-nvim-lsp'
 Plug 'Shougo/ddc-matcher_head'
 Plug 'Shougo/ddc-sorter_rank'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 
 " Searching
 Plug 'nvim-lua/popup.nvim'
