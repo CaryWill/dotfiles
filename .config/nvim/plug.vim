@@ -22,8 +22,8 @@ Plug 'Shougo/ddc.vim'
 Plug 'Shougo/ddc-nvim-lsp'
 Plug 'Shougo/ddc-matcher_head'
 Plug 'Shougo/ddc-sorter_rank'
-Plug 'windwp/nvim-autopairs'
-Plug 'windwp/nvim-ts-autotag'
+" Plug 'windwp/nvim-autopairs'
+" Plug 'windwp/nvim-ts-autotag'
 
 " Searching
 Plug 'nvim-lua/popup.nvim'
