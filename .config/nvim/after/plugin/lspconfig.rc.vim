@@ -49,6 +49,7 @@ nvim_lsp.diagnosticls.setup {
     },
     formatFiletypes = {
       css = 'prettier',
+      less = 'prettier',
       javascript = 'eslint_d',
       javascriptreact = 'eslint_d',
       json = 'prettier',
