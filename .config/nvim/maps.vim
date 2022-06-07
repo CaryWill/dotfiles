@@ -26,7 +26,8 @@ let g:term_win = 0
 let terminalHeight = 20
 function! TermToggle(height)
     if win_gotoid(g:term_win)
-        exec 'q!'
+        hide
+        " exec 'q!'
         "set number
         "set showmode
         "set laststatus=3
