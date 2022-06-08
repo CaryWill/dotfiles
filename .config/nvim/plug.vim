@@ -5,11 +5,11 @@ Plug 'preservim/nerdcommenter'
 
 " File explorer
 " -- まだなっています　defx の使用方法は、でもスピードは速い --
-Plug 'kristijanhusak/defx-git'
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'kristijanhusak/defx-git'
+"Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " -- nerdtree に戻る --
-" Plug 'scrooloose/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
