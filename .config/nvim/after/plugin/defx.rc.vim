@@ -26,6 +26,8 @@ autocmd FileType defx call s:defx_my_settings()
     \ defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
     nnoremap <silent><buffer><expr> <Space>
     \ defx#do_action('multi', [['drop', 'split'], 'quit'])
+	  nnoremap <silent><buffer><expr> o
+    \	defx#do_action('open_or_close_tree')
 	  nnoremap <silent><buffer><expr> u
 	  \ defx#do_action('cd', ['..'])
 	  nnoremap <silent><buffer><expr> d
