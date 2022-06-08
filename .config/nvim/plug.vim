@@ -8,8 +8,8 @@ Plug 'preservim/nerdcommenter'
 "Plug 'kristijanhusak/defx-git'
 "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " -- nerdtree に戻る --
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+ Plug 'scrooloose/nerdtree'
+ "Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'

@@ -21,7 +21,7 @@ autocmd FileType defx call s:defx_my_settings()
     setlocal nonumber
     nnoremap <silent><buffer><expr> <CR>
     \ defx#is_directory() ? defx#do_action('open') :
-    \ defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
+    \ defx#do_action('multi', ['drop'])
     nnoremap <silent><buffer><expr> <Space>
     \ defx#do_action('multi', [['drop', 'split'], 'quit'])
     nnoremap <silent><buffer><expr> o
