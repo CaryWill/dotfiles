@@ -1,8 +1,8 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-"map <C-e> :<C-U>Defx -toggle -columns=indent:mark:icon:icons:filename:git:size<CR>
-nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
+map <C-e> :<C-U>Defx -toggle -columns=indent:mark:icon:icons:filename:git:size<CR>
+nnoremap <silent><localleader>e :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size
       \ -buffer-name=defx
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
