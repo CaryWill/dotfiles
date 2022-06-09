@@ -13,8 +13,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-" Plug 'williamboman/nvim-lsp-installer'
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'williamboman/nvim-lsp-installer'
 
 " Completion
 Plug 'github/copilot.vim' 
