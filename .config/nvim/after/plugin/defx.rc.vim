@@ -1,7 +1,26 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-map <C-e> :<C-U>Defx -toggle -columns=indent:mark:icon:icons:filename:git:size<CR>
+
+function! SearchNode()
+ let list = split(expand('%:p'), '/')
+ let index = 0
+ let length = len(list)
+ for p in reverse(list) 
+    "let currentDir = reverse(list[index:length-1]).join('/')
+    "echo currentDir
+    let index += 1
+    let currentDir = '/' . join(reverse(list[index:length-1]), '/')
+    let gitDir = currentDir . '/.git' 
+    if isdirectory(gitDir)
+      break
+      " open tree defx
+    else
+      continue
+    endif
+ endfor
+endfunction
+nnoremap <C-e> :call SearchNode()<CR>
 nnoremap <silent><localleader>e :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size
       \ -buffer-name=defx
@@ -27,7 +46,7 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> <Space>
     \ defx#do_action('multi', [['drop', 'split'], 'quit'])
 	  nnoremap <silent><buffer><expr> o
-    \	defx#do_action('open_or_close_tree')
+    \	defx#do_action('open_or_close_tree', 'nested')
 	  nnoremap <silent><buffer><expr> u
 	  \ defx#do_action('cd', ['..'])
 	  nnoremap <silent><buffer><expr> d
