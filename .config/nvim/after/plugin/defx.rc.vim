@@ -1,7 +1,6 @@
 if !exists('g:loaded_defx') | finish | endif
 
-" Define mappings
-let g:history = []
+" TODO: resume last tree state
 function! SearchNode()
  " silence the cmd if test passed
  let list = split(expand('%:p'), '/')
@@ -41,11 +40,9 @@ function! SearchNode()
  endif
 
 endfunction
-nnoremap <silent><C-e> :call SearchNode()<CR>
-nnoremap <silent><localleader>e :<C-u>Defx -toggle -listed -resume
-      \ -columns=indent:mark:icon:icons:filename:git:size
-      \ -buffer-name=defx
-      \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent><localleader>e :call SearchNode()<CR>
+nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
+      \ -columns=indent:mark:icon:icons:filename:git:size<CR>
 
 autocmd VimEnter * call s:setAsDefaultFileExplorer()
   function! s:setAsDefaultFileExplorer() 
