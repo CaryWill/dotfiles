@@ -12,7 +12,7 @@ function! SearchNode()
     let g:term_win = 0 
     hide 
  else 
-   Defx
+   Defx -resume
    let g:term_win = win_getid()
    let paths = []
 
@@ -35,7 +35,7 @@ function! SearchNode()
    endfor
    for c in reverse(paths)
       silent execute "/" . c
-      normal o
+      normal open
    endfor
  endif
 
@@ -64,9 +64,11 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> <Space>
     \ defx#do_action('multi', [['drop', 'split'], 'quit'])
 	  nnoremap <silent><buffer><expr> o
-    \	defx#do_action('open_or_close_tree', 'nested')
-	  nnoremap <silent><buffer><expr> u
-	  \ defx#do_action('cd', ['..'])
+    \	defx#do_action('open_or_close_tree')
+	  nnoremap <silent><buffer><expr> open
+    \	defx#do_action('open_tree')
+    nnoremap <silent><buffer><expr> u
+    \ defx#do_action('cd', ['..'])
 	  nnoremap <silent><buffer><expr> d
 	  \ defx#do_action('remove')
 	  nnoremap <silent><buffer><expr> m
