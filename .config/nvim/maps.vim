@@ -18,8 +18,8 @@ noremap k gk
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
-nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <leader>e :e $MYVIMRC<CR>
+nnoremap <silent><leader>r :source $MYVIMRC<CR>
+nnoremap <silent><leader>e :e $MYVIMRC<CR>
 " Terminal Function "{{{
 let g:term_buf = 0
 let g:term_win = 0
