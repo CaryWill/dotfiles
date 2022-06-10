@@ -11,7 +11,6 @@ function! SearchNode()
 
  if win_gotoid(g:term_win)
     let g:term_win = 0 
-    echo g:term_win
     hide 
  else 
    Defx
@@ -36,14 +35,13 @@ function! SearchNode()
       endif
    endfor
    for c in reverse(paths)
-      execute "/" . c
+      silent execute "/" . c
       normal o
    endfor
-   echo paths
  endif
 
 endfunction
-nnoremap <C-e> :call SearchNode()<CR>
+nnoremap <silent><C-e> :call SearchNode()<CR>
 nnoremap <silent><localleader>e :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size
       \ -buffer-name=defx
