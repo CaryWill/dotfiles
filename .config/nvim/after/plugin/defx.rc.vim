@@ -4,14 +4,13 @@ function! SearchNode()
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
- let g:defx_win = 0
 
- if win_gotoid(g:term_win)
-    let g:term_win = 0 
+ if win_gotoid(g:defx_win)
+    let g:defx_win = 0 
     hide 
  else 
    Defx -resume
-   let g:term_win = win_getid()
+   let g:defx_win = win_getid()
    let paths = []
 
    for p in reverse(list) 
