@@ -1,7 +1,6 @@
 if !exists('g:loaded_defx') | finish | endif
 
 function! SearchNode()
- " silence the cmd if test passed
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
