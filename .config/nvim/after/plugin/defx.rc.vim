@@ -113,7 +113,7 @@ call defx#custom#column('git', 'indicators', {
 call defx#custom#option('_', {
       \ 'winwidth': 40,
       \ 'split': 'vertical',
-      \ 'direction': 'botright',
+      \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
       \ 'buffer_name': '',
       \ })
