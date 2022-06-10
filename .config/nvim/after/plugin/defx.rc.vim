@@ -1,24 +1,47 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-
+let g:history = []
 function! SearchNode()
+ " silence the cmd if test passed
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
- for p in reverse(list) 
-    "let currentDir = reverse(list[index:length-1]).join('/')
-    "echo currentDir
-    let index += 1
-    let currentDir = '/' . join(reverse(list[index:length-1]), '/')
-    let gitDir = currentDir . '/.git' 
-    if isdirectory(gitDir)
-      break
-      " open tree defx
-    else
-      continue
-    endif
- endfor
+ let g:defx_win = 0
+
+ if win_gotoid(g:term_win)
+    let g:term_win = 0 
+    echo g:term_win
+    hide 
+ else 
+   Defx
+   let g:term_win = win_getid()
+   let paths = []
+
+   for p in reverse(list) 
+      let index += 1
+      let currentDirFullPath = '/' . join(reverse(list[index:length-1]), '/')
+      let gitDir = currentDirFullPath . '/.git' 
+      if index == 1
+        let dir = p
+        call add(paths, dir)
+      else 
+        let dir = p . '\/'
+        call add(paths, dir)
+      endif
+      if isdirectory(gitDir)
+        break
+      else
+        continue
+      endif
+   endfor
+   for c in reverse(paths)
+      execute "/" . c
+      normal o
+   endfor
+   echo paths
+ endif
+
 endfunction
 nnoremap <C-e> :call SearchNode()<CR>
 nnoremap <silent><localleader>e :<C-u>Defx -toggle -listed -resume
@@ -98,6 +121,4 @@ call defx#custom#option('_', {
       \ 'direction': 'botright',
       \ 'show_ignored_files': 1,
       \ 'buffer_name': '',
-      \ 'toggle': 1,
-      \ 'resume': 1
       \ })
