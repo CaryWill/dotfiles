@@ -16,14 +16,14 @@ function! SearchNode()
 
    for p in reverse(list) 
       let index += 1
-      let currentDirFullPath = '/' . join(reverse(list[index:length-1]), '/')
+      let currentDirFullPath = '/' .. join(reverse(list[index:length-1]), '/')
       " .git as root dir
-      let gitDir = currentDirFullPath . '/.git' 
+      let gitDir = currentDirFullPath .. '/.git' 
       if index == 1
         let dir = p
         call add(paths, dir)
       else 
-        let dir = p . '\/'
+        let dir = p .. '\/'
         call add(paths, dir)
       endif
       if isdirectory(gitDir)
@@ -33,7 +33,7 @@ function! SearchNode()
       endif
    endfor
    for c in reverse(paths)
-      silent execute "/" . c
+      silent execute "/" .. c
       normal open_tree
    endfor
  endif
