@@ -37,8 +37,8 @@ function! SearchNode()
       normal open_tree
    endfor
  endif
-
 endfunction
+
 nnoremap <silent><localleader>e :call SearchNode()<CR>
 nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size<CR>
@@ -112,7 +112,7 @@ call defx#custom#column('git', 'indicators', {
   \ })
 
 call defx#custom#option('_', {
-      \ 'winwidth': 40,
+      \ 'winwidth': 35,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
