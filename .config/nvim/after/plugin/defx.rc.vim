@@ -1,6 +1,5 @@
 if !exists('g:loaded_defx') | finish | endif
 
-" TODO: resume last tree state
 function! SearchNode()
  " silence the cmd if test passed
  let list = split(expand('%:p'), '/')
@@ -19,6 +18,7 @@ function! SearchNode()
    for p in reverse(list) 
       let index += 1
       let currentDirFullPath = '/' . join(reverse(list[index:length-1]), '/')
+      " .git as root dir
       let gitDir = currentDirFullPath . '/.git' 
       if index == 1
         let dir = p
@@ -35,7 +35,7 @@ function! SearchNode()
    endfor
    for c in reverse(paths)
       silent execute "/" . c
-      normal open
+      normal open_tree
    endfor
  endif
 
@@ -65,7 +65,7 @@ autocmd FileType defx call s:defx_my_settings()
     \ defx#do_action('multi', [['drop', 'split'], 'quit'])
 	  nnoremap <silent><buffer><expr> o
     \	defx#do_action('open_or_close_tree')
-	  nnoremap <silent><buffer><expr> open
+	  nnoremap <silent><buffer><expr> open_tree
     \	defx#do_action('open_tree')
     nnoremap <silent><buffer><expr> u
     \ defx#do_action('cd', ['..'])
