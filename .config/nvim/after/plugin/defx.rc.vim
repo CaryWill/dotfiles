@@ -1,7 +1,7 @@
 if !exists('g:loaded_defx') | finish | endif
 
 let s:defx_win = 0
-function SearchNode()
+function s:searchNode()
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
@@ -40,7 +40,7 @@ function SearchNode()
  endif
 endfunction
 
-nnoremap <silent><localleader>e :call SearchNode()<CR>
+nnoremap <silent><localleader>e :call searchNode()<CR>
 nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size<CR>
 
