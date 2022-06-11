@@ -1,7 +1,7 @@
 if !exists('g:loaded_defx') | finish | endif
 
 let s:defx_win = 0
-function! SearchNode()
+function SearchNode()
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
@@ -32,8 +32,9 @@ function! SearchNode()
         continue
       endif
    endfor
-   for c in reverse(paths)
-      silent execute "/" .. c
+
+   for p in reverse(paths)
+      silent execute "/" .. p
       normal open_tree
    endfor
  endif
