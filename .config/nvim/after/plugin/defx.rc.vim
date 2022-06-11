@@ -1,16 +1,17 @@
 if !exists('g:loaded_defx') | finish | endif
 
+let s:defx_win = 0
 function! SearchNode()
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
 
- if win_gotoid(g:defx_win)
-    let g:defx_win = 0 
-    hide 
+ if win_gotoid(s:defx_win)
+   let s:defx_win = 0 
+   hide 
  else 
    Defx -resume
-   let g:defx_win = win_getid()
+   let s:defx_win = win_getid()
    let paths = []
 
    for p in reverse(list) 

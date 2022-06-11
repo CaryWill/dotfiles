@@ -38,16 +38,3 @@ autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 runtime ./plug.vim
 runtime ./maps.vim
 runtime ./colors.vim
-
-" --- 学到了一招使用 @" register（macro和register是一个概念吗我好像弄混了)
-let i = 1
-while i < 5
-  echo "count is" i
-  let i += 1
-endwhile
-
-" variable i above is global, so you can `:ehco i` to display it
-" but `:echo b` will show error, since it's local to script
-let s:b = 123
-
-" reassignment syntax is a little bit weird
