@@ -1,5 +1,6 @@
 if !exists('g:loaded_defx') | finish | endif
 
+" Auto expand parent node "{{{
 let s:defx_win = 0
 function s:searchNode()
  let list = split(expand('%:p'), '/')
@@ -39,8 +40,8 @@ function s:searchNode()
    endfor
  endif
 endfunction
-
-nnoremap <silent><localleader>e :call searchNode()<CR>
+"}}}
+nnoremap <silent><localleader>e :call <SID>searchNode()<CR>
 nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size<CR>
 
@@ -119,3 +120,5 @@ call defx#custom#option('_', {
 	    \ 'root_marker': '',
       \ 'buffer_name': '',
       \ })
+
+" vim: set foldmethod=marker foldlevel=0 foldenable:
