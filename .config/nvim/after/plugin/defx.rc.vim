@@ -96,11 +96,6 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('new_multiple_files')
 	endfunction
 
-call defx#custom#column('icon', {
-      \ 'directory_icon': '',
-      \ 'opened_icon': '',
-      \ })
-
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : 'M',
   \ 'Staged'    : '✚',
@@ -117,8 +112,6 @@ call defx#custom#option('_', {
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
-	    \ 'root_marker': '',
-      \ 'buffer_name': '',
       \ })
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
