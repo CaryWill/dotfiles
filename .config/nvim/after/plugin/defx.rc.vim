@@ -1,6 +1,6 @@
 if !exists('g:loaded_defx') | finish | endif
 
-" Auto expand parent node "{{{
+" Auto expand parent nodes until root dir "{{{
 let s:defx_win = 0
 function s:searchNode()
  let list = split(expand('%:p'), '/')
@@ -97,8 +97,8 @@ autocmd FileType defx call s:defx_my_settings()
 	endfunction
 
 call defx#custom#column('icon', {
-      \ 'directory_icon': '',
-      \ 'opened_icon': '',
+      \ 'directory_icon': '+ ',
+      \ 'opened_icon': '- ',
       \ })
 
 call defx#custom#column('git', 'indicators', {
@@ -113,7 +113,7 @@ call defx#custom#column('git', 'indicators', {
   \ })
 
 call defx#custom#option('_', {
-      \ 'winwidth': 43,
+      \ 'winwidth': 44,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
