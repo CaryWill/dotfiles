@@ -97,8 +97,8 @@ autocmd FileType defx call s:defx_my_settings()
 	endfunction
 
 call defx#custom#column('icon', {
-      \ 'directory_icon': '+ ',
-      \ 'opened_icon': '- ',
+      \ 'directory_icon': '',
+      \ 'opened_icon': '',
       \ })
 
 call defx#custom#column('git', 'indicators', {
