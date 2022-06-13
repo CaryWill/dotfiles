@@ -112,7 +112,7 @@ call defx#custom#column('git', 'indicators', {
   \ })
 
 call defx#custom#option('_', {
-      \ 'winwidth': 44,
+      \ 'winwidth': 45,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
