@@ -55,6 +55,11 @@ function s:setAsDefaultFileExplorer()
 endfunction
 "}}}
 autocmd VimEnter * call s:setAsDefaultFileExplorer()
+function s:revealInFinder()
+  silent normal P
+  let path = @0 
+  silent execute '!open ' .. path
+endfunction
 " Defx key mappings "{{{
 function s:defx_my_settings() abort
   " Define mappings
@@ -82,8 +87,7 @@ function s:defx_my_settings() abort
   \ defx#do_action('rename')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
-  nnoremap <silent><buffer><expr> f
-  \ defx#do_action('execute_command', 'open .')
+  nnoremap <silent><buffer> f :call <SID>revealInFinder()<CR>
   nnoremap <silent><buffer><expr> a
   \ defx#do_action('new_file')
   nnoremap <silent><buffer><expr> P

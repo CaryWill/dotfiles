@@ -4692,7 +4692,7 @@
 	<key>OpenNoWindowsAtStartup</key>
 	<true/>
 	<key>PMPrintingExpandedStateForPrint2</key>
-	<false/>
+	<true/>
 	<key>PerPaneBackgroundImage</key>
 	<false/>
 	<key>PointerActions</key>
