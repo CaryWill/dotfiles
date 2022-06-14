@@ -45,6 +45,7 @@ nnoremap <silent><localleader>e :call <SID>searchNode()<CR>
 nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size<CR>
 
+let g:netrw_banner = 0
 " Set defx as default file explorer  "{{{
 function s:setAsDefaultFileExplorer() 
    if &filetype == 'netrw'
