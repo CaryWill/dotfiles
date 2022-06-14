@@ -18,8 +18,8 @@ noremap k gk
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
-nnoremap <silent><leader>r :source $MYVIMRC<CR>
-nnoremap <silent><leader>e :e $MYVIMRC<CR>
+"nnoremap <silent><leader>r :source $MYVIMRC<CR>
+"nnoremap <silent><leader>e :e $MYVIMRC<CR>
 " Terminal Function "{{{
 let s:term_buf = 0
 let s:term_win = 0
@@ -54,5 +54,5 @@ tnoremap <silent>;q <C-\><C-n>
 nnoremap <leader>q :q<CR>
 " Select all
 nmap <C-a> gg<S-v>G
-" Completion
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:
