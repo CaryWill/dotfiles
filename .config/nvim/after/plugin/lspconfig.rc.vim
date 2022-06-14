@@ -25,8 +25,8 @@ local on_attach = function(client, bufnr)
 
   -- LSP diagnostics navigation
   vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
-  vim.keymap.set('n', 'gn', vim.diagnostic.goto_prev, opts)
-  vim.keymap.set('n', 'gp', vim.diagnostic.goto_next, opts)
+  vim.keymap.set('n', 'gp', vim.diagnostic.goto_prev, opts)
+  vim.keymap.set('n', 'gn', vim.diagnostic.goto_next, opts)
 
   -- formatting
   if client.server_capabilities.documentFormattingProvider then
