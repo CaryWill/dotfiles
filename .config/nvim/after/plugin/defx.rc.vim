@@ -55,11 +55,18 @@ function s:setAsDefaultFileExplorer()
 endfunction
 "}}}
 autocmd VimEnter * call s:setAsDefaultFileExplorer()
+" Reveal in finder "{{{
 function s:revealInFinder()
   silent normal P
   let path = @0 
-  silent execute '!open ' .. path
+  let dir = path
+  if !isdirectory(dir)
+    let list = split(dir, '/')
+    let dir = '/' .. join(list[0:len(list)-2], '/')
+  endif
+  silent execute '!open ' .. dir
 endfunction
+"}}}
 " Defx key mappings "{{{
 function s:defx_my_settings() abort
   " Define mappings
