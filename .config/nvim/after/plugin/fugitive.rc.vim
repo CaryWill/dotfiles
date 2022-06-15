@@ -5,5 +5,4 @@ if !exists('*fugitive#statusline')
   set statusline+=%{fugitive#statusline()}
 endif
 
-cnoreabbrev g Git
-nnoremap <leader>b :Git blame<CR>
+nnoremap gb :Git blame<CR>
