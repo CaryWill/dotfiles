@@ -47,10 +47,10 @@ function s:termToggle()
     endif
 endfunction
 "}}}
-nnoremap <silent>;t :call <SID>termToggle()<CR>
-inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
-tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
-tnoremap <silent>;q <C-\><C-n>
+nnoremap ;t :call <SID>termToggle()<CR>
+inoremap ;t <Esc>:call <SID>termToggle()<CR>
+tnoremap ;t <C-\><C-n>:call <SID>termToggle()<CR>
+tnoremap ;q <C-\><C-n>
 nnoremap <leader>q :q<CR>
 " Select all
 nmap <C-a> gg<S-v>G
