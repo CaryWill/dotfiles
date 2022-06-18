@@ -54,5 +54,7 @@ tnoremap <silent>;q <C-\><C-n>
 nnoremap <leader>q :q<CR>
 " Select all
 nmap <C-a> gg<S-v>G
+" formatting
+nnoremap <leader>f :Prettier<CR>
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
