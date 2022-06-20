@@ -33,3 +33,4 @@ TERM="xterm" #防止删除键变成空格键
 export LANG=en_US.UTF-8
 alias vim=nvim
 export VISUAL=nvim
+alias tsnode=ts-node
