@@ -17,7 +17,7 @@ Plug 'neovim/nvim-lspconfig'
 "Plug 'williamboman/nvim-lsp-installer'
 
 " Completion
-Plug 'github/copilot.vim' 
+"Plug 'github/copilot.vim' 
 "Plug 'vim-denops/denops.vim'
 "Plug 'Shougo/ddc.vim'
 "Plug 'Shougo/ddc-nvim-lsp'
