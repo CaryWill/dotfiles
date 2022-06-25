@@ -1,5 +1,4 @@
-let g:plug_home = stdpath('data') . '/plugged'
-call plug#begin()
+call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
 
@@ -13,8 +12,8 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+"Plug 'jose-elias-alvarez/null-ls.nvim'
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 "Plug 'williamboman/nvim-lsp-installer'
 
 " Completion
