@@ -41,12 +41,12 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescript.tsx', 'typescriptreact', 'css', 'less', 'scss' },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
 }
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss' },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   init_options = {
     linters = {
       eslint = {
