@@ -31,7 +31,7 @@ Plug 'Shougo/ddc-sorter_rank'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Theming
 Plug 'EdenEast/nightfox.nvim'
