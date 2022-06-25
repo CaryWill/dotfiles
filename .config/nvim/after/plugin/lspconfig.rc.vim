@@ -3,15 +3,14 @@ if !exists('g:lspconfig')
 endif
 
 lua << EOF
--- vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("debug")
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-
   -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { noremap=true, silent=false}
+  local opts = { noremap=true, silent=false, buffer=bufnr }
   vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   vim.keymap.set('n', 'gD', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
@@ -42,6 +41,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescript.tsx', 'typescriptreact', 'css', 'less', 'scss' },
 }
 
 nvim_lsp.diagnosticls.setup {
@@ -71,10 +71,10 @@ nvim_lsp.diagnosticls.setup {
       },
     },
     filetypes = {
-      javascript = 'eslint',
-      javascriptreact = 'eslint',
-      typescript = 'eslint',
-      typescriptreact = 'eslint',
+      javascript = 'eslint_d',
+      javascriptreact = 'eslint_d',
+      typescript = 'eslint_d',
+      typescriptreact = 'eslint_d',
     },
     formatters = {
       eslint_d = {
