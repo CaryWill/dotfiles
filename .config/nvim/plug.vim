@@ -13,18 +13,16 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " LSP
 Plug 'neovim/nvim-lspconfig'
 "Plug 'jose-elias-alvarez/null-ls.nvim'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'williamboman/nvim-lsp-installer'
 
 " Completion
-"Plug 'github/copilot.vim' 
-"Plug 'vim-denops/denops.vim'
-"Plug 'Shougo/ddc.vim'
-"Plug 'Shougo/ddc-nvim-lsp'
-"Plug 'Shougo/ddc-matcher_head'
-"Plug 'Shougo/ddc-sorter_rank'
-" Plug 'windwp/nvim-autopairs'
-" Plug 'windwp/nvim-ts-autotag'
+Plug 'github/copilot.vim' 
+Plug 'vim-denops/denops.vim'
+Plug 'Shougo/ddc.vim'
+Plug 'Shougo/ddc-nvim-lsp'
+Plug 'Shougo/ddc-matcher_head'
+Plug 'Shougo/ddc-sorter_rank'
 
 " Searching
 Plug 'nvim-lua/popup.nvim'
