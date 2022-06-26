@@ -50,11 +50,11 @@ nvim_lsp.diagnosticls.setup {
   init_options = {
     linters = {
       eslint = {
-        command = 'eslint_d',
+        command = 'eslint',
         rootPatterns = { '.git' },
         debounce = 100,
         args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
-        sourceName = 'eslint_d',
+        sourceName = 'eslint',
         parseJson = {
           errorsRoot = '[0].messages',
           line = 'line',
@@ -71,14 +71,14 @@ nvim_lsp.diagnosticls.setup {
       },
     },
     filetypes = {
-      javascript = 'eslint_d',
-      javascriptreact = 'eslint_d',
-      typescript = 'eslint_d',
-      typescriptreact = 'eslint_d',
+      javascript = 'eslint',
+      javascriptreact = 'eslint',
+      typescript = 'eslint',
+      typescriptreact = 'eslint',
     },
     formatters = {
-      eslint_d = {
-        command = 'eslint_d',
+      eslint = {
+        command = 'eslint',
         rootPatterns = { '.git' },
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
