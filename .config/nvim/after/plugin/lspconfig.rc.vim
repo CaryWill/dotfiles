@@ -10,7 +10,7 @@ local on_attach = function(client, bufnr)
   -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { noremap=true, silent=false, buffer=bufnr }
+  local opts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>zz', opts)
   vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
