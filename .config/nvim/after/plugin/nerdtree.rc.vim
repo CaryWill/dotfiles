@@ -7,10 +7,6 @@ let NERDTreeDirArrowExpandable = " "
 let NERDTreeDirArrowCollapsible = " "
 let g:NERDSpaceDelims = 1
 let NERDTreeHighlightCursorline=0
-let g:NERDCustomDelimiters = {
-  \ 'typescript.tsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-  \ 'javascript.jsx': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-  \ }
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Modified'  :'M',
