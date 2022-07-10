@@ -137,3 +137,4 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': 1,
       \ })
 
+" vim: set foldmethod=marker foldlevel=0 foldenable:
