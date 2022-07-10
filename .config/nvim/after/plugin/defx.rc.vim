@@ -6,6 +6,7 @@ function s:searchNode()
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
+ let fallbackRoot = system("pwd")
 
  if win_gotoid(s:defx_win)
    let s:defx_win = 0 
@@ -17,7 +18,13 @@ function s:searchNode()
 
    for p in reverse(list) 
       let index += 1
+
+      " use pwd as root
       let currentDirFullPath = '/' .. join(reverse(list[index:length-1]), '/')
+      if trim(currentDirFullPath) == trim(fallbackRoot)
+        break
+      endif
+
       " .git as root dir
       let gitDir = currentDirFullPath .. '/.git' 
       if index == 1
@@ -130,4 +137,3 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': 1,
       \ })
 
-" vim: set foldmethod=marker foldlevel=0 foldenable:
