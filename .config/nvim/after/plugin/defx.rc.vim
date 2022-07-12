@@ -2,33 +2,41 @@ if !exists('g:loaded_defx') | finish | endif
 
 " Auto expand parent nodes until root dir "{{{
 let s:defx_win = 0
+let s:last_win = 0
 function s:searchNode()
  let list = split(expand('%:p'), '/')
  let index = 0
  let length = len(list)
  let fallbackRoot = system("pwd")
- echo fallbackRoot
+
+ if &filetype != 'defx'
+  let s:last_win = win_getid()
+ endif
 
  if win_gotoid(s:defx_win)
    let s:defx_win = 0 
    hide 
+   call win_gotoid(s:last_win)
  else 
    Defx -resume
    let s:defx_win = win_getid()
    let paths = []
 
-   echo list
    let shouldBreak = 0
    for p in reverse(list) 
       let index += 1
+
       " use pwd as root
       let currentDirFullPath = '/' .. join(reverse(list[index:length-1]), '/')
+
       if shouldBreak
         break
       endif
+
       if trim(currentDirFullPath) == trim(fallbackRoot)
         let shouldBreak = 1
       endif
+
       if index == 1
         let dir = p
         call add(paths, dir)
@@ -36,8 +44,8 @@ function s:searchNode()
         let dir = p .. '\/'
         call add(paths, dir)
       endif
+
    endfor
-   echo paths
 
    for p in reverse(paths)
       silent execute "/" .. p
