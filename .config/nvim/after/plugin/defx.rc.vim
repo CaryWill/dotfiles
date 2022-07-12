@@ -18,12 +18,16 @@ function s:searchNode()
    let paths = []
 
    echo list
+   let shouldBreak = 0
    for p in reverse(list) 
       let index += 1
       " use pwd as root
       let currentDirFullPath = '/' .. join(reverse(list[index:length-1]), '/')
-      if trim(currentDirFullPath) == trim(fallbackRoot)
+      if shouldBreak
         break
+      endif
+      if trim(currentDirFullPath) == trim(fallbackRoot)
+        let shouldBreak = 1
       endif
       if index == 1
         let dir = p
