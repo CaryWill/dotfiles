@@ -13,11 +13,15 @@ local actions = require('telescope.actions')
 
 telescope.setup{
   defaults = {
+    -- https://stackoverflow.com/a/69923907/10190407
+    -- https://stackoverflow.com/a/68571133/10190407
+    file_ignore_patterns = { ".git/", "node_modules" },
     mappings = {
       n = {
         ["q"] = actions.close
       },
     },
+    -- https://github.com/nvim-telescope/telescope.nvim/issues/1173#issue-980918591
     vimgrep_arguments = {
       'rg',
       '--color=never',
@@ -30,14 +34,5 @@ telescope.setup{
       '--hidden', -- search in hidden files
     },
   },
-   -- extensions = {
-     -- fzf = {
-       -- fuzzy = true,                    -- false will only do exact matching
-       -- override_generic_sorter = true,  -- override the generic sorter
-       -- override_file_sorter = true,     -- override the file sorter
-       -- case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-     -- }
-   -- }
 }
--- require('telescope').load_extension('fzf')
 EOF
