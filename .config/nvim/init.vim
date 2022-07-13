@@ -27,6 +27,8 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 set cursorline
+set splitright                  
+set splitbelow
 
 set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//

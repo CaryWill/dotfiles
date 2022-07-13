@@ -41,4 +41,8 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "Plug 'mfussenegger/nvim-dap'
 "Plug 'rcarriga/nvim-dap-ui'
 
+" Others
+Plug 'psliwka/vim-smoothie'
+
+
 call plug#end()
