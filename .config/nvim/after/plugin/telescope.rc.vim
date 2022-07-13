@@ -18,16 +18,26 @@ telescope.setup{
         ["q"] = actions.close
       },
     },
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      '-uu', -- search in hidden files 
+      '--hidden', -- search in hidden files
+    },
   },
-  -- extensions = {
-    -- fzf = {
-      -- fuzzy = true,                    -- false will only do exact matching
-      -- override_generic_sorter = true,  -- override the generic sorter
-      -- override_file_sorter = true,     -- override the file sorter
-      -- case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-    -- }
-  -- }
+   -- extensions = {
+     -- fzf = {
+       -- fuzzy = true,                    -- false will only do exact matching
+       -- override_generic_sorter = true,  -- override the generic sorter
+       -- override_file_sorter = true,     -- override the file sorter
+       -- case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+     -- }
+   -- }
 }
-
 -- require('telescope').load_extension('fzf')
 EOF
