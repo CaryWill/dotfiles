@@ -125,6 +125,12 @@ endfunction
 "}}}
 autocmd FileType defx call s:defx_my_settings()
 
+call defx#custom#column('icon', {
+      \ 'directory_icon': '▸',
+      \ 'opened_icon': '▾',
+      \ 'root_icon': ' ',
+      \ })
+
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : 'M',
   \ 'Staged'    : '✚',
@@ -143,3 +149,4 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': 1,
       \ })
 
+" vim: set foldmethod=marker foldlevel=0 foldenable:
