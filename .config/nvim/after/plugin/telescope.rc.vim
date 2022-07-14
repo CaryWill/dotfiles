@@ -15,7 +15,7 @@ telescope.setup{
   defaults = {
     -- https://stackoverflow.com/a/69923907/10190407
     -- https://stackoverflow.com/a/68571133/10190407
-    file_ignore_patterns = { ".git/", "node_modules/" },
+    file_ignore_patterns = { ".git/", "node_modules/", ".node/", ".vscode/", ".husky/" },
     mappings = {
       n = {
         ["q"] = actions.close
@@ -24,14 +24,14 @@ telescope.setup{
     -- https://github.com/nvim-telescope/telescope.nvim/issues/1173#issue-980918591
     vimgrep_arguments = {
       'rg',
-      '--color=never',
+--      '--color=never',
       '--no-heading',
-      '--with-filename',
+--      '--with-filename',
       '--line-number',
       '--column',
       '--smart-case',
-      '-uu', -- search in hidden files 
-      '--hidden', -- search in hidden files
+--      '-uu', -- search in hidden files 
+--      '--hidden', -- search in hidden files
     },
   },
 }
