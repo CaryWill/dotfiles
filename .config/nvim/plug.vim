@@ -42,7 +42,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "Plug 'rcarriga/nvim-dap-ui'
 
 " Others
-Plug 'psliwka/vim-smoothie'
+"Plug 'psliwka/vim-smoothie'
 Plug 'mbbill/undotree'
 
 
