@@ -43,6 +43,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Others
 Plug 'psliwka/vim-smoothie'
+Plug 'mbbill/undotree'
 
 
 call plug#end()

@@ -15,7 +15,7 @@ telescope.setup{
   defaults = {
     -- https://stackoverflow.com/a/69923907/10190407
     -- https://stackoverflow.com/a/68571133/10190407
-    file_ignore_patterns = { ".git/", "node_modules" },
+    file_ignore_patterns = { ".git/", "node_modules/" },
     mappings = {
       n = {
         ["q"] = actions.close
