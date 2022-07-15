@@ -58,6 +58,6 @@ nmap <C-a> gg<S-v>G
 nnoremap <silent><leader>f :Prettier<CR>
 
 " 粘贴大量文字的时候很慢的问题
-noremap <leader>p normal "+p
+"nnoremap <C-V> "+p
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
