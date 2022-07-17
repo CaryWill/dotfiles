@@ -44,6 +44,6 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 " Others
 "Plug 'psliwka/vim-smoothie'
 Plug 'mbbill/undotree'
-
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
