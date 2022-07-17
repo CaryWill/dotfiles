@@ -1,4 +1,6 @@
 if !exists('g:loaded_defx') | finish | endif
+let g:defx_icons_enable_syntax_highlight = 1
+let g:defx_icons_column_length = 1
 
 " Auto expand parent nodes until root dir "{{{
 let s:defx_win = 0
@@ -128,7 +130,6 @@ autocmd FileType defx call s:defx_my_settings()
 call defx#custom#column('icon', {
       \ 'directory_icon': '▸',
       \ 'opened_icon': '▾',
-      \ 'root_icon': ' ',
       \ })
 
 call defx#custom#column('git', 'indicators', {
@@ -143,10 +144,11 @@ call defx#custom#column('git', 'indicators', {
   \ })
 
 call defx#custom#option('_', {
-      \ 'winwidth': 35,
+      \ 'winwidth': 40,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
+      \ 'root_marker': '@'
       \ })
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:

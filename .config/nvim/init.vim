@@ -36,6 +36,7 @@ set undofile
 set undodir=/tmp/.undo//
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
+autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 " Imports
 runtime ./plug.vim
