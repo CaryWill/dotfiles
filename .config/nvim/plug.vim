@@ -31,8 +31,9 @@ Plug 'nvim-telescope/telescope.nvim'
 "Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Theming
-Plug 'EdenEast/nightfox.nvim'
-Plug 'nvim-lualine/lualine.nvim'
+"Plug 'EdenEast/nightfox.nvim'
+Plug 'projekt0n/github-nvim-theme'
+"Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "Plug 'rhysd/vim-color-spring-night'
 "Plug 'vim-airline/vim-airline'
