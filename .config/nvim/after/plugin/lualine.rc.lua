@@ -3,10 +3,9 @@ if (not status) then return end
 
 lualine.setup {
   options = {
-    icons_enabled = true,
-    theme = 'nightfox',
-    section_separators = {left = '', right = ''},
-    component_separators = {left = '', right = ''},
+    theme = 'catppuccin',
+    section_separators = {left = '', right = ''}, -- 
+    component_separators = {left = '', right = ''},
     disabled_filetypes = {}
   },
   sections = {
@@ -20,10 +19,8 @@ lualine.setup {
     lualine_x = {
       { 'diagnostics', sources = {"nvim_diagnostic"}, symbols = {} },
       'encoding',
-      'filetype'
+      --'filetype'
     },
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
   },
   inactive_sections = {
     lualine_a = {},
@@ -40,4 +37,3 @@ lualine.setup {
   tabline = {},
   extensions = {'fugitive'}
 }
-
