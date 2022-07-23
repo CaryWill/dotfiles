@@ -22,6 +22,9 @@ lua << EOF
 require("github-theme").setup({
   theme_style = "dark_default",
   function_style = "italic",
+  dark_float = true,
+  hide_end_of_buffer = true,
+  hide_inactive_statusline = false,
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
   -- colors = {hint = "orange", error = "#ff0000"},
