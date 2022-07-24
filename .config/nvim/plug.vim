@@ -33,10 +33,10 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Theming
 "Plug 'EdenEast/nightfox.nvim'
-"Plug 'projekt0n/github-nvim-theme'
+Plug 'projekt0n/github-nvim-theme'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+"Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'rhysd/vim-color-spring-night'
 "Plug 'vim-airline/vim-airline'
 
