@@ -24,7 +24,7 @@ telescope.setup{
     -- https://github.com/nvim-telescope/telescope.nvim/issues/1173#issue-980918591
     vimgrep_arguments = {
       'rg',
---      '--color=never',
+      '--color=never',
       '--no-heading',
 --      '--with-filename',
       '--line-number',

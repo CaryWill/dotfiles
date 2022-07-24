@@ -5,25 +5,25 @@ Plug 'preservim/nerdcommenter'
 " File explorer
 " -- まだなっています　defx の使用方法は、でもスピードは速い --
 Plug 'kristijanhusak/defx-git'
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " -- nerdtree に戻る --
 " Plug 'scrooloose/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-"Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'williamboman/nvim-lsp-installer'
+"Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Completion
 Plug 'github/copilot.vim' 
-Plug 'vim-denops/denops.vim'
-Plug 'Shougo/ddc.vim'
-Plug 'Shougo/ddc-nvim-lsp'
-Plug 'Shougo/ddc-matcher_head'
-Plug 'Shougo/ddc-sorter_rank'
+"Plug 'vim-denops/denops.vim'
+"Plug 'Shougo/ddc.vim'
+"Plug 'Shougo/ddc-nvim-lsp'
+"Plug 'Shougo/ddc-matcher_head'
+"Plug 'Shougo/ddc-sorter_rank'
 
 " Searching
 Plug 'nvim-lua/popup.nvim'
@@ -43,11 +43,13 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Debugging
 "Plug 'mfussenegger/nvim-dap'
 "Plug 'rcarriga/nvim-dap-ui'
+"Plug 'theHamsta/nvim-dap-virtual-text'
+"Plug 'Pocco81/DAPInstall.nvim'
 "Plug 'puremourning/vimspector'
 
 " Others
-"Plug 'psliwka/vim-smoothie'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
+"Plug 'psliwka/vim-smoothie'
 
 call plug#end()
