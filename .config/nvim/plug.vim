@@ -43,6 +43,7 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Debugging
 "Plug 'mfussenegger/nvim-dap'
 "Plug 'rcarriga/nvim-dap-ui'
+"Plug 'puremourning/vimspector'
 
 " Others
 "Plug 'psliwka/vim-smoothie'
