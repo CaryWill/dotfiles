@@ -43,6 +43,7 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Debugging
 "Plug 'mfussenegger/nvim-dap'
 "Plug 'rcarriga/nvim-dap-ui'
+"Plug 'nvim-telescope/telescope-dap.nvim'
 "Plug 'theHamsta/nvim-dap-virtual-text'
 "Plug 'Pocco81/DAPInstall.nvim'
 "Plug 'puremourning/vimspector'
