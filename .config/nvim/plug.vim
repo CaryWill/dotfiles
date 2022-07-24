@@ -6,6 +6,7 @@ Plug 'preservim/nerdcommenter'
 " -- まだなっています　defx の使用方法は、でもスピードは速い --
 Plug 'kristijanhusak/defx-git'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
 " -- nerdtree に戻る --
 " Plug 'scrooloose/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
