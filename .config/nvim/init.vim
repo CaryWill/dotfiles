@@ -18,7 +18,7 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
-set laststatus=3
+set laststatus=2 " 不知道是不是因为设置为了 3 会导致用着用着状态栏就没了
 set autoread
 set nospell
 set signcolumn=number 
