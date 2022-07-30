@@ -3186,6 +3186,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>B9D8867C-E0C1-4106-9371-2999DA70944F</string>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>EnterCopyModeAutomatically</key>
 	<true/>
 	<key>GlobalKeyMap</key>
@@ -3928,7 +3930,7 @@
 				<real>0.75848418474197388</real>
 			</dict>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -4124,7 +4126,7 @@
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
-			<true/>
+			<false/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -4646,7 +4648,7 @@
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
-			<integer>9</integer>
+			<integer>8</integer>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -4754,10 +4756,12 @@
 	<integer>0</integer>
 	<key>TerminalVMargin</key>
 	<integer>0</integer>
+	<key>TmuxUnpauseAutomatically</key>
+	<true/>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>UseMetal</key>
-	<false/>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WorkAroundBigSurBug</key>
