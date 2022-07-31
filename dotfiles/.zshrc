@@ -34,3 +34,6 @@ export LANG=en_US.UTF-8
 alias vim=nvim
 export VISUAL=nvim
 alias tsnode=ts-node
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
