@@ -1,35 +1,22 @@
-if !exists('g:loaded_lspsaga') | finish | endif
-
 lua << EOF
 local saga = require 'lspsaga'
 saga.init_lsp_saga({
-  diagnostic_header_icon = "   ",
+  border_style = "rounded",
   max_preview_lines = 30,
   finder_action_keys = {
-    open = "<Enter>",
-    vsplit = "s",
-    split = "i",
+    open = "<CR>",
+    vsplit = "v",
+    split = "s",
     tabe = "t",
-    quit = "q",
-    scroll_down = "<C-f>",
-    scroll_up = "<C-b>", -- quit can be a table
-  },
-  code_action_keys = {
     quit = "<ESC>",
-    exec = "<CR>",
+    scroll_down = "<C-u>",
+    scroll_up = "<C-d>", -- quit can be a table
   },
-  rename_action_keys = {
-    quit = "<ESC>",
-    exec = "<CR>",
-  },
-  border_style = "rounded",
 })
 EOF
 
-"nnoremap <silent> <C-j> <Cmd>Lspsaga diagnostic_jump_next<CR>
-"nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
-"nnoremap <silent> K <Cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
-"inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
-"nnoremap <silent> gp <Cmd>Lspsaga preview_definition<CR>
-"nnoremap <silent> <leader>rn <Cmd>Lspsaga rename<CR>
-"nnoremap gd <Cmd>Lspsaga lsp_finder<CR>
+nnoremap gd <Cmd>Lspsaga lsp_finder<CR>
+nnoremap gp <Cmd>Lspsaga preview_definition
+nnoremap <leader>rn <Cmd>Lspsaga rename<CR>
+nnoremap [e <cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap ]e <cmd>Lspsaga diagnostic_jump_prev<CR>

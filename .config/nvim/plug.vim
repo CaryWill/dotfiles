@@ -12,10 +12,10 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " LSP
-Plug 'neovim/nvim-lspconfig'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'glepnir/lspsaga.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 "Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Completion

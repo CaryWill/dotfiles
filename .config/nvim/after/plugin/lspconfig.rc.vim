@@ -16,9 +16,6 @@ local on_attach = function(client, bufnr)
   -- vim.keymap.set('n', 'gp', vim.diagnostic.goto_prev, opts)
   -- vim.keymap.set('n', 'gn', vim.diagnostic.goto_next, opts)
 
-  -- Lsp-saga mapping
-  vim.keymap.set("n", "gd", "<Cmd>Lspsaga lsp_finder<CR>", opts)
-
   -- formatting
   if client.server_capabilities.documentFormattingProvider then
   --    vim.api.nvim_command [[augroup Format]]
