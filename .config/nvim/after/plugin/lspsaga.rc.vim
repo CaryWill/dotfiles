@@ -2,7 +2,6 @@ lua << EOF
 local saga = require 'lspsaga'
 saga.init_lsp_saga({
   border_style = "rounded",
-  max_preview_lines = 30,
   finder_action_keys = {
     open = "<CR>",
     vsplit = "v",
