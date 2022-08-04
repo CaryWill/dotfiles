@@ -11,28 +11,20 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   local opts = { noremap=true, silent=true, buffer=bufnr }
-  vim.keymap.set('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  -- vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>zz', opts)
-  vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-  vim.keymap.set('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  -- @deprecated vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<Cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
-  vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.keymap.set('n', '<leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  -- vim.keymap.set('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-
   -- LSP diagnostics navigation
   vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
   -- vim.keymap.set('n', 'gp', vim.diagnostic.goto_prev, opts)
   -- vim.keymap.set('n', 'gn', vim.diagnostic.goto_next, opts)
 
+  -- Lsp-saga mapping
+  vim.keymap.set("n", "gd", "<Cmd>Lspsaga lsp_finder<CR>", opts)
+
   -- formatting
   if client.server_capabilities.documentFormattingProvider then
---      vim.api.nvim_command [[augroup Format]]
- --     vim.api.nvim_command [[autocmd! * <buffer>]]
+  --    vim.api.nvim_command [[augroup Format]]
+  --    vim.api.nvim_command [[autocmd! * <buffer>]]
   --    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
-   --   vim.api.nvim_command [[augroup END]]
+  --   vim.api.nvim_command [[augroup END]]
   end
 end
 

@@ -15,7 +15,7 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'tami5/lspsaga.nvim'
+Plug 'glepnir/lspsaga.nvim'
 "Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Completion
