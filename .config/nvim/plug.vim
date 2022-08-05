@@ -1,5 +1,7 @@
 call plug#begin(stdpath('data') . '/plugged')
+
 Plug 'tpope/vim-fugitive'
+Plug 'sindrets/diffview.nvim'
 Plug 'preservim/nerdcommenter'
 
 " File explorer
@@ -37,6 +39,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'lukas-reineke/indent-blankline.nvim'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'rhysd/vim-color-spring-night'
 "Plug 'vim-airline/vim-airline'

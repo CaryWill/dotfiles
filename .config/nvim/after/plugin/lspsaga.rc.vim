@@ -8,8 +8,6 @@ saga.init_lsp_saga({
     split = "s",
     tabe = "t",
     quit = "<ESC>",
-    scroll_down = "<C-u>",
-    scroll_up = "<C-d>", -- quit can be a table
   },
 })
 EOF
