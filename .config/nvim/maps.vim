@@ -60,4 +60,8 @@ nnoremap <silent><leader>f :Prettier<CR>
 " 粘贴大量文字的时候很慢的问题
 nnoremap <leader>v "*p
 
+" 查看当前 file 或者 dir 的历史记录
+nnoremap <leader>dd :DiffviewFileHistory<CR>
+nnoremap <leader>df :DiffviewFileHistory %<CR>
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:

@@ -29,6 +29,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'rktjmp/lush.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'CaryWill/jellybeans-nvim'
 
 " Others
