@@ -15,7 +15,6 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
-"Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Completion
 Plug 'github/copilot.vim' 
@@ -31,6 +30,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'rktjmp/lush.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'CaryWill/jellybeans-nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Others
 Plug 'mbbill/undotree'
