@@ -36,7 +36,6 @@ set undodir=/tmp/.undo//
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
-autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ~/Desktop/test.png" 
 
 " Imports
 runtime ./plug.vim
