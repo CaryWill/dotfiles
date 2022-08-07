@@ -27,6 +27,7 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 set cursorline
+set termguicolors " guicolors
 
 set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
