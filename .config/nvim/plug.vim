@@ -3,6 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
 Plug 'preservim/nerdcommenter'
+Plug 'christoomey/vim-tmux-navigator'
 
 " File explorer
 Plug 'kristijanhusak/defx-git'
@@ -34,6 +35,5 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " Others
 Plug 'mbbill/undotree'
-Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
