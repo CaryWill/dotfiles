@@ -52,10 +52,35 @@ inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
 nnoremap <silent><leader>q :q<CR>
+
 " Select all
 nmap <C-a> gg<S-v>G
+
 " 粘贴大量文字的时候很慢的问题
 nnoremap <leader>v "*p
+
+" https://vim.fandom.com/wiki/Maximize_window_and_return_to_previous_split_structure
+" Maximize window and return to previous split structure
+" MaximizeToggle "{{{
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+endfunction
+"}}}
+nnoremap <C-W>O :call MaximizeToggle()<CR>
+nnoremap <C-W>o :call MaximizeToggle()<CR>
+nnoremap <C-W>m :call MaximizeToggle()<CR>
 
 " --- 插件 ---
 " formatting
