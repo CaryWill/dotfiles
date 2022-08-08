@@ -3,6 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
 Plug 'preservim/nerdcommenter'
+Plug 'dhruvasagar/vim-zoom'
 
 " File explorer
 Plug 'kristijanhusak/defx-git'
