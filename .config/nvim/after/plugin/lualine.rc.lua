@@ -19,7 +19,7 @@ lualine.setup {
     lualine_x = {
       { 'diagnostics', sources = {"nvim_diagnostic"}, symbols = {} },
       'encoding',
-      --'filetype'
+      'filetype'
     },
   },
   inactive_sections = {

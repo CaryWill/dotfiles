@@ -58,7 +58,7 @@ endfunction
 "}}}
 nnoremap <silent><localleader>e :call <SID>searchNode()<CR>
 nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
-      \ -columns=indent:mark:icon:icons:filename:git:size<CR>
+  \ -columns=indent:mark:icon:icons:filename:git:size<CR>
 
 let g:netrw_banner = 0
 " Set defx as default file explorer  "{{{
@@ -128,27 +128,27 @@ endfunction
 autocmd FileType defx call s:defx_my_settings()
 
 call defx#custom#column('icon', {
-      \ 'directory_icon': ' ',
-      \ 'opened_icon': ' ',
-      \ })
+  \ 'directory_icon': ' ',
+  \ 'opened_icon': ' ',
+  \ })
 
 call defx#custom#column('git', 'indicators', {
-  \ 'Modified'  : 'M',
-  \ 'Staged'    : '✚',
-  \ 'Untracked' : '✭',
-  \ 'Renamed'   : '➜',
-  \ 'Unmerged'  : '═',
-  \ 'Ignored'   : '☒',
-  \ 'Deleted'   : '✖',
-  \ 'Unknown'   : '?'
+  \ 'Modified'  :'M',
+  \ 'Staged'    :'A',
+  \ 'Untracked' :'U',
+  \ 'Renamed'   :'R',
+  \ 'Unmerged'  :'═',
+  \ 'Ignored'   :'☒',
+  \ 'Deleted'   :'D',
+  \ 'Unknown'   :'?',
   \ })
 
 call defx#custom#option('_', {
-      \ 'winwidth': 40,
-      \ 'split': 'vertical',
-      \ 'direction': 'topleft',
-      \ 'show_ignored_files': 1,
-      \ 'root_marker': '@'
-      \ })
+  \ 'winwidth': 40,
+  \ 'split': 'vertical',
+  \ 'direction': 'topleft',
+  \ 'show_ignored_files': 1,
+  \ 'root_marker': '@'
+  \ })
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:

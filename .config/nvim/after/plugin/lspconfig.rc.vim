@@ -7,14 +7,11 @@ lua << EOF
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
   -- Mappings.
   local opts = { noremap=true, silent=true, buffer=bufnr }
   -- LSP diagnostics navigation
-  vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
-  -- vim.keymap.set('n', 'gp', vim.diagnostic.goto_prev, opts)
-  -- vim.keymap.set('n', 'gn', vim.diagnostic.goto_next, opts)
+  vim.keymap.set('n', 'go', vim.diagnostic.open_float, opts)
+  vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
 
   -- formatting
   if client.server_capabilities.documentFormattingProvider then
