@@ -3,7 +3,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
 Plug 'preservim/nerdcommenter'
-Plug 'norcalli/nvim-colorizer.lua'
 
 " File explorer
 Plug 'kristijanhusak/defx-git'
@@ -31,6 +30,7 @@ Plug 'rktjmp/lush.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'CaryWill/jellybeans-nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Others
 Plug 'mbbill/undotree'

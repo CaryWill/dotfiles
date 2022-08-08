@@ -37,10 +37,10 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
+" 插件
+let g:defx_icons_column_length = 2
+
 " Imports
 runtime ./plug.vim
 runtime ./maps.vim
 runtime ./colors.vim
-
-" 因为图标配置需要优化级比较高,所以要在init.vim中增加如下一行:
-source ~/.config/nvim/after/plugin/defx-icons.rc.vim

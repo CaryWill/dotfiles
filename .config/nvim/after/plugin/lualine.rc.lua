@@ -4,7 +4,7 @@ if (not status) then return end
 lualine.setup {
   options = {
     theme = 'jellybeans',
-    section_separators = {left = '', right = ''}, --   
+    section_separators = {left = '', right = ''},
     component_separators = {left = '', right = ''},
     disabled_filetypes = {}
   },
