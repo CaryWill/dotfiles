@@ -9,6 +9,13 @@ saga.init_lsp_saga({
     tabe = "t",
     quit = "<ESC>",
   },
+  code_action_lightbulb = {
+    enable = false,
+    sign = true,
+    enable_in_insert = false,
+    sign_priority = 20,
+    virtual_text = true,
+  },
 })
 EOF
 
