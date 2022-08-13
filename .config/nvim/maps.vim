@@ -82,6 +82,24 @@ nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>
 nnoremap <C-W>m :call MaximizeToggle()<CR>
 
+" vim + non-Latin input = pain. 
+" So, auto switch im-select
+let s:current_im = "com.apple.keylayout.ABC"
+let s:default_im = "com.apple.keylayout.ABC" 
+" SetIM "{{{
+function! SetIM()
+  let s:current_im = system("im-select")
+  silent execute "!" . "im-select " . s:default_im
+endfunction
+"}}}
+" RestoreIM "{{{
+function! RestoreIM()
+  silent execute "!" . "im-select " . s:current_im
+endfunction
+"}}}
+autocmd InsertLeave,VimEnter * :call SetIM()
+autocmd InsertEnter * :call RestoreIM()
+
 " --- 插件 ---
 " formatting
 nnoremap <silent><leader>f :Prettier<CR>
