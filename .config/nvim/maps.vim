@@ -84,12 +84,15 @@ nnoremap <C-W>m :call MaximizeToggle()<CR>
 
 " vim + non-Latin input = pain. 
 " So, auto switch im-select
+" https://github.com/keaising/im-select.nvim
 let s:current_im = "com.apple.keylayout.ABC"
 let s:default_im = "com.apple.keylayout.ABC" 
 " SetIM "{{{
 function! SetIM()
   let s:current_im = system("im-select")
-  silent execute "!" . "im-select " . s:default_im
+  if s:current_im != s:default_im
+    silent execute "!" . "im-select " . s:default_im
+  endif
 endfunction
 "}}}
 " RestoreIM "{{{
