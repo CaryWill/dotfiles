@@ -7,7 +7,6 @@ lua << EOF
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-
   -- Mappings.
   local opts = { noremap=true, silent=true, buffer=bufnr }
   -- LSP diagnostics navigation

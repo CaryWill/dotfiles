@@ -1,6 +1,11 @@
 if !exists('g:loaded_defx') | finish | endif
+
 let g:defx_icons_enable_syntax_highlight = 1
 let g:defx_icons_column_length = 1
+let g:netrw_banner = 0
+
+nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
+  \ -columns=indent:mark:icon:icons:filename:git:size<CR>
 
 " Auto expand parent nodes until root dir "{{{
 let s:defx_win = 0
@@ -55,12 +60,8 @@ function s:searchNode()
    endfor
  endif
 endfunction
-"}}}
 nnoremap <silent><localleader>e :call <SID>searchNode()<CR>
-nnoremap <silent><C-e> :<C-u>Defx -toggle -listed -resume
-  \ -columns=indent:mark:icon:icons:filename:git:size<CR>
-
-let g:netrw_banner = 0
+"}}}
 " Set defx as default file explorer  "{{{
 function s:setAsDefaultFileExplorer() 
    if &filetype == 'netrw'
@@ -69,8 +70,8 @@ function s:setAsDefaultFileExplorer()
       only
    endif
 endfunction
-"}}}
 autocmd VimEnter * call s:setAsDefaultFileExplorer()
+"}}}
 " Reveal in finder "{{{
 function s:revealInFinder()
   silent normal P
@@ -124,8 +125,8 @@ function s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> M
   \ defx#do_action('new_multiple_files')
 endfunction
-"}}}
 autocmd FileType defx call s:defx_my_settings()
+"}}}
 
 call defx#custom#column('icon', {
   \ 'directory_icon': ' ',
