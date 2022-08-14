@@ -11,7 +11,6 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " LSP
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 

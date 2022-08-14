@@ -7,18 +7,19 @@ lua << EOF
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
+
   -- Mappings.
   local opts = { noremap=true, silent=true, buffer=bufnr }
   -- LSP diagnostics navigation
   vim.keymap.set('n', 'go', vim.diagnostic.open_float, opts)
   vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
 
-  -- formatting
-  if client.server_capabilities.documentFormattingProvider then
-  --    vim.api.nvim_command [[augroup Format]]
-  --    vim.api.nvim_command [[autocmd! * <buffer>]]
-  --    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
-  --   vim.api.nvim_command [[augroup END]]
+  -- 默认使用 prettier 来格式化代码(https://github.com/neovim/neovim/issues/14952#issuecomment-872631873)
+  if client.name == "diagnosticls" then
+    client.resolved_capabilities.document_formatting = true 
+  else
+    client.resolved_capabilities.document_formatting = false 
   end
 end
 
@@ -63,12 +64,6 @@ nvim_lsp.diagnosticls.setup {
       typescriptreact = 'eslint',
     },
     formatters = {
-      eslint = {
-        command = 'eslint',
-        rootPatterns = { '.git' },
-        args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
-        rootPatterns = { '.git' },
-      },
       prettier = {
         command = 'prettier',
         rootPatterns = { '.git' },

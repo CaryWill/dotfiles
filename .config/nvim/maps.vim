@@ -24,8 +24,6 @@ nnoremap <silent><leader>q :q<CR>
 nmap <C-a> gg<S-v>G
 " 粘贴大量文字的时候很慢的问题
 nnoremap <leader>v "*p
-" formatting
-nnoremap <silent><leader>f :Prettier<CR>
 " 查看当前 file 或者 dir 的历史记录
 nnoremap <leader>dd :DiffviewFileHistory<CR>
 nnoremap <leader>df :DiffviewFileHistory %<CR>
