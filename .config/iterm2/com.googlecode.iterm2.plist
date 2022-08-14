@@ -3529,6 +3529,8 @@
 	<string>B9D8867C-E0C1-4106-9371-2999DA70944F</string>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
+	<key>DisableWindowSizeSnap</key>
+	<false/>
 	<key>EnableAPIServer</key>
 	<true/>
 	<key>EnterCopyModeAutomatically</key>
@@ -5155,7 +5157,7 @@
 	<key>TerminalMargin</key>
 	<integer>0</integer>
 	<key>TerminalVMargin</key>
-	<integer>0</integer>
+	<integer>9</integer>
 	<key>TmuxUnpauseAutomatically</key>
 	<true/>
 	<key>TripleClickSelectsFullWrappedLines</key>
