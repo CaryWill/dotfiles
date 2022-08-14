@@ -103,14 +103,23 @@ endfunction
 autocmd InsertLeave,VimEnter * :call SetIM()
 autocmd InsertEnter * :call RestoreIM()
 
-" --- 插件 ---
+" --- 插件 start ---
 " formatting
 nnoremap <silent><leader>f :Prettier<CR>
 " 查看当前 file 或者 dir 的历史记录
 nnoremap <leader>dd :DiffviewFileHistory<CR>
 nnoremap <leader>df :DiffviewFileHistory %<CR>
 nnoremap ;b :Git blame<CR>
+" Git status in new tab "{{{
+function! GitStatus()
+  tabedit
+  Git
+endfunction
+" }}}
+cnoremap G call GitStatus()<CR>
+
 let g:undotree_WindowLayout=2
 nnoremap <leader>u :UndotreeToggle<CR>
+" --- 插件 end  ---
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
