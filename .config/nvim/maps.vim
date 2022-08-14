@@ -19,8 +19,21 @@ nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
-"nnoremap <silent><leader>e :e $MYVIMRC<CR>
-" Terminal Function "{{{
+nnoremap <silent><leader>q :q<CR>
+" Select all
+nmap <C-a> gg<S-v>G
+" 粘贴大量文字的时候很慢的问题
+nnoremap <leader>v "*p
+" formatting
+nnoremap <silent><leader>f :Prettier<CR>
+" 查看当前 file 或者 dir 的历史记录
+nnoremap <leader>dd :DiffviewFileHistory<CR>
+nnoremap <leader>df :DiffviewFileHistory %<CR>
+nnoremap ;b :Git blame<CR>
+let g:undotree_WindowLayout=2
+nnoremap <leader>u :UndotreeToggle<CR>
+
+" Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0
 let s:term_win = 0
 function s:termToggle()
@@ -46,22 +59,14 @@ function s:termToggle()
         let s:term_win = win_getid()
     endif
 endfunction
-"}}}
 nnoremap <silent>;t :call <SID>termToggle()<CR>
 inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
-nnoremap <silent><leader>q :q<CR>
-
-" Select all
-nmap <C-a> gg<S-v>G
-
-" 粘贴大量文字的时候很慢的问题
-nnoremap <leader>v "*p
-
-" https://vim.fandom.com/wiki/Maximize_window_and_return_to_previous_split_structure
+"}}}
+" 最大化一个 vim pane "{{{
 " Maximize window and return to previous split structure
-" MaximizeToggle "{{{
+" https://vim.fandom.com/wiki/Maximize_window_and_return_to_previous_split_structure
 function! MaximizeToggle()
   if exists("s:maximize_session")
     exec "source " . s:maximize_session
@@ -77,49 +82,33 @@ function! MaximizeToggle()
     only
   endif
 endfunction
-"}}}
 nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>
 nnoremap <C-W>m :call MaximizeToggle()<CR>
-
-" vim + non-Latin input = pain. 
-" So, auto switch im-select
+"}}}
+" IM-auto-select 解决中文英文切换的问题 "{{{
 " https://github.com/keaising/im-select.nvim
 let s:current_im = "com.apple.keylayout.ABC"
 let s:default_im = "com.apple.keylayout.ABC" 
-" SetIM "{{{
 function! SetIM()
   let s:current_im = system("im-select")
   if s:current_im != s:default_im
     silent execute "!" . "im-select " . s:default_im
   endif
 endfunction
-"}}}
-" RestoreIM "{{{
+
 function! RestoreIM()
   silent execute "!" . "im-select " . s:current_im
 endfunction
-"}}}
 autocmd InsertLeave,VimEnter * :call SetIM()
 autocmd InsertEnter * :call RestoreIM()
-
-" --- 插件 start ---
-" formatting
-nnoremap <silent><leader>f :Prettier<CR>
-" 查看当前 file 或者 dir 的历史记录
-nnoremap <leader>dd :DiffviewFileHistory<CR>
-nnoremap <leader>df :DiffviewFileHistory %<CR>
-nnoremap ;b :Git blame<CR>
-" Git status in new tab "{{{
+"}}}
+" Open Git fugitive status in new tab "{{{
 function! GitStatus()
   tabedit
   Git
 endfunction
-" }}}
 cnoremap G call GitStatus()<CR>
-
-let g:undotree_WindowLayout=2
-nnoremap <leader>u :UndotreeToggle<CR>
-" --- 插件 end  ---
+" }}}
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
