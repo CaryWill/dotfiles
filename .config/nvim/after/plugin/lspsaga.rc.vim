@@ -20,7 +20,6 @@ saga.init_lsp_saga({
 EOF
 
 nnoremap gd <Cmd>Lspsaga lsp_finder<CR>
-"nnoremap gp <Cmd>Lspsaga preview_definition<CR>
-"nnoremap <leader>rn <Cmd>Lspsaga rename<CR>
+nnoremap gs <Cmd>Lspsaga preview_definition<CR>
 nnoremap gn <cmd>Lspsaga diagnostic_jump_next<CR>
 nnoremap gp <cmd>Lspsaga diagnostic_jump_prev<CR>
