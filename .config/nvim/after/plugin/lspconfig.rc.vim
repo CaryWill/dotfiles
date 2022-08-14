@@ -32,7 +32,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
+  filetypes = { "*" },
   init_options = {
     linters = {
       eslint = {
@@ -66,7 +66,6 @@ nvim_lsp.diagnosticls.setup {
       prettier = {
         command = 'prettier',
         rootPatterns = { '.git' },
-        -- requiredFiles: { 'prettier.config.js' },
         args = { '--stdin', '--stdin-filepath', '%filename' }
       }
     },
