@@ -16,9 +16,9 @@ local on_attach = function(client, bufnr)
 
   -- 默认使用 prettier 来格式化代码(https://github.com/neovim/neovim/issues/14952#issuecomment-872631873)
   if client.name == "diagnosticls" then
-    client.resolved_capabilities.document_formatting = true 
+    client.server_capabilities.document_formatting = true 
   else
-    client.resolved_capabilities.document_formatting = false 
+    client.server_capabilities.document_formatting = false 
   end
 end
 
