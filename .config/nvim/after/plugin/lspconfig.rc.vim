@@ -12,7 +12,7 @@ local on_attach = function(client, bufnr)
   -- LSP diagnostics navigation
   vim.keymap.set('n', 'go', vim.diagnostic.open_float, opts)
   vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
+  vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
 
   -- 默认使用 prettier 来格式化代码(https://github.com/neovim/neovim/issues/14952#issuecomment-872631873)
   -- 兼容不同版本的 neovim
