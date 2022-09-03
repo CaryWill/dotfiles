@@ -80,8 +80,6 @@ function! MaximizeToggle()
     only
   endif
 endfunction
-nnoremap <C-W>O :call MaximizeToggle()<CR>
-nnoremap <C-W>o :call MaximizeToggle()<CR>
 nnoremap <C-W>m :call MaximizeToggle()<CR>
 "}}}
 " IM-auto-select 解决中文英文切换的问题 "{{{
