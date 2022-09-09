@@ -99,12 +99,5 @@ endfunction
 autocmd InsertLeave,VimEnter * :call SetIM()
 autocmd InsertEnter * :call RestoreIM()
 "}}}
-" Open Git fugitive status in new tab "{{{
-function! GitStatus()
-  tabedit
-  Git
-endfunction
-cnoremap G call GitStatus()<CR>
-" }}}
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
