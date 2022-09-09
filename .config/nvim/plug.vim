@@ -4,6 +4,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " File explorer
 Plug 'kristijanhusak/defx-git'

@@ -8,11 +8,12 @@ lua << EOF
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   -- Mappings.
-  local opts = { noremap=true, silent=true, buffer=bufnr }
+  local opts = { noremap=true, silent=false, buffer=bufnr }
   -- LSP diagnostics navigation
   vim.keymap.set('n', 'go', vim.diagnostic.open_float, opts)
   vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
+  -- vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
+  vim.keymap.set('n', '<leader>f', '<Cmd>:Prettier<CR>', opts)
 
   -- 默认使用 prettier 来格式化代码(https://github.com/neovim/neovim/issues/14952#issuecomment-872631873)
   -- 兼容不同版本的 neovim
