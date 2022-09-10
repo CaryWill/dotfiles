@@ -10,7 +10,7 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   local opts = { noremap=true, silent=false, buffer=bufnr }
   -- LSP diagnostics navigation
-  vim.keymap.set('n', 'go', vim.diagnostic.open_float, opts)
+  vim.keymap.set('n', '<leader>m', vim.diagnostic.open_float, opts)
   vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
   -- vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
   vim.keymap.set('n', '<leader>f', '<Cmd>:Prettier<CR>', opts)
