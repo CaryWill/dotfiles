@@ -26,7 +26,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'rktjmp/lush.nvim'
 Plug 'CaryWill/jellybeans-nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'norcalli/nvim-colorizer.lua'
+"Plug 'norcalli/nvim-colorizer.lua'
 
 " Others
 Plug 'mbbill/undotree'
