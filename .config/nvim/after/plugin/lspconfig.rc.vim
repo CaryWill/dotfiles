@@ -14,14 +14,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
   -- vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
   vim.keymap.set('n', '<leader>f', '<Cmd>:Prettier<CR>', opts)
-
-  -- 默认使用 prettier 来格式化代码(https://github.com/neovim/neovim/issues/14952#issuecomment-872631873)
-  -- 兼容不同版本的 neovim
-  if client.name == "diagnosticls" then
-    client.server_capabilities.document_formatting = true 
-  else
-    client.server_capabilities.document_formatting = false 
-  end
 end
 
 
