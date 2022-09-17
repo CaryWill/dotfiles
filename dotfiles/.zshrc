@@ -19,10 +19,6 @@ source $ZSH/oh-my-zsh.sh
 # Auto suggestion 
 bindkey '^ ' autosuggest-accept
 
-# 默认使用 nvim
-alias vim=nvim
-alias python=python3
-
 export PATH="$PATH:"/usr/local/bin/
 export PATH="$PATH:$HOME/.rvm/bin"
 export GOPATH=/usr/local/go
@@ -40,6 +36,7 @@ TERM="xterm" #防止删除键变成空格键
 export LANG=en_US.UTF-8
 alias vim=nvim
 export VISUAL=nvim
+alias python=python3
 alias tsnode=ts-node
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
