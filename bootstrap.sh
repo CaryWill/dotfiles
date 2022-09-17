@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 安装 vim plugin 依赖
-brew install neovim --HEAD
+brew install neovim
 brew install ripgrep # 安装 fzf 的话需要
 brew tap daipeihust/tap && brew install im-select # 自动切换输入法
 
@@ -19,6 +19,7 @@ ln -sf "$(pwd)/.config/nvim/init.vim" ~/.vimrc
 ln -sf "$(pwd)/dotfiles/.tmux.conf" ~/.tmux.conf
 ln -sf "$(pwd)/dotfiles/.bashrc" ~/.bashrc
 ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
+ln -sf "$(pwd)/dotfiles/.p10k.zsh " ~/.p10k.zsh
 
 # 安装 vim 插件
 vim +PlugInstall +qall
