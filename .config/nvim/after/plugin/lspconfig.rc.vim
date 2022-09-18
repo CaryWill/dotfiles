@@ -7,19 +7,13 @@ lua << EOF
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  -- 可使用 c-x c-o 来唤起自动补全菜单
-  -- 不过回车的时候会在上面创建一个空的 buffer 很奇怪
-  -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
   -- Mappings.
   local opts = { noremap=true, silent=false, buffer=bufnr }
   -- LSP diagnostics navigation
   vim.keymap.set('n', '<leader>m', vim.diagnostic.open_float, opts)
   vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  -- vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
   vim.keymap.set('n', '<leader>f', '<Cmd>:Prettier<CR>', opts)
 end
-
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 nvim_lsp.tsserver.setup {
@@ -27,7 +21,6 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
 }
-
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
   filetypes = { "*" },
@@ -83,6 +76,7 @@ nvim_lsp.diagnosticls.setup {
 EOF
 
 " use <TAB>, <C-y>, <Enter> to select, use <C-e> to cancel
+" 可使用 c-x c-o 来唤起自动补全菜单
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
