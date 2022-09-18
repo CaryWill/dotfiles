@@ -24,4 +24,4 @@ nnoremap gs <Cmd>Lspsaga preview_definition<CR>
 nnoremap gn <cmd>Lspsaga diagnostic_jump_next<CR>
 nnoremap gp <cmd>Lspsaga diagnostic_jump_prev<CR>
 "nnoremap gx <cmd>Lspsaga peek_definition<CR>
-nnoremap K <cmd>Lspsaga hover_doc<CR>
+"nnoremap K <cmd>Lspsaga hover_doc<CR>
