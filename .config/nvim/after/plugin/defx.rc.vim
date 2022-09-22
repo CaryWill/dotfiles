@@ -93,7 +93,7 @@ function s:defx_my_settings() abort
   \ defx#do_action('multi', [['drop']])
   nnoremap <silent><buffer><expr> v
   \ defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
-  nnoremap <silent><buffer><expr> <Space>
+  nnoremap <silent><buffer><expr> s
   \ defx#do_action('multi', [['drop', 'split'], 'quit'])
   nnoremap <silent><buffer><expr> o
   \	defx#do_action('open_or_close_tree')
