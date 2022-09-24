@@ -3,7 +3,7 @@ if !exists('g:lspconfig')
 endif
 
 lua << EOF
--- vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("debug")
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
