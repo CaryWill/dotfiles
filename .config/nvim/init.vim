@@ -28,6 +28,8 @@ set nofoldenable
 set foldlevel=99
 set cursorline
 set termguicolors " guicolors
+set splitright 
+set splitbelow
 
 set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
