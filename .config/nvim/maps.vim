@@ -30,6 +30,8 @@ nnoremap <leader>df :DiffviewFileHistory %<CR>
 nnoremap ;b :Git blame<CR>
 let g:undotree_WindowLayout=2
 nnoremap <leader>u :UndotreeToggle<CR>
+" change root dir
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0

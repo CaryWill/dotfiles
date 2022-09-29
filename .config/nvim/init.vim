@@ -38,6 +38,8 @@ set undodir=/tmp/.undo//
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
+" 用 VSCode 打开当前 buffer
+command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 
 " 插件
 let g:defx_icons_column_length = 2

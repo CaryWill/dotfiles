@@ -114,7 +114,7 @@ function s:defx_my_settings() abort
   nnoremap <silent><buffer> f :call <SID>revealInFinder()<CR>
   nnoremap <silent><buffer><expr> a
   \ defx#do_action('new_file')
-  nnoremap <silent><buffer><expr> P
+  nnoremap <silent><buffer><expr> y
   \ defx#do_action('yank_path')
   nnoremap <silent><buffer><expr> R
   \ defx#do_action('redraw')
@@ -124,6 +124,11 @@ function s:defx_my_settings() abort
   \ defx#do_action('toggle_ignored_files')
   nnoremap <silent><buffer><expr> M
   \ defx#do_action('new_multiple_files')
+  nnoremap <silent><buffer><expr> <
+  \ defx#do_action('resize', defx#get_context().winwidth - 10)
+  nnoremap <silent><buffer><expr> >
+  \ defx#do_action('resize', defx#get_context().winwidth + 10)
+  nnoremap <silent><buffer><expr> P defx#do_action('print')
 endfunction
 autocmd FileType defx call s:defx_my_settings()
 "}}}
