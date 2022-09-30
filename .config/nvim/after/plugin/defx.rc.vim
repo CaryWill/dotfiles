@@ -93,6 +93,8 @@ function s:defx_my_settings() abort
   \ defx#do_action('multi', [['drop']])
   nnoremap <silent><buffer><expr> v
   \ defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
+  nnoremap <silent><buffer><expr> t
+  \ defx#do_action('multi', [['drop', 'tab split'], 'quit'])
   nnoremap <silent><buffer><expr> s
   \ defx#do_action('multi', [['drop', 'split'], 'quit'])
   nnoremap <silent><buffer><expr> o
@@ -128,7 +130,8 @@ function s:defx_my_settings() abort
   \ defx#do_action('resize', defx#get_context().winwidth - 10)
   nnoremap <silent><buffer><expr> >
   \ defx#do_action('resize', defx#get_context().winwidth + 10)
-  nnoremap <silent><buffer><expr> P defx#do_action('print')
+  nnoremap <silent><buffer><expr> P
+  \ defx#do_action('print')
 endfunction
 autocmd FileType defx call s:defx_my_settings()
 "}}}
