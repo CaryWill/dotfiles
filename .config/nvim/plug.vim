@@ -27,6 +27,7 @@ Plug 'rktjmp/lush.nvim'
 Plug 'CaryWill/jellybeans-nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 "Plug 'norcalli/nvim-colorizer.lua'
+Plug 'CaryWill/nord.nvim'
 
 " Others
 Plug 'mbbill/undotree'

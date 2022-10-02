@@ -74,7 +74,7 @@ autocmd VimEnter * call s:setAsDefaultFileExplorer()
 "}}}
 " Reveal in finder "{{{
 function s:revealInFinder()
-  silent normal P
+  silent normal y
   let path = @0 
   let dir = path
   if !isdirectory(dir)
