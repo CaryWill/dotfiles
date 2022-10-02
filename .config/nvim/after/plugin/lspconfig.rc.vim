@@ -18,9 +18,12 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>f', '<Cmd>:Prettier<CR>', opts)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
+
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
+  on_attach = on_attach2,
   capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
 }
