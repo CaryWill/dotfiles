@@ -1,5 +1,5 @@
 "colorscheme jellybeans-nvim
-colorscheme nord
+colorscheme jellybeans 
 
 let g:indent_blankline_char_list = ['']
 let g:indent_blankline_use_treesitter = v:true
