@@ -23,7 +23,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
 )
 
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach2,
+  on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
 }
