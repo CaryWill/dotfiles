@@ -19,6 +19,8 @@ Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'hrsh7th/cmp-buffer' "nvim-cmp source for buffer words
 Plug 'onsails/lspkind-nvim' "vscode-like pictograms
 Plug 'L3MON4D3/LuaSnip'
+Plug 'williamboman/mason.nvim' " Install LSP server
+Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
 
 " Searching
 Plug 'nvim-lua/popup.nvim'
@@ -29,7 +31,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'
-"Plug 'norcalli/nvim-colorizer.lua'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'CaryWill/jellybeans.nvim'
 
 " Others

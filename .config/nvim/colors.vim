@@ -12,5 +12,5 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 
--- require 'colorizer'.setup()
+require 'colorizer'.setup()
 EOF
