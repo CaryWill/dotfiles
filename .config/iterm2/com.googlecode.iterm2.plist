@@ -5112,7 +5112,7 @@
 			<key>Use Bright Bold (Light)</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<false/>
+			<true/>
 			<key>Use Cursor Guide (Dark)</key>
 			<false/>
 			<key>Use Cursor Guide (Light)</key>
