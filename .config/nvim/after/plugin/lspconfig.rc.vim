@@ -38,6 +38,9 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.sourcekit.setup {
 }
 
+-- vim
+nvim_lsp.vimls.setup{}
+
 -- lua
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
