@@ -31,10 +31,10 @@ set termguicolors " guicolors
 set splitright 
 set splitbelow
 
-set directory=/tmp/.swp//
-set backupdir=/tmp/.backup//
+set directory=~/.neovim-tmp/.swp//
+set backupdir==~/.neovim-tmp/.backup//
 set undofile
-set undodir=/tmp/.undo//
+set undodir=~/.neovim-tmp/.undo//
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif

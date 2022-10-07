@@ -3,7 +3,9 @@ if !exists('g:lspconfig')
 endif
 
 lua << EOF
-vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("debug")
+
+-- all lsp server config can be found throught `:help lspconfig-all`
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
@@ -25,12 +27,18 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+-- typescript
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
 }
 
+-- swift
+nvim_lsp.sourcekit.setup {
+}
+
+-- lua
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   settings = {
