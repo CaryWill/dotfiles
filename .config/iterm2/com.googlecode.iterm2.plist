@@ -6,6 +6,8 @@
 	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>AutoCommandHistory</key>
+	<false/>
 	<key>BadgeFont</key>
 	<string>JetBrainsMono Nerd Font</string>
 	<key>BadgeRightMargin</key>
@@ -3127,7 +3129,7 @@
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -3262,7 +3264,7 @@
 				<real>0.7486259937286377</real>
 			</dict>
 			<key>Cursor Shadow</key>
-			<true/>
+			<false/>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
