@@ -1,25 +1,27 @@
 let mapleader = ' '
 let maplocalleader = ','
+
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
+
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" Resize window
-nmap <C-w><left> <C-w><
-nmap <C-w><right> <C-w>>
-nmap <C-w><up> <C-w>+
-nmap <C-w><down> <C-w>-
+
 noremap j gj
 noremap k gk
+
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
+
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
+
 " Select all
 nmap <C-a> gg<S-v>G
 " 粘贴大量文字的时候很慢的问题
