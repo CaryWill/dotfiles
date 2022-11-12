@@ -14,14 +14,11 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
 Plug 'hrsh7th/nvim-cmp' "Completion
-Plug 'hrsh7th/cmp-buffer' "nvim-cmp source for buffer words
-Plug 'onsails/lspkind-nvim' "vscode-like pictograms
 Plug 'L3MON4D3/LuaSnip'
 Plug 'williamboman/mason.nvim' "Install LSP server
 Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
 
 " Searching
-Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
