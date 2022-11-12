@@ -27,7 +27,7 @@ nmap <C-a> gg<S-v>G
 " 粘贴大量文字的时候很慢的问题
 nnoremap <leader>v "*p
 nnoremap ;b :Git blame<CR>
-nnoremap <leader>f :Prettier<CR>
+nnoremap <leader>f :Neoformat<CR>
 
 " Telescope
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>

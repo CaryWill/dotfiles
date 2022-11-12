@@ -2,6 +2,9 @@ if !exists('g:lspconfig')
   finish
 endif
 
+" Prettier
+let g:neoformat_try_node_exe = 1
+
 lua << EOF
 -- vim.lsp.set_log_level("debug")
 
