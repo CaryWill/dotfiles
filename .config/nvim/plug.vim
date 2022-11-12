@@ -1,7 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-unimpaired'
 Plug 'preservim/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -13,7 +12,6 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-"Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' } "LSP UIs
 Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
 Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'hrsh7th/cmp-buffer' "nvim-cmp source for buffer words
@@ -36,6 +34,4 @@ Plug 'norcalli/nvim-colorizer.lua'
 "Plug 'CaryWill/jellybeans.nvim'
 Plug 'CaryWill/nvim-juliana'
 
-" Others
-Plug 'mbbill/undotree'
 call plug#end()

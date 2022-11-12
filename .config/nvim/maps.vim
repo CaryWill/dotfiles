@@ -26,14 +26,7 @@ nnoremap <silent><leader>q :q<CR>
 nmap <C-a> gg<S-v>G
 " 粘贴大量文字的时候很慢的问题
 nnoremap <leader>v "*p
-" 查看当前 file 或者 dir 的历史记录
-"nnoremap <leader>dd :DiffviewFileHistory<CR>
-"nnoremap <leader>df :DiffviewFileHistory %<CR>
 nnoremap ;b :Git blame<CR>
-let g:undotree_WindowLayout=2
-nnoremap <leader>u :UndotreeToggle<CR>
-" change root dir
-nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 nnoremap <leader>f :Prettier<CR>
 
 " Telescope
