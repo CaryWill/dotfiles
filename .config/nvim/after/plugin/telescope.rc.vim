@@ -24,17 +24,21 @@ lua << EOF
 -- https://github.com/nvim-telescope/telescope.nvim/issues/1173#issue-980918591
 -- https://stackoverflow.com/a/69923907/10190407
 -- https://stackoverflow.com/a/68571133/10190407
+-- https://github.com/nvim-telescope/telescope.nvim
 
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 
 telescope.setup{
   defaults = {
+    layout_strategy = "vertical",
     file_ignore_patterns = { ".git/", "node_modules/", ".node/", ".vscode/", ".husky/" },
     mappings = {
       n = {
         ["q"] = actions.close
       },
+    },
+    layout_config = {
     },
     vimgrep_arguments = {
       'rg',
