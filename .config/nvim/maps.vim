@@ -27,13 +27,38 @@ nmap <C-a> gg<S-v>G
 " 粘贴大量文字的时候很慢的问题
 nnoremap <leader>v "*p
 " 查看当前 file 或者 dir 的历史记录
-nnoremap <leader>dd :DiffviewFileHistory<CR>
-nnoremap <leader>df :DiffviewFileHistory %<CR>
+"nnoremap <leader>dd :DiffviewFileHistory<CR>
+"nnoremap <leader>df :DiffviewFileHistory %<CR>
 nnoremap ;b :Git blame<CR>
 let g:undotree_WindowLayout=2
 nnoremap <leader>u :UndotreeToggle<CR>
 " change root dir
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>f :Prettier<CR>
+
+" Telescope
+nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
+nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
+nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
+nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
+nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
+nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
+"lsp
+nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
+nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
+nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
+nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
+"git
+nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
+nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
+"nnoremap ;s <cmd>lua require('telescope.builtin').git_status()<CR>
+"nnoremap gs <cmd>lua require('telescope.builtin').git_stash()<CR>
+"nnoremap gb <cmd>lua require('telescope.builtin').git_branches()<CR>
+nmap <C-s> <M-q>
+
+" Lspconfig
+nnoremap K <cmd>lua vim.diagnostic.open_float()<CR>
+nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 
 " Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0

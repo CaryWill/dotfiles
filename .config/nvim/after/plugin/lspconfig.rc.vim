@@ -14,10 +14,6 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   local opts = { noremap=true, silent=false, buffer=bufnr }
-  -- LSP diagnostics navigation
-  vim.keymap.set('n', 'K', vim.diagnostic.open_float, opts)
-  vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.keymap.set('n', '<leader>f', '<Cmd>:Prettier<CR>', opts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
