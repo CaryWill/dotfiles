@@ -25,13 +25,13 @@ lua << EOF
 -- https://stackoverflow.com/a/69923907/10190407
 -- https://stackoverflow.com/a/68571133/10190407
 -- https://github.com/nvim-telescope/telescope.nvim
+-- :h Telescope 看文档配置
 
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 
 telescope.setup{
   defaults = {
-    layout_strategy = "vertical",
     file_ignore_patterns = { ".git/", "node_modules/", ".node/", ".vscode/", ".husky/" },
     mappings = {
       n = {
@@ -39,6 +39,7 @@ telescope.setup{
       },
     },
     layout_config = {
+      preview_width = 0.6,
     },
     vimgrep_arguments = {
       'rg',
