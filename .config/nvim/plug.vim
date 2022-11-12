@@ -14,7 +14,7 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' } "LSP UIs
+"Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' } "LSP UIs
 Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
 Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'hrsh7th/cmp-buffer' "nvim-cmp source for buffer words

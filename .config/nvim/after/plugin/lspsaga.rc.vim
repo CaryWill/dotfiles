@@ -1,5 +1,6 @@
 lua << EOF
-local saga = require 'lspsaga'
+local status, saga = pcall(require, "lspsaga")
+if (not status) then return end
 saga.init_lsp_saga({
   border_style = "rounded",
   finder_action_keys = {
@@ -19,9 +20,9 @@ saga.init_lsp_saga({
 })
 EOF
 
-nnoremap gd <Cmd>Lspsaga lsp_finder<CR>
-nnoremap gs <Cmd>Lspsaga preview_definition<CR>
-nnoremap gn <cmd>Lspsaga diagnostic_jump_next<CR>
-nnoremap gp <cmd>Lspsaga diagnostic_jump_prev<CR>
+"nnoremap gf <Cmd>Lspsaga lsp_finder<CR>
+"nnoremap gs <Cmd>Lspsaga preview_definition<CR>
+"nnoremap gn <cmd>Lspsaga diagnostic_jump_next<CR>
+"nnoremap gp <cmd>Lspsaga diagnostic_jump_prev<CR>
 "nnoremap gx <cmd>Lspsaga peek_definition<CR>
 "nnoremap K <cmd>Lspsaga hover_doc<CR>
