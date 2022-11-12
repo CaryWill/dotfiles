@@ -12,9 +12,9 @@ nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 "git
-nnoremap gc <cmd>lua require('telescope.builtin').git_commits()<CR>
-nnoremap gbc <cmd>lua require('telescope.builtin').git_bcommits()<CR>
-nnoremap gs <cmd>lua require('telescope.builtin').git_status()<CR>
+nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
+nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
+"nnoremap ;s <cmd>lua require('telescope.builtin').git_status()<CR>
 "nnoremap gs <cmd>lua require('telescope.builtin').git_stash()<CR>
 "nnoremap gb <cmd>lua require('telescope.builtin').git_branches()<CR>
 
