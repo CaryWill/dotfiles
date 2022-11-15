@@ -15,8 +15,13 @@ telescope.setup{
     file_ignore_patterns = { ".git/", "node_modules/", ".node/", ".vscode/", ".husky/", "package-lock.json", "yarn.lock" },
     mappings = {
       n = {
-        ["q"] = actions.close
+        ["q"] = actions.close,
       },
+      i = {
+        ["<C-s>"] = actions.file_split,
+        ["<C-v>"] = actions.file_vsplit,
+        ["<C-t>"] = actions.file_tab,
+      }
     },
     layout_config = {
       preview_width = 0.5,
