@@ -91,11 +91,11 @@ function s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
   \ defx#is_directory() ? defx#do_action('open_or_close_tree') :
   \ defx#do_action('multi', [['drop']])
-  nnoremap <silent><buffer><expr> v
+  nnoremap <silent><buffer><expr> <C-v>
   \ defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
-  nnoremap <silent><buffer><expr> t
+  nnoremap <silent><buffer><expr> <C-t>
   \ defx#do_action('multi', [['drop', 'tab split'], 'quit'])
-  nnoremap <silent><buffer><expr> s
+  nnoremap <silent><buffer><expr> <C-s>
   \ defx#do_action('multi', [['drop', 'split'], 'quit'])
   nnoremap <silent><buffer><expr> o
   \	defx#do_action('open_or_close_tree')
