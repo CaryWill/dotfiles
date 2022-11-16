@@ -122,5 +122,16 @@ endfunction
 autocmd InsertLeave,VimEnter * :call SetIM()
 autocmd InsertEnter * :call RestoreIM()
 "}}}
+" 自增添加全局 marks -- 阅读源码的时候可以做标记 "{{{
+let s:markIndex = 0
+let s:marks = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+function! IncrementalMark()
+  let l:index = s:markIndex % len(s:marks)
+  let l:letter = s:marks[l:index:l:index]
+  exec "norm m" .. l:letter
+  let s:markIndex = s:markIndex + 1
+endfunction
+nnoremap mm :call IncrementalMark()<CR>
+"}}}
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
