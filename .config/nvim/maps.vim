@@ -48,6 +48,9 @@ nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
 "nnoremap ;s <cmd>lua require('telescope.builtin').git_status()<CR>
 "nnoremap gs <cmd>lua require('telescope.builtin').git_stash()<CR>
 "nnoremap gb <cmd>lua require('telescope.builtin').git_branches()<CR>
+"Vim
+nnoremap ;m <cmd>lua require('telescope.builtin').marks()<CR>
+nnoremap ;j <cmd>lua require('telescope.builtin').jumplist()<CR>
 nmap <C-s> <M-q>
 
 " Lspconfig
