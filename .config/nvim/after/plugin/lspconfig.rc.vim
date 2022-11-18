@@ -55,5 +55,16 @@ nvim_lsp.sumneko_lua.setup {
 -- eslint
 nvim_lsp.eslint.setup{}
 
+vim.diagnostic.config({
+  virtual_text = {
+    format = function(diagnostic)
+      if diagnostic.severity == vim.diagnostic.severity.ERROR then
+        return string.format("%s: %s", diagnostic.source, diagnostic.message)
+      end
+      return diagnostic.message
+    end
+  },
+  source = true
+})
 EOF
 
