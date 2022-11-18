@@ -134,7 +134,7 @@ function! IncrementalMark()
   exec "norm m" .. l:letter
   let s:markIndex = s:markIndex + 1
 endfunction
-nnoremap mm :call IncrementalMark()<CR>
+nnoremap <silent> mm :call IncrementalMark()<CR>
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
