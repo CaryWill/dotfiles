@@ -12,10 +12,7 @@ lualine.setup {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
     lualine_c = {
-      function()
-        return "%="
-      end,
-      'filename'
+      "%=%{expand('%:p:h:t')}/%t"
     },
     lualine_x = {'encoding', 'filetype'},
     lualine_z = {'location'}
