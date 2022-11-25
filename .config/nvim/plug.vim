@@ -2,7 +2,6 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'sbdchd/neoformat'
 
 " File explorer
