@@ -17,15 +17,12 @@ noremap k gk
 
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
-"map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
 
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
 
 " Select all
-"nmap <C-a> gg<S-v>G
-" 粘贴大量文字的时候很慢的问题
-"nnoremap <leader>v "*p
+nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 nnoremap <leader>f :Neoformat<CR>
 
