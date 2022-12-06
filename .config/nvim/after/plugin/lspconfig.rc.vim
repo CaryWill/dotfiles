@@ -55,9 +55,6 @@ nvim_lsp.sumneko_lua.setup {
 -- eslint
 nvim_lsp.eslint.setup{}
 
--- grammarly
-nvim_lsp.grammarly.setup{}
-
 vim.diagnostic.config({
   virtual_text = {
     format = function(diagnostic)
