@@ -80,11 +80,11 @@ function s:termToggle()
         let s:term_win = win_getid()
     endif
 endfunction
+"}}}
 nnoremap <silent>;t :call <SID>termToggle()<CR>
 inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
-"}}}
 " 最大化一个 vim pane "{{{
 " Maximize window and return to previous split structure
 " https://vim.fandom.com/wiki/Maximize_window_and_return_to_previous_split_structure
@@ -103,8 +103,8 @@ function! MaximizeToggle()
     only
   endif
 endfunction
-nnoremap <C-W>m :call MaximizeToggle()<CR>
 "}}}
+nnoremap <C-W>m :call MaximizeToggle()<CR>
 " IM-auto-select 解决中文英文切换的问题 "{{{
 " https://github.com/keaising/im-select.nvim
 let s:current_im = "com.apple.keylayout.ABC"
@@ -131,7 +131,7 @@ function! IncrementalMark()
   exec "norm m" .. l:letter
   let s:markIndex = s:markIndex + 1
 endfunction
-nnoremap <silent> mm :call IncrementalMark()<CR>
 "}}}
+nnoremap <silent> mm :call IncrementalMark()<CR>
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
