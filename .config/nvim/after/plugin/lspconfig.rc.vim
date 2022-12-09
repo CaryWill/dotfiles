@@ -54,6 +54,8 @@ nvim_lsp.sumneko_lua.setup {
 
 -- eslint
 nvim_lsp.eslint.setup{}
+-- python
+nvim_lsp.jedi_language_server.setup{}
 
 vim.diagnostic.config({
   virtual_text = {

@@ -9,5 +9,5 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = { "sumneko_lua", "vimls", "tsserver", "eslint" },
+  ensure_installed = { "sumneko_lua", "vimls", "tsserver", "eslint", "jedi_language_server" },
 }
