@@ -8,7 +8,7 @@ cmp.setup({
     end,
   },
   window = {
-    completion = cmp.config.window.bordered({ border = { "+", "-", "+", "|", "+", "-", "+", "|" }}),
+    --completion = cmp.config.window.bordered({ border = { "+", "-", "+", "|", "+", "-", "+", "|" }}),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
