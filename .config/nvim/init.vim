@@ -27,7 +27,6 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 set cursorline
-set cursorlineopt=number
 set termguicolors " guicolors
 set splitright 
 set splitbelow
