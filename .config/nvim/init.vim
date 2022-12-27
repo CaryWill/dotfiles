@@ -18,7 +18,7 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
-set laststatus=2 " 使用 3 可以使用 nvim 的 global statusline
+set laststatus=3 " 使用 3 可以使用 nvim 的 global statusline
 set autoread
 set nospell
 set signcolumn=number 
