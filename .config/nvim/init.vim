@@ -7,6 +7,7 @@ set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
 set hidden 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set timeoutlen=500
 set ignorecase
 set smartcase
 set smarttab

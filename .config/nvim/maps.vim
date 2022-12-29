@@ -21,6 +21,8 @@ nmap sv :vsplit<CR><C-w>w
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
 
+nnoremap <C-[> <ESC>
+
 " Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
