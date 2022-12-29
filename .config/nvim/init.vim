@@ -17,7 +17,7 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
-set laststatus=3 " global statusline
+set laststatus=2 
 set autoread
 set nospell
 set signcolumn=number 
