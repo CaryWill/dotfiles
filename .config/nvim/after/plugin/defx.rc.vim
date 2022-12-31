@@ -60,8 +60,9 @@ function s:searchNode()
    endfor
  endif
 endfunction
-nnoremap <silent><localleader>e :call <SID>searchNode()<CR>
 "}}}
+nnoremap <silent><localleader>e :call <SID>searchNode()<CR>
+map <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%')`<CR>
 " Set defx as default file explorer  "{{{
 function s:setAsDefaultFileExplorer() 
    if &filetype == 'netrw'
@@ -70,8 +71,8 @@ function s:setAsDefaultFileExplorer()
       only
    endif
 endfunction
-autocmd VimEnter * call s:setAsDefaultFileExplorer()
 "}}}
+autocmd VimEnter * call s:setAsDefaultFileExplorer()
 " Reveal in finder "{{{
 function s:revealInFinder()
   silent normal y
