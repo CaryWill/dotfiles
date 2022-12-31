@@ -34,13 +34,14 @@ nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
 nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
+nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
+
 "lsp
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
 nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 nnoremap gs <cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>
-nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
 "git
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
 nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
@@ -51,9 +52,19 @@ nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
 nnoremap ;m <cmd>lua require('telescope.builtin').marks()<CR>
 nnoremap ;j <cmd>lua require('telescope.builtin').jumplist()<CR>
 nmap <C-s> <M-q>
+"Diagnostic
+nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
+nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
+nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
+nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
+" Workspace
+nmap <leader>wa <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
+nmap <leader>wr <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
+nmap <leader>wl <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
+nnoremap <leader>ws <cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>
 
 " Lspconfig
-nnoremap K <cmd>lua vim.diagnostic.open_float()<CR>
+nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 
 " Neovim Terminal toggle at bottom "{{{
