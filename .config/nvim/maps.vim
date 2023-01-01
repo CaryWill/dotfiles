@@ -57,11 +57,6 @@ nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
 nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
 nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
-" Workspace
-nmap <leader>wa <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
-nmap <leader>wr <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
-nmap <leader>wl <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
-nnoremap <leader>ws <cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>
 
 " Lspconfig
 nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
