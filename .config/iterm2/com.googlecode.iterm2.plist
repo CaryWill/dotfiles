@@ -2465,7 +2465,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<false/>
+			<true/>
 			<key>Allow Change Cursor Blink</key>
 			<true/>
 			<key>Allow Title Reporting</key>
@@ -3319,7 +3319,7 @@
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
-			<true/>
+			<false/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
