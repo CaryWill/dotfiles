@@ -1,17 +1,7 @@
-### 安装配置
+## Liked fonts
 
-> 克隆项目
+1. Monolisa(13, 100, 135)
+2. Menlo(13, 100, 110)
+3. JetBrainsMono
 
-```shell
-git clone git@github.com:CaryWill/dotfiles.git ~/.workspace/github/dotfiles
-```
-
-> 执行 shell
-
-```shell
-cd ~/workspace/github/dotfiles && sh bootstrap.sh
-```
-
-### 安装 Vim 插件
-
-`:PlugInstall` 安装配置
+Note: all fonts are nerd-font patched.
