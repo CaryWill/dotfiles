@@ -3,51 +3,42 @@ let maplocalleader = ','
 
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
-
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
-
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 noremap j gj
 noremap k gk
-
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
-
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
-
 nnoremap <C-[> <ESC>
 
-" Select all
+"Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 nnoremap <leader>f :Neoformat<CR>
-
-" Telescope
+"Telescope
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
 nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
-
-"lsp
+"Lsp
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
 nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 nnoremap gs <cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>
-"git
+nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
+"Git
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
 nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
-"nnoremap ;s <cmd>lua require('telescope.builtin').git_status()<CR>
-"nnoremap gs <cmd>lua require('telescope.builtin').git_stash()<CR>
-"nnoremap gb <cmd>lua require('telescope.builtin').git_branches()<CR>
 "Vim
 nnoremap ;m <cmd>lua require('telescope.builtin').marks()<CR>
 nnoremap ;j <cmd>lua require('telescope.builtin').jumplist()<CR>
@@ -57,10 +48,6 @@ nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
 nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
 nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
-
-" Lspconfig
-nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 
 " Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0

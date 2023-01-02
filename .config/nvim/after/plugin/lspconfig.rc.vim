@@ -5,14 +5,8 @@ endif
 lua << EOF
 -- vim.lsp.set_log_level("debug")
 
--- all lsp server config can be found throught `:help lspconfig-all`
-
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  -- use <TAB>, <C-y>, <Enter> to select, use <C-e> to cancel
-  -- 可使用 c-x c-o 来唤起自动补全菜单
-
-  -- Mappings.
   local opts = { noremap=true, silent=false, buffer=bufnr }
 end
 
@@ -26,13 +20,6 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
 }
-
--- swift
-nvim_lsp.sourcekit.setup {
-}
-
--- vim
-nvim_lsp.vimls.setup{}
 
 -- lua
 nvim_lsp.sumneko_lua.setup {
@@ -52,11 +39,6 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
--- eslint
-nvim_lsp.eslint.setup{}
--- python
-nvim_lsp.jedi_language_server.setup{}
-
 vim.diagnostic.config({
   virtual_text = {
     format = function(diagnostic)
@@ -68,5 +50,10 @@ vim.diagnostic.config({
   },
   source = true
 })
-EOF
 
+nvim_lsp.eslint.setup{} -- eslint
+nvim_lsp.jedi_language_server.setup{} -- python
+nvim_lsp.sourcekit.setup {} -- swift
+nvim_lsp.vimls.setup{} -- vim
+
+EOF
