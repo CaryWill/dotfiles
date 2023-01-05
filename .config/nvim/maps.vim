@@ -128,5 +128,5 @@ function! IncrementalMark()
 endfunction
 "}}}
 nnoremap <silent> mm :call IncrementalMark()<CR>
-
+nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
 " vim: set foldmethod=marker foldlevel=0 foldenable:
