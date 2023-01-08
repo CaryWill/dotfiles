@@ -1,12 +1,12 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'tpope/vim-commentary'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " File explorer
 Plug 'kristijanhusak/defx-git'
@@ -20,6 +20,7 @@ Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'williamboman/mason.nvim' "Install LSP server
 Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Searching
 Plug 'nvim-lua/plenary.nvim'
@@ -28,6 +29,5 @@ Plug 'nvim-telescope/telescope.nvim'
 " More-theming
 Plug 'CaryWill/jellybeans.nvim'
 Plug 'CaryWill/nvim-juliana'
-Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()

@@ -16,6 +16,14 @@ require'nvim-treesitter.configs'.setup {
     "tsx",
     "json",
     "html",
+    "swift",
+    "css",
+    "lua"
+
+  },
+  -- work with vim-commentary to support jsx comment alike
+  context_commentstring = {
+    enable = true
   },
 }
 

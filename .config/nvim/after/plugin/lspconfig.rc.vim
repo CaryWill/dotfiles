@@ -24,6 +24,7 @@ nvim_lsp.tsserver.setup {
 -- lua
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -46,14 +47,41 @@ vim.diagnostic.config({
         return string.format("%s: %s", diagnostic.source, diagnostic.message)
       end
       return diagnostic.message
-    end
+    end,
+    spacing = 4,
   },
-  source = true
+  source = true,
+  float = {
+    source = "always", -- Or "if_many"
+  },
 })
 
-nvim_lsp.eslint.setup{} -- eslint
-nvim_lsp.jedi_language_server.setup{} -- python
-nvim_lsp.sourcekit.setup {} -- swift
-nvim_lsp.vimls.setup{} -- vim
+-- Diagnostic symbols in the sign column (gutter)
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+-- eslint
+nvim_lsp.eslint.setup{}
+
+-- python
+nvim_lsp.jedi_language_server.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+} 
+
+-- swift
+nvim_lsp.sourcekit.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+} 
+
+-- vim
+nvim_lsp.vimls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+} 
 
 EOF
