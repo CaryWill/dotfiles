@@ -47,4 +47,4 @@ alias 'tmux-s'='tmux new -s ${PWD##*/}'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # for nested tmux
-unset TMUX
+# unset TMUX
