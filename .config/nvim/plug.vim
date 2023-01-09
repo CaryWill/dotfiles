@@ -28,7 +28,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " More-theming
-Plug 'CaryWill/jellybeans.nvim'
+"Plug 'CaryWill/jellybeans.nvim'
 Plug 'CaryWill/nvim-juliana'
 
 call plug#end()
