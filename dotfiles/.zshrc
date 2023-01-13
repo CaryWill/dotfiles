@@ -42,6 +42,8 @@ export TERM=xterm-256color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 # 用当前文件夹名直接创建一个 tmux session
 alias 'tmux-s'='tmux new -s ${PWD##*/}'
+# config file dir for kitty
+export KITTY_CONFIG_DIRECTORY="/Users/{$USER}/workspace/github/dotfiles/.config/kitty"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
