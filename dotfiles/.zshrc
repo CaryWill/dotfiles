@@ -50,3 +50,6 @@ export KITTY_CONFIG_DIRECTORY="/Users/{$USER}/workspace/github/dotfiles/.config/
 
 # for nested tmux
 # unset TMUX
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
