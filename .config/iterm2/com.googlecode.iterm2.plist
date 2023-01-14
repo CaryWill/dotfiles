@@ -3393,7 +3393,7 @@ Make Text Normal Size</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MonoLisaNerdFont-Regular 13</string>
+			<string>MonoLisaNerdFont-Light 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
