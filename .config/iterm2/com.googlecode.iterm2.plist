@@ -3296,7 +3296,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			</array>
 			<key>Keyboard Map</key>
 			<dict>
-				<key>0x2b-0x120000-0x29</key>
+				<key>0x3c-0x120000-0x2b</key>
 				<dict>
 					<key>Action</key>
 					<integer>25</integer>
@@ -3305,22 +3305,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 					<key>Escaping</key>
 					<integer>2</integer>
 					<key>Text</key>
-					<string>Make Text Bigger
-Make Text Bigger</string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0x2d-0x0-0x1b</key>
-				<dict>
-					<key>Action</key>
-					<integer>25</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string>Make Text Smaller
-Make Text Smaller</string>
+					<string></string>
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
@@ -3335,6 +3320,19 @@ Make Text Smaller</string>
 					<key>Text</key>
 					<string>Make Text Normal Size
 Make Text Normal Size</string>
+					<key>Version</key>
+					<integer>2</integer>
+				</dict>
+				<key>0x3e-0x120000-0x2f</key>
+				<dict>
+					<key>Action</key>
+					<integer>25</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>2</integer>
+					<key>Text</key>
+					<string></string>
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
