@@ -3305,7 +3305,8 @@ Respond with one or more commands. Do not include any explanation or additional 
 					<key>Escaping</key>
 					<integer>2</integer>
 					<key>Text</key>
-					<string></string>
+					<string>Make Text Smaller
+Make Text Smaller</string>
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
@@ -3332,7 +3333,8 @@ Make Text Normal Size</string>
 					<key>Escaping</key>
 					<integer>2</integer>
 					<key>Text</key>
-					<string></string>
+					<string>Make Text Bigger
+Make Text Bigger</string>
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
