@@ -13,6 +13,7 @@ noremap j gj
 noremap k gk
 nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
+nmap st :tab split<CR><C-w>w
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
 nnoremap <C-[> <ESC>
