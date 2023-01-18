@@ -10,9 +10,8 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'folke/todo-comments.nvim'
 
 " File explorer
-Plug 'kristijanhusak/defx-git'
-Plug 'kristijanhusak/defx-icons'
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'

@@ -38,7 +38,13 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
-let g:defx_icons_column_length = 2
+" let g:defx_icons_column_length = 2
+
+lua <<EOF
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+EOF
 
 runtime ./plug.vim
 runtime ./maps.vim
