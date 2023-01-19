@@ -36,6 +36,21 @@ nvimTree.setup({
           { key = "f", action = "" },
         }
       }
+    },
+  renderer = {
+    icons = {
+      glyphs = {
+        git = {
+          unstaged = "M",
+          staged = "A",
+          unmerged = "=",
+          renamed = "R",
+          untracked = "U",
+          deleted = "D",
+          ignored = "I",
+        },
+        }
+      } 
     }
   })
 EOF
