@@ -28,6 +28,17 @@ nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
 nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
+nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
+
+" `ma` can list all the bookmarks marked by vim-bookmarks plugin
+" in quickfix list, can we can populate telescope with this list
+function s:listBookmarks()
+    normal ma
+    normal ma
+    normal ;q
+endfunction
+nnoremap ;m :call <SID>listBookmarks()<CR>
+
 nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
 "Lsp
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
@@ -40,9 +51,6 @@ nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 "Git
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
 nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
-"Vim
-nnoremap ;m <cmd>lua require('telescope.builtin').marks()<CR>
-nnoremap ;j <cmd>lua require('telescope.builtin').jumplist()<CR>
 nmap <C-s> <M-q>
 "Diagnostic
 nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
