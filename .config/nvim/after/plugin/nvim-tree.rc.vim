@@ -23,7 +23,6 @@ nvimTree.setup({
           { key = "y", action = "copy_absolute_path" },
           { key = "R", action = "refresh" },
           { key = ".", action = "toggle_dotfiles" },
-          { key = "ff", action = "live_filter" },
           -- remove keymapping
           { key = "-", action = "" },
           { key = "+", action = "" },
