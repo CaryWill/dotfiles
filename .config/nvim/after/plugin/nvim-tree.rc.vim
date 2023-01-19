@@ -23,10 +23,11 @@ nvimTree.setup({
           { key = "R", action = "refresh" },
           { key = ".", action = "toggle_dotfiles" },
           { key = ".", action = "toggle_dotfiles" },
+          { key = "ff", action = "live_filter" },
         }
       }
     }
   })
 EOF
 
-nnoremap <silent><localleader>e :NvimTreeFindFileToggle<CR>
+nnoremap <silent>fi :NvimTreeFindFileToggle<CR>
