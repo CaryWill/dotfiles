@@ -10,8 +10,9 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'folke/todo-comments.nvim'
 
 " File explorer
-Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'MattesGroeger/vim-bookmarks'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'

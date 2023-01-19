@@ -5,3 +5,9 @@
 3. JetBrainsMono
 
 Note: all fonts are nerd-font patched.
+
+## booksmarks
+
+1. touch ~/.gitignore
+2. put `.vim-bookmarks` inside ~/.gitignore file
+2. git config --global core.excludesfile ~/.gitignore
