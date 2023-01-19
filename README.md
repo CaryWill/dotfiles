@@ -1,8 +1,8 @@
 ## Liked fonts
 
-1. Monolisa(13, 100, 135)
-2. Menlo(13, 100, 110)
-3. JetBrainsMono
+2. Monolisa(13, 100, 135)
+3. Menlo(13, 100, 110)
+4. JetBrainsMono
 
 Note: all fonts are nerd-font patched.
 
@@ -10,4 +10,4 @@ Note: all fonts are nerd-font patched.
 
 1. touch ~/.gitignore
 2. put `.vim-bookmarks` inside ~/.gitignore file
-2. git config --global core.excludesfile ~/.gitignore
+3. git config --global core.excludesfile ~/.gitignore

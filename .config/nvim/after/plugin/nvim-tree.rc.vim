@@ -24,6 +24,9 @@ nvimTree.setup({
           { key = ".", action = "toggle_dotfiles" },
           { key = ".", action = "toggle_dotfiles" },
           { key = "ff", action = "live_filter" },
+          { key = "-", action = "" },
+          { key = "+", action = "" },
+          { key = "=", action = "" },
         }
       }
     }
@@ -31,3 +34,6 @@ nvimTree.setup({
 EOF
 
 nnoremap <silent>fi :NvimTreeFindFileToggle<CR>
+autocmd FileType NvimTree nnoremap <buffer> + :NvimTreeResize +20<CR>
+autocmd FileType NvimTree nnoremap <buffer> - :NvimTreeResize -20<CR>
+autocmd FileType NvimTree nnoremap <buffer> = :NvimTreeResize 30<CR>
