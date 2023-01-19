@@ -46,10 +46,14 @@ nvimTree.setup({
           renamed = "R",
           untracked = "U",
           deleted = "D",
-          ignored = "I",
+          ignored = "◌",
         },
         }
       } 
+    },
+    git = {
+      enable = true,
+      ignore = false,
     }
   })
 EOF
