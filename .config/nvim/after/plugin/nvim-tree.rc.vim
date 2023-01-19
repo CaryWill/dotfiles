@@ -7,6 +7,7 @@ nvimTree.setup({
   view = { 
     mappings = {
       list = {
+          -- add keymapping
           { key = "<C-s>", action = "split" },
           { key = "<C-v>", action = "vsplit" },
           { key = "<C-t>", action = "tabnew" },
@@ -22,11 +23,17 @@ nvimTree.setup({
           { key = "y", action = "copy_absolute_path" },
           { key = "R", action = "refresh" },
           { key = ".", action = "toggle_dotfiles" },
-          { key = ".", action = "toggle_dotfiles" },
           { key = "ff", action = "live_filter" },
+          -- remove keymapping
           { key = "-", action = "" },
           { key = "+", action = "" },
           { key = "=", action = "" },
+          { key = "I", action = "" },
+          { key = "<C-x>", action = "" },
+          { key = "x", action = "" },
+          { key = "s", action = "" },
+          { key = "gy", action = "" },
+          { key = "f", action = "" },
         }
       }
     }
