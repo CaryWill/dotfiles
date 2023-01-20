@@ -45,6 +45,9 @@ let g:loaded_netrwPlugin = 1
 " bookmarks
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_auto_save = 1
+let g:bookmark_display_annotation = 1
+let g:bookmark_highlight_lines = 1
+let g:bookmark_show_warning = 1
 
 runtime ./plug.vim
 runtime ./maps.vim
