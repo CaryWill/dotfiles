@@ -7,7 +7,6 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-Plug 'folke/todo-comments.nvim'
 
 " File explorer
 Plug 'nvim-tree/nvim-web-devicons'

@@ -40,14 +40,9 @@ nvimTree.setup({
     icons = {
       glyphs = {
         git = {
-          unstaged = "M",
-          staged = "A",
-          unmerged = "=",
-          renamed = "R",
-          untracked = "U",
-          deleted = "D",
-          ignored = "◌",
-        },
+            untracked = "✹",
+            deleted = "♺"
+          }
         }
       } 
     },
