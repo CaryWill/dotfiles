@@ -41,7 +41,6 @@ nvimTree.setup({
       glyphs = {
         git = {
             untracked = "✹",
-            deleted = "♺"
           }
         }
       } 
