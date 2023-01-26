@@ -2414,14 +2414,16 @@ Respond with one or more commands. Do not include any explanation or additional 
 			</dict>
 			<key>Ansi 0 Color (Light)</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.27450980392156865</real>
+				<real>0.25576156377792358</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.23921568627450981</real>
+				<real>0.22115767002105713</real>
 				<key>Red Component</key>
-				<real>0.20392156862745098</real>
+				<real>0.18856325745582581</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -2918,14 +2920,16 @@ Respond with one or more commands. Do not include any explanation or additional 
 			</dict>
 			<key>Ansi 8 Color (Light)</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25490196078431371</real>
+				<real>0.25266602635383606</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.23137254901960785</real>
+				<real>0.23087021708488464</real>
 				<key>Red Component</key>
-				<real>0.21568627450980393</real>
+				<real>0.21856456995010376</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
