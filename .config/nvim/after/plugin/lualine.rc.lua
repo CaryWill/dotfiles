@@ -6,24 +6,24 @@ lualine.setup {
     theme = 'juliana',
     section_separators = {left = '', right = ''},
     component_separators = {left = '', right = ''},
-    disabled_filetypes = {}
+    disabled_filetypes = {},
+    icons_enabled = false,
   },
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {
-      "%=%{expand('%:p:h')}/%t"
-    },
+    lualine_c = {{
+      'filename', file_status = true, path = 1, newfile_status = true,
+    }},
     lualine_x = {'encoding', 'filetype'},
     lualine_z = {'location'}
   },
   inactive_sections = {
-    lualine_a = {},
+    lualine_a = { 'filename' },
     lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
+    lualine_c = {},
+    lualine_x = {},
+    lualine_z = { 'filetype' },
   },
   tabline = {},
   winbar = {},
