@@ -58,6 +58,10 @@ nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
 nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
 
+"formatting
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 " Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0
 let s:term_win = 0

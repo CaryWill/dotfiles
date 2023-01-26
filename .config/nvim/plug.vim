@@ -8,6 +8,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/vim-easy-align'
 
 " File explorer
 Plug 'nvim-tree/nvim-web-devicons'
