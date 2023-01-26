@@ -2986,13 +2986,13 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.22170066833496094</real>
+				<real>0.25149261951446533</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.18075257539749146</real>
+				<real>0.22083035111427307</real>
 				<key>Red Component</key>
-				<real>0.16525781154632568</real>
+				<real>0.18412747979164124</real>
 			</dict>
 			<key>Background Color (Light)</key>
 			<dict>
