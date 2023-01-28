@@ -2999,13 +2999,13 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.22745099660000001</real>
+				<real>0.25490692259999997</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.19607841970000001</real>
+				<real>0.21885174509999999</real>
 				<key>Red Component</key>
-				<real>0.1686274707</real>
+				<real>0.18881258370000001</real>
 			</dict>
 			<key>Badge Color</key>
 			<dict>
@@ -3549,7 +3549,7 @@ Make Text Bigger</string>
 			<key>Use Underline Color (Light)</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.05</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
