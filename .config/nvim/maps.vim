@@ -52,6 +52,8 @@ nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
 nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
 nmap <C-s> <M-q>
+xmap do :diffget<CR>
+xmap dp :diffput<CR>
 "Diagnostic
 nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
 nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
