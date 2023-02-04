@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/cary/.oh-my-zsh"
-ZSH_THEME=""
 
 plugins=(
   git
@@ -38,3 +37,4 @@ alias 'tmux-s'='tmux new -s ${PWD##*/}'
 
 # for nested tmux
 # unset TMUX
+ZSH_THEME="af-magic"
