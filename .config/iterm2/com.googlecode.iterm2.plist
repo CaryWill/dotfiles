@@ -2377,7 +2377,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Allow Change Cursor Blink</key>
 			<true/>
 			<key>Allow Title Reporting</key>
@@ -3402,6 +3402,8 @@ Make Text Bigger</string>
 			<string>JetBrainsMonoNerdFontComplete-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
+			<key>Place Prompt at First Column</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -3490,6 +3492,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Mark Indicators</key>
+			<false/>
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
