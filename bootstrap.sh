@@ -8,9 +8,6 @@ brew tap daipeihust/tap && brew install im-select # 自动切换输入法
 # neovim lsp
 npm install -g eslint_d prettier
 
-# zsh theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
 # 设置软连接兼容 neovim
 ln -sf "$(pwd)/.config/nvim" ~/.config
 ln -sf "$(pwd)/.config/nvim/init.vim" ~/.vim/.vimrc
