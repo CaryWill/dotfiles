@@ -11,9 +11,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap j gj
 noremap k gk
-nmap ss :split<CR><C-w>w
-nmap sv :vsplit<CR><C-w>w
-nmap st :tab split<CR><C-w>w
+nmap ss :split<CR>
+nmap sv :vsplit<CR>
+nmap st :tab split<CR>
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
 nnoremap <C-[> <ESC>
