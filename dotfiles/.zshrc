@@ -38,3 +38,7 @@ alias 'tmux-s'='tmux new -s ${PWD##*/}'
 
 # for nested tmux
 # unset TMUX
+
+# default theme with full path
+autoload -U colors && colors
+PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
