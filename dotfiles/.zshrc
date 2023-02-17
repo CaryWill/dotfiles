@@ -38,7 +38,5 @@ alias 'tmux-s'='tmux new -s ${PWD##*/}'
 
 # for nested tmux
 # unset TMUX
-
-# default theme with full path
-autoload -U colors && colors
-PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
+# change `clean` zsh theme to full path
+PROMPT='%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}:%{$fg[blue]%}%B%~/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
