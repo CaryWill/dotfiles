@@ -2377,7 +2377,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<false/>
+			<true/>
 			<key>Allow Change Cursor Blink</key>
 			<true/>
 			<key>Allow Title Reporting</key>
