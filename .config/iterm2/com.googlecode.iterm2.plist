@@ -3284,7 +3284,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Icon</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
