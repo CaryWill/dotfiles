@@ -3400,6 +3400,8 @@ Make Text Bigger</string>
 			<true/>
 			<key>Normal Font</key>
 			<string>MonoLisaNerdFontAAEOCPMDIWEA-Light 13</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Place Prompt at First Column</key>
@@ -3513,7 +3515,7 @@ Make Text Bigger</string>
 			<key>Title Components</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.02004654255319149</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
