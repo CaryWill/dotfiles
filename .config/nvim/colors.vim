@@ -13,3 +13,4 @@ require("indent_blankline").setup {
 
 require 'colorizer'.setup()
 EOF
+hi Normal guibg=NONE ctermbg=NONE
