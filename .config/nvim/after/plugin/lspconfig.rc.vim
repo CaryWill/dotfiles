@@ -8,11 +8,10 @@ lua << EOF
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=false, buffer=bufnr }
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 -- typescript
 nvim_lsp.tsserver.setup {
@@ -78,3 +77,4 @@ nvim_lsp.vimls.setup{
 } 
 
 EOF
+
