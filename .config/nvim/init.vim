@@ -34,7 +34,6 @@ set directory=/tmp/.swp//
 set backupdir=/tmp/.backup//
 set undofile
 set undodir=/tmp/.undo//
-set completeopt=menuone
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 

@@ -8,6 +8,10 @@ lua << EOF
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=false, buffer=bufnr }
+  -- use <TAB>, <C-y>, <Enter> to select, use <C-e> to cancel
+  -- completeopt 不要使用 `menuone,noselect,noinsert,preview` 
+  -- 如果有 preview 那么会在会车出现一个空白 buffer 用来预览
+  vim.opt.completeopt = {'menuone', 'noinsert', 'noselect'}
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 
