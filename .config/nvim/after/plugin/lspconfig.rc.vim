@@ -7,7 +7,7 @@ lua << EOF
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  local opts = { noremap=true, silent=false, buffer=bufnr }
+  local opts = { noremap=true, silent=true, buffer=bufnr }
   -- 使用 <c-x><c-o> 来唤起补全菜单
   -- use <TAB>, <C-y>, <Enter> to select, use <C-e> to cancel
   -- completeopt 不要使用 `menuone,noselect,noinsert,preview` 
