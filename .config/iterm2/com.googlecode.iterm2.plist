@@ -3284,7 +3284,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Icon</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -3400,8 +3400,6 @@ Make Text Bigger</string>
 			<true/>
 			<key>Normal Font</key>
 			<string>MonoLisaNerdFontAAEOCPMDIWEA-Light 13</string>
-			<key>Only The Default BG Color Uses Transparency</key>
-			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Place Prompt at First Column</key>
@@ -3515,7 +3513,7 @@ Make Text Bigger</string>
 			<key>Title Components</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.02004654255319149</real>
+			<real>0.0</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>

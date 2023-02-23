@@ -10,6 +10,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim' " Searching
 Plug 'CaryWill/nvim-juliana'
 Plug 'tpope/vim-commentary'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
@@ -21,6 +23,4 @@ Plug 'tpope/vim-commentary'
 " Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
 " Plug 'hrsh7th/nvim-cmp' "Completion
 " Plug 'L3MON4D3/LuaSnip'
-" Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-" Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
