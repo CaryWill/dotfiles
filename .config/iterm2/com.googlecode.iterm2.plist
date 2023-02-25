@@ -2391,13 +2391,13 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.082352941176470587</real>
+				<real>0.25490196078431371</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.082352941176470587</real>
+				<real>0.2196078431372549</real>
 				<key>Red Component</key>
-				<real>0.082352941176470587</real>
+				<real>0.18823529411764706</real>
 			</dict>
 			<key>Ansi 0 Color (Dark)</key>
 			<dict>
@@ -2957,13 +2957,13 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.082352941176470587</real>
+				<real>0.25490196078431371</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.082352941176470587</real>
+				<real>0.2196078431372549</real>
 				<key>Red Component</key>
-				<real>0.082352941176470587</real>
+				<real>0.18823529411764706</real>
 			</dict>
 			<key>Background Color (Dark)</key>
 			<dict>
