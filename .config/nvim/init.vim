@@ -23,7 +23,8 @@ set autoread
 set nospell
 set signcolumn=number 
 set clipboard+=unnamedplus
-set textwidth=80
+set textwidth=80 
+set colorcolumn=80 " make a vertical column in the background at 80 characters
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99
@@ -44,12 +45,6 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 " nvim-tree
 let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
-" bookmarks
-let g:bookmark_save_per_working_dir = 1
-let g:bookmark_auto_save = 1
-let g:bookmark_display_annotation = 1
-let g:bookmark_highlight_lines = 1
-let g:bookmark_show_warning = 1
 
 runtime ./plug.vim
 runtime ./maps.vim
