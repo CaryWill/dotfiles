@@ -23,6 +23,7 @@ set autoread
 set nospell
 set signcolumn=number 
 set clipboard+=unnamedplus
+set textwidth=80
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99
