@@ -1,6 +1,5 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'sbdchd/neoformat'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'neovim/nvim-lspconfig'
@@ -23,4 +22,5 @@ Plug 'L3MON4D3/LuaSnip'
 " Plug 'lukas-reineke/indent-blankline.nvim'
 " Plug 'nvim-lualine/lualine.nvim'
 " Plug 'nvim-tree/nvim-web-devicons' " File explorer
+" Plug 'sbdchd/neoformat'
 call plug#end()
