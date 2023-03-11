@@ -23,8 +23,8 @@ set autoread
 set nospell
 set signcolumn=number 
 set clipboard+=unnamedplus
-set textwidth=80 
-set colorcolumn=80 " make a vertical column in the background at 80 characters
+" set textwidth=80 
+" set colorcolumn=80 " make a vertical column in the background at 80 characters
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99

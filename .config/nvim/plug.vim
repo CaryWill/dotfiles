@@ -12,6 +12,9 @@ Plug 'CaryWill/nvim-juliana'
 Plug 'tpope/vim-commentary'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
+Plug 'hrsh7th/nvim-cmp' "Completion
+Plug 'L3MON4D3/LuaSnip'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
@@ -20,7 +23,4 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 " Plug 'lukas-reineke/indent-blankline.nvim'
 " Plug 'nvim-lualine/lualine.nvim'
 " Plug 'nvim-tree/nvim-web-devicons' " File explorer
-" Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
-" Plug 'hrsh7th/nvim-cmp' "Completion
-" Plug 'L3MON4D3/LuaSnip'
 call plug#end()
