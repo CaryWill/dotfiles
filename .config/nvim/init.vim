@@ -24,7 +24,7 @@ set nospell
 set signcolumn=number 
 set clipboard+=unnamedplus
 " set textwidth=80 
-" set colorcolumn=80 " make a vertical column in the background at 80 characters
+" Set the color of the vertical line at column 80 to red
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99

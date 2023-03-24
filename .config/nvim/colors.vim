@@ -12,3 +12,7 @@ vim.cmd 'colorscheme juliana'
 require 'colorizer'.setup()
 --]]
 EOF
+
+" 颜色的话需要在这里设置，因为主题是后面加载的
+autocmd FileType markdown set colorcolumn=81
+hi ColorColumn guibg=#90A8BE
