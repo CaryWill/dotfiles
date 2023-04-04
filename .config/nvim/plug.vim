@@ -1,5 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
+" Plug 'github/copilot.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'neovim/nvim-lspconfig'
