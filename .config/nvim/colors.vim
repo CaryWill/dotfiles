@@ -1,4 +1,4 @@
-" set background=light
+set background=light
 let g:gruvbox_italic = 1
 colorscheme gruvbox
 "colorscheme juliana
