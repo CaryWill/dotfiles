@@ -22,7 +22,7 @@ nnoremap <C-[> <ESC>
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 nnoremap <leader>f :Neoformat<CR>
-nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
+" nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
 "Telescope
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
