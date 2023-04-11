@@ -16,6 +16,7 @@ Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'morhetz/gruvbox'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'sbdchd/neoformat'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
@@ -23,6 +24,5 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " Plug 'junegunn/vim-easy-align'
 " Plug 'nvim-lualine/lualine.nvim'
 " Plug 'nvim-tree/nvim-web-devicons' " File explorer
-" Plug 'sbdchd/neoformat'
 " Plug 'github/copilot.vim'
 call plug#end()
