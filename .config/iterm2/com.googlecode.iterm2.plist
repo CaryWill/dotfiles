@@ -22,7 +22,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 	<key>BadgeTopMargin</key>
 	<integer>10</integer>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>gruvbox</key>
@@ -2683,7 +2683,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 	<key>DoubleClickPerformsSmartSelection</key>
 	<true/>
 	<key>EnableAPIServer</key>
-	<true/>
+	<false/>
 	<key>EnableDivisionView</key>
 	<true/>
 	<key>EnterCopyModeAutomatically</key>
@@ -5115,7 +5115,7 @@ Make Text Bigger</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SavePasteHistory</key>
-	<true/>
+	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>ShowPaneTitles</key>
@@ -5149,7 +5149,7 @@ Make Text Bigger</string>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseMetal</key>
-	<true/>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
