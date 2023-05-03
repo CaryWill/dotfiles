@@ -24,7 +24,7 @@ Plug 'ajmwagar/vim-deus'
 " Plug 'CaryWill/jellybeans.nvim'
 " Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'junegunn/vim-easy-align'
-" Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 " Plug 'nvim-tree/nvim-web-devicons' " File explorer
 " Plug 'github/copilot.vim'
 call plug#end()
