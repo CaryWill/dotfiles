@@ -3,7 +3,6 @@
 " colorscheme gruvbox
 "colorscheme juliana
 " colorscheme ayu
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indent_blankline_char_list = ''
 
 set t_Co=256
