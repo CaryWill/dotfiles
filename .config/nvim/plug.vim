@@ -17,6 +17,8 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'morhetz/gruvbox'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'sbdchd/neoformat'
+Plug 'ayu-theme/ayu-vim'
+Plug 'ajmwagar/vim-deus'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
