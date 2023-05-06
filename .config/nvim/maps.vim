@@ -60,6 +60,7 @@ nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
 nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
 nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
+nnoremap <leader>gu :UndotreeToggle<CR>
 
 "formatting
 xmap ga <Plug>(EasyAlign)

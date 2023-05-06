@@ -19,6 +19,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'sbdchd/neoformat'
 Plug 'ayu-theme/ayu-vim'
 Plug 'ajmwagar/vim-deus'
+Plug 'mbbill/undotree'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
