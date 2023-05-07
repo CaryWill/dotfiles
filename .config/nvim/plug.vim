@@ -20,6 +20,7 @@ Plug 'sbdchd/neoformat'
 Plug 'ayu-theme/ayu-vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'mbbill/undotree'
+Plug 'hkupty/iron.nvim'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
