@@ -21,6 +21,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'mbbill/undotree'
 Plug 'hkupty/iron.nvim'
+" Plug 'antonk52/bad-practices.nvim'
+Plug 'arcticicestudio/nord-vim'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
