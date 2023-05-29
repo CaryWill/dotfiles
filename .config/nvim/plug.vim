@@ -24,12 +24,13 @@ Plug 'hkupty/iron.nvim'
 " Plug 'antonk52/bad-practices.nvim'
 Plug 'arcticicestudio/nord-vim'
 " Plug 'mattn/vim-nyancat'
+Plug 'vim-airline/vim-airline'
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
 " Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'junegunn/vim-easy-align'
-Plug 'nvim-lualine/lualine.nvim'
+" Plug 'nvim-lualine/lualine.nvim'
 " Plug 'nvim-tree/nvim-web-devicons' " File explorer
 " Plug 'github/copilot.vim'
 call plug#end()

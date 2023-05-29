@@ -3,6 +3,11 @@
 " colorscheme gruvbox
 "colorscheme juliana
 " colorscheme ayu
+let g:airline_theme='nord'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 let g:indent_blankline_char_list = ''
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
