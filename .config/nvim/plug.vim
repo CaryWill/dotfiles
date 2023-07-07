@@ -7,23 +7,24 @@ Plug 'williamboman/mason.nvim' "Install LSP server
 Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
 Plug 'nvim-lua/plenary.nvim' 
 Plug 'nvim-telescope/telescope.nvim' " Searching
-Plug 'CaryWill/nvim-juliana'
 Plug 'tpope/vim-commentary'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
 Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
-Plug 'morhetz/gruvbox'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'sbdchd/neoformat'
-Plug 'ayu-theme/ayu-vim'
-Plug 'ajmwagar/vim-deus'
-Plug 'mbbill/undotree'
-Plug 'hkupty/iron.nvim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+" Plug 'CaryWill/nvim-juliana'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'sbdchd/neoformat'
+" Plug 'ajmwagar/vim-deus'
+" Plug 'mbbill/undotree'
+" Plug 'hkupty/iron.nvim'
 " Plug 'antonk52/bad-practices.nvim'
-Plug 'arcticicestudio/nord-vim'
 " Plug 'mattn/vim-nyancat'
+" Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 
 " Plug 'MattesGroeger/vim-bookmarks'
