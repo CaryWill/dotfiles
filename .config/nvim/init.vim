@@ -18,7 +18,7 @@ set softtabstop=2
 set autoindent
 set smartindent
 set wrap
-set laststatus=2 
+set laststatus=3 
 set autoread
 set nospell
 set signcolumn=number 
