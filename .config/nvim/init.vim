@@ -38,6 +38,7 @@ set undofile
 set undodir=/tmp/.undo//
 set lazyredraw
 set ttyfast
+set mouse=a
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
