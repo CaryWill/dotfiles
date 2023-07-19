@@ -6527,13 +6527,17 @@ Make Text Bigger</string>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseMetal</key>
-	<false/>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WorkAroundBigSurBug</key>
 	<true/>
+	<key>disableMetalInLowPowerMode</key>
+	<false/>
+	<key>disableMetalWhenUnplugged</key>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
@@ -6542,5 +6546,7 @@ Make Text Bigger</string>
 	<false/>
 	<key>kCPKUseSystemColorPicker</key>
 	<false/>
+	<key>preferIntegratedGPU</key>
+	<true/>
 </dict>
 </plist>
