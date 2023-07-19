@@ -13,14 +13,21 @@ require'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
+    "markdown",
+    "markdown_inline",
     "tsx",
+    "typescript",
+    "toml",
+    "fish",
+    "php",
     "json",
-    "html",
+    "yaml",
     "swift",
     "css",
+    "html",
     "lua"
-
   },
+
   -- work with vim-commentary to support jsx comment alike
   context_commentstring = {
     enable = true

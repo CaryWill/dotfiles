@@ -1,8 +1,4 @@
 let g:airline_theme = 'catppuccin'
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
 let g:indent_blankline_char_list = ''
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 set t_Co=256
@@ -18,7 +14,6 @@ require("indent_blankline").setup {
     show_current_context = true,
     show_current_context_start = true,
 }
--- require 'colorizer'.setup()
 
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
