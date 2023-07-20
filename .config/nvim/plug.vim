@@ -33,8 +33,9 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'junegunn/vim-easy-align'
 " Plug 'nvim-lualine/lualine.nvim'
-" Plug 'nvim-tree/nvim-web-devicons' " File explorer
+Plug 'nvim-tree/nvim-web-devicons' " File explorer
 " Plug 'glepnir/lspsaga.nvim'
 
 " Plug 'github/copilot.vim'
+Plug 'folke/trouble.nvim'
 call plug#end()

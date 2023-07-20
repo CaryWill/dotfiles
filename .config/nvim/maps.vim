@@ -56,15 +56,17 @@ nmap <C-s> <M-q>
 xmap do :diffget<CR>
 xmap dp :diffput<CR>
 "Diagnostic
-nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
-nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
-nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
-nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
-nnoremap <leader>gu :UndotreeToggle<CR>
+" nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
+" nnoremap gr <cmd>TroubleToggle lsp_references<cr>
+nnoremap ;e <cmd>TroubleToggle workspace_diagnostics<cr>
+"nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
+"nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
+"nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
+"nnoremap <leader>gu :UndotreeToggle<CR>
 
 "formatting
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+"xmap ga <Plug>(EasyAlign)
+"nmap ga <Plug>(EasyAlign)
 
 " Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0
