@@ -66,6 +66,9 @@ vim.diagnostic.config({
   float = {
     source = "always", -- Or "if_many"
   },
+  -- signs = true,
+  -- underline = false,
+  -- virtual_text = false,
 })
 
 -- eslint
