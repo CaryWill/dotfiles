@@ -28,10 +28,10 @@ export NVM_DIR="$HOME/.nvm"
 TERM="xterm" #防止删除键变成空格键
 export LANG=en_US.UTF-8
 export TERM_ITALICS=true
-alias vim=nvim
-export VISUAL=nvim
-alias python=python3
-alias tsnode=ts-node
+#alias vim=nvim
+#export VISUAL=nvim
+#alias python=python3
+#alias tsnode=ts-node
 export TERM=xterm-256color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 # 用当前文件夹名直接创建一个 tmux session

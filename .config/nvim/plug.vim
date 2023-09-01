@@ -15,18 +15,6 @@ Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-" Plug 'CaryWill/nvim-juliana'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'sbdchd/neoformat'
-" Plug 'ajmwagar/vim-deus'
-" Plug 'mbbill/undotree'
-" Plug 'hkupty/iron.nvim'
-" Plug 'antonk52/bad-practices.nvim'
-" Plug 'mattn/vim-nyancat'
-" Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'CaryWill/jellybeans.nvim'
