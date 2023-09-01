@@ -26,7 +26,7 @@ sudo make && sudo make install
 # Reinstall Vim with the modified formula, using the -s flag to build Vim from source
 brew uninstall vim
 brew edit vim
-brew install -s vim
+brew install -s vimv
 #brew install vim
 #brew install ripgrep # 安装 fzf 的话需要
 # brew tap daipeihust/tap && brew install im-select # 自动切换输入法
