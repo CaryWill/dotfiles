@@ -15,15 +15,5 @@ Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-
-" Plug 'MattesGroeger/vim-bookmarks'
-" Plug 'CaryWill/jellybeans.nvim'
-" Plug 'norcalli/nvim-colorizer.lua'
-" Plug 'junegunn/vim-easy-align'
-" Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-tree/nvim-web-devicons' " File explorer
-" Plug 'glepnir/lspsaga.nvim'
-
-" Plug 'github/copilot.vim'
 Plug 'folke/trouble.nvim'
 call plug#end()

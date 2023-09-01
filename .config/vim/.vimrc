@@ -45,17 +45,56 @@ autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 
-" Plugins "
+" ----------------------------- Plugins -----------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
+" vim lsp config
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
+
+    let g:lsp_format_sync_timeout = 1000
+    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+    
+    " refer to doc to add more commands
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+" vim js/ts lsp
+au User lsp_setup call lsp#register_server({
+     \ 'name': 'typescript-language-server',
+     \ 'cmd': {server_info->['typescript-language-server', '--stdio']},
+     \ 'whitelist': ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx'],
+     \ })
+
 call plug#end()
 
-" Mappings "
+" ----------------------------- Mappings -----------------------------
 let mapleader = ' '
 let maplocalleader = ','
-
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
@@ -69,15 +108,12 @@ noremap k gk
 nmap ss :split<CR>
 nmap sv :vsplit<CR>
 nmap st :tab split<CR>
-nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
-nnoremap <C-[> <ESC>
 
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
-" nnoremap <leader>f :Neoformat<CR>
-" nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
+
 "Telescope
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
@@ -89,8 +125,6 @@ nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
 "Lsp
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
 nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
-nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
-nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 nnoremap gs <cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>
 nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
@@ -98,23 +132,13 @@ nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
 nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
 nmap <C-s> <M-q>
-xmap do :diffget<CR>
-xmap dp :diffput<CR>
-"Diagnostic
-" nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
-" nnoremap gr <cmd>TroubleToggle lsp_references<cr>
-nnoremap ;e <cmd>TroubleToggle workspace_diagnostics<cr>
-"nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
-"nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
-"nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
-"nnoremap <leader>gu :UndotreeToggle<CR>
 
 nnoremap <silent>;t :call <SID>termToggle()<CR>
 inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
 
-" ----------------------------- theme --------------------------------"
+" ----------------------------- Theme -----------------------------
 set t_Co=256
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
