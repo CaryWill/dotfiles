@@ -95,10 +95,9 @@ let g:airline#extensions#hunks#coc_git = 1
 vmap <leader>p <Plug>(coc-format-selected)
 nmap <leader>p <Plug>(coc-fix-current)
 nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>rf <Plug>(coc-refactor)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gD <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 " --- fzf ---
 let $BAT_THEME="Nord"
