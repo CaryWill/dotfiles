@@ -65,6 +65,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'nordtheme/vim'
+Plug 'hahdookin/miniterm.vim'
 call plug#end()
 
 " --- NERDTree --- 
