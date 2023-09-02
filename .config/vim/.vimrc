@@ -69,14 +69,13 @@ call plug#end()
 
 " --- NERDTree --- 
 " using :NERDTree restart NERDTree
-nnoremap <silent>fi :NERDTreeToggle<CR>
-map <localleader>e :NERDTreeFind<CR>
+nnoremap <silent>fi :NERDTreeFind<CR>
+map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
-autocmd FileType NERDTree nnoremap <buffer> + :vertical resize +20<CR>
-autocmd FileType NERDTree nnoremap <buffer> - :vertical resize -20<CR>
-autocmd FileType NERDTree nnoremap <buffer> = :let g:NERDTreeWinSize = 30<CR>
-autocmd FileType NERDTree nnoremap <C-s> = :NERDTreeMapOpenSplit<CR>
+autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
+autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
+autocmd FileType nerdtree nnoremap <buffer> = :vertical resize 30<CR>
 
 " --- NERDTree git icon ---
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -95,32 +94,21 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
-
-" coc-prettier
-" Formatting selected code. fp -> format pettier
+" --- CoC ---
 vmap <leader>p <Plug>(coc-format-selected)
-" Apply AutoFix to problem on the current line.
-nmap <leader>q <Plug>(coc-fix-current)
-    
-" Symbol renaming.
+nmap <leader>p <Plug>(coc-fix-current)
 nmap <leader>rn <Plug>(coc-rename)
-" Function refactor.
 nmap <leader>rf <Plug>(coc-refactor)
-    
-" Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-
+" --- fzf ---
 let $BAT_THEME="Nord"
 "ripgrep will respect gitignore file
 let $FZF_DEFAULT_COMMAND='rg --files'
-
 nnoremap <silent> ;f :Files<CR>
-nnoremap <silent> ;fg :GFiles<CR>
-"Exact finder
-nnoremap <silent> ;R :RG<CR>
+nnoremap <silent> ;g :GFiles<CR>
 "fuzzy finder
 nnoremap <silent> ;r :Rg<CR>
 
