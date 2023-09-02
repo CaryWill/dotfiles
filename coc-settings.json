@@ -1,7 +1,10 @@
 {
   "tsserver.enableJavascript": true,
   "diagnostic.enable": true,
-  "diagnostic.virtualText": false,
-  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.infoSign": "i",
+  "diagnostic.hintSign": "*",
+  "diagnostic.warningSign": "!",
+  "diagnostic.errorSign": "x",
+  "diagnostic.refreshOnInsertMode": true,
   "coc.preferences.extensionUpdateCheck": "daily"
 }
