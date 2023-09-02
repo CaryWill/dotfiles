@@ -11,3 +11,9 @@ Note: all fonts are nerd-font patched.
 1. touch ~/.gitignore
 2. put `.vim-bookmarks` inside ~/.gitignore file
 3. git config --global core.excludesfile ~/.gitignore
+
+todo
+
+"Telescope
+nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
+nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>

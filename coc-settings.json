@@ -1,0 +1,22 @@
+{
+  "tsserver.enableJavascript": true,
+  "diagnostic.enable": true,
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.errorSign": "×",
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.enableMessage": false,
+
+  "imselect.defaultInput": "com.apple.keylayout.ABC",
+  "imselect.enableStatusItem": false,
+  "imselect.enableFloating": false,
+
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "prettier.requireConfig": true,
+  "prettier.statusItemText": "💅  ",
+
+  "colors.filetypes": ["*"],
+  "highlight.colors.enable": true,
+
+  "coc.preferences.extensionUpdateCheck": "daily"
+}
