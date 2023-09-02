@@ -2,6 +2,7 @@ scriptencoding utf-8
 lang en_US.UTF-8
 syntax on
 filetype plugin indent on
+set clipboard^=unnamed,unnamedplus
 set number
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
@@ -51,7 +52,6 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 let g:coc_global_extensions = [
           \   'coc-cssmodules',
           \   'coc-eslint',
-          \   'coc-json',
           \   'coc-prettier',
           \   'coc-tsserver',
           \ ]
@@ -65,18 +65,24 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
 " --- NERDTree --- 
 " using :NERDTree restart NERDTree
-map <C-e> :NERDTreeToggle<CR>
+nnoremap <silent>fi :NERDTreeToggle<CR>
 map <localleader>e :NERDTreeFind<CR>
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinPos = 'right'
-let NERDTreeMinimalMenu=1
-let NERDTreeDirArrowExpandable = " "
-let NERDTreeDirArrowCollapsible = " "
+"let NERDTreeShowHidden = 1
+"let g:NERDTreeWinPos = 'left'
+"let NERDTreeMinimalMenu=1
+"let NERDTreeDirArrowExpandable = " "
+"let NERDTreeDirArrowCollapsible = " "
+let g:NERDTreeWinSize = 30
+autocmd FileType NvimTree nnoremap <buffer> + :vertical resize +20<CR>
+autocmd FileType NvimTree nnoremap <buffer> - :vertical resize -20<CR>
+autocmd FileType NvimTree nnoremap <buffer> = :let g:NERDTreeWinSize = 30<CR>
+
 " --- NERDTree git icon ---
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ 'Modified'  :'M',
@@ -111,8 +117,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-
-
 
 " --- fzf ---"
 "Change fzf preview window theme
@@ -198,14 +202,5 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
-
-colorscheme spring-night
-hi LineNr guibg=#162131
-hi SignColumn guibg=#162131
-hi VertSplit guibg=#63707e guifg=#162131
-hi CocUnusedHighlight ctermbg=NONE guibg=NONE guifg=#8a9199
-hi CocWarningSign ctermfg=130 guifg=#f0e9aa
-hi CocInfoSign    ctermfg=11 guifg=#f1a98a
-hi CocHintSign    ctermfg=12 guifg=#a0c8e1
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:

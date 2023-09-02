@@ -1,11 +1,8 @@
 {
   "tsserver.enableJavascript": true,
   "diagnostic.enable": true,
-  "diagnostic.warningSign": "⚠",
-  "diagnostic.errorSign": "×",
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
-  "diagnostic.enableMessage": false,
 
   "imselect.defaultInput": "com.apple.keylayout.ABC",
   "imselect.enableStatusItem": false,
