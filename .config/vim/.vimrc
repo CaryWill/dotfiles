@@ -73,15 +73,11 @@ colorscheme nord
 " using :NERDTree restart NERDTree
 nnoremap <silent>fi :NERDTreeToggle<CR>
 map <localleader>e :NERDTreeFind<CR>
-"let NERDTreeShowHidden = 1
-"let g:NERDTreeWinPos = 'left'
-"let NERDTreeMinimalMenu=1
-"let NERDTreeDirArrowExpandable = " "
-"let NERDTreeDirArrowCollapsible = " "
+let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
-autocmd FileType NvimTree nnoremap <buffer> + :vertical resize +20<CR>
-autocmd FileType NvimTree nnoremap <buffer> - :vertical resize -20<CR>
-autocmd FileType NvimTree nnoremap <buffer> = :let g:NERDTreeWinSize = 30<CR>
+autocmd FileType NERDTree nnoremap <buffer> + :vertical resize +20<CR>
+autocmd FileType NERDTree nnoremap <buffer> - :vertical resize -20<CR>
+autocmd FileType NERDTree nnoremap <buffer> = :let g:NERDTreeWinSize = 30<CR>
 
 " --- NERDTree git icon ---
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -144,7 +140,6 @@ let g:fzf_action = {
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left"
 
-"let g:fzf_layout = { 'down': '45%' }
 let g:fzf_colors =
   \ { 'fg':    ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
