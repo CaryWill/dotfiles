@@ -62,13 +62,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'rhysd/vim-color-spring-night'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'nordtheme/vim'
-
 call plug#end()
-colorscheme nord
+
 " --- NERDTree --- 
 " using :NERDTree restart NERDTree
 nnoremap <silent>fi :NERDTreeToggle<CR>
@@ -78,6 +76,7 @@ let g:NERDTreeWinSize = 30
 autocmd FileType NERDTree nnoremap <buffer> + :vertical resize +20<CR>
 autocmd FileType NERDTree nnoremap <buffer> - :vertical resize -20<CR>
 autocmd FileType NERDTree nnoremap <buffer> = :let g:NERDTreeWinSize = 30<CR>
+autocmd FileType NERDTree nnoremap <C-s> = :NERDTreeMapOpenSplit<CR>
 
 " --- NERDTree git icon ---
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -178,6 +177,7 @@ nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 
 " ----------------------------- Theme -----------------------------
+colorscheme nord
 set t_Co=256
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
