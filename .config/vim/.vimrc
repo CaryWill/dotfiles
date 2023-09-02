@@ -24,8 +24,6 @@ set autoread
 set nospell
 set signcolumn=number 
 set clipboard+=unnamedplus
-" set textwidth=80 
-" Set the color of the vertical line at column 80 to red
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99
@@ -68,7 +66,6 @@ Plug 'nordtheme/vim'
 call plug#end()
 
 " --- NERDTree --- 
-" using :NERDTree restart NERDTree
 nnoremap <silent>fi :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
