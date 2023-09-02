@@ -1,8 +1,7 @@
 {
   "tsserver.enableJavascript": true,
   "diagnostic.enable": true,
-  "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "diagnostic.virtualText": false,
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "coc.preferences.extensionUpdateCheck": "daily"
 }

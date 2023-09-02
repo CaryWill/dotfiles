@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Vim plugin manager
 
 # Sync vimrc

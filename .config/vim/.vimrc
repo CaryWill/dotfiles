@@ -37,10 +37,12 @@ set ttyfast
 set mouse=a
 " Backup files
 set undofile
-set directory=/tmp/.swp//
-set undodir=/tmp/.undo//
-set backupdir=/tmp/.backup//
+set directory=~/.vim/tmp//
+set undodir=~/.vim/tmp//
+set backupdir=~/.vim/tmp//
 
+let mapleader = ' '
+let maplocalleader = ','
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
@@ -92,13 +94,13 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
 " --- CoC ---
-vmap <leader>p <Plug>(coc-format-selected)
-nmap <leader>p <Plug>(coc-fix-current)
-nmap <leader>rn <Plug>(coc-rename)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gD <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+vmap <leader>f <Plug>(coc-format-selected)
+nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
+nnoremap <leader>rn <Plug>(coc-rename)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gD <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
 " --- fzf ---
 let $BAT_THEME="Nord"
 "ripgrep will respect gitignore file
@@ -139,8 +141,6 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 " ----------------------------- Mappings -----------------------------
-let mapleader = ' '
-let maplocalleader = ','
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
