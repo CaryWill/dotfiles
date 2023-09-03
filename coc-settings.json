@@ -1,10 +1,14 @@
 {
   "tsserver.enableJavascript": true,
   "diagnostic.enable": true,
+  "diagnostic.displayByAle": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.enableMessage": "jump",
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.infoSign": "i",
   "diagnostic.hintSign": "*",
   "diagnostic.warningSign": "!",
   "diagnostic.errorSign": "x",
-  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.refreshOnInsertMode": false,
   "coc.preferences.extensionUpdateCheck": "daily"
 }

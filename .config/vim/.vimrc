@@ -71,6 +71,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'hahdookin/miniterm.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " --- NERDTree --- 
@@ -104,10 +106,19 @@ let g:airline_theme='jellybeans'
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
 nnoremap <leader>rn <Plug>(coc-rename)
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gr <Plug>(coc-references)
-nnoremap <silent> gD <Plug>(coc-type-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent>gd <Plug>(coc-definition)
+nnoremap <silent>gr <Plug>(coc-references)
+nnoremap <silent>gD <Plug>(coc-type-definition)
+nnoremap <silent>gi <Plug>(coc-implementation)
+" --- ale ---
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '!'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_disable_lsp = 1
+
 " --- fzf ---
 " use bat --list-themes
 let $BAT_THEME="1337"
