@@ -68,7 +68,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'nordtheme/vim'
 Plug 'hahdookin/miniterm.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
@@ -177,5 +176,6 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 set guifont=Monaco:h10 noanti
+let g:jellybeans_use_term_italics = 1
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
