@@ -70,6 +70,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'nordtheme/vim'
 Plug 'hahdookin/miniterm.vim'
+Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " --- NERDTree --- 
@@ -107,7 +108,8 @@ nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <silent> gD <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 " --- fzf ---
-let $BAT_THEME="Nord"
+" use bat --list-themes
+let $BAT_THEME="1337"
 "ripgrep will respect gitignore file
 let $FZF_DEFAULT_COMMAND='rg --files'
 nnoremap <silent> ;f :Files<CR>
@@ -166,7 +168,7 @@ nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 
 " ----------------------------- Theme -----------------------------
-colorscheme nord
+colorscheme jellybeans
 set t_Co=256
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
