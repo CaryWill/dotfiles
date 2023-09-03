@@ -71,6 +71,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'nordtheme/vim'
 Plug 'hahdookin/miniterm.vim'
 Plug 'nanotech/jellybeans.vim'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " --- NERDTree --- 
@@ -99,6 +100,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
+let g:airline_theme='jellybeans'
 " --- CoC ---
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
@@ -174,5 +176,6 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
+set guifont=Monaco:h10 noanti
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
