@@ -118,6 +118,7 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_disable_lsp = 1
+let g:ale_set_highlights = 0
 
 " --- fzf ---
 " use bat --list-themes
