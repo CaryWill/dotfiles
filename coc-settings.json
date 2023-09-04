@@ -1,5 +1,6 @@
 {
   "tsserver.enableJavascript": true,
+  "tsserver.useLocalTsdk": true,
   "diagnostic.enable": true,
   "diagnostic.displayByAle": true,
   "diagnostic.virtualText": true,
