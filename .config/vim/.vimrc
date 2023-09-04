@@ -123,6 +123,8 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
 " --- ale ---
 let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '!'
@@ -206,5 +208,10 @@ let g:terminal_ansi_colors = [
   \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
   \ '#597bc5', '#a037b0', '#71b9f8', '#adadad',
 \ ]
+
+" https://github.com/dense-analysis/ale/blob/115ad17ace047cab20ccc67f79c943aaf3f0f291/autoload/ale/virtualtext.vim#L7
+"hi ALEVirtualTextInfo guifg=#d8ad4c
+hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
+hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
