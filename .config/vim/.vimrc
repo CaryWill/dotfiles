@@ -136,7 +136,7 @@ let g:ale_disable_lsp = 1
 let g:ale_set_highlights = 0
 
 " --- fzf ---
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
 " use bat --list-themes
 let $BAT_THEME="zenburn"
 "ripgrep will respect gitignore file
