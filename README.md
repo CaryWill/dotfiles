@@ -1,3 +1,7 @@
+## Vim9
+
+Since the neovim API is not stable, I quit using neovim, so this is the configuaration of Original Vim with the version 9
+
 ## Liked fonts
 
 1. Monolisa(13, 100, 135)
