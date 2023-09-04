@@ -135,7 +135,7 @@ let g:ale_set_highlights = 0
 " --- fzf ---
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
 " use bat --list-themes
-let $BAT_THEME="1337"
+let $BAT_THEME="zenburn"
 "ripgrep will respect gitignore file
 let $FZF_DEFAULT_COMMAND='rg --files'
 nnoremap <silent> ;f :Files<CR>
@@ -161,22 +161,6 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left"
-
-let g:fzf_colors =
-  \ { 'fg':    ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
 " ----------------------------- Mappings -----------------------------
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
