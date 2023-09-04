@@ -112,6 +112,17 @@ nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
 nnoremap <silent>gy <Plug>(coc-type-definition)
 nnoremap <silent>gi <Plug>(coc-implementation)
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
+endfunction
 " --- ale ---
 let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '!'
@@ -130,6 +141,10 @@ let $BAT_THEME="1337"
 let $FZF_DEFAULT_COMMAND='rg --files'
 nnoremap <silent> ;f :Files<CR>
 nnoremap <silent> ;g :GFiles<CR>
+nnoremap <silent> ;d :BCommits<CR>
+nnoremap <silent> ;q :<C-u>CocFzfList diagnostics<CR>
+nnoremap <silent> ;e :<C-u>CocFzfList diagnostics --current-buf<CR>
+nnoremap <silent> <leader>o :<C-u>CocFzfList outline<CR>
 "fuzzy finder
 nnoremap <silent> ;r :Rg<CR>
 
@@ -178,15 +193,21 @@ nmap ss :split<CR>
 nmap sv :vsplit<CR>
 nmap st :tab split<CR>
 nnoremap <silent><leader>q :q<CR>
+xmap do :diffget<CR>
+xmap dp :diffput<CR>
 
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 
+nmap <silent>;t <leader>tt
+imap <silent>;t <leader>tt
+tmap <silent>;t <leader>tt
+tmap <silent>;q <C-\><C-n>
+
 " ----------------------------- Theme -----------------------------
 colorscheme jellybeans 
 set t_Co=256
-set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
