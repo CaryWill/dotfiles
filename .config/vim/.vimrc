@@ -110,7 +110,7 @@ nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
 nnoremap <leader>rn <Plug>(coc-rename)
 nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
-nnoremap <silent>gD <Plug>(coc-type-definition)
+nnoremap <silent>gy <Plug>(coc-type-definition)
 nnoremap <silent>gi <Plug>(coc-implementation)
 " --- ale ---
 let g:ale_sign_error = 'x'
