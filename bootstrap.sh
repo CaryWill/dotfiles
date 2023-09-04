@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p ~/.vim/tmp
 
 # Vim plugin manager
 
