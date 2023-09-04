@@ -194,30 +194,11 @@ set guifont=Monaco:h10 noanti
 let g:jellybeans_use_term_italics = 1
 
 " Jellybeans for support vim built-in terminal color
-" https://github.com/nanotech/jellybeans.vim/blob/master/ansi-term-colors.txt
-let g:terminal_ansi_colors = repeat([0], 16)
+let g:terminal_ansi_colors = [
+  \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
+  \ '#597bc5', '#a037b0', '#71b9f8', '#adadad',
+  \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
+  \ '#597bc5', '#a037b0', '#71b9f8', '#adadad',
+\ ]
 
-let g:terminal_ansi_colors[0] = '#3b3b3b'
-let g:terminal_ansi_colors[8] = '#3b3b3b'
-
-let g:terminal_ansi_colors[1] = '#cf6a4c'
-let g:terminal_ansi_colors[9] = '#cf6a4c'
-
-let g:terminal_ansi_colors[2] = '#99ad6a'
-let g:terminal_ansi_colors[10] = '#99ad6a'
-
-let g:terminal_ansi_colors[3] = '#d8ad4c'
-let g:terminal_ansi_colors[11] = '#d8ad4c'
-
-let g:terminal_ansi_colors[4] = '#597bc5'
-let g:terminal_ansi_colors[12] = '#597bc5'
-
-let g:terminal_ansi_colors[5] = '#a037b0'
-let g:terminal_ansi_colors[13] = '#a037b0'
-
-let g:terminal_ansi_colors[6] = '#71b9f8'
-let g:terminal_ansi_colors[14] = '#71b9f8'
-
-let g:terminal_ansi_colors[7] = '#adadad'
-let g:terminal_ansi_colors[15] = '#adadad'
 " vim: set foldmethod=marker foldlevel=0 foldenable:
