@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#brew install bat
-#brew install ripgrep
-#brew install fzf
+brew install bat
+brew install ripgrep
+brew install fzf
 
 mkdir -p ~/.vim/tmp
 
