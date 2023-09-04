@@ -64,3 +64,4 @@ Pods/
 .config/karabiner/automatic_backups
 .DS_Store
 .vim-bookmarks
+yarn.lock

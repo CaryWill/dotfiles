@@ -140,6 +140,7 @@ let $BAT_THEME="zenburn"
 let $FZF_DEFAULT_COMMAND='rg --files'
 nnoremap <silent> ;f :Files<CR>
 nnoremap <silent> ;g :GFiles<CR>
+nnoremap <silent> ;s :Rg <C-R><C-W><CR>
 nnoremap <silent> ;d :BCommits<CR>
 nnoremap <silent> ;q :<C-u>CocFzfList diagnostics<CR>
 nnoremap <silent> ;e :<C-u>CocFzfList diagnostics --current-buf<CR>
