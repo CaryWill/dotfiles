@@ -1,5 +1,9 @@
 #!/bin/bash
 
+brew install bat
+brew install ripgrep
+brew install fzf
+
 mkdir -p ~/.vim/tmp
 
 # Vim plugin manager

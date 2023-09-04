@@ -73,6 +73,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 call plug#end()
 
 " --- NERDTree --- 
@@ -121,6 +122,7 @@ let g:ale_disable_lsp = 1
 let g:ale_set_highlights = 0
 
 " --- fzf ---
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
 " use bat --list-themes
 let $BAT_THEME="1337"
 "ripgrep will respect gitignore file
