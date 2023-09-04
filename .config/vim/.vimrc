@@ -165,6 +165,7 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left"
+let g:coc_fzf_preview='right:50%'
 " ----------------------------- Mappings -----------------------------
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
