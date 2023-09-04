@@ -205,14 +205,15 @@ let g:jellybeans_use_term_italics = 1
 " Jellybeans for support vim built-in terminal color
 let g:terminal_ansi_colors = [
   \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
-  \ '#597bc5', '#a037b0', '#71b9f8', '#adadad',
+  \ '#597bc5', '#E0554F', '#71b9f8', '#adadad',
   \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
-  \ '#597bc5', '#a037b0', '#71b9f8', '#adadad',
+  \ '#597bc5', '#E0554F', '#71b9f8', '#adadad',
 \ ]
 
 " https://github.com/dense-analysis/ale/blob/115ad17ace047cab20ccc67f79c943aaf3f0f291/autoload/ale/virtualtext.vim#L7
 "hi ALEVirtualTextInfo guifg=#d8ad4c
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
+
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
