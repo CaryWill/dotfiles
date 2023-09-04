@@ -104,13 +104,14 @@ let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
 let g:airline_theme='jellybeans'
 " --- CoC ---
+" add `zz` to the end is to center the position after jump
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
 nnoremap <leader>rn <Plug>(coc-rename)
-nnoremap <silent>gd <Plug>(coc-definition)
+nnoremap <silent>gd <Plug>(coc-definition)zz
 nnoremap <silent>gr <Plug>(coc-references)
-nnoremap <silent>gy <Plug>(coc-type-definition)
-nnoremap <silent>gi <Plug>(coc-implementation)
+nnoremap <silent>gy <Plug>(coc-type-definition)zz
+nnoremap <silent>gi <Plug>(coc-implementation)zz
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
