@@ -59,7 +59,6 @@ let g:coc_global_extensions = [
           \   'coc-prettier',
           \   'coc-tsserver',
           \   'coc-imselect',
-          \   'coc-tabnine',
           \ ]
 
 call plug#begin('~/.vim/plugged')
