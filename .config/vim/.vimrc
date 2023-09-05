@@ -34,7 +34,14 @@ set splitbelow
 set undofile
 set lazyredraw
 set ttyfast
+
+" scroll using mouse without moving the cursor
 set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+map <Down> <C-e>
+map <Up> <C-y>
+
 " Backup files
 set undofile
 set directory=~/.vim/tmp//
@@ -223,10 +230,5 @@ let g:terminal_ansi_colors = [
 "hi ALEVirtualTextInfo guifg=#d8ad4c
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
-
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
-map <Down> <C-e>
-map <Up> <C-y>
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
