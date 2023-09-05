@@ -77,6 +77,7 @@ Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 "Plug 'github/copilot.vim'
+Plug 'psliwka/vim-smoothie'
 call plug#end()
 
 " --- NERDTree --- 
@@ -223,5 +224,9 @@ let g:terminal_ansi_colors = [
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
 
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+map <Down> <C-e>
+map <Up> <C-y>
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
