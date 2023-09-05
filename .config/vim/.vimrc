@@ -85,6 +85,7 @@ Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 "Plug 'github/copilot.vim'
 Plug 'psliwka/vim-smoothie'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 " --- NERDTree --- 
@@ -113,7 +114,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
-let g:airline_theme='jellybeans'
 " --- CoC ---
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
@@ -153,8 +153,6 @@ let g:ale_set_highlights = 0
 
 " --- fzf ---
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
-" use bat --list-themes
-let $BAT_THEME="zenburn"
 "ripgrep will respect gitignore file
 let $FZF_DEFAULT_COMMAND='rg --files'
 nnoremap <silent> ;f :Files<CR>
@@ -210,13 +208,14 @@ tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
 " ----------------------------- Theme -----------------------------
-colorscheme jellybeans 
 set t_Co=256
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set background=dark
-set guifont=Monaco:h10 noanti
-let g:jellybeans_use_term_italics = 1
+
+set background=light
+colorscheme PaperColor
+" use bat --list-themes
+let $BAT_THEME="Coldark-Cold"
 
 " Jellybeans for support vim built-in terminal color
 let g:terminal_ansi_colors = [
@@ -225,6 +224,21 @@ let g:terminal_ansi_colors = [
   \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
   \ '#597bc5', '#E0554F', '#71b9f8', '#adadad',
 \ ]
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " https://github.com/dense-analysis/ale/blob/115ad17ace047cab20ccc67f79c943aaf3f0f291/autoload/ale/virtualtext.vim#L7
 "hi ALEVirtualTextInfo guifg=#d8ad4c
