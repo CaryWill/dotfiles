@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/cary/.oh-my-zsh"
-ZSH_THEME="clean"
+ZSH_THEME="warlord"
 
 plugins=(
   git
@@ -40,7 +40,6 @@ alias 'tmux-s'='tmux new -s ${PWD##*/}'
 # for nested tmux
 # unset TMUX
 # change `clean` zsh theme to full path
-PROMPT='%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}:%{$fg[blue]%}%B%~/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
 export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
 export CPATH="$CPATH:/opt/procursus/include"
 export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
