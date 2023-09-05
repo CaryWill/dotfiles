@@ -58,6 +58,7 @@ let g:coc_global_extensions = [
           \   'coc-eslint',
           \   'coc-prettier',
           \   'coc-tsserver',
+          \   'coc-imselect',
           \ ]
 
 call plug#begin('~/.vim/plugged')
