@@ -59,6 +59,7 @@ let g:coc_global_extensions = [
           \   'coc-prettier',
           \   'coc-tsserver',
           \   'coc-imselect',
+          \   'coc-tabnine',
           \ ]
 
 call plug#begin('~/.vim/plugged')
@@ -75,7 +76,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-Plug 'github/copilot.vim'
+"Plug 'github/copilot.vim'
 call plug#end()
 
 " --- NERDTree --- 
