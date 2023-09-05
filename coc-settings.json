@@ -11,5 +11,6 @@
   "diagnostic.warningSign": "!",
   "diagnostic.errorSign": "x",
   "diagnostic.refreshOnInsertMode": false,
+  "suggest.noselect": true,
   "coc.preferences.extensionUpdateCheck": "daily"
 }
