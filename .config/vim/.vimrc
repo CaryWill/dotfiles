@@ -76,6 +76,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+Plug 'github/copilot.vim'
 call plug#end()
 
 " --- NERDTree --- 
