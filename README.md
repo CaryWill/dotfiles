@@ -17,6 +17,8 @@ Note: all fonts are nerd-font patched.
 
 1. remove `set termguicolors`
 
+// https://apple.stackexchange.com/questions/165158/where-are-terminal-app-profiles-files-located 2. you can backup terminal.app config file
+
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf
