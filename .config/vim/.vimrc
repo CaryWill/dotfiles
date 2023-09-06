@@ -86,6 +86,7 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 "Plug 'github/copilot.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " --- NERDTree --- 
