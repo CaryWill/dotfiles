@@ -86,7 +86,7 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 "Plug 'github/copilot.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " --- NERDTree --- 
@@ -245,5 +245,4 @@ let g:fzf_colors =
 "hi ALEVirtualTextInfo guifg=#d8ad4c
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 " vim: set foldmethod=marker foldlevel=0 foldenable:
