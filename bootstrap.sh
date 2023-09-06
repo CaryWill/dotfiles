@@ -3,6 +3,7 @@
 #brew install bat
 #brew install ripgrep
 #brew install fzf
+#brew install trash
 
 mkdir -p ~/.vim/tmp
 
