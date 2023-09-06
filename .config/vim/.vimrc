@@ -134,7 +134,7 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
-inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+"inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -210,8 +210,8 @@ tmap <silent>;q <C-\><C-n>
 
 " ----------------------------- Theme -----------------------------
 set t_Co=256
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set background=light
 colorscheme PaperColor

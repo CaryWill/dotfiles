@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/cary/.oh-my-zsh"
-ZSH_THEME="warlord"
+#ZSH_THEME="warlord"
 
 plugins=(
   git
@@ -32,7 +32,7 @@ export TERM_ITALICS=true
 #export VISUAL=nvim
 #alias python=python3
 #alias tsnode=ts-node
-export TERM=xterm-256color
+export TERM=screen-256color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 # 用当前文件夹名直接创建一个 tmux session
 alias 'tmux-s'='tmux new -s ${PWD##*/}'
