@@ -218,14 +218,6 @@ colorscheme PaperColor
 " use bat --list-themes
 let $BAT_THEME="Coldark-Cold"
 
-" Jellybeans for support vim built-in terminal color
-let g:terminal_ansi_colors = [
-  \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
-  \ '#597bc5', '#E0554F', '#71b9f8', '#adadad',
-  \ '#3b3b3b', '#cf6a4c', '#99ad6a', '#d8ad4c',
-  \ '#597bc5', '#E0554F', '#71b9f8', '#adadad',
-\ ]
-
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
