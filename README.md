@@ -14,3 +14,4 @@ Note: all fonts are nerd-font patched.
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf
+- [ ] tmux copy vi mode not work in terminal.app
