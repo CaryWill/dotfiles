@@ -36,6 +36,7 @@ export TERM=screen-256color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 # 用当前文件夹名直接创建一个 tmux session
 alias 'tmux-s'='tmux new -s ${PWD##*/}'
+alias 'tx'='tmux new -s ${PWD##*/}'
 
 # for nested tmux
 # unset TMUX
