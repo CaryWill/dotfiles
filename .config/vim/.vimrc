@@ -144,6 +144,7 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " --- ale ---
+" async & can display in virtualtext
 let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '!'
 let g:ale_echo_msg_error_str = 'E'
@@ -152,6 +153,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_disable_lsp = 1
 let g:ale_set_highlights = 0
+let g:ale_virtualtext_cursor = 'disabled'
 
 " --- fzf ---
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
