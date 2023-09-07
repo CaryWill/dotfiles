@@ -88,6 +88,7 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'psliwka/vim-smoothie'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " --- NERDTree --- 
@@ -184,6 +185,7 @@ let g:fzf_action = {
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left"
 "let g:coc_fzf_preview='right:50%'
+
 " ----------------------------- Mappings -----------------------------
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
