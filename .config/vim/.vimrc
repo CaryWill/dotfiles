@@ -164,8 +164,8 @@ nnoremap <silent> ;f :Files<CR>
 nnoremap <silent> ;g :GFiles<CR>
 nnoremap <silent> ;s :Rg <C-R><C-W><CR>
 nnoremap <silent> ;d :BCommits<CR>
-nnoremap <silent> ;q :<C-u>CocFzfList diagnostics<CR>
-nnoremap <silent> ;e :<C-u>CocFzfList diagnostics --current-buf<CR>
+nnoremap <silent> ;da :<C-u>CocFzfList diagnostics<CR>
+nnoremap <silent> ;dc :<C-u>CocFzfList diagnostics --current-buf<CR>
 nnoremap <silent> <leader>o :<C-u>CocFzfList outline<CR>
 "fuzzy finder
 nnoremap <silent> ;r :Rg<CR>
