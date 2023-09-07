@@ -22,4 +22,5 @@ Note: all fonts are nerd-font patched.
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf
-- [ ] tmux copy vi mode not work in terminal.app
+- [ ] tmux copy vi mode not work in terminal.app(but you can use `fn` to select)
+- [x] jsx color heighlight
