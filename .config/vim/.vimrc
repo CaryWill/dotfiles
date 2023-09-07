@@ -28,7 +28,8 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 set cursorline
-set termguicolors
+" not work if you're using terminal.app
+"set termguicolors
 set splitright 
 set splitbelow
 set undofile

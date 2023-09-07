@@ -11,6 +11,14 @@ Since the neovim API is not stable, I quit using neovim, so this is the configua
 
 Note: all fonts are nerd-font patched.
 
+## Notes
+
+// https://vi.stackexchange.com/questions/28489/how-to-make-vim-colorscheme-work-on-big-sur-terminal?newreg=30ec2c296a4b4287b7f255754c8b8443
+
+1. remove `set termguicolors`
+
+// https://apple.stackexchange.com/questions/165158/where-are-terminal-app-profiles-files-located 2. you can backup terminal.app config file
+
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf
