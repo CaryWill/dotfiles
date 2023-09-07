@@ -24,3 +24,4 @@ Note: all fonts are nerd-font patched.
 - [ ] Vim git previous commit up down in fzf
 - [ ] tmux copy vi mode not work in terminal.app(but you can use `fn` to select)
 - [x] jsx color heighlight
+- [ ] zsh，回车后下一行开头会回显命令
