@@ -28,6 +28,7 @@ export NVM_DIR="$HOME/.nvm"
 TERM="xterm" #防止删除键变成空格键
 export LANG=en_US.UTF-8
 export TERM_ITALICS=true
+export TERM=xterm-256color
 #alias vim=nvim
 #export VISUAL=nvim
 #alias python=python3
