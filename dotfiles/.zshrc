@@ -36,6 +36,7 @@ export TERM=xterm-256color
 # 用当前文件夹名直接创建一个 tmux session
 alias 'tmux-s'='tmux new -s ${PWD##*/}'
 alias 'tx'='tmux new -s ${PWD##*/}'
+alias 'ta'='tmux attach'
 
 # for nested tmux
 # unset TMUX
