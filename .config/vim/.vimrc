@@ -203,6 +203,16 @@ nmap st :tab split<CR>
 nnoremap <silent><leader>q :q<CR>
 xmap do :diffget<CR>
 xmap dp :diffput<CR>
+" word delete in insert mode
+inoremap <C-d> <Del>
+inoremap <C-b> <C-o>dT<Space>
+" cursor movement in insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+inoremap <C-n> <C-o>j
+inoremap <C-p> <C-o>k
 
 "Select all
 nmap <C-a> gg<S-v>G
