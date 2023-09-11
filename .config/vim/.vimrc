@@ -35,6 +35,7 @@ set splitbelow
 set undofile
 set lazyredraw
 set ttyfast
+set relativenumber
 
 " scroll using mouse without moving the cursor
 set mouse=a
@@ -206,7 +207,7 @@ xmap do :diffget<CR>
 xmap dp :diffput<CR>
 " word delete in insert mode
 inoremap <C-d> <Del>
-inoremap <C-b> <C-o>bdw
+inoremap <C-b> <ESC>bdwi
 " cursor movement in insert mode
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
