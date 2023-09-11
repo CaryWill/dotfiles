@@ -46,3 +46,5 @@ export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
 export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
 export CPATH="$CPATH:/opt/procursus/include"
 export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
+# disable zsh update
+DISABLE_UPDATE_PROMPT=true
