@@ -3,7 +3,6 @@ lang en_US.UTF-8
 syntax on
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
-set number
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
 set hidden 
@@ -22,7 +21,7 @@ set wrap
 set laststatus=2
 set autoread
 set nospell
-set signcolumn=number 
+" set signcolumn=number 
 set clipboard+=unnamedplus
 set foldmethod=indent
 set nofoldenable
@@ -35,7 +34,8 @@ set splitbelow
 set undofile
 set lazyredraw
 set ttyfast
-set relativenumber
+set number
+" set relativenumber
 
 " scroll using mouse without moving the cursor
 set mouse=a
@@ -213,8 +213,6 @@ inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
-inoremap <C-n> <C-o>j
-inoremap <C-p> <C-o>k
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
