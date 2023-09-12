@@ -3,7 +3,6 @@ lang en_US.UTF-8
 syntax on
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
-set number
 set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
 set encoding=utf-8
 set hidden 
@@ -22,7 +21,7 @@ set wrap
 set laststatus=2
 set autoread
 set nospell
-set signcolumn=number 
+" set signcolumn=number 
 set clipboard+=unnamedplus
 set foldmethod=indent
 set nofoldenable
@@ -35,6 +34,8 @@ set splitbelow
 set undofile
 set lazyredraw
 set ttyfast
+set number
+" set relativenumber
 
 " scroll using mouse without moving the cursor
 set mouse=a
@@ -89,6 +90,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " --- NERDTree --- 
@@ -117,6 +119,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_section_z=''
+let g:airline_section_y=''
 " --- CoC ---
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
@@ -203,7 +208,14 @@ nmap st :tab split<CR>
 nnoremap <silent><leader>q :q<CR>
 xmap do :diffget<CR>
 xmap dp :diffput<CR>
-
+" word delete in insert mode
+inoremap <C-d> <Del>
+inoremap <C-b> <ESC>bdwi
+" cursor movement in insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>

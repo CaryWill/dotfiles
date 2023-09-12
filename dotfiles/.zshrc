@@ -36,6 +36,7 @@ export TERM=xterm-256color
 # 用当前文件夹名直接创建一个 tmux session
 alias 'tmux-s'='tmux new -s ${PWD##*/}'
 alias 'tx'='tmux new -s ${PWD##*/}'
+alias 'ta'='tmux attach'
 
 # for nested tmux
 # unset TMUX
@@ -53,3 +54,5 @@ export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# disable zsh update
+DISABLE_UPDATE_PROMPT=true
