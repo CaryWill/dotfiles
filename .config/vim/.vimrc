@@ -119,6 +119,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_section_z=''
+let g:airline_section_y=''
 " --- CoC ---
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
