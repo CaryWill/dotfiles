@@ -46,3 +46,10 @@ export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
 export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
 export CPATH="$CPATH:/opt/procursus/include"
 export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
+
+# bun completions
+[ -s "/Users/cary/.bun/_bun" ] && source "/Users/cary/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
