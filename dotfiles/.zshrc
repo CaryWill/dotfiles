@@ -34,8 +34,10 @@ export TERM=xterm-256color
 #alias python=python3
 #alias tsnode=ts-node
 # 用当前文件夹名直接创建一个 tmux session
-alias 'tmux-s'='tmux new -s ${PWD##*/}'
-alias 'tx'='tmux new -s ${PWD##*/}'
+# alias 'tmux-s'='tmux new -s ${PWD##*/}'
+# 用当前文件夹名和父目录直接创建一个 tmux session
+alias 'tmux-s'='tmux new-session -s "$(basename $(dirname $(pwd)))_$(basename $(pwd))"'
+alias 'tx'='tmux-s'
 alias 'ta'='tmux attach'
 
 # for nested tmux
@@ -56,3 +58,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # disable zsh update
 DISABLE_UPDATE_PROMPT=true
+# stop brew downloading the formula each time when using services command
+export HOMEBREW_NO_INSTALL_FROM_API=1
