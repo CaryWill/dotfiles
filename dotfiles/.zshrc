@@ -36,7 +36,7 @@ export TERM=xterm-256color
 # 用当前文件夹名直接创建一个 tmux session
 # alias 'tmux-s'='tmux new -s ${PWD##*/}'
 # 用当前文件夹名和父目录直接创建一个 tmux session
-alias 'tmux-s'='tmux new-session -s "$(basename $(dirname $(pwd)))_$(basename $(pwd))"'
+alias 'tmux-s'='tmux new-session -s "$(basename $(dirname $(pwd)))/$(basename $(pwd))"'
 alias 'tx'='tmux-s'
 alias 'ta'='tmux attach'
 
