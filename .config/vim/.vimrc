@@ -21,6 +21,7 @@ set wrap
 set laststatus=2
 set autoread
 set nospell
+set signcolumn=yes
 " set signcolumn=number 
 set clipboard+=unnamedplus
 set foldmethod=indent
