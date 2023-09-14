@@ -4,6 +4,7 @@
 #brew install ripgrep
 #brew install fzf
 #brew install trash
+#brew install reattach-to-user-namespace
 
 mkdir -p ~/.vim/tmp
 
