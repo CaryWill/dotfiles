@@ -19,9 +19,12 @@ Note: all fonts are nerd-font patched.
 
 // https://apple.stackexchange.com/questions/165158/where-are-terminal-app-profiles-files-located 2. you can backup terminal.app config file
 
+2. 小狼毫输入法如何设置成简体？ - 知乎用户的回答 - 知乎
+https://www.zhihu.com/question/41021597/answer/1056738671
+
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf
 - [x] tmux copy vi mode not work in terminal.app(but you can use `fn` to select), maybe because xclip?
 - [x] jsx color heighlight
-- [ ] zsh，回车后下一行开头会回显命令
+- [x] zsh，回车后下一行开头会回显命令
