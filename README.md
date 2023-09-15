@@ -22,6 +22,9 @@ Note: all fonts are nerd-font patched.
 2. 小狼毫输入法如何设置成简体？ - 知乎用户的回答 - 知乎
 https://www.zhihu.com/question/41021597/answer/1056738671
 
+3. change zsh full path
+https://stackoverflow.com/a/64441730
+
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf
