@@ -35,6 +35,7 @@ ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
 ln -sf "$(pwd)/coc-settings.json" ~/.vim/coc-settings.json
 #ln -sf "$(pwd)/.config/com.apple.Terminal.plist" ~/Library/Preferences/com.apple.Terminal.plist
 ln -sf "$(pwd)/rime/default.custom.yaml" ~/Library/Rime/default.custom.yaml
+ln -sf "$(pwd)/rime/squirrel.custom.yaml" ~/Library/Rime/squirrel.custom.yaml
 
 # 7. 安装 vim 插件
 vim +PlugInstall +qall
