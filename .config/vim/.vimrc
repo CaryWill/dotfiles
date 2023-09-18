@@ -63,13 +63,13 @@ autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 
 " ----------------------------- Plugins -----------------------------
-"'coc-imselect',
 let g:coc_global_extensions = [
           \   'coc-cssmodules',
           \   'coc-eslint',
           \   'coc-prettier',
           \   'coc-tsserver',
           \   'coc-tabnine',
+          \   'coc-imselect',
           \ ]
 
 call plug#begin('~/.vim/plugged')
