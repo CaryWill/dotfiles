@@ -50,10 +50,6 @@ set undofile
 set directory=~/.vim/tmp//
 set undodir=~/.vim/tmp//
 set backupdir=~/.vim/tmp//
-" Cursor shape
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 let mapleader = ' '
 let maplocalleader = ','
@@ -70,14 +66,15 @@ let g:coc_global_extensions = [
           \   'coc-tsserver',
           \   'coc-tabnine',
           \   'coc-imselect',
+          \   'coc-explorer',
           \ ]
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'scrooloose/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'hahdookin/miniterm.vim'
@@ -93,29 +90,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
-
-" --- NERDTree --- 
-nnoremap <silent>fi :NERDTreeFind<CR>
-map ;e :NERDTreeToggle<CR>
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 30
-autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
-autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
-autocmd FileType nerdtree nnoremap <buffer> = :vertical resize 30<CR>
-
-" --- NERDTree git icon ---
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ 'Modified'  :'M',
-    \ 'Staged'    :'A',
-    \ 'Untracked' :'U',
-    \ 'Renamed'   :'R',
-    \ 'Unmerged'  :'═',
-    \ 'Deleted'   :'D',
-    \ 'Dirty'     :'x',
-    \ 'Ignored'   :'☒',
-    \ 'Clean'     :'O',
-    \ 'Unknown'   :'?',
-    \ }
 
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
@@ -226,6 +200,20 @@ imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
+" Cursor shape
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+let g:netrw_banner=0
+nmap <space>e <Cmd>CocCommand explorer<CR> 
+" Start NERDTree and leave the cursor in it.
+let loaded_netrwPlugin = 1
+nmap <Leader>x <Cmd>call CocAction('runCommand', 'explorer.doAction', 'closest', ['reveal:0'], [['relative', 0, 'file']])<CR>
+autocmd VimEnter * CocCommand explorer
+    \ --toggle
+    \ --sources=buffer+,file+
+    \ .
+
 " ----------------------------- Theme -----------------------------
 set t_Co=256
 "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -255,4 +243,5 @@ let g:fzf_colors =
 "hi ALEVirtualTextInfo guifg=#d8ad4c
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:
