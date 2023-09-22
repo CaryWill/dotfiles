@@ -243,12 +243,26 @@ nnoremap fi :Lexplore %:p:h<CR>
 nnoremap ;e :Lexplore<CR>
 " let g:netrw_keepdir = 0
 let g:netrw_banner = 0
-let g:netrw_winsize = 30
+let g:netrw_winsize = 25
+
+function! OpenToRight()
+  :rightbelow vnew
+  :wincmd p
+  :normal P
+endfunction
+
+function! OpenToBottom()
+  :rightbelow new
+  :wincmd p
+  :normal P
+endfunction
 
 function! NetrwMapping()
   " Toggle dotfiles
   nmap <buffer> . gh
   nnoremap <buffer> <c-l> <C-W><C-L>
+  nnoremap <buffer> v :call OpenToRight()<cr>
+  nnoremap <buffer> o :call OpenToBottom()<cr>
 endfunction
 
 augroup netrw_config
