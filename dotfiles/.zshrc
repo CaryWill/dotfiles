@@ -39,6 +39,7 @@ export TERM=xterm-256color
 alias 'tmux-s'='tmux new-session -s "$(basename $(dirname $(pwd)))/$(basename $(pwd))"'
 alias 'tx'='tmux-s'
 alias 'ta'='tmux attach'
+alias 'aidc'='cd ~/workspace/aidc-xspace'
 
 # for nested tmux
 # unset TMUX

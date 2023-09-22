@@ -255,4 +255,6 @@ let g:fzf_colors =
 "hi ALEVirtualTextInfo guifg=#d8ad4c
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
+" hi CocErrorSign guifg=#cf6a4c guibg=#d8ad4c
+hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
 " vim: set foldmethod=marker foldlevel=0 foldenable:
