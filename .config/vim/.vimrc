@@ -76,8 +76,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'hahdookin/miniterm.vim'
@@ -86,36 +84,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-"Plug 'github/copilot.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
+" Plug 'tpope/vim-vinegar'
 call plug#end()
-
-" --- NERDTree --- 
-nnoremap <silent>fi :NERDTreeFind<CR>
-map ;e :NERDTreeToggle<CR>
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 30
-autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
-autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
-autocmd FileType nerdtree nnoremap <buffer> = :vertical resize 30<CR>
-
-" --- NERDTree git icon ---
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ 'Modified'  :'M',
-    \ 'Staged'    :'A',
-    \ 'Untracked' :'U',
-    \ 'Renamed'   :'R',
-    \ 'Unmerged'  :'═',
-    \ 'Deleted'   :'D',
-    \ 'Dirty'     :'x',
-    \ 'Ignored'   :'☒',
-    \ 'Clean'     :'O',
-    \ 'Unknown'   :'?',
-    \ }
 
 " --- Airline --- 
 let g:airline#extensions#coc#enabled = 1
@@ -257,4 +232,38 @@ hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
 " hi CocErrorSign guifg=#cf6a4c guibg=#d8ad4c
 hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
+
+" Netrw tree
+" https://shapeshed.com/vim-netrw/
+" https://gist.github.com/VonHeikemen/fa6f7c7f114bc36326cda2c964cb52c7
+let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+" Open Netrw on the directory of the current file
+nnoremap <leader>dd :Lexplore %:p:h<CR>
+" Toggle the Netrw window
+nnoremap <Leader>da :Lexplore<CR>
+" Sync current directory and browsing directory
+" This solves the problem with the 'move' command
+let g:netrw_keepdir = 0
+" Hide banner
+let g:netrw_banner = 0
+" Hide dotfiles
+" let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+" A better copy command
+let g:netrw_localcopydircmd = 'cp -r'
+
+" Better keymaps for Netrw
+function! NetrwMapping()
+  " Close Netrw window
+  nmap <buffer> <leader>dd :Lexplore<CR>
+  " Toggle dotfiles
+  nmap <buffer> . gh
+endfunction
+
+augroup netrw_mapping
+    autocmd!
+    autocmd filetype netrw call NetrwMapping()
+augroup END
 " vim: set foldmethod=marker foldlevel=0 foldenable:
