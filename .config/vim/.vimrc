@@ -237,15 +237,13 @@ hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
 " https://shapeshed.com/vim-netrw/
 " https://gist.github.com/VonHeikemen/fa6f7c7f114bc36326cda2c964cb52c7
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-" let g:netrw_winsize = 25
 " Open Netrw on the directory of the current file
 nnoremap fi :Lexplore %:p:h<CR>
 " Toggle the Netrw window
 nnoremap ;e :Lexplore<CR>
-let g:netrw_keepdir = 0
+" let g:netrw_keepdir = 0
 let g:netrw_banner = 0
+" let g:netrw_winsize = 30
 
 function! NetrwMapping()
   " Toggle dotfiles
