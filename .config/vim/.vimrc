@@ -260,6 +260,7 @@ function! NetrwMapping()
   nmap <buffer> <leader>dd :Lexplore<CR>
   " Toggle dotfiles
   nmap <buffer> . gh
+  nmap <buffer> <c-l> <C-W><C-L>
 endfunction
 
 augroup netrw_mapping
