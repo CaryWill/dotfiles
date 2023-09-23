@@ -1,7 +1,14 @@
 "Plug 'github/copilot.vim'
 " Plug 'psliwka/vim-smoothie'
 " Plug 'nanotech/jellybeans.vim'
-
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" --- Airline --- 
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#hunks#coc_git = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_section_z=''
+let g:airline_section_y=''
 " --- NERDTree ---
 " Plug 'scrooloose/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -57,4 +64,5 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 " hi CocErrorSign guifg=#cf6a4c guibg=#d8ad4c
 " https://shapeshed.com/vim-netrw/
 " https://gist.github.com/VonHeikemen/fa6f7c7f114bc36326cda2c964cb52c7
+
 

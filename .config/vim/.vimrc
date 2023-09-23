@@ -60,26 +60,18 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-" Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'hahdookin/miniterm.vim'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+Plug 'dense-analysis/ale'
+Plug 'hahdookin/miniterm.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
-" --- Airline --- 
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#hunks#coc_git = 1
-let g:airline_skip_empty_sections = 1
-let g:airline_section_z=''
-let g:airline_section_y=''
 " --- CoC ---
 vmap <leader>f <Plug>(coc-format-selected)
 nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
