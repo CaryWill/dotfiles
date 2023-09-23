@@ -3,11 +3,10 @@ lang en_US.UTF-8
 syntax on
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
-set fileencodings=utf-8,gbk,gb18030,gb2312,cp936,usc-bom,euc-jp
+set fileencodings=utf-8
 set encoding=utf-8
 set hidden 
 set backspace=indent,eol,start
-set timeoutlen=500
 set ignorecase
 set smartcase
 set smarttab
@@ -17,28 +16,17 @@ set tabstop=2
 set softtabstop=2
 set autoindent
 set smartindent
-set wrap
-set laststatus=2
 set autoread
-set nospell
 set signcolumn=yes
-" set signcolumn=number 
 set clipboard+=unnamedplus
 set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 set cursorline
-" not work if you're using terminal.app
-"set termguicolors
 set splitright 
 set splitbelow
 set undofile
-set lazyredraw
-set ttyfast
 set number
-" set relativenumber
-
-" scroll using mouse without moving the cursor
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
@@ -57,12 +45,8 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 let mapleader = ' '
 let maplocalleader = ','
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
-autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
-command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 
-" ----------------------------- Plugins -----------------------------
+" --- Plugins --- 
 let g:coc_global_extensions = [
           \   'coc-cssmodules',
           \   'coc-eslint',
@@ -89,7 +73,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'tpope/vim-vinegar'
 call plug#end()
 
 " --- Airline --- 
@@ -106,19 +89,6 @@ nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
 nnoremap <silent>gy <Plug>(coc-type-definition)
 nnoremap <silent>gi <Plug>(coc-implementation)
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-        call CocActionAsync('doHover')
-    else
-        execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-endfunction
-"inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-" Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -148,7 +118,6 @@ nnoremap <silent> ;d :BCommits<CR>
 nnoremap <silent> ;da :<C-u>CocFzfList diagnostics<CR>
 nnoremap <silent> ;dc :<C-u>CocFzfList diagnostics --current-buf<CR>
 nnoremap <silent> <leader>o :<C-u>CocFzfList outline<CR>
-"fuzzy finder
 nnoremap <silent> ;r :Rg<CR>
 
 " CTRL-a CTRL-q to select all and build quickfix list
@@ -165,9 +134,8 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left"
-"let g:coc_fzf_preview='right:50%'
 
-" ----------------------------- Mappings -----------------------------
+" --- Mappings --- 
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
 nnoremap H :tabprev<CR>
@@ -181,17 +149,6 @@ noremap k gk
 nmap ss :split<CR>
 nmap sv :vsplit<CR>
 nmap st :tab split<CR>
-nnoremap <silent><leader>q :q<CR>
-xmap do :diffget<CR>
-xmap dp :diffput<CR>
-" word delete in insert mode
-inoremap <C-d> <Del>
-inoremap <C-b> <ESC>bdwi
-" cursor movement in insert mode
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>l
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
@@ -201,14 +158,10 @@ imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
-" ----------------------------- Theme -----------------------------
+" --- Theme --- 
 set t_Co=256
-"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
 set background=light
 colorscheme PaperColor
-" use bat --list-themes
 let $BAT_THEME="Coldark-Cold"
 
 let g:fzf_colors =
@@ -226,22 +179,14 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" https://github.com/dense-analysis/ale/blob/115ad17ace047cab20ccc67f79c943aaf3f0f291/autoload/ale/virtualtext.vim#L7
-"hi ALEVirtualTextInfo guifg=#d8ad4c
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
-" hi CocErrorSign guifg=#cf6a4c guibg=#d8ad4c
 hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
 
 " Netrw tree
-" https://shapeshed.com/vim-netrw/
-" https://gist.github.com/VonHeikemen/fa6f7c7f114bc36326cda2c964cb52c7
 let g:netrw_liststyle = 3
-" Open Netrw on the directory of the current file
 nnoremap fi :Lexplore %:p:h<CR>
-" Toggle the Netrw window
 nnoremap ;e :Lexplore<CR>
-" let g:netrw_keepdir = 0
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
@@ -258,8 +203,6 @@ function! OpenToBottom()
 endfunction
 
 function! NetrwMapping()
-  " Toggle dotfiles
-  nmap <buffer> . gh
   nnoremap <buffer> <c-l> <C-W><C-L>
   nnoremap <buffer> v :call OpenToRight()<cr>
   nnoremap <buffer> o :call OpenToBottom()<cr>
@@ -269,6 +212,5 @@ augroup netrw_config
     autocmd!
     autocmd filetype netrw call NetrwMapping()
 augroup END
-" autocmd BufLeave * execute "normal! <C-W>="
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
