@@ -1,4 +1,6 @@
 "Plug 'github/copilot.vim'
+" Plug 'psliwka/vim-smoothie'
+" Plug 'nanotech/jellybeans.vim'
 
 " --- NERDTree ---
 " Plug 'scrooloose/nerdtree'
@@ -55,3 +57,4 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 " hi CocErrorSign guifg=#cf6a4c guibg=#d8ad4c
 " https://shapeshed.com/vim-netrw/
 " https://gist.github.com/VonHeikemen/fa6f7c7f114bc36326cda2c964cb52c7
+

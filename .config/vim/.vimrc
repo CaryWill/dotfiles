@@ -15,6 +15,7 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set autoindent
+set laststatus=2
 set smartindent
 set autoread
 set signcolumn=yes
@@ -59,17 +60,14 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'hahdookin/miniterm.vim'
-Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-Plug 'psliwka/vim-smoothie'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
@@ -153,6 +151,7 @@ nmap st :tab split<CR>
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
+nnoremap <leader>q :q<CR>
 
 nmap <silent>;t <leader>tt
 imap <silent>;t <leader>tt
