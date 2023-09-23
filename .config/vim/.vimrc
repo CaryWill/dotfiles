@@ -38,6 +38,7 @@ set undofile
 set directory=~/.vim/tmp//
 set undodir=~/.vim/tmp//
 set backupdir=~/.vim/tmp//
+
 " Cursor shape
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
