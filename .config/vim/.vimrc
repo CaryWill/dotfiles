@@ -70,6 +70,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'psliwka/vim-smoothie'
 call plug#end()
 
 " --- CoC ---
