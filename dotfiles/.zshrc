@@ -61,3 +61,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 DISABLE_UPDATE_PROMPT=true
 # stop brew downloading the formula each time when using services command
 export HOMEBREW_NO_INSTALL_FROM_API=1
+
+# dev
+xp() {
+  local param="$1"
+  local output="https://code.alibaba-inc.com/${param}"
+  open "$output"
+}
