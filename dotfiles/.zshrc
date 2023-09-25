@@ -63,6 +63,7 @@ DISABLE_UPDATE_PROMPT=true
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
 # dev
+# usage: xp xspace/component-case-view
 xp() {
   local param="$1"
   local output="https://code.alibaba-inc.com/${param}"
