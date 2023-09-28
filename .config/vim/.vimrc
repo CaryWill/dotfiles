@@ -195,18 +195,19 @@ function! OpenToBottom()
   :normal P
 endfunction
 
-function! OpenToTab()
-  :tabnew
-  :bprevious
-  :normal P
-endfunction
-
 function! NetrwMapping()
   nnoremap <buffer> <c-l> <C-W><C-L>
   nnoremap <buffer> <c-v> :call OpenToRight()<cr>
   nnoremap <buffer> <c-s> :call OpenToBottom()<cr>
   nnoremap <buffer> <c-t> :normal t<cr>
   nnoremap <buffer> te :tabedit
+  nmap <buffer> . gh
+  nmap <buffer> a %
+  nmap <buffer> r R
+  nmap <buffer> M d
+  nmap <buffer> u -
+" TODO: refresh the tree after add file, R
+" TODO: go down directory, cd
 endfunction
 
 augroup netrw_config
