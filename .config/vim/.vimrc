@@ -199,6 +199,7 @@ function! NetrwMapping()
   nnoremap <buffer> <c-l> <C-W><C-L>
   nnoremap <buffer> v :call OpenToRight()<cr>
   nnoremap <buffer> o :call OpenToBottom()<cr>
+  unmap <buffer> t
 endfunction
 
 augroup netrw_config
