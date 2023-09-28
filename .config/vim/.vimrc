@@ -195,11 +195,18 @@ function! OpenToBottom()
   :normal P
 endfunction
 
+function! OpenToTab()
+  :tabnew
+  :bprevious
+  :normal P
+endfunction
+
 function! NetrwMapping()
   nnoremap <buffer> <c-l> <C-W><C-L>
-  nnoremap <buffer> v :call OpenToRight()<cr>
-  nnoremap <buffer> o :call OpenToBottom()<cr>
-  unmap <buffer> t
+  nnoremap <buffer> <c-v> :call OpenToRight()<cr>
+  nnoremap <buffer> <c-s> :call OpenToBottom()<cr>
+  nnoremap <buffer> <c-t> :normal t<cr>
+  nnoremap <buffer> te :tabedit
 endfunction
 
 augroup netrw_config
