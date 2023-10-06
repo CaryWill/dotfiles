@@ -12,9 +12,6 @@ let g:airline_section_y=''
 " --- NERDTree ---
 " Plug 'scrooloose/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
-nnoremap <silent>fi :NERDTreeFind<CR>
-map ;e :NERDTreeToggle<CR>
-let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
 autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
 autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
@@ -65,4 +62,41 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 " https://shapeshed.com/vim-netrw/
 " https://gist.github.com/VonHeikemen/fa6f7c7f114bc36326cda2c964cb52c7
 
+" Netrw tree
+let g:netrw_liststyle = 3
+nnoremap fi :Lexplore %:p:h<CR>
+nnoremap ;e :Lexplore<CR>
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
 
+function! OpenToRight()
+  :rightbelow vnew
+  :wincmd p
+  :normal P
+endfunction
+
+function! OpenToBottom()
+  :rightbelow new
+  :wincmd p
+  :normal P
+endfunction
+
+function! NetrwMapping()
+  nnoremap <buffer> <c-l> <C-W><C-L>
+  nnoremap <buffer> <c-v> :call OpenToRight()<cr>
+  nnoremap <buffer> <c-s> :call OpenToBottom()<cr>
+  nnoremap <buffer> <c-t> :normal t<cr>
+  nnoremap <buffer> te :tabedit
+  nmap <buffer> . gh
+  nmap <buffer> a %
+  nmap <buffer> r R
+  nmap <buffer> M d
+  nmap <buffer> u -
+" TODO: refresh the tree after add file, R
+" TODO: go down directory, cd
+endfunction
+
+augroup netrw_config
+    autocmd!
+    autocmd filetype netrw call NetrwMapping()
+augroup END
