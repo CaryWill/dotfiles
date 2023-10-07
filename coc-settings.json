@@ -13,5 +13,6 @@
   "diagnostic.refreshOnInsertMode": false,
   "suggest.noselect": true,
   "coc.preferences.extensionUpdateCheck": "daily",
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true
 }

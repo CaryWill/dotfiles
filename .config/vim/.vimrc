@@ -52,7 +52,6 @@ let maplocalleader = ','
 let g:coc_global_extensions = [
           \   'coc-cssmodules',
           \   'coc-eslint',
-          \   'coc-prettier',
           \   'coc-tsserver',
           \   'coc-tabnine',
           \   'coc-imselect',
@@ -72,11 +71,10 @@ Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree'
+Plug 'prettier/vim-prettier'
 call plug#end()
 
 " --- CoC ---
-vmap <leader>f <Plug>(coc-format-selected)
-nnoremap <leader>f <cmd>:CocCommand prettier.forceFormatDocument <CR>
 nnoremap <leader>rn <Plug>(coc-rename)
 nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
@@ -152,6 +150,8 @@ imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
+let g:prettier#config#single_quote = 'true'
+nnoremap <leader>f <cmd>:PrettierAsync<CR>
 " --- Theme --- 
 set t_Co=256
 set background=light
@@ -176,7 +176,6 @@ let g:fzf_colors =
 hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
 hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
 hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
-
 nnoremap <silent>fi :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
