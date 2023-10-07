@@ -100,3 +100,6 @@ augroup netrw_config
     autocmd!
     autocmd filetype netrw call NetrwMapping()
 augroup END
+
+" coc plugins
+" \   'coc-tabnine',

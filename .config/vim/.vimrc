@@ -53,7 +53,6 @@ let g:coc_global_extensions = [
           \   'coc-cssmodules',
           \   'coc-eslint',
           \   'coc-tsserver',
-          \   'coc-tabnine',
           \   'coc-imselect',
           \ ]
 
