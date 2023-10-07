@@ -150,7 +150,7 @@ imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
-let g:prettier#config#single_quote = 'true'
+" let g:prettier#config#single_quote = 'true'
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
 " --- Theme --- 
 set t_Co=256
