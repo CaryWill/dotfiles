@@ -10,7 +10,7 @@
   "diagnostic.hintSign": "*",
   "diagnostic.warningSign": "!",
   "diagnostic.errorSign": "x",
-  "diagnostic.refreshOnInsertMode": false,
+  "diagnostic.refreshOnInsertMode": true,
   "suggest.noselect": true,
   "coc.preferences.extensionUpdateCheck": "daily",
   "prettier.singleQuote": true,
