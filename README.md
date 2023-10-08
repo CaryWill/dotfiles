@@ -19,8 +19,9 @@ Note: all fonts are nerd-font patched.
 
 // https://apple.stackexchange.com/questions/165158/where-are-terminal-app-profiles-files-located 2. you can backup terminal.app config file
 
-2. 小狼毫输入法如何设置成简体？ - 知乎用户的回答 - 知乎
-https://www.zhihu.com/question/41021597/answer/1056738671
+2. Meta key
+
+In terminal setting, you can set 'option' key as 'meta' key.
 
 3. change zsh full path
 https://stackoverflow.com/a/64441730
