@@ -69,5 +69,3 @@ xp() {
   local output="https://code.alibaba-inc.com/${param}"
   open "$output"
 }
-
-export NODE_OPTIONS=--openssl-legacy-provider
