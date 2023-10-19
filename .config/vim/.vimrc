@@ -139,6 +139,7 @@ noremap k gk
 nmap ss :split<CR>
 nmap sv :vsplit<CR>
 nmap st :tab split<CR>
+vmap <C-C> "+y
 "Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
