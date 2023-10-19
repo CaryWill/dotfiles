@@ -57,6 +57,7 @@ let g:coc_global_extensions = [
           \ ]
 
 call plug#begin('~/.vim/plugged')
+Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
