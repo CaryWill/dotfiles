@@ -1,36 +1,5 @@
 "Plug 'github/copilot.vim'
-" Plug 'psliwka/vim-smoothie'
 " Plug 'nanotech/jellybeans.vim'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" --- Airline --- 
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#hunks#coc_git = 1
-let g:airline_skip_empty_sections = 1
-let g:airline_section_z=''
-let g:airline_section_y=''
-" --- NERDTree ---
-" Plug 'scrooloose/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-let g:NERDTreeWinSize = 30
-autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
-autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
-autocmd FileType nerdtree nnoremap <buffer> = :vertical resize 30<CR>
-
-" --- NERDTree git icon ---
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ 'Modified'  :'M',
-    \ 'Staged'    :'A',
-    \ 'Untracked' :'U',
-    \ 'Renamed'   :'R',
-    \ 'Unmerged'  :'═',
-    \ 'Deleted'   :'D',
-    \ 'Dirty'     :'x',
-    \ 'Ignored'   :'☒',
-    \ 'Clean'     :'O',
-    \ 'Unknown'   :'?',
-    \ }
-
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -50,7 +19,6 @@ xmap dp :diffput<CR>
 " not work if you're using terminal.app
 "set termguicolors
 " set signcolumn=number 
-autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 

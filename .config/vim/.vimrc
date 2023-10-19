@@ -72,6 +72,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree'
 Plug 'prettier/vim-prettier'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " --- CoC ---
@@ -86,6 +89,12 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" --- Airline --- 
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#hunks#coc_git = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_section_z=''
+let g:airline_section_y=''
 " --- ale ---
 " async & can display in virtualtext
 let g:ale_sign_error = 'x'
@@ -97,6 +106,26 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_disable_lsp = 1
 let g:ale_set_highlights = 0
 let g:ale_virtualtext_cursor = 'disabled'
+
+" --- NERDTree ---
+let g:NERDTreeWinSize = 30
+autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
+autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
+autocmd FileType nerdtree nnoremap <buffer> = :vertical resize 30<CR>
+
+" --- NERDTree git icon ---
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+    \ 'Modified'  :'M',
+    \ 'Staged'    :'A',
+    \ 'Untracked' :'U',
+    \ 'Renamed'   :'R',
+    \ 'Unmerged'  :'═',
+    \ 'Deleted'   :'D',
+    \ 'Dirty'     :'x',
+    \ 'Ignored'   :'☒',
+    \ 'Clean'     :'O',
+    \ 'Unknown'   :'?',
+    \ }
 
 " --- fzf ---
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
@@ -180,4 +209,6 @@ hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
 nnoremap <silent>fi :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
+
+autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 " vim: set foldmethod=marker foldlevel=0 foldenable:
