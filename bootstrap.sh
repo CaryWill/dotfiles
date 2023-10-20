@@ -29,6 +29,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # 6. install cargo
 curl https://sh.rustup.rs -sSf | sh
+brew install gnu-wc
 
 # 6. Sync vimrc
 ln -sf "$(pwd)/.config/vim/.vimrc" ~/.vimrc

@@ -160,6 +160,7 @@ let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-pa
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
+let g:minimap_git_colors = 1
 
 " --- Mappings --- 
 nmap te :tabedit 
@@ -212,5 +213,8 @@ autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 highlight link ALEVirtualTextWarning CocInfoSign
 highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
-
+highlight minimapRangeNew ctermfg=0 ctermbg=252
+highlight minimapCursorNew ctermfg=85 ctermbg=252
+let g:minimap_range_color = 'minimapRangeNew'
+let g:minimap_cursor_color = 'minimapCursorNew'
 " vim: set foldmethod=marker foldlevel=0 foldenable:
