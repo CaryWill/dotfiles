@@ -57,6 +57,7 @@ let g:coc_global_extensions = [
           \ ]
 
 call plug#begin('~/.vim/plugged')
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 Plug 'lilydjwg/colorizer'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'
@@ -104,7 +105,7 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline#extensions#ale#enabled = 1
-let g:ale_disable_lsp = 1
+let g:ale_disable_lsp = 0
 let g:ale_set_highlights = 0
 let g:ale_virtualtext_cursor = 'disabled'
 
@@ -155,6 +156,11 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left --border --no-unicode"
+
+" --- minimap ---
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
 " --- Mappings --- 
 nmap te :tabedit 

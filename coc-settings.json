@@ -2,8 +2,8 @@
   "tsserver.enableJavascript": true,
   "tsserver.useLocalTsdk": true,
   "diagnostic.enable": true,
-  "diagnostic.displayByAle": true,
-  "diagnostic.virtualText": false,
+  "diagnostic.displayByAle": false,
+  "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.enableMessage": "jump",
   "diagnostic.infoSign": "i",
@@ -14,5 +14,6 @@
   "suggest.noselect": true,
   "coc.preferences.extensionUpdateCheck": "daily",
   "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true
+  "prettier.jsxSingleQuote": true,
+  "eslint.autoFixOnSave": true
 }

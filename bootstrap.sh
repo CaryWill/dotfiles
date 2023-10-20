@@ -27,6 +27,9 @@ mkdir -p ~/.vim/tmp
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# 6. install cargo
+curl https://sh.rustup.rs -sSf | sh
+
 # 6. Sync vimrc
 ln -sf "$(pwd)/.config/vim/.vimrc" ~/.vimrc
 ln -sf "$(pwd)/dotfiles/.tmux.conf" ~/.tmux.conf
