@@ -18,7 +18,7 @@ set autoindent
 set laststatus=2
 set smartindent
 set autoread
-set signcolumn=yes
+set signcolumn=no
 set clipboard+=unnamedplus
 set foldmethod=indent
 set nofoldenable
@@ -98,16 +98,12 @@ let g:airline_skip_empty_sections = 1
 let g:airline_section_z=''
 let g:airline_section_y=''
 " --- ale ---
-" async & can display in virtualtext
-" let g:ale_sign_error = 'x'
-" let g:ale_sign_warning = '!'
-" let g:ale_echo_msg_error_str = 'E'
-" let g:ale_echo_msg_warning_str = 'W'
-" let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline#extensions#ale#enabled = 1
-" let g:ale_disable_lsp = 0
-" let g:ale_set_highlights = 1
-" let g:ale_virtualtext_cursor = 'disabled'
+let g:ale_disable_lsp = 0
+let g:ale_set_highlights = 0
+let g:ale_floating_preview = 1
+nnoremap <silent> K :ALEDetail<CR>
 
 " --- NERDTree ---
 let g:NERDTreeWinSize = 30
@@ -210,12 +206,11 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-hi ALEVirtualTextWarning guifg=#d8ad4c guibg=NONE
-hi ALEVirtualTextError guifg=#cf6a4c guibg=NONE
-hi ALEErrorSign ctermfg=124 ctermbg=NONE guifg=White guibg=NONE
+highlight link ALEVirtualTextWarning CocInfoSign
+highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
 nnoremap <silent>fi :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
-
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:

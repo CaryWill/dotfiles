@@ -5,7 +5,7 @@
   "diagnostic.displayByAle": true,
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
-  "diagnostic.enableMessage": "always",
+  "diagnostic.enableMessage": "jump",
   "diagnostic.infoSign": "i",
   "diagnostic.hintSign": "*",
   "diagnostic.warningSign": "!",
@@ -13,5 +13,4 @@
   "diagnostic.refreshOnInsertMode": true,
   "suggest.noselect": true,
   "coc.preferences.extensionUpdateCheck": "daily",
-  "eslint.autoFixOnSave": true
 }

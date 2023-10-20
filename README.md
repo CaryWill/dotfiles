@@ -18,6 +18,7 @@ Note: all fonts are nerd-font patched.
 1. remove `set termguicolors`
 
 // https://apple.stackexchange.com/questions/165158/where-are-terminal-app-profiles-files-located 2. you can backup terminal.app config file
+// 如果移除了那么应该使用 ctermfg, 否则 guifg 即可。
 
 2. Meta key
 
