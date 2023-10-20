@@ -106,6 +106,9 @@ let g:ale_floating_preview = 1
 nnoremap <silent> K :ALEDetail<CR>
 
 " --- NERDTree ---
+nnoremap <silent>fi :NERDTreeFind<CR>
+map ;e :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
 autocmd FileType nerdtree nnoremap <buffer> + :vertical resize +20<CR>
 autocmd FileType nerdtree nnoremap <buffer> - :vertical resize -20<CR>
@@ -183,7 +186,6 @@ imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
-" let g:prettier#config#single_quote = 'true'
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
 " --- Theme --- 
 set t_Co=256
@@ -206,11 +208,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
+
 highlight link ALEVirtualTextWarning CocInfoSign
 highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
-nnoremap <silent>fi :NERDTreeFind<CR>
-map ;e :NERDTreeToggle<CR>
-let NERDTreeShowHidden = 1
-autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
