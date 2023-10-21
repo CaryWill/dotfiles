@@ -27,6 +27,8 @@ In terminal setting, you can set 'option' key as 'meta' key.
 3. change zsh full path
 https://stackoverflow.com/a/64441730
 
+4. dont use `f` as prefix to map since it overlap with vim search
+
 ## TODO
 
 - [ ] Vim git previous commit up down in fzf

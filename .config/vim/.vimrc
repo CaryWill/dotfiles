@@ -113,7 +113,7 @@ let g:ale_fix_on_save = 1
 nnoremap <silent> K :ALEDetail<CR>
 
 " --- NERDTree ---
-nnoremap <silent>fi :NERDTreeFind<CR>
+nnoremap <silent>tt :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
@@ -214,8 +214,4 @@ autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 highlight link ALEVirtualTextWarning CocInfoSign
 highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
-highlight minimapRangeNew ctermfg=0 ctermbg=252
-highlight minimapCursorNew ctermfg=85 ctermbg=252
-let g:minimap_range_color = 'minimapRangeNew'
-let g:minimap_cursor_color = 'minimapCursorNew'
 " vim: set foldmethod=marker foldlevel=0 foldenable:

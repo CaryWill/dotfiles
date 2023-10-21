@@ -78,3 +78,8 @@ Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
+" put in the end of the find
+highlight minimapRangeNew ctermfg=0 ctermbg=252
+highlight minimapCursorNew ctermfg=85 ctermbg=252
+let g:minimap_range_color = 'minimapRangeNew'
+let g:minimap_cursor_color = 'minimapCursorNew'
