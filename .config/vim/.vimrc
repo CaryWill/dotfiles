@@ -57,7 +57,6 @@ let g:coc_global_extensions = [
           \ ]
 
 call plug#begin('~/.vim/plugged')
-Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 Plug 'lilydjwg/colorizer'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'
@@ -155,12 +154,6 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left --border --no-unicode"
-
-" --- minimap ---
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
-let g:minimap_git_colors = 1
 
 " --- Mappings --- 
 nmap te :tabedit 

@@ -71,3 +71,10 @@ augroup END
 
 " coc plugins
 " \   'coc-tabnine',
+
+
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+" --- minimap ---
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
