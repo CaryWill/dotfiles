@@ -104,7 +104,7 @@ let g:ale_disable_lsp = 0
 let g:ale_set_highlights = 0
 let g:ale_floating_preview = 1
 let g:ale_fixers = {
-\   'javascript': ['eslint', 'prettier'],
+\   'javascript': ['prettier', 'eslint'],
 \}
 let g:ale_fix_on_save = 1
 nnoremap <silent> K :ALEDetail<CR>
