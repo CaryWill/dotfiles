@@ -26,6 +26,7 @@ set foldlevel=99
 set cursorline
 set splitright 
 set splitbelow
+set spell
 set undofile
 set number
 set mouse=a
