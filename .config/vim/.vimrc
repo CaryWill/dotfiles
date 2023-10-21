@@ -26,7 +26,6 @@ set foldlevel=99
 set cursorline
 set splitright 
 set splitbelow
-set spell
 set undofile
 set number
 set mouse=a
@@ -58,6 +57,7 @@ let g:coc_global_extensions = [
           \ ]
 
 call plug#begin('~/.vim/plugged')
+Plug 'kamykn/spelunker.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'
