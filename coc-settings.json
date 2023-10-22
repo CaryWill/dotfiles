@@ -5,12 +5,8 @@
   "diagnostic.displayByAle": true,
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
-  "diagnostic.enableMessage": "jump",
-  "diagnostic.infoSign": "i",
-  "diagnostic.hintSign": "*",
-  "diagnostic.warningSign": "!",
-  "diagnostic.errorSign": "x",
-  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.enableMessage": "always",
+  "diagnostic.refreshOnInsertMode": false,
   "suggest.noselect": true,
-  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.extensionUpdateCheck": "daily"
 }
