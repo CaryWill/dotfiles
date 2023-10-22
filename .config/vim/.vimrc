@@ -97,11 +97,12 @@ let g:airline_skip_empty_sections = 1
 " let g:airline_section_z=''
 " let g:airline_section_y=''
 " --- ale ---
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_echo_msg_format = '[%linter%] [%severity%] %code%: %s'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_disable_lsp = 0
 let g:ale_set_highlights = 0
 let g:ale_floating_preview = 1
+let g:ale_sign_highlight_linenrs = 1
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
@@ -214,4 +215,9 @@ autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 highlight link ALEVirtualTextWarning CocInfoSign
 highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
+highlight CursorLineNr1 ctermfg=162 guifg=#cf6a4c guibg=NONE
+highlight link ALEErrorSignLineNr ALEVirtualTextError
+highlight link ALEWarningSignLineNr CocInfoSign
+" highlight link ALEInfoSignLineNr CursorLineNr
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:
