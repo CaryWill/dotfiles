@@ -215,7 +215,7 @@ autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
 
 highlight link ALEVirtualTextWarning CocInfoSign
 highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
-highlight CursorLineNr1 ctermfg=162 guifg=#cf6a4c guibg=NONE
+highlight CursorLineNr1 ctermfg=162 guifg=#cf6a4c guibg=NONE cterm=italic gui=italic
 highlight link ALEErrorSignLineNr ALEVirtualTextError
 highlight link ALEWarningSignLineNr CocInfoSign
 " highlight link ALEInfoSignLineNr CursorLineNr
