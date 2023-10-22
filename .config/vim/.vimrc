@@ -79,7 +79,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " --- CoC ---
-nnoremap <leader>rn <Plug>(coc-rename)
+" nnoremap <leader>rn <Plug>(coc-rename)
+nnoremap <leader>rn :ALERename<CR>
 nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
 nnoremap <silent>gy <Plug>(coc-type-definition)
@@ -183,6 +184,8 @@ vmap <C-C> "+y
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <localleader>e :ALEFix<CR>
+nnoremap <localleader>a :ALECodeAction<CR>
 
 nmap <silent>;t <leader>tt
 imap <silent>;t <leader>tt
