@@ -1,16 +1,16 @@
-scriptencoding utf-8 
+scriptencoding utf-8
 lang en_US.UTF-8
 syntax on
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
 set fileencodings=utf-8
 set encoding=utf-8
-set hidden 
+set hidden
 set backspace=indent,eol,start
 set ignorecase
 set smartcase
 set smarttab
-set shiftwidth=2 
+set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -24,7 +24,7 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=99
 set cursorline
-set splitright 
+set splitright
 set splitbelow
 set undofile
 set number
@@ -48,7 +48,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 let mapleader = ' '
 let maplocalleader = ','
 
-" --- Plugins --- 
+" --- Plugins ---
 let g:coc_global_extensions = [
           \   'coc-cssmodules',
           \   'coc-eslint',
@@ -90,7 +90,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" --- Airline --- 
+" --- Airline ---
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
 let g:airline_skip_empty_sections = 1
@@ -103,6 +103,7 @@ let g:ale_disable_lsp = 0
 let g:ale_set_highlights = 0
 let g:ale_floating_preview = 1
 let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
 \   'javascriptreact': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'eslint'],
@@ -162,9 +163,9 @@ let g:fzf_action = {
 
 let $FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind ctrl-a:select-all --preview-window border-left --border --no-unicode"
 
-" --- Mappings --- 
-nmap te :tabedit 
-nmap tq :tabclose<CR> 
+" --- Mappings ---
+nmap te :tabedit
+nmap tq :tabclose<CR>
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
 nnoremap <C-J> <C-W><C-J>
@@ -188,7 +189,7 @@ tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
-" --- Theme --- 
+" --- Theme ---
 set t_Co=256
 set background=light
 colorscheme PaperColor
