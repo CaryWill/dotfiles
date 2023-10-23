@@ -8,8 +8,8 @@ brew install fzf
 # 2. tmux copy
 brew install reattach-to-user-namespace
 
-# 3. input source 
-# Install Squirrel Input source(we can switch input sources using 
+# 3. input source
+# Install Squirrel Input source(we can switch input sources using
 # `shift` command
 # https://zhyq118.com/2018/11/11/%E9%BC%A0%E9%A1%BB%E7%AE%A1%E6%8C%82%E6%8E%A5%E5%B0%8F%E9%B9%A4%E5%8F%8C%E6%8B%BC/
 # brew install --cask squirrel
@@ -28,8 +28,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # 6. install cargo
-curl https://sh.rustup.rs -sSf | sh
-brew install gnu-wc
+# curl https://sh.rustup.rs -sSf | sh
+# brew install gnu-wc
 
 # 6. Sync vimrc
 ln -sf "$(pwd)/.config/vim/.vimrc" ~/.vimrc
@@ -43,4 +43,3 @@ ln -sf "$(pwd)/coc-settings.json" ~/.vim/coc-settings.json
 
 # 7. 安装 vim 插件
 vim +PlugInstall +qall
-
