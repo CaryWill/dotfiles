@@ -95,8 +95,9 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#hunks#coc_git = 1
 let g:airline_skip_empty_sections = 1
-" let g:airline_section_z=''
-" let g:airline_section_y=''
+let g:airline_section_z=''
+let g:airline_section_y=''
+let g:airline_section_c = '%f'
 " --- ale ---
 let g:ale_echo_msg_format = '[%linter%] [%severity%] %code%: %s'
 let g:airline#extensions#ale#enabled = 1
