@@ -111,6 +111,7 @@ let g:ale_fixers = {
 \   'javascriptreact': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'eslint'],
 \   'typescriptreact': ['prettier', 'eslint'],
+\   'json': ['prettier', 'eslint'],
 \   'less': ['prettier', 'stylelint'],
 \   'css': ['prettier', 'stylelint'],
 \}
