@@ -28,6 +28,7 @@ In terminal setting, you can set 'option' key as 'meta' key.
 https://stackoverflow.com/a/64441730
 
 4. dont use `f` as prefix to map since it overlap with vim search
+5. use /* stylelint-disable */ to disable autofix certain line
 
 ## TODO
 
