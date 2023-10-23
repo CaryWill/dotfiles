@@ -118,7 +118,7 @@ let g:ale_lint_on_insert_leave = 0
 nnoremap <silent> K :ALEDetail<CR>
 
 " --- NERDTree ---
-nnoremap <silent>tt :NERDTreeFind<CR>
+nnoremap <silent>tn :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
