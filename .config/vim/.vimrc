@@ -120,7 +120,7 @@ let g:ale_lint_on_insert_leave = 0
 nnoremap <silent> K :ALEDetail<CR>
 
 " --- NERDTree ---
-nnoremap <silent>tn :NERDTreeFind<CR>
+nnoremap <silent>fi :NERDTreeFind<CR>
 map ;e :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
@@ -189,8 +189,8 @@ vmap <C-C> "+y
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <localleader>e :ALEFix<CR>
-nnoremap <localleader>a :ALECodeAction<CR>
+nnoremap <leader>fe :ALEFix<CR>
+nnoremap <leader>fc :ALECodeAction<CR>
 
 nmap <silent>;t <leader>tt
 imap <silent>;t <leader>tt
