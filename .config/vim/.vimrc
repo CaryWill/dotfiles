@@ -199,6 +199,10 @@ tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
+
+" diagnostics navigation
+nnoremap <silent> <leader>j  :call CocAction('diagnosticNext')<CR>
+nnoremap <silent> <leader>k  :call CocAction('diagnosticPrevious')<CR>
 " --- Theme ---
 set t_Co=256
 set background=light
