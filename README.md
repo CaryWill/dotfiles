@@ -32,7 +32,7 @@ https://stackoverflow.com/a/64441730
 
 ## TODO
 
-- [ ] Vim git previous commit up down in fzf
+- [x] Vim git previous commit up down in fzf(虽然不能用 key map 但是发现可以直接 鼠标/触摸板 进行滚动）
 - [x] tmux copy vi mode not work in terminal.app(but you can use `fn` to select), maybe because xclip?
 - [x] jsx color heighlight
 - [x] zsh，回车后下一行开头会回显命令
