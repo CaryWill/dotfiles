@@ -54,9 +54,11 @@ let g:coc_global_extensions = [
           \   'coc-eslint',
           \   'coc-tsserver',
           \   'coc-imselect',
+          \   'coc-yank',
           \ ]
 
 call plug#begin('~/.vim/plugged')
+Plug 'kamykn/spelunker.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'
