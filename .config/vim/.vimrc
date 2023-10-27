@@ -201,6 +201,7 @@ tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
+nnoremap <silent> <space>y :<C-u>CocFzfList yank<cr>
 
 " diagnostics navigation
 nnoremap <silent> <leader>j  :call CocAction('diagnosticNext')<CR>
