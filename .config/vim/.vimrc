@@ -58,6 +58,7 @@ let g:coc_global_extensions = [
           \ ]
 
 call plug#begin('~/.vim/plugged')
+" Plug 'Yggdroot/indentLine'
 Plug 'lilydjwg/colorizer'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'
@@ -234,5 +235,4 @@ highlight CursorLineNr1 ctermfg=162 guifg=#cf6a4c guibg=NONE cterm=italic gui=it
 highlight link ALEErrorSignLineNr ALEVirtualTextError
 highlight link ALEWarningSignLineNr CocInfoSign
 " highlight link ALEInfoSignLineNr CursorLineNr
-
 " vim: set foldmethod=marker foldlevel=0 foldenable:
