@@ -208,6 +208,12 @@ nnoremap <silent> <leader>j  :call CocAction('diagnosticNext')<CR>
 nnoremap <silent> <leader>k  :call CocAction('diagnosticPrevious')<CR>
 
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
+
+" When you need to edit a file but dont need autofix
+nnoremap <leader>df :ALEDisable | let g:ale_fix_on_save = 0
+" When you need to edit a file and need autofix
+nnoremap <leader>ef :ALEEnable | let g:ale_fix_on_save = 1
+
 " --- Theme ---
 set t_Co=256
 set background=light
