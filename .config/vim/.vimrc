@@ -206,6 +206,8 @@ nnoremap <silent> <space>y :<C-u>CocFzfList yank<cr>
 " diagnostics navigation
 nnoremap <silent> <leader>j  :call CocAction('diagnosticNext')<CR>
 nnoremap <silent> <leader>k  :call CocAction('diagnosticPrevious')<CR>
+
+command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 " --- Theme ---
 set t_Co=256
 set background=light
