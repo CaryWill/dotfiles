@@ -236,6 +236,9 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
+" 修复 jsx 高亮展示不对的问题, vim-jsx-prettier 只认 javascriptreact
+autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact.tsx
+autocmd BufNewFile,BufRead *.tsx set filetype=javascriptreact.tsx
 
 highlight link ALEVirtualTextWarning CocInfoSign
 highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
