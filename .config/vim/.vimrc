@@ -33,6 +33,7 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 map <Down> <C-e>
 map <Up> <C-y>
+set lazyredraw
 
 " Backup files
 set undofile
@@ -214,6 +215,9 @@ nnoremap <leader>df :ALEDisable <Bar> let g:ale_fix_on_save = 0 <CR>
 " When you need to edit a file and need autofix
 nnoremap <leader>ef :ALEEnable <Bar> let g:ale_fix_on_save = 1 <CR>
 
+" paste quickly, not work, seem like i can not directly map Command key in vim
+" map <D-v> :norm p
+
 " --- Theme ---
 set t_Co=256
 set background=light
@@ -235,7 +239,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-autocmd BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
+" autocmd BufReadPre * if line('$') > 1000 | syntax off | endif
+autocmd BufEnter * if line('$') > 1000 | syntax off | endif
+
 " 修复 jsx 高亮展示不对的问题, vim-jsx-prettier 只认 javascriptreact
 autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact.tsx
 autocmd BufNewFile,BufRead *.tsx set filetype=javascriptreact.tsx

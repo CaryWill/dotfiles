@@ -18,11 +18,7 @@ xmap dp :diffput<CR>
 
 " not work if you're using terminal.app
 "set termguicolors
-" set signcolumn=number 
-
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx 
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx 
-command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
+" set signcolumn=number
 
 " https://github.com/dense-analysis/ale/blob/115ad17ace047cab20ccc67f79c943aaf3f0f291/autoload/ale/virtualtext.vim#L7
 "hi ALEVirtualTextInfo guifg=#d8ad4c
