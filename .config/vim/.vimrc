@@ -240,7 +240,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 " autocmd BufReadPre * if line('$') > 1000 | syntax off | endif
-autocmd BufEnter * if line('$') > 1000 | syntax off | endif
+" autocmd BufEnter * if line('$') > 1000 | syntax off | endif
 
 " 修复 jsx 高亮展示不对的问题, vim-jsx-prettier 只认 javascriptreact
 autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact.tsx
