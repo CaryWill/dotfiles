@@ -55,7 +55,6 @@ let g:coc_global_extensions = [
           \   'coc-eslint',
           \   'coc-tsserver',
           \   'coc-imselect',
-          \   'coc-yank',
           \ ]
 
 call plug#begin('~/.vim/plugged')
@@ -79,6 +78,8 @@ Plug 'prettier/vim-prettier'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'SirVer/ultisnips'
+" Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
 " --- CoC ---
@@ -202,7 +203,7 @@ tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
-nnoremap <silent> <space>y :<C-u>CocFzfList yank<cr>
+" nnoremap <silent> <space>y :<C-u>CocFzfList yank<cr>
 
 " diagnostics navigation
 nnoremap <silent> <leader>j  :call CocAction('diagnosticNext')<CR>
