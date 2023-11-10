@@ -201,9 +201,11 @@ nmap <silent>;t <leader>tt
 imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
+" open vim terminal in vim tab
+nnoremap <Leader>ti :tabnew terminal<CR>:term<CR><C-\><C-n>:only<CR><C-W>_<S-i>
+" tnoremap <Esc> <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
-" nnoremap <silent> <space>y :<C-u>CocFzfList yank<cr>
 
 " diagnostics navigation
 nnoremap <silent> <leader>j  :call CocAction('diagnosticNext')<CR>
@@ -239,9 +241,6 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-
-" autocmd BufReadPre * if line('$') > 1000 | syntax off | endif
-" autocmd BufEnter * if line('$') > 1000 | syntax off | endif
 
 " 修复 jsx 高亮展示不对的问题, vim-jsx-prettier 只认 javascriptreact
 autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact.tsx
