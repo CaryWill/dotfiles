@@ -203,7 +203,7 @@ tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 " open vim terminal in vim tab
 nnoremap <Leader>ti :tabnew terminal<CR>:term<CR><C-\><C-n>:only<CR><C-W>_<S-i>
-" tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
 
