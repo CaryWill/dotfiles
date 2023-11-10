@@ -202,7 +202,9 @@ imap <silent>;t <leader>tt
 tmap <silent>;t <leader>tt
 tmap <silent>;q <C-\><C-n>
 " open vim terminal in vim tab
-nnoremap <Leader>ti :tabnew terminal<CR>:term<CR><C-\><C-n>:only<CR><C-W>_<S-i>
+nnoremap <Leader>ti :tabnew terminal<CR>:term<CR><C-\><C-n>:only<CR>:set nonumber<CR><C-W>_<S-i>
+" if you open git commit in vim terminal then the esc key conflict, so i map
+" it to double esc
 tnoremap <Esc><Esc> <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
@@ -251,5 +253,6 @@ highlight ALEVirtualTextError ctermfg=162 guifg=#cf6a4c guibg=NONE
 highlight CursorLineNr1 ctermfg=162 guifg=#cf6a4c guibg=NONE cterm=italic gui=italic
 highlight link ALEErrorSignLineNr ALEVirtualTextError
 highlight link ALEWarningSignLineNr CocInfoSign
+
 " highlight link ALEInfoSignLineNr CursorLineNr
 " vim: set foldmethod=marker foldlevel=0 foldenable:
