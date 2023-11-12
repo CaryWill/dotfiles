@@ -83,8 +83,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " --- CoC ---
-" nnoremap <leader>rn <Plug>(coc-rename)
-nnoremap <leader>rn :ALERename<CR>
+nnoremap <leader>rn <Plug>(coc-rename)
 nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
 nnoremap <silent>gy <Plug>(coc-type-definition)
