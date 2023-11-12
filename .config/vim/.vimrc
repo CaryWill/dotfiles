@@ -204,7 +204,7 @@ tmap <silent>;q <C-\><C-n>
 nnoremap <Leader>ti :tabnew terminal<CR>:term<CR><C-\><C-n>:only<CR>:set nonumber<CR><C-W>_<S-i>
 " if you open git commit in vim terminal then the esc key conflict, so i map
 " it to double esc
-tnoremap <Esc><Esc> <C-\><C-n><Esc>
+tnoremap <Esc><Esc> <C-\><C-n>
 
 nnoremap <leader>f <cmd>:PrettierAsync<CR>
 
