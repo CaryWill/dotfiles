@@ -83,6 +83,8 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
 Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'MunifTanjim/nui.nvim'
+Plug 'psliwka/vim-smoothie'
+Plug 'prettier/vim-prettier'
 call plug#end()
 
 set termguicolors
