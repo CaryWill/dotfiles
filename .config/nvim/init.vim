@@ -19,7 +19,7 @@ set autoindent
 set laststatus=2
 set smartindent
 set autoread
-set signcolumn=no
+set signcolumn=yes
 set clipboard+=unnamedplus
 set foldmethod=indent
 set nofoldenable
@@ -91,6 +91,7 @@ set termguicolors
 set t_Co=256
 set background=light
 colorscheme PaperColorSlim
+
 runtime ./mapping.vim
 " vim: set foldmethod=marker foldlevel=0 foldenable:
 
