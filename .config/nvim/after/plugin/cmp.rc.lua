@@ -23,6 +23,15 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    {
+      name = 'buffer',
+      option = {
+        get_bufnrs = function()
+          return vim.api.nvim_list_bufs()
+        end
+      }
+    },
+    { name = 'path' }
   }),
   -- https://github.com/hrsh7th/nvim-cmp/issues/980
   formatting = {

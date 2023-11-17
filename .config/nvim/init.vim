@@ -13,7 +13,7 @@ set smartcase
 set smarttab
 set shiftwidth=2
 set expandtab
-set tabstop=2
+set tabstop=2 
 set softtabstop=2
 set autoindent
 set laststatus=2
@@ -85,6 +85,8 @@ Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'psliwka/vim-smoothie'
 Plug 'prettier/vim-prettier'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
 call plug#end()
 
 set termguicolors
