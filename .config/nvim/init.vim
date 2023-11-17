@@ -51,7 +51,6 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'nvim-tree/nvim-tree.lua'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim' "Install LSP server
 Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
@@ -67,12 +66,16 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'echasnovski/mini.nvim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-Plug 'nvim-tree/nvim-web-devicons' " File explorer
 Plug 'folke/trouble.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pappasam/papercolor-theme-slim'
+
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim'
+
+Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'MunifTanjim/nui.nvim'
 call plug#end()
 " -------------------------------- Plug-in end -------------------------------- 
 
@@ -242,20 +245,35 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 
 " -------------------------------- Mapping end -------------------------------- 
 
-
-" nvim-tree
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-
 " -------------------------------- Lua start -------------------------------- 
 lua <<EOF
 require('mini.indentscope').setup()
-require("ibl").setup()
+require("ibl").setup({
+  indent = {
+    char = "│",
+    tab_char = "│",
+  },
+  scope = { enabled = false },
+  exclude = {
+    filetypes = {
+      "help",
+      "alpha",
+      "dashboard",
+      "neo-tree",
+      "Trouble",
+      "trouble",
+      "lazy",
+      "mason",
+      "notify",
+      "toggleterm",
+      "lazyterm",
+    },
+  },
+})
 require("colorizer").setup()
 
 vim.g.indent_blankline_use_treesitter = true
 
-" --- Mason ---
 require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = { "vimls", "tsserver", "eslint" },
@@ -264,59 +282,34 @@ require('mason-lspconfig').setup({
 EOF
 " -------------------------------- Lua end -------------------------------- 
 
-" {{{-------------------------------- Lsp start -------------------------------- 
 lua << EOF
-local nvim_lsp = require('lspconfig')
-local on_attach = function(client, bufnr)
-  local opts = { noremap=true, silent=true, buffer=bufnr }
-  -- 使用 <c-x><c-o> 来唤起补全菜单
-  -- use <TAB>, <C-y>, <Enter> to select, use <C-e> to cancel
-  -- completeopt 不要使用 `menuone,noselect,noinsert,preview` 
-  -- 如果有 preview 那么会在会车出现一个空白 buffer 用来预览
-  vim.opt.completeopt = {'menuone', 'noinsert', 'noselect'}
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-end
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
-
--- typescript
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" }
-}
-
-vim.diagnostic.config({
-  virtual_text = {
-    format = function(diagnostic)
-      if diagnostic.severity == vim.diagnostic.severity.ERROR then
-        return string.format("%s: %s", diagnostic.source, diagnostic.message)
-      end
-      return diagnostic.message
+require("bufferline").setup{
+    close_command = function(n) require("mini.bufremove").delete(n, false) end,
+    right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
+    diagnostics = "nvim_lsp",
+    always_show_bufferline = false,
+    diagnostics_indicator = function(_, _, diag)
+      local icons = require("lazyvim.config").icons.diagnostics
+      local ret = (diag.error and icons.Error .. diag.error .. " " or "")
+        .. (diag.warning and icons.Warn .. diag.warning or "")
+      return vim.trim(ret)
     end,
-    spacing = 4,
-  },
-  source = true,
-  float = {
-    source = "always", -- Or "if_many"
-  },
-  -- signs = true,
-  -- underline = false,
-  -- virtual_text = false,
-})
-
--- eslint
-nvim_lsp.eslint.setup{}
-
--- vim
-nvim_lsp.vimls.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
+    offsets = {
+      {
+        filetype = "neo-tree",
+        text = "Neo-tree",
+        highlight = "Directory",
+        text_align = "left",
+      },
+    },
 }
+
+-- file explorer
+require('neo-tree').setup()
 EOF
-" -------------------------------- Lsp end --------------------------------}}}
+
+
+
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
 
