@@ -1,4 +1,3 @@
-" -------------------------------- Basic start --------------------------------
 scriptencoding utf-8
 lang en_US.UTF-8
 syntax on
@@ -79,12 +78,15 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'keaising/im-select.nvim'
 call plug#end()
 
 set termguicolors
 set t_Co=256
 set background=light
 colorscheme PaperColorSlim
+
+command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 
 runtime ./mapping.vim
 " vim: set foldmethod=marker foldlevel=0 foldenable:

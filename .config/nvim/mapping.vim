@@ -59,27 +59,4 @@ inoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 tnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 tnoremap<silent>;q <C-\><C-n>
 
-
-" IM-auto-select 解决中文英文切换的问题 "{{{
-" https://github.com/keaising/im-select.nvim
-let s:current_im = "com.apple.keylayout.ABC"
-let s:default_im = "com.apple.keylayout.ABC" 
-function! SetIM()
-  let s:current_im = system("im-select")
-  if s:current_im != s:default_im
-    silent execute "!" . "im-select " . s:default_im
-  endif
-endfunction
-
-function! RestoreIM()
-  silent execute "!" . "im-select " . s:current_im
-endfunction
-autocmd InsertLeave,VimEnter * :call SetIM()
-autocmd InsertEnter * :call RestoreIM()
-"}}}
-
-autocmd FileType neo-tree nnoremap <buffer> + 10<C-w>>
-autocmd FileType neo-tree nnoremap <buffer> - 10<C-w><
-autocmd FileType neo-tree nnoremap <buffer> = 30<C-w>\|
-
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
