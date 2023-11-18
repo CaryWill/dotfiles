@@ -14,8 +14,21 @@ require("bufferline").setup({
     },
     hover = {
       enabled = true,
-      delay = 150,
+      delay = 100,
       reveal = { 'close' }
-    }
+    },
+    highlights = {
+      buffer_selected = {
+        bold = false,
+        italic = false,
+      },
+    },
+    indicator = {
+      style = 'underline',
+    },
+    max_name_length = 50,
+    numbers = function(opts)
+      return string.format('%s', opts.raise(opts.ordinal))
+    end,
   },
 })
