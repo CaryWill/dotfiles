@@ -11,11 +11,11 @@ require("bufferline").setup({
         highlight = "Directory",
         text_align = "left",
       },
-      hover = {
-        enabled = true,
-        delay = 150,
-        reveal = { 'close' }
-      }
     },
+    hover = {
+      enabled = true,
+      delay = 150,
+      reveal = { 'close' }
+    }
   },
 })
