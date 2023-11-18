@@ -79,6 +79,8 @@ Plug 'hrsh7th/cmp-path'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'keaising/im-select.nvim'
+Plug 'stevearc/conform.nvim'
+Plug 'RRethy/vim-illuminate'
 call plug#end()
 
 set termguicolors
