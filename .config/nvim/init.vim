@@ -92,7 +92,6 @@ hi DiagnosticVirtualTextInfo guifg=#1c6da7 guibg=#95c4f9
 hi DiagnosticVirtualTextHint guifg=#279a91 guibg=#50d3da
 
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
-
 runtime ./mapping.vim
 " vim: set foldmethod=marker foldlevel=0 foldenable:
 
