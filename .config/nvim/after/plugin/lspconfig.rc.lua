@@ -58,18 +58,7 @@ vim.diagnostic.config({
 })
 
 -- eslint
-nvim_lsp.eslint.setup {}
-
--- python
-nvim_lsp.jedi_language_server.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
--- swift
-nvim_lsp.sourcekit.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
+nvim_lsp.eslint.setup {
 }
 
 -- vim

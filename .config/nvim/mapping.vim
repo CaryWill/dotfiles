@@ -16,7 +16,8 @@ nmap sv :vsplit<CR>
 nmap st :tab split<CR>
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
-nnoremap <C-[> <ESC>
+nnoremap <leader>fe :ALEFix<CR>
+nnoremap <leader>fc :ALECodeAction<CR>
 
 "Select all
 nmap <C-a> gg<S-v>G
@@ -30,43 +31,28 @@ nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
-
-" `ma` can list all the bookmarks marked by vim-bookmarks plugin
-" in quickfix list, can we can populate telescope with this list
-function s:listBookmarks()
-    normal ma
-    normal ma
-    normal ;q
-endfunction
-nnoremap ;m :call <SID>listBookmarks()<CR>
-
 nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
+
+nnoremap <leader>f <cmd>:PrettierAsync<CR>
+
+" diagnostics navigation
+nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
+nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
+
 "Lsp
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
 nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
-nnoremap gs <cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>
 nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
+
 "Git
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
 nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
 nmap <C-s> <M-q>
 xmap do :diffget<CR>
 xmap dp :diffput<CR>
-"Diagnostic
-" nnoremap ;e <cmd>lua require('telescope.builtin').diagnostics()<CR>
-" nnoremap gr <cmd>TroubleToggle lsp_references<cr>
-nnoremap ;e <cmd>TroubleToggle workspace_diagnostics<cr>
-"nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
-"nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
-"nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
-"nnoremap <leader>gu :UndotreeToggle<CR>
-
-"formatting
-"xmap ga <Plug>(EasyAlign)
-"nmap ga <Plug>(EasyAlign)
 
 " Neovim Terminal toggle at bottom "{{{
 let s:term_buf = 0
@@ -99,26 +85,7 @@ nnoremap <silent>;t :call <SID>termToggle()<CR>
 inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
-" 最大化一个 vim pane "{{{
-" Maximize window and return to previous split structure
-" https://vim.fandom.com/wiki/Maximize_window_and_return_to_previous_split_structure
-function! MaximizeToggle()
-  if exists("s:maximize_session")
-    exec "source " . s:maximize_session
-    call delete(s:maximize_session)
-    unlet s:maximize_session
-    let &hidden=s:maximize_hidden_save
-    unlet s:maximize_hidden_save
-  else
-    let s:maximize_hidden_save = &hidden
-    let s:maximize_session = tempname()
-    set hidden
-    exec "mksession! " . s:maximize_session
-    only
-  endif
-endfunction
-"}}}
-nnoremap <C-W>m :call MaximizeToggle()<CR>
+
 " IM-auto-select 解决中文英文切换的问题 "{{{
 " https://github.com/keaising/im-select.nvim
 let s:current_im = "com.apple.keylayout.ABC"
@@ -136,4 +103,5 @@ endfunction
 autocmd InsertLeave,VimEnter * :call SetIM()
 autocmd InsertEnter * :call RestoreIM()
 "}}}
+
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
