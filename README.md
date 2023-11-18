@@ -48,3 +48,4 @@ https://stackoverflow.com/a/64441730
 - [x] tmux copy vi mode not work in terminal.app(but you can use `fn` to select), maybe because xclip?
 - [x] jsx color heighlight
 - [x] zsh，回车后下一行开头会回显命令
+- [ ] react 多行 comment 的时候，会出现多个 {} 想要一个怎么半
