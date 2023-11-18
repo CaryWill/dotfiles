@@ -16,8 +16,6 @@ nmap sv :vsplit<CR>
 nmap st :tab split<CR>
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
-nnoremap <leader>fe :ALEFix<CR>
-nnoremap <leader>fc :ALECodeAction<CR>
 
 "Select all
 nmap <C-a> gg<S-v>G
