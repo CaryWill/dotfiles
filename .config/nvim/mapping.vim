@@ -57,6 +57,8 @@ xmap dp :diffput<CR>
 nnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 tnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
-tnoremap<silent>;q <C-\><C-n>
+tnoremap <silent><ESC> <C-\><C-n>
+tnoremap <silent><C-c> :lua require('toggleterm').exec('', 2)<CR>
+nnoremap <silent><leader>tt <Cmd>ToggleTermToggleAll<CR>
 
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
