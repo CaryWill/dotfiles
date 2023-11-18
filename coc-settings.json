@@ -1,0 +1,12 @@
+{
+  "tsserver.enableJavascript": true,
+  "tsserver.useLocalTsdk": true,
+  "diagnostic.enable": true,
+  "diagnostic.displayByAle": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.enableMessage": "always",
+  "diagnostic.refreshOnInsertMode": false,
+  "suggest.noselect": true,
+  "coc.preferences.extensionUpdateCheck": "daily"
+}
