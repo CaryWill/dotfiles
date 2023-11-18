@@ -5534,7 +5534,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>1</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>2</integer>
+			<integer>1</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -5546,6 +5546,8 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Printing</key>
+			<true/>
+			<key>Disable Smcup Rmcup</key>
 			<true/>
 			<key>Disable Window Resizing</key>
 			<true/>
