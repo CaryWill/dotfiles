@@ -23,11 +23,11 @@ require('neo-tree').setup({
             modified = "M", -- or "", but this is redundant info if you use git_status_colors on the name
             deleted = "D",
             renamed = "R",
-            untracked = "U",
-            ignored = "☒",
-            unstaged = "󰄱",
+            untracked = "N",
+            ignored = "I",
+            unstaged = "U",
             staged = "A",
-            conflict = ""
+            conflict = "C"
         }
     },
     window = {
