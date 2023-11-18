@@ -1,10 +1,12 @@
 local status, lualine = pcall(require, "lualine")
 if (not status) then
-    return
+  return
 end
 
 lualine.setup({
-    options = {
-        disabled_filetypes = {'neo-tree', 'packer', 'NVimTree'}
-    }
+  options = {
+    disabled_filetypes = { 'neo-tree', 'packer', 'NVimTree', 'Neo-tree' },
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
+  },
 })
