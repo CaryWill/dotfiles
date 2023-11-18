@@ -38,6 +38,7 @@ https://stackoverflow.com/a/64441730
 
 6. 注意 im-select 需要看下自己的默认键盘
 7. lsp config https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
+8. current version neovim 0.10.0
 
 ## TODO
 
