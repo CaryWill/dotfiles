@@ -77,7 +77,8 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'psliwka/vim-smoothie'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'nvim-lualinec/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 call plug#end()
 
 set termguicolors

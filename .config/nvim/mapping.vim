@@ -54,37 +54,11 @@ nmap <C-s> <M-q>
 xmap do :diffget<CR>
 xmap dp :diffput<CR>
 
-" Neovim Terminal toggle at bottom "{{{
-let s:term_buf = 0
-let s:term_win = 0
-function s:termToggle()
-    let height = 20
-    if win_gotoid(s:term_win)
-        hide
-    else
-        botright new
-        exec "resize " . height
-        try
-            exec "buffer " . s:term_buf
-        catch
-            call termopen($SHELL, {"detach": 0})
-            let s:term_buf = bufnr("")
-            setlocal nonumber
-            setlocal norelativenumber
-            setlocal noshowmode
-            setlocal laststatus=0
-            setlocal noshowcmd
-            setlocal hidden
-        endtry
-        startinsert!
-        let s:term_win = win_getid()
-    endif
-endfunction
-"}}}
-nnoremap <silent>;t :call <SID>termToggle()<CR>
-inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
-tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
-tnoremap <silent>;q <C-\><C-n>
+nnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
+inoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
+tnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
+tnoremap<silent>;q <C-\><C-n>
+
 
 " IM-auto-select 解决中文英文切换的问题 "{{{
 " https://github.com/keaising/im-select.nvim
