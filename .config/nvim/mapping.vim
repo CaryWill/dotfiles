@@ -61,4 +61,13 @@ tnoremap <silent><ESC> <C-\><C-n>
 tnoremap <silent><C-c> :lua require('toggleterm').exec('', 2)<CR>
 nnoremap <silent><leader>tt <Cmd>ToggleTermToggleAll<CR>
 
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+         'h '.expand('<cword>')
+    else
+         execute "lua vim.diagnostic.open_float()"
+    endif
+endfunction
+
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>

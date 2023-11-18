@@ -41,6 +41,7 @@ for type, icon in pairs(signs) do
 end
 
 vim.diagnostic.config({
+    underline = true,
     virtual_text = {
         format = function(diagnostic)
             if diagnostic.severity == vim.diagnostic.severity.ERROR then
@@ -53,7 +54,10 @@ vim.diagnostic.config({
     source = true,
     float = {
         source = "always" -- Or "if_many"
-    }
+    },
+    inlay_hints = {
+      enabled = true,
+    },
     -- signs = true,
     -- underline = false,
     -- virtual_text = false,
