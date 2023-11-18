@@ -34,7 +34,6 @@ map <ScrollWheelDown> <C-E>
 map <Down> <C-e>
 map <Up> <C-y>
 set lazyredraw
-set switchbuf=useopen,usetab
 " Backup files
 set undofile
 set directory=~/.vim/tmp//
