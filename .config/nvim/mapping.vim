@@ -44,6 +44,7 @@ nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>ef :EslintFixAll<CR>
 
 "Git
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
