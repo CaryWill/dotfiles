@@ -68,5 +68,22 @@ function! s:show_documentation()
          execute "lua vim.diagnostic.open_float()"
     endif
 endfunction
-nnoremap <C-i> :sbnext<CR>
+
+" IM-auto-select 解决中文英文切换的问题 "{{{
+" https://github.com/keaising/im-select.nvim
+let s:current_im = "com.apple.keylayout.US"
+let s:default_im = "com.apple.keylayout.US" 
+function! SetIM()
+  let s:current_im = system("im-select")
+  if s:current_im != s:default_im
+    silent execute "!" . "im-select " . s:default_im
+  endif
+endfunction
+function! RestoreIM()
+  silent execute "!" . "im-select " . s:current_im
+endfunction
+autocmd InsertLeave,VimEnter * :call SetIM()
+autocmd InsertEnter * :call RestoreIM()
+"}}}
+
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
