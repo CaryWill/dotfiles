@@ -3,8 +3,8 @@ let maplocalleader = ','
 
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
-nnoremap H :tabprev<CR>
-nnoremap L :tabnext<CR>
+nnoremap H :BufferLineCyclePrev<CR>
+nnoremap L :BufferLineCycleNext<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -67,5 +67,5 @@ function! s:show_documentation()
          execute "lua vim.diagnostic.open_float()"
     endif
 endfunction
-
+nnoremap <C-i> :sbnext<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
