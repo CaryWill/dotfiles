@@ -104,4 +104,8 @@ autocmd InsertLeave,VimEnter * :call SetIM()
 autocmd InsertEnter * :call RestoreIM()
 "}}}
 
+autocmd FileType neo-tree nnoremap <buffer> + 10<C-w>>
+autocmd FileType neo-tree nnoremap <buffer> - 10<C-w><
+autocmd FileType neo-tree nnoremap <buffer> = 30<C-w>\|
+
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>

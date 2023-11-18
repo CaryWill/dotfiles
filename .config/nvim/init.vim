@@ -48,15 +48,6 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" --- Airline ---
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#hunks#coc_git = 1
-let g:airline_skip_empty_sections = 1
-let g:airline_section_z=''
-let g:airline_section_y=''
-let g:airline_section_c = '%f'
-" -------------------------------- Theme end -------------------------------- 
-
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
@@ -86,6 +77,7 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'psliwka/vim-smoothie'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'nvim-lualinec/lualine.nvim'
 call plug#end()
 
 set termguicolors
