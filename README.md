@@ -40,6 +40,7 @@ https://stackoverflow.com/a/64441730
 7. lsp config https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
 8. current version neovim 0.10.0
 9. 很多插件直接参考了这里 https://www.lazyvim.org/plugins
+10. 有了鼠标的能力之后，你会发现 neo-tree 也可以直接拖动宽度了
 
 ## TODO
 

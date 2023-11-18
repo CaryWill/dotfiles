@@ -80,6 +80,8 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'stevearc/conform.nvim'
 Plug 'RRethy/vim-illuminate'
+Plug 'windwp/nvim-ts-autotag'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 
 set termguicolors

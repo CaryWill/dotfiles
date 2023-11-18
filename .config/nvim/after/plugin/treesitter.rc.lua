@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     disable = {},
@@ -8,25 +8,44 @@ require'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
+    "bash",
+    "c",
+    "diff",
+    "html",
+    "javascript",
+    "jsdoc",
+    "json",
+    "jsonc",
+    "lua",
+    "luadoc",
+    "luap",
     "markdown",
     "markdown_inline",
+    "python",
+    "query",
+    "regex",
+    "toml",
     "tsx",
     "typescript",
-    "toml",
-    "fish",
-    "php",
-    "json",
+    "vim",
+    "vimdoc",
     "yaml",
-    "swift",
-    "css",
-    "html",
-    "lua"
   },
 
   -- work with vim-commentary to support jsx comment alike
   context_commentstring = {
-    enable = true
-  },
+    enable = true,
+    config = {
+      javascript = {
+        __default = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s',
+      },
+      typescript = { __default = '// %s', __multiline = '/* %s */' },
+    },
+  }
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
