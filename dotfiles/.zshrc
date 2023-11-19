@@ -30,7 +30,7 @@ export LANG=en_US.UTF-8
 export TERM_ITALICS=true
 export TERM=xterm-256color
 alias vim=nvim
-#export VISUAL=nvim
+export VISUAL=nvim
 #alias python=python3
 #alias tsnode=ts-node
 # 用当前文件夹名直接创建一个 tmux session
