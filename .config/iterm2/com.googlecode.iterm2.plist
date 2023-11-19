@@ -5541,6 +5541,8 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<string>No</string>
 			<key>Custom Icon Path</key>
 			<string>/Users/cary/Pictures/black_unity_22_wallpaper_mac.png</string>
+			<key>Custom Locale</key>
+			<string>en_AU.UTF-8</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -5805,6 +5807,8 @@ Make Text Bigger</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Set Local Environment Vars</key>
+			<integer>2</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Mark Indicators</key>
