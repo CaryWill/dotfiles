@@ -82,18 +82,24 @@ Plug 'stevearc/conform.nvim'
 Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 set termguicolors
 set t_Co=256
 set background=light
 colorscheme PaperColorSlim
+
+command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
+runtime ./mapping.vim
+
 hi DiagnosticVirtualTextError guifg=#e73330 guibg=#f6c0c0
 hi DiagnosticVirtualTextWarn guifg=#7e5d00 guibg=#fccb00
 hi DiagnosticVirtualTextInfo guifg=#1c6da7 guibg=#95c4f9
 hi DiagnosticVirtualTextHint guifg=#279a91 guibg=#50d3da
+hi DiffAdd guibg=NONE
+hi DiffChange guibg=NONE
+hi DiffDelete guibg=NONE
 
-command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
-runtime ./mapping.vim
 " vim: set foldmethod=marker foldlevel=0 foldenable:
 

@@ -41,6 +41,7 @@ https://stackoverflow.com/a/64441730
 8. current version neovim 0.10.0
 9. 很多插件直接参考了这里 https://www.lazyvim.org/plugins
 10. 有了鼠标的能力之后，你会发现 neo-tree 也可以直接拖动宽度了
+11. 找不到要改那个颜色， 可以直接去插件代码仓库看怎么定义的
 
 ## TODO
 
