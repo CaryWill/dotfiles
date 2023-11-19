@@ -81,6 +81,7 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 set termguicolors
