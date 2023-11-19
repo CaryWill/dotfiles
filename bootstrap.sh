@@ -2,6 +2,8 @@
 
 mkdir -p ~/.vim/tmp
 
+# 管理 neovim 的版本
+brew install bob
 # 安装 vim plugin 依赖
 brew install neovim --HEAD
 brew install ripgrep # 安装 fzf 的话需要
