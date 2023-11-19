@@ -61,8 +61,6 @@ Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'echasnovski/mini.nvim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'vim-airline/vim-airline'
 Plug 'folke/trouble.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
@@ -81,7 +79,6 @@ Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'stevearc/conform.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
 call plug#end()
@@ -101,5 +98,7 @@ hi DiagnosticVirtualTextHint guifg=#279a91 guibg=#50d3da
 hi DiffAdd guibg=NONE
 hi DiffChange guibg=NONE
 hi DiffDelete guibg=NONE
+
+let g:netrw_banner = 0
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
