@@ -81,8 +81,9 @@ Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'm4xshen/hardtime.nvim'
 Plug 'stevearc/conform.nvim'
+Plug 'utilyre/barbecue.nvim'
+Plug 'SmiteshP/nvim-navic'
 call plug#end()
 
 set termguicolors
