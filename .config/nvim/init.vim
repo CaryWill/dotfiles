@@ -103,4 +103,3 @@ hi DiffChange guibg=NONE
 hi DiffDelete guibg=NONE
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
-
