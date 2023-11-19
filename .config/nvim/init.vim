@@ -99,5 +99,7 @@ hi DiagnosticVirtualTextHint guifg=#279a91 guibg=#50d3da
 hi DiffAdd guibg=NONE
 hi DiffChange guibg=NONE
 hi DiffDelete guibg=NONE
+" 为了支持 iterm 的背景图片"
+hi Normal guibg=NONE ctermbg=NONE
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
