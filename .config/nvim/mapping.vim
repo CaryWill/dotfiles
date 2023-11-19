@@ -3,8 +3,8 @@ let maplocalleader = ','
 
 nmap te :tabedit 
 nmap tq :tabclose<CR> 
-nnoremap H :BufferLineCyclePrev<CR>
-nnoremap L :BufferLineCycleNext<CR>
+nnoremap H :tabprev<CR>
+nnoremap L :tabnext<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -44,7 +44,6 @@ nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <leader>ef :EslintFixAll<CR>
 
 "Git
 nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
@@ -68,22 +67,5 @@ function! s:show_documentation()
          execute "lua vim.diagnostic.open_float()"
     endif
 endfunction
-
-" IM-auto-select 解决中文英文切换的问题 "{{{
-" https://github.com/keaising/im-select.nvim
-let s:current_im = "com.apple.keylayout.US"
-let s:default_im = "com.apple.keylayout.US" 
-function! SetIM()
-  let s:current_im = system("im-select")
-  if s:current_im != s:default_im
-    silent execute "!" . "im-select " . s:default_im
-  endif
-endfunction
-function! RestoreIM()
-  silent execute "!" . "im-select " . s:current_im
-endfunction
-autocmd InsertLeave,VimEnter * :call SetIM()
-autocmd InsertEnter * :call RestoreIM()
-"}}}
-
+nnoremap <C-i> :sbnext<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>

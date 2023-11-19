@@ -99,6 +99,4 @@ hi DiffAdd guibg=NONE
 hi DiffChange guibg=NONE
 hi DiffDelete guibg=NONE
 
-let g:netrw_banner = 0
-
 " vim: set foldmethod=marker foldlevel=0 foldenable:

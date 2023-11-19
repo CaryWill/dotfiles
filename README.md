@@ -43,6 +43,7 @@ https://stackoverflow.com/a/64441730
 10. 有了鼠标的能力之后，你会发现 neo-tree 也可以直接拖动宽度了
 11. 找不到要改那个颜色， 可以直接去插件代码仓库看怎么定义的
 12. 出现一个很奇怪的现象就是 vim 一打开 telscope 就自动打开了，我现在用了 iterm2 nightly 的版本倒是解决了，很奇怪
+13. bufferline 插件会让进入的vim的时候抖动一下，所以移除了
 
 ## TODO
 
