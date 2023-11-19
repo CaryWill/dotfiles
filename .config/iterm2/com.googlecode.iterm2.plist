@@ -5432,7 +5432,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.055350996376811602</real>
+			<real>0.10466032608695654</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
