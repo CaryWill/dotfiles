@@ -44,6 +44,7 @@ https://stackoverflow.com/a/64441730
 11. 找不到要改那个颜色， 可以直接去插件代码仓库看怎么定义的
 12. 出现一个很奇怪的现象就是 vim 一打开 telscope 就自动打开了，我现在用了 iterm2 nightly 的版本倒是解决了，很奇怪
 13. bufferline 插件会让进入的vim的时候抖动一下，所以移除了
+14. 如果 eslint 等 lsp 安装失败了 mason，那么可能是 npm 源的问题，改成默认的源就好了。
 
 ## TODO
 
