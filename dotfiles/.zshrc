@@ -69,3 +69,5 @@ xp() {
   local output="https://code.alibaba-inc.com/${param}"
   open "$output"
 }
+
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
