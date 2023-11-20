@@ -56,7 +56,7 @@ nnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 tnoremap <silent>;t <Cmd>exe v:count1 . "ToggleTerm"<CR>
 tnoremap <silent><ESC> <C-\><C-n>
-tnoremap <silent><C-c> :lua require('toggleterm').exec('', 2)<CR>
+tnoremap <silent><C-t> :lua require('toggleterm').exec('', 2)<CR>
 nnoremap <silent><leader>tt <Cmd>ToggleTermToggleAll<CR>
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
