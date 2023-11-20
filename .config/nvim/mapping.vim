@@ -67,5 +67,5 @@ function! s:show_documentation()
          execute "lua vim.diagnostic.open_float()"
     endif
 endfunction
-nnoremap <C-i> :sbnext<CR>
+nnoremap ;e <cmd>Neotree toggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>

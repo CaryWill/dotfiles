@@ -5479,7 +5479,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Brighten Bold Text</key>
-			<false/>
+			<true/>
 			<key>Brighten Bold Text (Dark)</key>
 			<false/>
 			<key>Brighten Bold Text (Light)</key>
@@ -5942,7 +5942,7 @@ Make Text Bigger</string>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
-			<false/>
+			<true/>
 			<key>Use Bright Bold (Dark)</key>
 			<false/>
 			<key>Use Bright Bold (Light)</key>
