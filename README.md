@@ -45,6 +45,17 @@ https://stackoverflow.com/a/64441730
 12. 出现一个很奇怪的现象就是 vim 一打开 telscope 就自动打开了，我现在用了 iterm2 nightly 的版本倒是解决了，很奇怪
 13. bufferline 插件会让进入的vim的时候抖动一下，所以移除了
 14. 如果 eslint 等 lsp 安装失败了 mason，那么可能是 npm 源的问题，改成默认的源就好了。
+15. brew 用国内的源(https://zhuanlan.zhihu.com/p/324691527), 注意如果用 zsh 那么记得导出下变量,可以直接用下面的命令
+
+cd "$(brew --repo)"
+git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
+
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
 
 ## TODO
 
