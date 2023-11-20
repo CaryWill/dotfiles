@@ -36,9 +36,9 @@ map <Up> <C-y>
 set lazyredraw
 " Backup files
 set undofile
-set directory=~/.vim/tmp//
-set undodir=~/.vim/tmp//
-set backupdir=~/.vim/tmp//
+set directory=~/.config/nvim/.directory//
+set undodir=~/.config/nvim/.undo//
+set backupdir=~/.config/nvim/.backup//
 " Cursor shape
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
