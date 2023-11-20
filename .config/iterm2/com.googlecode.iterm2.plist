@@ -5389,7 +5389,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>0.93333345651626587</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/cary/Downloads/waneella_ - 1725990885731815825.gif</string>
+			<string>/Users/cary/dotfiles/assets/waneella_ - 1725990885731815825.gif</string>
 			<key>Background Image Mode</key>
 			<integer>0</integer>
 			<key>Badge Color</key>
@@ -5808,7 +5808,7 @@ Make Text Bigger</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>BlexMonoNerdFontComplete- 14</string>
+			<string>BerkeleyMonoNF-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
