@@ -5798,7 +5798,7 @@ Make Text Bigger</string>
 			<key>Minimum Contrast (Light)</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
-			<false/>
+			<true/>
 			<key>Name</key>
 			<string>gruvbox</string>
 			<key>Non Ascii Font</key>
