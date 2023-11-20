@@ -1,9 +1,9 @@
 #!/bin/bash
 
 mkdir -p ~/.vim/tmp
-mkdir -p ~/.config/nvim/.directory
-mkdir -p ~/.config/nvim/.undo
-mkdir -p ~/.config/nvim/.backup
+mkdir -p ~/.vim/.nvim/.directory
+mkdir -p ~/.vim/.nvim/.undo
+mkdir -p ~/.vim/.nvim/.backup
 
 # 管理 neovim 的版本
 brew install bob
