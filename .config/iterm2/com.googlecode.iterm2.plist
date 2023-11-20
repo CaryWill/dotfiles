@@ -5388,8 +5388,6 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Red Component</key>
 				<real>0.93333345651626587</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/cary/dotfiles/assets/waneella_ - 1725990885731815825.gif</string>
 			<key>Background Image Mode</key>
 			<integer>0</integer>
 			<key>Badge Color</key>
@@ -5432,7 +5430,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.04319519927536232</real>
+			<real>0.050000000000000003</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
