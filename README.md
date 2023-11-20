@@ -56,6 +56,10 @@ source ~/.zshrc
 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 
+16. nerdfont 字体
+fontforge -script /Users/cary/Downloads/nerd-fonts-master\ 2/font-patcher /Users/cary/Library/Fonts/BerkeleyMono-Regular.otf -c
+
+里面的 -c 可以直接加入所有的 glyph
 
 ## TODO
 
