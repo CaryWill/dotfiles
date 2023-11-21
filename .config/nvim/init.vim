@@ -66,7 +66,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pappasam/papercolor-theme-slim'
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim'
 Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'psliwka/vim-smoothie'
@@ -81,7 +81,6 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
-Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 set termguicolors
