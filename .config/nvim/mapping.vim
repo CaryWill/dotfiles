@@ -69,3 +69,4 @@ function! s:show_documentation()
 endfunction
 nnoremap ;e <cmd>Neotree toggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
+nnoremap <leader>pi :PlugInstall<CR>
