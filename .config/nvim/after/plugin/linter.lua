@@ -7,6 +7,9 @@ require("conform").setup({
     typescript = { { "prettier", "eslint" } },
     typescriptreact = { { "prettier", "eslint" } },
     javascriptreact = { { "prettier", "eslint" } },
+    ["*"] = {
+      "prettier",
+    },
   },
   format_on_save = function(bufnr)
     -- Disable with a global or buffer-local variable
