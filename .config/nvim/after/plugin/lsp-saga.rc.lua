@@ -11,6 +11,9 @@ saga.setup({
   },
   symbol_in_winbar = {
     enable = false
+  },
+  diagnostic = {
+    show_code_action = false
   }
 })
 
