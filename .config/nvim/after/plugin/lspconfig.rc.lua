@@ -64,7 +64,14 @@ vim.diagnostic.config({
 })
 
 -- eslint
-nvim_lsp.eslint.setup({})
+nvim_lsp.eslint.setup({
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
+})
 
 -- vim
 nvim_lsp.vimls.setup {
