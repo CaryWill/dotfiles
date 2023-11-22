@@ -36,9 +36,8 @@ vnoremap <leader>f <cmd>:Format<CR>
 nnoremap <leader>df <cmd>:FormatDisable<CR>
 nnoremap <leader>ef <cmd>:FormatEnable<CR>
 
-" diagnostics navigation
-nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
-nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
+" nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
+" nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
 
 "Lsp
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
@@ -62,14 +61,6 @@ tnoremap <silent><ESC> <C-\><C-n>
 tnoremap <silent><C-t> :lua require('toggleterm').exec('', 2)<CR>
 nnoremap <silent><leader>tt <Cmd>ToggleTermToggleAll<CR>
 
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-         'h '.expand('<cword>')
-    else
-         execute "lua vim.diagnostic.open_float()"
-    endif
-endfunction
 nnoremap ;e <cmd>Neotree toggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
 nnoremap <leader>pi :PlugInstall<CR>

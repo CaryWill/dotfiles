@@ -79,6 +79,7 @@ Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'nvimdev/lspsaga.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
 call plug#end()
