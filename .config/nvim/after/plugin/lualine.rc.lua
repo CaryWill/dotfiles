@@ -5,7 +5,7 @@ end
 
 lualine.setup({
   options = {
-    disabled_filetypes = { 'packer', 'NVimTree', },
+    disabled_filetypes = { 'packer', 'NVimTree', "sagaoutline", "neo-tree" },
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
   },
