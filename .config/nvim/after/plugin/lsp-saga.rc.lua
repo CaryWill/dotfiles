@@ -13,7 +13,8 @@ saga.setup({
     enable = false
   },
   diagnostic = {
-    show_code_action = false
+    show_code_action = false,
+    extend_relatedInformation = true,
   }
 })
 
