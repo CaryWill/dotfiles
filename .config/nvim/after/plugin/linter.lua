@@ -3,7 +3,10 @@ require("conform").setup({
   formatters_by_ft = {
     -- Conform will run multiple formatters sequentially
     -- Use a sub-list to run only the first available formatter
-    -- js 相关的直接在 eslint lsp 里面用了 EslintFixAll
+    javascript = { { "prettier", "eslint" } },
+    typescript = { { "prettier", "eslint" } },
+    typescriptreact = { { "prettier", "eslint" } },
+    javascriptreact = { { "prettier", "eslint" } },
     ["*"] = {
       "prettier",
     },
