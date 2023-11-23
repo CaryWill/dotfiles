@@ -1,4 +1,7 @@
-require("ibl").setup({
+local status, plugin = pcall(require, "ibl")
+if (not status) then return end
+
+plugin.setup({
     indent = {
         char = "│",
         tab_char = "│"
@@ -11,5 +14,3 @@ require("ibl").setup({
                      "toggleterm", "lazyterm"}
     }
 })
-
-require('mini.indentscope').setup()

@@ -1,7 +1,7 @@
-local status, saga = pcall(require, "lspsaga")
+local status, plugin = pcall(require, "lspsaga")
 if (not status) then return end
 
-saga.setup({
+plugin.setup({
   ui = {
     winblend = 10,
     border = 'rounded',

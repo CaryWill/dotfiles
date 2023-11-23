@@ -1,1 +1,4 @@
-require('nvim-ts-autotag').setup()
+local status, plugin = pcall(require, "nvim-ts-autotag")
+if (not status) then return end
+
+plugin.setup()

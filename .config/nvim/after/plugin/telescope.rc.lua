@@ -1,6 +1,8 @@
+local status, plugin = pcall(require, "telescope")
+if (not status) then return end
+
 local telescope = require('telescope')
 local actions = require('telescope.actions')
-local trouble = require("trouble.providers.telescope")
 
 telescope.setup {
     defaults = {
@@ -15,7 +17,6 @@ telescope.setup {
                 ["<C-s>"] = actions.file_split,
                 ["<C-v>"] = actions.file_vsplit,
                 ["<C-t>"] = actions.file_tab
-                -- ["<c-t>"] = trouble.open_with_trouble
             }
         },
         layout_config = {

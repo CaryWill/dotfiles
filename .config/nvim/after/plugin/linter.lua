@@ -1,5 +1,8 @@
+local status, plugin = pcall(require, "conform")
+if (not status) then return end
+
 -- https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#command-to-toggle-format-on-save
-require("conform").setup({
+plugin.setup({
   formatters_by_ft = {
     -- Conform will run multiple formatters sequentially
     -- Use a sub-list to run only the first available formatter

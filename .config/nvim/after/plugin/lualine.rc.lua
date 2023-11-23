@@ -1,9 +1,9 @@
-local status, lualine = pcall(require, "lualine")
+local status, plugin = pcall(require, "lualine")
 if (not status) then
   return
 end
 
-lualine.setup({
+plugin.setup({
   options = {
     -- disabled_filetypes = { 'packer', 'NVimTree', "sagaoutline", "neo-tree" },
     component_separators = { left = '', right = '' },

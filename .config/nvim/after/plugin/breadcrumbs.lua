@@ -1,7 +1,10 @@
+local status, plugin = pcall(require, "barbecue")
+if (not status) then return end
+
 -- triggers CursorHold event faster
 vim.opt.updatetime = 200
 
-require("barbecue").setup({
+plugin.setup({
 })
 
 vim.api.nvim_create_autocmd({
