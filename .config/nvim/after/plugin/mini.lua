@@ -1,6 +1,3 @@
-local status, plugin = pcall(require, "mini")
-if (not status) then return end
-
 require('mini.indentscope').setup()
 require('mini.pairs').setup()
 require('mini.surround').setup()
@@ -12,3 +9,4 @@ require('mini.comment').setup({
   }
 })
 require('mini.ai').setup()
+
