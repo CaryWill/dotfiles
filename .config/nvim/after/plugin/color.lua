@@ -5,4 +5,3 @@
 -- else -- night
 --   vim.opt.background = 'dark'
 -- end
-
