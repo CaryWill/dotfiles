@@ -11,7 +11,6 @@ telescope.setup {
         mappings = {
             n = {
                 ["q"] = actions.close
-                -- ["<c-t>"] = trouble.open_with_trouble
             },
             i = {
                 ["<C-s>"] = actions.file_split,
