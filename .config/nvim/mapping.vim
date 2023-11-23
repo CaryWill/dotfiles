@@ -70,7 +70,7 @@ nnoremap <leader>pi :PlugInstall<CR>
 let s:term_buf = 0
 let s:term_win = 0
 function s:termToggle()
-    let height = 20
+    let height = 15
     if win_gotoid(s:term_win)
         hide
     else

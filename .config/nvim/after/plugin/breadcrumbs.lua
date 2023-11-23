@@ -5,6 +5,8 @@ if (not status) then return end
 vim.opt.updatetime = 200
 
 plugin.setup({
+  -- neovim built-in terminal have "" type(notype)
+  exclude_filetypes = { "" },
 })
 
 vim.api.nvim_create_autocmd({
