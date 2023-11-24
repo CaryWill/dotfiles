@@ -32,4 +32,5 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 " nvim-ts-context-commentstring 插件会影响性能 很严重"
 " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'nvim-treesitter/playground'
 call plug#end()

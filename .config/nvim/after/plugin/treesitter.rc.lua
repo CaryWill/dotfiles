@@ -3,7 +3,8 @@ if (not status) then return end
 
 plugin.setup {
   highlight = {
-    enable = false,
+    -- 这个会影响 syntax on
+    enable = true,
     disable = function()
       return vim.b.large_buf
     end,
