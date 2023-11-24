@@ -4,11 +4,15 @@ if (not status) then return end
 plugin.setup {
   highlight = {
     enable = true,
-    disable = {},
+    disable = function()
+      return vim.b.large_buf
+    end,
   },
   indent = {
     enable = true,
-    disable = {},
+    disable = function()
+      return vim.b.large_buf
+    end,
   },
   ensure_installed = {
     "bash",
@@ -38,4 +42,3 @@ plugin.setup {
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
-vim.g.skip_ts_context_commentstring_module = true

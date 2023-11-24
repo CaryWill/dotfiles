@@ -7,13 +7,10 @@ Plug 'williamboman/mason.nvim' "Install LSP server
 Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
 Plug 'nvim-lua/plenary.nvim' 
 Plug 'nvim-telescope/telescope.nvim' " Searching
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
 Plug 'hrsh7th/nvim-cmp' "Completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-Plug 'echasnovski/mini.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pappasam/papercolor-theme-slim'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -24,10 +21,15 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'stevearc/conform.nvim'
-Plug 'windwp/nvim-ts-autotag'
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvimdev/lspsaga.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
+
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'echasnovski/mini.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'windwp/nvim-ts-autotag'
+" 下面这个插件会影响性能 很严重"
+" Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
