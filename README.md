@@ -64,6 +64,12 @@ fontforge -script /Users/cary/Downloads/nerd-fonts-master\ 2/font-patcher /Users
 17. Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 下面这个插件会影响性能 很严重
 
+18. you can use tab to auto complete in vim commandline mode
+
+<tab>, <c-d>, <S-Tab>,
+
+https://alpha2phi.medium.com/neovim-for-beginners-built-in-completion-8bbbb0f16c9c
+
 ## TODO
 
 - [x] Vim git previous commit up down in fzf(虽然不能用 key map 但是发现可以直接 鼠标/触摸板 进行滚动）
