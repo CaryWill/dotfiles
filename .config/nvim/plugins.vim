@@ -33,4 +33,7 @@ Plug 'windwp/nvim-ts-autotag'
 " nvim-ts-context-commentstring 插件会影响性能 很严重"
 " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'nvim-treesitter/playground'
+
+" profiling"
+Plug 'stevearc/profile.nvim'
 call plug#end()
