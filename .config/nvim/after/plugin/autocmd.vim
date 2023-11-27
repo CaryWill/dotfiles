@@ -1,4 +1,3 @@
-autocmd BufReadPre * if getfsize(expand("%")) > 2000 | syntax off | endif
 autocmd FileType neo-tree nnoremap <buffer> + 10<C-w>>
 autocmd FileType neo-tree nnoremap <buffer> - 10<C-w><
 autocmd FileType neo-tree nnoremap <buffer> = 30<C-w>\|
@@ -19,7 +18,7 @@ vim.api.nvim_create_autocmd({ "BufReadPre" }, {
       vim.b.large_buf = false
     elseif tonumber(vim.fn.system({ 'wc', '-l', vim.fn.expand('%') }):match('%d+')) > 2000 then
       vim.b.large_buf = true
-      vim.cmd("syntax off")
+      vim.cmd("syntax on")
       -- vim.cmd("IlluminatePauseBuf")     -- disable vim-illuminate
       -- vim.cmd("IndentBlanklineDisable") -- disable indent-blankline.nvim
       -- vim.opt_local.foldmethod = "manual"
