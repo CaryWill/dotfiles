@@ -32,6 +32,10 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'nvim-treesitter/playground'
+"Plug 'LucasTavaresA/SingleComment.nvim'
+
+" developing"
+"Plug '/Users/cary/workspace/github/SingleComment.nvim'
 
 " profiling"
 " Plug 'stevearc/profile.nvim'

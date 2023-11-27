@@ -15,5 +15,5 @@ R = function(name)
   return require(name)
 end
 
-vim.keymap.set("n", "<leader>r", ":lua R('neovim-lua-plugin')<cr>")
+vim.api.nvim_set_keymap("n", "<leader>r", ":lua R('SingleComment')<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "<localleader>t", "<Plug>PlenaryTestFile<CR>")
