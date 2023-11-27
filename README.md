@@ -64,6 +64,12 @@ fontforge -script /Users/cary/Downloads/nerd-fonts-master\ 2/font-patcher /Users
 17. Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 下面这个插件会影响性能 很严重
 
+18. you can use tab to auto complete in vim commandline mode
+
+<tab>, <c-d>, <S-Tab>,
+
+https://alpha2phi.medium.com/neovim-for-beginners-built-in-completion-8bbbb0f16c9c
+
 ## TODO
 
 - [x] Vim git previous commit up down in fzf(虽然不能用 key map 但是发现可以直接 鼠标/触摸板 进行滚动）
@@ -71,3 +77,5 @@ fontforge -script /Users/cary/Downloads/nerd-fonts-master\ 2/font-patcher /Users
 - [x] jsx color heighlight
 - [x] zsh，回车后下一行开头会回显命令
 - [ ] react 多行 comment 的时候，会出现多个 {} 想要一个怎么半
+- [ ] 大文件还是公司的电脑上可以浮现，以及测试了下调用 :LspStop 才能解决9万行大文件
+- [ ] ts comment 的问题应该还是 treesitter 的问题，所以 tscomment 代码能改监听 trssiter 是否被 disabled了 应该就行了
