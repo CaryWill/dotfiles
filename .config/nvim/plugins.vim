@@ -33,6 +33,7 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'nvim-treesitter/playground'
 "Plug 'LucasTavaresA/SingleComment.nvim'
+Plug '/Users/cary/workspace/SingleComment.nvim'
 
 " developing"
 "Plug '/Users/cary/workspace/github/SingleComment.nvim'
