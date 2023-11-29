@@ -27,13 +27,18 @@ Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'echasnovski/mini.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'nvim-treesitter/playground'
 "Plug 'LucasTavaresA/SingleComment.nvim'
 Plug '/Users/cary/workspace/SingleComment.nvim'
+
+" mini"
+Plug 'echasnovski/mini.indentscope'
+Plug 'echasnovski/mini.pairs'
+Plug 'echasnovski/mini.surround'
+Plug 'echasnovski/mini.ai'
 
 " developing"
 "Plug '/Users/cary/workspace/github/SingleComment.nvim'
