@@ -80,7 +80,18 @@ nvim_lsp.vimls.setup {
 }
 
 -- lua
-nvim_lsp.lua_ls.setup {}
+nvim_lsp.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = { globals = {
+        'vim',
+        -- describe and it are from plugin plenate
+        'describe', 'it'
+      }
+      }
+    }
+  }
+}
 
 -- stylelint
 -- nvim_lsp.stylelint_lsp.setup {}
