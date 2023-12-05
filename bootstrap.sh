@@ -26,6 +26,7 @@ npm install -g eslint_d prettier
 # default lsp if your project dont have ts as dependency
 # then use the global one
 npm install -g typescript typescript-language-server
+npm install -g eslint
 
 # 如果这里保留了 vim 和 nvim 的配置位置
 # 可以通过 zshrc 里面添加 alias 来进行配置决定使用 vim 还是 nvim
