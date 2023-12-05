@@ -16,9 +16,9 @@ vim.api.nvim_create_autocmd({ "BufReadPre" }, {
     -- TODO: 不知道会不会影响性能计算行数的时候, 不然直接用 filesize 来作为标准好了
     if vim.tbl_contains(excluded_filetypes, vim.bo.filetype) then
       vim.b.large_buf = false
-    elseif tonumber(vim.fn.system({ 'wc', '-l', vim.fn.expand('%') }):match('%d+')) > 2000 then
+    elseif tonumber(vim.fn.system({ 'wc', '-l', vim.fn.expand('%') }):match('%d+')) > 10000 then
       vim.b.large_buf = true
-      vim.cmd("syntax on")
+      vim.cmd("syntax off")
       -- vim.cmd("IlluminatePauseBuf")     -- disable vim-illuminate
       -- vim.cmd("IndentBlanklineDisable") -- disable indent-blankline.nvim
       -- vim.opt_local.foldmethod = "manual"
