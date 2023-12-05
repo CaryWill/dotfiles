@@ -16,12 +16,16 @@ brew install ripgrep
 brew install fzf
 brew install reattach-to-user-namespace
 
+
 # 如果是 neovim 的话，那么需要改一下位置，在 ~/.config/nvim/autoload/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # neovim lsp
 npm install -g eslint_d prettier
+# default lsp if your project dont have ts as dependency
+# then use the global one
+npm install -g typescript typescript-language-server
 
 # 如果这里保留了 vim 和 nvim 的配置位置
 # 可以通过 zshrc 里面添加 alias 来进行配置决定使用 vim 还是 nvim
