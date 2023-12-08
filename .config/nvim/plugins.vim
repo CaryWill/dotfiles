@@ -37,6 +37,7 @@ Plug 'echasnovski/mini.indentscope'
 Plug 'echasnovski/mini.pairs'
 Plug 'echasnovski/mini.surround'
 Plug 'echasnovski/mini.ai'
+Plug 'echasnovski/mini.comment'
 
 " comment "
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
