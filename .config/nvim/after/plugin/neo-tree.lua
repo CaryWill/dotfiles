@@ -18,7 +18,10 @@ plugin.setup({
       hide_gitignored = true,
       hide_by_name = {},
       never_show = {}
-    }
+    },
+    -- 因为默认如果打开了一个 buffer，telescope 第一次搜索
+    -- 后进行跳转就会跳到第一行
+    hijack_netrw_behavior = "open_current",
   },
   git_status = {
     symbols = {
