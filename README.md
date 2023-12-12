@@ -74,6 +74,8 @@ https://alpha2phi.medium.com/neovim-for-beginners-built-in-completion-8bbbb0f16c
 
 https://stackoverflow.com/a/47294150
 
+20. NOTE: in order to make it work, add default keyboard ABC instead of US
+
 ## TODO
 
 - [x] Vim git previous commit up down in fzf(虽然不能用 key map 但是发现可以直接 鼠标/触摸板 进行滚动）
