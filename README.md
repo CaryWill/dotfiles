@@ -8,6 +8,7 @@ Since the neovim API is not stable, I quit using neovim, so this is the configua
 2. Menlo(13, 100, 110)
 3. JetBrainsMono
 4. version 9.0.1833 works
+5. BerkelyMono
 
 Note: all fonts are nerd-font patched.
 
