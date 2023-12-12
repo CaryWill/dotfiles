@@ -4680,6 +4680,8 @@ Respond with one or more commands. Do not include any explanation or additional 
 	<false/>
 	<key>EnableDivisionView</key>
 	<true/>
+	<key>EnableRendezvous</key>
+	<true/>
 	<key>EnterCopyModeAutomatically</key>
 	<true/>
 	<key>GlobalKeyMap</key>
