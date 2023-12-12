@@ -26,6 +26,7 @@ Plug 'nvimdev/lspsaga.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'akinsho/bufferline.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'

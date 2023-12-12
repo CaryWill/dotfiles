@@ -22,5 +22,5 @@ plugin.setup({
     lualine_z = {
       "filetype"
     },
-  }
+  },
 })

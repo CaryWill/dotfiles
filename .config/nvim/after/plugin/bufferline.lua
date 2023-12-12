@@ -3,6 +3,7 @@ if (not status) then return end
 
 plugin.setup({
   options = {
+    show_duplicate_prefix = true,
     close_command = function(n) require("mini.bufremove").delete(n, false) end,
     right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
     diagnostics = "nvim_lsp",
@@ -29,9 +30,9 @@ plugin.setup({
     indicator = {
       style = 'underline',
     },
-    max_name_length = 50,
     numbers = function(opts)
       return string.format('%s', opts.raise(opts.ordinal))
     end,
+    mode = 'tabs'
   },
 })
