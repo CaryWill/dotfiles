@@ -7220,6 +7220,10 @@ Make Text Bigger</string>
 	<false/>
 	<key>TmuxUnpauseAutomatically</key>
 	<true/>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>URLHandlersByGuid</key>
