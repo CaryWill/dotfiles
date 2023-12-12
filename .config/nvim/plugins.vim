@@ -29,6 +29,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'mbbill/undotree'
+Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 
 " treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
