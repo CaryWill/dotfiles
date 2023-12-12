@@ -94,4 +94,4 @@ nvim_lsp.lua_ls.setup {
 }
 
 -- stylelint
--- nvim_lsp.stylelint_lsp.setup {}
+nvim_lsp.stylelint_lsp.setup {}
