@@ -28,7 +28,9 @@ Plug 'SmiteshP/nvim-navic'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'keaising/im-select.nvim'
+Plug 'mbbill/undotree'
 
+" treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
@@ -41,13 +43,10 @@ Plug 'echasnovski/mini.comment'
 
 " comment "
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-" Plug '/Users/cary/workspace/SingleComment.nvim'
 Plug 'CaryWill/SingleComment.nvim'
+" Plug '/Users/cary/workspace/SingleComment.nvim'
 
 " developing"
 " Plug '/Users/cary/workspace/github/SingleComment.nvim'
 " Plug '/Users/cary/workspace/mini.comment'
-
-" profiling"
-" Plug 'stevearc/profile.nvim'
 call plug#end()

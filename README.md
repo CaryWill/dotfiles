@@ -88,3 +88,4 @@ https://stackoverflow.com/a/47294150
 - [ ] 大文件还是公司的电脑上可以浮现，以及测试了下调用 :LspStop 才能解决9万行大文件
 - [ ] ts comment 的问题应该还是 treesitter 的问题，所以 tscomment 代码能改监听 trssiter 是否被 disabled了 应该就行了
 - [ ] [send command to all tmux sessions(like source all .zshrc on all sessions)](https://stackoverflow.com/questions/16325449/how-to-send-a-command-to-all-panes-in-tmux)
+- [ ] css auto complete not work
