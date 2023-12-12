@@ -1,3 +1,5 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
+
 local status, plugin = pcall(require, "mason")
 if (not status) then return end
 
@@ -7,6 +9,7 @@ local status, plugin2 = pcall(require, "mason-lspconfig")
 if (not status) then return end
 
 plugin2.setup {
-    ensure_installed = {"vimls", "tsserver", "eslint", "lua_ls", "stylelint_lsp"},
-    automatic_installation = true
+  ensure_installed = { "vimls", "tsserver", "eslint", "lua_ls", "stylelint_lsp", "cssls" },
+  automatic_installation = true
 }
+

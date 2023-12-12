@@ -95,3 +95,13 @@ nvim_lsp.lua_ls.setup {
 
 -- stylelint
 nvim_lsp.stylelint_lsp.setup {}
+
+local servers = {
+  "cssls"
+}
+
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    capabilities = capabilities,
+  }
+end
