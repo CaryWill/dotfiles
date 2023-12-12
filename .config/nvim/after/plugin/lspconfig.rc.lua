@@ -96,12 +96,19 @@ nvim_lsp.lua_ls.setup {
 -- stylelint
 nvim_lsp.stylelint_lsp.setup {}
 
-local servers = {
-  "cssls"
-}
+-- local servers = {
+--   "cssls"
+-- }
 
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    capabilities = capabilities,
-  }
-end
+-- for _, lsp in ipairs(servers) do
+--   nvim_lsp[lsp].setup {
+--     capabilities = capabilities,
+--   }
+-- end
+
+local capabilities2 = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require 'lspconfig'.cssls.setup {
+  capabilities = capabilities2,
+}
