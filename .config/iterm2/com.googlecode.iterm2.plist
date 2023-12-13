@@ -5389,9 +5389,9 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>0.93333345651626587</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/cary/Downloads/1337727.png</string>
+			<string>/Users/cary/dotfiles/assets/1337727.png</string>
 			<key>Background Image Mode</key>
-			<integer>2</integer>
+			<integer>3</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -5432,7 +5432,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.12354647871376812</real>
+			<real>0.11945199275362318</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
