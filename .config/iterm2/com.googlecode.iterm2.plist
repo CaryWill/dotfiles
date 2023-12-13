@@ -5388,8 +5388,10 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Red Component</key>
 				<real>0.93333345651626587</real>
 			</dict>
+			<key>Background Image Location</key>
+			<string>/Users/cary/Downloads/1337727.png</string>
 			<key>Background Image Mode</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -5430,7 +5432,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.050000000000000003</real>
+			<real>0.19873329936594203</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -5921,6 +5923,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Smart Cursor Color (Light)</key>
 			<false/>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
