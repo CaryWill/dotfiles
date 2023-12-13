@@ -36,4 +36,4 @@ vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 -- code action
 vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 -- outline
-vim.keymap.set({ "n", "v" }, "<leader>o", "<cmd>Lspsaga outline<CR>")
+-- vim.keymap.set({ "n", "v" }, "<leader>o", "<cmd>Lspsaga outline<CR>")
