@@ -1,12 +1,7 @@
 local harpoon = require("harpoon")
 
 -- REQUIRED
-harpoon:setup({
-    global_settings = {
-        save_on_change = true,
-        mark_branch = true,
-    }
-})
+harpoon:setup()
 
 -- use <leader>a to add yourfile as frequntly accessed file
 vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
