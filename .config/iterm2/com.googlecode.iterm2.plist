@@ -7231,7 +7231,7 @@ Make Text Bigger</string>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseMetal</key>
-	<false/>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
