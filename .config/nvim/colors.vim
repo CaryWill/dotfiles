@@ -25,4 +25,4 @@ exe 'highlight GitSignsChange guifg=' . diffChangeGuiFg
 exe 'highlight GitSignsDelete guifg=' . diffDeleteGuiFg
 
 " 为了支持 iterm 的背景图片"
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
