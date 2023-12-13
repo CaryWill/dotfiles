@@ -4,9 +4,8 @@ local harpoon = require("harpoon")
 harpoon:setup()
 
 -- use <leader>a to add yourfile as frequntly accessed file
--- use <C-e> to open the list
--- this is the video author talks https://www.youtube.com/watch?v=Qnos8aApa9g
 vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
+vim.keymap.set("n", "<leader>d", function() harpoon:list():remove() end)
 vim.keymap.set("n", "<leader>o", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
