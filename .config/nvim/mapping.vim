@@ -33,8 +33,9 @@ nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
 
 nnoremap <leader>f <cmd>:Format<CR>
 vnoremap <leader>f <cmd>:Format<CR>
-nnoremap <leader>df <cmd>:FormatDisable<CR>
-nnoremap <leader>ef <cmd>:FormatEnable<CR>
+nnoremap <leader>fd <cmd>:FormatDisable<CR>
+nnoremap <leader>fe <cmd>:FormatEnable<CR>
+nnoremap <leader>ff <cmd>:EslintFixAll<CR>
 
 " nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
 " nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
