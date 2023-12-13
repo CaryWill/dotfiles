@@ -1,6 +1,7 @@
 
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
+Plug 'sindrets/diffview.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim' 
@@ -31,7 +32,6 @@ Plug 'keaising/im-select.nvim'
 Plug 'mbbill/undotree'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 Plug 'folke/neodev.nvim'
-Plug 'sindrets/diffview.nvim'
 " Plug 'chentoast/marks.nvim'
 " Plug nvim-pack/nvim-spectre
 

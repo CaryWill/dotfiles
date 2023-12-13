@@ -98,5 +98,8 @@ inoremap ;t <Esc>:call <SID>termToggle()<CR>
 tnoremap ;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap ;q <C-\><C-n>
 
+" Git diff"
+cnoremap G DiffviewOpen<CR>
+
 " undotree"
 nnoremap <leader>u :UndotreeToggle<CR>
