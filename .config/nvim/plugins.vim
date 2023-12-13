@@ -30,6 +30,7 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'mbbill/undotree'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
+Plug 'folke/neodev.nvim'
 " Plug 'chentoast/marks.nvim'
 " Plug nvim-pack/nvim-spectre
 

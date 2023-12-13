@@ -13,6 +13,12 @@ local on_attach = function(client, bufnr)
   -- 如果有 preview 那么会在会车出现一个空白 buffer 用来预览
   vim.opt.completeopt = { 'menuone', 'noinsert', 'noselect' }
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- lsp saga
+  vim.keymap.set('n', '<leader>j', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+  vim.keymap.set('n', '<leader>k', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
+  vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
+  vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -81,6 +87,9 @@ nvim_lsp.lua_ls.setup {
         -- describe and it are from plugin plenate
         'describe', 'it'
       }
+      },
+      completion = {
+        callSnippet = "Replace"
       }
     }
   }

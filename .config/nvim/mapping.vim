@@ -24,7 +24,7 @@ nnoremap ;b :Git blame<CR>
 " nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
 "Telescope
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
-nnoremap ;g <cmd>lua require('telescope.builtin').git_files()<CR>
+nnoremap ;g <cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<CR>
 nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
