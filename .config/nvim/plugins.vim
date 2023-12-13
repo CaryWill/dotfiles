@@ -3,12 +3,12 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim' "Install LSP server
-Plug 'williamboman/mason-lspconfig.nvim' "Ensures some LSP server is installed if not
+Plug 'williamboman/mason.nvim' 
+Plug 'williamboman/mason-lspconfig.nvim' 
 Plug 'nvim-lua/plenary.nvim' 
-Plug 'nvim-telescope/telescope.nvim' " Searching
-Plug 'hrsh7th/cmp-nvim-lsp' "nvim-cmp source for neovim's built-in LSP
-Plug 'hrsh7th/nvim-cmp' "Completion
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'norcalli/nvim-colorizer.lua'

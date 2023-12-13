@@ -57,9 +57,8 @@ vim.diagnostic.config({
   },
   inlay_hints = {
     enabled = true
-  }
+  },
   -- signs = true,
-  -- underline = false,
   -- virtual_text = false,
 })
 
@@ -72,12 +71,6 @@ nvim_lsp.eslint.setup({
     })
   end,
 })
-
--- vim
-nvim_lsp.vimls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 
 -- lua
 nvim_lsp.lua_ls.setup {
@@ -93,22 +86,15 @@ nvim_lsp.lua_ls.setup {
   }
 }
 
--- stylelint
-nvim_lsp.stylelint_lsp.setup {}
-
--- local servers = {
---   "cssls"
--- }
-
--- for _, lsp in ipairs(servers) do
---   nvim_lsp[lsp].setup {
---     capabilities = capabilities,
---   }
--- end
-
-local capabilities2 = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-require 'lspconfig'.cssls.setup {
-  capabilities = capabilities2,
+local servers = {
+  "cssls",
+  "stylelint_lsp",
+  "vimls"
 }
+
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
