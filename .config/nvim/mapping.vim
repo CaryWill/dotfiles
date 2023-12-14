@@ -104,7 +104,7 @@ cnoremap G DiffviewOpen<CR>
 " undotree"
 nnoremap <leader>u :UndotreeToggle<CR>
 
-" buffer switch by number"
+" buffer switch by number, <leader>b3 -> 3 <c-w> <c-w>
 nnoremap <leader>b1 1<C-w>w
 nnoremap <leader>b2 2<C-w>w
 nnoremap <leader>b3 3<C-w>w
