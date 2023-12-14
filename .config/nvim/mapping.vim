@@ -63,7 +63,7 @@ xmap dp :diffput<CR>
 " tnoremap <silent><C-t> :lua require('toggleterm').exec('', 2)<CR>
 " nnoremap <silent><leader>tt <Cmd>ToggleTermToggleAll<CR>
 
-nnoremap ;e <cmd>Neotree toggle<CR>
+nnoremap <silent>;e <cmd>Neotree toggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 
@@ -93,24 +93,24 @@ function s:termToggle()
         let s:term_win = win_getid()
     endif
 endfunction
-nnoremap ;t :call <SID>termToggle()<CR>
-inoremap ;t <Esc>:call <SID>termToggle()<CR>
-tnoremap ;t <C-\><C-n>:call <SID>termToggle()<CR>
-tnoremap ;q <C-\><C-n>
+nnoremap <silent>;t :call <SID>termToggle()<CR>
+inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
+tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
+tnoremap <silent>;q <C-\><C-n>
 
 " Git diff"
-cnoremap G DiffviewOpen
+cnoremap <silent>G DiffviewOpen
 
 " undotree"
-nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <silent><leader>u :UndotreeToggle<CR>
 
 " buffer switch by number, <leader>b3 -> 3 <c-w> <c-w>
-nnoremap <leader>b1 1<C-w>w
-nnoremap <leader>b2 2<C-w>w
-nnoremap <leader>b3 3<C-w>w
-nnoremap <leader>b4 4<C-w>w
-nnoremap <leader>b5 5<C-w>w
-nnoremap <leader>b6 6<C-w>w
-nnoremap <leader>b7 7<C-w>w
-nnoremap <leader>b8 8<C-w>w
-nnoremap <leader>b9 9<C-w>w
+nnoremap <silent><leader>b1 1<C-w>w
+nnoremap <silent><leader>b2 2<C-w>w
+nnoremap <silent><leader>b3 3<C-w>w
+nnoremap <silent><leader>b4 4<C-w>w
+nnoremap <silent><leader>b5 5<C-w>w
+nnoremap <silent><leader>b6 6<C-w>w
+nnoremap <silent><leader>b7 7<C-w>w
+nnoremap <silent><leader>b8 8<C-w>w
+nnoremap <silent><leader>b9 9<C-w>w
