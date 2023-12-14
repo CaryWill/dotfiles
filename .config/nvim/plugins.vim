@@ -54,6 +54,10 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'CaryWill/SingleComment.nvim'
 " Plug '/Users/cary/workspace/SingleComment.nvim'
 
+" unit test for jest"
+Plug 'David-Kunz/jester'
+Plug 'voldikss/vim-floaterm'
+
 " developing"
 " Plug '/Users/cary/workspace/github/SingleComment.nvim'
 " Plug '/Users/cary/workspace/mini.comment'
