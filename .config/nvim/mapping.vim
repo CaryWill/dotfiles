@@ -115,4 +115,4 @@ nnoremap <silent><leader>b7 7<C-w>w
 nnoremap <silent><leader>b8 8<C-w>w
 nnoremap <silent><leader>b9 9<C-w>w
 
-tnoremap <silent><C-c> <C-\><C-n>:FloatermToggle<CR>
+tnoremap <silent><C-t> <C-\><C-n>:FloatermToggle<CR>
