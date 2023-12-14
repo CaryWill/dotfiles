@@ -33,8 +33,8 @@ nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
 
 nnoremap <leader>f <cmd>:Format<CR>
 vnoremap <leader>f <cmd>:Format<CR>
-nnoremap <leader>fd <cmd>:FormatDisable<CR>
-nnoremap <leader>fe <cmd>:FormatEnable<CR>
+nnoremap <leader>df <cmd>:FormatDisable<CR>
+nnoremap <leader>ef <cmd>:FormatEnable<CR>
 nnoremap <leader>ff <cmd>:EslintFixAll<CR>
 
 " nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
@@ -99,7 +99,7 @@ tnoremap ;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap ;q <C-\><C-n>
 
 " Git diff"
-cnoremap G DiffviewOpen<CR>
+cnoremap G DiffviewOpen
 
 " undotree"
 nnoremap <leader>u :UndotreeToggle<CR>
