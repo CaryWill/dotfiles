@@ -1,5 +1,9 @@
+-- how to use it
+-- name the file with *.test.ts
+-- and put it in root test/ folder
+-- then on the test file using <leader>t
+-- using <A-i> to dismiss it
 require("jester").setup({
-  -- terminal_cmd = ':lua require("FTerm").toggle()'
   terminal_cmd = ':FloatermNew'
 })
 
