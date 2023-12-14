@@ -33,6 +33,9 @@ plugin.setup({
     numbers = function(opts)
       return string.format('%s', opts.raise(opts.ordinal))
     end,
-    mode = 'tabs'
+    mode = 'tabs',
+    truncate_names = false,
+    max_prefix_length = 100,
+    max_name_length = 100
   },
 })
