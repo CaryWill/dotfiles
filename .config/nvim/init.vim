@@ -19,6 +19,7 @@ set laststatus=2
 set smartindent
 set autoread
 set signcolumn=yes
+set colorcolumn=80
 set clipboard+=unnamedplus
 set foldmethod=indent
 set nofoldenable
