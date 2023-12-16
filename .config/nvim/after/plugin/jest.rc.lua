@@ -17,13 +17,14 @@ local config = {
 }
 -- remove whitespaces(like newline and space)
 local jsonConfig = "'" .. vim.fn.json_encode(config) .. "'"
+local jestcmd = "NODE_OPTIONS=--experimental-vm-modules jest --config " .. jsonConfig .. " $file"
 
 require("jester").setup({
-  cmd =
-      "NODE_OPTIONS=--experimental-vm-modules jest --config " .. jsonConfig .. " $file",
+  cmd = jestcmd,
   terminal_cmd = ':FloatermNew'
 })
 
+vim.g.floaterm_autoinsert = false
 vim.g.floaterm_width = 0.9
 vim.g.floaterm_height = 0.9
 -- A for alt key
