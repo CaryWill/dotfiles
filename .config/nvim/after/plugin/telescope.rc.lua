@@ -1,13 +1,11 @@
-local status, plugin = pcall(require, "telescope")
+local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 
-local telescope = require('telescope')
 local actions = require('telescope.actions')
 
 telescope.setup {
   defaults = {
-    file_ignore_patterns = { ".git/", "node_modules/", ".node/", ".vscode/", ".husky/", "package-lock.json",
-      "yarn.lock" },
+    file_ignore_patterns = { ".git/", "node_modules/", ".node/", ".vscode/", ".husky/", "package-lock.json", "yarn.lock" },
     mappings = {
       n = {
         ["q"] = actions.close
@@ -32,10 +30,17 @@ telescope.setup {
         case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
         -- the default case_mode is "smart_case"
       },
-      harpoon = {}
+      harpoon = {},
+      frecency = {
+        show_scores = true,
+        disable_devicons = true
+      }
     }
   }
 }
 
 telescope.load_extension('fzf')
 telescope.load_extension('harpoon')
+
+telescope.load_extension("frecency")
+vim.keymap.set("n", "<leader><leader>", "<Cmd>Telescope frecency workspace=CWD<CR>")
