@@ -27,6 +27,8 @@ npm install -g eslint_d prettier
 # then use the global one
 npm install -g typescript typescript-language-server
 npm install -g eslint
+
+# jest related
 npm install -g jest 
 npm install -g ts-node
 npm install -g ts-jest

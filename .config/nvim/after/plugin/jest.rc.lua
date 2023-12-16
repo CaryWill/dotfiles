@@ -5,7 +5,7 @@
 -- using <A-i> to dismiss it
 require("jester").setup({
   cmd =
-  "NODE_OPTIONS=--experimental-vm-modules npx jest --config=/Users/cary/workspace/github/dotfiles/jest.config.js -t '$result' -- $file",
+  "NODE_OPTIONS=--experimental-vm-modules $(npm bin -g)/jest --config=/Users/cary/workspace/github/dotfiles/jest.config.js $file",
   terminal_cmd = ':FloatermNew'
 })
 

@@ -1,12 +1,7 @@
 const config = {
-  moduleFileExtensions: ["mjs", "js", "cjs", "ts"],
+  moduleFileExtensions: ["js", "cjs", "ts", "mjs"],
   testEnvironment: "node",
-  testMatch: [
-    "*.mjs",
-    "**/tests/**/*.+(ts|js|mjs)",
-    "**/?(*.)+(spec|test).+(ts|js|mjs)",
-  ],
-  // moduleDirectories: ["node_modules", "src", "*"],
+  extensionsToTreatAsEsm: [".ts"],
 };
 
 module.exports = config;

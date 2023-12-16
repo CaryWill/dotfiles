@@ -115,4 +115,4 @@ nnoremap <silent><leader>b7 7<C-w>w
 nnoremap <silent><leader>b8 8<C-w>w
 nnoremap <silent><leader>b9 9<C-w>w
 
-nnoremap <silent><leader>je :lua require"jester".run_file()<CR>
+nnoremap <silent><leader>jj :lua require"jester".run_file()<CR>
