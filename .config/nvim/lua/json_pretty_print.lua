@@ -1,6 +1,8 @@
 -- from below gist link
 -- it would be better if someone convert it into a neovim plugin
 -- https://gist.github.com/smjonas/d5faacaa01cfe8d80075279e221efc83
+-- but i guess i found a repo have the same functionality
+-- https://github.com/tiye/json-lua
 
 --[[
 MIT License
