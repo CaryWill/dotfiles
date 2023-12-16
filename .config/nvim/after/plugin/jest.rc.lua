@@ -24,7 +24,7 @@ require("jester").setup({
   terminal_cmd = ':FloatermNew'
 })
 
-vim.g.floaterm_autoinsert = false
+-- vim.g.floaterm_autoinsert = false
 vim.g.floaterm_width = 0.9
 vim.g.floaterm_height = 0.9
 -- A for alt key
