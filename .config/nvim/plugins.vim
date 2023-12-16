@@ -8,7 +8,6 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim' 
 Plug 'nvim-lua/plenary.nvim' 
 Plug 'nvim-telescope/telescope.nvim'
-" Plug 'smartpde/telescope-recent-files'
 Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/nvim-cmp'
@@ -59,6 +58,8 @@ Plug 'CaryWill/SingleComment.nvim'
 " unit test for jest"
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
+
+Plug 'dstein64/vim-startuptime'
 
 " developing"
 " Plug '/Users/cary/workspace/github/SingleComment.nvim'

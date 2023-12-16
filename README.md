@@ -77,6 +77,7 @@ https://stackoverflow.com/a/47294150
 
 20. NOTE: in order to make it work, add default keyboard ABC instead of US
 21. 我目前使用 iterm2 稳定版本的话，不知道为什么 telescope 默认就打开了。。。，使用 iterm2 nightly 版本就没事
+22. use :StartupTime 来查看插件的性能加载情况
 
 ## TODO
 
