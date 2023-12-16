@@ -115,5 +115,4 @@ nnoremap <silent><leader>b7 7<C-w>w
 nnoremap <silent><leader>b8 8<C-w>w
 nnoremap <silent><leader>b9 9<C-w>w
 
-tnoremap <silent><C-t> <C-\><C-n>:FloatermToggle<CR>
-nnoremap <silent><leader>t :lua require"jester".run_file()<CR>
+nnoremap <silent><leader>je :lua require"jester".run_file()<CR>

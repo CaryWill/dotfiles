@@ -1,3 +1,4 @@
+// @ts-nocheck
 const sum = (a, b) => a + b;
 
 describe("sum module", () => {
