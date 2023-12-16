@@ -28,6 +28,8 @@ npm install -g eslint_d prettier
 npm install -g typescript typescript-language-server
 npm install -g eslint
 npm install -g jest 
+npm install -g ts-node
+npm install -g ts-jest
 
 # 如果这里保留了 vim 和 nvim 的配置位置
 # 可以通过 zshrc 里面添加 alias 来进行配置决定使用 vim 还是 nvim

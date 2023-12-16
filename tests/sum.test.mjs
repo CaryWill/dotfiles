@@ -1,5 +1,5 @@
 // @ts-nocheck
-const sum = (a, b) => a + b;
+import { sum } from "./util";
 
 describe("sum module", () => {
   test("adds 1 + 2 to equal 3", () => {

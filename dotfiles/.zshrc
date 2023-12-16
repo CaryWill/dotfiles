@@ -71,3 +71,4 @@ xp() {
 }
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export NODE_OPTIONS="--experimental-vm-modules"
