@@ -7,8 +7,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim' 
 Plug 'williamboman/mason-lspconfig.nvim' 
 Plug 'nvim-lua/plenary.nvim' 
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
@@ -27,10 +25,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvimdev/lspsaga.nvim'
 Plug 'utilyre/barbecue.nvim'
 Plug 'SmiteshP/nvim-navic'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'keaising/im-select.nvim'
-Plug 'mbbill/undotree'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'lukas-reineke/virt-column.nvim'
@@ -54,6 +50,14 @@ Plug 'echasnovski/mini.comment'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'CaryWill/SingleComment.nvim'
 " Plug '/Users/cary/workspace/SingleComment.nvim'
+
+" Telescope"
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-frecency.nvim'
+Plug 'debugloop/telescope-undo.nvim'
+" Plug 'mbbill/undotree'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'smartpde/telescope-recent-files'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'

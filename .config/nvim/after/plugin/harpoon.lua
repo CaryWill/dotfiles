@@ -4,9 +4,14 @@ if (not status) then return end
 -- REQUIRED
 harpoon:setup()
 
+local function delete()
+  harpoon:list():removeAt(1)
+  vim.fn.feedkeys('dd')
+end
+
 -- use <leader>a to add yourfile as frequntly accessed file
 vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
-vim.keymap.set("n", "<leader>d", function() harpoon:list():remove() end)
+vim.keymap.set("n", "<leader>x", delete)
 vim.keymap.set("n", "<leader>o", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 -- vim.keymap.set("n", "<leader>o", ":Telescope harpoon marks<CR>")
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
