@@ -7,19 +7,20 @@
 -- since jest will use the directory jest.config.js as the rootDir
 -- so here, we will jest use a json object
 -- https://jestjs.io/docs/cli#--configpath
+-- https://jestjs.io/docs/next/configuration
+
 local config = {
   moduleFileExtensions = { "js", "cjs", "ts", "mjs" },
   testEnvironment = "node",
   -- so yourfile should end .ts to make it work with esm
   extensionsToTreatAsEsm = { ".ts" },
 }
-local json = require("json_pretty_print")
 -- remove whitespaces(like newline and space)
-local jsonConfig = json:pretty_print(config):gsub("%s", "")
+local jsonConfig = "'" .. vim.fn.json_encode(config) .. "'"
 
 require("jester").setup({
   cmd =
-      "NODE_OPTIONS=--experimental-vm-modules jest --config " .. "'" .. jsonConfig .. "'" .. " $file",
+      "NODE_OPTIONS=--experimental-vm-modules jest --config " .. jsonConfig .. " $file",
   terminal_cmd = ':FloatermNew'
 })
 
