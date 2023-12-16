@@ -3,9 +3,23 @@
 -- and put it in root test/ folder
 -- then on the test file using <leader>t
 -- using <A-i> to dismiss it
+
+-- since jest will use the directory jest.config.js as the rootDir
+-- so here, we will jest use a json object
+-- https://jestjs.io/docs/cli#--configpath
+local config = {
+  moduleFileExtensions = { "js", "cjs", "ts", "mjs" },
+  testEnvironment = "node",
+  -- so yourfile should end .ts to make it work with esm
+  extensionsToTreatAsEsm = { ".ts" },
+}
+local json = require("json_pretty_print")
+-- remove whitespaces(like newline and space)
+local jsonConfig = json:pretty_print(config):gsub("%s", "")
+
 require("jester").setup({
   cmd =
-  "NODE_OPTIONS=--experimental-vm-modules $(npm bin -g)/jest --config=/Users/cary/workspace/github/dotfiles/jest.config.js $file",
+      "NODE_OPTIONS=--experimental-vm-modules jest --config " .. "'" .. jsonConfig .. "'" .. " $file",
   terminal_cmd = ':FloatermNew'
 })
 
