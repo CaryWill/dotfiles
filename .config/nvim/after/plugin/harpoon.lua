@@ -1,7 +1,6 @@
 local status, harpoon = pcall(require, "harpoon")
 if (not status) then return end
 
--- REQUIRED
 harpoon:setup()
 
 local function delete()
@@ -9,9 +8,16 @@ local function delete()
   vim.fn.feedkeys('dd')
 end
 
+-- set buffer specific key mapping
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "harpoon" },
+  callback = function()
+    vim.keymap.set("n", "<leader>x", delete, { buffer = true })
+  end
+})
+
 -- use <leader>a to add yourfile as frequntly accessed file
 vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
-vim.keymap.set("n", "<leader>x", delete)
 vim.keymap.set("n", "<leader>o", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 -- vim.keymap.set("n", "<leader>o", ":Telescope harpoon marks<CR>")
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
