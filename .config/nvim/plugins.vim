@@ -11,6 +11,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'nvimdev/lspsaga.nvim'
 Plug 'j-hui/fidget.nvim'
+" Plug 'onsails/lspkind.nvim'
 
 " winbar/statusline/tab"
 Plug 'utilyre/barbecue.nvim'
