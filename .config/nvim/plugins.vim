@@ -55,7 +55,7 @@ Plug 'CaryWill/SingleComment.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'debugloop/telescope-undo.nvim'
-" Plug 'mbbill/undotree'
+Plug 'mbbill/undotree'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'smartpde/telescope-recent-files'
 Plug 'axkirillov/easypick.nvim'
