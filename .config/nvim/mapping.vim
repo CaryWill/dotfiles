@@ -117,3 +117,5 @@ nnoremap <silent><leader>b8 8<C-w>w
 nnoremap <silent><leader>b9 9<C-w>w
 
 nnoremap <silent><leader>je :lua require"jester".run_file()<CR>
+
+cnoremap perf StartupTime

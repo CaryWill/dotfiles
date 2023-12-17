@@ -40,11 +40,11 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'nvim-treesitter/playground'
-Plug 'echasnovski/mini.indentscope'
-Plug 'echasnovski/mini.pairs'
-Plug 'echasnovski/mini.surround'
-Plug 'echasnovski/mini.ai'
-Plug 'echasnovski/mini.comment'
+" Plug 'echasnovski/mini.indentscope'
+" Plug 'echasnovski/mini.pairs'
+" Plug 'echasnovski/mini.surround'
+" Plug 'echasnovski/mini.ai'
+" Plug 'echasnovski/mini.comment'
 
 " comment "
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -54,18 +54,17 @@ Plug 'CaryWill/SingleComment.nvim'
 " Telescope"
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-frecency.nvim'
-Plug 'debugloop/telescope-undo.nvim'
+" Plug 'debugloop/telescope-undo.nvim'
 Plug 'mbbill/undotree'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'smartpde/telescope-recent-files'
-Plug 'axkirillov/easypick.nvim'
+" Plug 'smartpde/telescope-recent-files'
+" Plug 'axkirillov/easypick.nvim'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
 
 Plug 'dstein64/vim-startuptime'
-
 " developing"
 " Plug '/Users/cary/workspace/github/SingleComment.nvim'
 " Plug '/Users/cary/workspace/mini.comment'
