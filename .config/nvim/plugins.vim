@@ -10,6 +10,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'nvimdev/lspsaga.nvim'
+Plug 'j-hui/fidget.nvim'
 
 " winbar/statusline/tab"
 Plug 'utilyre/barbecue.nvim'
@@ -87,5 +88,8 @@ Plug 'voldikss/vim-floaterm'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'
+
+" virtual text"
+" Plug 'soulis-1256/hoverhints.nvim'
 
 call plug#end()
