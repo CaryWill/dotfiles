@@ -1,3 +1,4 @@
+-- https://github.com/stevearc/conform.nvim#formatters
 local status, plugin = pcall(require, "conform")
 if (not status) then return end
 
@@ -6,11 +7,17 @@ plugin.setup({
   formatters_by_ft = {
     -- Conform will run multiple formatters sequentially
     -- Use a sub-list to run only the first available formatter
-    javascript = { { "prettier", "eslint" } },
-    typescript = { { "prettier", "eslint" } },
-    typescriptreact = { { "prettier", "eslint" } },
-    javascriptreact = { { "prettier", "eslint" } },
-    -- ["*"] = { { "prettier" } }
+    javascript = { { "prettierd", "eslint_d" } },
+    typescript = { { "prettierd", "eslint_d" } },
+    typescriptreact = { { "prettierd", "eslint_d" } },
+    javascriptreact = { { "prettierd", "eslint_d" } },
+
+    -- Use the "*" filetype to run formatters on all filetypes.
+    -- ["*"] = { { "prettier" } },
+
+    -- Use the "_" filetype to run formatters on filetypes that don't
+    -- have other formatters configured.
+    ["_"] = { "trim_whitespace" },
   },
   format_on_save = function(bufnr)
     -- Disable with a global or buffer-local variable
@@ -19,6 +26,9 @@ plugin.setup({
     end
     return { timeout_ms = 500, lsp_fallback = true }
   end,
+  format_after_save = {
+    lsp_fallback = true,
+  },
 })
 
 vim.api.nvim_create_user_command("FormatDisable", function(args)
