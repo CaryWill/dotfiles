@@ -58,6 +58,7 @@ Plug 'debugloop/telescope-undo.nvim'
 " Plug 'mbbill/undotree'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'smartpde/telescope-recent-files'
+Plug 'axkirillov/easypick.nvim'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'

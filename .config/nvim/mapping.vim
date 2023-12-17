@@ -102,8 +102,8 @@ tnoremap <silent>;q <C-\><C-n>
 cnoremap G DiffviewOpen
 
 " undotree"
-" nnoremap <silent><leader>u :UndotreeToggle<CR>
-nnoremap <silent><leader>u <cmd>Telescope undo<cr>
+nnoremap <silent><leader>u :UndotreeToggle<CR>
+" nnoremap <silent><leader>u <cmd>Telescope undo<cr>
 
 " buffer switch by number, <leader>b3 -> 3 <c-w> <c-w>
 nnoremap <silent><leader>b1 1<C-w>w
