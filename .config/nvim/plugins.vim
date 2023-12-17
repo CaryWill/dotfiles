@@ -85,4 +85,7 @@ Plug 'voldikss/vim-floaterm'
 " Plug '/Users/cary/workspace/github/SingleComment.nvim'
 " Plug '/Users/cary/workspace/mini.comment'
 
+" ai"
+" Plug 'jpmcb/nvim-llama'
+
 call plug#end()
