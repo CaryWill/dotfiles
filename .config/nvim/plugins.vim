@@ -30,8 +30,12 @@ Plug 'stevearc/conform.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'pappasam/papercolor-theme-slim'
 Plug 'psliwka/vim-smoothie'
+
+" color theme
+Plug 'pappasam/papercolor-theme-slim'
+Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
+" Plug 'sainnhe/gruvbox-material'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'dstein64/vim-startuptime'
