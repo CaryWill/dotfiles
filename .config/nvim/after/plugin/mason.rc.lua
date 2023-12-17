@@ -5,11 +5,10 @@ if (not status) then return end
 
 plugin.setup({})
 
-local status, plugin2 = pcall(require, "mason-lspconfig")
-if (not status) then return end
+local status2, plugin2 = pcall(require, "mason-lspconfig")
+if (not status2) then return end
 
 plugin2.setup {
   ensure_installed = { "vimls", "tsserver", "eslint", "lua_ls", "stylelint_lsp", "cssls" },
   automatic_installation = true
 }
-
