@@ -15,6 +15,10 @@ plugin.setup {
       return vim.b.large_buf
     end,
   },
+  -- nvim-ts-autotag
+  autotag = {
+    enable = true,
+  },
   ensure_installed = {
     "bash",
     "c",
