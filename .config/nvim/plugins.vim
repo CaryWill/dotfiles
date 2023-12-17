@@ -23,7 +23,6 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 
 " buffer"
-Plug 'lewis6991/gitsigns.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 
 " other"
@@ -42,6 +41,10 @@ Plug 'psliwka/vim-smoothie'
 " Plug 'chentoast/marks.nvim'
 " Plug nvim-pack/nvim-spectre
 " Plug 'tpope/vim-fugitive'
+
+" Git"
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'f-person/git-blame.nvim'
 
 " treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
