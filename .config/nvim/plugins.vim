@@ -1,6 +1,5 @@
 
 call plug#begin(stdpath('data') . '/plugged')
-" Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neovim/nvim-lspconfig'
@@ -34,14 +33,16 @@ Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'j-hui/fidget.nvim'
 " Plug 'chentoast/marks.nvim'
 " Plug nvim-pack/nvim-spectre
+" Plug 'tpope/vim-fugitive'
 
 " treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'nvim-treesitter/playground'
-" Plug 'echasnovski/mini.indentscope'
-" Plug 'echasnovski/mini.pairs'
+Plug 'echasnovski/mini.indentscope'
+Plug 'echasnovski/mini.pairs'
+Plug 'dstein64/vim-startuptime'
 " Plug 'echasnovski/mini.surround'
 " Plug 'echasnovski/mini.ai'
 " Plug 'echasnovski/mini.comment'
@@ -54,17 +55,16 @@ Plug 'CaryWill/SingleComment.nvim'
 " Telescope"
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-frecency.nvim'
-" Plug 'debugloop/telescope-undo.nvim'
 Plug 'mbbill/undotree'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Plug 'smartpde/telescope-recent-files'
 " Plug 'axkirillov/easypick.nvim'
+" Plug 'debugloop/telescope-undo.nvim'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
 
-Plug 'dstein64/vim-startuptime'
 " developing"
 " Plug '/Users/cary/workspace/github/SingleComment.nvim'
 " Plug '/Users/cary/workspace/mini.comment'
