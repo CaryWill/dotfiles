@@ -55,7 +55,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'echasnovski/mini.indentscope'
-" Plug 'echasnovski/mini.pairs'
+Plug 'echasnovski/mini.pairs'
 " Plug 'nvim-treesitter/playground'
 " Plug 'echasnovski/mini.surround'
 " Plug 'echasnovski/mini.ai'
