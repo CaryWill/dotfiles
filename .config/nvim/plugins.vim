@@ -34,8 +34,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 
 " color theme
-Plug 'pappasam/papercolor-theme-slim'
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
+" Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Plug 'Bekaboo/deadcolumn.nvim'
@@ -74,7 +74,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'mbbill/undotree'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 " Plug 'nvim-telescope/telescope-frecency.nvim'
-" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Plug 'smartpde/telescope-recent-files'
 " Plug 'axkirillov/easypick.nvim'
 " Plug 'debugloop/telescope-undo.nvim'
@@ -82,10 +82,6 @@ Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 " unit test for jest"
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
-
-" developing"
-" Plug '/Users/cary/workspace/github/SingleComment.nvim'
-" Plug '/Users/cary/workspace/mini.comment'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'

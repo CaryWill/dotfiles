@@ -22,10 +22,6 @@ plugin.setup({
       reveal = { 'close' }
     },
     highlights = {
-      buffer_selected = {
-        bold = false,
-        italic = false,
-      },
     },
     indicator = {
       style = 'underline',
@@ -36,6 +32,10 @@ plugin.setup({
     mode = 'tabs',
     truncate_names = false,
     max_prefix_length = 100,
-    max_name_length = 100
+    max_name_length = 100,
+    show_buffer_icons = false,
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    show_tab_indicators = false
   },
 })
