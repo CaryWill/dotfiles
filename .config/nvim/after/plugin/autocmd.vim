@@ -13,3 +13,4 @@ autocmd FileType neo-tree nnoremap <buffer> = 30<C-w>\|
 " neo-tree, but use indent for other file types
 " https://github.com/MunifTanjim/nui.nvim/blob/c9b4de623d19a85b353ff70d2ae9c77143abe69c/lua/nui/tree/init.lua#L206
 " autocmd BufEnter * if &filetype != 'neo-tree' | set foldmethod=indent | endif
+" either ditch nui and use other plugin
