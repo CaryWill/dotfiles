@@ -1,5 +1,5 @@
 scriptencoding utf-8
-lang en_US.UTF-8
+" lang en_US.UTF-8
 syntax on
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
