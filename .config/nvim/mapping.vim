@@ -93,7 +93,7 @@ tnoremap <silent>;q <C-\><C-n>
 
 " Git diff"
 " cnoremap G DiffviewOpen
-cnoremap G tabnew diffview \| Git \| only <CR>
+cnoremap G tabnew diffview \| Git \| only
 
 " undotree"
 nnoremap <silent><leader>u :UndotreeToggle<CR>
