@@ -30,7 +30,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 " other"
 Plug 'stevearc/conform.nvim'
 Plug 'keaising/im-select.nvim'
-Plug 'sindrets/diffview.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 
@@ -46,11 +45,12 @@ Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Plug 'j-hui/fidget.nvim'
 " Plug 'chentoast/marks.nvim'
 " Plug nvim-pack/nvim-spectre
-" Plug 'tpope/vim-fugitive'
 
 " Git"
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
+Plug 'tpope/vim-fugitive'
+" Plug 'sindrets/diffview.nvim'
 
 " treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
