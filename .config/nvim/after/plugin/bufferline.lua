@@ -10,7 +10,8 @@ plugin.setup({
     always_show_bufferline = false,
     offsets = {
       {
-        filetype = "neo-tree",
+        filetype = "NvimTree",
+        -- filetype = "neo-tree",
         text = "File-explorer",
         highlight = "Directory",
         text_align = "left",

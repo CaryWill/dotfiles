@@ -20,3 +20,5 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+-- TODO auto focus buffer on tree node
