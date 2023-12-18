@@ -49,8 +49,8 @@ Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Git"
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
-Plug 'tpope/vim-fugitive'
-" Plug 'sindrets/diffview.nvim'
+" Plug 'tpope/vim-fugitive'
+Plug 'sindrets/diffview.nvim'
 
 " treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
@@ -58,7 +58,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'echasnovski/mini.indentscope'
 Plug 'echasnovski/mini.pairs'
-" Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/playground'
 " Plug 'echasnovski/mini.surround'
 " Plug 'echasnovski/mini.ai'
 " Plug 'echasnovski/mini.comment'

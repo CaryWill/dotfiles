@@ -16,3 +16,12 @@
 
 " 为了支持 iterm 的背景图片"
 " hi Normal guibg=NONE ctermbg=NONE
+"
+" DiffviewFilePanel
+" use :Inspect to see the highlight group
+" and it seems like you need to set both fg and bg
+" otherwise it will not work
+hi DiffviewStatusUntracked guibg=NONE guifg=#f6c0c0
+hi DiffviewStatusModified guibg=NONE guifg=#f6c0c0
+hi DiffviewFilePanelDeletions guibg=NONE guifg=#f6c0c0
+hi DiffviewFilePanelInsertions guibg=NONE guifg=#f6c0c0
