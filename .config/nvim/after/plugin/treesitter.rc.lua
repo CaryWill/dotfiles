@@ -21,6 +21,8 @@ plugin.setup {
   },
   -- you can jump to the start of the enclosing function or class
   -- using  nvim-treesitter/nvim-treesitter-textobjects this plugin
+  -- in js, if it's not arrow function then you can jump to the name
+  -- of the function and you can use gr to see the referneces
   textobjects = {
     move = {
       enable = true,
