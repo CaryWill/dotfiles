@@ -8,6 +8,7 @@ local previewers_utils = require('telescope.previewers.utils')
 
 -- Faster preview large file
 -- current condition: preview large file stucks
+-- https://github.com/nvim-telescope/telescope.nvim/issues/623#issuecomment-853164470
 local max_size = 100000
 local truncate_large_files = function(filepath, bufnr, opts)
   opts = opts or {}
