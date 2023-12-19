@@ -84,6 +84,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     files_first = false,
   },
   view = {
+    adaptive_size = true,
     centralize_selection = false,
     cursorline = true,
     debounce_delay = 100,
@@ -117,7 +118,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     highlight_git = false,
     highlight_diagnostics = true,
     highlight_opened_files = "none",
-    highlight_modified = "none",
+    highlight_modified = "name",
     highlight_bookmarks = "none",
     highlight_clipboard = "name",
     indent_markers = {
@@ -142,7 +143,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           color = true,
         },
       },
-      git_placement = "before",
+      git_placement = "after",
       modified_placement = "after",
       diagnostics_placement = "after",
       bookmarks_placement = "after",
