@@ -118,6 +118,15 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           deleted = "",
           ignored = "◌",
         },
+        -- git = {
+        -- ed = "M",
+        --  = "A",
+        -- ed = "=",
+        -- d = "R",
+        -- ked = "U",
+        -- d = "D",
+        -- d = "I",
+        --
       },
     },
   },
@@ -159,7 +168,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     },
   },
   modified = {
-    enable = false,
+    enable = true,
     show_on_dirs = true,
     show_on_open_dirs = true,
   },
@@ -257,4 +266,41 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       watcher = false,
     },
   },
+  -- TODO: you need to config it via on_attach fn
+  -- see the help file, :h nvim-tree
+  -- mappings = {
+  --   list = {
+  --     -- add keymapping
+  --     { key = "<C-s>", action = "split" },
+  --     { key = "<C-v>", action = "vsplit" },
+  --     { key = "<C-t>", action = "tabnew" },
+  --     { key = "d",     action = "cd" },
+  --     { key = "u",     action = "dir_up" },
+  --     { key = "D",     action = "trash" },
+  --     { key = "m",     action = "cut" },
+  --     { key = "p",     action = "paste" },
+  --     { key = "r",     action = "rename" },
+  --     { key = "c",     action = "copy" },
+  --     { key = "o",     action = "system_open" },
+  --     { key = "a",     action = "create" },
+  --     { key = "y",     action = "copy_absolute_path" },
+  --     { key = "R",     action = "refresh" },
+  --     { key = ".",     action = "toggle_dotfiles" },
+  --     -- remove keymapping
+  --     { key = "-",     action = "" },
+  --     { key = "+",     action = "" },
+  --     { key = "=",     action = "" },
+  --     { key = "I",     action = "" },
+  --     { key = "<C-x>", action = "" },
+  --     { key = "x",     action = "" },
+  --     { key = "s",     action = "" },
+  --     { key = "gy",    action = "" },
+  --     { key = "f",     action = "" },
+  --   }
+  -- }
 }
+
+-- nnoremap <silent>fi :NvimTreeFindFileToggle<CR>
+-- autocmd FileType NvimTree nnoremap <buffer> + :NvimTreeResize +20<CR>
+-- autocmd FileType NvimTree nnoremap <buffer> - :NvimTreeResize -20<CR>
+-- autocmd FileType NvimTree nnoremap <buffer> = :NvimTreeResize 30<CR>

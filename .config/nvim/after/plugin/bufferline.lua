@@ -22,8 +22,6 @@ plugin.setup({
       delay = 100,
       reveal = { 'close' }
     },
-    highlights = {
-    },
     indicator = {
       style = 'underline',
     },
