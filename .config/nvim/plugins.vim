@@ -74,7 +74,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'mbbill/undotree'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
-" Plug 'nvim-telescope/telescope-frecency.nvim'
+Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Plug 'smartpde/telescope-recent-files'
 " Plug 'axkirillov/easypick.nvim'

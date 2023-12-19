@@ -29,10 +29,10 @@ telescope.setup {
       },
       -- undo = {},
       harpoon = {},
-      -- frecency = {
-      --   show_scores = true,
-      --   disable_devicons = true
-      -- },
+      frecency = {
+        show_scores = true,
+        disable_devicons = true
+      },
       -- recent_files = {
       --   only_cwd = true
       -- }
@@ -41,10 +41,10 @@ telescope.setup {
 }
 
 -- telescope.load_extension('harpoon')
--- telescope.load_extension("frecency")
+telescope.load_extension("frecency")
 telescope.load_extension('fzf')
 -- telescope.load_extension("undo")
 -- telescope.load_extension("recent_files")
 
--- vim.keymap.set("n", "<leader><leader>", "<Cmd>Telescope frecency workspace=CWD<CR>")
+vim.keymap.set("n", "<leader><leader>", "<Cmd>Telescope frecency workspace=CWD<CR>")
 -- vim.keymap.set("n", "<leader><leader>", "<Cmd>lua require('telescope').extensions.recent_files.pick()<CR>")
