@@ -28,5 +28,7 @@ require("jester").setup({
 vim.g.floaterm_width = 0.9
 vim.g.floaterm_height = 0.9
 -- A for alt key
+-- TODO: can have a autocmd filetype
+-- since for now it's only for js file type
 vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>FloatermToggle<CR>')
 vim.keymap.set('t', '<Leader>t', '<C-\\><C-n><CMD>FloatermToggle<CR>')
