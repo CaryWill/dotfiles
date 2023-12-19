@@ -32,8 +32,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'C', api.tree.toggle_git_clean_filter, opts('Toggle Filter: Git Clean'))
   vim.keymap.set('n', '[c', api.node.navigate.git.prev, opts('Prev Git'))
   vim.keymap.set('n', ']c', api.node.navigate.git.next, opts('Next Git'))
-  vim.keymap.set('n', 'd', api.fs.remove, opts('Delete'))
-  vim.keymap.set('n', 'D', api.fs.trash, opts('Trash'))
+  vim.keymap.set('n', 'D', api.fs.remove, opts('Delete'))
+  vim.keymap.set('n', 'd', api.fs.trash, opts('Trash'))
   vim.keymap.set('n', 'E', api.tree.expand_all, opts('Expand All'))
   vim.keymap.set('n', 'e', api.fs.rename_basename, opts('Rename: Basename'))
   vim.keymap.set('n', ']e', api.node.navigate.diagnostics.next, opts('Next Diagnostic'))
@@ -86,7 +86,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   view = {
     centralize_selection = false,
     cursorline = true,
-    debounce_delay = 15,
+    debounce_delay = 100,
     side = "left",
     preserve_window_proportions = false,
     number = false,
@@ -107,7 +107,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     },
   },
   renderer = {
-    add_trailing = false,
+    add_trailing = true,
     group_empty = false,
     full_name = false,
     root_folder_label = ":~:s?$?/..?",
@@ -142,7 +142,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           color = true,
         },
       },
-      git_placement = "after",
+      git_placement = "before",
       modified_placement = "after",
       diagnostics_placement = "after",
       bookmarks_placement = "after",
@@ -199,7 +199,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   },
   update_focused_file = {
     enable = true,
-    update_root = false,
+    update_root = true,
     ignore_list = {},
   },
   system_open = {
@@ -249,7 +249,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   },
   filesystem_watchers = {
     enable = true,
-    debounce_delay = 50,
+    debounce_delay = 100,
     ignore_dirs = {},
   },
   actions = {
