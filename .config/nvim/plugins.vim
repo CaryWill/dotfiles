@@ -20,8 +20,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 
 " tree"
-" Plug 'nvim-neo-tree/neo-tree.nvim'
-" Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 
