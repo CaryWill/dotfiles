@@ -15,6 +15,7 @@ hi DiffviewStatusUntracked guibg=NONE guifg=#f6c0c0
 hi DiffviewStatusModified guibg=NONE guifg=#f6c0c0
 hi DiffviewFilePanelDeletions guibg=NONE guifg=#f6c0c0
 hi DiffviewFilePanelInsertions guibg=NONE guifg=#f6c0c0
+hi DiffviewStatusAdded guibg=NONE guifg=#f6c0c0
 
 " nvim-tree"
 hi NvimTreeBookmark guibg=NONE guifg=#f6c0c0
