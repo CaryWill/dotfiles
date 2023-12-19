@@ -23,6 +23,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'vsnip' },
     {
       name = 'buffer',
       option = {
@@ -31,7 +32,8 @@ cmp.setup({
         end
       }
     },
-    { name = 'path' }
+    { name = 'path' },
+    { name = 'luasnip' }
   }),
   -- https://github.com/hrsh7th/nvim-cmp/issues/980
   formatting = {
