@@ -11,13 +11,11 @@ plugin.setup({
     typescript = { { "prettierd", "eslint_d" } },
     typescriptreact = { { "prettierd", "eslint_d" } },
     javascriptreact = { { "prettierd", "eslint_d" } },
-
     -- Use the "*" filetype to run formatters on all filetypes.
     -- ["*"] = { { "prettier" } },
-
     -- Use the "_" filetype to run formatters on filetypes that don't
     -- have other formatters configured.
-    ["_"] = { "trim_whitespace" },
+    -- ["_"] = { "trim_whitespace" },
   },
   format_on_save = function(bufnr)
     -- Disable with a global or buffer-local variable

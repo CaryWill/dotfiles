@@ -11,4 +11,6 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
   end
 end, { silent = true })
 
+-- https://github.com/rafamadriz/friendly-snippets/wiki/Javascript,-Typescript,-Javascriptreact,-Typescriptreact
+-- load pre defined snippets
 require("luasnip.loaders.from_vscode").lazy_load()
