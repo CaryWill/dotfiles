@@ -19,6 +19,17 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>k', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
   vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
   vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
+
+  -- formatting
+  -- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
+  -- https://www.reddit.com/r/neovim/comments/122q5we/how_to_disable_builtin_formatter_from_lsp_in/
+  -- NOTE: enable formatting
+  -- but i dont know why, like does prettier and tsserver
+  -- both formatting?
+  if client.name == "tsserver" then
+    client.server_capabilities.documentFormattingProvider = true
+    client.server_capabilities.documentRangeFormattingProvider = true
+  end
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
