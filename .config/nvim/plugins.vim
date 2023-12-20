@@ -16,7 +16,7 @@ Plug 'j-hui/fidget.nvim'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 Plug 'rafamadriz/friendly-snippets'
 Plug 'saadparwaiz1/cmp_luasnip'
-" Plug 'onsails/lspkind.nvim'
+Plug 'onsails/lspkind.nvim'
 
 " winbar/statusline/tab"
 Plug 'utilyre/barbecue.nvim'

@@ -1,2 +1,1 @@
-const App = () => {
-}
+const App = () => {};
