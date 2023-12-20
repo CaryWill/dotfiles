@@ -13,10 +13,10 @@ Plug 'j-hui/fidget.nvim'
 
 " snipets"
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
+Plug 'rafamadriz/friendly-snippets'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/cmp-vsnip'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'onsails/lspkind.nvim'
 
 " winbar/statusline/tab"

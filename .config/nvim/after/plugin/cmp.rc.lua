@@ -6,9 +6,12 @@ local MAX_LABEL_WIDTH = 30
 local MIN_LABEL_WIDTH = 20
 
 cmp.setup({
+  completion = {
+    completeopt = "menu,menuone,noinsert",
+  },
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      vim.fn["vsnip#anonymous"](args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -23,7 +26,6 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' },
     {
       name = 'buffer',
       option = {
@@ -33,7 +35,7 @@ cmp.setup({
       }
     },
     { name = 'path' },
-    { name = 'luasnip' }
+    { name = 'vsnip' }
   }),
   -- https://github.com/hrsh7th/nvim-cmp/issues/980
   formatting = {
