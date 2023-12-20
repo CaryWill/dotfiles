@@ -11,7 +11,7 @@ cmp.setup({
   },
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      require 'luasnip'.lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -35,7 +35,7 @@ cmp.setup({
       }
     },
     { name = 'path' },
-    { name = 'vsnip' }
+    { name = 'luasnip' }
   }),
   -- https://github.com/hrsh7th/nvim-cmp/issues/980
   formatting = {
