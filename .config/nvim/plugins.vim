@@ -92,7 +92,7 @@ Plug 'voldikss/vim-floaterm'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 " virtual text"
 " Plug 'soulis-1256/hoverhints.nvim'
