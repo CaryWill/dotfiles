@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
   -- https://www.reddit.com/r/neovim/comments/122q5we/how_to_disable_builtin_formatter_from_lsp_in/
   -- NOTE: enable formatting
   -- but i dont know why, like does prettier and tsserver
-  -- both formatting?
+  -- both formatting? try use NullInfo
   if client.name == "tsserver" then
     client.server_capabilities.documentFormattingProvider = true
     client.server_capabilities.documentRangeFormattingProvider = true
