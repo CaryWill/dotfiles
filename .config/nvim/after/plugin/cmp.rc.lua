@@ -6,7 +6,7 @@ if (not status2) then return end
 
 cmp.setup({
   completion = {
-    completeopt = "menu,menuone,noinsert",
+    -- completeopt = "menu,menuone,noinsert",
   },
   snippet = {
     expand = function(args)

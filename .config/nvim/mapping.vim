@@ -95,7 +95,6 @@ tnoremap <silent>;q <C-\><C-n>
 
 " Git diff"
 " diff with last commit"
-cnoremap G DiffviewOpen
 nnoremap <silent><leader>g :DiffviewOpen<CR>
 " see all the changes, diff with master
 " just like the def platform CR changes
