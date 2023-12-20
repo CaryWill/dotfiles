@@ -84,7 +84,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     files_first = false,
   },
   view = {
-    adaptive_size = true,
+    -- adaptive_size = true,
     centralize_selection = false,
     cursorline = true,
     debounce_delay = 100,

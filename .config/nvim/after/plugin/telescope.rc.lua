@@ -53,7 +53,10 @@ telescope.setup {
       harpoon = {},
       frecency = {
         show_scores = true,
-        disable_devicons = true
+        disable_devicons = true,
+        ignore_patterns = {
+          "node_modules/"
+        }
       },
       -- recent_files = {
       --   only_cwd = true
