@@ -37,6 +37,7 @@ Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
+" Plug 'folke/todo-comments.nvim'
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
@@ -91,6 +92,7 @@ Plug 'voldikss/vim-floaterm'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 " virtual text"
 " Plug 'soulis-1256/hoverhints.nvim'

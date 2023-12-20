@@ -35,7 +35,9 @@ cmp.setup({
       }
     },
     { name = 'path' },
-    { name = 'luasnip' }
+    { name = 'luasnip',    option = { use_show_condition = false } },
+    { name = 'cmdline' },
+    { name = 'cmp_tabnine' },
   }),
   -- https://github.com/hrsh7th/nvim-cmp/issues/980
   formatting = {
