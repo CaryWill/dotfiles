@@ -21,5 +21,6 @@ hi DiffviewStatusAdded guibg=NONE guifg=#f6c0c0
 hi NvimTreeBookmark guibg=NONE guifg=#f6c0c0
 hi NvimTreeExecFile gui=bold guibg=NONE guifg=#f6c0c0
 hi NvimTreeModifiedFile guibg=NONE guifg=#f6c0c0
+hi DiffviewStatusDeleted guibg=NONE guifg=#f6c0c0
 
 "bufferlnie"
