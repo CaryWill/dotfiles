@@ -55,3 +55,19 @@ vim.api.nvim_create_user_command("Format", function(args)
   end
   require("conform").format({ async = true, lsp_fallback = true, range = range })
 end, { range = true })
+
+-- TODO: 发现如果写死 start_row 和 end_row 就可以，但是上面的 Format 还是不对
+-- 它还是会格式化所有的东西, 但是 vscode 的都行，不论是 tsc 还是 prettier
+local range_formatting = function()
+  local start_row, _ = unpack(vim.api.nvim_buf_get_mark(0, "<"))
+  local end_row, _ = unpack(vim.api.nvim_buf_get_mark(0, ">"))
+  vim.lsp.buf.format({
+    range = {
+      ["start"] = { start_row, 0 },
+      ["end"] = { end_row, 0 },
+    },
+    async = true,
+  })
+end
+
+-- vim.keymap.set("v", "<leader>f", range_formatting, { desc = "Range Formatting" })
