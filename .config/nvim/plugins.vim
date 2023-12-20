@@ -36,6 +36,7 @@ Plug 'stevearc/conform.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
+Plug 'RRethy/vim-illuminate'
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
