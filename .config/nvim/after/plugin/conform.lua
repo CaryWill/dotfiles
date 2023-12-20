@@ -24,9 +24,6 @@ plugin.setup({
     end
     return { timeout_ms = 500, lsp_fallback = true }
   end,
-  format_after_save = {
-    lsp_fallback = true,
-  },
 })
 
 vim.api.nvim_create_user_command("FormatDisable", function(args)
