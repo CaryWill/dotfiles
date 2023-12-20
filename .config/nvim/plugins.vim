@@ -41,10 +41,10 @@ Plug 'RRethy/vim-illuminate'
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
+Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-" Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'dstein64/vim-startuptime'
 " Plug 'lukas-reineke/virt-column.nvim'
 " Plug 'folke/neodev.nvim'
