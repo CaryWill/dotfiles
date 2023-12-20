@@ -33,11 +33,12 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " other"
 Plug 'stevearc/conform.nvim'
+Plug 'nvimtools/none-ls.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Plug 'folke/todo-comments.nvim'
 
 " color theme

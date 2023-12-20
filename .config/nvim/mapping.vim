@@ -33,7 +33,7 @@ nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
 nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
 
 nnoremap <leader>f <cmd>:Format<CR>
-vnoremap <leader>f <cmd>:Format<CR>
+" vnoremap <leader>f <cmd>:Format<CR>
 nnoremap <leader>df <cmd>:FormatDisable<CR>
 nnoremap <leader>ef <cmd>:FormatEnable<CR>
 nnoremap <leader>ff <cmd>:EslintFixAll<CR>

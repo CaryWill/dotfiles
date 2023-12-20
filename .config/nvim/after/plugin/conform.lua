@@ -7,23 +7,23 @@ plugin.setup({
   formatters_by_ft = {
     -- Conform will run multiple formatters sequentially
     -- Use a sub-list to run only the first available formatter
-    javascript = { { "prettier", "eslint_d" } },
-    typescript = { { "prettier", "eslint_d" } },
-    typescriptreact = { { "prettier", "eslint_d" } },
-    javascriptreact = { { "prettier", "eslint_d" } },
+    javascript = { { "prettier" } },
+    typescript = { { "prettier" } },
+    typescriptreact = { { "prettier" } },
+    javascriptreact = { { "prettier" } },
     -- Use the "*" filetype to run formatters on all filetypes.
     -- ["*"] = { { "prettier" } },
     -- Use the "_" filetype to run formatters on filetypes that don't
     -- have other formatters configured.
     ["_"] = { "trim_whitespace" },
   },
-  format_on_save = function(bufnr)
-    -- Disable with a global or buffer-local variable
-    if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-      return
-    end
-    return { timeout_ms = 500, lsp_fallback = true }
-  end,
+  -- format_on_save = function(bufnr)
+  --   -- Disable with a global or buffer-local variable
+  --   if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+  --     return
+  --   end
+  --   return { timeout_ms = 500, lsp_fallback = true }
+  -- end,
 })
 
 vim.api.nvim_create_user_command("FormatDisable", function(args)
@@ -69,5 +69,4 @@ local range_formatting = function()
     async = true,
   })
 end
-
--- vim.keymap.set("v", "<leader>f", range_formatting, { desc = "Range Formatting" })
+vim.keymap.set("v", "<leader>f", range_formatting, { desc = "Range Formatting" })
