@@ -7,8 +7,11 @@ end
 
 -- 来自https://github.com/MunifTanjim/prettier.nvim
 -- 但是好像不用装这个插件也行, 然后就可以直接 range formatting 了
--- TODO: 但是我发现好像有时候还是有问题，这个好像是因为 lsp 返回的值的原因
+-- 但是我发现好像有时候还是有问题，这个好像是因为 lsp 返回的值的原因
 -- 后面对比下 vscode 吧，但是怎么可以默认 range format 的时候用 tsserver 呢
+-- 我看了下如果是 jsx 的片段，我用 vscode 也是这样，如果有两个地方修改了缩进
+-- 但是我选中了一个地方进行格式化，vscode 会将两个地方都格式化，所以这个应该
+-- 还是 lsp 的问题
 null_ls.setup({
 	-- debug = true,
 	-- NOTE: if you have problem with speed then use _d
