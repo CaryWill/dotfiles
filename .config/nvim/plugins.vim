@@ -32,12 +32,13 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
 
 " other"
-Plug 'stevearc/conform.nvim'
+" Plug 'stevearc/conform.nvim'
 Plug 'nvimtools/none-ls.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
+" Plug 'MunifTanjim/prettier.nvim'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Plug 'folke/todo-comments.nvim'
 

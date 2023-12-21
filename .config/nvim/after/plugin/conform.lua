@@ -69,4 +69,4 @@ local range_formatting = function()
     async = true,
   })
 end
-vim.keymap.set("v", "<leader>f", range_formatting, { desc = "Range Formatting" })
+-- vim.keymap.set("v", "<leader>f", range_formatting, { desc = "Range Formatting" })

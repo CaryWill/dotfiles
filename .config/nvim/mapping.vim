@@ -20,8 +20,6 @@ nnoremap <silent><leader>q :q<CR>
 " Select all
 nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
-" nnoremap <leader>f :Neoformat<CR>
-" nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
 
 "Telescope
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
@@ -32,15 +30,18 @@ nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
 nnoremap <leader>? <cmd>lua require('telescope.builtin').oldfiles()<CR>
 
-nnoremap <leader>f <cmd>:Format<CR>
+" conform plugin"
+" nnoremap <leader>f <cmd>:Format<CR>
 " vnoremap <leader>f <cmd>:Format<CR>
-nnoremap <leader>df <cmd>:FormatDisable<CR>
-nnoremap <leader>ef <cmd>:FormatEnable<CR>
-nnoremap <leader>ff <cmd>:EslintFixAll<CR>
-" nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
-" nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
+" nnoremap <leader>df <cmd>:FormatDisable<CR>
+" nnoremap <leader>ef <cmd>:FormatEnable<CR>
+" nnoremap <leader>f :Neoformat<CR>
+" nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
 
 " Lsp
+" nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
+" nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
+nnoremap <leader>ff <cmd>:EslintFixAll<CR>
 nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
 nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>

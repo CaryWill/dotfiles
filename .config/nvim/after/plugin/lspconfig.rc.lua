@@ -23,13 +23,10 @@ local on_attach = function(client, bufnr)
   -- formatting
   -- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
   -- https://www.reddit.com/r/neovim/comments/122q5we/how_to_disable_builtin_formatter_from_lsp_in/
-  -- NOTE: enable formatting
-  -- but i dont know why, like does prettier and tsserver
-  -- both formatting? try use :NullLsInfo
-  if client.name == "tsserver" then
-    client.server_capabilities.documentFormattingProvider = true
-    client.server_capabilities.documentRangeFormattingProvider = true
-  end
+  -- if client.name == "tsserver" then
+  --   client.server_capabilities.documentFormattingProvider = false 
+  --   client.server_capabilities.documentRangeFormattingProvider = false
+  -- end
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
