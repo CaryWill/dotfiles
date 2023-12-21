@@ -19,6 +19,7 @@ vim.api.nvim_set_keymap("n", "<leader>r", ":lua R('SingleComment')<cr>", { norem
 vim.keymap.set("n", "<localleader>t", "<Plug>PlenaryTestFile<CR>")
 
 -- Define the Lua function to copy the Git URL
+-- code from chatgpt
 local function copy_git_url_to_clipboard()
 	local handle = io.popen("git remote get-url origin")
 	local git_url = ""
