@@ -56,7 +56,9 @@ telescope.setup {
         disable_devicons = true,
         ignore_patterns = {
           "node_modules/"
-        }
+        },
+        auto_validate = false,
+        db_safe_mode = false
       },
       -- recent_files = {
       --   only_cwd = true
