@@ -10,6 +10,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-buffer'
 " Plug 'hrsh7th/cmp-path'
 Plug 'FelipeLema/cmp-async-path'
+Plug 'mmolhoek/cmp-scss'
 Plug 'nvimdev/lspsaga.nvim'
 Plug 'j-hui/fidget.nvim'
 
