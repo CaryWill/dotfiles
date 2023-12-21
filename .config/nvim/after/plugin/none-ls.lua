@@ -47,6 +47,7 @@ null_ls.setup({
 			end, { buffer = bufnr, desc = "[lsp] format" })
 		end
 
+    -- TODO: not work
     -- format only on changed lines
     -- https://github.com/joechrisellis/lsp-format-modifications.nvim/issues/1#issuecomment-1275302811
     -- but it seems like it frozen when auto save format
