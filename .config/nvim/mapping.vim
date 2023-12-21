@@ -125,7 +125,6 @@ nnoremap J Jx
 
 " jester
 nnoremap <silent><leader>t :lua require"jester".run_file()<CR>
-
-cnoremap perf StartupTime
+" cnoremap perf StartupTime
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
