@@ -8,7 +8,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-path'
+Plug 'FelipeLema/cmp-async-path'
 Plug 'nvimdev/lspsaga.nvim'
 Plug 'j-hui/fidget.nvim'
 
@@ -93,6 +94,7 @@ Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
+" Plug 'nvim-orgmode/orgmode'
 " Plug 'folke/todo-comments.nvim'
 
 " ai"

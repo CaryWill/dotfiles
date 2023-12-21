@@ -34,6 +34,7 @@ cmp.setup({
       }
     },
     { name = 'path' },
+    { name = 'async_path' },
     { name = 'luasnip',    option = { use_show_condition = false } },
     { name = 'cmdline' },
     { name = 'cmp_tabnine' },
