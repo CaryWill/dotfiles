@@ -27,8 +27,8 @@ null_ls.setup({
 	sources = {
 		-- null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.prettier,
-		null_ls.builtins.formatting.eslint,
-		null_ls.builtins.formatting.stylua,
+		-- null_ls.builtins.formatting.eslint,
+		-- null_ls.builtins.formatting.stylua,
 		-- null_ls.builtins.formatting.eslint_d,
 	},
 	on_attach = function(client, bufnr)
@@ -68,19 +68,19 @@ null_ls.setup({
 
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1273843531
     -- Avoid breaking formatexpr (i.e. gq)
-		local opts = {
-			noremap = true,
-			silent = true,
-			buffer = bufnr,
-		}
-		if client.server_capabilities.documentFormattingProvider then
-			if client.name == "null-ls" and is_null_ls_formatting_enabled(bufnr) or client.name ~= "null-ls" then
-				vim.bo[bufnr].formatexpr = "v:lua.vim.lsp.formatexpr()"
-				vim.keymap.set("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
-			else
-				vim.bo[bufnr].formatexpr = nil
-			end
-		end
+		-- local opts = {
+		-- 	noremap = true,
+		-- 	silent = true,
+		-- 	buffer = bufnr,
+		-- }
+		-- if client.server_capabilities.documentFormattingProvider then
+		-- 	if client.name == "null-ls" and is_null_ls_formatting_enabled(bufnr) or client.name ~= "null-ls" then
+		-- 		vim.bo[bufnr].formatexpr = "v:lua.vim.lsp.formatexpr()"
+		-- 		vim.keymap.set("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
+		-- 	else
+		-- 		vim.bo[bufnr].formatexpr = nil
+		-- 	end
+		-- end
 	end,
 })
 
