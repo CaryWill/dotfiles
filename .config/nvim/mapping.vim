@@ -55,6 +55,8 @@ nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
 nmap <C-s> <M-q>
 xmap do :diffget<CR>
 xmap dp :diffput<CR>
+" copy git url of current project"
+nnoremap <Leader>gy :!git remote get-url origin \| xclip -selection c<CR>
 
 " nnoremap <silent>;e <cmd>Neotree toggle<CR>
 nnoremap <silent>;e <cmd>NvimTreeToggle<CR>
