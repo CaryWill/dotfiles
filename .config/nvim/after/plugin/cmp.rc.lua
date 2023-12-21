@@ -39,11 +39,6 @@ cmp.setup({
 		},
 		{ name = "async_path" },
 		{ name = "luasnip", option = { use_show_condition = false } },
-		{ name = "cmdline" },
-		{ name = "nvim_lua" },
-		{ name = "npm", keyword_length = 4 },
-
-		-- { name = "path" },
 		-- https://github.com/mmolhoek/cmp-scss
 		-- {
 		--   name = 'scss',
@@ -51,7 +46,6 @@ cmp.setup({
 		--     folders = { "node_modules/@dnr-ui/tokens/scss" }
 		--   }
 		-- },
-		-- { name = 'cmp_tabnine' },
 	}),
 	-- https://github.com/hrsh7th/nvim-cmp/issues/980
 	formatting = {
