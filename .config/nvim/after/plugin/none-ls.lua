@@ -25,7 +25,7 @@ null_ls.setup({
 				vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
 			end, { buffer = bufnr, desc = "[lsp] format" })
 
-      -- https://github.com/MunifTanjim/prettier.nvim
+			-- https://github.com/MunifTanjim/prettier.nvim
 			-- format on save
 			-- local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
 			-- local event = "BufWritePre" -- or "BufWritePost"
@@ -46,6 +46,12 @@ null_ls.setup({
 				vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
 			end, { buffer = bufnr, desc = "[lsp] format" })
 		end
+
+    -- format only on changed lines
+    -- https://github.com/joechrisellis/lsp-format-modifications.nvim/issues/1#issuecomment-1275302811
+    -- but it seems like it frozen when auto save format
+		-- local lsp_format_modifications = require("lsp-format-modifications")
+		-- lsp_format_modifications.attach(client, bufnr, { format_on_save = true })
 	end,
 })
 

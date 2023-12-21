@@ -33,7 +33,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " formatter"
 Plug 'nvimtools/none-ls.nvim'
-Plug 'joechrisellis/lsp-format-modifications.nvim'
+" Plug 'joechrisellis/lsp-format-modifications.nvim'
 " Plug 'stevearc/conform.nvim'
 " Plug 'MunifTanjim/prettier.nvim'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
