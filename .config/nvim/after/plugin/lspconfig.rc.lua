@@ -86,14 +86,14 @@ nvim_lsp.eslint.setup({
 	end,
 })
 
--- NOTE: i thought eslint error can only 
+-- NOTE: i thought eslint error can only
 -- be fixed by eslint but it can actually
 -- be fixed by prettier, which i used
 -- :NullLsLog seeing this happening
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 -- 	pattern = { "*" },
 -- 	callback = function()
--- 		vim.lsp.buf.format()
+-- 		vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
 -- 	end,
 -- })
 

@@ -22,7 +22,8 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.stylua,
 		-- null_ls.builtins.formatting.eslint.with({
-		-- 	extra_args = { "--fix-dry-run" },
+		-- 	extra_args = { "--fix-dry-run", "$FILENAME" },
+		-- 	method = { null_ls.methods.FORMATTING },
 		-- }),
 		-- null_ls.builtins.formatting.eslint_d,
 	},
