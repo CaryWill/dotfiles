@@ -53,7 +53,7 @@ Plug 'Bekaboo/deadcolumn.nvim'
 " Git"
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
 
 " treesitter"
