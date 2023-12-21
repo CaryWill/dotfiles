@@ -16,6 +16,7 @@ nmap sv :vsplit<CR>
 nmap st :tab split<CR>
 nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
+nnoremap <silent><leader>Q :qa!<CR>
 
 " Select all
 nmap <C-a> gg<S-v>G

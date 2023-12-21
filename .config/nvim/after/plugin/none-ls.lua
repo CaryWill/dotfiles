@@ -5,13 +5,6 @@ if not status then
 	return
 end
 
-local function is_null_ls_formatting_enabled(bufnr)
-	local file_type = vim.api.nvim_buf_get_option(bufnr, "filetype")
-	local generators =
-		require("null-ls.generators").get_available(file_type, require("null-ls.methods").internal.FORMATTING)
-	return #generators > 0
-end
-
 -- 来自https://github.com/MunifTanjim/prettier.nvim
 -- 但是好像不用装这个插件也行, 然后就可以直接 range formatting 了
 -- 但是我发现好像有时候还是有问题，这个好像是因为 lsp 返回的值的原因
@@ -27,8 +20,10 @@ null_ls.setup({
 	sources = {
 		-- null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.prettier,
-		-- null_ls.builtins.formatting.eslint,
-		-- null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.stylua,
+		-- null_ls.builtins.formatting.eslint.with({
+		-- 	extra_args = { "--fix-dry-run" },
+		-- }),
 		-- null_ls.builtins.formatting.eslint_d,
 	},
 	on_attach = function(client, bufnr)
@@ -59,28 +54,16 @@ null_ls.setup({
 			end, { buffer = bufnr, desc = "[lsp] format" })
 		end
 
-		-- TODO: not work
+		-- TODO1: not work
 		-- format only on changed lines
 		-- https://github.com/joechrisellis/lsp-format-modifications.nvim/issues/1#issuecomment-1275302811
 		-- but it seems like it frozen when auto save format
 		-- local lsp_format_modifications = require("lsp-format-modifications")
 		-- lsp_format_modifications.attach(client, bufnr, { format_on_save = true })
 
-    -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1273843531
-    -- Avoid breaking formatexpr (i.e. gq)
-		-- local opts = {
-		-- 	noremap = true,
-		-- 	silent = true,
-		-- 	buffer = bufnr,
-		-- }
-		-- if client.server_capabilities.documentFormattingProvider then
-		-- 	if client.name == "null-ls" and is_null_ls_formatting_enabled(bufnr) or client.name ~= "null-ls" then
-		-- 		vim.bo[bufnr].formatexpr = "v:lua.vim.lsp.formatexpr()"
-		-- 		vim.keymap.set("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
-		-- 	else
-		-- 		vim.bo[bufnr].formatexpr = nil
-		-- 	end
-		-- end
+		-- TODO2:
+		-- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1273843531
+		-- Avoid breaking formatexpr (i.e. gq)
 	end,
 })
 
