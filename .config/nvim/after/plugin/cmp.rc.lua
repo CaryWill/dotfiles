@@ -38,6 +38,7 @@ cmp.setup({
     { name = 'luasnip',   option = { use_show_condition = false } },
     { name = 'cmdline' },
     { name = 'nvim_lua' },
+    { name = 'npm', keyword_length = 4 },
 
     -- https://github.com/mmolhoek/cmp-scss
     -- {

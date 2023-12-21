@@ -14,6 +14,7 @@ Plug 'mmolhoek/cmp-scss'
 Plug 'nvimdev/lspsaga.nvim'
 Plug 'j-hui/fidget.nvim'
 Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'David-Kunz/cmp-npm'
 
 " snipets"
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
