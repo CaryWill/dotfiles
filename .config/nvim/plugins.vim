@@ -31,16 +31,12 @@ Plug 'nvim-tree/nvim-web-devicons'
 " buffer"
 Plug 'norcalli/nvim-colorizer.lua'
 
-" other"
-" Plug 'stevearc/conform.nvim'
+" formatter"
 Plug 'nvimtools/none-ls.nvim'
-Plug 'keaising/im-select.nvim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'psliwka/vim-smoothie'
-Plug 'RRethy/vim-illuminate'
+Plug 'joechrisellis/lsp-format-modifications.nvim'
+" Plug 'stevearc/conform.nvim'
 " Plug 'MunifTanjim/prettier.nvim'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-" Plug 'folke/todo-comments.nvim'
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
@@ -91,6 +87,13 @@ Plug 'nvim-telescope/telescope-frecency.nvim'
 " unit test for jest"
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
+
+" other"
+Plug 'keaising/im-select.nvim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'psliwka/vim-smoothie'
+Plug 'RRethy/vim-illuminate'
+" Plug 'folke/todo-comments.nvim'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'
