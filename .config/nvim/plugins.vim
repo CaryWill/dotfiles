@@ -5,16 +5,19 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'nvimdev/lspsaga.nvim'
+Plug 'j-hui/fidget.nvim'
+
+" auto completion source"
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'David-Kunz/cmp-npm'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-buffer'
-" Plug 'hrsh7th/cmp-path'
 Plug 'FelipeLema/cmp-async-path'
-Plug 'mmolhoek/cmp-scss'
-Plug 'nvimdev/lspsaga.nvim'
-Plug 'j-hui/fidget.nvim'
-Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'David-Kunz/cmp-npm'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'max397574/cmp-greek'
+" Plug 'mmolhoek/cmp-scss'
 
 " snipets"
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
