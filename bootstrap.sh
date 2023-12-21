@@ -16,7 +16,6 @@ brew install ripgrep
 brew install fzf
 brew install reattach-to-user-namespace
 brew install im-select
-# brew install prettierd
 brew install stylua
 
 # 如果是 neovim 的话，那么需要改一下位置，在 ~/.config/nvim/autoload/plug.vim
@@ -24,7 +23,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # neovim lsp
-npm install -g eslint_d prettier
+# npm install -g eslint_d 
+npm install -g prettier
+# npm install -g @fsouza/prettierd
 # default lsp if your project dont have ts as dependency
 # then use the global one
 npm install -g typescript typescript-language-server
