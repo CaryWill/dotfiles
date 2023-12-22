@@ -77,11 +77,17 @@ vim.diagnostic.config({
 })
 
 -- eslint
+-- https://blog.csdn.net/lxyoucan/article/details/120956203
+-- https://github.com/neovim/nvim-lspconfig/blob/9099871a7c7e1c16122e00d70208a2cd02078d80/lua/lspconfig/server_configurations/eslint.lua#L152
 nvim_lsp.eslint.setup({
 	on_attach = function(client, bufnr)
 		vim.api.nvim_create_autocmd("BufWritePre", {
-		  buffer = bufnr,
-		  command = "EslintFixAll",
+			buffer = bufnr,
+			-- command = "EslintFixAll",
+			callback = function()
+				vim.cmd("EslintFixAll")
+				require("fidget").notify("Eslint is auto fixing~")
+			end,
 		})
 	end,
 })
