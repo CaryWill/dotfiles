@@ -11,6 +11,15 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
   end
 end, { silent = true })
 
+-- using all html snippets in react files
+-- https://github.com/rafamadriz/friendly-snippets/issues/31
+require('luasnip').filetype_extend("javascriptreact", { "html" })
+require('luasnip').filetype_extend("typescriptreact", { "html" })
+-- since legacy react files are in .js extension
+require('luasnip').filetype_extend("javascript", { "html" })
+require('luasnip').filetype_extend("typescript", { "html" })
+
 -- https://github.com/rafamadriz/friendly-snippets/wiki/Javascript,-Typescript,-Javascriptreact,-Typescriptreact
 -- load pre defined snippets
 require("luasnip.loaders.from_vscode").lazy_load()
+
