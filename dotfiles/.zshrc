@@ -73,3 +73,28 @@ xp() {
 }
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
+# clone repo
+# usage: xpgcl --g=other-group --c=other-repo
+xpgcl() {
+    local group="aidc-xspace"
+    local repo=""
+
+    for arg in "$@"; do
+        case $arg in
+            --g=*)
+                group="${arg#*=}"
+                shift
+                ;;
+            --c=*)
+                repo="${arg#*=}"
+                shift
+                ;;
+            *)
+                # Ignore other arguments or handle them as needed
+                ;;
+        esac
+    done
+
+    git clone "git@gitlab.alibaba-inc.com:${group}/${repo}.git"
+}
