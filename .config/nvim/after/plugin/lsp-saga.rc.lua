@@ -22,10 +22,10 @@ plugin.setup({
 })
 
 -- diagnostics navigation
-vim.keymap.set("n", "[E", function()
+vim.keymap.set("n", "[e", function()
   require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
 end)
-vim.keymap.set("n", "]E", function()
+vim.keymap.set("n", "]e", function()
   require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
 end)
 
