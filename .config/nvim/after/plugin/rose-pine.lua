@@ -1,4 +1,7 @@
-require('rose-pine').setup({
+local status, plugin = pcall(require, "rose-pine")
+if (not status) then return end
+
+plugin.setup({
   --- @usage 'auto'|'main'|'moon'|'dawn'
   variant = 'dawn',
   --- @usage 'main'|'moon'|'dawn'
@@ -18,6 +21,3 @@ require('rose-pine').setup({
   highlight_groups = {
   }
 })
-
--- Set colorscheme after options
-vim.cmd('colorscheme rose-pine')

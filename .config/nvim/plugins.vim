@@ -48,7 +48,6 @@ Plug 'nvimtools/none-ls.nvim'
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
-Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
 " Plug 'dstein64/vim-startuptime'
@@ -101,6 +100,7 @@ Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
+Plug 'Bekaboo/deadcolumn.nvim'
 " Plug 'nvim-orgmode/orgmode'
 " Plug 'folke/todo-comments.nvim'
 

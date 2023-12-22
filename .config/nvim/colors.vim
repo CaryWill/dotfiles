@@ -1,4 +1,5 @@
 " colorscheme PaperColorSlim
+colorscheme rose-pine
 
 " -- lsp --"
 " hi DiagnosticVirtualTextError guifg=#e73330 guibg=#f6c0c0
@@ -24,3 +25,6 @@ hi NvimTreeModifiedFile guibg=NONE guifg=#f6c0c0
 hi DiffviewStatusDeleted guibg=NONE guifg=#f6c0c0
 
 "bufferlnie"
+highlight TabLine             guifg=#444444 guibg=#c6c6c6 gui=NONE
+highlight TabLineFill         guifg=#005f87 guibg=#005f87 gui=NONE
+highlight TabLineSel          guifg=#444444 guibg=#e4e4e4 gui=NONE
