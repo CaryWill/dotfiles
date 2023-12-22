@@ -95,8 +95,8 @@ Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
 
-" orgmode"
-Plug 'nvim-orgmode/orgmode'
+" writing"
+" Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
 
 " other"
