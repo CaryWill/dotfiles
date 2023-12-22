@@ -5782,7 +5782,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Allow Change Cursor Blink</key>
 			<true/>
 			<key>Allow Title Reporting</key>
@@ -8946,7 +8946,7 @@ Make Text Bigger</string>
 				<real>0.098039217293262482</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/cary/Downloads/manuel-cosentino-n--CMLApjfI-unsplash.jpg</string>
+			<string>/Users/cary/Downloads/pexels-pok-rie-673865.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -9036,7 +9036,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>fe80::3c06:30ff:fe2a:fdb1</string>
+			<string>127.0.0.1</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Brighten Bold Text</key>
@@ -9052,7 +9052,7 @@ Make Text Bigger</string>
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>ssh fe80::3c06:30ff:fe2a:fdb1</string>
+			<string>ssh 127.0.0.1</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Boost (Dark)</key>
@@ -9248,7 +9248,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Guid</key>
-			<string>6D67EC30-DC95-4E30-AD9D-3E0F7E8C5987</string>
+			<string>EF1DB06A-1812-403A-8B3A-252D536498C6</string>
 			<key>Has Hotkey</key>
 			<false/>
 			<key>Horizontal Spacing</key>
