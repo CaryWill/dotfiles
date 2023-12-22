@@ -40,6 +40,11 @@ set directory=~/.vim/.nvim/.directory//
 set undodir=~/.vim/.nvim/.undo//
 set backupdir=~/.vim/.nvim/.backup//
 
+" orgmode"
+set conceallevel=2
+set concealcursor=nc
+set shellslash
+
 " color theme
 set termguicolors
 set t_Co=256

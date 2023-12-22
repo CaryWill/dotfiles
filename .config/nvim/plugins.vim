@@ -95,13 +95,17 @@ Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
 
+" orgmode"
+Plug 'nvim-orgmode/orgmode'
+Plug 'dhruvasagar/vim-table-mode'
+
 " other"
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
 Plug 'Bekaboo/deadcolumn.nvim'
-" Plug 'nvim-orgmode/orgmode'
+" Plug 'akinsho/org-bullets.nvim'
 " Plug 'folke/todo-comments.nvim'
 
 " ai"

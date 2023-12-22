@@ -39,6 +39,7 @@ cmp.setup({
 		},
 		{ name = "async_path" },
 		{ name = "luasnip", option = { use_show_condition = false } },
+     { name = 'orgmode' },
     -- { name = "nerdfont" }, -- using : to trigger
 		-- https://github.com/mmolhoek/cmp-scss
 		-- {
