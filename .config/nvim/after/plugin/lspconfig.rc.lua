@@ -86,7 +86,7 @@ nvim_lsp.eslint.setup({
 			-- command = "EslintFixAll",
 			callback = function()
 				vim.cmd("EslintFixAll")
-				require("fidget").notify("Eslint is auto fixing~")
+				require("fidget").notify("Eslint is auto fixing ~")
 			end,
 		})
 	end,

@@ -12,6 +12,7 @@ Plug 'j-hui/fidget.nvim'
 " auto completion source"
 Plug 'hrsh7th/cmp-buffer'
 Plug 'FelipeLema/cmp-async-path'
+" Plug 'chrisgrieser/cmp-nerdfont'
 " Plug 'hrsh7th/cmp-nvim-lua'
 " Plug 'David-Kunz/cmp-npm'
 " Plug 'hrsh7th/cmp-cmdline'
