@@ -26,11 +26,11 @@
 
 -- org
 -- disable auto indent
-vim.cmd([[
-  augroup org
-    autocmd!
-  augroup END
-]])
+-- vim.cmd([[
+--   augroup org
+--     autocmd!
+--   augroup END
+-- ]])
 
 -- autocmd FileType org setlocal foldenable
 -- autocmd FileType org setlocal foldmethod=expr
