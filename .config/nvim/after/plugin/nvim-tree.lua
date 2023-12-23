@@ -69,7 +69,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   on_attach = on_attach,
   hijack_cursor = false,
   auto_reload_on_write = true,
-  disable_netrw = false,
+  disable_netrw = true,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   root_dirs = {},
@@ -93,7 +93,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     number = false,
     relativenumber = false,
     signcolumn = "yes",
-    width = 30,
+    width = 40,
     float = {
       enable = false,
       quit_on_focus_loss = true,
@@ -175,6 +175,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         },
         git = {
           unstaged = "✗",
+          -- unstaged = '✹',
           staged = "✓",
           unmerged = "",
           renamed = "➜",

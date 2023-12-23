@@ -122,7 +122,7 @@ nnoremap <silent><leader>b9 9<C-w>w
 
 " vim have built-in join lines keymapping, J"
 " but with an extra space, so i just removed it here
-nnoremap J Jx
+" nnoremap J Jx
 
 " jester
 nnoremap <silent><leader>t :lua require"jester".run_file()<CR>
