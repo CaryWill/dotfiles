@@ -1,16 +1,11 @@
-# This is header
+# Monday
 
 ## This is the sub header
 
-## <span class="todo TODO">TODO</span> \[#A\] atodo <span class="tag" tag-name="bar"><span class="smallcaps">bar</span></span> <span class="tag" tag-name="barz"><span class="smallcaps">barz</span></span>
+## <span class="todo TODO">TODO</span> atodo
 
-- list one
-- list two(normal mode, use \<leader\>\<CR\> to add a new list)
+## <span class="todo TODO">TODO</span> lua formatter
 
-## <span class="todo TODO">TODO</span> 
+## <span class="todo TODO">TODO</span> E
 
-[test](https://plainorg.com/favicon.png)
-
-# this is an image
-
-![](https://plainorg.com/favicon.png)
+**bold** `cosnole.log` / javascript `code` *it* *<u>underline</u>*
