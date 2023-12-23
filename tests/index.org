@@ -5,6 +5,7 @@
   Or like this
 ** This is the sub header
 ** TODO [#A] atodo
+*** TODO lua formatter
 *** TODO [#A] atodo
 **** TODO sub
 **** test

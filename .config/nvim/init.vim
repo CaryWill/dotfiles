@@ -20,9 +20,6 @@ set autoread
 set signcolumn=yes
 " set colorcolumn=80
 set clipboard+=unnamedplus
-set foldmethod=indent
-set nofoldenable
-set foldlevel=99
 set cursorline
 set splitright
 set splitbelow
@@ -40,6 +37,14 @@ set directory=~/.vim/.nvim/.directory//
 set undodir=~/.vim/.nvim/.undo//
 set backupdir=~/.vim/.nvim/.backup//
 
+" treesitter fold"
+" if i put it in autocmd, it does not work
+" but i put it here i can fold using <CR>
+" to org file
+set nofoldenable
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set foldlevel=99
 " orgmode"
 " set conceallevel=2
 " set concealcursor=nc
