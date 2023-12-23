@@ -103,6 +103,7 @@ Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
+Plug 'akinsho/org-bullets.nvim'
 
 " other"
 Plug 'keaising/im-select.nvim'
