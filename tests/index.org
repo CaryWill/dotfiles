@@ -12,12 +12,12 @@
    ~code~
    /it/
    /_underline_/
-* TODO Organize party [2/4]
+* TODO Organize party [4/4]
   if you just put [/] there, then, it update lively
-  - [-] call people
-    - [ ] Peter
+  - [X] call people
+    - [X] Peter
     - [X] Sarah
-    - [x] Sam
+    - [X] Sam
   - [x] order food
-  - [ ] think about what music to play
+  - [X] think about what music to play
   - [x] talk to the neighbors

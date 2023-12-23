@@ -21,6 +21,13 @@ end
 -- to solve the problem
 require("orgmode").setup_ts_grammar()
 require("orgmode").setup({
+	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
+	-- https://github.com/nvim-orgmode/orgmode/blob/master/lua/orgmode/config/defaults.lua
+	mappings = {
+		org = {
+			org_toggle_checkbox = "<leader>c",
+		},
+	},
 	org_startup_folded = "showeverything",
 	org_custom_exports = {
 		g = {
