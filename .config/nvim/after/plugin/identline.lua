@@ -11,6 +11,6 @@ plugin.setup({
   },
   exclude = {
     filetypes = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "trouble", "lazy", "mason", "notify",
-      "toggleterm", "lazyterm", "floaterm" }
+      "toggleterm", "lazyterm", "floaterm", "org" }
   }
 })
