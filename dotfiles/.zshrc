@@ -58,7 +58,6 @@ export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 # disable zsh update
 DISABLE_UPDATE_PROMPT=true
 # stop brew downloading the formula each time when using services command

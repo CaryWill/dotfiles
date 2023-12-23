@@ -1,3 +1,6 @@
+local status, plugin = pcall(require, "ts_context_commentstring")
+if (not status) then return end
+
 require('ts_context_commentstring').setup({
   -- nvim-ts-context-commentstring 插件会影响性能很严重
   -- 因为开启了 autocmd

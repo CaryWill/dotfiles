@@ -33,9 +33,9 @@ map <Up> <C-y>
 set lazyredraw
 " Backup files
 set undofile
-set directory=~/.vim/.nvim/.directory//
-set undodir=~/.vim/.nvim/.undo//
-set backupdir=~/.vim/.nvim/.backup//
+set directory=~/tmp/.directory//
+set undodir=~/tmp/.undo//
+set backupdir=~/tmp/.backup//
 
 " treesitter fold"
 " if i put it in autocmd, it does not work
