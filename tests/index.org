@@ -7,7 +7,7 @@
 - list one 
 - list two(normal mode, use <leader><CR> to add a new list)
 
-** TODO 
+** TODO
 [[https://plainorg.com/favicon.png][test]]
 
 * this is an image

@@ -62,9 +62,28 @@ null_ls.setup({
 		-- local lsp_format_modifications = require("lsp-format-modifications")
 		-- lsp_format_modifications.attach(client, bufnr, { format_on_save = true })
 
-		-- TODO2:
 		-- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1273843531
 		-- Avoid breaking formatexpr (i.e. gq)
+		local function is_null_ls_formatting_enabed(bufnr)
+			local file_type = api.nvim_buf_get_option(bufnr, "filetype")
+			local generators =
+				require("null-ls.generators").get_available(file_type, require("null-ls.methods").internal.FORMATTING)
+			return #generators > 0
+		end
+		local opts = {
+			noremap = true,
+			silent = true,
+			buffer = bufnr,
+		}
+
+		if server_capabilities.documentFormattingProvider then
+			if client.name == "null-ls" and is_null_ls_formatting_enabed(bufnr) or client.name ~= "null-ls" then
+				api.nvim_buf_set_option(bufnr, "formatexpr", "v:lua.vim.lsp.formatexpr()")
+				map("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
+			else
+				api.nvim_buf_set_option(bufnr, "formatexpr", "")
+			end
+		end
 	end,
 })
 
