@@ -2,9 +2,11 @@
 #+author: cary
 
 * This is header
+
 ** This is the sub header
 ** TODO [#A] atodo :bar:barz:
 - list one 
+
 - list two(normal mode, use <leader><CR> to add a new list)
 
 ** TODO

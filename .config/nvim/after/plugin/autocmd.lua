@@ -25,10 +25,12 @@
  }) --]]
 
 -- org
--- vim.cmd[[
---   augroup org
---     autocmd!
---     autocmd FileType org setlocal concealcursor=nc
---     autocmd FileType org setlocal conceallevel=2
---   augroup END
--- ]]
+vim.cmd([[
+  augroup org
+    autocmd!
+    autocmd FileType org setlocal noai nocin nosi inde=
+  augroup END
+]])
+
+-- autocmd FileType org setlocal concealcursor=nc
+-- tocmd FileType org setlocal conceallevel=2
