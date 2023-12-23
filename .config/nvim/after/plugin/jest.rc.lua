@@ -8,6 +8,8 @@
 -- so here, we will jest use a json object
 -- https://jestjs.io/docs/cli#--configpath
 -- https://jestjs.io/docs/next/configuration
+local status, plugin = pcall(require, "jester")
+if (not status) then return end
 
 local config = {
   moduleFileExtensions = { "js", "cjs", "ts", "mjs" },
