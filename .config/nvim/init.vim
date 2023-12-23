@@ -52,6 +52,8 @@ set backupdir=~/tmp/.backup//
 " then i used  nvim -u NORC --cmd 'filetype plugin on' tests/index.org
 " it worked, so i opened it again, then i see the flash on nvim-tree
 " i got an idea, maybe, because the tree, and it is
+" no, i found out, if i use harpoon to go to the file
+" it wont work
 " set nofoldenable
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
