@@ -1,21 +1,22 @@
 #+title: testfile
 #+author: cary
 
-* Monday 
+* Monday
 ** This is the sub header
-** TODO atodo
+** atodo
 ** TODO lua formatter
-** TODO E
+** DONE E
+   CLOSED: [2023-12-23 Sat 22:15]
    *bold*
    =cosnole.log= / javascript
    ~code~
    /it/
    /_underline_/
-* TODO Organize party [1/4]
+* TODO Organize party [2/4]
   if you just put [/] there, then, it update lively
   - [-] call people
     - [ ] Peter
-    - [ ] Sarah
+    - [X] Sarah
     - [x] Sam
   - [x] order food
   - [ ] think about what music to play
