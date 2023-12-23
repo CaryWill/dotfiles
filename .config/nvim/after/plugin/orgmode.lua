@@ -23,14 +23,25 @@ require("orgmode").setup_ts_grammar()
 require("orgmode").setup({
 	org_startup_folded = "showeverything",
 	org_custom_exports = {
-		f = {
-			label = "Export to RTF format",
+		g = {
+			label = "Export to gfm markdown personal refined",
 			action = function(exporter)
 				local current_file = vim.api.nvim_buf_get_name(0)
-				local target = vim.fn.fnamemodify(current_file, ":p:r") .. ".rtf"
-				local command = { "pandoc", current_file, "-o", target }
+				local target = vim.fn.fnamemodify(current_file, ":p:r") .. ".md"
+				local command = { "pandoc", "--from=org", "--to=gfm", current_file }
 				local on_success = function(output)
 					print("Success!")
+					local function replaceBrackets(str)
+						return str:gsub("\\%[", "["):gsub("\\%]", "]")
+					end
+					-- Replace "\\[" with "[" in each element of the table
+					for i, v in ipairs(output) do
+						output[i] = replaceBrackets(v)
+					end
+					local content = table.concat(output, "\n")
+					local file = io.open(target, "w")
+					file:write(content)
+					file:close()
 					vim.api.nvim_echo({ { table.concat(output, "\n") } }, true, {})
 				end
 				local on_error = function(err)
