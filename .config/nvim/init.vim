@@ -48,6 +48,10 @@ set backupdir=~/tmp/.backup//
 " and i checked $VIMRUNTIME, it shows
 " /Users/cary/.local/share/bob/v0.9.4/nvim-macos/share/nvim/runtime
 " i dont actually see org.vim there
+" but no, it actually should not be there
+" then i used  nvim -u NORC --cmd 'filetype plugin on' tests/index.org
+" it worked, so i opened it again, then i see the flash on nvim-tree
+" i got an idea, maybe, because the tree, and it is
 " set nofoldenable
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
