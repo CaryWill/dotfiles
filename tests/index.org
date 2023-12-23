@@ -2,22 +2,16 @@
 #+author: cary
 
 * Monday
-** This is the sub header
-** atodo
+** Morning
 ** TODO lua formatter
-** DONE E
+** DONE Task2
    CLOSED: [2023-12-23 Sat 22:15]
-   *bold*
-   =cosnole.log= / javascript
-   ~code~
-   /it/
-   /_underline_/
-* TODO Organize party [4/4]
+* TODO Task3 [2/4]
   if you just put [/] there, then, it update lively
-  - [X] call people
-    - [X] Peter
+  - [X] _call people_
+    - [X] /Peter/
     - [X] Sarah
     - [X] Sam
-  - [x] order food
-  - [X] think about what music to play
-  - [x] talk to the neighbors
+  - [X] write some ~code~
+  - [ ] write some more =code=
+  - [ ] be *bold*

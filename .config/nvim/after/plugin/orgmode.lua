@@ -25,7 +25,7 @@ require("orgmode").setup({
 	-- https://github.com/nvim-orgmode/orgmode/blob/master/lua/orgmode/config/defaults.lua
 	mappings = {
 		org = {
-			org_toggle_checkbox = "<leader>c",
+			org_toggle_checkbox = "<leader>tc",
 		},
 	},
 	org_startup_folded = "showeverything",

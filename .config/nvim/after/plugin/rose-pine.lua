@@ -44,3 +44,8 @@ vim.api.nvim_command("hi DiffviewStatusDeleted guibg=NONE guifg=#f6c0c0")
 vim.api.nvim_command("highlight TabLineSel guifg=#444444 guibg=#e4e4e4 gui=NONE")
 vim.api.nvim_command("highlight TabLineFill         guifg=#005f87 guibg=#005f87 gui=NONE")
 vim.api.nvim_command("highlight TabLineSel          guifg=#444444 guibg=#e4e4e4 gui=NONE")
+
+-- orgmode
+vim.api.nvim_command("highlight OrgDone guifg=#56949f guibg=NONE gui=NONE")
+vim.api.nvim_command("highlight OrgTODO guifg=#f6c0c0 guibg=NONE gui=NONE")
+
