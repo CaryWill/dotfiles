@@ -16,4 +16,6 @@ end
 -- so i want to use harpoon as an extension
 -- to solve the problem
 require("orgmode").setup_ts_grammar()
-require("orgmode").setup({})
+require("orgmode").setup({
+  org_startup_folded = "showeverything"
+})
