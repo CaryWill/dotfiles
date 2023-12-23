@@ -4,6 +4,9 @@ if not status then
 end
 
 headlines.setup({
+	markdown = {
+		headline_highlights = false,
+	},
 	org = {
 		query = vim.treesitter.query.parse(
 			"org",
