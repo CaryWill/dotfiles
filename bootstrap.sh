@@ -45,6 +45,7 @@ npm install -g ts-jest
 ln -sf "$(pwd)/.config/nvim" ~/.config
 ln -sf "$(pwd)/.config/nvim/.vimrc" ~/.vim/.vimrc
 ln -sf "$(pwd)/.config/nvim/.vimrc" ~/.vimrc
+ln -sf "$(pwd)/.config/nvim" ~/.vim
 # dotfiles
 ln -sf "$(pwd)/dotfiles/.tmux.conf" ~/.tmux.conf
 ln -sf "$(pwd)/dotfiles/.bashrc" ~/.bashrc

@@ -1,7 +1,6 @@
 scriptencoding utf-8
 syntax on
 filetype plugin indent on
-filetype plugin on
 set clipboard^=unnamed,unnamedplus
 set fileencodings=utf-8
 set encoding=utf-8
@@ -46,6 +45,9 @@ set backupdir=~/.vim/.nvim/.backup//
 " plugin, https://github.com/nvim-orgmode/orgmode/blob/92bfc3fb7ee845d9e58326b0b69f3ed89e84253f/ftplugin/org.vim#L25
 " but i dont know why it did not work
 " it feels like it get's overriden by system
+" and i checked $VIMRUNTIME, it shows
+" /Users/cary/.local/share/bob/v0.9.4/nvim-macos/share/nvim/runtime
+" i dont actually see org.vim there
 " set nofoldenable
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
