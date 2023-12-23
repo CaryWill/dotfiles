@@ -110,6 +110,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
 Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'Wansmer/treesj'
+Plug 'LunarVim/bigfile.nvim'
 " Plug 'akinsho/org-bullets.nvim'
 " Plug 'folke/todo-comments.nvim'
 
