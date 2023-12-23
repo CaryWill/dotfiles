@@ -15,8 +15,6 @@ autocmd FileType neo-tree nnoremap <buffer> = 30<C-w>\|
 " autocmd BufEnter * if &filetype != 'neo-tree' | set foldmethod=indent | endif
 " either ditch nui and use other plugin
 
-
 autocmd FileType NvimTree nnoremap <buffer> + :NvimTreeResize +20<CR>
 autocmd FileType NvimTree nnoremap <buffer> - :NvimTreeResize -20<CR>
 autocmd FileType NvimTree nnoremap <buffer> = :NvimTreeResize 30<CR>
-

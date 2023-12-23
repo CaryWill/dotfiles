@@ -41,9 +41,9 @@ set undodir=~/.vim/.nvim/.undo//
 set backupdir=~/.vim/.nvim/.backup//
 
 " orgmode"
-set conceallevel=2
-set concealcursor=nc
-set shellslash
+" set conceallevel=2
+" set concealcursor=nc
+" set shellslash
 
 " color theme
 set termguicolors
