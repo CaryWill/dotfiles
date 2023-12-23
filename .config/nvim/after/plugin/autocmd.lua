@@ -25,6 +25,7 @@
  }) --]]
 
 -- org
+-- disable auto indent
 vim.cmd([[
   augroup org
     autocmd!
