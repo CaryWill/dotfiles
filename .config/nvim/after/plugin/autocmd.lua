@@ -29,10 +29,10 @@
 vim.cmd([[
   augroup org
     autocmd!
-    autocmd FileType org setlocal foldenable
   augroup END
 ]])
 
+-- autocmd FileType org setlocal foldenable
 -- autocmd FileType org setlocal foldmethod=expr
 -- autocmd FileType org setlocal foldexpr=nvim_treesitter#foldexpr()
 -- autocmd FileType org setlocal foldmethod=expr

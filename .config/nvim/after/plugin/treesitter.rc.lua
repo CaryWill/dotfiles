@@ -9,9 +9,9 @@ plugin.setup({
 		enable = true,
 		additional_vim_regex_highlighting = { "org" },
 	},
-	-- indent = {
-	-- 	enable = true,
-	-- },
+	indent = {
+		enable = true,
+	},
 	-- nvim-ts-autotag
 	autotag = {
 		enable = true,
