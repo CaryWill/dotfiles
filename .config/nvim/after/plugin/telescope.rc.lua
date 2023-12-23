@@ -41,7 +41,7 @@ telescope.setup({
     selection_caret = "  ",
     entry_prefix = "  ",
     results_title = false,
-    sorting_strategy = "ascending",
+    -- sorting_strategy = "ascending",
     buffer_previewer_maker = truncate_large_files,
     file_ignore_patterns = {
       ".git/",
