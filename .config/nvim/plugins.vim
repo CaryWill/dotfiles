@@ -48,7 +48,7 @@ Plug 'nvimtools/none-ls.nvim'
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
-Plug 'rmehri01/onenord.nvim'
+" Plug 'rmehri01/onenord.nvim'
 " Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
 " Plug 'dstein64/vim-startuptime'

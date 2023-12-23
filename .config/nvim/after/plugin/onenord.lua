@@ -1,3 +1,6 @@
+local status, plugin = pcall(require, "onenord")
+if (not status) then return end
+
 local colorscheme = {
   'rmehri01/onenord.nvim',
   lazy = false,
