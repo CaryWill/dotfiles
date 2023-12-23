@@ -1,5 +1,6 @@
 " colorscheme PaperColorSlim
 colorscheme rose-pine
+" colorscheme onenord
 
 " -- lsp --"
 " hi DiagnosticVirtualTextError guifg=#e73330 guibg=#f6c0c0
