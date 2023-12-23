@@ -19,6 +19,7 @@ brew install im-select
 brew install stylua
 # for export org file to other format
 brew install emacs
+brew install pandoc
 
 # 如果是 neovim 的话，那么需要改一下位置，在 ~/.config/nvim/autoload/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
