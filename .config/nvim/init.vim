@@ -1,6 +1,7 @@
 scriptencoding utf-8
 syntax on
 filetype plugin indent on
+filetype plugin on
 set clipboard^=unnamed,unnamedplus
 set fileencodings=utf-8
 set encoding=utf-8
@@ -41,10 +42,14 @@ set backupdir=~/.vim/.nvim/.backup//
 " if i put it in autocmd, it does not work
 " but i put it here i can fold using <CR>
 " to org file
-set nofoldenable
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-set foldlevel=99
+" i found it's actually set on the orgmode 
+" plugin, https://github.com/nvim-orgmode/orgmode/blob/92bfc3fb7ee845d9e58326b0b69f3ed89e84253f/ftplugin/org.vim#L25
+" but i dont know why it did not work
+" it feels like it get's overriden by system
+" set nofoldenable
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()
+" set foldlevel=99
 " orgmode"
 " set conceallevel=2
 " set concealcursor=nc

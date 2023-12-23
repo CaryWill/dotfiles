@@ -1,3 +1,6 @@
+local status, plugin = pcall(require, "nvim-tree")
+if (not status) then return end
+
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -69,7 +72,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   on_attach = on_attach,
   hijack_cursor = false,
   auto_reload_on_write = true,
-  disable_netrw = true,
+  disable_netrw = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   root_dirs = {},
