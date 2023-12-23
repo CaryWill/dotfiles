@@ -102,6 +102,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
+Plug 'lukas-reineke/headlines.nvim'
 
 " other"
 Plug 'keaising/im-select.nvim'
