@@ -5,6 +5,13 @@ if not status then
 	return
 end
 
+local function is_null_ls_formatting_enabed(bufnr)
+	local file_type = vim.api.nvim_buf_get_option(bufnr, "filetype")
+	local generators =
+		require("null-ls.generators").get_available(file_type, require("null-ls.methods").internal.FORMATTING)
+	return #generators > 0
+end
+
 -- 来自https://github.com/MunifTanjim/prettier.nvim
 -- 但是好像不用装这个插件也行, 然后就可以直接 range formatting 了
 -- 但是我发现好像有时候还是有问题，这个好像是因为 lsp 返回的值的原因
@@ -64,24 +71,18 @@ null_ls.setup({
 
 		-- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1273843531
 		-- Avoid breaking formatexpr (i.e. gq)
-		local function is_null_ls_formatting_enabed(bufnr)
-			local file_type = api.nvim_buf_get_option(bufnr, "filetype")
-			local generators =
-				require("null-ls.generators").get_available(file_type, require("null-ls.methods").internal.FORMATTING)
-			return #generators > 0
-		end
 		local opts = {
 			noremap = true,
 			silent = true,
 			buffer = bufnr,
 		}
 
-		if server_capabilities.documentFormattingProvider then
+		if client.supports_method("textDocument/formatting") then
 			if client.name == "null-ls" and is_null_ls_formatting_enabed(bufnr) or client.name ~= "null-ls" then
-				api.nvim_buf_set_option(bufnr, "formatexpr", "v:lua.vim.lsp.formatexpr()")
-				map("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
+				vim.api.nvim_buf_set_option(bufnr, "formatexpr", "v:lua.vim.lsp.formatexpr()")
+				vim.keymap.set("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
 			else
-				api.nvim_buf_set_option(bufnr, "formatexpr", "")
+				vim.api.nvim_buf_set_option(bufnr, "formatexpr", "")
 			end
 		end
 	end,

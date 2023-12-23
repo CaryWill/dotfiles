@@ -26,12 +26,12 @@
 
 -- org
 -- disable auto indent
-vim.cmd([[
-  augroup org
-    autocmd!
-    autocmd FileType org setlocal noai nocin nosi inde=
-  augroup END
-]])
+-- vim.cmd([[
+--   augroup org
+--     autocmd!
+--   augroup END
+-- ]])
 
+-- autocmd FileType org setlocal noai nocin nosi inde=
 -- autocmd FileType org setlocal concealcursor=nc
 -- tocmd FileType org setlocal conceallevel=2

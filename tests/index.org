@@ -2,15 +2,45 @@
 #+author: cary
 
 * This is header
-
+  Or like this
 ** This is the sub header
-** TODO [#A] atodo :bar:barz:
-- list one 
+** TODO [#A] atodo
+*** TODO [#A] atodo
+**** TODO sub
+**** test
+     test
+     test
+**** like this
+     so, how to fold current line
+***** TODO sub
+      1. line1
+      2. line2
+ 
+ - list one 
+ - list two(normal mode, use <leader><CR> to add a new list)
+  
 
-- list two(normal mode, use <leader><CR> to add a new list)
+** E
+   *bold*
+   =cosnole.log= / javascript
+   ~code~
+   /it/
+   /_underline_/
 
-** TODO
 [[https://plainorg.com/favicon.png][test]]
 
 * this is an image
 [[https://plainorg.com/favicon.png]]
+
+* This is header
+  Or like this
+** This is the sub header
+** TODO [#A] atodo
+*** TODO [#A] atodo
+**** TODO sub
+**** test
+     test
+     test
+**** like this
+***** TODO sub
+
