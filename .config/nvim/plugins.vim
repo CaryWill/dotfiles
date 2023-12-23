@@ -96,8 +96,9 @@ Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
 
 " writing"
-" Plug 'nvim-orgmode/orgmode'
+Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'Gelio/cmp-natdat'
 
 " other"
 Plug 'keaising/im-select.nvim'
