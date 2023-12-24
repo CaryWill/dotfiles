@@ -1,3 +1,11 @@
+  like this, [[https://gist.ro/s/remote.png]], in this
+
+  like this, [[https://github.com/DinkDonk/kitty-icon/blob/main/kitty-dark.png]],
+but actually i  found some images can not be displayed, i guess maybe because of the 
+curl command when download file?
+
+  like this, [[https://gist.ro/s/remote.png]], in this 
+
 #+title: testfile
 #+author: cary
 
@@ -17,4 +25,6 @@
   - [X] be *bold*
 * TODO Add image support for org-mode
   like this, [[https://gist.ro/s/remote.png]], in this 
+
+
   [[https://github.com/3rd/image.nvim/blob/master/lua/image/integrations/neorg.lua][plugin]]

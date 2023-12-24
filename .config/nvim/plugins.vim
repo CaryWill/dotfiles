@@ -107,7 +107,9 @@ Plug 'akinsho/org-bullets.nvim'
 
 " image"
 " only support kitty for now, iterm2 not support 
-Plug '3rd/image.nvim'
+" Plug '3rd/image.nvim'
+" TODO: use my fork first since, it will support orgmode
+Plug 'CaryWill/image.nvim'
 
 " other"
 Plug 'keaising/im-select.nvim'
