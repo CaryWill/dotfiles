@@ -105,11 +105,11 @@ telescope.setup({
 	},
 })
 
-telescope.load_extension('harpoon')
 telescope.load_extension("frecency")
 -- telescope.load_extension('fzf')
 -- telescope.load_extension("undo")
 -- telescope.load_extension("recent_files")
+-- telescope.load_extension('harpoon')
 
 vim.keymap.set("n", "<leader><leader>", "<Cmd>Telescope frecency workspace=CWD<CR>")
 -- vim.keymap.set("n", "<leader><leader>", "<Cmd>lua require('telescope').extensions.recent_files.pick()<CR>")
