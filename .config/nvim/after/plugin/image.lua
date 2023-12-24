@@ -38,4 +38,5 @@ require("image").setup({
 	editor_only_render_when_focused = false, -- auto show/hide images when the editor gains/looses focus
 	tmux_show_only_in_active_window = false, -- auto show/hide images in the correct Tmux window (needs visual-activity off)
 	hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp" }, -- render image files as images when opened
+  tmux_show_only_in_active_window = true,
 })
