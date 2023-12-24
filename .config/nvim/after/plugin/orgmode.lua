@@ -28,6 +28,7 @@ require("orgmode").setup({
 			org_toggle_checkbox = "<leader>cc",
 		},
 	},
+  -- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "showeverything",
 	org_custom_exports = {
 		g = {
