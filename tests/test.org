@@ -1,0 +1,32 @@
+* This is the title
+
+  About this one, i would like to start writing the article in org mode,
+  but there's some thing that is missing, like image inline preview, i need get it work first.
+
+** So here goes the todos
+   But actually i dont know how people using vim/neovim as the editor to write stuff,
+   no matter it's in markdown or other format.
+*** TODO orgmode image [2/6]
+    - [X] orgmode inline image preview
+        i can use markdown as an example to test, now i can use it, but, there's
+        bug
+    - [ ] there's an empty when rendering(md file works great, but orgmode is not right)
+    - [X] image still shows when switch tmux window(using, <prefix-prefix>)
+          tmux_show_only_in_active_window = true, when setup 3rd/image plugin
+    - [ ] image should have a textchange option, it will not update instantly when i change
+      text right now, but i can use clear in insert mode to work around
+    - [ ] read 3rd/image.nvim source code
+    - [ ] local image rendering, sometimes i need image rendering
+*** TODO neovim related [1/1]
+    - [X] same test command for different filetype
+** UI for terminal tabs
+   It looks good.
+
+* Learning orgmode
+** TODO orgmode real life usage
+   [[https://orgmode.org/manual/Deadlines-and-Scheduling.html][orgmode official website]]
+   - [ ] refile
+   - [ ] archive
+** TODO orgmode neovim shortcut
+   [[https://github.com/nvim-orgmode/orgmode/blob/master/DOCS.md#global-settings][neovim-orgmode]]
+   [[file:/Users/cary/Downloads/githubmarkdown.png]]
