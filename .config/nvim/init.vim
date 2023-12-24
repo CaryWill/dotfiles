@@ -79,6 +79,7 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 runtime ./plugins.vim
 runtime ./mapping.vim
 runtime ./colors.vim
+runtime ./kitty.vim
 
 " Set custom package.path
 lua << EOF
