@@ -18,3 +18,7 @@ autocmd FileType neo-tree nnoremap <buffer> = 30<C-w>\|
 autocmd FileType NvimTree nnoremap <buffer> + :NvimTreeResize +20<CR>
 autocmd FileType NvimTree nnoremap <buffer> - :NvimTreeResize -20<CR>
 autocmd FileType NvimTree nnoremap <buffer> = :NvimTreeResize 30<CR>
+
+" test"
+autocmd FileType javascript,typescript,javascriptreact,typescriptreact nnoremap <buffer> <leader>t :lua require'jester'.run_file()<CR>
+autocmd FileType lua nnoremap <buffer> <leader>t <Plug>PlenaryTestFile

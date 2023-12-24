@@ -16,7 +16,6 @@ R = function(name)
 end
 
 vim.api.nvim_set_keymap("n", "<leader>r", ":lua R('SingleComment')<cr>", { noremap = true, silent = true })
-vim.keymap.set("n", "<localleader>t", "<Plug>PlenaryTestFile<CR>")
 
 -- Define the Lua function to copy the Git URL
 -- code from chatgpt

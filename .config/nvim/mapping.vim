@@ -124,8 +124,4 @@ nnoremap <silent><leader>b9 9<C-w>w
 " but with an extra space, so i just removed it here
 " nnoremap J Jx
 
-" jester
-nnoremap <silent><leader>t :lua require"jester".run_file()<CR>
-" cnoremap perf StartupTime
-
 " vim: set foldmethod=marker foldlevel=0 foldenable:
