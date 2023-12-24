@@ -31,8 +31,8 @@ end
 telescope.setup({
 	defaults = {
 		layout_config = {
-			-- prompt_position = "top",
-			-- preview_cutoff = 170,
+			prompt_position = "top",
+			preview_cutoff = 170,
 		},
 		-- you can go https://www.nerdfonts.com/cheat-sheet
 		-- and click copy icon then you can use the icon
