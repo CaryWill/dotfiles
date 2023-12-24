@@ -104,6 +104,8 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
+" orgmode related plugin"
+" https://github.com/topics/orgmode-nvim
 
 " image"
 " only support kitty for now, iterm2 not support 
