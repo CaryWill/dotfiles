@@ -114,6 +114,7 @@ Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'Wansmer/treesj'
 Plug 'LunarVim/bigfile.nvim'
 " Plug 'folke/todo-comments.nvim'
+Plug '3rd/image.nvim'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'
