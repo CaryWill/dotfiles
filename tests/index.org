@@ -6,15 +6,15 @@
 ** TODO lua formatter
 ** DONE Task2
    CLOSED: [2023-12-23 Sat 22:15]
-* TODO Task3 [2/5]
+* TODO Task3 [2/4]
   if you just put [/] there, then, it update lively
-  - [X] _call people_
+  - [-] _call people_
     - [X] /Peter/
     - [X] Sarah
-    - [X] Sam
+    - [ ] Sam
   - [X] write some ~code~
   - [ ] write some more =code=
-  - [ ] be *bold*
+  - [X] be *bold*
 * TODO Add image support for org-mode
   like this, [[https://gist.ro/s/remote.png]], in this 
   [[https://github.com/3rd/image.nvim/blob/master/lua/image/integrations/neorg.lua][plugin]]
