@@ -105,6 +105,10 @@ Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
 
+" image"
+" only support kitty for now, iterm2 not support 
+Plug '3rd/image.nvim'
+
 " other"
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -114,7 +118,6 @@ Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'Wansmer/treesj'
 Plug 'LunarVim/bigfile.nvim'
 " Plug 'folke/todo-comments.nvim'
-Plug '3rd/image.nvim'
 
 " ai"
 " Plug 'jpmcb/nvim-llama'
