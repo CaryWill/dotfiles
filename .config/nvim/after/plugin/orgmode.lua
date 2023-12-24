@@ -28,7 +28,7 @@ require("orgmode").setup({
 			org_toggle_checkbox = "<leader>cc",
 		},
 	},
-  -- org_log_into_drawer = "LOGBOOK",
+	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "showeverything",
 	org_custom_exports = {
 		g = {
@@ -38,7 +38,6 @@ require("orgmode").setup({
 				local target = vim.fn.fnamemodify(current_file, ":p:r") .. ".md"
 				local command = { "pandoc", "--from=org", "--to=gfm", current_file }
 				local on_success = function(output)
-					print("Success!")
 					local function replaceBrackets(str)
 						return str:gsub("\\%[", "["):gsub("\\%]", "]")
 					end
@@ -50,10 +49,9 @@ require("orgmode").setup({
 					local file = io.open(target, "w")
 					file:write(content)
 					file:close()
-					vim.api.nvim_echo({ { table.concat(output, "\n") } }, true, {})
+					vim.api.nvim_echo({ { "success!" } }, true, {})
 				end
 				local on_error = function(err)
-					print("Error!")
 					vim.api.nvim_echo({ { table.concat(err, "\n"), "ErrorMsg" } }, true, {})
 				end
 				return exporter(command, target, on_success, on_error)
