@@ -51,6 +51,8 @@ ln -sf "$(pwd)/dotfiles/.tmux.conf" ~/.tmux.conf
 ln -sf "$(pwd)/dotfiles/.bashrc" ~/.bashrc
 ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
 ln -sf "$(pwd)/coc-settings.json" ~/.vim/coc-settings.json
+# kitty config
+ln -s "$(pwd)/.config/kitty" ~/.config/kitty
 
 # 安装 vim 插件
 vim +PlugInstall +qall
