@@ -80,6 +80,7 @@ https://stackoverflow.com/a/47294150
 22. use :StartupTime 来查看插件的性能加载情况
 23. E490: No fold found 是因为 neo-tree 导致的
 24. 手动安装下 :Mason prettier 或者直接 npm -g install prettier 就行了
+25. https://github.com/rose-pine/kitty using kitty +kitten themes
 
 ## TODO
 
