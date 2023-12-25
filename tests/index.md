@@ -11,3 +11,8 @@ Inserting Images in Markdown. Images can be added to any markdown page using the
 
 ![Alt text](https://gist.ro/s/remote.png)
 ![Alt text](https://gist.ro/s/remote.png)
+
+
+
+
+![Alt text](/Users/cary/Downloads/angry_fukureru_boy.png)

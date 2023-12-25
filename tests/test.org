@@ -29,4 +29,7 @@
    - [ ] archive
 ** TODO orgmode neovim shortcut
    [[https://github.com/nvim-orgmode/orgmode/blob/master/DOCS.md#global-settings][neovim-orgmode]]
+
    [[file:/Users/cary/Downloads/githubmarkdown.png]]
+
+   [[file:/Users/cary/Downloads/57654917.jpeg]]
