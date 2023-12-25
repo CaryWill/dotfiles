@@ -200,7 +200,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   },
   hijack_directories = {
     enable = true,
-    auto_open = false,
+    auto_open = true,
   },
   update_focused_file = {
     enable = true,
