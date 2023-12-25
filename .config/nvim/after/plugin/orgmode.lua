@@ -20,7 +20,27 @@ end
 -- so i want to use harpoon as an extension
 -- to solve the problem
 require("orgmode").setup_ts_grammar()
+local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 require("orgmode").setup({
+	org_agenda_files = { icloud_org_dir_path .. "**/*" },
+	org_default_notes_file = icloud_org_dir_path .. "refile.org",
+	org_capture_templates = {
+		T = {
+			description = "Todo",
+			template = "* TODO %?\n %u",
+			target = icloud_org_dir_path .. "todo.org",
+		},
+		j = {
+			description = "Journal",
+			template = "\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?",
+			target = icloud_org_dir_path .. "journal.org",
+		},
+		n = {
+			description = "Notes",
+			template = "* %?\n %u",
+			target = icloud_org_dir_path .. "notes.org",
+		},
+	},
 	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
 	-- https://github.com/nvim-orgmode/orgmode/blob/master/lua/orgmode/config/defaults.lua
 	mappings = {
@@ -31,7 +51,7 @@ require("orgmode").setup({
 	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "showeverything",
 	org_custom_exports = {
-    -- NOTE: there's also other options, like to html then to markdown
+		-- NOTE: there's also other options, like to html then to markdown
 		g = {
 			label = "Export to gfm markdown personal refined",
 			action = function(exporter)

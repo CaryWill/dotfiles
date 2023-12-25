@@ -19,6 +19,9 @@ set smartindent
 set autoread
 set signcolumn=yes
 " set colorcolumn=80
+set nofoldenable
+set foldmethod=indent
+set foldlevel=99
 set clipboard+=unnamedplus
 set cursorline
 set splitright
