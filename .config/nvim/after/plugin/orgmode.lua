@@ -23,7 +23,7 @@ require("orgmode").setup_ts_grammar()
 local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 require("orgmode").setup({
 	org_agenda_files = { icloud_org_dir_path .. "**/*" },
-	org_default_notes_file = icloud_org_dir_path .. "refile.org",
+	org_default_notes_file = icloud_org_dir_path .. "default.org",
 	org_capture_templates = {
 		T = {
 			description = "Todo",
