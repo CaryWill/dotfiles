@@ -61,10 +61,6 @@ set backupdir=~/tmp/.backup//
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
 " set foldlevel=99
-" orgmode"
-" set conceallevel=2
-" set concealcursor=nc
-" set shellslash
 
 " color theme
 set termguicolors
