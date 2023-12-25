@@ -45,6 +45,8 @@ local func = ls.function_node
 local choice = ls.choice_node
 local dynamicn = ls.dynamic_node
 
+-- tutorial
+-- https://sbulav.github.io/vim/neovim-setting-up-luasnip/
 ls.add_snippets(nil, {
 	all = {
 		snip({
