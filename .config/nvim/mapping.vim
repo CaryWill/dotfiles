@@ -64,6 +64,7 @@ nnoremap <silent>;e <cmd>NvimTreeToggle<CR>
 nnoremap <silent>fi :NvimTreeFindFileToggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
 nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pp :PlugUpdate<CR>
 
 "{{{ built-in terminal termToggle fn
 let s:term_buf = 0
