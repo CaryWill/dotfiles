@@ -20,6 +20,9 @@ brew install stylua
 # for export org file to other format
 brew install emacs
 brew install pandoc
+# you need install it to make it work with
+# 3rd/image neovim plugin
+brew install imagemagick
 
 # 如果是 neovim 的话，那么需要改一下位置，在 ~/.config/nvim/autoload/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
