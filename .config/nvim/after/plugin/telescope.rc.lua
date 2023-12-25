@@ -98,6 +98,13 @@ telescope.setup({
 				auto_validate = false,
 				db_safe_mode = false,
 			},
+			-- media_files = {
+			-- 	-- filetypes whitelist
+			-- 	-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+			-- 	filetypes = { "png", "webp", "jpg", "jpeg" },
+			-- 	-- find command (defaults to `fd`)
+			-- 	find_cmd = "rg",
+			-- },
 			-- recent_files = {
 			--   only_cwd = true
 			-- }
@@ -106,6 +113,7 @@ telescope.setup({
 })
 
 telescope.load_extension("frecency")
+-- telescope.load_extension("media_files")
 -- telescope.load_extension('fzf')
 -- telescope.load_extension("undo")
 -- telescope.load_extension("recent_files")
