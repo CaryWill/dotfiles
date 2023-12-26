@@ -109,6 +109,11 @@ Plug 'akinsho/org-bullets.nvim'
 " orgmode related plugin"
 " https://github.com/topics/orgmode-nvim
 
+" vim-orgmode"
+" Plug 'jceb/vim-orgmode'
+" Plug 'tpope/vim-speeddating'
+
+
 " image"
 " only support kitty for now, iterm2 not support 
 " Plug '3rd/image.nvim'
