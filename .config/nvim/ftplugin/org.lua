@@ -1,5 +1,3 @@
--- vim.bo.tabstop = 2
--- vim.bo.shiftwidth = 2
--- vim.wo.conceallevel = 2
--- vim.wo.concealcursor = "nc"
--- vim.wo.shellslash = true
+vim.opt_local.conceallevel = 2
+-- vim.opt_local.concealcursor = "nc"
+vim.opt_local.shellslash = true
