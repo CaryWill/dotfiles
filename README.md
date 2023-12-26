@@ -94,4 +94,4 @@ https://stackoverflow.com/a/47294150
 - [ ] [send command to all tmux sessions(like source all .zshrc on all sessions)](https://stackoverflow.com/questions/16325449/how-to-send-a-command-to-all-panes-in-tmux)
 - [x] css auto complete not work
 - [ ] mini indent exclude floatterm
-- [ ] 10000 lines of file is slow when editing(but `nvim -u NORC assets/xenodium.org is` is fast)
+- [ ] 10000 lines of file is slow when editing, and i found out it's the orgmode plugin (but `nvim -u NORC assets/xenodium.org is` is fast)
