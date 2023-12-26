@@ -1,0 +1,3000 @@
+| -resize | width             |
+| -resize | xheight           |
+| -resize | widthxheight      |
+| -resize | widthxheight^     |
+| -resize | widthxheight!     |
+| -resize | widthxheight>     |
+| -resize | widthxheight<     |
+| -resize | area@             |
+
+Fix image aspect ratios for Instagram:
+
+#+BEGIN_SRC sh
+  $ mogrify -resize 1080x1350 -gravity center -extent 1080 *.jpg
+#+END_SRC
+
+* [2015-09-08 Tue] Lucky 7 review
+:PROPERTIES:
+:CUSTOM_ID: lucky-7-review
+:END:
+** Recommended? yep
+[[http://www.lucky7london.co.uk][Lucky 7]] is a small nostalgic American diner on Westbourne Park road. I like the vibe, the space, and the unpretentious waiting staff. I go to Lucky 7 often enough, originally for the buttermilk pancakes, but the list of favorites on the menu keeps growing.
+
+[[file:images/lucky-7-review/lucky-7-menu-board.jpg]]
+[[file:images/lucky-7-review/lucky-7-staff.jpg]]
+
+Smileys by [[https://openclipart.org/detail/219291/smile][w.dyer]].
+
+** Buttermilk Banana pancakes
+These are my favorite pancakes in London by far. Banana buttermilk pancakes and a few free coffee refills usually sort me out until dinner time. Add a side of bacon if extra hungry. You probably don't need it though.
+
+[[file:images/lucky-7-review/lucky-7-coffee.jpg]]
+[[file:images/lucky-7-review/lucky-7-pancakes.jpg]]
+
+** Reuben sandwich
+The reuben has been on Lucky 7's specials menu for months now. Not had many of these in London, but compared to The Brass Rail's, this reuben was a clear winner. The sandwich is huge and comes with fries. My girlfriend and I struggled to finish one between the two of us.
+
+file:images/lucky-7-review/lucky-7-reuben-fries.jpg
+
+file:images/lucky-7-review/lucky-7-reuben-cross-section.jpg
+
+** Vanilla milkshake (add malt!)
+This milkshake hits the spot every time, but it's filling. You almost have to decide between the shake and an actual meal. If you must have it, add malt. Sorry, no picture.
+** Huevos Rancheros
+This is a breakfast dish I can equally make (better?) at home, but Lucky 7 wins hands down every time I'm feeling particularly lazy. Sorry, no picture.
+** Useful?
+Was this post useful to you? do [[https://twitter.com/xenodium/status/643139264302186497][reply]]!
+** Better suggestion?
+London is full of overhyped, gimmicky, and unnecessarily expensive restaurants. Very few deliver truly awesome food (even those expensive ones). Got suggestions? I'd love to hear from you [[https://twitter.com/xenodium][@xenodium]].
+
+* [2015-09-02 Wed] Sierra Leone travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: sierra-leone-travel-bookmarks
+:END:
+- [[http://www.sierraleonemarathon.com/][Sierra Leone marathon]].
+- [[http://www.street-child.co.uk/][Street Child charity]].
+
+* [2015-09-02 Wed] London travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: london-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-01-19 Sun]
+:END:
+- [[http://www.chgt.org.uk][Chiswick House & Gardens]].
+- [[https://www.heathrobinsonmuseum.org][Heath Robinson Museum]].
+- [[http://www.londonlibrary.co.uk/][London Library (book your free tour)]].
+- [[https://en.wikipedia.org/wiki/Quaker_Gardens,_Islington][Quaker gardens]], Islington.
+- [[http://www.sohotheatre.com/][Soho Theatre]] (not tried yet).
+- [[https://www.cntraveller.com/gallery/best-brunch-london][The best brunch London 2020 | CN Traveller]].
+- [[https://www.cntraveller.com/gallery/the-most-beautiful-restaurants-in-london][The most beautiful restaurants in London for 2020 | CN Traveller]].
+
+* [2015-08-23 Sun] Use ImageMagick to auto-orient images
+:PROPERTIES:
+:CUSTOM_ID: use-imagemagick-to-auto-orient-images
+:END:
+Recently needed to rotate images based on EXIF metadata. ImageMagick to the rescue:
+#+BEGIN_SRC sh
+  $ for i in *.png; do convert -auto-orient "$i" "$i"; done
+#+END_SRC
+
+* [2015-08-23 Sun] Bengali Macher Jhol
+:PROPERTIES:
+:CUSTOM_ID: bengali-macher-jhol
+:END:
+My friend Sakhya brought me the wonderful [[http://www.nitamehta.com/Cookbook-of-Regional-Cuisines-of-India-%2528Veg-%2B-Non-Veg%2529_431.html][Cookbook of Regional Cuisines of India]]. After improvisations and substitutions, here's my attempt at making Bengali Machcher Jhol:
+
+[[file:images/bengali-machcher-jhol/bengali-machcher-jhol-00.png]]
+[[file:images/bengali-machcher-jhol/bengali-machcher-jhol-01.png]]
+[[file:images/bengali-machcher-jhol/bengali-machcher-jhol-02.png]]
+[[file:images/bengali-machcher-jhol/bengali-machcher-jhol-03.png]]
+[[file:images/bengali-machcher-jhol/bengali-machcher-jhol-04.png]]
+[[file:images/bengali-machcher-jhol/bengali-machcher-jhol-05.png]]
+
+* [2015-08-22 Sat] New habits for 2015
+:PROPERTIES:
+:CUSTOM_ID: new-habits-for-2015
+:END:
+- 20 min morning meditations.
+- [[http://www.ted.com/talks/terry_moore_how_to_tie_your_shoes][A better way to tie your shoes]].
+- Cold showers (all of them!).
+- Keys, wallet, phone, badge, and headphones live together.
+- Listen to audio books.
+- Morning runs.
+- Nightly flossing.
+
+* [2015-08-22 Sat] Meditation retreats bookmarks
+:PROPERTIES:
+:CUSTOM_ID: meditation-retreats-bookmarks
+:END:
+:MODIFIED:
+[2020-08-02 Sun]
+:END:
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/best-places-to-seek-silence][Best places to seek silence]].
+- [[http://www.dhanakosa.com/retreat/2015/opening-life-0][Opening to life @ Dhanakosa Buddhist Retreat Centre]].
+- [[http://www.samyeling.org/][Samye Ling (Tibetan- buddhist monastery)]].
+- [[https://www.dhamma.org/en-US/index][Vipassana Meditation (centers across world)]].
+
+* [2018-07-08 Sun] Human memory bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: human-memory-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-03-11 Wed]
+  :END:
+- [[http://augmentingcognition.com/ltm.html][Augmenting Long-term Memory (Michael Nielsen)]].
+- [[http://www.ludism.org/mentat/][Ludism's memory techniques]].
+- [[https://news.ycombinator.com/item?id=22492381][Using Anki to remember what you read | Hacker News]].
+- [[https://news.ycombinator.com/item?id=22492381][Using Anki to remember what you read | Hacker News]].
+* [2015-08-22 Sat] Mindfulness/meditation bookmarks
+:PROPERTIES:
+:CUSTOM_ID: meditation-bookmarks
+:END:
+:MODIFIED:
+[2023-05-08 Mon]
+:END:
+- [[https://www.10percenthappier.com/][10% Happier: Mindfulness Meditation Courses with Dan Harris and Joseph Goldstein]].
+- [[https://en.wikipedia.org/wiki/Aimless_wandering][Aimless Wandering]].
+- [[http://www.nytimes.com/2016/06/05/opinion/sunday/are-you-in-despair-thats-good.html][Are You in Despair? That’s Good (NY Times)]].
+- [[http://lesswrong.com/lw/3w3/how_to_beat_procrastination/][Beating procrastination]].
+- [[http://theenergyproject.com/blog/take-back-your-life-ten-steps][Best 10 life changes]].
+- [[https://www.drweil.com/health-wellness/body-mind-spirit/stress-anxiety/breathing-three-exercises/][Breathing Exercise: Three To Try | 4-7-8 Breath (Andrew Weil, M.D.)]].
+- [[http://theoryengine.org/life/contemplative-practice-that-isnt-meditating/][Contemplative Practice That Isn’t Meditating]].
+- [[https://dayoneapp.com/][Day One - The award-winning journal app for iPhone, iPad, and Mac.]].
+- [[https://www.youtube.com/watch?v%3DZ8LOhZmuVaE&feature%3Dyoutu.be][Developing Lotus Flexibility - Preparing Yoga Padmasana Sitting Position, part 1 (YouTube)]].
+- [[http://franticworld.com/free-meditations-from-mindfulness/][Free meditations from Mindfulness | Mindfulness: Finding Peace in a Frantic World]].
+- [[https://hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/][How to Make Yourself Work When You Just Don’t Want To]].
+- [[http://www.tricycle.com/blog/how-sit-zen-and-stretching-excercises-full-lotus][How to sit Zen]].
+- [[http://jonathanfoust.libsyn.com/webpage][Jonathan Foust's talks]].
+- [[http://buddhistinspiration.blogspot.com/2011/12/well-see-zen-story.html][Kalyanamittas: We'll See - A Zen Story]].
+- [[http://www.theguardian.com/lifeandstyle/2011/jan/22/meditation-centres-uk][Meditation centres around the UK]].
+- [[https://twitter.com/g_s_bhogal/status/1225561131122597896][MEGATHREAD TIME: In 40 tweets I will describe 40 power powerful concepts for understanding the world]].
+- [[http://www.memrise.com/blog/][Memreise's blog]].
+- [[https://medium.com/@yegg/mental-models-i-find-repeatedly-useful-936f1cc405d][Mental Models I Find Repeatedly Useful - Gabriel Weinberg (Medium)]].
+- [[https://medium.com/@yegg/mental-models-i-find-repeatedly-useful-936f1cc405d#.g0gjbdp8z][Mental Models I Find Repeatedly Useful]].
+- [[https://www.mindbodyattention.com/][Mind Body Attention — thinking, moving, and meditating]].
+- [[https://thebuddhistcentre.com/text/mindfulness-breathing][Mindfulness breathing]].
+- [[https://hbr.org/2014/12/mindfulness-mitigates-biases-you-may-not-know-you-have][Mindfulness Mitigates Biases You May Not Know You Have]].
+- [[https://www.youtube.com/watch][Nam Myoho Renge Kyo]].
+- [[https://news.ycombinator.com/item?id=21861986][Ram Dass has died (Hacker News)]].
+- [[https://www.smilingmind.com.au/smiling-mind-app][Smiling Mind free apps]].
+- [[https://news.ycombinator.com/item?id=13019767][The Challenge of Consciousness (Hacker News)]].
+- [[https://news.ycombinator.com/item?id=21036927][The effect of meditation on brain structure (2012) | Hacker News]].
+- [[http://theenergyproject.com/blog][The Energy Project blog]].
+* [2015-08-22 Sat] Learning bookmarks
+:PROPERTIES:
+:CUSTOM_ID: learning-bookmarks
+:END:
+:MODIFIED:
+[2016-12-10 Sat]
+:END:
+- [[http://www.quora.com/What-are-the-best-YouTube-channels-for-learning-growth-and-development][Best YouTube channels for learning (Quora)]].
+- [[https://www.supermemo.com/en/articles/20rules][Effective learning: Twenty rules of formulating knowledge]].
+- [[https://news.ycombinator.com/item?id=7826745][HN's comments on learning languages]].
+- [[https://news.ycombinator.com/item?id=6522901][HN's comments on memory]].
+- [[http://fourhourworkweek.com/2012/12/11/how-to-play-the-guitar/][How to Finally Play the Guitar: 80/20 Guitar and Minimalist Music]].
+- [[http://betterexplained.com/articles/adept-method/][Learn Difficult Concepts with the ADEPT Method]].
+- [[https://www.youtube.com/playlist?list=PL2FF649D0C4407B30][Learning to learn]].
+- [[http://betterexplained.com/articles/intuition-isnt-optional/][Learning to Learn: Intuition Isn’t Optional | BetterExplained]].
+- [[http://fourhourworkweek.com/2009/07/30/speed-reading-and-accelerated-learning/][Scientific Speed Reading: How to Read 300% Faster in 20 Minutes]].
+
+* [2015-08-22 Sat] Bundi travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bundi-travel-bookmarks
+:END:
+- Bundi Haveli (accomodation).
+- Hadoti Palace (accomodation).
+- Haveli Braj Bhushan Ji ki (accomodation).
+- Haveli Katkoun Guest House (accomodation).
+- Kasera Paradise (accomodation).
+
+* [2015-08-14 Fri] Upgrading PL30 headphones
+:PROPERTIES:
+:CUSTOM_ID: upgrading-pl30-headphones
+:END:
+I've loved my [[http://www.amazon.com/Soundmagic-PL30-In-Ear-Headphones/dp/B001MQ3CCO][Soundmagic PL30 in-ear headphones]]. They're relatively inexpensive, comfortable, and great for exercising (they stay in). Audio quality and bass have been good enough (I don't need much). Unfortunately, I've had two pairs of PL30's and both stopped working after a year or two. I'm replacing the last pair with [[http://www.amazon.co.uk/RHA-MA750-Isolating-In-Ear-Headphone-Black/dp/B00ELAM8LE][RHA's MA750]] (an upgrade, me hopes).
+
+Other contenders considered: [[http://www.amazon.co.uk/Etymotic-Research-Portable-iPhone-Earphones-Black/dp/B000XPG2QI][Etymotic Research HF5]], and [[http://www.amazon.co.uk/Shure-SE215-In-Ear-Isolating-Earphones-Clear/dp/B004U9NH3E][Shure SE215]]. Also considered bluetooth alternatives like [[http://www.amazon.com/JayBird-BlueBuds-Sport-Bluetooth-Headphones/dp/B00AIRUOI8?][JayBird BlueBuds X]] and [[http://www.amazon.co.uk/Plantronics-BackBeat-Wireless-Earbuds-Frustration-Black/dp/B00DZTHW9U][Plantronics BackBeat GO 2]].
+
+I'm somewhat nervous to pay more for a pair of headphones. Let's hope they don't meet the same unfortunate fate. We'll see.
+
+* [2015-08-13 Thu] Quotes
+:PROPERTIES:
+:CUSTOM_ID: quotes
+:END:
+- [[https://twitter.com/stevemagness/status/633778359156125696?refsrc%3Demail&s%3D11]["Being good at something is about being curious enough to explore things to a level where most people give up."]]
+- "The world is a book and those who do not travel read only one page." - Augustine of Hippo.
+- "National identity is not your only identity." - Xiaolu Guo?
+- [[https://news.ycombinator.com/item?id=27696310]["Choose your words carefully. Words are cheap, but their effect can be expensive."]]
+
+* [2015-08-13 Thu] Bhutan travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bhutan-travel-bookmarks
+:END:
+- [[http://www.tigersnestbhutan.com/][Taktsang (Tiger’s Nest) Monastery]].
+
+* [2015-08-12 Wed] Cooking bookmarks
+:PROPERTIES:
+:CUSTOM_ID: cooking-bookmarks
+:END:
+:MODIFIED:
+[2020-12-23 Wed]
+:END:
+- [[https://food.ndtv.com/lists/10-best-indian-breakfast-recipes-696080][14 Best Indian Breakfast Recipes | Easy Indian Breakfast Recipes - NDTV Food]].
+- [[http://drinks.seriouseats.com/2013/05/25-essential-cocktails-everyone-should-know-cocktail-101-easy-mixed-drink-recipes-classic-cocktail-guide.html][25 Cocktails Everyone Should Know]].
+- [[https://www.amazon.com/Taylor-Precision-Products-Stainless-11-Pound/dp/B002SXV8G2/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1481553229&sr=1-1-spons&keywords=Taylor+Precision+stainless+steel&psc=1][Amazon.com: Taylor Precision Products Stainless Steel Kitchen Scale]].
+- [[https://www.seriouseats.com/recipes/2012/07/basic-new-york-style-pizza-dough.html][Basic New York-Style Pizza Dough Recipe | Serious Eats]].
+- [[http://www.world-of-crepes.com/cast-iron-fry-pans.html][Cast Iron Fry Pans]].
+- [[https://www.quora.com/How-is-authentic-fried-rice-prepared/answer/ChienLing-Koo-1/share][ChienLing Koo's answer to How is authentic fried rice prepared? (Quora)]].
+- [[https://cooking.nytimes.com/recipes/1018717-eggs-kejriwal][Eggs Kejriwal Recipe - NYT Cooking]].
+- [[https://www.youtube.com/watch?v=-suTmUX4Vbk][Equipment Review: Best Carbon-Steel Skillets (YouTube)]].
+- [[http://www.seriouseats.com/2010/06/how-to-buy-season-clean-maintain-cast-iron-pans.html][Equipment: How to Buy, Season, and Maintain Cast Iron Cookware]].
+- [[https://www.quora.com/How-do-Chinese-restaurants-get-their-beef-to-be-so-tender-Like-beef-in-black-bean-sauce-or-Mongolian-beef-etc-It-almost-falls-apart-in-the-mouth][How do Chinese restaurants get their beef to be so tender?]].
+- [[https://www.youtube.com/watch?v=KLGSLCaksdY#action=share][How To Cook With Cast Iron (YouTube)]].
+- [[https://getpocket.com/explore/item/how-to-make-french-onion-soup][How To Make French Onion Soup]].
+- [[https://www.amazon.co.uk/Imperia-Italian-Double-Cutter-Machine/dp/B0001IXA0I][Imperia Italian Double Cutter Pasta Machine]].
+- [[https://www.digitaltrends.com/home/steaming-hard-boiled-eggs/][It's Not Rocket Science, Steaming Hard-Boiled Eggs Makes Peeling Easier (Digital trends)]].
+- [[http://www.varasanos.com/PizzaRecipe.htm][Jeff Varasano's NY Pizza Recipe]].
+- [[https://www.amazon.co.uk/Marcato-machine-Chrome-Silver-Wellness/dp/B0009U5OSO/][Marcato Atlas 150 pasta machine Chrome, Silver Wellness]].
+- [[https://www.thecuriouschickpea.com/masoor-dal-tadka/][Masoor Dal Tadka - Indian Red Lentil Dal]].
+- [[http://ohsheglows.com/2013/01/24/my-favourite-homemade-almond-milk-step-by-step-photos/][My Favourite Homemade Almond Milk + Step By Step Photos]].
+- [[http://cooking.nytimes.com/][New York Times cooking]].
+- [[http://www.womenshealthmag.co.uk/nutrition/recipes/2321/pho-tai-lan-hanoi-style-flash-fried-steak-garlic-soup/][Pho Tai Lan (Hanoi style flash-fried steak & garlic soup)]].
+- [[https://www.pizzamaking.com/pizza-recipes.html][Pizza Recipes - PizzaMaking.com]].
+- [[https://www.portlandfarmersmarket.org/cookbook/][Portland Farmers Market » Cookbook]].
+- [[https://www.fixfeastflair.com/home/2015/2/9/swedish-cardamom-rolls-kardemummabullar-recipe][Swedish Cardamom Rolls (Kardemummabullar) — Fix Feast Flair]].
+- [[http://www.amazon.com/The-Ringer-Cleaner-Stainless-Chainmail/dp/B00FKBR1ZG][The Ringer Cast Iron Cleaner XL 8x6 Inch Stainless Steel Chainmail (Amazon)]].
+- [[http://www.seriouseats.com/2014/11/the-truth-about-cast-iron.html][The Truth About Cast Iron Pans: 7 Myths That Need To Go Away]].
+- [[http://www.cooksillustrated.com/how_tos/5820-the-ultimate-way-to-season-cast-iron][The ultimate way to season cast iron]].
+- [[https://www.quora.com/Why-do-steaks-at-high-end-restaurants-taste-so-different-from-other-steaks][Why do steaks at high end restaurants taste so different from other steaks? (Quora)]].
+* [2015-08-11 Tue] 9 week half-marathon training
+:PROPERTIES:
+:CUSTOM_ID: 9-week-half-marathon-training
+:END:
+While reading [[https://zenhabitsbook.s3.amazonaws.com/Zen%2520Habits%2520book.pdf][Zen Habits: Mastering the Art of Change]], I comitted to running half marathon in mid-October. That's roughly two months from now. Here's a 9 week training schedule:
+
+| WEEK | MON  | TUE  | WED  | THU   | FRI  | SAT  | SUN   |
+|------+------+------+------+-------+------+------+-------|
+|    1 | Rest | 5 Km | 5 Km | Cycle | Rest | 5 Km | 7 Km  |
+|    2 | Rest | 5 Km | 5 Km | Cycle | Rest | 5 Km | 8 Km  |
+|    3 | Rest | 7 Km | 5 Km | Cycle | Rest | 5 Km | 10 Km |
+|    4 | Rest | 8 Km | 5 Km | Cycle | Rest | 5 Km | 12 Km |
+|    5 | Rest | 8 Km | Rest | 8 Km  | Rest | 5 Km | 14 Km |
+|    6 | Rest | 8 Km | Rest | 8 Km  | Rest | 6 Km | 16 Km |
+|    7 | Rest | 8 Km | 8 Km | 8 Km  | Rest | 8 Km | 19 Km |
+|    8 | Rest | 8 Km | Rest | 12 Km | Rest | 8 Km | 16 Km |
+|    9 | Rest | 8 Km | Rest | 5 Km  | 5 Km | Rest | Race  |
+|------+------+------+------+-------+------+------+-------|
+
+My times:
+
+| WEEK | MON  |   TUE | WED   | THU         | FRI   |   SAT |     SUN |
+|------+------+-------+-------+-------------+-------+-------+---------|
+|    1 | Rest |     ✘ | 29:04 | ✔           | Rest  | 26:36 |   38:40 |
+|    2 | Rest | 29:11 | 28:50 | ✔           | Rest  | 27:07 |   44:55 |
+|    3 | Rest | 40:46 | 26:29 | ✔           | Rest  |     ✘ |   57:01 |
+|    4 | Rest | 46:46 | ✘     | ✘           | Rest  | 30:08 | 1:12:10 |
+|    5 | Rest | 46:59 | Rest  | 44:46       | Rest  | 24:50 | 1:25:24 |
+|    6 | Rest | 50:02 | Rest  | 46:24       | Rest  |     ✘ | 1:37:39 |
+|    7 | Rest | 46:54 | 46:41 | 46:42       | Rest  |     ✘ | 1:57:57 |
+|    8 | Rest | 45:28 | Rest  | 48:13 (8km) | Rest  | 43:56 |       ✘ |
+|    9 | Rest | 44:24 | Rest  | 27:12       | 26:09 |  Rest | 1:58:28 |
+|------+------+-------+-------+-------------+-------+-------+---------|
+
+* [2015-08-11 Tue] Shanghai travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: shanghai-travel-bookmarks
+:END:
+:MODIFIED:
+[2015-11-29 Sun]
+:END:
+- [[http://www.nytimes.com/2013/12/01/travel/36-hours-in-shanghai.html][36 Hours in Shanghai]].
+- Shanghai Xiaolongbao at [[http://www.yelp.com/biz/shanghai-dumpling-house-edison-2][Dumpling House Edison (on Rt 27)]].
+- [[https://goo.gl/maps/FQmSF][Tianzi Fang street art (Google maps)]].
+- [[http://tianzifang.cn/][Tianzi Fang street art]].
+- [[https://goo.gl/maps/Ngqwk][Town God's Temple]], street Food!
+- [[https://en.wikipedia.org/wiki/Yu_Garden][Yu Garden/Huxinting Teahouse]].
+- 佳家 for 小龙包.
+- 小样 (Little Yang's) for 生煎包 (sheng jian bao). Fried soup filled dumplings. Think skin crunchy bottom texture.
+
+* [2015-08-10 Mon] Singapore job board bookmarks
+:PROPERTIES:
+:CUSTOM_ID: singapore-job-board-bookmarks
+:END:
+:MODIFIED:
+[2015-08-10 Mon]
+:END:
+- [[https://angel.co/singapore/jobs][Angel.co (Singapore Startup Jobs)]].
+- [[http://e27.co/jobs][e27]].
+- [[http://www.startupjobs.asia/][Startupjobs.asia]].
+- [[https://twitter.com/NataliePis/status/1130811744027316224][Those who relocated to Europe for a tech position: where did you find your job?]].
+
+* [2015-08-08 Sat] Germany travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: germany-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-04-10 Fri]
+:END:
+- [[https://en.wikipedia.org/wiki/Azalea_and_Rhododendron_Park_Kromlau][Azalea and Rhododendron Park Kromlau]].
+- [[https://zerokspot.com/weblog/2020/04/05/post-lockdown-bucketlist/][Having a post-lockdown bucket list - zerokspot.com]].
+- [[http://www.7stern.at/de-de/][Home - 7STERN Bräu]].
+- [[https://kerriescupoftea.blogspot.co.uk/2014/10/lai-fufu-in-munich-germany.html][Kerrie's Cup of Tea: lai fufu in Munich Germany]].
+- [[https://www.laifufu.de/][Laifufu Teesalon - Teezeremonie - Tee - Oolong - München - Laifufu Teesalon]].
+- [[https://www.sudhaus.at/][SUDHAUS — Brauerei & Restaurant (try beef tartar. also pizza?)]].
+* [2015-08-08 Sat] Menorca travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: menorca-travel-bookmarks
+:END:
+- [[https://www.flickr.com/photos/paul_stephenson/4282369223/][Cala Macarella, Menorca]].
+- [[https://en.wikipedia.org/wiki/Punta_Nati_Lighthouse][Punta Nati]].
+- [[http://www.lonelyplanet.com/spain/balearic-islands/menorca/activities/driving-offroading/scooter-rental-menorca][Scooter rental in Menorca]].
+
+* [2015-08-08 Sat] Travel tools bookmarks
+:PROPERTIES:
+:CUSTOM_ID: travel-tools-bookmarks
+:END:
+:MODIFIED:
+[2019-01-04 Fri]
+:END:
+- [[http://www.cool-cities.com/][Cool cities, a visual city guide]].
+- [[https://www.producthunt.com/tech/detour-2-0][Detour 2.0]].
+- [[https://play.google.com/store/apps/details?id%3Dco.dojoapp.dojo&hl%3Den_GB][Dojo: Best stuff to do in London]].
+- [[http://www.escapethecity.org][escapethecity.org]].
+- [[https://everplaces.com][Find the best places to sleep, eat and play]].
+- [[http://www.hostelworld.com][hostelworld.com]].
+- [[http://ezroadtrips.com/blogs/2015/03/How-To-Travel-The-World-Without-Money.html][How to travel the world without money]].
+- [[https://indie.bootsnall.com/][Indie: a simple, powerful way to buy multi-stop flights]].
+- [[http://app.internationalsos.com][International SOS Assistance App]].
+- [[https://izi.travel/en][IziTravel: audio guides and city/museum tours]].
+- [[http://www.jetsetter.com][Jet Setter]].
+- [[http://us.louisvuitton.com/eng-us/men/books/city-guides][Louis Vuitton city guide]].
+- [[http://mapiac.com/travel-map/][Mapiac: discover hidden wonders]].
+- [[http://www.roadsharing.com][roadsharing.com]].
+- [[https://tripcast.co/][Tripcast]].
+- [[https://www.triposo.com/][Triposo]].
+- [[https://www.vayable.com/][Vayable (find a new experience)]].
+- [[https://www.visahq.com/citizens/][Visa Requirements by Citizenship]].
+- [[https://www.quora.com/What-is-the-best-website-or-app-to-use-for-trip-planning-and-why][What is the best website or app to use for trip planning, and why? (Quora)]].
+- [[https://www.quora.com/What-travel-hacks-have-saved-you-a-lot-of-money][What travel hacks have saved you a lot of money? (Quora)]].
+- [[http://www.wwoof.net][wwoof.net (Worldwide Opportunities on Organic Farms)]].
+
+* [2015-08-08 Sat] Philippines travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: philippines-travel-bookmarks
+:END:
+:MODIFIED:
+[2019-04-14 Sun]
+:END:
+- [[https://rachfeed.com/5-unique-tourist-spots-philippines/][5 Unique Tourist Spots in the Philippines - RachFeed]].
+- [[http://www.lonelyplanet.com/philippines/travel-tips-and-articles/the-philippines-for-beginners-7-first-timer-fails-to-avoid-on-your-trip][7 first-timer fails]].
+- [[https://en.wikipedia.org/wiki/Palawan_%28island%29][Palawan (island)]].
+- [[http://www.lonelyplanet.com/philippines/travel-tips-and-articles/77222][The best beaches of the Philippines]].
+
+* [2015-07-23 Thu] Add site-specific browsers to your workflow
+:PROPERTIES:
+:CUSTOM_ID: add-site-specific-browsers-to-your-workflow
+:END:
+There are three browser tabs continously used in my workflow: GMail, Google Calendar, and Google Play Music. I normally have many more tabs open, but these three I access periodically. As the number of open tabs increases, and I fail to cleanup, getting back to my usual three gets a little trickier.
+
+So far, I've kept each of these services open in separate windows. But that doesn't always work. Click on any link in your inbox and you're back to playing cleanup. This is where [[https://en.wikipedia.org/wiki/Site-specific_browser][site-specific browsers]] (SSB) can help.
+
+[[https://github.com/dmarmor/epichrome][Epichrome]] enables you to build Chrome-based SSBs (on Mac OSX). Build an SSB for the usual suspects and easily jump to them using the app switcher.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/add-site-specific-browsers-to-your-workflow/switcher-small.png]]
+
+More at [[https://github.com/dmarmor/osx-chrome-ssb-gui/][OSX Chrome SSB]] and [[http://www.quora.com/Is-there-a-way-to-use-Chrome-as-a-site-specific-browser][Quora thread]]
+
+UPDATE: Enable the Chrome extension to open URLs in default browser.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/add-site-specific-browsers-to-your-workflow/helper.png]]
+
+And choose the default browser to open URLs.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/add-site-specific-browsers-to-your-workflow/default.png]]
+
+* [2015-07-20 Mon] Sardinia travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: sardinia-travel-bookmarks
+:END:
+- Alghero.
+- Baja Sardinia.
+- Budoni.
+- [[http://www.sardinianbeaches.com/beaches-of-sardinia/east/baunei/cala-goloritze/][Cala Goloritze, Sardinia]].
+- Castelsardo (gifts maybe?).
+- Food: Maialetto sardo (Pig), Sebadas, Pardula, Papassinas, Pani e sapa.
+- L'Asinara boat trip (abandoned penitentiary).
+- La Pelosa beach.
+- Nuraghe.
+- Porto Cervo.
+- Porto Torres.
+- San Teodoro.
+- Stintino (fishing port).
+- Zedda e Piras vinyards (Alghero).
+
+* [2015-07-17 Fri] Open closest build file in Emacs
+:PROPERTIES:
+:CUSTOM_ID: open-closest-build-file-in-emacs
+:END:
+Whether it's Makefile, SConstruct, BUILD, or your favorite build file, chances are you have to tweak it from time to time. ~ar/open-build-file~ searches your current and parent directories to find a build file.
+#+BEGIN_SRC emacs-lisp
+  (defvar ar/project-file-names '("Makefile" "SConstruct" "BUILD"))
+
+  (defun ar/parent-directory (path)
+    "Get parent directory for PATH."
+    (unless (equal "/" path)
+      (file-name-directory (directory-file-name path))))
+
+  (defun ar/find-upwards (path filename)
+    "Search upwards from PATH for a file named FILENAME."
+    (let ((file (concat path filename))
+          (parent (ar/parent-directory (expand-file-name path))))
+      (if (file-exists-p file)
+          file
+        (when parent
+          (ar/find-upwards parent filename)))))
+
+  (defun ar/open-closest (filename)
+    "Open the closest FILENAME in current or parent dirs (handy for finding Makefiles)."
+    (let ((closest-file-path (ar/find-upwards (buffer-file-name)
+                                                   filename)))
+      (when closest-file-path
+        (message closest-file-path)
+        (switch-to-buffer (find-file-noselect closest-file-path)))
+      closest-file-path))
+
+  (defun ar/open-build-file ()
+    "Open the closest project file in current or parent directory.
+  For example: Makefile, SConstruct, BUILD, etc.
+  Append `ar/project-file-names' to search for other file names."
+    (interactive)
+    (catch 'found
+      (mapc (lambda (filename)
+              (when (ar/open-closest filename)
+                (throw 'found t)))
+            ar/project-file-names)
+      (error "No project file found")))
+#+END_SRC
+
+* [2015-07-15 Wed] Create iOS static fat libraries
+:PROPERTIES:
+:CUSTOM_ID: create-ios-static-fat-libraries
+:END:
+Have separate static libraries for different iOS architectures? Stitch 'em up into a single fat library using with lipo:
+#+BEGIN_SRC sh
+  $ lipo -create libOne_i386.a libOne_x86_64.a libOne_armv7.a libOne_arm64.a -output libOne.a
+#+END_SRC
+
+* [2015-07-15 Wed] Settling scores with an org table
+:PROPERTIES:
+:CUSTOM_ID: settling-scores-with-an-org-table
+:END:
+Recently kept track of expenses between a group of us. To settle the scores, I emailed an exported HTML table from an org file. This was simple enough and required no external viewer from recepients. The org table, in all its textful glory, looked as follows...
+
+#+BEGIN_EXAMPLE
+
+| Date             | Item           |   Charge |
+|------------------+----------------+----------|
+| [2015-06-18 Thu] | Cash           |    20.00 |
+| [2015-07-11 Sat] | Lucky 7        |    42.97 |
+| [2015-07-13 Mon] | Santa Maria    |    32.00 |
+| [2015-07-12 Sun] | Tayyabs        |    46.00 |
+| [2015-07-13 Mon] | The Brass Rail |    39.00 |
+| [2015-07-13 Mon] | Underground    |    10.00 |
+| [2015-07-10 Fri] | Cash           |    20.00 |
+| [2015-07-13 Mon] | Cash           |    20.00 |
+| [2015-07-14 Tue] | Cash           |    20.00 |
+|------------------+----------------+----------|
+|                  | total          | £ 249.97 |
+,#+TBLFM: @11$3=vsum(@2..@10);£ %.2f
+#+END_EXAMPLE
+
+...while the exported HTML below could be easily pasted on to an email.
+
+| Date             | Item           |   Charge |
+|------------------+----------------+----------|
+| [2015-06-18 Thu] | Cash           |    20.00 |
+| [2015-07-11 Sat] | Lucky 7        |    42.97 |
+| [2015-07-13 Mon] | Santa Maria    |    32.00 |
+| [2015-07-12 Sun] | Tayyabs        |    46.00 |
+| [2015-07-13 Mon] | The Brass Rail |    39.00 |
+| [2015-07-13 Mon] | Underground    |    10.00 |
+| [2015-07-10 Fri] | Cash           |    20.00 |
+| [2015-07-13 Mon] | Cash           |    20.00 |
+| [2015-07-14 Tue] | Cash           |    20.00 |
+|------------------+----------------+----------|
+|                  | total          | £ 249.97 |
+#+TBLFM: @11$3=vsum(@2..@10);£ %.2f
+
+* [2015-07-13 Mon] Recognize new password prompts in Emacs shell
+:PROPERTIES:
+:CUSTOM_ID: recognize-new-password-prompts-in-emacs-shell
+:END:
+At some point, you may come across a trusted command-line utility prompting you for a password, and Emacs shell happily displaying each typed character to the nearby-world to see. Luckily, you can train Emacs to recognize new password prompts and hide the typed characters in modes deriving from comint. Append the password prompt REGEXP:
+#+BEGIN_SRC emacs-lisp
+  (setq comint-password-prompt-regexp (concat comint-password-prompt-regexp
+                                              "\\|"
+                                              "Password for red alert:"))
+#+END_SRC
+
+* [2015-07-11 Sat] Bosnia and Hercegovina travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bosnia-and-hercegovina-travel-bookmarks
+:END:
+- [[http://www.lonelyplanet.com/bosnia-and-hercegovina/travel-tips-and-articles/ten-reasons-to-visit-bosnia-hercegovina][Ten reasons to visit Bosnia & Hercegovina]].
+
+* [2015-07-11 Sat] Ireland travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: ireland-travel-bookmarks
+:END:
+- [[https://en.wikipedia.org/wiki/Skellig_Michael][Skellig Michael]].
+- Fishy Fishy in Kinsale: beautiful town on the water.
+- Belfast.
+- Giant's Causeway.
+- Greyhound dog races at Shelbourne Park.
+- [[https://twitter.com/bilderbergh/status/1066223113774514176?s=12][Old library chamber, Trinity College, Dublin]].
+
+* [2015-07-09 Thu] Pizza in London
+:PROPERTIES:
+:CUSTOM_ID: pizza-in-london
+:END:
+Not tried these yet. Taking note:
+- Bravi Ragazzi (Streatham).
+- Homeslice (Covent Garden).
+- Lord Morpeth (Hackney).
+- Santa Maria (Ealing).
+- Voodoo Ray's (Dalston).
+- Well Kneaded Wagon (Date-dependent location).
+
+* [2015-07-09 Thu] mp4 to gif
+:PROPERTIES:
+:CUSTOM_ID: mp4-to-gif
+:END:
+Converting mp4 to gif is handy for posting short screencasts. You can convert to gif using ffmpeg and optimize with imagemagick. To install:
+#+BEGIN_SRC sh
+  apt-get install ffmpeg imagemagick (linux)
+  brew install ffmpeg imagemagick (Mac)
+#+END_SRC
+Convert to gif:
+#+BEGIN_SRC sh
+  ffmpeg -i my.mp4 -pix_fmt rgb24 -r 5 my.gif
+#+END_SRC
+Optimize with:
+#+BEGIN_SRC sh
+  convert -dither none -layers Optimize my.gif my_optimized.gif
+#+END_SRC
+
+UPDATE: There's also licecap and subsequently optimize with:
+
+#+BEGIN_SRC sh
+  cat source.gif | gifsicle --colors 256 --optimize=3 --delay=15 > target.gif
+#+END_SRC
+
+UPDATE: [[https://gist.github.com/dergachev/4627207][Also consider for .mov]]:
+
+#+BEGIN_SRC sh
+  ffmpeg -i in.mov -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+#+END_SRC
+
+* [2015-07-06 Mon] Keyboards bookmarks
+:PROPERTIES:
+:CUSTOM_ID: keyboards-bookmarks
+:END:
+:MODIFIED:
+[2021-12-20 Mon]
+:END:
+- [[http://www.keyboardco.com/blog/index.php/2012/12/an-introduction-to-cherry-mx-mechanical-switches/][An introduction to Cherry MX mechanical switches]].
+- [[http://www.codekeyboards.com][Code keyboard]].
+- [[https://ethanaa.com/blog/i-%E2%99%A5-keyboards/#silver][I ♥ Keyboards | Ethan Anderson]].
+- [[https://blog.keyboard.io/][Keyboardio Blog]].
+- [[https://www.keychron.com/][Keychron | Wireless Mechanical Keyboards for Mac, Windows and phones]].
+- [[https://colemak.com/Learn][Learn - Colemak keyboard layout]].
+- [[https://mechdb.net/][Mechanical Keyboards Database - custom keyboards photos]].
+- [[https://5z6p.com/products/plaid-through-hole/][Plaid // Keyboard base board]].
+- [[https://ultimatehackingkeyboard.com/shop][Products – Ultimate Hacking Keyboard]].
+- [[https://www.reddit.com/r/cyberDeck/][r/cyberDeck]].
+- [[https://www.reddit.com/r/ErgoMechKeyboards/][r/ErgoMechKeyboards]].
+- [[https://news.ycombinator.com/item?id=17989303][Ultimate Hacking Keyboard (Hacker News)]].
+- [[http://sittingscribe.com/why-learn-the-colemak-keyboard-layout/][Why Learn the Colemak Keyboard Layout?]].
+* [2015-07-05 Sun] United States travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: united-states-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-04-21 Wed]
+:END:
+- [[https://www.abandonedamerica.us/][Abandoned America]].
+- [[https://www.lonelyplanet.com/usa/travel-tips-and-articles/americas-best-food-cities-for-travelers-on-a-budget/40625c8c-8a11-5710-a052-1479d2756c74][America's best food cities for travelers on a budget - Lonely Planet]].
+- [[https://en.wikipedia.org/wiki/Antelope_Canyon][Antelope Canyon (Arizona)]].
+- [[https://www.statelibraryofiowa.org/services/collections/law-library][Law Library in Iowa]].
+- [[https://qr.ae/pGIlFt][Peter Wade's answer has restaurants throughout the US]].
+- [[https://duckduckgo.com/?q=Supai%252C+Arizona&t=ffab&iax=1&ia=images][Supai, Arizona]].
+- [[https://texastriffidranch.com/][The Texas Triffid Ranch | Dallas's Pretty Much Only Carnivorous Plant Gallery]].
+- [[https://duckduckgo.com/?q%3DTurnip%2BRock%2Bin%2BPort%2BAustin%252C%2BMichigan&t%3Dffab&iax%3D1&ia%3Dimages][Turnip Rock in Port Austin, Michigan]].
+- [[https://twitter.com/EarthPix/status/613912754227965952/photo/1][Vance Creek Bridge in Washington]].
+- [[https://www.wta.org/][Washington trail association (hiking)]].
+- [[https://www.quora.com/Where-can-I-afford-to-live-in-NYC-with-a-100-000-salary-and-no-debt][Where can I afford to live in NYC with a $100,000 salary and no debt? (Quora)]].
+
+* [2015-07-05 Sun] Lebanon travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: lebanon-travel-bookmarks
+:END:
+:MODIFIED:
+[2023-04-20 Thu]
+:END:
+- [[https://en.wikipedia.org/wiki/Baatara_gorge_waterfall][Baatara gorge waterfall]].
+- [[https://www.instagram.com/steakcrush][STEAK CRUSH (@steakcrush)]].
+
+* [2015-07-05 Sun] Slovenia travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: slovenia-travel-bookmarks
+:END:
+- [[http://wildswim.com/lake-bohinj][Lake Bohinj]].
+
+* [2015-07-05 Sun] Belgium travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: belgium-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-02-15 Sat]
+:END:
+- [[https://twitter.com/planetepics/status/617003120695099392/photo/1][The Flower Carpet event at the Grand-Place in Brussels]].
+- [[https://zerokspot.com/weblog/2020/02/03/travel-arrangements-brussels/][Travel arrangements around Brussels - zerokspot.com]].
+
+* [2015-07-03 Fri] Fishing with Emacs
+:PROPERTIES:
+:CUSTOM_ID: fishing-with-emacs
+:END:
+OK not quite, but having recently learned about [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Appending-Kills.html][C-M-w (append-next-kill)]], I used it in a keyboard macro to fish out matching lines. This is similar to [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Other-Repeating-Search.html][flush-lines]], except the kill ring is also populated. This is handy, if you need the flushed lines. Here's an example.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/fishing-with-emacs/fishing.gif]]
+
+Here's the equivalent in Emacs lisp:
+
+#+BEGIN_SRC emacs-lisp
+  (defun flush-kill-lines (regex)
+    "Flush lines matching REGEX and append to kill ring.  Restrict to \
+  region if active."
+    (interactive "sFlush kill regex: ")
+    (save-excursion
+      (save-restriction
+        (when (use-region-p)
+          (narrow-to-region (point) (mark))
+          (goto-char 0))
+        (while (search-forward-regexp regex nil t)
+          (move-beginning-of-line nil)
+          (kill-whole-line)))))
+#+END_SRC
+
+* [2015-07-03 Fri] California travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: california-travel-bookmarks
+:END:
+- [[https://en.wikipedia.org/wiki/Sequoia_National_Park][General Sherman Tree at Sequoia National Park]].
+
+* [2015-07-01 Wed] Rebind caps lock to control key on Mac OS X
+:PROPERTIES:
+:CUSTOM_ID: rebind-caps-lock-to-control-key-on-mac-os-x
+:END:
+Let's see if this one sticks. I'll give caps lock as control a try. Rebinding the keys on Mac OS X is easy enough:
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/rebind-caps-lock-to-control-key-on-mac-os-x/caps-lock-to-control.png]]
+
+#+BEGIN_QUOTE
+System Preferences -> Keyboard -> Keyboard Tab -> Modifier Keys...
+#+END_QUOTE
+
+* [2015-06-30 Tue] Searchable ebooks in Emacs
+:PROPERTIES:
+:CUSTOM_ID: searchable-ebooks-in-emacs
+:END:
+If you haven't bought [[https://www.masteringemacs.org/book][Mastering Emacs]] by [[https://twitter.com/mickeynp][Mickey Petersen]], you should. It's a wonderful source of Emacs tips. Having just finished the ebook on my Kindle, I was keen to go back and fish out some of that newly found wisdom. My immediate reaction was to figure out a way to make the ebook searchable from Emacs.
+
+The ebook is available in epub and pdf format. Though Emacs's docview is super handy for viewing pdf's, searching didn't feel as comfortable as searching in org mode. The epub, on the other hand, proved useful. [[http://pandoc.org][Pandoc]] can easily convert from epub to org.
+
+#+BEGIN_SRC sh
+  pandoc  --from=epub --to=org mastering-emacs.epub > mastering-emacs.org
+#+END_SRC
+
+After a some tidying (mostly removing BEGIN_HTML/END_HTML blocks and adding TITLE/AUTHOR), the resulting org file is surprisingly clean and easy to search/navigate. [[https://github.com/ShingoFukuyama/helm-swoop][helm-swoop]] and [[https://github.com/emacs-helm/helm/blob/199b9feb396eedc0e502dd767b19060f7dc09f6a/helm-org.el][helm-org-in-buffer-headings]] are great for that.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/searchable-ebooks-in-emacs/mastering-emacs-org-00.png]]
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/searchable-ebooks-in-emacs/mastering-emacs-org-01.png]]
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/searchable-ebooks-in-emacs/mastering-emacs-org-02.png]]
+
+* [2015-06-21 Sun] Portugal travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: portugal-travel-bookmarks
+:END:
+:MODIFIED:
+[2023-07-09 Sun]
+:END:
+- [[https://www.quora.com/As-a-Dermatologist-what-life-changing-skin-care-advice-would-you-give-me][As a Dermatologist, what life changing skin care advice would you give me?]].
+- [[https://duckduckgo.com/?q=avenida+dos+platanos&ia=images][Avenida dos Platanos]].
+- [[https://brunoamaral.eu/page/beautiful-lisbon/][Beautiful Lisbon]].
+- [[https://www.reddit.com/r/Sardinia/comments/14uwypj/best_restaurants_in_alghero/][Best restaurants in Alghero?]].
+- Boca do inferno.
+- Cabo da Roca.
+- Casa dos passarinhos (Steak on hot stone, tuna steak with “mirandesa” sauce, monkfish masada).
+- Cascais - Guincho.
+- Cervejaria Ramiro (seafood restaurant in town).
+- Eduard 7th park.
+- Estoril.
+- Fox Trot (bar).
+- [[https://en.wikipedia.org/wiki/Hachij%C5%8D-jima][Hachijō-jima island]].
+- [[https://duckduckgo.com/?q=ilha+da+culatra&t=ffab&iax=1&ia=images][Ilha da Culatra (good for families)]].
+- [[https://duckduckgo.com/?q=ilha+da+tavira&t=ffab&iax=1&ia=images][Ilha da Tavira (good for food @ Portas do Mar)]].
+- [[https://duckduckgo.com/?q=ilha+deserta&t=ffab&iax=1&ia=images][Ilha Deserta (seafood as Estaminé)]].
+- Jeronimos Monastery (Lisbon).
+- Lisbon Castle.
+- [[https://www.lisbonlux.com/lisbon-shops/mercado-da-ribeira.html][Mercado da Ribeira in Lisbon]].
+- Mouro's castle (Sintra).
+- Mouro's castle.
+- Pasteis de Belem (Lisbon).
+- Pastelaria piriquita eat queijadas de sintra.
+- Pasteleria Piriquita (Sintra).
+- Pavilhao Chines (bar).
+- Pena's Pallace (must see if you go to sintra)
+- Pena's Pallace (Sintra).
+- Pensao do Amor (bar).
+- [[https://www.etfoodvoyage.com/category/locations/portugal/][Portugal Archives - ET Food Voyage]].
+- Praça do comercio.
+- Quinta da Regaleira
+- Quinta da Regaleira (Sintra).
+- Sintra village
+- [[https://en.wikipedia.org/wiki/Sintra][Sintra]].
+- Stop do bairro (tamboril rice, prawn curry, and seafood rice).
+- [[http://www.surfcastle.com/surf/school][Surfcastle]].
+- [[https://twitter.com/archpng/status/1115037292752723968][São Bento railway station]].
+- Sé (Lisbon Cathedral).
+- [[https://twitter.com/lonelyplanet/status/612282216635363328/photo/1][The best beaches in Portugal's Algarve]].
+- Torre Belem (Lisbon).
+- [[https://www.eventbrite.com/e/web-summit-ladies-craft-night-tote-bag-embroidery-workshop-tickets-51503431149][Web Summit Ladies Craft Night - Tote Bag Embroidery Workshop Tickets, Tue, Nov 6, 2018 at 7:00 PM (Eventbrite)]].
+- [[https://www.quora.com/What-tips-would-you-give-to-a-newbie-who-wants-to-travel-like-you][What tips would you give to a newbie who wants to travel like you? - Quora]].
+- [[https://edition.cnn.com/travel/article/world-longest-pedestrian-suspension-bridge-portugal-arouca/index.html][World's longest pedestrian suspension bridge]].
+
+* [2015-06-21 Sun] Bulgaria travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bulgaria-travel-bookmarks
+:END:
+:MODIFIED:
+[2015-06-21 Sun]
+:END:
+- [[https://twitter.com/EarthPix/status/612661559018528768/photo/1][Devetashka Cave]].
+
+* [2015-06-21 Sun] Presenting bookmarks
+:PROPERTIES:
+:CUSTOM_ID: presenting-bookmarks
+:END:
+:MODIFIED:
+[2016-01-13 Wed]
+:END:
+- [[http://s.hbr.org/1A4l5OX][How to give a presentation people will remember]].
+- [[http://s.hbr.org/1A3uvKp][How to give a stellar presentation]].
+- [[http://www.troyhunt.com/2015/06/speaker-style-bingo-10-presentation.html?m%3D1][Speaker style bingo: 10 presentation anti-patterns]].
+
+* [2015-06-21 Sun] Bali travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bali-travel-bookmarks
+:END:
+- [[https://www.lonelyplanet.com/indonesia/nusa-tenggara/gili-islands][Gili Islands travel (Nusa Tenggara, Indonesia - Lonely Planet)]].
+- [[https://snorkelaroundtheworld.com/2018/09/manta-snorkeling-nusa-penida/][Manta snorkeling Nusa Penida – When? Where? How much?]].
+- Pura Lempuyang, Bali.
+
+* [2015-06-17 Wed] WWDC app for OS X
+:PROPERTIES:
+:CUSTOM_ID: wwdc-app-for-os-x
+:END:
+[[https://github.com/insidegui][Guilherme Rambo]] created a great OS X [[https://github.com/insidegui/WWDC][OS X app for viewing WWDC content]]. Just installed it. Super handy. Thanks. Installing as simple as:
+#+BEGIN_SRC sh
+  $ brew cask install wwdc
+#+END_SRC
+
+* [2015-06-15 Mon] Debugging Objective-C reference cycles
+:PROPERTIES:
+:CUSTOM_ID: debugging-objective-c-reference-cycles
+:END:
+Overriding retain/release/autorelease may be handy while debugging:
+#+BEGIN_SRC objc
+  - (instancetype)retain {
+    NSLog(@"%p, retain\n", self);
+    return [super retain];
+  }
+
+  - (oneway void)release {
+    NSLog(@"%p, release\n", self);
+    [super release];
+  }
+
+  - (instancetype)autorelease {
+    NSLog(@"%p, autorelease\n", self);
+    return [super autorelease];
+  }
+#+END_SRC
+
+* [2015-06-13 Sat] London grub
+:PROPERTIES:
+:CUSTOM_ID: london-grub
+:END:
+Beyond the hype, buzz, and pricey gimmicks... Places to eat in London:
+- Antipode.
+- Arang.
+- Bone Daddies.
+- Gelupo.
+- Grind.
+- Holy Cow.
+- Kerbisher and Malt.
+- Kulu Kulu (South Ken).
+- Le Relais de Venise.
+- Lucky 7's.
+- Royal China.
+- Shree Krishna Vada Pav.
+- Sri Suwoon.
+- Tayyabs.
+- The Cow.
+- Tonkotsu.
+
+* [2015-06-08 Mon] My working playlist
+:PROPERTIES:
+:CUSTOM_ID: my-working-playlist
+:END:
+It's been a while since I spotted [[http://www.asianefficiency.com/motivation/music-working/][The Ultimate Music Collection for Getting Work Done]]. Since then, I've been on the lookout for music to work to. Some favorites:
+- [[https://play.google.com/store/music/album/B_Fleischmann_I_m_Not_Ready_For_The_Grave_Yet?id%3DBvu3fq5u5nbqcouo55bqi5qukjq][B. Fleischmann - I'm Not Ready For The Grave Yet]].
+- [[https://play.google.com/store/music/album/B_Fleischmann_Pop_Loops_For_Breakfast?id%3DB55lzvhp5xn2mkrzggq2uymiwm4][B. Fleischmann - Pop Loops For Breakfast]].
+- [[https://play.google.com/store/music/album/B_Fleischmann_Sidonie?id%3DBu5v5pc4ixxzapcoehnpllfvm5u][B. Fleischmann - Sidonie]].
+- [[https://play.google.com/store/music/album/B_Fleischmann_The_Humbucking_Coil?id%3DBok7yvyylg7ddkofaaecjdsduky][B. Fleischmann - The Humbucking Coil]].
+- [[https://play.google.com/store/music/album/Stars_of_the_Lid_The_Tired_Sounds_of_Stars_of_the?id%3DBasr7yt6jlsut3v2tpua7kfcckm][B. Fleischmann - The Tired Sounds of Stars of the Lid]].
+- [[https://play.google.com/store/music/album/B_Fleischmann_Welcome_Tourist?id%3DByefc55y7psyxg4okrq63mn4nne][B. Fleischmann - Welcome Tourist]].
+- [[https://play.google.com/store/music/album/Bexar_Bexar_Haralambos?id%3DBpyhpbxh6b4wthiczeokgiuijo4][Bexar Bexar - Haralambos]].
+- [[https://play.google.com/store/music/album/Budhaditya_Mukherjee_Sitar_Recital?id%3DBtawoyja7nxl2arsuimelitwzay][Budhaditya Mukherjee - Sitar Recital]].
+- [[https://play.google.com/store/music/album/Daft_Punk_TRON_Legacy?id%3DBbcjlhafmpp5ueztndxevp4cfuq][Daft Punk - TRON: Legacy]].
+- [[https://play.google.com/store/music/album/General_Fuzz_Soulful_Filling?id%3DB7rb24bzexr2q5bfjzffhvdd5he][General Fuzz - Soulful Filling]].
+- [[https://play.google.com/store/music/album/Hans_Zimmer_Inception_Music_From_The_Motion_Pictur?id%3DBoebgqwhs6bsgytjw2eybh7jiny][Inception (Music From The Motion Picture)]].
+- [[https://play.google.com/store/music/album/ISAN_Lucky_Cat?id%3DBjuvgzm2mocch55nolmbsjenaxy][ISAN - Lucky Cat]].
+- [[https://play.google.com/store/music/album/ISAN_Plans_Drawn_In_Pencil?id%3DBmp2y6k5bstvqlnzn2ncexcyolq][ISAN - Plans Drawn In Pencil]].
+- [[https://play.google.com/store/music/album/Jayanthi_Kumaresh_Mysterious_Duality?id%3DByrdsgd3b7ixcouemqqouxf45ia][Jayanthi Kumaresh - Mysterious Duality]].
+- [[https://play.google.com/store/music/album/Mogwai_Les_Revenants?id%3DBu2zb5nvoth3ead6v5riw43by7u][Mogwai - Les Revenants]].
+- [[https://play.google.com/store/music/album/Moondog_Big_Cat?id%3DB2hq6dlicqboshlev5eeiy53ybe][Moondog - Big Cat]].
+- [[https://play.google.com/store/music/album/Various_Artists_Moonrise_Kingdom_Original_Soundtra?id%3DB5babupzgcigh6jdprp3ga3owzm][Moonrise Kingdom (Original Soundtrack)]].
+- [[https://play.google.com/store/music/album/Nico_Muhly_Drones?id%3DBlj2wetseui4m5gfjjk5lssenui][Nico Muhly - Drones]].
+- [[https://play.google.com/store/music/album/Paul_Leonard_Morgan_Limitless_Original_Motion_Pict?id%3DBev5grya2zxgojikqwkdcxmdijq][Paul Leonard-Morgan - Limitless (Original Motion Picture Soundtrack)]].
+- [[https://play.google.com/store/music/album/Robert_Scott_Thompson_Upon_the_Edge_of_Night?id%3DBpkg77vpxsfgu4dj53y5ucxa4qe][Robert Scott Thompson - Upon the Edge of Night]].
+- [[https://play.google.com/store/music/album/Ryan_Miller_The_Kings_of_Summer_Jordan_Vogt_Robert?id%3DBx2mxfujrx5mjkqq6mm23zwzj54][Ryan Miller - The Kings of Summer (Jordan Vogt-Roberts' Original Motion Picture Soundtrack)]].
+- [[https://play.google.com/music/listen#/album//Stars%2Bof%2Bthe%2BLid/And%2BTheir%2BRefinement%2Bof%2Bthe%2BDecline][Stars of the Lid - And Their Refinement of the Decline]].
+- [[https://play.google.com/store/music/album/Stars_of_the_Lid_Gravitational_Pull_vs_The_Desire?id%3DBdnfpvqwopgqufuy2ly6u3lkhvy][Start of the Lid - Gravitational Pull vs. The Desire for an Aquatic Life]].
+- [[https://play.google.com/store/music/album/Terry_Riley_Terry_Riley_A_Rainbow_In_Curved_Air_Po?id%3DBmfe6h2d7heiey4xz74ocg6sx6e][Terry Riley - A Rainbow In Curved Air; Poppy Nogood and the Phantom Band]].
+- [[http://www.amazon.com/Social-Network-Trent-Reznor-Atticus/dp/B0044430H8/ref%3Dtmm_msc_swatch_0?_encoding%3DUTF8&sr%3D&qid%3D][Trent Reznor & Atticus Ross - The Social Network (Soundtrack from the Motion Picture)]].
+- [[https://play.google.com/store/music/album/Trentem%25C3%25B8ller_Into_The_Great_Wide_Yonder?id%3DBf6v47rm3dvgrjaircusjtocbfq][Trentemøller - Into The Great Wide Yonder]].
+- [[https://play.google.com/store/music/album/Tycho_Awake?id%3DBtc34r45fy7qwk4t6irzpkduv4a][Tycho - Awake]].
+- [[https://play.google.com/store/music/album/Various_Artists_Singing_Strings_From_India?id%3DBvkavd7gn62io3lmskjsbgpvtvy][Various Artists - Singing Strings From India]].
+- [[http://www.vitling.com/toys/triple_saw/][vitling: Triple Saw (algorithmic music) #algorave]].
+- [[https://play.google.com/store/music/album/Justin_Hurwitz_Whiplash_Original_Motion_Picture_So?id%3DBfdbec3biny47s6rwchdifzgrg4][Whiplash (Original Motion Picture Soundtrack)]].
+- [[https://play.google.com/store/music/album/Youth_Lagoon_The_Year_Of_Hibernation?id%3DBfw6onp7zxplpmlrheu3rmd3yui][Youth Lagoon - The Year Of Hibernation]].
+
+* [2015-06-02 Tue] Xcode bookmarks
+:PROPERTIES:
+:CUSTOM_ID: xcode-bookmarks
+:END:
+:MODIFIED:
+[2021-01-23 Sat]
+:END:
+- [[https://medium.com/ios-os-x-development/a-better-way-to-automatically-merge-changes-in-your-xcode-project-files-3d83b3583fe4#.hz33egjv1][A Better Way to Automatically Merge Changes in Your XCode Project Files]].
+- [[http://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1444472656&sr=8-1&keywords=Clean+Code%3A+A+Handbook+of+Agile+Software+Craftsmanship][Clean Code: A Handbook of Agile Software Craftsmanship (Book)]].
+- [[https://medium.com/passei-direto-product-and-technology/from-xcode-to-testflight-using-command-line-288c3a85bd93][From Xcode to TestFlight using command line]].
+- [[https://github.com/FuzzyAutocomplete/FuzzyAutocompletePlugin/blob/master/README.md][Fuzzy autocomplete for Xcode]].
+- [[https://github.com/kolinkrewinkel/Multiplex][Multiplex (like Emacs multiple cursor but for Xcode)]].
+- [[http://chen.do/blog/2013/10/22/reverse-engineering-xcode-with-dtrace/][Reverse-engineering Xcode with dtrace]].
+
+* [2015-06-02 Tue] Costa Rica travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: costa-rica-travel-bookmarks
+:END:
+- [[https://twitter.com/planetepics/status/603851463509540864/photo/1][Catarata del Toro]].
+- [[https://www.quora.com/What-are-the-best-travel-hacks-when-traveling-to-Costa-Rica][What are the best travel hacks when traveling to Costa Rica? (Quora)]].
+
+* [2015-06-02 Tue] Australia travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: australia-travel-bookmarks
+:END:
+:MODIFIED:
+[2016-12-01 Thu]
+:END:
+- [[http://www.lonelyplanet.com/australia/sydney/travel-tips-and-articles/australias-best-food-experiences-state-by-state][Australia's best food experiences: state by state]].
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/best-queensland-island-escapes-for-small-budgets][Best Queensland island escapes for small budgets]].
+- [[http://myproducetrail.com.au/directory/215][Des and Debi O’Tooles Honey]].
+- Fish and chips at Bondi beach.
+- [[https://www.lonelyplanet.com/australia/tasmania/travel-tips-and-articles/tasmania-the-formidable-isle-thats-wild-at-heart][Tasmania: the isle that's wild at heart]].
+- The Butler Potts Point (bar & restaurant).
+- [[https://www.tripadvisor.com/Attraction_Review-g488368-d2415480-Reviews-Tree_Top_Walk-Walpole_Western_Australia.html][Tree Top Walk (Walpole, Australia): Top Tips Before You Go - TripAdvisor]].
+
+* [2015-06-02 Tue] Samoa travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: samoa-travel-bookmarks
+:END:
+- [[http://www.samoa.travel/activity/to-sua-ocean-trench][To Sua ocean trench]].
+
+* [2015-06-02 Tue] Norway travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: norway-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-03-28 Sat]
+:END:
+- [[https://twitter.com/archpics/status/613586879645155328/photo/1][Atlantic Road]].
+- Bergen (check out colorful wooden houses).
+- Bergen railway (Bergen-Oslo): 300 miles of beautiful Norwegian scenery.
+- [[http://www.lofoten-info.no/][Lofoten Islands]].
+- Norwegian Air (cheap flights between all the
+- [[https://duckduckgo.com/?q=olden+norway&t=ffab&iax=1&ia=images][Olden]].
+- [[https://en.wikipedia.org/wiki/Reine][Reine]].
+- [[https://www.pinterest.com/pin/377950593706704729/?utm_campaign%3Drecs_150817&utm_term%3D1&utm_content%3D377950593706704729&e_t%3Dbce987c654c54dfa8733bc2f9df20080&utm_source%3D31&e_t_s%3Dpins&utm_medium%3D2004][Sakrisøy, Lofoten Islands]].
+- [[https://duckduckgo.com/?q=Spitsbergen&t=ffsb&iax=1&ia=images][Spitsbergen]].
+- [[http://www.theatlanticroad.com/][The Atlantic Road - Atlanterhavsveien / Atlanterhavsvegen]].
+
+* [2015-06-02 Tue] Los Angeles travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: los-angeles-travel-bookmarks
+:END:
+:MODIFIED:
+[2018-10-29 Mon]
+:END:
+- [[http://www.beerbellyla.com/][Beer Belly (Craft Beer + Crafty Food)]].
+- [[http://www.bluestardonuts.com/][Blue Star Donuts (SF + LA)]].
+* [2015-05-28 Thu] Mastering Emacs is out
+:PROPERTIES:
+:CUSTOM_ID: mastering-emacs-is-out
+:END:
+Emacs is amazingly alive. New packages are regularly listed on [[http://melpa.org][melpa]] and a new book just came out: [[https://www.masteringemacs.org/book][Mastering Emacs]] by [[https://twitter.com/mickeynp][Mickey Petersen]].
+
+[[https://www.masteringemacs.org/book][file:images/mastering-emacs-is-out/cover.png]]
+
+* [2015-05-25 Mon] South Carolina travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: south-carolina-travel-bookmarks
+:END:
+- [[https://en.wikipedia.org/wiki/Angel_Oak][Angel Oak tree]].
+
+* [2015-05-25 Mon] Colorado travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: colorado-travel-bookmarks
+:END:
+- [[http://horseshoebend.com/][Horseshoe Bend]].
+
+* [2015-05-25 Mon] Bash bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bash-bookmarks
+:END:
+:MODIFIED:
+[2019-07-07 Sun]
+:END:
+- [[https://linuxhint.com/bash_conditional_statement/][Bash conditional statement (Linux Hint)]].
+- [[https://linuxhint.com/bash_echo/][Bash Echo Examples (Linux Hint)]].
+- [[https://linuxhint.com/bash_error_handling/][Bash Error Handling (Linux Hint)]].
+- [[https://linuxhint.com/bash_for_loop/][Bash for loop examples (Linux Hint)]].
+- [[https://www.gnu.org/software/bash/manual/bashref.html][Bash Reference Manual]].
+- [[https://news.ycombinator.com/item?id=11832941][Common shell script mistakes (Hacker News)]].
+- [[http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming][Defensive bash programming]].
+- [[https://www.cyberciti.biz/faq/linux-unix-bash-for-loop-one-line-command/][HowTo: Use bash For Loop In One Line - nixCraft]].
+- [[http://www.etalabs.net/sh_tricks.html][Rich’s sh (POSIX shell) tricks]].
+- [[https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md][Safe ways to do things in bash]].
+- [[https://github.com/koalaman/shellcheck][shellcheck: ShellCheck, a static analysis tool for shell scripts]].
+- [[https://linuxhint.com/string_concatenation_bash/][String concatenation in bash (Linux Hint)]].
+- [[http://bash.academy][The Bash Academy]].
+* [2015-05-25 Mon] restclient.el
+:PROPERTIES:
+:CUSTOM_ID: restclient.el
+:END:
+Installed [[https://github.com/pashky/restclient.el][Pashky's]] [[https://github.com/pashky/restclient.el][restclient.el]] Emacs package. Super helpful when trying out REST APIs.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/restclient.el/restclient.png]]
+
+* [2015-05-25 Mon] Seatle travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: seatle-travel-bookmarks
+:END:
+:MODIFIED:
+[2019-04-12 Fri]
+:END:
+- [[http://www.lonelyplanet.com/usa/seattle/travel-tips-and-articles/14-free-things-to-do-in-seattle][14 free things to do in Seattle]].
+- [[https://indichocolate.com/][Indi chocolate]].
+- [[https://www.lepanier.com/][Le Panier]].
+* [2015-05-25 Mon] Berlin travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: berlin-travel-bookmarks
+:END:
+:MODIFIED:
+[2016-01-12 Tue]
+:END:
+- [[http://www.topinspired.com/top-10-things-to-do-in-berlin/][10 things to do in Berlin]].
+- [[http://www.angloitalianfollowus.com/berlin-on-a-budget][Berlin On A Budget: Our Slow Travel Guide]].
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/69756][Perfect day in Berlin]].
+- [[http://www.lonelyplanet.com/germany/berlin/travel-tips-and-articles/75972][The best of hidden Berlin]].
+
+* [2015-05-25 Mon] Skeuomorph
+:PROPERTIES:
+:CUSTOM_ID: skeuomorph
+:END:
+From [[https://en.wikipedia.org/wiki/Skeuomorph][Wikipedia]], skeuomorph /ˈskjuːəmɔrf/ is a derivative object that retains ornamental design cues from structures that were necessary in the original. Examples include pottery embellished with imitation rivets reminiscent of similar pots made of metal and a software calendar that imitates the appearance of binding on a paper desk calendar.
+
+* [2015-05-25 Mon] define-word
+:PROPERTIES:
+:CUSTOM_ID: define-word
+:END:
+Installed [[https://github.com/abo-abo][Abo Abo's]] [[https://github.com/abo-abo/define-word][define-word]] Emacs package. A handy package to define words at point.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/define-word/define-word.png]]
+
+* [2015-05-22 Fri] Flushing empty lines in Emacs
+:PROPERTIES:
+:CUSTOM_ID: flushing-empty-lines-in-emacs
+:END:
+Via [[https://www.masteringemacs.org][masteringemacs.org]], [[https://www.masteringemacs.org/article/removing-blank-lines-buffer][removing blank lines in a buffer]]:
+#+BEGIN_EXAMPLE
+M-x flush-lines RET ^$ RET
+#+END_EXAMPLE
+
+* [2015-05-22 Fri] Regex bookmarks
+:PROPERTIES:
+:CUSTOM_ID: regex-bookmarks
+:END:
+:MODIFIED:
+[2019-08-06 Tue]
+:END:
+- [[http://ergoemacs.org/emacs/emacs_regex.html][Emacs: Text Pattern Matching (regex) tutorial]].
+- [[https://dev.to/emmawedekind/regex-cheat-sheet-2j2a][Regex Cheat Sheet (DEV Community)]].
+- [[http://regexrenamer.sourceforge.net/help/regex_quickref.html][Regex quick reference]]: From regexrenamer.
+- [[https://news.ycombinator.com/item][RegExr, see hacker news comments for other suggestions]].
+- [[http://regexr.com/][RegExr: A website for interactive regex prototyping with syntax highlighting]].
+
+* [2015-05-06 Wed] Write to temp iOS snippet
+:PROPERTIES:
+:CUSTOM_ID: write-to-temp-ios-snippet
+:END:
+#+BEGIN_SRC objc
+  NSString *tempDir = NSTemporaryDirectory();
+  NSLog(@"%@\n", tempDir);
+  NSString *dataFilePath = [tempDir stringByAppendingPathComponent:@"my.file"];
+  [data writeToFile:dataFilePath atomically:YES];
+#+END_SRC
+
+* [2015-05-04 Mon] Greece travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: greece-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-01-02 Sat]
+:END:
+- [[http://island-ikaria.com/villages/Armenistis][Armenistis - Ikaria]].
+- [[https://en.wikipedia.org/wiki/Hydra_%2528island%2529][Hydra (island). No cars or motorcycles allowed]].
+- [[https://twitter.com/planetepics/status/584886491534471168/photo/1][Kathisma Beach - Lefkada]].
+- [[https://en.wikipedia.org/wiki/Cephalonia][Kefalonia Island]].
+- [[https://en.wikipedia.org/wiki/Melissani_Cave][Melissani Cave]].
+- [[https://duckduckgo.com/?q=monemvasia+greece&iac=1][Momnevasia]].
+- [[https://en.wikipedia.org/wiki/Navagio][Navagio bay]].
+- [[http://www.milos-island.gr/beaches/papafragas-beach.html][Papafragas beach]].
+- [[https://duckduckgo.com/?q=preveza&t=ffab&iax=images&ia=images][Preveza at DuckDuckGo]].
+
+* [2015-05-04 Mon] Sri Lanka travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: sri-lanka-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-05-01 Sat]
+:END:
+- [[https://exploreslk.com/ambuluwawa-temple/][Ambuluwawa Temple]].
+- [[https://www.nomadicmatt.com/travel-blogs/sri-lanka-trip-planning-guide/][Sri Lanka Travel Guide | Best Tips For Your Trip (Nomadic Matt)]].
+- [[https://www.lonelyplanet.com/amp/articles/best-train-rides-sri-lanka][The best train journeys in Sri Lanka]].
+- [[http://www.agoda.com/the-safari-hotel/hotel/yala-lk.html%20][The Safari Hotel (great area to go on safari, see leopards)]].
+
+* [2015-05-04 Mon] Switzerland travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: switzerland-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-05-16 Sun]
+:END:
+- [[https://en.wikipedia.org/wiki/Bernina_railway][Bernina railway]].
+- [[https://en.wikipedia.org/wiki/Lauterbrunnen][Lauterbrunnen village]].
+- [[http://en.wikipedia.org/wiki/Lion_Monument][Lion Monument (Lucerne)]].
+- [[http://www.luzern.com/en/index.cfm][Lucerne lake/city]].
+- [[https://en.wikipedia.org/wiki/Oeschinen_Lake][Oeschinen Lake]].
+
+* [2015-05-04 Mon] Thailand travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: thailand-travel-bookmarks
+:END:
+:MODIFIED:
+[2018-04-08 Sun]
+:END:
+- [[http://www.traveller.com.au/bangkok-street-food-restaurant-raan-jay-fai-awarded-with-michelin-star-h03h7v][Best Thai street food: Bangkok stall Raan Jay Fai awarded with Michelin star]].
+- [[http://www.thebuddhism.net/2012/07/11/buddha-statue-in-forest-pak-chong-thailand/][Buddha Statue in Forest Pak Chong]].
+- [[http://en.wikipedia.org/wiki/Phanom_Rung_Historical_Park][Phanom Rung Historical Park]].
+- [[https://twitter.com/archpics/status/607334981971623936/photo/1][Rama IX park, Bangkok]].
+- [[https://duckduckgo.com/?q=Sanctuary+of+truth%2C+Thailand+&t=ffsb&iax=1&ia=images][Sanctuary of Truth]].
+- [[https://www.quora.com/What-makes-Bangkok-so-popular][What makes Bangkok so popular? (Quora)]].
+
+* [2015-05-04 Mon] Madagascar travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: madagascar-travel-bookmarks
+:END:
+- [[http://en.wikipedia.org/wiki/Avenue_of_the_Baobabs][Avenue of the Baobabs]].
+
+* [2015-05-04 Mon] Hong Kong travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: hong-kong-travel-bookmarks
+:END:
+:MODIFIED:
+[2019-03-17 Sun]
+:END:
+- [[http://hongkongthrumyeyes.com/2013/07/13/crowd-of-pedestrians-crossing-at-sogo-in-causeway-bay/][Causeway Bay pedestrian crossing]].
+- [[http://www.lonelyplanet.com/china/travel-tips-and-articles/75797][Hong Kong's most breathtaking views: where to glimpse the city from above]].
+- [[http://www.hotel-icon.com/][Hotel Icon (allegedly amazing service/extras)]].
+- [[https://en.wikipedia.org/wiki/Lin_Heung_Tea_House][Lin Heung Tea House (bakery/tea/dim sum)]].
+- [[https://www.tripadvisor.co.uk/Restaurant_Review-g294217-d8028365-Reviews-Mak_s_Noodle_Jordan-Hong_Kong.html][Mak's Noodle (Jordan)]].
+- [[https://en.wikipedia.org/wiki/Siu_yuk][Siu yuk (Roasted Pig)]].
+- [[https://en.wikipedia.org/wiki/Tsang_Tsou_Choi][Tsang Tsou Choi (King of Hong Kong)]].
+- [[http://danielfooddiary.com/2014/12/13/tsimchaikee/][Tsim Chai Kee]] (recommended over Mak's wonton/soup).
+
+* [2015-05-04 Mon] Barcelona travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: barcelona-travel-bookmarks
+:END:
+:MODIFIED:
+[2015-08-26 Wed]
+:END:
+- [[http://www.lonelyplanet.com/spain/barcelona/travel-tips-and-articles/77782][18 free things to do in Barcelona]].
+- [[https://twitter.com/merowing_/status/884349497685549056][Dessert place you can recommend in Barcelona? (Twitter)]].
+- [[https://www.lapedrera.com/en/home][La Pedrera]].
+
+* [2015-05-04 Mon] Iceland travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: iceland-travel-bookmarks
+:END:
+:MODIFIED:
+[2018-12-25 Tue]
+:END:
+- [[http://www.gertenbach.info/e_reisen_2010.htm][An Iceland travel log]].
+- [[http://www.apartmenthouse.is/][Apartmenthouse.is]] for local flats.
+- Blue lagoon spa.
+- [[http://citywalk.is/][citywalk.is]]: Free walking tour.
+- [[http://designmarch.is/][Design March]].
+- [[http://www.iheartreykjavik.net/2015/04/drive-it-yourself-the-snaefellsnes-peninsula/][Drive it yourself: The Snæfellsnes peninsula]].
+- [[https://www.google.co.uk/maps/place/Efstidalur/@64.2428231,-20.5525875,17z/data%3D!3m1!4b1!4m2!3m1!1s0x48d699ea8baff6ab:0x9c26aa93153abbec?hl%3Den][Efstidalur]]: farm to table restaurant.
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/eight-must-see-spots-in-icelands-wild-west][Eight must-see spots in Iceland's wild west]].
+- [[http://www.fridrikv.is/en/][Fridrikv restaurant]].
+- [[http://outfitters.is/en/][Gangleri outfitters]].
+- Golden circle's waterfalls and geysers.
+- [[http://www.grillmarkadurinn.is/][grillmarkadurinn.is]] restaurant.
+- [[http://www.smaratun.is/][Horse farm hotel]].
+- [[http://www.hotelbudir.is/][Hotel Budir]].
+- [[http://www.lonelyplanet.com/iceland/travel-tips-and-articles/how-to-have-a-budget-break-in-iceland][How to have a budget break in iceland]].
+- [[https://drive.google.com/a/google.com/file/d/0B_7OFb4eNjNWeEFzM29maE9EUkU/view][Iceland itinerary]].
+- [[http://www.lebowskibar.is/][Lebowski Bar]] seriously?
+- Noodle Station.
+- [[http://www.pinkiceland.is/#!tours/cbo8][Pink Iceland tours]].
+- [[https://swanhouse.is/][Reykjavik Apartment Hotel – Accommodation in City Centre (swanhouse.is)]].
+- [[https://www.britishairways.com/en-gb/destinations/reykjavik/reykjavik-holidays][Reykjavik City Breaks (Book now with British Airways)]].
+- [[http://sandholt.is/][Sandholt]].
+- South coast's waterfalls and caves.
+
+* [2015-04-30 Thu] Building clang-format
+:PROPERTIES:
+:CUSTOM_ID: building-clang-format
+:END:
+Based on instructions from [[http://blog.hardcodes.de/articles/63/building-clang-format-and-friends-on-osx-mountain-lion][Building clang-format and friends on OSX Mountain Lion]].
+#+BEGIN_SRC sh
+#!/bin/bash
+  set -o nounset
+  set -o errexit
+
+  # Based on instructions from:
+  # http://blog.hardcodes.de/articles/63/building-clang-format-and-friends-on-osx-mountain-lion
+
+  readonly LLVM_DIR_PATH='/tmp/llvm'
+
+  update_repo() {
+    if [[ ! -d $1 ]]; then
+      git clone $2
+    else
+      cd $1
+      git pull
+      cd ..
+    fi
+    cd ..
+  }
+
+  update_all_repos() {
+    update_repo "llvm" "http://llvm.org/git/llvm.git"
+    pushd "${LLVM_DIR_PATH}/llvm/tools"
+    update_repo "clang" "http://llvm.org/git/clang.git"
+    popd
+    cd "../../${LLVM_DIR_PATH}/llvm/tools/clang/tools"
+    update_repo "clang-tools-extra" "http://llvm.org/git/clang-tools-extra.git"
+    cd "../../.."
+  }
+
+  build_clang() {
+    mkdir -p clang
+    mkdir -p build
+    cd clang
+    ../llvm/configure --enable-libcpp --enable-cxx11 --enable-debug-symbols=no --enable-optimized --prefix="${LLVM_DIR_PATH}/build"
+    make install
+  }
+
+  mkdir -p $LLVM_DIR_PATH
+  cd ${LLVM_DIR_PATH}
+  update_all_repos
+  build_clang
+#+END_SRC
+Bonus: use [[http://zed0.co.uk/clang-format-configurator/][clang-format-configurator]].
+
+* [2015-04-30 Thu] Programmatic iOS Auto Layout
+:PROPERTIES:
+:CUSTOM_ID: programmatic-ios-auto-layout
+:END:
+Basic iOS auto layout usage. See [[https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/AdoptingAutoLayout/AdoptingAutoLayout.html][Adopting Auto Layout]] and [[https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html][Visual Format language]] for reference.
+#+BEGIN_SRC objc
+  - (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+      // Disable autoresizing mask translation for parent.
+      self.translatesAutoresizingMaskIntoConstraints = NO;
+
+      _subview1 = [[UIView alloc] init];
+      // Disable autoresizing mask translation for subview.
+      _subview1.translatesAutoresizingMaskIntoConstraints = NO;
+
+      _subview1.backgroundColor = [UIColor redColor];
+      [self addSubview:_subview1];
+
+      // Creates a dictionary of bindings to be used in visual format.
+      NSDictionary *viewBindings = NSDictionaryOfVariableBindings(_subview1);
+
+      // H: horizontal layout
+      // |-50- spacing in relation to superview
+      // [_subview1(==50)] subview1's width
+      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[_subview1(==50)]"
+                                                                   options:0
+                                                                   metrics:nil
+                                                                     views:viewBindings]];
+      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_subview1(==50)]"
+                                                                   options:0
+                                                                   metrics:nil
+                                                                     views:viewBindings]];
+    }
+    return self;
+  }
+#+END_SRC
+
+** Also consider:
+- A UIView Subclass should implement intrinsicContentSize.
+- A UIView Subclass should never add constraints on neither itself (ie. self) nor superview.
+
+** References
+- [[https://medium.com/@NSomar/auto-layout-best-practices-for-minimum-pain-c130b2b1a0f6#.uu0xxmqbr][Auto layout best practices for minimum pain]].
+* [2015-04-23 Thu] Japan travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: japan-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-07-11 Sun]
+:END:
+- [[https://www.nomadasaurus.com/things-to-do-in-yokohama-japan/][21 Awesome Things to Do in Yokohama, Japan (2020 Guide)]].
+- Hiroshima oysters (try the one with cheese).
+- Okonomimura (all okonomiyaki restaurants).
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/77715][21 free things to do in Tokyo]].
+- [[http://www.tokyoweekender.com/2017/11/6-tokyo-travel-tips-to-help-you-get-around-the-city/][6 Tokyo Travel Tips to Help You Get Around the City | Tokyo Weekender]].
+- 7 day Japan Rail pass (first class?), possibly only sold outside Japan.
+- [[https://publishizer.com/8020-japanese/][80/20 Japanese by Richard Webb - Publishizer]].
+- [[http://luckypeach.com/a-guide-to-the-regional-ramen-of-japan/][A Guide to the regional ramen of Japan]].
+- [[https://smallseasons.guide/][A guide to understanding "Small Seasons"]].
+- [[http://ignition.co/398][A Moss Girl’s Guide to Japanese Moss Viewing]].
+- [[http://www.lonelyplanet.com/japan/travel-tips-and-articles/77501][A no-sushi guide to food in Japan]].
+- [[http://www.quora.com/How-does-it-feel-to-travel-alone#__w2_kxAuQyJ_answer_content][A trip to Japan (Quora answer)]].
+- [[https://www.annees-de-pelerinage.com/tawaraya-ryokan-review-best-hotel-in-the-world/][An unsponsored review of the Tawaraya Ryokan in Kyoto, Japan]].
+- [[http://www.insidekyoto.com/arashiyama-bamboo-grove][Arashiyama Bamboo Grove]].
+- [[http://jnto.org.au/autumn-leaves-in-hokkaido/][Autumn Leaves in Hokkaido]].
+- [[http://www.bbc.com/travel/story/20181009-japans-special-take-on-a-packed-lunch][BBC - Travel - Japan’s special take on a packed lunch]].
+- [[https://www.tofugu.com/japan/bushido/][Bushido: Way of Total Bullshit]].
+- [[http://www.amazon.co.uk/Drinking-Japan-Alcoholic-Beverages-Establishments/dp/4805310545][Drinking Japan]].
+- [[http://www.independent.co.uk/travel/asia/five-best-japanese-ryokan-406127.html][Five Best: Japanese Ryokan]].
+- Fuji Q Highland (rollercoaster theme park). Check out haunted hospital.
+- [[http://www.city.furano.hokkaido.jp/][Furano, Hokaido]].
+- [[http://rubyronin.com/going-to-kyushu-japan-why-visiting-yakushima-is-worth-it/][Going to Kyushu, Japan? Why Visiting Yakushima is Worth it - The Ruby Ronin]].
+- Guest houses: [[http://kazari-ya.com/index-e.html][Kazariya]], [[http://rakuza.gh-project.com/e/home.html][Rakuza]], [[http://ja-jp.facebook.com/musubian.kyoto][Musubian]].
+- [[http://www.hiiragiya.co.jp/][Hiiragiya ryokan]].
+- [[https://en.wikipedia.org/wiki/Himeji_Castle][Himeji Castle]].
+- [[https://en.wikipedia.org/wiki/Historic_Villages_of_Shirakawa-g%C5%8D_and_Gokayama][Historic Villages of Shirakawa-gō and Gokayama - Wikipedia]].
+- Hokkaido summer flowers.
+- [[http://www.hyperdia.com/en/][Hypermedia (internal travel website)]].
+- [[http://www.jalan.net/en/japan_hotels_ryokan/?cc%3Deng_banner][jalan.net (travel booking site)]].
+- [[http://www.japan-guide.com][Japan guide]].
+- [[http://jpninfo.com/][Japan Info]].
+- [[https://www.thisisinsider.com/japan-program-free-abandoned-homes-2018-11][Japan is launching a program that will give away abandoned homes - INSIDER]].
+- [[http://www.japan-guide.com/e/e2361.html][Japan Rail Pass]].
+- [[http://www.mext.go.jp/english/highered/1303739.htm][Japan Study Program]].
+- [[https://www.amazon.co.uk/JAPAN-TRAVEL-15DAYS-3-5GB-SIM/dp/B01J0Q8132][JAPAN TRAVEL DATA 15DAYS, 3.5GB on 4G/LTE- NANO SIM]].
+- [[https://www.japantimes.co.jp/news/2017/12/26/national/japans-glut-abandoned-homes-hard-sell-bargains-opportunity-knocks/][Japan's glut of abandoned homes: Hard to sell but bargains when opportunity knocks (The Japan Times)]].
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/the-other-japan-okinawas-secret-beaches][Japanese beaches]].
+- [[https://gurunavi.com/][Japanese Foods Encounter Like No Others (food search)]].
+- [[http://japaneseruleof7.com/][Japanese rule of 7]].
+- [[https://www.nippon.com/en/features/h00124/][Japan’s 72 Microseasons]].
+- [[http://www.japanonwheels.com/kawachi_fujien.html][Kawachi Fujien 河内藤園 (Kawachi Wisteria Garden)]].
+- [[http://www.japanese-incense.com/kodo-censer.htm][Kodo -- Preparing the Censor]].
+- [[https://news.ycombinator.com/item?id=13136252][Koya Bound – Eight Days on the Kumano Kodo | Hacker News]].
+- [[http://eng.shukubo.net/][Koyasan (needs booking)]].
+- [[http://landedbook.com/landed-japan/][Landed Japan Book (local knowledge to buy Japanese real estate)]].
+- [[http://www.japan-guide.com/e/e3912.html][Lots of goodies. Bamboo forest, oh my]].
+- [[https://blackshipcoffee.com/cafe/][Michael’s Cafe American – Black Ship Coffee]].
+- [[http://visit-miyajima-japan.com/en/][Miyajima: One of the top three scenic spots in Japan]].
+- [[https://www.flickr.com/photos/26608745@N05/2845439357/][Monument in front of the Shin-Yatsushiro Station]].
+- [[https://duckduckgo.com/?q=Nagakushiyama+park%2C+Japan+&t=ffsb&iax=1&ia=images][Nagakushiyama park]].
+- [[https://en.wikipedia.org/wiki/Nagoya][Nagoya]].
+- Natadera Temple in winter.
+- [[http://www.skijapan.com/resorts/niseko/][Niseko Ski Resort]].
+- [[https://www.lonelyplanet.com/japan/okinawa-and-the-southwest-islands/okinawa-honto/travel-tips-and-articles/the-other-japan-okinawas-secret-beaches][Okinawa: secrets for a long and happy life]].
+- Onsen.
+- [[http://www.quora.com/What-are-some-of-Japans-best-kept-secrets][Quora: What are some of Japans best kept secrets]]?
+- [[https://www.youtube.com/watch?v=geZWL_gE-Ak][Saitamaya: The Master of Grilled Meat - YouTube]].
+- [[https://www.historynet.com/satsuma-rebellion-satsuma-clan-samurai-against-the-imperial-japanese-army.htm][Satsuma Rebellion: Satsuma Clan Samurai Against the Imperial Japanese Army]].
+- [[https://twitter.com/tokyo_gov/status/1146931698837291008][Shitamachi #Museum in Ueno and catch a glimpse into old-fashioned living]].
+- [[https://en.wikipedia.org/wiki/Siege_of_Kumamoto_Castle][Siege of Kumamoto Castle (Wikipedia)]].
+- [[https://news.ycombinator.com/item?id=18442097][Snapshots of Tokyo’s vivid street life (Hacker News)]].
+- [[http://marc.merlins.org/perso/japan2013/links.html][Table of Content for japan2013]].
+- [[http://marc.merlins.org/perso/japan2014/links.html][Table of Content for japan2014]].
+- [[http://marc.merlins.org/perso/japan2015/links.html][Table of Content for japan2015]].
+- [[http://www.4wd-networks.com/makers/detail/takazawa-candle.html][TAKAZAWA Candle (or look for ikaragata shape candle)]].
+- [[https://visithachinohe.com/en/stories/the-2020-hachinohe-enburi-festival-schedule/][The 2020 Hachinohe Enburi Festival Schedule (Sakura festival)]].
+- [[http://jpninfo.com/13012][The village of living water]].
+- [[https://www.quora.com/What-are-the-most-inconvenient-things-foreign-tourists-who-travel-to-Japan-experience][Things to look out for in Japan (Quora)]].
+- [[https://www.japan-guide.com/list/e1102.html][Tohoku Travel Guide]].
+- [[https://en.wikipedia.org/wiki/Sukiyaki][Try out sukiyaki]].
+- [[https://docs.google.com/document/d/1wjqJKYEKbHSUTsj8Lxj8OCn0gSOXOpf_SroyBEjLbKY/edit][Uncharted Tokyo]].
+- [[https://www.vitra.com/en-gb/magazine/details/the-hill-of-the-buddha][Vitra | The Hill of the Buddha]].
+- [[http://www.mymodernmet.com/profiles/blogs/zao-fox-village-miyagi-japan][Zao Fox Village]].
+- [[http://hekiunsou.jp/][国指定重要文化財「野村別邸　碧雲荘」]].
+
+* [2015-10-21 Wed] Kyoto travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: kyoto-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-12-29 Tue]
+:END:
+- [[http://www.everintransit.com/nishiki-market-tour-kyoto/][Eating My Way Through Nishiki Market, Kyoto | Ever In Transit]].
+- [[http://en.wikipedia.org/wiki/Fushimi_Inari-taisha][Fushimi Inari Temple]]: 4KM mountain trail lined with bright orange shinto gates.
+- Golden Pavillion (macha and biscuits at tea house).
+- Hakone (day trip for hot baths), see Yuryo spa. Also the pirate boat.
+- [[http://www.aaronwilliamson.com/old_web/travel/japan/kibune/kibune.htm][Kibune]].
+- [[http://en.wikipedia.org/wiki/Kinkaku-ji][Kinkakuji Temple]].
+- [[http://en.wikipedia.org/wiki/Kiyomizu-dera][Kiyomizu Temple]].
+- Kuramadera Temple & Kibune Shrine: More peaceful shrine.
+- [[http://www.insidekyoto.com/kyoto-itineraries][Kyoto itineraries]].
+- [[https://docs.google.com/document/d/1bQb4GeiTElx0Gsv84wTDQlOVrbkqwTChSnMPMzrCcr4/edit?authkey%3DCJPtzocJ&hl%3Den_US&authkey%3DCJPtzocJ][Kyoto travel tips (doc)]].
+- [[http://www.kyotoguide.com/ver2/walking/walking-top.html][Kyoto walking maps]].
+- Kyoto's train station itself.
+- [[http://en.wikipedia.org/wiki/Nij%C5%8D_Castle][Nijo-Jo’]].
+- Nishiki Market: Awesome market. Some say better than Tsukiji.
+- Origami master and school http://www.orizurusalon-yume.com info@orizurusalon-yume.com
+- [[http://www.orizurusalon-yume.com/][orizurusalon yume (origami)]].
+- Ryokan ("kaiseki" meals).
+- Ryōan-ji  (竜安寺).
+- [[http://en.wikipedia.org/wiki/Sanj%C5%ABsangen-d%C5%8D][Sanjusangendo]].
+- [[http://globalhelpswap.com/things-to-do-in-kyoto-japan/][Things to do in Kyoto, Japan]].
+- [[http://maps.google.com/maps/ms?msid%3D202789377275033201812.00049d620c1fcd8fb451e&msa%3D0&ll%3D35.019734,135.756168&spn%3D0.093628,0.181789][Walking courses (Google maps)]].
+- [[http://www.waraido.com/walking/gion.html][WaRaiDo Nighttime tour]].
+
+* [2015-04-19 Sun] Tokyo travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: tokyo-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-12-03 Fri]
+:END:
+- [[https://roadsandkingdoms.com/travel-guide/tokyo/know-before-you-go-to-tokyo/][14 Things to Know Before You Go to Tokyo]].
+- [[http://globalhelpswap.com/5-alternative-things-to-do-in-tokyo/][5 alternative things to do in Tokyo (by globalhelpswap)]].
+- [[https://roadsandkingdoms.com/travel-guide/tokyo/a-history-of-tokyo-in-8-dishes/][A History of Tokyo in 8 Dishes]].
+- Akasaka area (N/E of Roppongi).
+- Cup noodle museum.
+- Ginza Kimuraya (bakery). Try anpan (invented here).
+- Ichiran Ramen.
+- Pan No Tora Bakery (Kyoto?).
+- Zauo.com "Let's fixhing enjoy". Catch your own fish to eat.
+- Akasaka Sagamiya (also Mamekan, established in 1895).
+- Akihabara: Electronics district, arcades and comic stores.
+- Asakusa (tourist spot). Kaminarimon, Nakamise (oldest shopping street in Japan). Sensoji Temple.
+- [[https://www.hokke.co.jp/english/asakusa/][Asakusa hotel]].
+- Asakusa Shrine: Shinto shrine and market.
+- [[http://bar-navi.suntory.co.jp/shop/0334413588/index.html][Bar Epilogue]].
+- [[http://authenticbar.com/odin/yebisu.html][Bar Odin]].
+- [[https://www.tripadvisor.co.uk/Restaurant_Review-g1066461-d1688630-Reviews-Benten-Taito_Tokyo_Tokyo_Prefecture_Kanto.html][Benten, Taito - 3-21-8 Asakusa, Ueno, Asakusa (Buckwheat noodles shop)]].
+- Bentomi (Sushi).
+- [[https://cheese-stand.com/][CHEESE STAND （チーズスタンド）]].
+- Coffee Tengoku, Asakusa (best hotcakes/pancakes). Noting is premade. After 12 years, best hotcakes.
+- [[http://tabelog.com/en/tokyo/A1313/A131301/13002389/][Daiwasushi (food)]]. An account [[http://mjkobb.com/Prattling%20on/6570A66F-8F2F-49FD-912C-4A5D0C3862C8.html][here]].
+- Dorayaki (in Ukenbukuru). Seijuken is long established in Ningyocho.
+- [[http://dairycream.blogspot.co.uk/2016/07/doteno-iseya-127-year-old-tempura-don.html][Doteno-Iseya 土手の伊勢屋: 127-year old Tempura]].
+- Eateries around Takadanobaba eki
+- Ebisu (area for izakaya experience, drink/chat with bartender). Look for Ebisu Yokocho.
+- Fish market (6am sushi).
+- [[https://en.rocketnews24.com/2017/10/11/five-of-the-worst-areas-to-live-in-and-around-tokyo/?utm_content=buffer38deb&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer][Five of the worst areas to live in and around Tokyo | SoraNews24]].
+- [[http://www.tokyoeats.jp/fuunji/][Fu-unji & 風雲児 | Tokyo Eats]].
+- [[http://www.ghibli-museum.jp/en/welcome][Ghibli museum]] (book in advance or try [[http://www.lawson.co.jp/ghibli/museum/ticket/english.html][lawson]]).
+- Ginza.
+- [[http://tabelog.com/en/tokyo/A1301/A130103/13002611/][Ginzakyuubee (food)]].
+- [[http://unmissabletokyo.com/golden-gai][Golden Gai (lots tiny bars)]].
+- [[https://blog.govoyagin.com/tokyo-christmas][How to Spend a Magical Christmas in Tokyo (2019 update)]].
+- https://www.timeout.com/tokyo/restaurants/tokyo-coolest-kakigori
+- Imperial Palace: Book to go inside. Beautiful park, great for pictures.
+- Irie known (sweet shop) for Mamekan. In Monzen-Nakacho.
+- Isetan (upscale food market).
+- [[http://tabelog.com/en/tokyo/A1313/A131301/13091991/][Isozushi (food)]].
+- [[https://trulytokyo.com/jimbocho-book-town/][Jimbocho Book Town (largest second-hand book town in the world, classic-style cafes, old school charm)]].
+- Kaiden-don, near tsukiji (Sushi).
+- Kajitsuen Libre. Peach Parfait. Fresh fruit.
+- Kinozen restaurant for Matcha Bavarian cream (matcha bavaroa). Kagurazaka. Check out the backstreets.
+- [[http://www.waentei-kikko.com/][Kodai's Fukui restaurant (old tea house)]].
+- Kushikatsu restaurant in Golden Gai, a karaoke booth in Ebisu, or drifting through the back alley izakayas of Akabane.
+- Menya Musashi and Fuunji are both generally very well regarded and about a 5-7 minute walk from the SW part of Shinjuku station.
+- [[http://openbuildings.com/buildings/mikimoto-ginza-2-profile-2818][Mikimoto building in Ginza]].
+- [[http://www.mori.art.museum/eng/index.html][Mori Art museum]].
+- [[https://www.google.co.uk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=musashiya+tripadvisor+tokyo][Musashiya ramen]].
+- [[https://tokyocheapo.com/food-and-drink/michelin-star-ramen-nakiryu/][Nakiryu: Tantalizing Tantanmen Noodles with a Michelin Star]].
+- [[https://en.wikipedia.org/wiki/Nezu_Museum][Nezu museum]].
+- [[https://www.gotokyo.org/en/destinations/southern-tokyo/odaiba/index.html][Odaiba]].
+- [[http://tokyoplaying.blogspot.co.uk/2012/01/not-japanese-pizza-okonomiyaki-in.html][Okonomiyaki in Tokyo]].
+- Omoide yokocho: Alleyway next to Shinjuku station. Lots of yakitori restaurants.
+- [[http://ooo-koffee.com/][Omotesando Koffee]] (coffee and baked custard slice).
+- Omotesando side streets.
+- [[http://pignontokyo.jp/][Pignon | French Restaurant]].
+- Pound cake from Patisserie Gondola in Kudanue.
+- Roppongi.
+- Savarin (brioge-based, of french origin) in Yokohama. Cafe Recherche.
+- Seafood street south of Ueno eki
+- [[https://www.huckmag.com/art-and-culture/photography-2/tokyo-street-photographer-mikiko-hara/][Secret snapshots of Tokyo vivid street life]].
+- [[https://livejapan.com/en/in-shibamata_kita-senju_kameari/article-a0001571/][Shibamata: Snacking and Sightseeing in Tokyo’s Old Edo Neighborhood]].
+- Shibuya Crossing: Largest pedestrian crossing in the world.
+- Shimokitazawa (Shimokita for short). Bohemian, vintage shopping.
+- Shimokitazawa (thirft stores, music bands, pubs, and cafes).
+- [[http://tabelog.com/en/tokyo/A1301/A130101/13002260/][Sukiyabashi Jiro]].
+- Sushi dai (Sushi, long queue, maybe turisty).
+- [[http://tabelog.com/en/tokyo/A1301/A130103/13005003/][Sushi Kanesaka]].
+- Sushi places around Tsukiji market in the morning (much better than the market visit itself, these days)
+- [[http://tabelog.com/en/tokyo/A1308/A130802/13015251/][Sushi Saito]].
+- [[http://tabelog.com/en/tokyo/A1313/A131301/13002388/][Sushidai (food)]].
+- [[http://tabelog.com/en/tokyo/A1307/A130701/13061640/][Sushitsu (food)]].
+- [[http://tabelog.com/en/tokyo/A1316/A131603/13013967/][Sutekihausukatsura]].
+- [[http://www.japan-guide.com/e/e3029.html][Takaosan (Mount Takao)]].
+- [[https://www.minube.com/rincon/restaurante-tsunahachi-a186891][Tempura Tsunahachi en Tokio: 4 opiniones y 7 fotos]].
+- [[http://tabelog.com/en/tokyo/A1303/A130301/13001783/][Tenkazushi (food)]].
+- The whole of Kabukicho (area in-between Shinjuku station and Shin-Okubo)
+- [[http://www.ytravelblog.com/things-to-do-in-tokyo-japan/][Things to Do in Tokyo Japan - Sunday Spotlight]].
+- [[https://twitter.com/tokyo_gov/status/1201652265649606656][Tokyo Gov on Twitter: Higashikurume Station]].
+- [[https://www.lonelyplanet.com/japan/travel-tips-and-articles/tokyo-in-winter-what-to-see-do-and-eat/40625c8c-8a11-5710-a052-1479d276b0f5][Tokyo in winter: what to see, do and eat (Lonely Planet)]].
+- Tokyo Municipal Government building: Only for observation deck with view to Fuji (if clear day).
+- [[https://www.lonelyplanet.com/japan/tokyo/travel-tips-and-articles/tokyo-on-a-budget-tips-for-making-your-yen-go-further/40625c8c-8a11-5710-a052-1479d2775214?utm_campaign=article&utm_medium=social&utm_source=twitter&utm_content=Tokyo%20on%20a%20budget:%20tips%20for%20making%20your%20yen%20go%20further][Tokyo on a budget: tips for making your yen go further (Lonely Planet)]].
+- [[http://tokyoplaying.blogspot.co.uk/][Tokyo play blog]].
+- [[http://japaneseruleof7.com/tokyo-salaries-all-you-need-to-know][Tokyo Salaries: all you need to know]].
+- Tokyo station: Friendly JR office (english spoken). They help book all trips/tickets/reservations.
+- Tokyo Station: Massive station. Lots of restaurants and shops (check out ramen street).
+- [[http://coffeeandpassport.com/tokyo-travel-tips/][Tokyo Travel Tips: 5 Things You Need In Japan | Coffee and Passport]].
+- [[https://twitter.com/yanarchy/status/1162570360769798144][Tokyo Twitter: any Japanese breakfast restaurants]].
+- [[https://www.cntraveller.com/article/travel-guide-tokyo][Tokyo, Japan - Condé Nast Traveller | CN Traveller]].
+- [[http://tokyocheapo.com/][TokyoCheapo]].
+- Tokyu Hands and Loft (shops in Shibuya).
+- Toritake (yakitori at Shibuya).
+- Try Mos rice burger (fast food).
+- Try out Pancan (bread in can).
+- [[http://www.tsukiji-market.or.jp/etc/calendar/2016.html][Tsukiji Fish Market calendar]].
+- Tsukiji Fish Market: Sushi bars and food vendors (get there early, visitor numbers restricted).
+- Umemura in Asakusa (also Mamekan).
+- Yurakucho Yakitori Alley
+- [[http://tabelog.com/en/tokyo/A1303/A130301/13058009/][婁熊東京 (raw and grilled pork)]].
+- [[http://r.tabelog.com/tokyo/A1307/A130701/13041724/][酒友]] (Sake & good Shabushabu), Roppongi.
+
+* [2015-04-19 Sun] UK travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: uk-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-07-11 Sun]
+:END:
+- [[http://www.buzzfeed.com/chelseypippin/25-wanderlust-worthy-day-trips-from-london#.xbkbNaApW][25 stunning british places you can reach from London]].
+- [[https://twitter.com/ddoniolvalcroze/status/1278326573070876672][A graveyard of red telephone boxes located in the small village of Carlton Miniott]].
+- [[https://en.wikipedia.org/wiki/Dunmore_Pineapple][Dunmore Pinapple]].
+- [[http://www.hitchinlavender.co.uk/][Hitchin Lavender]].
+- [[http://www.theguardian.com/travel/2015/may/10/scotland-beach-swimming-wild-camping][In search of Scotland’s best beach]].
+- [[http://www.seemytravels.com/2015/01/23/the-isle-of-man-mist/][Isle of Man]].
+- [[https://en.wikipedia.org/wiki/Sandwood_Bay][Sandwood Bay]].
+- [[https://duckduckgo.com/?q=sark+island&t=ffsb&iax=1&ia=images][Sark island]].
+- [[http://www.theguardian.com/travel/2015/aug/23/scotland-north-coast-500-road-trip?CMP%3Dshare_btn_tw][Scotland’s new North Coast 500 route]].
+- [[https://www.lonelyplanet.com/amp/articles/best-hikes-in-england][The 8 most dramatic hikes in England]].
+- [[http://www.thenewforest.co.uk/][The New Forest]].
+- [[http://www.seemytravels.com/2015/02/15/where-to-find-street-art-in-liverpool/][Where to Find Street Art in Liverpool]].
+- [[http://www.x-pilot.co.uk/][X-Pilot (Redsand towers)]].
+
+* [2015-04-19 Sun] Development quotes
+:PROPERTIES:
+:CUSTOM_ID: development-quotes
+:END:
+- [[https://twitter.com/giorgiosironi/status/587507955521708032][If your backlog is exploding the problem is not that your developers are slow, but that your business model is not based on reality]].
+- [[http://redux.js.org/docs/introduction/PriorArt.html][If you lose out on object allocation, you still win by avoiding expensive re-renders and re-calculations]].
+- [[https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction][Duplication is far cheaper than the wrong abstraction (prefer duplication up to a point)]].
+- [[https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)][Choosing an appropriate design to duplication avoid might benefit from more examples to see patterns in. Attempting premature refactoring risks selecting a wrong abstraction]].
+- [[https://www.deconstructconf.com/2017/brian-marick-patterns-failed-why-should-we-care][Patterns failed, why we should case]].
+* [2015-04-19 Sun] Development philosophy
+:PROPERTIES:
+:CUSTOM_ID: development-philosophy
+:END:
+- Boyscout rule: Leave campground cleaner than found.
+- [[https://nibblestew.blogspot.com/2019/12/what-can-clang-format-teach-us-about.html?m=1][What can clang-format teach us about the human condition?]].
+* [2015-04-19 Sun] Spain travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: spain-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-12-18 Fri]
+:END:
+- [[https://www.larecomendadora.com/2019/11/cafeterias-bonitas-originales-encanto-madrid.html][7 CAFETERIAS BONITAS, ORIGINALES y CON ENCANTO en MADRID]].
+- [[https://www.tripadvisor.co.uk/Restaurant_Review-g187514-d6673431-Reviews-Bomboneria_Santa-Madrid.html][BOMBONERIA SANTA, Madrid - Barrio de Salamanca]].
+- [[https://www.timeout.com/madrid/cinemas/cine-dore-filmoteca-espanyola][Cine Doré Filmoteca Española | Cinemas in Lavapiés, Madrid]].
+- [[https://www.timeout.com/madrid/art/espacio-fundacion-telefonica][Espacio Fundación Telefónica | Art in Malasaña, Madrid]].
+- [[https://www.timeout.com/madrid/art/fundacion-masaveu][Fundación Masaveu | Art in Madrid, Madrid]].
+- [[https://www.larecomendadora.com/2019/10/juanchis-burgers-hamburguesas-madrid.html][JUANCHI'S BURGERS]].
+- [[https://laduquesita.es/][La Duquesita. Pastelería - Bombonería - Confitería repostería desde 1914]].
+- [[https://en.wikipedia.org/wiki/La_Palma][La Palma, most north-westerly of the Canary Islands]].
+- [[https://www.facebook.com/pages/La-Perejila/116839091715751][La Perejila - Madrid - Bar de tapas y restaurante, Restaurante español]].
+- [[http://www.tripadvisor.com/ShowUserReviews-g1802172-d1887157-r141602833-El_Lago_Verde-El_Golfo_Lanzarote_Canary_Islands.html][Lanzarote's green lagoon]].
+- [[https://www.viajenaviagem.com/destino/madri/onde-comer-madri/][Madri: onde comer | Restaurantes e bares de tapas recomendados]].
+- [[http://www.madricioso.com][Madricioso]].
+- [[https://www.timeout.com/madrid/art/matadero-madrid][Matadero Madrid | Art in Legazpi, Madrid]].
+- [[http://www.mataderomadrid.org][Matadero Madrid. Centro de creación contemporánea]].
+- [[https://www.timeout.com/madrid/shopping/mercado-de-san-fernando][Mercado de San Fernando | Shopping in Lavapiés, Madrid]].
+- [[https://www.timeout.com/madrid/things-to-do/mercado-de-vallehermoso][Mercado de Vallehermoso | Things to do in Chamberí, Madrid]].
+- [[https://commons.wikimedia.org/wiki/Category:Rock_carved_hermitage_of_Saints_Justus_and_Pastor,_Olleros_de_Pisuerga][Rock carved hermitage of Saints Justus and Pastor, Olleros de Pisuerga]].
+- [[https://eltriciclo.es/triciclo/][triciclo - grupotriciclo]].
+
+* [2015-04-19 Sun] Meet up bookmarks
+:PROPERTIES:
+:CUSTOM_ID: meet-up-bookmarks
+:END:
+- [[https://www.couchsurfing.com][Couchsurfing.org]].
+- [[http://www.meetup.com/][Meetup]].
+- [[http://teawithstrangers.com][Tea with strangers]].
+
+* [2015-04-17 Fri] Plantuml example
+:PROPERTIES:
+:CUSTOM_ID: plantuml-example
+:END:
+Played with [[http://plantuml.sourceforge.net/PlantUML_Language_Reference_Guide.pdf][Plantuml]]. Convenient for generating UML diagrams from text. Here's the [[http://plantuml.sourceforge.net/PlantUML_Language_Reference_Guide.pdf][Language Reference Guide]]. Here's an example:
+#+BEGIN_SRC plantuml :exports both :file images/plantuml-example/plantuml-singer.png
+  @startuml
+    abstract class Singer {
+      abstract void sing()
+      void Dance()
+    }
+
+    skinparam monochrome true
+    Singer <|-- PopSinger
+    Singer <|-- SalsaSinger
+
+    class PopSinger {
+      void sing()
+    }
+
+    class SalsaSinger {
+      void sing()
+    }
+
+  @enduml
+#+END_SRC
+
+#+RESULTS:
+[[file:images/plantuml-example/plantuml-singer.png]]
+
+Install plantuml on Mac OS X:
+#+BEGIN_SRC sh
+  brew install plantum
+#+END_SRC
+
+Generating diagram:
+#+BEGIN_SRC sh
+  $GRAPHVIZ_DOT=~/homebrew/bin/dot java -jar path/to/plantuml.8018.jar diagram.plantuml
+#+END_SRC
+
+ps. Installation and verification [[https://gist.github.com/NLKNguyen/c39596c205ba1f1866c8][gist]].
+
+ps2. More handy UML examples in this [[https://github.com/xenodium/uml][fork]].
+
+* [2015-04-14 Tue] Helm-describe-helm-attribute
+:PROPERTIES:
+:CUSTOM_ID: helm-describe-helm-attribute
+:END:
+[[https://www.youtube.com/watch?v%3DXjKtkEMUYGc][Writing A Spotify Client in 16 Minutes]] is fantastic for picking up helm and Emacs lisp tips. Of interest helm-describe-helm-attribute, second to the awesomeness of helm-spotify integration.
+#+BEGIN_SRC html
+  <iframe width='420'
+          height='315'
+          src='https://www.youtube.com/embed/XjKtkEMUYGc'
+          frameborder='0'
+          allowfullscreen>
+  </iframe>
+#+END_SRC
+
+* [2015-04-12 Sun] Youtube videos in your org html export
+:PROPERTIES:
+:CUSTOM_ID: youtube-videos-in-your-org-html-export
+:END:
+[[https://twitter.com/sachachua][Sacha Chua]] and [[https://twitter.com/jwiegley][John Wiegley]] posted a wonderful video on [[http://sachachua.com/blog/2015/04/2015-04-08-emacs-lisp-development-tips-with-john-wiegley][Emacs lisp development tips]]. Embedding the following raw HTML using #+BEGIN_HTML/#+END_HTML:
+#+BEGIN_SRC html
+  <iframe width="420"
+          height="315"
+          src="https://www.youtube.com/embed/QRBcm6jFJ3Q"
+          frameborder="0"
+          allowfullscreen>
+  </iframe>
+#+END_SRC
+results in an embedded video when exporting your org file:
+#+BEGIN_SRC html
+  <iframe width="420"
+          height="315"
+          src="https://www.youtube.com/embed/QRBcm6jFJ3Q"
+          frameborder="0"
+          allowfullscreen>
+  </iframe>
+#+END_SRC
+
+* [2015-04-12 Sun] .net bookmarks
+:PROPERTIES:
+:CUSTOM_ID: dot-net-bookmarks
+:END:
+:MODIFIED:
+[2019-01-27 Sun]
+:END:
+- [[http://thomasvm.github.io/blog/2015/03/17/open-source-net-libraries-that-make-your-life-easier/][Open Source .Net libraries that make your life easier]].
+* [2015-04-10 Fri] UK property bookmarks
+:PROPERTIES:
+:CUSTOM_ID: uk-property-bookmarks
+:END:
+- [[http://commutefrom.com/][Commute from]] (find property based on potential commute).
+- [[http://property.mapumental.com][Mapumental Property]] (find property by travel time).
+
+* [2015-04-09 Thu] Git commit message style
+:PROPERTIES:
+:CUSTOM_ID: git-commit-message-style
+:END:
+Adopted Tim Pope's Git commit message [[http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html][style]]. Also enabled Emacs's git-commit-training-wheels-mode:
+#+BEGIN_SRC emacs-lisp
+  (use-package git-commit-training-wheels-mode :ensure t
+    :commands (git-commit-training-wheels-mode))
+
+  (use-package git-commit-mode :ensure t
+    :config
+    (add-hook 'git-commit-mode-hook 'git-commit-training-wheels-mode)
+    :commands (git-commit-mode))
+#+END_SRC
+Another great [[http://chris.beams.io/posts/git-commit/][post]] by Chris Beams.
+
+* [2015-04-06 Mon] fci-mode and org-html-export-to-html bug
+:PROPERTIES:
+:CUSTOM_ID: fci-mode-and-org-html-export-to-html-bug
+:END:
+Having enabled fci-mode in most programing modes, org-html-export-to-html now exports an additional unicode character in source blocks. This [[http://lists.gnu.org/archive/html/emacs-orgmode/2014-09/msg00777.html][thread]] has a workaround:
+#+BEGIN_SRC emacs-lisp
+  (defun org-html-fontify-code (code lang)
+    ;; ...
+    (funcall lang-mode)
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    (when (require 'fill-column-indicator nil 'noerror)
+      (fci-mode -1))
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    (insert code)
+    ;; ...
+#+END_SRC
+
+* [2015-04-03 Fri] Try cocoapods out
+:PROPERTIES:
+:CUSTOM_ID: try-cocoapods-out
+:END:
+[[https://github.com/CocoaPods/cocoapods-try][Cocapods try]]:
+#+BEGIN_SRC sh
+  $ pod try POD_NAME
+#+END_SRC
+
+* [2015-04-03 Fri] Cornwall travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: cornwall-travel-bookmarks
+:END:
+- [[http://barefootcornwall.com/on-the-road/][Food along the way]].
+
+* [2015-04-03 Fri] Austria travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: austria-travel-bookmarks
+:END:
+:MODIFIED:
+[2015-06-02 Tue]
+:END:
+- [[https://www.lonelyplanet.com/austria/vienna/travel-tips-and-articles/coffee-house-culture-in-vienna-where-to-get-your-caffeine-hit][Coffee houses in Vienna]].
+- [[https://duckduckgo.com/?q%3Dmelk%2Baustria%2Blibrary&iax%3D1&ia%3Dimages][Melk Abbey library]].
+
+* [2015-04-02 Thu] Cinnamon desktop run dialog
+:PROPERTIES:
+:CUSTOM_ID: cinnamon-desktop-run-dialog
+:END:
+Note to self. Open with Alt-f2.
+
+* [2015-03-29 Sun] Books for 2015
+:PROPERTIES:
+:CUSTOM_ID: books-for-2015
+:END:
+- [[http://www.amazon.co.uk/Catch-22-Vintage-Classics-Joseph-Heller/dp/0099470462][Catch 22]].
+- [[http://www.amazon.co.uk/Circle-Dave-Eggers/dp/0804172293][The Circle]].
+- [[http://www.amazon.co.uk/Born-Run-Hidden-Ultra-Runners-Greatest/dp/1861978774][Born to Run]].
+- [[http://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576][Thinking, Fast and Slow]].
+
+* [2015-03-29 Sun] Ayahuasca bookmarks
+:PROPERTIES:
+:CUSTOM_ID: ayahuasca-bookmarks
+:END:
+- [[http://ayaadvisor.org/listings/onanya-joni-shipibo-europe/][Ayaadvisor]].
+- [[https://www.erowid.org/chemicals/ayahuasca/ayahuasca_death.shtml][Ayahuasca fatalities]].
+- [[https://erowid.org/chemicals/ayahuasca/][Ayahuasca on erowid]].
+- [[http://www.cbc.ca/m/news/canada/jennifer-logan-s-death-in-peru-puts-focus-on-purging-ceremonies-1.2948955][Jennifer Logan's death in Peru]].
+- [[https://medium.com/@Grayfox/the-hacker-who-drank-ayahuasca-517148aa1ed4][The hacker who drank Ayahuasca]].
+
+* [2015-03-28 Sat] Emacs init.el bookmarks
+:PROPERTIES:
+:CUSTOM_ID: emacs-init.el-bookmarks
+:END:
+:MODIFIED:
+[2020-12-12 Sat]
+:END:
+- [[https://github.com/daschwa/emacs.d][Adam Schwartz's init]].
+- [[https://github.com/apg/emacs-config/tree/master/lisp/activator.d][Andrew Gwozdziewycz's init.el]].
+- [[http://www.cs.utah.edu/~aek/code/init.el.html][Andrew Kensler's init.el]].
+- [[https://github.com/Droogans/.emacs.d/blob/mac/init.el][Andrew's .emacs]].
+- [[https://github.com/ikame/.emacs.d-literate][Anler Hernandez's literate config]].
+- [[https://github.com/redguardtoo/emacs.d/][Chen Bin's init.el]].
+- [[https://github.com/eastwood/config/blob/master/emacs.d/org-init.org][Clinton Ryan's init (JS config)]].
+- [[https://github.com/daviderestivo/emacs-config/blob/master/README.md][daviderestivo/emacs-config (clean/macOS)]].
+- [[https://github.com/iocanel/dotfiles/blob/master/.config/emacs/config.org][dotfiles/config.org at master · iocanel/dotfiles · GitHub (mu4e config)]].
+- [[https://www.emacswiki.org/emacs/StarterKits][EmacsWiki: Starter Kits]].
+- [[https://github.com/ejmr/DotEmacs/blob/master/.emacs][Eric James Michael Ritz]].
+- [[https://github.com/alhassy/emacs.d][GitHub - alhassy/emacs.d: My Emacs configuration, literately]].
+- [[https://github.com/rememberYou/.emacs.d/][GitHub - FIXME rememberYou/.emacs.d: Personal GNU Emacs configuration]].
+- [[https://github.com/Fuco1/.emacs.d][GitHub - Fuco1/.emacs.d: My emacs config]].
+- [[https://github.com/MatthewZMD/.emacs.d][GitHub - MatthewZMD/.emacs.d: M-EMACS, a full-feature GNU Emacs configuration]].
+- [[https://github.com/zamansky/emacs.dz][GitHub - zamansky/emacs.dz: Awesome emacs config files]].
+- [[https://github.com/zoliky/dotemacs][GitHub - zoliky/dotemacs: My GNU Emacs configuration (super clean)]].
+- [[https://github.com/grettke/home/blob/master/ALEC.txt][Grant Rettke's literate config]].
+- [[http://doc.rix.si/org/fsem.html][Hardcore Freestyle Emacs]].
+- [[https://github.com/huseyinyilmaz/emacs-config/blob/master/lisp/user-init.el][Huseyin Yilmaz]].
+- [[https://github.com/ianpan870102/.personal-emacs.d/blob/master/init.el][ianpan870102/.personal-emacs.d]].
+- [[http://ivanmalison.github.io/dotfiles/][Ivan Malison's Emacs init]].
+- [[http://ivanmalison.github.io/dotfiles/#colorizecompliationbuffers][Ivan Malison's init.el]].
+- [[http://www.john2x.com/emacs.html][John's Emacs Config (mu4e and ledger usage)]].
+- [[https://justin.abrah.ms/dotfiles/emacs.html][Justin Abrahms: My Emacs Configuration]].
+- [[https://ladicle.com/post/config/][Ladicle's Emacs Configuration]].
+- [[https://github.com/MatthewZMD/.emacs.d#lsp][M-EMACS's lsp config]].
+- [[https://github.com/msparks/dotfiles/blob/master/.emacs][Mark Sparks's init.el]].
+- [[https://github.com/CQQL/dotfiles/blob/master/src/.emacs.d/init.el][Marten Lienen's init.el]].
+- [[http://writequit.org/org/settings.html][Mathew Lee Hinman's Emacs settings file]].
+- [[https://github.com/angrybacon/dotemacs/blob/master/dotemacs.org][Mathieu Marques's wonderful literary config (uses tern for Javascript)]].
+- [[https://github.com/abdullin/emacs.d/blob/master/emacs.org][Rinat Abdullin's literary config]].
+- [[https://github.com/To1ne/temacco][Temacco's init]].
+- [[https://gitlab.com/to1ne/temacco][Temacco's Plutonium empowered emacs]].
+- [[https://github.com/wasamasa/dotemacs/blob/master/TODO.org][Wasamama's extensive init TODO ]].
+- [[http://zzamboni.org/post/my-emacs-configuration-with-commentary/][zzamboni.org | My Emacs Configuration, With Commentary]].
+- [[https://etienne.depar.is/emacs.d/init.html][Étienne Deparis's Emacs Main Initialization File]].
+
+* [2015-03-28 Sat] CSS vertical align using flex
+:PROPERTIES:
+:CUSTOM_ID: css-vertical-align-using-flex
+:END:
+Codepen [[http://codepen.io/oisinlavery/pen/Jmjtz][snippet]]:
+#+BEGIN_SRC css
+  div{
+    height: 200px;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p{
+    margin: auto
+  }
+#+END_SRC
+
+* [2015-03-26 Thu] London diving schools
+:PROPERTIES:
+:CUSTOM_ID: london-diving-schools
+:END:
+- [[http://londonschoolofdiving.co.uk][London Diving School]]. Not heard good comments.
+- [[http://www.divewimbledon.com][Dive Wimbledon]]. Heard ok comments.
+- [[http://www.clidive.org/][Clidive]] is a BSAC club (amateur organisation). Not commercial but may take longer.
+- [[http://www.sublimediving.co.uk/][Sublime Diving]]. Heard good comments.
+- [[http://www.oysterdiving.com/][Oyster Diving]]. Pool in cetral London. Good comments.
+- [[http://en.wikipedia.org/wiki/SS_Thistlegorm][SS Thistlegorm]] mentioned as a memorable site.
+- Many suggest to get certified elsewhere. Perhaps Egypt via [[http://www.poseidondivers.com/][Poseidon Divers]].
+
+* [2015-03-26 Thu] Helm buffer URLs
+:PROPERTIES:
+:CUSTOM_ID: helm-buffer-urls
+:END:
+Venturing into Emacs lisp and [[https://github.com/emacs-helm/helm][Helm]]. Here's a go at listing all URLs in current buffer.
+#+BEGIN_SRC emacs-lisp
+  (require 'goto-addr)
+
+  (defun ar/helm-buffer-url-candidates ()
+    "Generate helm candidates for all URLs in buffer."
+    (save-excursion
+      (goto-char (point-min))
+      (let ((helm-candidates '())
+            (url))
+        (while (re-search-forward goto-address-url-regexp
+                                  nil t)
+          (setq url
+                (buffer-substring-no-properties (match-beginning 0)
+                                                (match-end 0)))
+          (add-to-list 'helm-candidates
+                       (cons url
+                             url)))
+        helm-candidates)))
+
+  (defun ar/helm-buffer-urls ()
+    "Narrow down and open a URL in buffer."
+    (interactive)
+    (helm :sources `(((name . "Buffer URLs")
+                      (candidates . ,(ar/helm-buffer-url-candidates))
+                      (action . (lambda (url)
+                                  (browse-url url)))))))
+#+END_SRC
+
+* [2015-03-23 Mon] Doh! undo last git commit
+:PROPERTIES:
+:CUSTOM_ID: doh-undo-last-git-commit
+:END:
+
+#+BEGIN_SRC sh
+  $ git reset --soft HEAD~1
+#+END_SRC
+
+* [2015-03-22 Sun] Resetting variables using defvar
+:PROPERTIES:
+:CUSTOM_ID: resetting-variables-using-defvar
+:END:
+Want to re-evaluate defvars and modify variables? eval-defun (bound to C-M-x) can help. From the manual:
+#+BEGIN_QUOTE
+If the current defun is actually a call to `defvar', then reset the
+variable using its initial value expression even if the variable
+already has some other value.  (Normally `defvar' does not change the
+variable's value if it already has a value.)  Treat `defcustom'
+similarly.
+#+END_QUOTE
+
+* [2015-03-22 Sun] Broken Xcode plugins?
+:PROPERTIES:
+:CUSTOM_ID: broken-xcode-plugins
+:END:
+Some Xcode plugins stopped loading after updating Xcode. Ensure the latest DVTPlugInCompatibilityUUIDs is added to the plugin's Info.plist. Get from:
+#+BEGIN_SRC sh
+  $ defaults read \
+      /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
+#+END_SRC
+Additional suggestions as [[http://stackoverflow.com/questions/30361228/why-are-my-xcode-plugins-such-as-clang-format-installed-with-alcatraz-no-longe][Stack Overflow]].
+
+* [2015-03-22 Sun] Born to Run references
+:PROPERTIES:
+:CUSTOM_ID: born-to-run-references
+:END:
+:MODIFIED:
+[2015-03-23 Mon]
+:END:
+
+References from reading Christopher McDougall's [[http://www.chrismcdougall.com/born-to-run][Born to Run]]:
+
+- [[http://www.chirunning.com][Chi running]].
+- Chia and pinole. Random recipes [[http://www.nomeatathlete.com/tarahumara-pinole-chia-recipes/][here]].
+- [[http://heritageseeds.org/][Heritage Seeds]].
+- Ken Mierke’s [[http://www.evolutionrunning.com][Evolution running]].
+- [[https://posemethod.com/running][Pose method]].
+- Quotes, references, videos, etc. at [[http://ultimatepaleoguide.com/born-to-run/][ultimate paleo guide]].
+
+Recipe by [[http://www.bellaonline.com/articles/art51802.asp][Megan Mignot]], based on book references:
+
+** Mama Tita’s Pancakes
+- 1 ½ cups cooked brown rice
+- 1 cup coconut milk
+- 2 ripe bananas
+- 1 tablespoon honey
+- ½ cup white cornmeal
+- 2 teaspoons baking powder
+
+* [2015-03-19 Thu] Org tips from 2015-03-18 Emacs hangout
+:PROPERTIES:
+:CUSTOM_ID: org-tips-from-2015-03-18-emacs-hangout
+:END:
+:MODIFIED:
+[2015-03-22 Sun]
+:END:
+Lots of great tips in [[http://sachachua.com/blog/2015/03/emacs-hangout-2015-03-18-show-notes/][Emacs Hangout 2015-03-18]]. Favorites:
+- Private org drawer to prevent export:
+#+BEGIN_SRC org
+  :PRIVATE:
+  My super duper secret text I don't want to export.
+  :END:
+#+END_SRC
+- C-c C-p/C-c C-n Jump over sections.
+- (setq org-hide-leading-stars t).
+- (org-bullets-mode).
+- (org-refile).
+- C-u (org-refile) jumps, no refile.
+- (helm-org-in-buffer-headings).
+
+* [2015-03-19 Thu] Food bookmarks
+:PROPERTIES:
+:CUSTOM_ID: food-bookmarks
+:END:
+:MODIFIED:
+[2020-10-29 Thu]
+:END:
+- [[https://twitter.com/cherdotdev/status/1264343579725647880][Cher's hot sauce collection]].
+- [[https://twitter.com/hex/status/1320350713734717440][Scott Martin's hot sauce collection]].
+- [[http://summertomato.com/][Summer tomato]].
+- [[http://www.tarladalal.com/][Tarladalal recipes]].
+
+* [2015-03-19 Thu] Ethiopia travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: ethiopia-travel-bookmarks
+:END:
+- [[https://en.wikipedia.org/wiki/Church_of_Saint_George,_Lalibela][Bet Giyorgis Church]].
+
+* [2015-03-19 Thu] China travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: china-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-11-23 Tue]
+:END:
+- [[http://en.people.cn/n3/2021/0719/c90000-9874081.html]["If you have not been to Kashgar, then you haven’t really been to Xinjiang”]].
+- [[http://www.lonelyplanet.com/asia/travel-tips-and-articles/china-for-beginners-7-first-timer-fails-to-avoid-on-your-trip-to-beijing][7 first-timer fails to avoid on your trip to Beijing]].
+- [[https://twitter.com/archpng/status/1146625946943967232][Archpng on Twitter: "Mount Maiji Grottoes,China… "]].
+- [[http://t.co/1tSn3xxfP7][Beijing on a budget]].
+- [[http://www.lonelyplanet.com/china/travel-tips-and-articles/the-most-incredible-chinese-cities-youve-never-heard-of][Chinese cities you've never heard of]].
+- Ctrip for hotels. Stick to high-rated only.
+- [[http://www.lonelyplanet.com/asia/travel-tips-and-articles/essential-regional-cuisine-of-china][Essential regional cuisine of China]].
+- [[https://en.wikipedia.org/wiki/Fenghuang_County][Fenghuang ancient town]].
+- [[http://www.youramazingplaces.com/hallelujah-mountains-china/][Hallelujah Mountains]].
+- [[https://goo.gl/maps/yP03w][Houhai Lake]] (Beijing). Miscellaneous bars.
+- [[https://en.wikipedia.org/wiki/Jiuzhaigou][Jiuzhaigou nature reserve]].
+- [[https://twitter.com/planetepics/status/613968121498632192][Luotuofeng peak, Sichuan]].
+- [[http://www.boredpanda.com/worlds-most-dangerous-hiking-trail-huashan-mountain-china/][Mount Huashan]].
+- [[https://duckduckgo.com/?q=Mount+Maiji+Grottoes&t=ffab&iax=images&ia=images][Mount Maiji Grottoes (DuckDuckGo)]].
+- [[https://goo.gl/maps/TfdOV][Nan Luo Gu Xiang]] (Beijing). Street Food!
+- [[https://goo.gl/maps/15aFa][Qianmen Street]]. Near Tiananmen Square. Artifact shopping and famous food.
+- [[http://www.dailymail.co.uk/travel/article-1389739/Chinas-Sichuan-province-Visiting-lair-Yellow-Dragon.html][Rock pools]].
+- [[http://www.lifeonnanchanglu.com/2010/06/shanghai-street-food-7-jian-bing.html][Shanghai Street Food #7 Jiān Bǐng 煎餅]].
+- [[http://joi.ito.com/weblog/2014/09/01/shenzhen-trip-r.html][Shenzhen]] (Hong Kong). The worlds manufacturing ecosystem.
+- [[http://arts.cultural-china.com/en/85Arts192.html][Suspended Temple of Mt. Hengshan]].
+- [[http://www.lonelyplanet.com/round-the-world-travel/best-of-round-the-world-travel/content/travel-tips-and-articles/77807][The essential guide to backpacking China's silk road]].
+- [[https://www.quora.com/What-are-some-must-try-foods-when-visiting-China][What are some must-try foods when visiting China? (Quora)]].
+- [[https://en.wikipedia.org/wiki/Zhangjiajie_National_Forest_Park][Zhangjiajie National Forest Park]].
+- [[https://www.lonelyplanet.com/china/travel-tips-and-articles/chinas-most-epic-high-speed-rail-journeys/40625c8c-8a11-5710-a052-1479d2768596][China's most epic high-speed rail journeys]].
+* [2015-03-18 Wed] South Korea travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: south-korea-travel-bookmarks
+:END:
+:MODIFIED:
+[2021-01-02 Sat]
+:END:
+- [[https://www.nomadasaurus.com/things-to-do-in-jeonju-south-korea/][8 Amazing Things to Do in Jeonju, South Korea (2020 Guide)]].
+- [[https://en.wikipedia.org/wiki/Hongdae,_Seoul][Hongdae, Seoul]].
+- [[http://www.humarakausar.com/tag/koi-fish-mural][Koi fish mural at Naksan Park, Seoul]].
+
+* [2015-03-18 Wed] Sharing on iOS
+:PROPERTIES:
+:CUSTOM_ID: sharing-on-ios
+:END:
+- [[https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivityViewController_Class/][UIActivityViewController]].
+  - Use completionWithItemsHandler on iOS 8.
+  - Sample:
+#+BEGIN_SRC objc
+  NSString *title = @"Sharing on iOS bookmarks.";
+  NSURL *url = [NSURL URLWithString:@"http://xenodium.com/#sharing-on-ios"];
+  UIImage *image = [UIImage imageNamed:@"beautiful-image"];
+
+  UIActivityViewController *controller =
+    [[UIActivityViewController alloc]
+      initWithActivityItems:@[title, url, image]
+      applicationActivities:nil];
+
+  // self being a UIViewController.
+  [self presentViewController:controller animated:YES completion:nil];
+#+END_SRC
+- Sharing through Mail app on simulator isn't supported.
+#+BEGIN_QUOTE
+viewServiceDidTerminateWithError: Error Domain=_UIViewServiceInterfaceErrorDomain Code=3 "The operation couldn’t be completed. (_UIViewServiceInterfaceErrorDomain error 3.)" UserInfo=... {Message=Service Connection Interrupted}
+#+END_QUOTE
+- Sharing through Mail app on device is OK.
+- [[http://devstreaming.apple.com/videos/wwdc/2014/205xxqzduadzo14/205/205_hd_creating_extensions_for_ios_and_os_x,_part_1.mov?dl%3D1][WWDC 2014 Creating Extensions for iOS and OSX, Part 1]].
+  - Share Extensions talk by Guy Fullerton.
+    - Usually view controllers in addition to plist.
+    - CFBundleDisplayName.
+    - NSExtendion.
+      - NSExtensionAttributes.
+        - NSExtensionActivationRule.
+  - SLComposeServiceViewController.
+  - UIActivityViewController.
+- [[http://devstreaming.apple.com/videos/wwdc/2014/217xxsvxdga3rh5/217/217_hd_creating_extensions_for_ios_and_os_x_part_2.mov?dl%3D1][WWDC 2014 Creating Extensions for iOS and OSX, Part 2]].
+- Want to a share URL to App Store? See [[https://developer.apple.com/library/ios/qa/qa1633/_index.html][Technical Q&A 1633]].
+
+* [2015-03-18 Wed] San Francisco travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: san-francisco-travel-bookmarks
+:END:
+:MODIFIED:
+[2018-10-29 Mon]
+:END:
+- [[http://www.bluestardonuts.com/][Blue Star Donuts (Portland + LA)]].
+- [[https://www.yelp.com/biz/mr-and-mrs-miscellaneous-san-francisco][Mr. and Mrs. Miscellaneous]].
+- [[https://www.smittenicecream.com/][Smitten Ice Cream]].
+- [[http://www.tiledsteps.org/][Tiled steps at 16th Moraga Street in San Francisco]].
+* [2015-03-18 Wed] Istanbul travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: istanbul-travel-bookmarks
+:END:
+:MODIFIED:
+[2015-06-21 Sun]
+:END:
+- [[http://istanbulfood.com/altan-sekerleme-a-sweet-sweet-bayram/][Altan Şekerleme (turkish delight shop)]].
+- [[http://www.lonelyplanet.com/turkey/istanbul/travel-tips-and-articles/top-10-traditional-cheap-eats-in-istanbuls-bazaar-district][Cheap eats in Istanbul's Bazaar District]].
+- [[http://www.turkeyfromtheinside.com/istanbul-guide/f/1255-findikli.html][Findikli rainbow stairs]].
+- Historic neighborhood of Arnavutkoy in Istanbul.
+- [[http://istanbulfood.com/altan-sekerleme-a-sweet-sweet-bayram/][Istanbul Food: after the perfect bite]].
+- [[http://www.lonelyplanet.com/turkey/cappadocia-kapadokya/travel-tips-and-articles/the-rise-of-karakoy-istanbuls-hippest-neighbourhood][The rise of Karakoy: Istanbul's hippest neighbourhood]].
+- [[http://www.timwilmot.com/2012/04/fish-market-uskudar-istanbul.html][Uskudar Fish Market]].
+
+* [2015-03-18 Wed] Rome travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: rome-travel-bookmarks
+:END:
+- [[http://www.topbikerental.com/nuovosito/eng/tour-rome/city-center.php][Bike rental in Rome]].
+- [[http://www.darkrome.com/][Darkrome tours]].
+- [[http://www.lonelyplanet.com/italy/travel-tips-and-articles/first-time-rome-a-beginners-guide-to-the-eternal-city#ixzz3lhwtbgg0][First time Rome: a beginner’s guide to the Eternal City]].
+
+* [2015-03-17 Tue] Italy travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: italy-travel-bookmarks
+:END:
+:MODIFIED:
+[2020-09-20 Sun]
+:END:
+- [[http://themindcircle.com/stunning-italy/][22 Towns in Italy That Are Almost Too Perfect Looking]].
+- [[http://www.monte-oliveto.com/][Abbazia di Monte Oliveto Maggiore]].
+- [[https://travellingantics.com/][Abbruzzo's Sulmona: one of the oldest towns in the area and home to the Latin poet Ovid, confetti (sugared almonds) and arrosticini (barbecued lamb skewers)]].
+- [[https://en.wikipedia.org/wiki/Alberobello][Alberobello - Wikipedia]].
+- [[http://www.neatorama.com/2015/04/22/Furore-The-Little-Italian-Beach-Hidden-in-a-Fjord/][Amalfi coast's Furore beach]].
+- [[https://en.wikipedia.org/wiki/Boboli_Gardens][Boboli Gardens, Florence]].
+- [[http://italychronicles.com/heavenly-beauty-braies-lake-italy/][Braie lake]].
+- [[http://www.caffemeletti.it/][Caffe Meletti]].
+- [[https://en.wikipedia.org/wiki/Cinque_Terre][Cinque Terre]].
+- [[https://en.wikipedia.org/wiki/Emilia-Romagna][Emilia Romagna]]. (foood!).
+- [[http://emilyluxton.co.uk/italy/five-small-towns][Fixe small towns in Italy]].
+- [[https://en.wikipedia.org/wiki/Herculaneum][Herculaneum - Wikipedia]].
+- [[http://www.lonelyplanet.com/italy/travel-tips-and-articles/italys-six-best-road-trips][Italy's six best road trips]].
+- [[https://sirenuse.it/en][Le Sirenuse (Positano)]].
+- [[http://www.lonelyplanet.com/italy/amalfi-coast/travel-tips-and-articles/76904][Live the good life: 12 local experiences on the Amalfi Coast]].
+- [[https://en.wikipedia.org/wiki/Manarola][Manarola]].
+- Milan - Deus cafe.
+- Milan - [[https://www.google.co.uk/search?sa%3DG&hl%3Den&q%3Dgelateria%2Bmilano&npsic%3D0&rflfq%3D1&tbm%3Dlcl&ved%3D0ahUKEwjx8vuA353KAhWIOhoKHaFNDq0QjGoIPQ&biw%3D1600&bih%3D789][Gelato joints]].
+- Milan - [[http://www.ilmangione.it/][Il mangione]] to find restaurants.
+- Milan - Mercato Metropolitani.
+- Milan - Navigli and eat at "el brellin".
+- Milan - [[http://www.taveggia.it][Taveggia]] for hot chocolate.
+- Milan - [[http://www.msadventuresinitaly.com/blog/2008/04/14/where-to-go-to-aperitivo-in-milan-italy/][Where to go for aperitivo in Milan]].
+- [[https://en.wikipedia.org/wiki/Montalcino][Montalcino, and Brunello wine]].
+- [[https://en.wikipedia.org/wiki/Palace_of_Venaria][Palace of Venaria]].
+- [[https://en.wikipedia.org/wiki/Piazza_dei_Miracoli#Duomo][Piazza dei Miracoli]].
+- [[https://en.wikipedia.org/wiki/Piedmont][Piedmont]].
+- [[https://en.wikipedia.org/wiki/Pienza][Pienza, Tuscany]].
+- [[https://en.wikipedia.org/wiki/Lampedusa][Rabbit beach]].
+- [[http://www.tripadvisor.co.uk/Restaurant_Review-g635634-d1515714-Reviews-Re_di_Macchia-Montalcino_Tuscany.html][Re di Macchia, restaurant in Montalcino]].
+- [[http://www.sacred-destinations.com/italy/san-galgano-abbey][San Galgano, Tuscany]].
+- [[https://en.wikipedia.org/wiki/San_Gimignano][San Gimignano, Tuscany]].
+- [[http://florence-markets.com/sanlorenzomarket.asp][San Lorenzo leather market]].
+- [[https://www.lonelyplanet.com/travel-tips-and-articles/skiing-in-italy-find-your-perfect-resort][Skiing in Italy: find your perfect resort]].
+- [[https://lovefromtuscany.com/devils-bridge-tuscany/][The Devil's Bridge in Borgo a Mozzano, Tuscany, Italy - Love from Tuscany]].
+- [[https://news.ycombinator.com/item][The New Treasures of Pompeii]].
+- [[https://en.wikipedia.org/wiki/Volterra][Volterra, Tuscany]].
+
+* [2015-03-17 Tue] Emacs lisp debug on entry
+:PROPERTIES:
+:CUSTOM_ID: emacs-lisp-debug-on-entry
+:END:
+Wanted to track down which package was enabling ido-mode on my behalf. debug-on-entry to the rescue. Pass the method name in question and you're good to go.
+#+BEGIN_SRC emacs-lisp
+  (debug-on-entry 'ido-mode)
+#+END_SRC
+When done, use cancel.
+#+BEGIN_SRC emacs-lisp
+  (cancel-debug-on-entry 'ido-mode)
+#+END_SRC
+
+* [2015-03-17 Tue] Burma travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: burma-travel-bookmarks
+:END:
+:MODIFIED:
+[2019-01-27 Sun]
+:END:
+- Bagan and Inle lake are the "touristy" areas.
+- [[http://balloonsoverbagan.com/home][Balloons over Bagan]].
+- For Bagan, get bicycles.
+- Inle lake guided boat tour.
+- [[https://en.wikipedia.org/wiki/Ngapali_Beach][Ngapali beach]].
+- [[https://www.go-myanmar.com/ngwe-saung/][Ngwe Saung beach]].
+- Shwesandaw at sunset.
+- [[http://imgur.com/a/D1EQJ][zyklusdiewelt's Myanmar's photos]].
+
+* [2015-03-16 Mon] OS X Screencasts to animated GIF
+:PROPERTIES:
+:CUSTOM_ID: os-x-screencasts-to-animated-gif
+:END:
+- [[https://gist.github.com/dergachev/4627207][Alex Dergachev]] has a great [[https://gist.github.com/dergachev/4627207][howto]] for generating animated GIF out of OS X Screencasts.
+- Of interest [[http://gifbrewery.com/][GIF Brewery]].
+
+* [2015-03-15 Sun] Writing Xcode plugins
+:PROPERTIES:
+:CUSTOM_ID: writing-xcode-plugins
+:END:
+- [[https://github.com/kattrali/Xcode-Plugin-Template][Xcode-Plugin-Template]] from [[http://www.delisa.me/][Delisa Mason]]/[[https://github.com/kattrali/Xcode-Plugin-Template][kattrali]].
+  - Ensure DVTPlugInCompatibilityUUIDs is in Info.plist.
+  - Get from:
+#+BEGIN_SRC sh
+  defaults read \
+      /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
+#+END_SRC
+- Luis Solanos's [[https://github.com/luisobo/Xcode-RuntimeHeaders][Xcode-RuntimeHeaders]].
+- Boris Bügling's [[https://github.com/neonichu/Xcode-RuntimeHeaders][Xcode-RuntimeHeaders]] fork.
+- [[http://artsy.github.io/blog/2014/06/17/building-the-xcode-plugin-snapshots/][Building the Xcode plugin snapshots]].
+- [[https://github.com/edwardaux/XcodeExplorer][Xcode Explorer]] enables you to explore Xcode events/notifications.
+- [[http://www.blackdogfoundry.com/blog/creating-an-xcode4-plugin/][Creating an Xcode4 plugin]].
+- [[http://www.blackdogfoundry.com/blog/common-xcode4-plugin-techniques/][Common Xcode plugin techniques]].
+- [[http://www.blackdogfoundry.com/blog/xcodeexplorer-monitor-xcode4-internals/][XcodeExplorer to monitor Xcode internals]].
+- [[http://www.blackdogfoundry.com/blog/debugging-your-xcode-plugin/][Debugging your Xcode plugin]].
+
+* [2015-03-15 Sun] Uninstalling Alcatraz from Xcode
+:PROPERTIES:
+:CUSTOM_ID: uninstalling-alcatraz-from-xcode
+:END:
+#+BEGIN_SRC sh
+  $ rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
+  $ rm -rf ~/Library/Application\ Support/Alcatraz
+#+END_SRC
+ps. Removing all plugins:
+#+BEGIN_SRC sh
+  $ rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/*
+#+END_SRC
+
+* [2015-03-14 Sat] Prefill Emacs swiper with current region
+:PROPERTIES:
+:CUSTOM_ID: prefill-emacs-swiper-with-current-region
+:END:
+The new [[https://github.com/abo-abo/swiper][swiper]] Emacs package is proving to be a great alternative to [[https://github.com/ShingoFukuyama/helm-swoop][helm-swoop]]. Here's how to prefill with current region:
+#+BEGIN_SRC emacs-lisp
+  (defun ar/prefilled-swiper ()
+    "Pre-fill swiper input with region."
+    (interactive)
+    (if (region-active-p)
+        (let ((region-text (buffer-substring (region-beginning)
+                                             (region-end))))
+          (swiper region-text))
+      (swiper)))
+
+  (global-set-key (kbd "C-s")
+                  #'ar/prefilled-swiper)
+#+END_SRC
+
+* [2015-03-14 Sat] Change macOS app icon
+:PROPERTIES:
+:CUSTOM_ID: change-mac-os-app-icon
+:END:
+- Open the new icon (.icns) in Preview.
+- Click on large image
+- Select all (⌘-a).
+- Copy (⌘-c).
+- Ctrl-click on app icon.
+- Select Get Info.
+- Click on app icon (top-left).
+- Paste (⌘-v).
+- Done!
+
+[[file:images/change-mac-os-app-icon/overriding.png]]
+
+[[file:images/change-mac-os-app-icon/after.png]]
+
+* [2015-03-11 Wed] Hack on Emacs London meetup bookmarks
+:PROPERTIES:
+:CUSTOM_ID: hack-on-emacs-meetup
+:END:
+- [[http://www.european-lisp-symposium.org][European Lisp Symposium]].
+- [[https://github.com/kai2nenobu/guide-key][guide-key]] displays available key bindings.
+- [[https://github.com/csrhodes/iplayer-el][iplayer-el]] Emacs interface to the BBC's iPlayer.
+- [[https://github.com/csrhodes/swankr][swankr]] REPL (swank protocol for R).
+
+* [2015-03-09 Mon] Working with OS X and Emacs tips
+:PROPERTIES:
+:CUSTOM_ID: working-with-os-x-and-emacs-tips
+:END:
+From [[http://emacsblog.org][M-x all-things-emacs]], Ryan McGeary's OS X/Emacs [[http://emacsblog.org/2011/01/04/how-i-work-working-with-os-x-and-emacs/][workflow]].
+** Frequently used apps:
+- [[https://agilebits.com/onepassword][1 password]].
+- [[http://www.choosyosx.com/][Choosy]].
+- [[http://mizage.com/divvy/][Divvy]].
+- [[http://www.red-sweater.com/fastscripts][Fastscript]].
+- [[http://fluidapp.com/][Fluid]] (SSB).
+- [[http://www.obdev.at/products/launchbar/index.html][Launchbar]].
+- [[https://evernote.com/skitch/guide/mac/][Skitch (screenshots)]].
+- [[http://smilesoftware.com/TextExpander/index.html][te (Text expander)]].
+** Dotfiles
+- [[https://github.com/rmm5t/dotfiles][Github]].
+
+* [2015-03-09 Mon] Building ycmd
+:PROPERTIES:
+:CUSTOM_ID: building-ycmd
+:END:
+** Build
+#+BEGIN_SRC sh
+  $ git clone https://github.com/Valloric/ycmd.git
+  $ cd ycmd
+  $ git submodule update --init --recursive
+  $ ./build.sh --clang-completer
+#+END_SRC
+** Test
+#+BEGIN_SRC sh
+  $ python ycmd
+    serving on http://127.0.0.1:54265
+#+END_SRC
+** More info
+- [[https://github.com/Valloric/YouCompleteMe/blob/master/README.md][YouCompleteMe README]].
+- [[https://github.com/Valloric/ycmd/blob/master/README.md][ycmd README]].
+
+* [2015-03-08 Sun] Regular bookmarks
+:PROPERTIES:
+:CUSTOM_ID: regular-bookmarks
+:END:
+- [[http://roadsandkingdoms.com/category/food/][Roads & Kingdoms (food)]].
+- [[http://roadsandkingdoms.com/category/music][Roads & Kingdoms (music)]].
+- [[http://roadsandkingdoms.com/category/travel/][Roads & Kingdoms (travel)]].
+
+* [2015-03-08 Sun] Photography bookmarks
+:PROPERTIES:
+:CUSTOM_ID: photography-bookmarks
+:END:
+:MODIFIED:
+[2020-12-12 Sat]
+:END:
+- [[http://www.techradar.com/how-to/photography-video-capture/cameras/77-photography-techniques-tips-and-tricks-for-taking-pictures-of-anything-1320768/][77 photography techniques, tips and tricks for taking pictures of anything]].
+- [[https://sites.google.com/site/marclevoylectures/schedule][Course schedule - Digital Photography]].
+- [[https://www.qdev.de/?location=mac/exifrenamer][ExifRenamer: Batch rename photos using exif information]].
+- [[https://github.com/Jack000/Expose][Exposé, A simple static site generator for photoessays]].
+- [[https://ko-fi.com/s/f7ed5aec56][Japanese Storefront Reference set - Elora 's Ko-fi Shop - Ko-fi]].
+- [[http://gakuran.com/category/haikyo-ruins/][Michael Gakuran's Gakuranman]].
+- [[https://openmv.io/][OpenMV (Small - Affordable - Expandable)]].
+- [[https://www.reddit.com/r/photocritique][Photo Critique (Subreddit)]].
+
+* [2015-03-08 Sun] Paris travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: paris-travel-bookmarks
+:END:
+:MODIFIED:
+[2016-07-13 Wed]
+:END:
+- [[http://www.ateliermaitrealbert.com/][Atelier Maitre Albert (known for its rotisserie chicken)]].
+- Au Passage. Small plates in fun atmosphere.
+- Berthillon Ice Cream.
+- [[http://www.yelp.com/biz/breizh-caf%C3%A9-paris-2][Breizh Café (traditional gallete, savory buckwheat crepes)]].
+- Buvette Gastrotheque. Wine bar with small dishes.
+- Cheri Bibi, possibly hipster, underneath Sacre Coeur, good cocktails.
+- Creperie Josseline. Worth the queue. Drink Breton cider with crepes.
+- [[http://holybel.ly][Holybelly]] Canal Saint Martin.
+- [[http://xdaysiny.com/how-to-spend-a-culinary-weekend-in-paris/][How To Spend a Culinary Weekend In Paris]].
+- L'Aller Retour. The place for steak-frites.
+- L'Office. Wine bar/bistrot.
+- Le Barav'.
+- Le Petit Poucet (restaurant next to Place de Clichy, Paris).
+- [[http://www.lereminet.com][Le Reminet]] (Paris restaurant).
+- Marché d'Aligre. Authentic neighbourhood market.
+- Marché des Enfants Rouge. Small covered market. Eat at food stalls.
+- Mosquee de Paris. City mosque. Drink mint tea at courtyard under olive trees or eat in restaurant inside. North African food.
+- Musee d'Orsay.
+- [[http://sprudge.com/paris-a-guide-to-some-of-the-best-cafes-in-canal-st-martin-56068.html][Paris: A Guide To Some Of The Best Cafes In Canal St. Martin]].
+- Pierre Herme. For great pastries and macarons.
+- RATP for transport info including the "carnet" of 10 tickets.
+- Rodin Museum.
+- [[http://www.yelp.com/biz/west-country-girl-paris][West Country Girl (crepes)]].
+- [[https://www.quora.com/What-are-the-best-boulangeries-and-patisseries-in-Paris-for-each-arrondissement][What are the best boulangeries and patisseries in Paris for each arrondissement? (Quora)]].
+- [[https://www.quora.com/What-are-the-best-places-to-buy-cheese-in-Paris][What are the best places to buy cheese in Paris? (Quora)]].
+- [[https://www.quora.com/Where-are-best-vintage-stores-in-Paris][Where are best vintage stores in Paris? (Quora)]].
+- [[https://www.quora.com/Where-are-the-best-flea-markets-in-Paris][Where are the best flea markets in Paris? (Quora)]].
+
+* [2015-03-08 Sun] Org mode bookmarks
+:PROPERTIES:
+:CUSTOM_ID: org-mode-bookmarks
+:END:
+:MODIFIED:
+[2021-11-23 Tue]
+:END:
+- [[https://karl-voit.at/2017/08/12/org-rabbit-hole/][[org-agenda] UOMF: Org Mode As a Rabbit Hole: Agenda Tasks Piling Up]].
+- [[http://www.emacslife.com/baby-steps-org.html][A Baby Steps Guide to Managing Your Tasks with Org]].
+- [[https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html][An Agenda for Life With Org Mode]].
+- [[https://scripter.co/notes/org-table-spreadsheet/][An Org Table Spreadsheet cheatsheet]].
+- [[http://stackoverflow.com/questions/13340616/assign-ids-to-every-entry-in-org-mode][Assigning ids to entries]].
+- [[http://thewanderingcoder.com/2015/03/automating-boilerplate-in-org-mode-journalling/][Automating boilerplate in org-mode journalling]].
+- [[https://www.reddit.com/r/emacs/comments/jc4uou/tags_everywhere/][Beautiful Emacs tags (maybe for org mode?)]].
+- [[https://zzamboni.org/post/beautifying-org-mode-in-emacs][Beautifying Org Mode in Emacs]].
+- [[https://emacs-doctor.com/blogging-from-emacs.html][Blogging from GNU Emacs/org (with rss example)]].
+- [[https://www.sadiqpk.org/blog/2018/08/08/blogging-with-org-mode.html][Blogging with Emacs org-mode]].
+- [[https://yewtu.be/watch][Build a second brain]].
+- [[https://mullikine.github.io/posts/arbitrary-interpreters-for-babel/][Compounding Confoundment: arbitrary interpreters for Babel]].
+- [[https://gitlab.com/sadiq/sadiq.gitlab.io/blob/master/src/blog-atom.sh][Creating org atom xml feed with blog-atom.sh]].
+- [[https://github.com/philipphoman/org-mode-poster][Creating scientific posters with org-mode]].
+- [[https://dev.to/learnbyexample/customizing-pandoc-to-generate-beautiful-pdfs-from-markdown-3lbj][Customizing pandoc to generate beautiful pdfs from markdown (helpful to tweak org export)]].
+- [[https://github.com/dfeich/org-babel-examples/blob/master/README.org][dfeich/org-babel-examples (GitHub)]].
+- [[https://github.com/dfeich/org-babel-examples/blob/master/README.org][Dfeich’s Org-babel, org-exporter, org-table example collection]].
+- [[https://gitlab.com/zzamboni/ox-leanpub][Diego Zamboni / ox-leanpub · GitLab]].
+- [[http://correl.phoenixinquis.net/2015/07/12/git-graphs.html][Drawing Git Graphs with Graphviz and Org-Mode]].
+- [[http://ergoemacs.org/emacs/elisp_parse_org_mode.html][Elisp: Parse Org Mode (API examples by Xah Lee)]].
+- [[http://ehneilsen.net/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]].
+- [[https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks2/][Emacs Orgmode Source Code Blocks 2 | jherrlin]].
+- [[https://emacs.stackexchange.com/questions/51399/org-babel-tangle-with-function-in-header-arguments/51769#51769][Executing org source blocks when loading file (and defining file-local vars)]].
+- [[https://github.com/nikclayton/ob-html-chrome][Export Org HTML SRC blocks as PNG files using Chrome]].
+- [[https://gitlab.com/ambrevar/ambrevar.gitlab.io/blob/master/feed-builder/feed-builder.el][feed-builder/feed-builder.el an org/blog rss implementation]].
+- [[https://github.com/DarkBuffalo/ox-report][GitHub - DarkBuffalo/ox-report: Export your org file to minutes report PDF file]].
+- [[https://github.com/misohena/el-easydraw][GitHub - misohena/el-easydraw: Embedded drawing tool for Emacs]].
+- [[https://github.com/niklasfasching/go-org][GitHub - niklasfasching/go-org: Org mode parser with html & pretty printed org rendering]].
+- [[https://github.com/alphapapa/helm-org-rifle][helm-org-rifle:  Rifle through your Org buffers and acquire your target]].
+- [[https://www.reddit.com/r/emacs/comments/6mzgkg/how_can_orgbabel_be_configured_to_set_variables/][How can org-babel be configured to set variables across multiple language? (Reddit)]].
+- [[https://her.esy.fun/posts/0015-how-i-use-org-mode/index.html][How I use org-mode]].
+- [[https://orgmode.org/manual/HTML-doctypes.html#HTML-doctypes][HTML doctypes (The Org Manual)]].
+- [[https://www.miskatonic.org/2016/08/25/image-display-size-in-org/][Image display size in Org]].
+- [[https://karl-voit.at/2021/08/28/pim-lecture-tug-2021/][Karl Voit's personal information management PIM Lecture at TU Graz]].
+- [[http://kelvinh.github.io/wiki/org-mode-manual/][Kevin's org notes]].
+- [[http://howardism.org/Technical/Emacs/literate-devops.html][Literate DevOps with org source blocks (Howardism)]].
+- [[http://www.howardism.org/Technical/Emacs/literate-devops.html][Literate DevOps]].
+- [[http://cachestocaches.com/2018/6/org-literate-programming/][Literate Programming with Org-mode]].
+- [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming: Empower Your Writing with Emacs Org-Mode]].
+- [[http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner/][Lost in Technopolis (getting things done with org agenda)]].
+- [[http://irreal.org/blog/?p=7651][Making a Poster with Org-mode (Irreal)]].
+- [[https://isamert.net/2021/04/21/managing-your-contacts-in-org-mode-and-syncing-them-to-your-phone-android-ios-whatever-.html][Managing your contacts in org-mode and syncing them to your phone]].
+- [[https://www.bytedude.com/files/managing-your-life-with-org-mode.html][Managing Your Life With org-mode and Other Tools]].
+- [[http://mbork.pl/2018-08-18_Embedding_files_in_Org-mode_revisited][Marcin Borkowski: 2018-08-18 Embedding files in Org-mode revisited]].
+- [[https://fuco1.github.io/2018-12-23-Multiline-fontification-with-org-emphasis-alist.html][Multiline fontification (ie. bold) with org-emphasis-alist]].
+- [[https://joshrollinswrites.com/emacsorg/org-capture-template-1/][My Org Capture Templates - Part 1 &middot; The Art of Not Asking Why]].
+- [[https://joshrollinswrites.com/emacsorg/org-capture-template-3/][My Org Capture Templates - Part 3 &middot; The Art of Not Asking Why]].
+- [[https://www.reddit.com/r/emacs/comments/hnf3cw/my_orgmode_agenda_much_better_now_with_category/][My org-mode agenda, much better now with category icons! : emacs]].
+- [[https://patrickskiba.com/org-mode/2019/05/22/uses-for-org-mode.html][My Org-mode use cases (Patrick Skiba)]].
+- [[http://www.cachestocaches.com/2016/9/my-workflow-org-agenda/][My Workflow with Org-Agenda]].
+- [[https://christiantietze.de/posts/2019/12/emacs-notifications/][Native macOS Notifications for Emacs Org Tasks and Appointments]].
+- [[https://kitchingroup.cheme.cmu.edu/blog/2016/11/04/New-link-features-in-org-9/][New link features in org 9]].
+- [[https://github.com/ndwarshuis/om.el/blob/master/README.md][om.el/README.md at master · ndwarshuis/om.el · GitHub]].
+- [[https://github.com/dfeich/org-babel-examples][Org babel examples repo]].
+- [[https://org-babel.readthedocs.io/en/latest/][Org Babel reference card]].
+- [[https://raw.githubusercontent.com/eschulte/babel-dev/master/scraps.org][org babel scraps]].
+- [[https://ag91.github.io/blog/2020/08/28/org-crypt-and-logbook-how-they-can-work-together-for-a-secure-agenda/][Org crypt and LOGBOOK: how they can work together for a secure agenda.]].
+- [[https://titan-c.gitlab.io/org-cv/][Org CV/resume]].
+- [[http://www.star.bris.ac.uk/bjm/org-basics.html][Org mode basics]].
+- [[https://writepermission.com/org-blogging-rss-feed.html][Org mode blogging: RSS feed]].
+- [[http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Org mode examples and cookbook]].
+- [[http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Org mode examples]].
+- [[https://www.reddit.com/r/emacs/comments/9d8i7y/org_mode_habits/][Org Mode Habits : emacs]].
+- [[https://gist.github.com/drj42/1755992][Org mode reference card]].
+- [[https://orgmode.org/worg/org-tutorials/][Org tutorials]].
+- [[https://alphapapa.github.io/org-almanac/][org-almanac]].
+- [[https://github.com/sprig/org-capture-extension/blob/master/README.md][org-capture-extension (GitHub)]].
+- [[https://github.com/eschulte/org-ehtml][org-ehtml: Export Org-mode files as editable web pages]].
+- [[https://github.com/theodorewiles/org-mind-map][org-mind-map: creates graphviz directed graphs from org-mode files]].
+- [[http://pragmaticemacs.com/emacs/org-mode-basics-vii-a-todo-list-with-schedules-and-deadlines/][Org-mode basics VII: A TODO list with schedules and deadlines | Pragmatic Emacs]].
+- [[https://bzg.fr/en/some-emacs-org-mode-features-you-may-not-know.html/][Org-mode features You May Not Know · Bastien Guerry - Liberté, informatique]].
+- [[https://yiufung.net/post/org-mode-hidden-gems-pt2/][Org-mode Hidden Gems - 02 Tables]].
+- [[https://github.com/flexibeast/org-vcard/][org-mode support for vCard export and import]].
+- [[https://github.com/weirdNox/org-noter][org-noter: Emacs document annotator, using Org-mode]].
+- [[https://alhassy.github.io/org-special-block-extras/README.html][org-special-block-extras]].
+- [[https://github.com/alphapapa/org-web-tools][org-web-tools: Commands and functions for retrieving web page content and processing it into and displaying it as Org-mode content.]].
+- [[https://github.com/alphapapa/org-web-tools][org-web-tools: View, capture, and archive Web pages in Org-mode]].
+- [[https://github.com/lyon0xd/uml/blob/master/org/test.org][org/uml examples]].
+- [[https://www.zcl.space/tools/organize-you-life-in-org/][Organize you life in Emacs Org | ZCL.SPACE]].
+- [[http://doc.norang.ca/org-mode.html][Organize your life in plain text]].
+- [[https://www.youtube.com/playlist?list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE&app=desktop][OrgMode tutorial - YouTube channel]].
+- [[https://forum.effectivealtruism.org/posts/w4CM7RfTLXxYLDccX/pablo-stafforini-s-forecasting-system-1][Pablo Stafforini’s Forecasting System - EA Forum]].
+- [[https://medium.com/@tasshin/plan-your-day-daily-time-management-with-emacs-org-mode-and-google-calendar-a9162837fdb3][Plan your day: Daily Time Management with Emacs, Org-Mode, and Google Calendar]].
+- [[https://news.ycombinator.com/item?id=23130104][Prettifying Org Mode with CSS | Hacker News]].
+- [[https://sandyuraz.com/articles/orgmode-css/][Prettifying Org Mode with CSS]].
+- [[https://puntoblogspot.blogspot.com/2018/12/3-basic-org-agenda-tips-for.html][puntoblogspot: 3 basic org agenda tips for the fundamentally forgetful]].
+- [[https://vxlabs.com/2017/06/03/querying-restful-webservices-into-emacs-orgmode-tables/][Querying RESTful webservices into Emacs orgmode tables (vxlabs)]].
+- [[https://www.youtube.com/playlist?list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE][Rainer König's OrgMode YouTube tutorials]].
+- [[https://fuco1.github.io/2019-02-10-Refiling-hydra-with-pre-defined-targets.html][Refiling hydra with pre-defined targets]].
+- [[http://blog.lujun9972.win/emacs-document/blog/2018/10/22/ricing-up-org-mode/index.html][Ricing up Org Mode - EMACS-DOCUMENT]].
+- [[https://lepisma.github.io/2017/10/28/ricing-org-mode/][Ricing up Org Mode]].
+- [[https://www.arcadianvisions.com/blog/#orga597dcf][Robust Notes with Embedded Code (extensive org babel usage)]].
+- [[https://orgmode.org/guide/][The compact Org-mode Guide]].
+- [[https://ag91.github.io/blog/2020/09/04/the-poor-org-user-spaced-repetition/][The Poor Org-User Spaced Repetition - Where parallels cross]].
+- [[http://www.flutterbys.com.au/stats/tut/tut16.1.html][Tutorial 16.1 - Emacs orgmode tables]].
+- [[https://karl-voit.at/2017/01/15/org-clone-subtree-with-time-shift/][UOMF: Recurring Events with Org Mode]].
+- [[http://www.sastibe.de/2018/05/2018-05-11-emacs-org-mode-rest-apis-stocks/][Use Emacs Org Mode and REST APIs for an up-to-date Stock Portfolio]].
+- [[http://cestlaz.github.io/posts/using-emacs-24-capture-2/#.WTtEbXWw5pg][Using Emacs - 24 - Org Capture 2]].
+- [[https://cestlaz.github.io/post/using-emacs-54-org-tables][Using Emacs 54 Org Tables]].
+- [[https://dpitt.me/blog/2020/03/zettelkasten][Using Emacs's org-mode As Your Zettelkasten]].
+- [[http://www.diegoberrocal.com/blog/2015/08/19/org-protocol/][Using org-capture with org-protocol be like - Diego Berrocal]].
+- [[http://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/][Using results from one code block in another org-mode]].
+- [[https://ofosos.org/2017/12/04/sudo-org-babel/][Using sudo in org-babel]].
+- [[https://www.reddit.com/r/emacs/comments/jof1p3/visit_tangled_file_with_orgopenatpoint/][Visit tangled file with org-open-at-point (supports tramp/ssh)]].
+- [[https://pjs64.wordpress.com/2020/12/07/worgsheet-calc-intro/][WorgSheet Calc Intro – Dj Pj (lots of tips and shortcuts)]].
+- [[http://katherine.cox-buday.com/blog/2015/03/14/writing-specs-with-org-mode/][Writing Specs with Org-mode]].
+- [[https://www.youtube.com/watch][YouTube: org introduction]].
+- [[https://github.com/nobiot/Zero-to-Emacs-and-Org-roam][Zero to Emacs and Org-roam: a step-by-step guide]].
+
+* [2018-09-11 Tue] London bar backlog
+  :PROPERTIES:
+  :CUSTOM_ID: london-bar-backlog
+  :END:
+** Soho
+    - [[http://www.68andboston.com][68 and Boston (cocktails and wine bar)]].
+* [2015-03-08 Sun] London food backlog
+:PROPERTIES:
+:CUSTOM_ID: london-food-backlog
+:END:
+:MODIFIED:
+[2019-05-25 Sat]
+:END:
+** B_acklog
+*** [[https://www.saporitaliarestaurant.co.uk][Saporitalia (Italian/pizza), Notting Hill]].
+*** [[https://theblacklock.com/menus/][Menus | Lunch, Dinner, Sunday Roast - Blacklock]].
+*** [[https://thebarbary.co.uk/food-drink/][Food & Drink - The Barbary | Covent Garden Restaurant | Neal's Yard | London]].
+*** [[https://www.pophamsbakery.com/][Pophams Bakery]].
+*** [[https://www.timeout.com/london/restaurants/yipin-china][Yipin China | Restaurants in Islington, London]].
+*** [[https://m.facebook.com/sundaybarnsbury/][Sunday (breakfast)]].
+*** [[https://www.clifton.co.uk/the-quince-tree-cafe-london][The Quince Tree Cafe London (Cafe), Paddington]].
+*** [[https://www.bombaybustle.com][Bombay Bustle (Indian), Mayfair]].
+*** [[https://www.kyseri.co.uk][Kyseri (modern turkish), Fitzrovia]].
+*** [[http://www.pied-a-terre.co.uk/][Pied a Terre (fine dining), Fitzrovia]].
+*** [[http://www.theledbury.com/tasting-menu/][The Ledbury (fine dining), Notting Hill]].
+*** [[https://www.flourandgrape.com][Flour and Grape (Pasta), Bermondsey]].
+*** [[https://www.honipoke.com/][Honi Pokē (poke), Soho]].
+*** [[http://zialucia.com/][ZIA LUCIA (pizza), Highbury Islington]].
+*** Yeast Bakery.
+*** Pavillion Cafe.
+*** Palm Vaults.
+** Angel
+**** TODO [[http://www.shawarmabar.co.uk/][Shawarma Bar - Berber and Q]].
+**** TODO [[http://bombayburrito.co.uk/][Bombay Burrito (Indian burrito takeaway & restaurant: Angel, Islington)]].
+** Baker Street
+**** DONE [[http://www.anticapizzeriadamichele.co.uk][L’ANTICA PIZZERIA DA MICHELE (Pizza), Baker Street]].
+** Barbican
+**** TODO [[http://sushitetsu.co.uk][Sushi Tetsu (must book, well in advance)]].
+** Barnsbury
+**** TODO Sunday (breakfast, cafe, working).
+** Battersea
+**** TODO [[https://tonkotsu.co.uk/][Tonkotsu (ramen)]].
+** Brick Lane
+**** TODO [[http://www.chezellesbistroquet.co.uk][Chez Elles]] (french).
+**** TODO [[http://www.yelp.com/biz/fika-london-2][Fika]] (Swedish, cinnamon buns, coffee).
+** Bermondsey
+**** TODO Druid Street market
+***** FAT London (Kimchee ).
+***** & Cultured butter.
+** Bethnal Green
+*** DONE [[https://lahpet.co.uk/][Lahpet]] (Burmese) <2018-12-02 Sun> <2018-12-27 Thu>
+** Brixton
+**** TODO [[http://www.nanban.co.uk/][Nanban]] (Japanese soul food).
+** Borough
+**** DONE [[http://padella.co][Padella]] (great fresh pasta).
+**** TODO [[https://roastingplant.com/][Roasting Plant: Fresh Roasted Coffee]] <2019-01-15 Tue>
+** Camberwell
+**** TODO [[http://suncamberwell.com][Sun of Camberwell]] (Roast beef, Yorkshire, and sticky toffee pudding).
+**** TODO [[http://www.timeout.com/london/restaurants/silk-road][Silk Road (Chinese, Lamb/cumin skewers)]].
+** Canada Water
+**** TODO [[http://www.chuckburgerbar.com/#canadawater][Chuck burger (truck)]].
+** Cannon street
+**** TODO [[https://www.theinfatuation.com/london/reviews/brigadiers][The Brigadiers (Indian)]] <2019-01-22 Tue>
+** Chiswick
+**** TODO [[https://www.thecoffeetraveller.com/][The Coffee Traveller]] <2019-01-16 Wed>
+** Covent Garden
+**** TODO [[http://www.punjab.co.uk/][Punjab]] (Punjabi).
+**** TODO [[https://www.dintaifung-uk.com/][鼎泰豐・Din Tai Fung・ディンタイフォン・딘타이펑 (soup dumplings)]] <2019-03-12 Tue>
+**** TODO [[https://www.littlekolkata.co.uk/][Little Kolkata (London Restaurant - Kolkata Spirits)]] <2019-03-12 Tue>
+**** TODO [[http://www.duendelondon.com/][Duende]] (modern Spanish).
+**** TODO [[http://rockandsoleplaice.com][Rock & Sole Plaice]] (fish and chips).
+**** TODO [[https://tyuk.com][Timber Yard]] (coffee, working).
+**** TODO [[http://www.chicknsours.co.uk/][Chicks 'n' Sours]].
+**** TODO [[https://www.jidori.co.uk/][Jidori]] (chicken yakitori) <2018-12-02 Sun>
+**** DONE Dishoom (Indian), try Lamb raan.
+**** DONE [[http://www.sagarveg.co.uk][Sagar]] (South Indian): Great food!
+** Clapham
+**** TODO [[http://www.joepublicpizza.com][Joe Public Pizza]].
+** Crouch end
+**** TODO [[http://www.the-haberdashery.com][The Haberdashery]] (coffee, working).
+**** TODO [[http://www.localblend.co.uk/blend-harringay-2][Blend]] (coffee, working).
+** Ealing
+**** TODO Kiraku (Sushi).
+**** TODO [[https://wacafe.co.uk/][Wa Cafe (Japanese Patiserie)]].
+** Earls court
+**** TODO [[http://mamlondon.com][MAM]] (Vietnamese) <2018-12-02 Sun>
+**** TODO [[https://www.facebook.com/ukjollibee/?utm_source=tripadvisor&utm_medium=referral][Jollibee UK (filipino fried chicken/fast food)]] <2019-03-12 Tue>
+** Edware road
+**** DONE [[http://gogi-restaurant.com][GOGI]] (korean): Average. Also, they lied to me and apologized with £10 credit.
+** Euston
+**** TODO Roti King (Indian/Pakistani/Singaporean): 40, Doric Way, Euston, NW1 1LH.
+** Farringdon
+**** TODO Quality Chop House.
+**** TODO Daddy Donkey (Mexican).
+**** TODO [[http://jandacafe.com][J+A]] (coffe, working).
+** Fitzrovia
+**** TODO [[http://www.indianymca.org/][Indian YMCA]] (inexpensive Indian).
+**** TODO [[https://www.pastificioaldente.com][Pastificio al dente (Italian, fresh pasta)]] <2019-03-12 Tue>
+**** TODO [[http://www.houseofho.co.uk/home][House of Ho]] (Vietnamese).
+** Golders Green
+**** TODO Cafe Japan (Sushi).
+** Hackney
+**** TODO [[http://www.pidginlondon.com][Pidgin]].
+**** TODO [[https://dabbadrop.co.uk][DabbaDrop (Indian delivery subscription)]].
+** Hammersmith
+**** DONE [[http://indian-zing.co.uk/][Indian Zing]] (Indian): It was OK (not great).
+**** TODO [[https://www.etfoodvoyage.com/2018/08/24/dragon-cat-cafe/][Dragon cat cafe]] (bubble tea and wheel cake). <2019-07-14 Sun>
+** Hamstead
+**** TODO [[http://www.jinkichi.com/][Jin Kichi]] (Japanese).
+** Harrow
+**** TODO [[http://mazarafghanrestaurant.co.uk/contact/][Mazar]] (Afghan).
+** Hatch End
+**** TODO [[http://www.chuckburgerbar.com/][Chuck Burger]].
+** Holborn
+**** TODO [[http://www.prufrockcoffee.com][Prufrock Café]] (coffee, working).
+**** TODO [[http://www.goodandpropertea.com/find-us][Good & Proper]] (coffee, tea, working).
+**** TODO [[https://www.theinfatuation.com/london/reviews/noble-rot][Noble Rot (wine bar/food)]] <2019-01-22 Tue>
+** Holloway Road
+**** TODO Xi'an impression (Xi'an)
+** Islington
+**** TODO [[http://delhigrill.com][Delhi Grill]] (Indian), try chicken makhani and naan.
+**** TODO [[http://www.bababoom.london][BabaBoom]] (the kebab makers) <2018-12-02 Sun>
+**** TODO [[http://rootsatn1.com][Roots N1]] (Indian).
+**** TODO [[http://www.thepigandbutcher.co.uk/][The pig and butcher]] (sunday roast).
+**** TODO [[http://busanbbq.co.uk][Busan BBQ]] (Korean meets American diner/burgers and fried chicken).
+**** TODO [[https://smokehouseislington.co.uk/][Smokehouse Islington]].
+**** TODO [[https://www.etfoodvoyage.com/2019/02/19/katsute-100/][Katsuke 100]] (Japanese tea/cake room). <2019-07-14 Sun>
+** Kensington
+**** TODO Clarke's, try the burger.
+** Kensal Green
+**** TODO [[http://www.tripadvisor.com/Restaurant_Review-g186338-d3531042-Reviews-Centro_Galego_de_Londres-London_England.html][Centro Galego de Londres]] (Gallician).
+** Kentish town
+**** TODO [[http://www.timeout.com/london/restaurants/the-fields-beneath][The Fields Beneath]] (coffee, working).
+** King's Cross
+**** TODO Itadaki Zen.
+**** TODO [[http://www.germangymnasium.com/][German Gymnasium]].
+**** DONE [[http://starofkings.co.uk/food-and-drink/][Yeah! Burger at Star of Kings]].
+**** TODO [[http://www.wingwing.co.uk/][Wing Wing (Korean fried chicken)]]s.
+**** TODO [[https://www.etfoodvoyage.com/2018/08/31/sambal-shiok-has-a-permanent-home][Sambal Shiok]] known for laksa and satai burger. <2019-07-14 Sun>
+** Leicester square
+**** [[https://ichibanya.uk/][Curry House Ichibanya UK Japanese Restaurant London WC2H]] <2019-03-12 Tue>.
+** Leytonstone
+**** [[http://www.singburi.co.uk][Singburi (Thai)]] <2019-05-07 Tue>.
+** Liverpool street
+**** TODO [[http://www.gunpowderlondon.com][Gunpowder]] (Indian).
+**** TODO Cinnamon Kitchen (Indian).
+** London Bridge
+**** TODO [[https://www.santoremedio.co.uk/][Santo Remedio]] (Mexican).
+** Marylebone
+**** DONE [[http://www.timeout.com/london/restaurants/fischers][Fischer's]] (Austrian). Great atmosphere and schnitzel. Not cheap.
+**** TODO Nambutei (Sushi).
+**** TODO [[http://www.lurra.co.uk/][Lurra]] (Basque).
+** Mayfair
+**** TODO [[http://www.mayfairchippy.com][Mayfair chippy]] (Fish and chips).
+**** TODO [[http://www.ikedarestaurant.com/][Ikeda]] (Japanese).
+**** TODO [[http://www.the-araki.com/][THE ARAKI (Sushi) / pricey]].
+** Mornington Crescent
+**** TODO Asakusa (Japanese).
+** Notting Hill
+**** TODO [[http://www.localblend.co.uk/blend-harringay-2][Blend]] (coffee, working).
+**** TODO [[http://www.thecontinentalpantry.com/][The continental pantry]].
+**** TODO [[http://mamlondon.com][MAM]] (Vietnamese) <2018-12-02 Sun>
+** Old Street
+**** TODO [[http://sardine.london][Sardine]] (French).
+**** TODO [[http://sasukeramen.co.uk/][Sasuke]] (ramen).
+** Olympia
+**** DONE Aborz (Iranian). <2018-12-27 Thu>
+** Oxford street
+**** TODO Roti Chai (Indian).
+** Peckham
+**** TODO [[http://www.ganapatirestaurant.com][Ganapati]] (South Indian).
+**** TODO [[http://thebeggingbowl.co.uk/][The Begging Bowl (Thai)]] <2019-05-07 Tue>.
+** Piccadilly
+**** TODO [[http://www.urbantearooms.com/menus][Urban tea rooms (coffee/tea/brunch)]] <2019-03-12 Tue>
+**** TODO [[http://machi-ya.co.uk/][Machiya]] (Japanese comfort) <2018-12-02 Sun>
+**** TODO [[https://yoriuk.com/][YORI-Korean Restaurant]] <2019-03-12 Tue>
+**** TODO [[https://www.ica.art/rochelle-canteen][Rochelle Canteen @ The Institute of Contemporary Arts (ICA)]] (Pie and ping Sunday special) <2019-02-12 Tue>
+**** TODO [[https://www.fortnumandmason.com/products/dark-chocolate-coated-chocolate-pearl][Dark Chocolate Coated Chocolate Pearl, 190g - Fortnum & Mason]] <2020-06-14 Sun>.
+** Putney
+**** TODO [[https://www.tripadvisor.co.uk/ShowUserReviews-g186338-d807103-r176708451-Tomoe-London_England.html][authentic Japanese restaurant in Putney - Tomoe, London Traveller Reviews - TripAdvisor]].
+** Sheppherds bush
+**** TODO [[https://www.etfoodvoyage.com/2017/09/03/caco-co/][Caco & Co]] (Portuguese cafe). <2019-07-14 Sun>
+**** TODO [[https://www.etfoodvoyage.com/2017/03/17/chop-chop-noodle-bar/][Chop chop]] (Noodle bar). <2019-07-14 Sun>
+** Shoreditch
+**** TODO [[http://mastbrothers.com/pages/london][Mast Brothers chocolate makers]].
+**** TODO [[http://www.sagardi.co.uk/en/][Sagardi]] (basque).
+**** TODO [[http://www.lookmumnohands.com/][Look mum no hands]] (cofee, working).
+**** TODO [[http://jandacafe.com][J+A]] (coffe, working).
+**** TODO [[http://www.goodandpropertea.com/find-us][Good & Proper]] (coffee, tea, working).
+**** TODO [[https://smokestak.co.uk][Smokestak]] (BBQ).
+**** TODO [[https://pickyglutton.com/2015/08/17/banh-mi-in-london-review/][Pho Viet 68]] (Banh mi).
+** Sloane Square
+**** TODO [[http://rasoi-uk.com/][Rasoi]] (Indian).
+** Soho
+**** TODO [[https://www.lehanoi.uk/][Le Hanoi]] (Vietnamese) <2018-12-02 Sun>
+**** TODO [[https://www.thevietnamesekitchen.co.uk/][Cay Tre]] (Vietnamese) <2018-12-02 Sun>
+**** TODO [[http://vietnamfood.co.uk/vietfood][Viet Food]] (Vietnamese) <2018-12-02 Sun>
+**** TODO [[http://www.taotaoju.co.uk/][Tao Tao Ju]] (Dim sum) <2018-12-02 Sun>
+**** TODO [[http://www.lokhandwala.co.uk/][Lokhandwala London (Top Indian Tapas Restaurant & Bar in London)]] <2019-01-15 Tue>
+**** TODO [[https://dumlondon.com/][DUM biryani (Indian)]] <2019-01-15 Tue>
+**** TODO [[http://pastaio.london][Pastaio (Italian, fresh pasta)]] <2019-01-15 Tue>.
+**** TODO [[https://bun.house/][Bun House]] (ie. pork buns).
+**** TODO [[http://temperrestaurant.com/][Temper restaurant]] (BBQ/tapas).
+**** TODO [[http://www.goldenunion.co.uk][Golden Union]] (fish bar).
+**** TODO [[http://meltroom.com/][Melt Room]] (Cheese toasties).
+**** TODO [[http://shotgunbbq.com/][Shotgun]] (BBQ).
+**** TODO [[http://smacklobster.com/][Smack Lobster]] (Lobster rolls).
+**** TODO [[https://pickyglutton.com/2014/11/05/smoking-goat-review/][Smoking Goat]] (Thai), highly recommended.
+**** TODO [[http://www.atariya.co.uk/restaurants/][Atari Ya]] (Sushi).
+**** TODO Yumi Izakaya (Japanese).
+**** TODO Jugemu (Japanese).
+**** TODO [[http://www.darjeeling-express.com/][Darjeeling Express]] (Indian).
+**** TODO [[http://www.hopperslondon.com][Hoppers]] Dosas, Rice, Roast, Kothu & Arrack (Sri Lanka and Tamil Nadu).
+**** TODO [[https://tyuk.com][Timber Yard]] (coffee, working).
+**** DONE [[http://pizzapilgrims.co.uk/][Pizza Pilgrims]].
+**** DONE [[https://pickyglutton.com/2016/10/14/kiln-review-soho/][Kiln]] (Thai), highly recommended.
+**** DONE [[http://baolondon.com][BAO]] (Bao buns! enough said).
+**** DONE [[http://said.it/en/london/][SAID]] (italian chocolate shop). Awesome hot chocolate.
+** Southhall
+*** DONE [[http://brilliantrestaurant.com][Brilliant restaurant]] (healthier Indian). <2018-12-27 Thu>
+** Southbank
+**** TODO [[https://tonkotsu.co.uk/][Tonkotsu (ramen)]].
+** South Kensington
+**** TODO Hour Glass (Pub restaurant).
+** Smithfield
+**** TODO [[http://birdofsmithfield.com][Bird of Smithfield]] (Sheppherd's pie, ox cheek, cheesecake).
+** Spitafields
+**** DONE [[https://pickyglutton.com/2016/05/02/som-saa-review-spitalfields/][Som Saa]] (Thai), highly recommended. <2018-12-27 Thu>
+**** TODO [[https://lahpet.co.uk/][Lahpet]] (Burmese) <2018-12-02 Sun>
+** Strand
+**** TODO [[https://www.strand-continental.co.uk/india-club][India Club (around for 50 years)]] <2019-05-21 Tue>
+** Stoke Newingtom
+**** TODO [[http://www.the-haberdashery.com][The Haberdashery]] (coffee, working).
+** Tottenham Court Road.
+**** DONE [[https://www.kanada-ya.com/][Kanada-Ya]] (rammen): Not bad.
+** Tower Hill
+**** TODO [[http://www.manze.co.uk][M. Manze]] (pie and mash).
+**** TODO [[https://www.google.co.uk/search?q=maltby+street+market&rlz=1C1FLDB_enGB546GB546&espv=2&biw=1449&bih=913&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwj1nrGQvYvLAhUF2hoKHeaQDQsQsAQIOg&dpr=1][Maltby street market]].
+** Tufnell Park
+**** TODO Monsoon (Indian), try lamb naga.
+** Turnham Green
+**** TODO Chief Coffee.
+** Victoria
+**** TODO [[http://dominiqueansellondon.com/][Dominique Ansel Bakery (Bakery)]] <2019-01-22 Tue>
+**** TODO Dominique Ansel Bakery <2018-12-11 Tue>
+**** TODO [[https://bleeckerburger.co.uk][Bleeker (burger)]] <2019-01-22 Tue>
+** Walthamstow
+**** TODO [[https://grillstock.co.uk][Grillstock BBQ]].
+** Waterloo
+**** TODO [[http://thelaughinggravy.co.uk][The Laughing Gravy]].
+**** TODO [[http://zenchina.co.uk][Zen China]].
+** West Hamstead
+**** TODO [[http://www.timeout.com/london/restaurants/nautilus][Nautilus]] (fish and chips).
+**** TODO [[https://twitter.com/MamacitaNW6/media][Mamacita]] (Mexican).
+** Whitechapel
+**** TODO Lahore Kebab House, try seekh kebabs with roti.
+**** TODO Sushinoen.
+** Wimbledon
+**** TODO Dalchini (Indian), try spicy cocunut fish curry.
+
+* [2015-03-07 Sat] UX bookmarks
+:PROPERTIES:
+:CUSTOM_ID: ux-bookmarks
+:END:
+:MODIFIED:
+[2021-06-04 Fri]
+:END:
+- [[https://99designs.com/designer-blog/2014/01/20/11-kerning-tips/][10 kerning tips for improving your typography]].
+- [[http://line25.com/inspiration/flat-design-color-palettes][30 Flat Design Color Palettes That Just Work]].
+- [[https://learnui.design/blog/4-rules-intuitive-ux.html][4 Rules for Intuitive UX]].
+- [[http://tympanus.net/Development/AnimatedSVGIcons/][Animated SVG icons]].
+- [[https://developer.apple.com/design/tips/][Apple's UI design Dos and Don'ts]].
+- [[https://twitter.com/yuanqinglim/status/1357893783803756544][Applying white space in UI design: 8 practical tips, with examples.]].
+- [[https://news.ycombinator.com/item?id=12711060][Ask HN: Good books or articles on UI design? (Hacker News)]].
+- [[https://www.behance.net/][behance (Showcase & Discover Creative Work)]].
+- [[https://www.behance.net/gallery/18006477/California-Magazine][California magazine]].
+- [[http://capptivate.co][capptivate.co (features mobile UIs)]].
+- [[https://lmjabreu.com/post/creating-badass-users/][Creating badass users]].
+- [[http://deathtothestockphoto.com/stories/][Death to Stock (stock photos)]].
+- [[https://www.designernews.co/][Designer News]].
+- [[https://blogs.gnome.org/tbernard/2019/12/30/designing-an-icon-for-your-app/][Designing an Icon for Your App – Space and Meaning (planet gnome)]].
+- [[https://developer.bring.com/blog/ui-tips/][DIY UI Tips for Backend Developers]].
+- [[http://evil-icons.io][Evil icons]].
+- [[http://www.fontsquirrel.com/][Font squirrel (free fonts for commercial use)]].
+- [[https://news.ycombinator.com/item?id=27232297][Freesound just reached 500K Creative Commons sounds | Hacker News]].
+- [[https://news.ycombinator.com/item?id=13015631][How to Become a UX Designer (Hacker News)]].
+- [[https://www.sketchbook.com/blog/how-to-draw-imagination-using-references/][How to Draw from Imagination: Beyond References]].
+- [[https://news.ycombinator.com/item?id=10861521][Images and Sketch files of popular devices (Hacker News)]].
+- [[http://facebook.github.io/design/devices][Images and Sketch files of popular devices]].
+- [[https://vimeo.com/137263880][iOS Typography: Stop Saying “No” to Designers on Vimeo]].
+- [[https://news.ycombinator.com/item?id=24030969][Laws of UX | Hacker News]].
+- [[http://www.underconsideration.com/brandnew/archives/logo_modernism.php#.VhRP_HvoVE4][Logo Modernism (Book)]].
+- [[http://makerbook.net/][Makerbook: A hand-picked directory of the best free resources for creatives]].
+- [[https://github.com/google/material-design-icons/releases/tag/1.0.0][Material Design icons]].
+- [[http://www.mobile-patterns.com/][mobile-patterns.com (UX mobile patterns)]].
+- [[http://pttrns.com/][pttrns.com (mobile UX patterns)]].
+- [[https://www.refactoringui.com/book][Refactoring UI: The Book]].
+- [[https://news.ycombinator.com/item?id=20728645][Rules for Intuitive UX | Hacker News]].
+- [[https://uxdesign.cc/selection-controls-ui-component-series-3badc0bdb546][Selection controls — UI component series | by Taras Bakusevych | UX Collective]].
+- [[http://tachyons.io/docs/themes/skins/][Skins / Themes / Docs / TACHYONS]].
+- [[https://www.swissted.com/][Swissted (punk rock and Swiss Modernism drawings)]].
+- [[http://tachyons.io/][TACHYONS - Css Toolkit (Minimalistic Swiss-inspired)]].
+- [[http://www.typewolf.com/blog/most-popular-fonts-of-2014][Ten most popular webfonts of 2014]].
+- [[http://inkbotdesign.com/100-best-design-blogs/][The 100 Best Design Blogs to Follow]].
+- [[http://www.codelitt.com/blog/the-foundations-of-a-good-ui/][The Foundations of a Good UI]].
+- [[http://www.methodsandtools.com/archive/archive.php?id=126][The Psycology of UX]].
+- [[http://typographica.org/][Typographica (type reviews, books, commentary)]].
+- [[https://news.ycombinator.com/item?id=12887416][Unsplash – Beautiful photos free to use under the Unsplash License (Hacker News)]].
+- [[https://uxplanet.org/][UX Planet]].
+- [[https://blogs.scientificamerican.com/sa-visual/visualizing-science-illustration-and-beyond][Visualizing Science: Illustration and Beyond - Scientific American Blog Network]].
+- [[https://dribbble.com/][What are you working on? Dribbble is show and tell for designers]].
+- [[https://blog.prototypr.io/why-showing-your-process-is-so-important-1e4129a5f5d2#.7o5bfjwd7][Why Showing Your Process is So Important!]].
+
+* [2015-03-07 Sat] Recipes
+:PROPERTIES:
+:CUSTOM_ID: recipes
+:END:
+** Jeera rice (cumin rice)
+*** Sizzle spices (40 seconds)
+- 1 tablespoon oil
+- 1 teaspoon cumin seeds
+- 4 cloves
+- 2 black cardamon pods
+- 1 cinnamon stick
+*** Sautee onion (2 mins or browned/opaque)
+- 1 small yellow onion (chopped)
+*** Sautee rice + salt (1 minute)
+- 2 cups of basmati rice
+- 1.2 teaspoon of salt
+*** Boil, then partially cover and simmer (8 minutes or water gone)
+- 4 cups water
+*** Rest 5 minutes (covered)
+** Slow-cooked lamb
+1. Preheat oven: 240°C (no fan) 220°C (fan).
+2. Lamb face up in tray.
+3. Cook for 30 mins (or brown).
+4. Take lamb out.
+5. Add to tray: broth, onions, rosemary.
+6. Lamb face down (broth covers 1/3 or 1/4).
+7. Cover with lid (or baking/parchment paper then 2 layers of foil).
+8. Bake for 3.5 hours at 180°C (no fan).
+9. Take out.
+10. Turn lamb face up (over again). Check if liquid needs top-up.
+11. Cook for 2 more hours.
+12. Check if ready. Does meat fall off the bone with fork?
+13. If not, keep for another 30 mins. Check again.
+14. You are done \o/.
+** Tom Kha Gai soup
+- Chicken or Prawns
+- 2 kaffir lime leaves
+- 1 lemongrass stalk
+- 1 1/2 cocunut milk
+- 3/4 sliced fresh galaghal
+- 1 1/2 chicken stock or water
+- 1/2 cup mushrooms
+- 3 1/2 tbsp sugar
+- 1/2 cup of cilantro
+- 1-4 thai chillies
+- 1-2 tbsp chili oil
+- 1 green onion
+** Veg-Fruit juice
+- Lime
+- Ginger
+- Apple
+- Chilly
+- Celery
+- Fig
+- Blueberries
+** Berry Hempster
+- Hemp milk
+- Hemp protein
+- Strawberry
+- Blueberry
+- Date
+** How to cook [[https://www.youtube.com/watch?v%3DDaN4ifTG3H0][Beef Chow Fun]].
+** [[http://www.dailymail.co.uk/home/you/article-2248267/Recipe-Cavolo-nero-anchovies-chilli-garlic.html][Cavolo nero with anchovies, chilli and garlic]].
+** Vietnamese Pork Lettuce Wraps (my own versions)
+- Pork Mince.
+- Chopped garlic.
+- Chopped chillies.
+- Chopped ginger.
+- 4 tablespoons of soy sauce.
+- 2 tablespoons of apple cider vinegar.
+- Sesame oil (for cooking mince).
+- Half tablespoon of coconut sugar.
+- Lettuces (for wrapping).
+* [2015-03-07 Sat] Music backlog
+:PROPERTIES:
+:CUSTOM_ID: music-backlog
+:END:
+:MODIFIED:
+[2021-07-11 Sun]
+:END:
+**** TODO [[https://zenodo.org/record/4008297][CatMeows: A Publicly-Available Dataset of Cat Vocalizations | Zenodo]].
+**** TODO [[https://twitter.com/cognazor/status/1196464349109530625][Zontali on Twitter: "Name one of your most emotionally resonant songs, and I ...]].
+**** TODO [[https://generative.fm/][Generative.fm]].
+**** TODO [[http://ivanish.ca/diminished-fifth/][Diminished Fifth]].
+**** TODO [[http://www.archiveofindianmusic.org/][Archive of Indian music]].
+**** TODO Budhaditya Mukherjee.
+**** TODO Debashish Bhattcharya.
+**** TODO Halim Jafar Khan and his Disciples - Sitar Quintet - LP published in India in 1968.
+**** TODO Harjinderpal Singh.
+**** TODO Jayanthi Kumaresh.
+**** TODO [[https://www.youtube.com/watch?v=jMEjPKBvhzE#t=0][Kayhan Kalhor]].
+**** TODO [[http://youtu.be/qQcKzwSmGy0][Malaya Chalo]].
+**** TODO Mehboob Nadeem.
+**** TODO Nirmalya Dey.
+**** TODO [[https://www.youtube.com/watch?v=dPSr3swtLDk][Zia Mohiuddin]].
+
+* [2015-03-06 Fri] UX scrapbook bookmarks
+:PROPERTIES:
+:CUSTOM_ID: ux-scrapbook-bookmarks
+:END:
+:MODIFIED:
+[2021-01-09 Sat]
+:END:
+- [[http://www.vox.com/2015/2/8/7475667/27-fonts-give-or-take-that-explain-your-world][27 fonts* (give or take) that explain your world]].
+- [[https://timetravel.pixelfika.com/][5 Years of Design (good for inspiration)]].
+- [[http://engineering.flipboard.com/2015/02/mobile-web/][60 FPS on mobile web (plus layouts)]].
+- [[http://rix.si/][Another minilimalistic one-pager]].
+- [[https://exposure.co/][Another minimalistic gallery]].
+- [[https://www.behance.net/search?search=ios&utm_source=ios%20dev%20tools&utm_medium=website&utm_campaign=ios%20dev%20tools&at=11lvzs&ct=ios%20dev%20tools][Behance]].
+- [[https://stories.uplabs.com/compact-powerful-great-examples-of-floating-action-buttons-in-interfaces-7079b9926cb5#.7ch9p8n82][Compact & Powerful: Great Examples of Floating Action Buttons in Interfaces]].
+- [[http://www.flagofplanetearth.com/#intro-shift][Flag of Planet Earth]].
+- [[http://generative-placeholders.glitch.me/][Generative Placeholders]].
+- [[https://twitter.com/stroughtonsmith/status/1320966432600006656][Graphic design from other cultures]].
+- [[https://kevin.is/committed-to-github/][Kevin.is (Simple layout)]].
+- [[http://mengto.com/img/snoflake-menu.jpg][Meng To's I Love Food I]].
+- [[http://mengto.com/img/exp-menu.jpg][Meng To's I Love Food II]].
+- [[https://lmjabreu.com/][Minimalistic blog layout]].
+- [[http://antirez.com/latest/0][Minimalistic blog layout]].
+- [[http://www.piotrpisarzphotography.com/][Minimalistic gallery]].
+- [[http://indie.vc][Minimalistic one-pager]].
+- [[http://www.wired.com/2015/04/legendary-redesign-helvetica-reborn-30-years][Neue Haas Unica (reborn)]].
+- [[http://www.monotype.com/libraries/neue-haas-unica/][Neue Haas Unica]].
+- [[https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6][Neumorphism in user interfaces - UX Collective]].
+- [[https://medium.com/@sgblank/organizational-debt-is-like-technical-debt-but-worse-3c0c86eae3eb][Organizational Debt is Like Technical debt — But Worse]].
+- [[http://spootnik.org/][Pierre-Yves Ritschard's minialistic blog]].
+- [[http://www.fonts2u.com/raleway-heavy.font][Raleway Font]].
+- [[http://nsainsbury.svbtle.com/java-developers][Svbtle]]: A post on java developers. Enjoyed its minimalistic layout.
+- [[http://whereis-whoishiring-hiring.me/][whereis-whoishiring-hiring.me (minimalistic categorization)]].
+
+* [2015-10-09 Fri] Travel blog bookmarks
+:PROPERTIES:
+:CUSTOM_ID: travel-blog-bookmarks
+:END:
+:MODIFIED:
+[2016-07-04 Mon]
+:END:
+- [[http://hiddentraveltreasures.com/][Hidden Travel Treasures]].
+- [[http://onestep4ward.com/][One Step 4Ward]].
+- [[http://tigrest.com][Tigrest Travel Blog]].
+
+* [2015-03-06 Fri] Travel bookmarks
+:PROPERTIES:
+:CUSTOM_ID: travel-bookmarks
+:END:
+:MODIFIED:
+[2020-08-05 Wed]
+:END:
+- [[http://www.buzzfeed.com/ariannarebolini/totally-breathtaking-trails-to-hike-before-you-die#.chOolMjWA][21 Totally Breathtaking Trails]].
+- [[http://cnnespanol.cnn.com/2015/09/15/5-increibles-escapadas-a-islas-que-quizas-nunca-has-considerado/][5 increíbles escapadas a islas que quizás nunca has considerado]].
+- [[https://news.ycombinator.com/item?id=10863990][52 Places to Go in 2016 (Hacker News)]].
+- [[http://www.nytimes.com/interactive/2016/01/07/travel/places-to-visit.html?_r=0][52 Places to Go in 2016]].
+- [[http://www.lonelyplanet.com/walking-and-trekking/best-of-walking-and-trekking/content/travel-tips-and-articles/a-beginners-guide-to-the-art-of-hiking][A beginner's guide to the art of hiking]].
+- [[http://abitofculture.net/][abitofculture.net]].
+- [[http://www.alexinwanderland.com/][Alex in wanderland]].
+- [[http://imgur.com/a/m9YjK][Amazing places around the world]].
+- [[http://www.backpacksandbunkbeds.co.uk/][Backpacks and Bunkbeds]].
+- [[http://beyondblighty.com/][Beyond blighty]].
+- [[http://www.blouinartinfo.com/travel][BLOUINARTINFO+TRAVEL]].
+- [[http://continentalbreakfasttravel.com/][Continental Breakfast travel]].
+- [[http://www.girltweetsworld.com/][Girl tweets world]].
+- [[http://www.quora.com/How-does-it-feel-to-travel-alone][How does it feel to travel alone? (Quora)]].
+- [[http://www.lonelyplanet.com/round-the-world-travel/best-of-round-the-world-travel/content/travel-tips-and-articles/how-to-pack-light-tips-from-a-master-packer][How to pack light: tips from a master packer]].
+- [[http://fourhourworkweek.com/2013/07/14/how-to-travel-21-contrarian-rules/][How to travel: 21 Contrarian rules]].
+- [[http://www.railjournal.com/][International Railway Journal]].
+- [[https://izi.travel/en/app?content_lang=fr&content_uuid=ede5d243-ace6-459c-b1cc-f45744c48a5d][izi.TRAVEL: A tour guide in your pocket]].
+- [[http://joestrippin.blogspot.co.uk/][Joe's Trippin' A few tales from the road by a modern day nomad]].
+- [[http://www.legalnomads.com/][Legal nomads]].
+- [[http://www.needanotherholiday.com/][Need another holiday]].
+- [[http://www.neverendingfootsteps.com/][Never ending footsteps]].
+- [[https://www.lonelyplanet.com/travel-tips-and-articles/new-in-travel-the-best-new-openings-of-2017-11-to-20][New in Travel: the best new openings of 2017 (11 to 20)]].
+- [[https://www.lonelyplanet.com/travel-tips-and-articles/new-in-travel-the-best-new-openings-of-2017-21-to-35][New in Travel: the best new openings of 2017 (21 to 35)]].
+- [[https://www.lonelyplanet.com/travel-tips-and-articles/new-in-travel-the-best-new-openings-of-2017-one-to-10][New in Travel: the best new openings of 2017 (one to 10)]].
+- [[http://www.ontheluce.com/][On The Luce]].
+- [[http://www.spiegel.de/international/paradise-lost-tourists-are-destroying-the-places-they-love-a-1223502.html][Paradise Lost: Tourists Are Destroying the Places They Love - SPIEGEL ONLINE]].
+- [[http://www.pichette.org/][pichette.org's travel blog]].
+- [[https://www.eliotandme.com/poster][Posters: Create travel gifts/posters and souvenirs (eliot)]].
+- [[https://restlessjo.wordpress.com/][Restless Jo]].
+- [[http://www.seemytravels.com/][See my travels]].
+- [[http://upgrd.com/thecrewlounge][The Crew Lounge]].
+- [[https://thegrownupgapyear.wordpress.com/][The Grown-up gap year]].
+- [[http://www.thehappytalent.com/][The Happy Talent. A Travel blog]].
+- [[http://thetravelhack.com/][The Travel Hack]].
+- [[http://thetravelbunny.com/][The Travelbunny]].
+- [[https://helpstay.com/journal/][The Volunteer Journal | Swap Skills For Accommodation]].
+- [[http://www.lonelyplanet.com/travel-photography/best-of-travel-photography/content/travel-tips-and-articles/the-worlds-best-places-to-see-autumn-colours][The world's best places to see autumn colours]].
+- [[https://www.lonelyplanet.com/thorntree][Thorn Tree travel forum (Lonely Planet's)]].
+- [[http://travelwithkat.com/][Travel with Kat]].
+- [[http://www.traveldudes.org/][Traveldudes]].
+- [[http://travelingspoon.com/][Traveling Spoon]].
+- [[http://www.travelistly.com/tv][Travelistly TV (high quality travel content)]].
+- [[http://www.lonelyplanet.com/travel-tips-and-articles/tried-and-tested-tips-for-a-trouble-free-road-trip][Tried and tested tips for a trouble free road trip]].
+- [[http://www.two-fortheroad.com/][Two for the road]].
+- [[https://www.lonelyplanet.com/travel-tips-and-articles/ultimate-travel-list-lonely-planets-top-10-sights-in-the-world][Ultimate travel list: Lonely Planet's top 10 sights in the world]].
+- [[http://vagabondbaker.com/][Vagabond Baker]].
+- [[https://www.quora.com/What-are-common-items-that-savvy-travelers-bring-with-them-that-less-savvy-ones-dont][What are common items that savvy travelers bring with them that less-savvy ones don't? (Quora)]].
+- [[https://www.quora.com/What-are-some-must-eat-dishes-in-your-country][What are some must-eat dishes in your country? - Quora]].
+- [[https://www.quora.com/What-are-your-top-10-travel-tips][What are your top 10 travel tips? (Quora)]].
+- [[http://world.dailysecret.com/world/en][World daily secret]].
+- [[https://plus.google.com/collection/IW-dY][World food and drink]].
+- [[http://www.xdaysiny.com/][X Days in Y]].
+- [[http://www.ytravelblog.com/][ytravel]].
+
+* [2015-03-06 Fri] Startup bookmarks
+:PROPERTIES:
+:CUSTOM_ID: startup-bookmarks
+:END:
+:MODIFIED:
+[2023-07-09 Sun]
+:END:
+- [[https://news.ycombinator.com/item?id%3D10101209][16 Startup Metrics (Hacker News)]].
+- [[http://a16z.com/2015/08/21/16-metrics/][16 Startup Metrics]].
+- [[http://sidejobr.com/help/19-amazing-sites-get-free-stock-photos/][19 Amazing Sites To Get Free Stock Photos]].
+- [[https://moz.com/blog/301-redirection-rules-for-seo][301 Redirects Rules Change: What You Need to Know for SEO]].
+- [[https://www.appcues.com/blog/increase-user-engagement][6 ways to increase user engagement for product-led growth]].
+- [[https://landscape.io][A Dashboard for your Code]].
+- [[https://news.ycombinator.com/item?id=9923709][A guide to PR for startups (Hacker News)]].
+- [[http://www.craigkerstiens.com/2015/07/21/An-intro-PR-guide-for-startups/][A guide to PR for startups]].
+- [[https://news.ycombinator.com/item?id=22895842][A Guide to Pricing Plans | Hacker News]].
+- [[https://news.ycombinator.com/item?id=22449314][A two-person startup already uses twenty-eight other tools | Hacker News]].
+- [[https://airtable.com/][Airtable: cloud DB with a spreadsheet web UI]].
+- [[https://news.ycombinator.com/item?id=17899510][All Things Sales: Mini-lessons for startup founders (Hacker News)]].
+- [[https://www.canva.com/][Amazingly Simple Graphic Design Software – Canva]].
+- [[https://chrissacca.com/2018/12/an-email-i-will-never-open][An email I will never open (Chris Sacca)]].
+- [[https://github.com/abaraka/RESTClient][An iOS REST Client that is based on MVVM using ReactiveCocoa]].
+- [[http://www.raywenderlich.com/55384/ios-7-best-practices-part-1][An iOS Weather app case study]].
+- [[https://hbr.org/2015/04/how-to-launch-your-digital-platform][Answer these questions about potential digital platform]].
+- [[https://github.com/aphyr/distsys-class][aphyr/distsys-class: Class materials for a distributed systems lecture]].
+- [[https://news.ycombinator.com/item?id=25547716][API pagination design | Hacker News]].
+- [[https://appfigures.com/][AppFigures:]] App tracking platform.
+- [[https://news.ycombinator.com/item?id=22328822][Apple Edge Cache (CDNs) | Hacker News]].
+- [[https://news.ycombinator.com/item?id=19497788][Application-Level Logging Best Practices (Hacker News)]].
+- [[https://github.com/AppScale/appscale][AppScale, The Open Source Implementation of Google App Engine]].
+- [[https://arc.io/pricing][Arc (crowdfunded CDN)]].
+- [[https://arenzana.org/2019/06/artisanal-web-hosting/][Artisanal Web Hosting]].
+- [[https://news.ycombinator.com/item?id=14146850][Ask HN: Best business advice for software developers (Hacker News)]].
+- [[https://news.ycombinator.com/item?id=12376596][Ask HN: How do you handle DDoS attacks? (Hacker News)]].
+- [[https://news.ycombinator.com/item?id=23390966][Ask HN: How does your company manage its encryption keys? | Hacker News]].
+- [[https://news.ycombinator.com/item?id=24965115][Ask HN: How to effectively get feedback from users? | Hacker News]].
+- [[https://news.ycombinator.com/item?id=9561127][Ask HN: Simple alternative to Google Analytics]].
+- [[https://news.ycombinator.com/item?id=9667247][Ask HN: What tools do you use to build HTML emails?]]
+- [[https://news.ycombinator.com/item?id=18236188][Ask HN: What's your advice for someone who's raising capital for the first time? (Hacker News)]].

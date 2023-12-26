@@ -33,7 +33,7 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 map <Down> <C-e>
 map <Up> <C-y>
-set lazyredraw
+" set lazyredraw
 " Backup files
 set undofile
 set directory=~/tmp/.directory//

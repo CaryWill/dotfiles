@@ -1,0 +1,3000 @@
+                                       (get-buffer-create "*BluetoothConnector*")
+                                       "BluetoothConnector" (get-text-property 0 'mac device) "--notify"))))
+#+end_src
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-connect-my-bluetooth-speaker/connect-disconnect.gif]]
+
+comments on [[https://twitter.com/xenodium/status/1258148035319734273][twitter]].
+
+* [2020-05-02 Sat] Duti: changing default macOS apps
+  :PROPERTIES:
+  :CUSTOM_ID: duti-changing-default-macos-apps
+  :END:
+Future self example, setting [[https://mpv.io/][mpv.io]] to open all aiff files on macOS:
+
+#+begin_src bash
+  duti -s io.mpv aiff
+#+end_src
+* [2020-04-26 Sun] Neapolitan pizza recipe
+  :PROPERTIES:
+  :CUSTOM_ID: neapolitan-pizza-recipe
+  :END:
+
+  Full disclosure: I'm a complete noob at making pizza. It's my second pizza, but hey, it was tasty and fun to make! Making pizza at home is not as far-fetched as I initially thought.
+
+** UPDATES:
+
+I've made this recipe a couple of times. Made two improvements worth mentioning.
+
+*** Flan tin / quiche pan
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/round_pie.jpg]]
+
+My first pizzas were rectangular, matching the baking tray shape, but I really wanted round pies. I found a quiche pan at home and gave that a try. Worked pretty well. The dish bottom comes up, which is pretty handy.
+
+*** Double baking
+
+Bake in two stages:
+
+1. Bake the pizza for 6 minutes (without the mozarella) at bottom of oven.
+2. Add mozzarella and make for 4 minutes at top of the oven.
+
+** Recipe
+
+Ok, on to the recipe now...
+
+*** Dissolve the yeast
+
+- 7g of yeast.
+- 325ml of lukewarm water.
+
+Dissolve the yeast in the lukewarm water.
+
+*** Mixing the dough
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/mix1.jpg]]
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/mix2.jpg]]
+
+- 500g of flour.
+- 1 teaspoon of salt.
+
+Gradually add flour to the yeast and water mix, using the bottom of a spoon to work it until smooth (no lumps). The dough will be very sticky at first. Stay faithful to the spoon. It'll work. BBC's [[http://www.bbc.com/travel/story/20200415-how-to-make-pizza-like-a-neapolitan-master][How to make pizza like a Neapolitan master]] has a great demo. I followed the dough technique.
+
+*** Kneading the dough
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/knead1.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/knead2.jpg]]
+
+Sprinkle some flour on the table and knead the dough (punch, stretch, and fold many times) from previous step. Eventually, the dough will hold its shape.
+
+*** Make 4 balls
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/cut_in_four.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/four_balls.jpg]]
+
+Roll the dough into a cylinder and cut into 4 pieces. Make 4 balls.
+
+*** Make the tomato sauce
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/garlic_slice.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/sauce_done.jpg]]
+
+- 500g of passata.
+- 3 cloves of garlic.
+
+I love garlic. Who doesn't? Slice the garlic finely and combine with the passata in a class jar. Shake it a little. Garlic and passata. That's your sauce.
+
+*** Cover for 2 hours
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/put_away.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/after_hours.jpg]]
+
+Place the 4 dough balls into a container and cover with a damp cloth for 2 hours. You can make 4 pizzas.
+
+/*Rookie mistake: I should have used a bigger container. The balls grew and merged./
+
+*** Preheat oven
+
+Preheat the oven at 250°C.
+
+*** Stretch base
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/stretch.jpg]]
+
+Sprinkle more flour on table prior to shaping the dough. Place ball on table, flatten. Flip over, flatten again. Gradually stretch until you have the shape and thickness desired.
+
+*** Place base on baking tray
+
+- Semolina
+- Aluminium foil
+
+Line up the tray with some aluminium foil. Before transferring the base on to the baking tray, sprinkle semolina (or breadcrumbs) on the foil (it helps prevent the dough from sticking).
+
+*** Toppings
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/oiled.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/parmesan.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/mozarella.jpg]]
+
+- Tomato sauce.
+- Salt.
+- Olive oil.
+- Parmesan cheese.
+- 125g of Mozzarella cheese.
+- Fresh basil.
+
+Spread some of the tomato sauce with a spoon. Sprinkle salt, olive oil, and parmesan cheese. Break the mozzarella into pieces and spread throughout. Add some basil leaves. Your basic margherita pizza is now ready for the oven.
+
+*** Bake pizza
+
+Place the tray in the oven for 10 minutes. This worked for my oven, which goes up to 250°C. Either way, keep an eye on it.
+
+*** Post baking toppings
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/neapolitan-pizza-recipe/final.jpg]]
+
+- Anchovies.
+
+Controversial, but I really like anchovies. Add them post-baking and you're good to go. Enjoy your pizza.
+
+*** Helpful references
+
+- [[http://www.bbc.com/travel/story/20200415-how-to-make-pizza-like-a-neapolitan-master][How to make pizza like a Neapolitan master (BBC)]].
+- [[https://www.youtube.com/watch?v=1-SJGQ2HLp8][How to Make Perfect Pizza (Gennaro Contaldo - YouTube)]].
+* [2020-04-21 Tue] Oatmeal cookie recipe
+  :PROPERTIES:
+  :CUSTOM_ID: oatmeal-cookie-recipe
+  :END:
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/oatmeal-cookie-recipe/oatcookies.jpg]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/oatmeal-cookie-recipe/ingredients.jpg]]
+
+I combined elements from two recipes: [[https://thefoodmedic.co.uk/2020/01/3-ingredient-oatmeal-cookies/][3 Ingredient oatmeal cookies (The Food Medic)]], Amy's [[https://amyshealthybaking.com/blog/2018/01/21/banana-oatmeal-raisin-cookies/][Healthy Banana Oatmeal Raisin Cookies (Amy's Healthy Baking)]] and added my own touches.
+
+** Preheat oven
+
+Preheat the oven at 180°C.
+
+** Mash bananas
+
+- 2 medium ripe bananas.
+
+Mash until bananas have no significant lumps.
+
+** Mix most ingredients (except oats)
+
+- 4 tablespoons crunchy peanut butter.
+- 1/2 teaspoon of ground cinnamon.
+- 1/2 teaspoon of ground cardamom.
+- 1/4 teaspoon of vanilla.
+- 1/3 cup raisins.
+
+Add the peanut butter, cinnamon, cardamom, and vanilla into the mashed bananas. Mix well. Add raisins and mix a little further to spread them out.
+
+** Add oats
+
+- 1 3/4 cups of oats.
+
+Add the oats to the mix in a few rounds to ensure its evenly mixed.
+
+** Flattened balls in tray
+
+Make balls, place on baking tray, and gently flatten. They'll be on the chunky side.
+
+/Note: They won't spread as much as traditional cookies./
+
+** Bake for 15 mins
+
+Bake for about 15 minutes or until golden.
+
+** Let cool off and enjoy
+
+Wait a little and nom nom nom...
+
+ps. Full recipe source in [[https://github.com/xenodium/xenodium.github.io/blob/master/index.org][org file]].
+
+* [2020-04-21 Tue] TIL (today I learned) bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: til-today-i-learned-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-04-24 Fri]
+  :END:
+- [[https://til.hashrocket.com/][Hashrocket - Today I Learned]].
+- [[https://github.com/jbranchaud/til][jbranchaud/til: Today I Learned]].
+- [[https://til.secretgeek.net/][secretgeek: Today I Learned]].
+- [[https://til.simonwillison.net/][Simon Willison: TIL]].
+- [[https://zerokspot.com/tags/til][til - zerokspot.com]].
+- [[https://www.sarasoueidan.com/today-i-learned/][Today I Learned — Sara Soueidan – Freelance-Front-End UI/UX Developer]].
+* [2020-04-19 Sun] mu/mu4e 1.4 released
+  :PROPERTIES:
+  :CUSTOM_ID: mumu4e-14-released
+  :END:
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/mumu4e-14-released/mu14.png]]
+
+[[https://www.reddit.com/r/emacs/comments/g3nsgg/mumu4e_14_has_been_released/][mu/mu4e 1.4 is out]]. About a week ago, I built and installed its [[https://github.com/djcb/mu/releases/tag/1.3.10][pre-release version (1.3.10)]] and noted [[http://xenodium.com/building-mumu4e-on-macos/][build steps on macOS]]. It's been working great for me. Today, I updated to 1.4.
+
+I was keen to try the new release out. I had been experiencing a short delay immediately after syncing/indexing mail. An initial investigation pointed to contact syncing, but I didn't dig further. The 1.4 release notes had a promising entry:
+
+#+begin_quote
+  In many cases, `mu4e' used to receive /all/ contacts after each indexing operation; this was slow for some users, so we have updated this to /only/ get the contacts that have changed since the last round.
+#+end_quote
+
+After upgrading. The delay is gone for me \o/
+
+*Note*: there are a few config tweaks needed for the 1.4 upgrade, but these are well-documented in the [[https://github.com/djcb/mu/releases/tag/1.4][release notes]]. For me, it primarily consisted of:
+
+- Swapping elisp /mu4e-maildir/ var for /mu init --maildir path/to/local/IMAP/.
+- Swapping elisp /mu4e-user-mail-address-list/ for /mu init --my-address address1@domain.com --my-address address2@domain.com/.
+- Disabling /mu4e-maildirs-extension/ (not yet compatible with mu 1.4). No issues here, since I hardly ever look at the /mu4e-main/ buffer. I have global binding to my unread messages that looks a little something like this:
+
+#+begin_src emacs-lisp
+  (defun ar/mu4e-view-unread-messages ()
+    (interactive)
+    (mu4e-headers-search-bookmark (concat "flag:unread AND "
+                                          "flag:unread AND "
+                                          "NOT flag:trashed AND "
+                                          "(maildir:/box1/INBOX OR "
+                                          "maildir:/box2/INBOX)")))
+#+end_src
+
+comments on [[https://twitter.com/xenodium/status/1251852526246379520][twitter]].
+
+* [2020-04-14 Tue] Libya travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: libya-travel-bookmarks
+  :END:
+- [[https://twitter.com/wrathofgnon/status/1249544131715534849?s=12][The city of Ghadames on the edge of the Saharan desert]].
+* [2020-04-07 Tue] Trimming videos with ffmpeg
+  :PROPERTIES:
+  :CUSTOM_ID: trimming-videos-with-ffmpeg
+  :END:
+Via Bernd Verst's [[https://bernd.dev/2020/04/trim-videos-instantly/][Trim Videos Instantly]]:
+
+Start time + duration
+
+#+begin_src bash
+  ffmpeg -ss hh:mm:ss.msec -i in.mpeg -c copy -map 0 -t hh:mm:ss.msec out.mpeg
+#+end_src
+
+Start time + end time
+
+#+begin_src bash
+  ffmpeg -ss hh:mm:ss.msec -i in.mpeg -c copy -map 0 -to hh:mm:ss.msec out.mpeg
+#+end_src
+
+* [2020-04-06 Mon] Emacs's counsel-M-x meets multiple cursors
+  :PROPERTIES:
+  :CUSTOM_ID: emacss-counsel-m-x-meets-multiple-cursors
+  :END:
+I'm a fan of Magnar Sveen's [[https://github.com/magnars/multiple-cursors.el][multiple cursors]] Emacs implementation. It's just so fun to use and works very well with commands bound to my favorite keys.
+
+Every now and then I'd like to execute extended commands on all cursors, but they have no keys bound to them. If you're an [[https://github.com/abo-abo/swiper][ivy/counsel]] fan like me (and all packages by [[https://oremacs.com/about/][Abo Abo]]), you use /counsel-M-x/ to invoke commands. However, /counsel-M-x/ doesn't support multiple cursors out of the box. Luckily, this is Emacs and we can fix that...
+
+Back in December 2019, I made a note to revisit [[https://www.reddit.com/user/snippins1987/][u/snippins1987]]'s weekly tip to pair [[https://www.reddit.com/r/emacs/comments/eeyhdz/weekly_tipstricketc_thread/fch1bkv?utm_source=share&utm_medium=web2x][helm-M-x with multiple cursors]]. Finally got back to it. With a few changes, we can also make the snippet work with /counsel-M-x/ \o/.
+
+#+ATTR_HTML: :width 40% :height 40%
+#+begin_src emacs-lisp
+  (defun adviced:counsel-M-x-action (orig-fun &rest r)
+    "Additional support for multiple cursors."
+    (apply orig-fun r)
+    (let ((cmd (intern (car r))))
+      (when (and (boundp 'multiple-cursors-mode)
+                 multiple-cursors-mode
+                 cmd
+                 (not (memq cmd mc--default-cmds-to-run-once))
+                 (not (memq cmd mc/cmds-to-run-once))
+                 (or mc/always-run-for-all
+                     (memq cmd mc--default-cmds-to-run-for-all)
+                     (memq cmd mc/cmds-to-run-for-all)
+                     (mc/prompt-for-inclusion-in-whitelist cmd)))
+        (mc/execute-command-for-all-fake-cursors cmd))))
+
+  (advice-add #'counsel-M-x-action
+              :around
+              #'adviced:counsel-M-x-action)
+#+end_src
+
+[[file:images/emacss-counsel-m-x-meets-multiple-cursors/counsel-mx-mc.gif]]
+
+* [2020-04-05 Sun] Portland travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: portland-travel-bookmarks
+  :END:
+- [[https://www.powells.com/][Powell’s Books | The World’s Largest Independent Bookstore]].
+* [2020-03-29 Sun] String inflection Emacs package
+  :PROPERTIES:
+  :CUSTOM_ID: string-inflection-emacs-package
+  :END:
+  [[https://github.com/akicho8/string-inflection][string-inflection]] (by [[https://github.com/akicho8][Akira Ikeda]]) is a nifty package to cycle through string case styles: [[https://en.wikipedia.org/wiki/Letter_case#Special_case_styles][camel, snake, kebab...]] The package includes a handful of cycling functions for different languages (Ruby, Python and Java), but it's easy to mix and match to roll your own. For now, I'm binding /C-M-j/ to /string-inflection-cycle/, which is an alias to /string-inflection-ruby-style-cycle/.
+
+#+ATTR_HTML: :width 40% :height 40%
+#+begin_src emacs-lisp
+  (use-package string-inflection
+    :ensure t
+    :bind (:map prog-mode-map
+                ("C-M-j" . string-inflection-cycle)))
+#+end_src
+
+[[file:images/string-inflection-emacs-package/string_inflection.gif]]
+
+comments on [[https://twitter.com/xenodium/status/1244355205698912261?s=20][twitter]]
+
+* [2020-03-28 Sat] Turkey travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: turkey-travel-bookmarks
+  :END:
+- [[https://en.wikipedia.org/wiki/Tomb_of_Amyntas][Tomb of Amyntas - Wikipedia]].
+* [2020-03-25 Wed] Dal Makhani (black lentils) recipe
+  :PROPERTIES:
+  :CUSTOM_ID: dal-makhani-black-lentils-recipe
+  :END:
+
+#+ATTR_HTML: :width 40% :height 40%
+[[file:images/dal-makhani-black-lentils-recipe/dal.jpg]]
+
+
+** Soak beans (overnight)
+
+- 1 cup of rajmah (kidney beans).
+- 2 cups of sabut urad (black lentils).
+
+Place the beans in a bowl with plenty of water. The beans will soak it up so ensure there's enough.
+
+** Cooking the beans
+
+- 3 liters of water.
+- 1 cinamon stick.
+- 1 tablespoon of turmeric.
+- 2 bay leaves.
+
+Drain the beans and combine new ingredients into a pot. Bring to a boil and simer for 1.5 hours. Check beans aren't firm (give 'em a try'). If so extend another 15-30 mins.
+
+** Prepare paste
+
+- 1 4 cm piece of ginger.
+- 1 large onion.
+- 6 garlic cloves.
+- 2 tomatoes.
+
+Put through blender (with choppin pulse) or food processor until you get a paste.
+
+** Golden paste
+
+- Paste.
+- 3 tablespoons of butter.
+- 1 tablespoon of cumin seeds.
+- 1 tablespoon of coriander powder.
+- 1 tablespoon of chilly powder (or less to make milder).
+- 1 fresh red hot pepper (find one with medium heat level) chopped.
+- 1 tablespoon of cumin powder.
+- 1/4 cup of water.
+- 3/4 tablespoon of salt.
+
+Heat up the butter (medium heat) and brown the cumin seeds (maybe 30 seconds). Add the paste from previous step. Cook for about 4 minutes or until golden. Add the remaining ingredients in step (except water) and cook for another 30 seconds. Add the water and salt and mix to make more fluid and remove from heat.
+
+** Tying it all together
+
+- 1 tablespoon of panchpuram (cumin, fenugreek, mistard, and fennel seeds).
+- 300 ml of double cream.
+
+Combine the cooked beans, golden paste, and seeds. Simmer for about 15 minutes. Add the cream and cook for about 2 minutes. You are effectively done.
+
+** Garnish (optional)
+
+You can serve and optionally garnish with some chopped coriander. Recommended.
+
+** Serve with
+
+Basmati rice, rotis, buttered buns, or even corn tortillas (unorthodox, but hey).
+
+* [2020-03-21 Sat] Modern Emacs lisp libraries
+  :PROPERTIES:
+  :CUSTOM_ID: modern-elisp-libraries
+  :END:
+Quickly finding related built-in elisp functions (without prefixes) can sometimes take a little poking around.
+
+Some modern and predictable built-in exceptions I now reach out to are:
+
+- [[https://nicolas.petton.fr/ressources/emacsconf2015/][map.el]] for key/values, alists, hash-tables and arrays (built-in as of Emacs 25.1).
+- [[https://nicolas.petton.fr/ressources/emacsconf2015/][seq.el]] for sequence manipulation functions (built-in as of Emacs 25.1).
+- [[https://github.com/emacs-mirror/emacs/blob/master/lisp/emacs-lisp/subr-x.el][subr-x.el]] has a handful of string functions (built-in as of Emacs 24.4).
+- [[https://endlessparentheses.com/new-on-elpa-and-in-emacs-25-1-let-alist.html][let-alist.el]] wonderful syntax for alists, great for json (built-in as of Emacs 25.1).
+
+If you don't mind reaching out to third-party libs (you likely have some of these already installed), here are some modern, predictable, and well-documented ones that always get me out of trouble:
+
+- [[https://github.com/magnars/s.el#functions][s.el]] string manipulation.
+- [[https://github.com/rejeep/f.el][f.el]] file/path handling.
+- [[https://github.com/magnars/dash.el#functions][dash.el]] for lists.
+- [[https://github.com/Wilfred/ht.el][ht.el]] for hashtables.
+- [[https://github.com/alphapapa/ts.el][ts.el]] for date and time.
+
+I'm happy with built-ins like map.el, seq.el, and let-alist.el. subr-x.el is also pretty nice, although not as full-featured as third-party s.el.
+
+Am I missing out on other modern built-ins or third-party libraries?
+
+UPDATE: Added a handful of newly discovered libraries plus [[https://twitter.com/dmartincy/status/1241444701754085383?s=20][suggestions by Daniel Martín]] (thanks!). Not tried any of these myself.
+
+- [[https://github.com/emacs-mirror/emacs/blob/master/lisp/rtree.el][rtree.el]] binary tree that stores ranges (Built-in).
+- [[https://github.com/emacsorphanage/ov][ov.el]] simple way to manipulate overlay.
+- Toby Cubitt's [[http://www.dr-qubit.org/tags/computing-code-emacs.html][libraries]] (heap, overlays, queue, avl-tree, trie, dict-tree, etc).
+- [[https://github.com/VincentToups/shadchen-el][shadchen.el]] pattern-matching.
+- [[https://phillord.github.io/m-buffer-el][m-buffer.el]] buffers.
+- [[https://github.com/tali713/esxml][esxml.el]] xml and html.
+- [[https://github.com/plexus/a.el][a.el]] associative structures.
+- [[https://github.com/troyp/asoc.el][asoc.el]] association list library.
+- [[https://github.com/yurikhan/yk-color][yk-color.el]] linear RGB color manipulation.
+
+comments on [[https://twitter.com/xenodium/status/1241439306511720448][twitter]]
+
+* [2020-03-20 Fri] Emacs smartparens auto-indent
+  :PROPERTIES:
+  :CUSTOM_ID: emacs-smartparens-auto-indent
+  :END:
+While I do most editing in Emacs, I use Xcode every now and then. I like Xcode's pair matching (of brackets) combined with its auto-indent.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-smartparens-auto-indent/xcode_indent.gif]]
+
+While the wonderful [[https://github.com/Fuco1/smartparens][smartparens]] gives Emacs pair-matching powers, it doesn't automatically indent between pairs (out of the box anyway).
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-smartparens-auto-indent/indent_bracket_before.gif]]
+
+Luckily, smartparens does provide /sp-local-pair,/ which enables us to achieve a similar goal.
+
+With a short snippet, we can autoindent between {}, [], and () when pressing return in-between.
+
+#+begin_src emacs-lisp
+  (defun indent-between-pair (&rest _ignored)
+    (newline)
+    (indent-according-to-mode)
+    (forward-line -1)
+    (indent-according-to-mode))
+
+  (sp-local-pair 'prog-mode "{" nil :post-handlers '((indent-between-pair "RET")))
+  (sp-local-pair 'prog-mode "[" nil :post-handlers '((indent-between-pair "RET")))
+  (sp-local-pair 'prog-mode "(" nil :post-handlers '((indent-between-pair "RET")))
+#+end_src
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-smartparens-auto-indent/indent_bracket_after.gif]]
+
+comments on [[https://twitter.com/xenodium/status/1241104117264781312][twitter]]
+
+* [2020-03-20 Fri] Solarpunk bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: solarpunk-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-03-20 Fri]
+  :END:
+- [[https://medium.com/solarpunks/solarpunk-a-reference-guide-8bcf18871965#060e][SOLARPUNK : A REFERENCE GUIDE - Solarpunks - Medium]].
+- [[https://hieroglyph.asu.edu/2014/09/solarpunk-notes-toward-a-manifesto/][Solarpunk: Notes toward a manifesto (Project Hieroglyph)]].
+* [2020-03-10 Tue] sqlite bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: sqlite-bookmarks
+  :END:
+:MODIFIED:
+[2021-11-23 Tue]
+:END:
+- [[https://news.ycombinator.com/item?id=23287278][DuckDB: SQLite for Analytics | Hacker News]].
+- [[https://news.ycombinator.com/item?id=27944065][Inserting 130M SQLite rows per minute from a scripting language | Hacker News]].
+- [[https://avi.im/blag/2021/fast-sqlite-inserts/][Inserting One Billion Rows in SQLite Under A Minute - blag]].
+- [[https://news.ycombinator.com/item?id=18831470][LiteCLI – A user-friendly command-line client for SQLite database (Hacker News)]].
+- [[https://www.sqlite.org/appfileformat.html][SQLite As An Application File Format]].
+- [[http://ericsink.com/entries/rss_cat_3.html][Zumero: Efficient sync by using multiple SQLite files]].
+* [2020-02-26 Wed] covid-19 bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: covid-19-bookmarks
+  :END:
+:MODIFIED:
+[2021-06-27 Sun]
+:END:
+- [[https://www.linkedin.com/pulse/data-centric-approach-plan-appropriate-covid-19-response-tee][A Data-Centric Approach to Plan Appropriate COVID-19 Response in the United States]].
+- [[https://www.gov.uk/government/publications/coronavirus-action-plan/coronavirus-action-plan-a-guide-to-what-you-can-expect-across-the-uk][Coronavirus action plan: a guide to what you can expect across the UK - GOV.UK]].
+- [[https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6][Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE]].
+- [[https://www.reddit.com/r/COVID19][COVID-19 (r/COVID19)]].
+- [[https://www.reddit.com/r/China_Flu/][COVID-19 Discussion (r/China_Flu/)]].
+- [[https://covid-search.doctorevidence.com][Covid-19 DocSearch free access]].
+- [[https://www.reddit.com/r/COVID19/comments/f9dbeq/covid19_what_do_we_have_to_fear_from_a_pandemic/][COVID19 - AMA with r/COVID19 mod u/Jennifer Cole at 10.00pm GMT 25 Feb]].
+- [[https://news.ycombinator.com/item?id=22624091][Handbook of Covid-19 Prevention and Treatment from Hospital with 0% fatality (HN)]].
+- [[https://www.microcovid.org][microCOVID Project (calculate risk)]].
+- [[https://www.runnersworld.com/uk/news/a32094750/coronavirus-runner-slipstream/][New research suggests runners should be further than 2m apart]].
+- [[https://www.reddit.com/r/Coronavirus/][Novel Coronavirus (2019-nCoV) (r/coronavirus)]].
+- [[https://ocw.mit.edu/resources/res-10-s95-physics-of-covid-19-transmission-fall-2020/][Physics of COVID-19 Transmission | MIT OpenCourseWare]].
+- [[https://docs.google.com/document/u/1/d/1DioVg-8nu25up0JMdd-w3AsJPy1tl0MsobfG6TzGOws/mobilebasic][Self-care Tips if you become sick with COVID-19 from an activist nurse]].
+- [[https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks][WHO: When and how to use masks]].
+* [2020-02-15 Sat] Security bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: security-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-04-26 Sun]
+  :END:
+- [[https://news.ycombinator.com/item?id=22980003][A Graduate Course in Applied Cryptography | Hacker News]].
+- [[https://sneak.berlin/20191011/stupid-unix-tricks/][Jeffrey Paul: Stupid Unix Tricks (ssh)]].
+- [[https://sneak.berlin/20191011/stupid-unix-tricks/][Jeffrey Paul: Stupid Unix Tricks (yubikey setup)]].
+- [[https://lchsk.com/stay-paranoid-and-trust-no-one-overview-of-common-security-vulnerabilities-in-web-applications.html][Stay paranoid and trust no one. Overview of common security vulnerabilities in web applications]].
+* [2020-02-15 Sat] Nix bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: nix-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-02-15 Sat]
+  :END:
+- [[https://github.com/bergey/dotfiles/blob/4807ef9de187018a9cf7e1d571fc530e3ce07bfb/emacs/emacs.nix][Daniel Bergey's dotfiles/emacs.nix]].
+- [[https://news.ycombinator.com/item?id=22295102][I Was Wrong about Nix | Hacker News]].
+- [[https://christine.website/blog/i-was-wrong-about-nix-2020-02-10][I was wrong about Nix]].
+* [2020-01-10 Fri] Plants bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: plants-bookmarks
+  :END:
+:MODIFIED:
+[2021-07-11 Sun]
+:END:
+- [[https://www.houseofplants.co.uk/plants/aechmea-blue-rain_blue-rain-bromeliad_63988.html][Aechmea 'Blue Rain' Blue rain Bromeliad | House of Plants]].
+- [[https://en-gb.bakker.com/collections/air-purifying-plants][Air-purifying Plants – Bakker.com]].
+- [[https://twitter.com/Hydeez411/status/1409883023772901379][Citronella Mosquito Plant]].
+- [[https://www.elmshop.co.uk/plants][Elm plants]].
+- [[https://farmhack.org/tools][Farm Hack]].
+- [[https://news.ycombinator.com/item?id=21859303][Guerilla Gardening (2015) | Hacker News]].
+- [[https://www.thegardeningclub.co.uk/][The Gardening Club® - Crews Hill, Enfield]].
+* [2019-12-29 Sun] Fixing Honeywell CM927's dead screen
+  :PROPERTIES:
+  :CUSTOM_ID: fixing-honeywell-cm927-dead-screens
+  :END:
+My Honeywell CM927 thermostat's screen had been getting progressively worse over the last year. As of late, the screen was of little use.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/fixing-honeywell-cm927-dead-screens/before.png]]
+
+A random search yielded the [[https://www.homeownershub.com/uk-diy/honeywell-cm927-lcd-screen-fail-common-1058940-.htm][Honeywell CM927 LCD screen fail - common?]] thread, with a promising comment by Phil:
+
+#+begin_quote
+  "Strip the unit and remove the circuit board (just a few plastic clips, no screws). Remove the LCD assembly from the circuit board (more plastic clips and an eight pin push connection). Removed the LCD unit from the clear plastic housing (more plastic clips). Finally heat up the plastic ribbon where it is stuck to the circuit board (hair dryer will do trick) and then firmly press it onto the circuit board... probably worth doing this several times; in effect you are remating the ribbon to the circuit board by softening the adhesive. Put it all back together and it should be working again."
+#+end_quote
+
+Phil's instructions were great. There's also a super handy [[https://www.youtube.com/watch?v=W4LxHn5Y_l4][video]] by [[https://www.youtube.com/channel/UC3Dbv6X-_7fCfa4AvsxK_zw][El Tucan]], also [[https://www.homeownershub.com/uk-diy/honeywell-cm927-lcd-screen-fail-common-1058940-3.htm][linked by Stevie]].
+
+** Success \o/
+
+Heating up the plastic ribbon and pressing it onto the circuit board did the trick for me. Took a few tries for all segments to appear, but the screen is looking great again.
+
+Thank you Internet strangers! :)
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/fixing-honeywell-cm927-dead-screens/after.png]]
+
+* [2019-12-29 Sun] SwiftUI bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: swiftui-bookmarks
+  :END:
+:MODIFIED:
+[2021-11-23 Tue]
+:END:
+- [[https://github.com/AndreaMiotto/ActionOver][ActionOver: A custom SwiftUI modifier to present an Action Sheet on iPhone and a Popover on iPad and Mac]].
+- [[https://www.hackingwithswift.com/articles/224/common-swiftui-mistakes-and-how-to-fix-them][8 Common SwiftUI Mistakes - and how to fix them – Hacking with Swift]].
+- [[https://schwiftyui.com/swiftui/building-a-widget-for-ios-with-swiftui-and-widgetkit/][Building a Widget for iOS with SwiftUI and WidgetKit - SchwiftyUI]].
+- [[https://swiftui.diegolavalle.com/posts/linewrapping-stacks/][Line-Wrapping Stacks - Swift You and I]].
+- [[https://swiftwithmajid.com/2021/07/14/pull-to-refresh-in-swiftui/][Pull-to-Refresh in SwiftUI | Swift with Majid]].
+- [[https://blog.rizwan.dev/blog/swiftui-import-export-files][SwiftUI Import/Export files | Rizwan's Blog 👨‍💻]].
+- [[https://betterprogramming.pub/the-swiftui-toolbar-in-ios-14-b4a0fe6a3034][The SwiftUI Toolbar in iOS 14]].
+- [[https://trailingclosure.com/][Trailing Closure (SwiftUI tutotials)]].
+- [[https://www.avanderlee.com/swift/urlsession-common-pitfalls-with-background-download-upload-tasks/][URLSession: Common pitfalls with background download & upload tasks]].
+- [[https://twitter.com/clarko/status/1284940951031439361][ SwiftUI live-blur materials that you can use like a background color]].
+- [[https://emacsist.github.io/2020/01/07/swiftui-for-absolute-beginners%E8%AF%BB%E4%B9%A6/][<SwiftUI for Absolute Beginners>读书 - emacsist]].
+- [[https://developer.apple.com/documentation/swiftui/environmentvalues][@Environment values]].
+- [[https://twitter.com/natpanferova/status/1275903292946567168][`@State` `onChange`]].
+- [[https://github.com/Jinxiansen/SwiftUI][`SwiftUI` Framework Learning and Usage Guide]].
+- [[https://swiftui-lab.com/companion/][A Companion for SwiftUI - The SwiftUI Lab]].
+- [[https://swiftbysundell.com/articles/deep-dive-into-swift-function-builders/][A deep dive into Swift’s function builders | Swift by Sundell]].
+- [[https://www.objc.io/blog/2020/08/18/fuzzy-search/][A Fast Fuzzy Search Implementation · objc.io]].
+- [[https://swiftbysundell.com/articles/swiftui-state-management-guide/][A guide to SwiftUI’s state management system | Swift by Sundell]].
+- [[https://swiftbysundell.com/articles/swiftui-layout-system-guide-part-1/][A guide to the SwiftUI layout system - Part 1 | Swift by Sundell]].
+- [[https://github.com/jordansinger/SwiftUI-Kit][A SwiftUI iOS system components and interactions demo app based on iOS 14]].
+- [[https://swiftui-lab.com/swiftui-animations-part1/][Advanced SwiftUI Animations - Part 1: Paths - The SwiftUI Lab]].
+- [[https://swiftui-lab.com/advanced-transitions/][Advanced SwiftUI Transitions - The SwiftUI Lab]].
+- [[https://github.com/krzysztofzablocki/AutomaticSettings][AutomaticSettings: Data driven settings UI]].
+- [[https://www.morningswiftui.com/blog/build-mapview-app-with-swiftui][Building a MapView app with SwiftUI — Morning SwiftUI]].
+- [[https://swiftwithmajid.com/2019/12/25/building-pager-view-in-swiftui/][Building Pager view in SwiftUI | Majid’s blog about Swift development]].
+- [[https://swiftwithmajid.com/2020/02/05/building-viewmodels-with-combine-framework/][Building ViewModels with Combine framework]].
+- [[https://www.donnywals.com/category/combine/][Category: Combine – Donny Wals]].
+- [[https://store.raywenderlich.com/products/combine-asynchronous-programming-with-swift][Combine: Asynchronous Programming with Swift]].
+- [[https://swiftwithmajid.com/2019/08/28/composable-styling-in-swiftui/][Composable styling in SwiftUI | Swift with Majid]].
+- [[https://www.oliverbinns.co.uk/2020/07/23/constructing-data-with-swift-function-builders/][Constructing Data with Swift Function Builders – Oliver Binns]].
+- [[https://medium.com/flawless-app-stories/context-menu-alert-and-actionsheet-in-swiftui-b6ff0d1f8493][Context Menu, Alert and ActionSheet in SwiftUI]].
+- [[https://danielsaidi.com/blog/2020/01/05/create-an-spm-package-for-swiftui][Create an SPM Package for SwiftUI | Daniel Saidi]].
+- [[https://github.com/mattgallagher/CwlFitting][CwlFitting: A small SwiftUI package to aid with "shrink-to-fit" + "fill-aligned" VStack and HStack arrangements]].
+- [[https://twitter.com/twostraws/status/1280996740053827584][debugPrint() SwiftUI modifier]].
+- [[https://theswiftdev.com/2018/01/25/deep-dive-into-swift-frameworks/][Deep dive into Swift frameworks - The.Swift.Dev.]].
+- [[https://dev.to/maeganwilson_/default-a-view-in-navigationview-with-swiftui-183p][Default a View in NavigationView with SwiftUI - DEV Community]].
+- [[https://designcode.io/swiftui?promo=learnswiftui][designcode's SwiftUI course]].
+- [[https://medium.com/over-engineering/monitoring-a-folder-for-changes-in-ios-dc3f8614f902][Detecting changes to a folder in iOS using Swift]].
+- [[https://swiftui-lab.com/modal-dismiss-gesture/][Dismiss Gesture for SwiftUI Modals - The SwiftUI Lab]].
+- [[https://medium.com/@karaiskc/first-learnings-from-adopting-swiftui-be2ee4289007][First learnings from adopting SwiftUI - Christos Karaiskos - Medium (card example)]].
+- [[https://www.vadimbulavin.com/swift-function-builders-swiftui-view-builder/][Function Builders in Swift and SwiftUI]].
+- [[https://swiftui-lab.com/geometryreader-to-the-rescue/][GeometryReader to the Rescue - The SwiftUI Lab]].
+- [[https://medium.com/better-programming/gestures-in-swiftui-e94b784ecc7][Gestures in SwiftUI - Better Programming - Medium]].
+- [[https://github.com/AppPear/ChartView][GitHub - AppPear/ChartView: ChartView made in SwiftUI]].
+- [[https://github.com/dasautoooo/Parma][GitHub - dasautoooo/Parma: A SwiftUI view for displaying Markdown with custom.]].
+- [[https://github.com/Dimillian/MovieSwiftUI][GitHub - Dimillian/MovieSwiftUI: SwiftUI & Combine app using MovieDB API.]].
+- [[https://github.com/Jinxiansen/SwiftUI][GitHub - Jinxiansen/SwiftUI: `SwiftUI` Framework Learning and Usage Guide.]].
+- [[https://github.com/mecid/SwiftUICharts][GitHub - mecid/SwiftUICharts: A simple line and bar charting library written for SwiftUI]].
+- [[https://github.com/nalexn/EnvironmentOverrides][GitHub - nalexn/EnvironmentOverrides: QA assistant for a SwiftUI app]].
+- [[https://github.com/nerdsupremacist/FancyScrollView][GitHub - nerdsupremacist/FancyScrollView (list with growing/snapping header)]].
+- [[https://github.com/paololeonardi/WaterfallGrid][GitHub - paololeonardi/WaterfallGrid: A waterfall grid layout view for SwiftUI.]].
+- [[https://github.com/SimpleBoilerplates/SwiftUI-Cheat-Sheet][GitHub - SimpleBoilerplates/SwiftUI-Cheat-Sheet: SwiftUI Cheat Sheet]].
+- [[https://github.com/siteline/SwiftUI-Introspect][GitHub - siteline/SwiftUI-Introspect: Introspect underlying UIKit components]].
+- [[https://github.com/SwiftUIX/SwiftUIX][GitHub - SwiftUIX/SwiftUIX: An extension to the standard SwiftUI library.]].
+- [[https://swiftwithmajid.com/2019/11/13/gradient-in-swiftui/][Gradient in SwiftUI | Majid’s blog about Swift development]].
+- [[https://www.hackingwithswift.com/example-code/uikit/how-to-add-a-toolbar-above-the-keyboard-using-inputaccessoryview][How to add a toolbar above the keyboard using inputAccessoryView]].
+- [[https://twitter.com/myridiphis/status/1339840448689549312][How to animate along zIndex in SwiftUI]].
+- [[https://blckbirds.com/post/side-menu-hamburger-menu-in-swiftui/][How to create a side menu (hamburger menu) in SwiftUI | BLCKBIRDS]].
+- [[https://www.raywenderlich.com/4503153-how-to-create-a-splash-screen-with-swiftui][How to Create a Splash Screen With SwiftUI | raywenderlich.com]].
+- [[https://stackoverflow.com/questions/56490963/how-to-display-a-search-bar-with-swiftui][how to display a search bar with SwiftUI - Stack Overflow]].
+- [[https://www.hackingwithswift.com/articles/210/how-to-fix-slow-list-updates-in-swiftui][How to fix slow List updates in SwiftUI – Hacking with Swift]].
+- [[https://medium.com/better-programming/scheduling-notifications-and-badges-in-swiftui-9edf8574b893][How to Schedule Notifications and Add Badges in SwiftUI]].
+- [[https://twitter.com/icanzilb/status/1324685822063497217][Image resizing techniques in Swift (smooth scroll)]].
+- [[https://medium.com/better-programming/implement-searchbar-in-swiftui-556a204e1970][Implement a Search Bar in SwiftUI - Better Programming - Medium]].
+- Implementing Context Menus in iOS 13 Using SwiftUI or UIKit.
+- [[https://twitter.com/chriseidhof/status/1280138752409636864][In the new SwiftUI, is there any reason you would still use ObservedObject instead of StateObject?]].
+- [[https://swiftui-lab.com/communicating-with-the-view-tree-part-1/][Inspecting the View Tree with PreferenceKey - Part 1 - The SwiftUI Lab]].
+- [[https://twitter.com/misaellandero/status/1285318302013837312][Integrate SwiftUI on UIKIT project its actually pretty easy]].
+- [[https://stackoverflow.com/questions/56505043/how-to-make-view-the-size-of-another-view-in-swiftui][ios - How to make view the size of another view in SwiftUI - Stack Overflow]].
+- [[https://elliehuxtable.com/lessons-learned-with-swift-ios-development/][Lessons learned with Swift + iOS development]].
+- [[https://twitter.com/dmartincy/status/1275913911506780161][LLDB "_regexp-break <file>:<line>:<column>", breakpoint at a particular source code line and column]].
+- [[https://swiftwithmajid.com/2020/07/08/mastering-grids-in-swiftui/][Mastering grids in SwiftUI | Swift with Majid]].
+- [[https://swiftwithmajid.com/2020/09/24/mastering-scrollview-in-swiftui/][Mastering ScrollView in SwiftUI | Swift with Majid]].
+- [[https://github.com/jordansinger/messages-multiplatform-swiftui-sample][Multiplatform Messages app for macOS, iOS, iPadOS in SwiftUI]].
+- [[https://swiftwithmajid.com/2019/12/04/must-have-swiftui-extensions/][Must-have SwiftUI extensions | Majid’s blog about Swift development]].
+- [[https://swiftwithmajid.com/2020/06/29/new-property-wrappers-in-swiftui/][New property wrappers in SwiftUI (@ScaledMetric, @SceneStorage, @AppStorage, @StateObject)]].
+- [[https://twitter.com/natpanferova/status/1296725502305034240][On iOS 14, the keyboard is added to safe area]].
+- [[https://www.objc.io/blog/2020/03/17/thinking-in-swiftui/][Our New Book: Thinking in SwiftUI · objc.io]].
+- [[https://nalexn.github.io/anyview-vs-group/][Performance Battle: AnyView vs Group - Alexey Naumov]].
+- [[https://gumroad.com/l/practical-combine/wwdc2020][Practical Combine: An introduction to Combine with real examples]].
+- [[https://nalexn.github.io/swiftui-deep-linking/][Programmatic navigation in SwiftUI project - Alexey Naumov]].
+- [[https://medium.com/get-chip/propert-wrappers-in-swift-5-1-14f610530710][Property Wrappers in Swift 5.1. An introduction to one of Swift 5.1’s]].
+- [[https://twitter.com/navdeep_ua/status/1296591355485945856][Recreate iOS style Welcome Screen to any app in 3 minutes]].
+- [[https://twitter.com/jsngr/status/1276700160643551232][Recreate this Control Center widget in SwiftUI]].
+- [[https://dev.to/gualtierofr/remote-images-in-swiftui-49jp][Remote images in SwiftUI - DEV Community]].
+- [[https://medium.com/ymedialabs-innovation/resizing-techniques-and-image-quality-that-every-ios-developer-should-know-e061f33f7aba][Resizing Techniques and Image Quality That Every iOS Developer Should Know (Swift)]].
+- [[https://medium.com/flawless-app-stories/reusable-image-cache-in-swift-9b90eb338e8d][Reusable Image Cache in Swift - Flawless iOS - Medium]].
+- [[https://ordinarycoding.com/articles/search-view-in-swiftui/][Search View in SwiftUI | Ordinary Coding]].
+- [[https://www.hackingwithswift.com/books/ios-swiftui/selecting-dates-and-times-with-datepicker][Selecting dates and times with DatePicker]].
+- [[https://twitter.com/icanzilb/status/1235884754576322560][Short video showing you how to debug, learn, or teach Combine operators with Timelane - the approach is always the same, add lanes - analyze the data]].
+- [[https://swiftwithmajid.com/2020/07/21/sidebar-navigation-in-swiftui/][Sidebar navigation in SwiftUI | Swift with Majid]].
+- [[https://github.com/alfianlosari/SwiftUIStaggeredNote][StaggeredList Sample App: A Staggered Pinterest Like Layout using SwiftUI]].
+- [[https://developer.apple.com/documentation/swiftui/state_and_data_flow][State and Data Flow | Apple Developer Documentation]].
+- [[https://twitter.com/twostraws/status/1279487425581133831][Stretchable header]].
+- [[https://stackoverflow.com/questions/56578072/hstack-with-sf-symbols-image-not-aligned-centered][swift - HStack with SF Symbols Image not aligned centered - Stack Overflow]].
+- [[https://stackoverflow.com/questions/59227158/imagepicker-in-swiftui][swift - ImagePicker in SwiftUI - Stack Overflow]].
+- [[https://nshipster.com/propertywrapper/][Swift Property Wrappers - NSHipster]].
+- [[https://swiftuipropertywrappers.com/][Swift UI Property Wrappers (@State, @StateObject, @EnvironmentObject, @ObservedObject, @Binding)]].
+- [[https://stackoverflow.com/questions/62840571/not-receiving-scenephase-changes][swiftui - Not Receiving scenePhase Changes (foreground/background)]].
+- [[https://medium.com/better-programming/swiftui-and-redux-clean-code-and-small-independent-components-6f46a5eb46b3][SwiftUI and Redux — Clean Code and Small, Independent Components]].
+- [[https://sarunw.com/posts/swiftui-animation/][SwiftUI Animation (buttons, current-rotations, etc) | Sarun]].
+- [[https://sarunw.com/posts/swiftui-animation/][SwiftUI Animation | Sarun]].
+- [[https://medium.com/swlh/learn-master-%EF%B8%8F-swiftui-basic-components-in-10-minutes-dc327e71d245][SwiftUI basic components (form example)]].
+- [[https://www.hackingwithswift.com/books/ios-swiftui/buttons-and-images][SwiftUI Buttons and images (using systemName)]].
+- [[https://designcode.io/courses][SwiftUI courses]].
+- [[https://swiftui-lab.com/custom-styling/][SwiftUI Custom Styling - The SwiftUI Lab (scaleEffect and opacity on isPressed)]].
+- [[https://www.swiftcompiled.com/swiftui-datepicker/][SwiftUI DatePicker]].
+- [[https://github.com/Leon12345679/QuickActionCard][SwiftUI displaying customizable quick action card]].
+- [[https://troz.net/post/2020/swiftui_mac_big_sur/][SwiftUI for Mac on Big Sur :: TrozWare]].
+- [[https://twitter.com/jsngr/status/1276931917628219398][SwiftUI gives you .isPlaceholder in WidgetKit generate a placeholders]]
+- [[https://kean.github.io/post/swiftui-layout-system][SwiftUI Layout System | Alexander Grebenyuk]].
+- [[https://www.simpleswiftguide.com/swiftui-navigationview-tutorial-with-examples/][SwiftUI NavigationView tutorial with examples - Simple Swift Guide]].
+- [[https://www.tomasznazarenko.com/frameworks/SwiftUI-notes/][SwiftUI notes - Tomasz Nazarenko Blog]].
+- [[https://twitter.com/jamesthomson/status/1293506487063584770][SwiftUI picker gotchas]].
+- [[https://twitter.com/Geri_Borbas/status/1262390699611369477][SwiftUI Search Bar in the Navigation Bar]].
+- [[https://zonneveld.dev/][SwiftUI snippets by Jeroen Zonneveld]].
+- [[https://www.appcoda.com/swiftui-form-ui/][SwiftUI Tutorial: How to Build a Form UI for iOS Apps]].
+- [[https://swiftuihub.com/][SwiftUI Tutorials on SwiftUI Hub]].
+- [[https://swiftui.gallery/][swiftui.gallery | A gallery of SwiftUI code example snippets]].
+- [[https://swiftui.gallery/uploads/code/SignUpForm][swiftui.gallery: sign up form sample]].
+- [[https://github.com/ygit/swiftui][swiftui: A collaborative list of awesome SwiftUI resources]].
+- [[https://finestructure.co/blog/2020/1/20/swiftui-equal-widths-view-constraints][SwiftUI: Equal widths view constraints — finestructure]].
+- [[https://www.objc.io/blog/2019/10/01/swiftui-shake-animation/][SwiftUI: Shake Animation · objc.io]].
+- [[https://github.com/alfianlosari/SwiftUIStaggeredList][SwiftUIStaggeredList: Staggered Layout List Using SwiftUI]].
+- [[https://medium.com/better-programming/swiftuis-new-app-lifecycle-and-replacements-for-appdelegate-and-scenedelegate-in-ios-14-c9cf4a2367a9][SwiftUI’s New App Lifecycle and Replacements for AppDelegate]].
+- [[https://danielsaidi.com/blog/2020/01/05/create-an-spm-package-for-swiftui][Swipe gesture SwiftUI | Daniel Saidi]].
+- [[https://www.reddit.com/r/swift/comments/elhakp/so_i_guess_my_journey_begins_now/][SwuiftUI books]].
+- [[https://sarunw.com/tags/swiftui/][Tagged “SwiftUI” | Sarun]].
+- [[https://swiftwithmajid.com/2020/02/26/textfield-in-swiftui/][TextField in SwiftUI | Majid’s blog about Swift development]].
+- [[https://medium.com/better-programming/the-complete-swiftui-documentation-youve-been-waiting-for-fdfe7241add9][The Complete SwiftUI Documentation You’ve Been Waiting For]].
+- [[https://swiftwithmajid.com/2020/07/02/the-difference-between-stateobject-environmentobject-and-observedobject-in-swiftui/][The difference between @StateObject, @EnvironmentObject, and @ObservedObject]].
+- [[https://swiftui-lab.com/a-powerful-combo/][The Power of the Hosting+Representable Combo (scroll SwiftUI list)]].
+- [[https://theswiftdev.com/2019/10/31/the-ultimate-combine-framework-tutorial-in-swift/][The ultimate Combine framework tutorial in Swift - The.Swift.Dev.]].
+- [[https://twitter.com/dbuchanandev/status/1236411023340511233][Tweet on improving List SwiftUI performace (searching)]].
+- [[https://www.raywenderlich.com/4829472-uicollectionview-custom-layout-tutorial-pinterest][UICollectionView Custom Layout Tutorial: Pinterest | raywenderlich.com]].
+- [[https://medium.com/@dmytro.anokhin/url-image-view-in-swiftui-f08f85d942d8][URL Image view in SwiftUI]].
+- [[https://heckj.github.io/swiftui-notes/][Using Combine (extensive online book)]].
+- [[https://medium.com/better-programming/using-ios-14s-menu-as-a-picker-in-swiftui-b036c772037][Using iOS 14's Menu as a Picker in SwiftUI]].
+- [[https://swiftwithmajid.com/2019/10/30/view-composition-in-swiftui/][View composition in SwiftUI | Majid’s blog about Swift development]].
+- [[https://netsplit.com/swiftui/views-choose-their-own-sizes/][Views Choose Their Own Sizes – Netsplit.com]].
+- [[https://medium.com/flawless-app-stories/visualize-combine-magic-with-swiftui-part-1-3a56e2a461b3][Visualize Combine Magic with SwiftUI Part 1 - Flawless iOS - Medium]].
+- [[https://www.donnywals.com/whats-the-difference-between-stateobject-and-observedobject/][What’s the difference between @StateObject and @ObservedObject? – Donny Wals]].
+- [[https://nalexn.github.io/swiftui-observableobject][Why I quit using the ObservableObject - Alexey Naumov]].
+- [[https://swiftui-lab.com/working-with-focus-on-swiftui-views/][Working with Focus on SwiftUI Views - The SwiftUI Lab]].
+* [2019-12-17 Tue] Studying for Life in the UK test
+  :PROPERTIES:
+  :CUSTOM_ID: studying-for-life-in-the-uk-test
+  :END:
+
+Today, I passed the [[https://www.gov.uk/life-in-the-uk-test][Life in the UK test]]. Wasn't quite sure how to study for it. During my commutes, I listened to the [[https://www.audible.co.uk/pd/Life-in-the-UK-2019-Test-Contains-the-Official-Course-300-Practice-Questions-Audiobook/B07VD9SR3L][Life in the UK 2019 Test audio book]].
+
+A friend recommended [[https://lifeintheuktestweb.co.uk][lifeintheuktestweb.co.uk]]. Overall, I found their practice tests very useful. Taking a bunch tests helped me internalize the material.
+
+Took some notes along the way (mostly data with years attached) and dumped it into an [[https://orgmode.org/manual/Built_002din-Table-Editor.html#Built_002din-Table-Editor][org table]]. This helped me form a mental timeline.
+
+*NOTE:* /These tables alone are *not* comprehensive enough to prepare for the exam. You'll need to know additional information without dates attached./
+
+** Events
+
+|----------------+--------------------------------------------------------------------------------|
+|           Year | Event                                                                          |
+|----------------+--------------------------------------------------------------------------------|
+|           2012 | Diamond Jubilee                                                                |
+|           1999 | Scottish Parliament formed                                                     |
+|           1973 | UK joins the EU \o/                                                            |
+|           1972 | Mary Peters wins Gold medal (pentathlon)                                       |
+|           1957 | Treaty of Rome signed (March 25)                                               |
+|           1950 | UK signs European Convention of Human Rights                                   |
+|           1949 | Ireland become a republic                                                      |
+|           1947 | Granted independence India, Pakistan and Ceylon (Sri Lanka)                    |
+|           1945 | Clement Attlee elected                                                         |
+|           1945 | Alexander Fleming discovers penicillin                                         |
+|           1945 | WWII ends                                                                      |
+|           1944 | Butler Act (free secondary education England/Wales)                            |
+|           1940 | Battle of Britain                                                              |
+|           1939 | Germany invades Poland                                                         |
+|          1930s | Turing Machine                                                                 |
+|           1936 | BBC first regular television service                                           |
+|           1932 | First television broadcast                                                     |
+|           1930 | British Film Studios Fluorish                                                  |
+|           1928 | Women/men with same voting age                                                 |
+|           1918 | WWI ends (November 11, 11am)                                                   |
+|           1903 | Emmeline Pankhurst Women’s Social and Political Union (suffragettes)           |
+|           1902 | Motor-car racing in UK                                                         |
+|           1896 | First film shown publicly                                                      |
+|      1899-1902 | The Boer War (South Africa)                                                    |
+|      1870-1914 | 120000 Russian and Polish Jews fled to Britain to escape prosecution           |
+|      1853-1856 | Crimean War                                                                    |
+|           1851 | Great Exhibition (showcased Crystal Palance)                                   |
+|           1837 | Queen Victoria becomes queen (at 18)                                           |
+|           1833 | Emancipation Act (abolished slavery throughout British Emprire)                |
+|           1832 | The Reform Act (increase number of people with voting rights)                  |
+|           1776 | North American colonies want out (don't tax us without representation)         |
+|           1745 | Bonnie Prince Charlie gets support by clansmen from Scottish highlands         |
+|           1714 | Queen Ann dies, George I becomes King                                          |
+|           1689 | Bill of rights (limit rights of kings)                                         |
+|           1688 | William of Orange invades England (proclaims king)                             |
+|      1680-1720 | Huguenots refugees came to England (from France)                               |
+|           1695 | Free press (newspapers) established                                            |
+|           1679 | Habeas Corpus Act (right to trial)                                             |
+|      1649-1660 | Cromwell rules republic for 11 years (Charles I executed)                      |
+|           1642 | English Civil war (Cavaliers vs Roundheads)                                    |
+|           1606 | Union flag created                                                             |
+|           1588 | English beat Spanish Armada                                                    |
+|           1348 | Black death (third population die)                                             |
+|           1314 | Battle of Bannockburn: Robert the Bruce (Scottish King) beats English invasion |
+|           1284 | Statute of Rhuddlan (Wales joins Crown, by King Edward I)                      |
+|           1215 | Magna Carta created                                                            |
+|           1066 | Norman Conquest (Saxon King Harold killed by William I)                        |
+|     300-400 AD | Christians appear in Britain                                                   |
+|         789 AD | Vikings first visit Britain and raid coastal towns                             |
+| 6000 years ago | Farmers come to Britain                                                        |
+|----------------+--------------------------------------------------------------------------------|
+
+** Population
+
+|------+--------------|
+| Year | Population   |
+|------+--------------|
+| 2010 | > 62 million |
+| 2005 | < 60 million |
+| 1998 | 57 million   |
+| 1951 | 50 million   |
+| 1901 | 40 million   |
+| 1851 | 20 million   |
+| 1700 | 5 million    |
+| 1600 | > 4 million  |
+|------+--------------|
+
+* [2019-12-01 Sun] Georgia travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: georgia-travel-bookmarks
+  :END:
+- [[https://www.abandonedamerica.us/abandoned-georgia][Abandoned Georgia]].
+* [2019-11-24 Sun] Wizard zines comics in Emacs eshell
+  :PROPERTIES:
+  :CUSTOM_ID: wizard-zines-comics-eshell-util
+  :END:
+Over at [[http://wizardzines.com][wizardzines.com]], [[https://jvns.ca][Julia Evans]] authors wonderful zines on topics like git, networking, linux, command-line utilities, and others. Some zines are paid. Some are free. No affiliation here, just a fan.
+
+A little while ago, Julia [[https://twitter.com/b0rk/status/1192304892435738624][tweeted]] about a utility she's building to view her original comics on similar topics. I instantly thought it'd be a fun tool to implement for Emacs [[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html][eshell]].
+
+Since then, I subscribed to [[https://wizardzines.com/saturday-comics/][wizardzines.com/saturday-comics]] and received a few comics (awk, tar, and bash tricks). I saved them locally (using topic name and dropping file extensions).
+
+#+begin_src sh :exports both
+  ls -1 ~/Downloads/wizardzines-comics/
+#+end_src
+
+#+RESULTS:
+| awk  |
+| bash |
+| tar  |
+
+By no means battle-tested, but here's an elisp snippet defining the /ecomic/ command. It displays inlined comics in the handy eshell.
+
+#+begin_src emacs-lisp
+  (require 'eshell)
+  (require 'iimage)
+
+  (defvar wizardzines-comics-path "~/Downloads/wizardzines-comics")
+
+  (defun eshell/ecomic (&rest args)
+    "Display command comic in ARGS.
+  Note: ensure comic images live in `wizardzines-comics-path', named with
+  command name and no extension."
+    (eshell-eval-using-options
+     "ecomic" args
+     '((?h "help" nil nil "show this usage screen")
+       :external "ecomic"
+       :show-usage
+       :usage "COMMAND
+
+  Show COMMAND comic from Julia Evans' https://wizardzines.com/saturday-comics")
+     (let* ((command (nth 0 (eshell-stringify-list (eshell-flatten-list args))))
+            (image-fpath (concat (file-name-as-directory
+                                  (expand-file-name wizardzines-comics-path))
+                                 command)))
+       (unless (file-exists-p image-fpath)
+         (error "comic: \"%s\" not found :-(" command))
+       (eshell-buffered-print "\n")
+       (add-text-properties 0 (length image-fpath)
+                            `(display ,(create-image image-fpath)
+                                      modification-hooks
+                                      (iimage-modification-hook))
+                            image-fpath)
+       (eshell-buffered-print image-fpath)
+       (eshell-flush))))
+#+end_src
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/wizard-zines-comics-eshell-util/ecomic.gif]]
+
+comments on [[https://twitter.com/xenodium/status/1198542659704504321][twitter]]
+
+** Updates
+- Tweaked title.
+
+* [2019-11-21 Thu] Emacs counsel default search switches
+  :PROPERTIES:
+  :CUSTOM_ID: emacs-counsel-default-search-switches
+  :END:
+Following up from [[http://xenodium.com/enhanced-emacs-searching-with-counsel-switches][Enhanced Emacs searching with counsel switches]], rather than remembering [[https://github.com/ggreer/the_silver_searcher][silver searcher]] and [[https://github.com/BurntSushi/ripgrep][ripgrep]] switches, we can use [[https://github.com/abo-abo/swiper][counsel's]] /ivy-initial-inputs-alist/ to set these up as default visible switches.
+
+#+begin_src emacs-lisp
+  (push '(counsel-ag . "--file-search-regex '' -- ") ivy-initial-inputs-alist)
+  (push '(counsel-rg . "--glob '**' -- ") ivy-initial-inputs-alist)
+#+end_src
+
+The default switches stay out of the way in typical searches, but can be easily modified to include (or exclude) results matching specific file /names/.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/emacs-counsel-default-search-switches/default-switches.gif]]
+
+comments on [[https://twitter.com/xenodium/status/1197673205688864768?s=20][twitter]]
+* [2019-11-10 Sun] Enhanced Emacs searching with counsel switches
+  :PROPERTIES:
+  :CUSTOM_ID: enhanced-emacs-searching-with-counsel-switches
+  :END:
+The [[https://github.com/abo-abo/swiper][counsel]] family of Emacs search commands are great for searching the filesystem. More specifically, /counsel-rg/, /counsel-ag/, and /counsel-pt/, which use the popular [[https://github.com/BurntSushi/ripgrep][ripgrep]], [[https://github.com/ggreer/the_silver_searcher][silver searcher]], and [[https://github.com/monochromegane/the_platinum_searcher][platinum searcher]] utilities.
+
+counsel-rg is my default searcher. It returns results quickly, with live updates as I tweak the search query.
+
+Up until recently, my queries typically matched text in files only. This works great, but every so often I wished I could amend the query to include (or exclude) results matching specific file /names/. Turns out, you can prepend the search query with additional switches using the "--" separator.
+
+The switches are usually utility-specific, but if we wanted to keep results from file names matching a glob, we can prepend the ripgrep query with something like /"--glob Make* --"/ or the shorter version /"-g Make* --"/.
+
+rg: -g Make* -- install
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/enhanced-emacs-searching-with-counsel-switches/counsel-rg-switch.gif]]
+
+* [2019-11-10 Sun] Emacs org block company completion
+:PROPERTIES:
+:CUSTOM_ID: emacs-org-block-company-completion
+:END:
+UPDATE: This is now available [[https://melpa.org/#/company-org-block][on melpa]].
+
+Back in 2015, I bound the "<" key to a hydra for quickly inserting org blocks. The idea came from Oleg's post on [[https://oremacs.com/2015/03/07/hydra-org-templates/][org-mode block templates in Hydra]]. The suggested binding settled in my muscle memory without much effort.
+
+Fast forward to Febrary 2019. I replaced the hydra with /[[https://orgmode.org/manual/Easy-templates.html][org-insert-structure-template]]/ when /org-try-structure-completion/ was removed from org mode. No biggie, as I kept the same binding to "<" and hardly noticed the change.
+
+Since my primary use-case for easy templates is inserting [[https://orgmode.org/manual/Working-with-source-code.html][source blocks]], I was keen to expedite choosing the source language as well as inserting the source block itself.
+
+Writing a small [[https://company-mode.github.io/][company mode]] completion backend fits my primary use-case pretty well.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-org-block-company-completion/company-org-block.gif]]
+
+The company backend looks as follow (*Warning:* [[https://twitter.com/tpanum/status/1197772426072997888][Snippet needs Org v9.2]]).
+
+Note: This code is not up to date. Install via [[https://melpa.org/#/company-org-block][melpa]] or see [[https://github.com/xenodium/company-org-block][its repository]].
+
+#+begin_src emacs-lisp :results value
+  (require 'map)
+  (require 'org)
+  (require 'seq)
+
+  (defvar company-org-block-bol-p t "If t, detect completion when at
+  begining of line, otherwise detect completion anywhere.")
+
+  (defvar company-org--regexp "<\\([^ ]*\\)")
+
+  (defun company-org-block (command &optional arg &rest ignored)
+    "Complete org babel languages into source blocks."
+    (interactive (list 'interactive))
+    (cl-case command
+      (interactive (company-begin-backend 'company-org-block))
+      (prefix (when (derived-mode-p 'org-mode)
+                (company-org-block--grab-symbol-cons)))
+      (candidates (company-org-block--candidates arg))
+      (post-completion
+       (company-org-block--expand arg))))
+
+  (defun company-org-block--candidates (prefix)
+    "Return a list of org babel languages matching PREFIX."
+    (seq-filter (lambda (language)
+                  (string-prefix-p prefix language))
+                ;; Flatten `org-babel-load-languages' and
+                ;; `org-structure-template-alist', join, and sort.
+                (seq-sort
+                 #'string-lessp
+                 (append
+                  (mapcar #'prin1-to-string
+                          (map-keys org-babel-load-languages))
+                  (map-values org-structure-template-alist)))))
+
+  (defun company-org-block--template-p (template)
+    (seq-contains (map-values org-structure-template-alist)
+                  template))
+
+  (defun company-org-block--expand (insertion)
+    "Replace INSERTION with actual source block."
+    (delete-region (point) (- (point) (1+ ;; Include "<" in length.
+                                       (length insertion))))
+    (if (company-org-block--template-p insertion)
+        (company-org-block--wrap-point insertion
+                                       ;; May be multiple words.
+                                       ;; Take the first one.
+                                       (nth 0 (split-string insertion)))
+      (company-org-block--wrap-point (format "src %s" insertion)
+                                     "src")))
+
+  (defun company-org-block--wrap-point (begin end)
+    "Wrap point with block using BEGIN and END.  For example:
+  ,#+begin_BEGIN
+    |
+  ,#+end_END"
+    (insert (format "#+begin_%s\n" begin))
+    (insert (make-string org-edit-src-content-indentation ?\s))
+    ;; Saving excursion restores point to location inside code block.
+    (save-excursion
+      (insert (format "\n#+end_%s" end))))
+
+  (defun company-org-block--grab-symbol-cons ()
+    "Return cons with symbol and t whenever prefix of < is found.
+  For example: \"<e\" -> (\"e\" . t)"
+    (when (looking-back (if company-org-block-bol-p
+                            (concat "^" company-org--regexp)
+                          company-org--regexp)
+                        (line-beginning-position))
+      (cons (match-string-no-properties 1) t)))
+#+end_src
+
+To use, add the backend enable /company-mode/ in /org-mode/:
+
+#+begin_src emacs-lisp :results value
+  (add-to-list 'company-backends 'company-org-block)
+  (company-mode +1)
+#+end_src
+
+** Updates
+- Removed language-specific header logic (use /[[https://www.orgmode.org/worg/org-contrib/babel/header-args.html][org-babel-default-header-args]]/ instead).
+- Also completes non-source block templates from [[https://orgmode.org/manual/Easy-templates.html][org-structure-template-alist]].
+- Source in my [[https://github.com/xenodium/dotsies/blob/master/emacs/ar/company-org-block.el][dot files]].
+- Removed unnecessary binding. Just add company backend as usual.
+- Thanks to [[https://twitter.com/takaxp][Takaaki Ishikawa]] for [[https://twitter.com/takaxp/status/1195884481535561729?s=20][suggesting `org-edit-src-content-indentation']].
+- Thanks to [[https://twitter.com/tpanum][Thomas Kobber]] for [[https://twitter.com/xenodium/status/1194224168709083137][highlighting incompatibility]] with older org versions.
+
+* [2019-11-08 Fri] IRC bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: irc-bookmarks
+  :END:
+- [[https://github.com/davisonio/awesome-irc][Awesome IRC]].
+* [2019-11-03 Sun] A more reusable Emacs shell-command history
+  :PROPERTIES:
+  :CUSTOM_ID: more-reusable-emacs-shell-command-history
+  :END:
+[[https://twitter.com/camdez][Cameron Desautel]] has a great post on [[https://engineering.collbox.co/post/working-faster-in-emacs-by-reading-the-future/][Working Faster in Emacs by Reading the "Future"]], highlighting /M-n/'s usefulness for inserting minibuffer default values.
+
+Invoking /M-n/ in /shell-command/'s prompt is handy for quickly getting the current buffer's file name. This works great for one-off shell commands like /"chmod +x script.sh"/ or /"tidy -xml -i -m data.xml"/. Unfortunately, these commands aren't easily reusable from /shell-command/'s minibuffer history, since it'll keep hardcoded file names.
+
+There's likely existing built-in functionality or a more elaborate package for this, but advising /read-shell-command/ enables us to write more reusable commands like /"chmod +x $f"/ or /"tidy -xml -i -m $f"./ We merely replace /$f/ with /(buffer-file-name)/, and let everything else continue as usual.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/more-reusable-emacs-shell-command-history/expanded-shell-command.png]]
+
+#+begin_src emacs-lisp
+  (defun ar/adviced-read-shell-command (orig-fun &rest r)
+    "Advice around `read-shell-command' to replace $f with buffer file name."
+    (let ((command (apply orig-fun r)))
+      (if (string-match-p "\\$f" command)
+          (replace-regexp-in-string "\\$f"
+                                    (or (buffer-file-name)
+                                        (user-error "No file file visited to replace $f"))
+                                    command)
+        command)))
+
+  (advice-add 'read-shell-command
+              :around
+              'ar/adviced-read-shell-command)
+#+end_src
+
+It's worth mentioning that searching minibuffer history is pretty simple when leveraging [[https://github.com/abo-abo/swiper][counsel]] to fuzzy search (via /counsel-minibuffer-history/, bound to /C-r/ by default).
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/more-reusable-emacs-shell-command-history/richer-shell-command-history.gif]]
+
+On a final note, searching minibuffer history for cache hits is way more useful with richer history content. Be sure to save minibuffer history across Emacs sessions and increase /shell-command-history/ using the built-in [[https://www.emacswiki.org/emacs/SaveHist][savehist-mode]].
+
+#+begin_src emacs-lisp
+  (use-package savehist
+    :custom
+    (savehist-file "~/.emacs.d/savehist")
+    (savehist-save-minibuffer-history t)
+    (history-length 10000)
+    (savehist-additional-variables
+     '(shell-command-history))
+    :config
+    (savehist-mode +1))
+#+end_src
+
+* [2019-10-20 Sun] Taiwan travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: taiwan-travel-bookmarks
+  :END:
+:MODIFIED:
+[2021-07-13 Tue]
+:END:
+- [[https://www.nickkembel.com/sun-moon-lake-tea/][Sun Moon Lake Tea: Why is it so good? (Spiritual Travels)]].
+- [[https://blog.calebjay.com/posts/taipei-in-2019/][Taipei, 2019]].
+- [[https://blog.calebjay.com/posts/why-taiwan/][Why You Should Remote Work in Taiwan]].
+* [2019-10-10 Thu] Emacs swiper and multiple cursors
+  :PROPERTIES:
+  :CUSTOM_ID: emacs-swiper-and-multiple-cursors
+  :END:
+
+Emacs [[https://github.com/abo-abo/swiper][swiper]] is awesome. I bound /swiper-isearch/ to /C-s/. Also a big fan of [[https://github.com/magnars/multiple-cursors.el][multiple cursors]]. I use it regularly (it's fun).
+
+I had totally missed Ole's post back in 2015: [[https://oremacs.com/2015/10/14/swiper-mc/][A simple multiple-cursors extension to swiper]]. Turns out, swiper has multiple cursors support out of the box (bound to /C-7/ by default). Yay!
+
+UPDATE: Thanks to [[https://irreal.org/blog/?p=8370][irreal's post]], please remember to add /swiper-mc/ to /mc/cmds-to-run-once/ list (or things won't work as expected). This typically happens interactively when you invoke C-7 the first time around. Make sure you answer "n" when you see a prompt like:
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-swiper-and-multiple-cursors/swiper-mc-no.png]]
+
+If you happen to choose "y" by mistake, take a look at *~/.emacs.d/.mc-lists.el* to correct it. Remove /swiper-mc/ from /mc/cmds-to-run-for-all/
+ and add it to /mc/cmds-to-run-once/. Invoke /m-x eval-buffer/ to reset the values and you're good to go.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/emacs-swiper-and-multiple-cursors/swipermc.gif]]
+
+* [2019-10-08 Tue] Speeding up gifs with gifsycle
+  :PROPERTIES:
+  :CUSTOM_ID: speeding-up-gifs-with-gifsycle
+  :END:
+
+  Drop frames and speed gif up with [[https://www.lcdf.org/gifsicle/][gifsycle]] (via [[https://graphicdesign.stackexchange.com/a/20937][How to remove every second frame from an animated gif?]]):
+
+  #+begin_src bash
+    gifsicle -U in.gif `seq -f "#%g" 0 3 398` -O2 -o out.gif
+  #+end_src
+
+  ps. 398 is the total number of frames, which you can get with:
+
+#+begin_src bash
+  identify in.gif
+#+end_src
+
+* [2019-10-08 Tue] Spam blacklisting with Emacs org babel
+  :PROPERTIES:
+  :CUSTOM_ID: spam-blacklisting-with-emacs-org-babel
+  :END:
+Some email provider accept regular expressions to blacklist additional spam. My blacklist is long and tedious to update, but hey... Emacs org babel can simplify things here.
+
+It's way easier to maintain a blacklist (with no regex) using an org table.
+
+** Blacklist
+  #+begin_src org :exports src
+  ,#+name: spam-entries
+  | .spammy                |
+  | dodgyfella@hotmail.com |
+  | henryzeespammer.com    |
+  | yumspam.com            |
+  #+end_src
+
+and subsequently use org babel (elisp snippet) to generate the regex.
+
+** Regex gen
+  #+begin_src org :exports src
+    ,#+begin_src emacs-lisp :var rows=spam-entries
+      (require 'dash)
+      (require 's)
+
+      (concat "^"
+              (s-join "|"
+                      (mapcar (lambda (entry)
+                                (setq entry (regexp-quote
+                                             (s-trim entry)))
+                                (assert (s-present? entry))
+                                (cond
+                                 ;; Blacklist email address: joe@spammer.spammy
+                                 ((s-contains-p "@" entry)
+                                  (format "(%s)" entry))
+                                 ;; Blacklist top-level domain: .spammy
+                                 ((s-starts-with-p "\\." entry)
+                                  (format "([^.]*%s)" entry))
+                                 ;; Blacklist domain: @spammer.spammy
+                                 (t
+                                  (format "(.*@%s)" entry))))
+                              (-sort
+                               'string<
+                               (-map (lambda (row)
+                                       (nth 0 row))
+                                     rows))))
+              "$")
+
+    ,#+end_src
+
+    ,#+RESULTS:
+    : ^([^.]*\.spammy)|(dodgyfella@hotmail\.com)|(.*@henryzeespammer\.com)|(.*@yumspam\.com)$
+  #+end_src
+
+UPDATE: Tweaked elisp and regex (but not animation) also found John Bokma's post: [[http://johnbokma.com/blog/2019/05/13/blacklisting-domains-with-postfix.html][Blacklisting domains with Postfix]].
+
+  #+ATTR_HTML: :width 75% :height 75%
+  [[file:images/spam-blacklisting-with-emacs-org-babel/blacklist.png]]
+
+* [2019-10-06 Sun] Rewriting dates with Emacs multiple cursors
+  :PROPERTIES:
+  :CUSTOM_ID: rewriting-dates-with-emacs-multiple-cursors
+  :END:
+  Needed to rewrite the date format in a couple of csv columns. Emacs multiple cursors helps here, but needed a function to parse and reformat the dates themselves.
+
+  I can likely reformat dates using the built-in /parse-time-string/ and /format-time-string/ functions, but hey why not give the [[https://github.com/alphapapa/ts.el][ts.el]] library a try...
+
+#+begin_src emacs-lisp
+  (defun ar/region-to-timestamp ()
+    "Convert date like \"29 Apr 2019\" to \"2019-04-29\"."
+    (interactive)
+    (let ((date (ts-parse (buffer-substring
+                           (region-beginning)
+                           (region-end)))))
+      (delete-region (region-beginning)
+                     (region-end))
+      (insert (ts-format "%Y-%m-%d" date))))
+#+end_src
+
+Bound the new function to a temporary keybinding, so I can invoke from multiple cursors:
+
+#+begin_src emacs-lisp
+  (bind-key "M-q" #'ar/region-to-timestamp)
+#+end_src
+
+and voilà!
+
+#+ATTR_HTML: :width 40% :height 40%
+[[file:images/rewriting-dates-with-emacs-multiple-cursors/ts.gif]]
+
+* [2019-10-05 Sat] Show/hide Emacs dired details in style
+  :PROPERTIES:
+  :CUSTOM_ID: showhide-emacs-dired-details-in-style
+  :END:
+Emacs [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] is a powerful directory browser/editor. By default, it shows lots of handy file and directory details.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/showhide-emacs-dired-details-in-style/dired.png]]
+
+I typically prefer hiding file and directory details until I need them. The built-in [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Misc-Dired-Features.html][dired-hide-details-mode]] makes this easy with the "(" key toggle. Coupled with [[https://twitter.com/sanityinc][Steve Purcell]]'s [[https://github.com/purcell/diredfl][diredfl]] (for coloring), it strikes a great user experience.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/showhide-emacs-dired-details-in-style/diredfl.gif]]
+
+With a short snippet, you can also show/hide dired details in style:
+
+  #+begin_src emacs-lisp
+    (use-package dired
+      :hook (dired-mode . dired-hide-details-mode)
+      :config
+      ;; Colourful columns.
+      (use-package diredfl
+        :ensure t
+        :config
+        (diredfl-global-mode 1)))
+  #+end_src
+
+*UPDATE:* Thanks to [[https://twitter.com/dmartincy][Daniel Martín]], who [[https://twitter.com/dmartincy/status/1180512330288975872][pointed me]] to [[https://github.com/clemera/dired-git-info][dired-git-info]]. This package adds git logs to dired file and directory details.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/showhide-emacs-dired-details-in-style/dired-git-info.gif]]
+
+Binding /dired-git-info-mode/ to ")" is a nice complement to /dired-hide-details-mode/'s "(" binding.
+
+  #+begin_src emacs-lisp
+    (use-package dired-git-info
+        :ensure t
+        :bind (:map dired-mode-map
+                    (")" . dired-git-info-mode)))
+  #+end_src
+
+* [2019-09-29 Sun] Bulk buying bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: bulk-buying-bookmarks
+  :END:
+  - [[https://www.realfoods.co.uk][Real foods]].
+* [2019-09-01 Sun] Speeding up Emacs tramp via ControlMaster
+  :PROPERTIES:
+  :CUSTOM_ID: speeding-up-emacs-tramp-via-controlmaster
+  :END:
+Via [[https://gist.github.com/ralt/a36288cd748ce185b26237e6b85b27bb][Florian Margaine's Eshell config]], I discovered ssh's [[https://man.openbsd.org/ssh_config#ControlMaster][ControlMaster]]. It enables sharing multiple sessions over a single network connection. This has the benefit of speeding up Emacs TRAMP.
+
+In your ~/.ssh/config add:
+
+#+begin_src fundamental
+  Host *
+      ControlPath ~/.ssh/master-%h:%p
+      ControlMaster auto
+      ControlPersist 10m
+#+end_src
+* [2019-09-01 Sun] csv bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: csv-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-06-06 Sat]
+  :END:
+- [[https://til.secretgeek.net/banking/convert_ofx_to_csv.html][convert ofx to csv . Today I Learned (secretGeek)]].
+- [[https://www.johndcook.com/blog/2019/12/30/excel-to-csv/][Exporting Excel files to CSV with in2csv from csvkit]].
+- [[https://news.ycombinator.com/item?id=20848581][TSV Utilities: Command line tools for large, tabular data files (Hacker News)]].
+- [[https://haveagooddata.net/posts/why-you-dont-want-to-use-csv-files/][Why You Don't Want to Use CSV Files (Have a good data)]].
+
+* [2019-08-10 Sat] Slovakia travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: slovakia-travel-bookmarks
+  :END:
+- [[https://en.wikipedia.org/wiki/High_Tatras][High Tatras mountains (wonderful hikes)]].
+* [2019-07-14 Sun] Thumbnailing pdf page
+  :PROPERTIES:
+  :CUSTOM_ID: thumbnailing-pdf-page
+  :END:
+
+  If you ever need to thumbnail a pdf page, imagemagick has got you covered. For example, to thumbnail page 3, you can use:
+
+  #+begin_src sh :results verbatim
+    convert path/to/input.pdf[2] path/to/output.png
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+convert -resize 10000x10000 path/to/input.pdf[2] path/to/output.png
+convert: FailedToExecuteCommand `'gs' -sstdout=%stderr -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 '-sDEVICE=pngalpha' -dTextAlphaBits=4 -dGraphicsAlphaBits=4 '-r72x72' -dFirstPage=3 -dLastPage=3 '-sOutputFile=/var/folders/2y/nj_s07ms7l5gfsffh89_79zm0000gn/T/magick-30950xzlPsgqGUwtA%d' '-f/var/folders/2y/nj_s07ms7l5gfsffh89_79zm0000gn/T/magick-30950jpGyui82uGOQ' '-f/var/folders/2y/nj_s07ms7l5gfsffh89_79zm0000gn/T/magick-30950cuDVTNjArshs'' (1) @ error/pdf.c/InvokePDFDelegate/292.
+  #+end_example
+
+However, I had the error above (missing gs), resolved by installing ghostscript.
+
+  #+begin_src sh
+    brew install ghostscript
+  #+end_src
+* [2019-07-12 Fri] Outdoor bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: outdoor-bookmarks
+  :END:
+- [[https://lnt.org/why/7-principles/][The Seven Principles of Leave No Trace]].
+* [2019-07-07 Sun] gnuplot bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: gnuplot-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-08-22 Sat]
+  :END:
+- [[https://raymii.org/s/tutorials/GNUplot_tips_for_nice_looking_charts_from_a_CSV_file.html][GNUplot tips for nice looking charts from a CSV file]].
+- [[https://lwn.net/SubscriberLink/828761/6d8c7ddc142a67a0/][Voxel plotting with gnuplot 5.4 {LWN.net}]].
+* [2019-06-04 Tue] gnu global, ctags, and Emacs setup
+  :PROPERTIES:
+  :CUSTOM_ID: gnu-global-ctags-and-emacs-setup
+  :END:
+
+** Universal ctags (newer)
+
+I'm now using universal [[https://ctags.io/][ctags]], as recommended by [[https://github.com/redguardtoo/counsel-etags][counsel-etags]].
+
+From universal ctag's [[https://docs.ctags.io/en/latest/osx.html][Building on Mac OS]]:
+
+#+begin_src sh
+  brew tap universal-ctags/universal-ctags
+  brew install --HEAD universal-ctags
+#+end_src
+
+.ctags
+
+#+begin_src fundamental
+  --langdef=swift
+  --langmap=swift:+.swift
+
+  --kinddef-swift=v,variable,variables
+  --kinddef-swift=f,function,functions
+  --kinddef-swift=s,struct,structs
+  --kinddef-swift=c,class,classes
+  --kinddef-swift=p,protocol,protocols
+  --kinddef-swift=e,enum,enums
+  --kinddef-swift=t,typealias,typealiases
+
+  --regex-swift=/(var|let)[ \t]+([^:=]+).*$/\2/v/
+  --regex-swift=/func[ \t]+([^\(\)]+)\([^\(\)]*\)/\1/f/
+  --regex-swift=/struct[ \t]+([^:\{]+).*$/\1/s/
+  --regex-swift=/class[ \t]+([^:\{]+).*$/\1/c/
+  --regex-swift=/protocol[ \t]+([^:\{]+).*$/\1/p/
+  --regex-swift=/enum[ \t]+([^:\{]+).*$/\1/e/
+  --regex-swift=/(typealias)[ \t]+([^:=]+).*$/\2/v/
+#+end_src
+
+** Exuberant ctags (older/buggy?)
+
+Install gnu global (ensure homebrew uses --with-exuberant-ctags flag).
+
+  #+begin_src sh
+    brew install global
+    brew install ctags
+    pip install pygments
+  #+end_src
+
+.ctags
+
+#+begin_src fundamental
+--langdef=swift
+--langmap=swift:.swift
+--regex-swift=/[[:<:]]class[[:>:]][[:space:]]+([[:alnum:]_]+)/\1/c,class/
+--regex-swift=/[[:<:]]enum[[:>:]][[:space:]]+([[:alnum:]_]+)/\1/e,enum/
+--regex-swift=/[[:<:]]func[[:>:]][[:space:]]+([[:alnum:]_]+)/\1/f,function/
+--regex-swift=/[[:<:]]protocol[[:>:]][[:space:]]+([[:alnum:]_]+)/\1/P,protocol/
+--regex-swift=/[[:<:]]struct[[:>:]][[:space:]]+([[:alnum:]_]+)/\1/s,struct/
+--regex-swift=/[[:<:]]typealias[[:>:]][[:space:]]+([[:alnum:]_]+)/\1/t,typealias/
+#+end_src
+
+.globalrc
+
+#+begin_src fundamental
+  default:\
+      :tc=pygments:
+
+  ctags:\
+      :tc=exuberant-ctags:
+
+  exuberant-ctags|plugin-example|setting to use Exuberant Ctags plug-in parser:\
+      :tc=common:\
+      :ctagscom=ctags:\
+      :ctagslib=$libdir/gtags/exuberant-ctags.la:\
+      :langmap=Swift\:.swift:\
+      :gtags_parser=Swift\:$ctagslib:
+
+  pygments:\
+      :tc=pygments-parser:
+
+  pygments-parser|Pygments plug-in parser:\
+      :langmap=Swift\:.swift:\
+      :gtags_parser=Swift\:$pygmentslib:\
+      :langmap=Common-Lisp\:.cl.lisp.el:\
+      :gtags_parser=Common-Lisp\:$pygmentslib:\
+      :langmap=Python\:.py.pyw.sc.tac.sage:\
+      :gtags_parser=Python\:$pygmentslib:\
+      :langmap=Ruby\:.rb.rbw.rake.gemspec.rbx.duby:\
+      :gtags_parser=Ruby\:$pygmentslib:\
+      :langmap=Objective-C++\:.mm.hh:\
+      :gtags_parser=Objective-C++\:$pygmentslib:\
+      :langmap=Objective-C\:.m.h:\
+      :gtags_parser=Objective-C\:$pygmentslib:\
+      :ctagscom=ctags:\
+      :pygmentslib=$libdir/gtags/pygments-parser.la:\
+      :tc=common:
+
+  common:\
+      :skip=build/,HTML/,HTML.pub/,tags,TAGS,ID,y.tab.c,y.tab.h,gtags.files,cscope.files,cscope.out,cscope.po.out,cscope.in.out,SCCS/,RCS/,CVS/,CVSROOT/,{arch}/,autom4te.cache/,*.orig,*.rej,*.bak,*~,#*#,*.swp,*.tmp,*_flymake.*,*_flymake,*.o,*.a,*.so,*.lo,*.zip,*.gz,*.bz2,*.xz,*.lzh,*.Z,*.tgz,*.min.js,*min.css:
+#+end_src
+
+#+begin_src emacs-lisp
+  (use-package counsel-gtags
+    :ensure t
+    :commands counsel-gtags-mode
+    :bind (:map
+           counsel-gtags-mode-map
+           ("M-." . counsel-gtags-dwim)
+           ("M-," . counsel-gtags-go-backward))
+    :hook ((swift-mode . counsel-gtags-mode)
+           (swift-mode . ggtags-mode)))
+
+  ;; Needs .ctags and .globalrc in $HOME.
+  (use-package ggtags
+    :ensure t
+    :commands ggtags-mode)
+#+end_src
+
+Helpful references
+
+https://github.com/osdakira/dotfiles/blob/395640726d669674496a8035458840f0742e54a5/gtags.conf
+https://github.com/NicholasTD07/dotfiles/blob/e66eb05b408fbcb0d47994fc8a0a79bf438b9e03/.globalrc
+https://github.com/NicholasTD07/dotfiles/blob/master/.ctags
+https://github.com/sg2002/gtags.conf-tutorial/blob/master/gtags.conf
+https://aozsky.com/swift/swift_ide
+
+* [2019-05-29 Wed] mu4e as macOS mail composer
+  :PROPERTIES:
+  :CUSTOM_ID: mu4e-as-macos-mail-composer
+  :END:
+Via [[https://www.reddit.com/r/emacs/comments/6lh2pp/using_emacs_as_default_mailer_on_macos][Using Emacs as Default Mailer on macOS]], a tiny script to handle mailto: links.
+
+From //Script Editor/, save following script as Application (MailOnEmacs.app). From Mail.app, /Preferences -> Default email reader/ and chosse MailOnEmacs.app.
+
+#+begin_src
+  on open location myurl
+          tell application "Emacs" to activate
+          set text item delimiters to {":"}
+          do shell script "/path/to/emacsclient --eval '(browse-url-mail \"" & myurl & "\")'"
+  end open location
+#+end_src
+
+* [2019-05-26 Sun] New sudo user snippet
+  :PROPERTIES:
+  :CUSTOM_ID: new-sudo-user-snippet
+  :END:
+I don't add linux sudoers frequently enough. Always looking it up. Keeping snippet.
+#+begin_src sh
+  adduser -m -d /home/<username> <username>
+  passwd <username>
+  usermod -aG sudo <username>
+#+end_src
+* [2019-05-24 Fri] Plotting ledger reports in org
+  :PROPERTIES:
+  :CUSTOM_ID: plotting-ledger-reports-in-org
+  :END:
+** My ledger file
+
+Save path to [[file:plotting-ledger-reports-in-org/my.ledger][my.ledger]] in /ledger-file/ block.
+
+#+begin_src org :exports src
+  ,#+name: ledger-file
+  ,#+begin_src emacs-lisp
+  "my.ledger"
+  ,#+end_src
+#+end_src
+
+** gnuplot terminal (png or qt)
+
+Select gnuplot terminal. Using png to output images, but qt is handy too for interactive chart inspection.
+
+#+begin_src org :exports src
+Use png for inline or qt for interactive
+,#+name: gnuplot-term
+,#+begin_src emacs-lisp
+"png"
+,#+end_src
+#+end_src
+
+** Monthly Income and Expenses
+
+Generate income report.
+
+#+begin_src org :exports src
+,#+name: income-data
+,#+begin_src bash :results table :noweb yes
+  ledger -f <<<ledger-file>>> -j reg ^Income -M --collapse --plot-amount-format="%(format_date(date, \"%Y-%m-%d\")) %(abs(quantity(scrub(display_amount))))\n"
+,#+end_src
+#+end_src
+
+Generate expenses report.
+
+#+begin_src org :exports src
+,#+name: expenses-data
+,#+begin_src sh :results table :noweb yes
+  ledger -f <<<ledger-file>>> -j reg ^Expenses -M --collapse
+,#+end_src
+#+end_src
+
+Plot income vs expenses.
+
+#+begin_src gnuplot :noweb yes :var myterm=gnuplot-term income=income-data expenses=expenses-data :exports both :file monthly-income-and-expenses.png
+set terminal myterm size 3500,1500
+set style data histogram
+set style histogram clustered gap 1
+set style fill transparent solid 0.4 noborder
+set xtics nomirror scale 0 center
+set ytics add ('' 0) scale 0
+set border 1
+set grid ytics
+set title "Monthly Income and Expenses"
+set ylabel "Amount"
+plot income using 2:xticlabels(strftime('%b', strptime('%Y-%m-%d', strcol(1)))) title "Income" linecolor rgb "light-salmon", '' using 0:2:2 with labels left font "Courier,8" rotate by 15 offset -4,0.5 textcolor linestyle 0 notitle, expenses using 2 title "Expenses" linecolor rgb "light-green", '' using 0:2:2 with labels left font "Courier,8" rotate by 15 offset 0,0.5 textcolor linestyle 0 notitle
+#+end_src
+
+* [2019-05-21 Tue] Changing MAC address in org
+  :PROPERTIES:
+  :CUSTOM_ID: changing-mac-address-from-org-mode
+  :END:
+Via Minko Gechev's [[https://twitter.com/mgechev/status/1130441471105093632?s=12][tweet]]. Saving in an org block, just because...
+
+  #+begin_src sh :dir /sudo::
+    changeMAC() {
+        local mac=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
+        ifconfig en0 ether $mac
+        ifconfig en0 down
+        ifconfig en0 up
+        echo "Your new physical address is $mac"
+    }
+
+    changeMAC
+  #+end_src
+
+  #+RESULTS:
+  : Your new physical address is aa:36:ee:d2:ee:66
+
+ps. Also see [[http://xenodium.com/execute-org-blocks-as-root/][Execute org blocks as root]].
+
+* [2019-05-17 Fri] Charting bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: charting-bookmarks
+  :END:
+- [[https://github.com/kroitor/asciichart][asciichart: Nice-looking lightweight console ASCII line charts ╭┈╯ for NodeJS and browsers with no dependencies]].
+- [[https://github.com/guptarohit/asciigraph][asciigraph: Go package to make lightweight ASCII line graph]].
+- [[https://github.com/mkaz/termgraph][Termgraph: a python command-line tool which draws basic graphs in the terminal]].
+
+* [2019-05-11 Sat] Building swift-format
+  :PROPERTIES:
+  :CUSTOM_ID: building-swift-format
+  :END:
+Trying out [[https://github.com/google/swift][Google's swift-format]]. Build with:
+
+  #+begin_src sh
+  git clone -b swift-5.2-branch https://github.com/apple/swift-format.git
+  cd swift-format
+  swift build
+  #+end_src
+
+#+begin_src sh :results verbatim :exports both
+  .build/x86_64-apple-macosx/debug/swift-format --help
+#+end_src
+
+#+RESULTS:
+#+begin_example
+OVERVIEW: Format or lint Swift source code.
+
+USAGE: swift-format [options] <filename or path> ...
+
+OPTIONS:
+  --configuration         The path to a JSON file containing the configuration of the linter/formatter.
+  --in-place, -i          Overwrite the current file when formatting ('format' mode only).
+  --mode, -m              The mode to run swift-format in. Either 'format', 'lint', or 'dump-configuration'.
+  --recursive, -r         Recursively run on '.swift' files in any provided directories.
+  --version, -v           Prints the version and exists
+  --help                  Display available options
+
+POSITIONAL ARGUMENTS:
+  filenames or paths      One or more input filenames
+#+end_example
+
+UPDATE: Now uses swift-5.2-branch (for Xcode 11.4), according to [[https://github.com/apple/swift-format#matching-swift-format-to-your-swift-version][Matching swift-format to Your Swift Version]].
+
+* [2019-05-06 Mon] Ledger query snippets
+  :PROPERTIES:
+  :CUSTOM_ID: ledger-query-snippets
+  :END:
+** Expenses paid in cash between two dates
+    #+begin_src sh
+    ledger -f my.ledger reg "^Expenses" and expr 'any(account=~/Assets:Cash:Wallet/)' -b 02/19 -e 04/09
+    #+end_src
+** Bank account income between two dates
+    #+begin_src sh
+    ledger -f my.ledger reg "^Assets:Bank:Acme" and expr "amount > 0" -b 02/19 -e 04/09
+    #+end_src
+** Formatting reg output
+    #+begin_src sh
+    ledger -f my.ledger reg "^Assets:Bank:Acme" --format="%(payee) %(amount)\n"
+    #+end_src
+* [2019-05-04 Sat] Batch file renaming with counsel, find-dired, and wdired
+  :PROPERTIES:
+  :CUSTOM_ID: batch-renaming-with-counsel-find-dired-and-wdired
+  :END:
+The first time I saw [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Wdired.html][wdired]] in action, it blew my mind. wdired makes [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html#Dired][dired]] (directory editor) buffers writeable, so you can edit them like any other Emacs buffer. You can subsequently use all your favorite file-editing tricks to rename files (amongst other things). You can see it in action at the end of [[http://emacsrocks.com/e16.html][Emacs Rocks episode 16]].
+
+When combining [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired-and-Find.html][find-dired]] with wdired, one can easily find matching files and quickly batch rename them using something like [[https://github.com/magnars/multiple-cursors.el][multiple cursors]] or [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html][keyboard macros]]. I've been a fan of the /find-dired/ -> /dired-toggle-read-only/ -> /mc/mark-all-like-this/ workflow for quite some time, but I always wished I could adjust /find-dired/ queries a little quicker by getting immediate feedback.
+
+Completion frontends like [[https://github.com/abo-abo/swiper][ivy]] and [[https://github.com/emacs-helm/helm][helm]] are perfect for getting this kind of immediate feedback. Peeking into ivy's [[https://github.com/abo-abo/swiper/blob/master/counsel.el][counsel source]], I borrowed some ideas to glue counsel-style narrowing on a find command, which I can easily translate to a writeable dired buffer for all that joyful-mutiple-cursor-editing experience.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/batch-renaming-with-counsel-find-dired-and-wdired/counsel-find.gif]]
+
+The code for /ar/counsel-find/ is a little rough but can be found at [[https://github.com/xenodium/dotsies/blob/master/emacs/ar/ar-counsel-find.el][here]].
+
+* [2019-04-26 Fri] VPS bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: vps-bookmarks
+  :END:
+- [[https://www.scaleway.com][Scaleway: Scalable Cloud Platform Designed for Developers]].
+- [[https://www.vultr.com][Vultr]].
+* [2019-04-22 Mon] Svelte bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: svelte-bookmarks
+  :END:
+- [[https://svelte.dev/blog/svelte-3-rethinking-reactivity][Svelte 3: Rethinking reactivity]].
+- [[https://svelte.dev/blog/write-less-code][Write less code (metric you're not paying attention to)]].
+* [2019-04-16 Tue] Mark region, indent, restore location
+  :PROPERTIES:
+  :CUSTOM_ID: mark-region-indent-restore-location
+  :END:
+When I'm not using an automatic code formatter (ie. clang-format, gofmt, etc.), I often find myself using Emacs region marking commands like /mark-defun/, /er/expand-region/, and /mark-whole-buffer/ prior to pressing <tab>, which is bound to /indent-for-tab-command/.
+
+This is all working as expected: the selection gets indented and the point is left in the current location.
+
+Say we have the following snippet we'd like to indent.
+
+[[file:images/mark-region-indent-restore-location/before.png]]
+
+Mark region with C-M-h (mark-defun)
+
+[[file:images/mark-region-indent-restore-location/selection.png]]
+
+Indent with <tab> (indent-for-tab-command)
+
+[[file:images/mark-region-indent-restore-location/basic-indent.png]]
+
+We're done. The selected function is now indented as expected.
+
+But... I always wished the point returned to the location prior to initiating the region-marking command, in this case /mark-defun/.
+
+In short, I wish the point had ended in the following location.
+
+[[file:images/mark-region-indent-restore-location/smart-indent.png]]
+
+I'm not aware of an existing package that helps with this, so here's a tiny minor mode (divert-mode) to help with restoring point location after indenting a region. The /diverted-events/ variable can be used to track specific region selecting commands and associate breadcrumb functions to replace the point location as needed.
+
+ #+begin_src emacs-lisp
+   ;;; diverted.el --- Identify temporary diversions and automatically
+   ;;; move point back to original location.
+
+   ;;; Commentary:
+   ;; Automatically come back to a original location prior to diversion.
+
+
+   ;;; Code:
+
+   (require 'cl)
+   (require 'seq)
+
+   (defstruct diverted-event
+     from ;; Initial function (eg. 'mark-defun)
+     to ;; Follow-up function (eg. 'indent-for-tab-command)
+     breadcrumb)
+
+   (defvar diverted-events
+     (list
+      (make-diverted-event :from 'mark-defun
+                           :to 'indent-for-tab-command
+                           :breadcrumb (lambda ()
+                                         (diverted--pop-to-mark-command 2)))
+      (make-diverted-event :from 'er/expand-region
+                           :to 'indent-for-tab-command
+                           :breadcrumb (lambda ()
+                                         (diverted--pop-to-mark-command 2)))
+      (make-diverted-event :from 'mark-whole-buffer
+                           :to 'indent-for-tab-command
+                           :breadcrumb (lambda ()
+                                         (diverted--pop-to-mark-command 2))))
+     "Diversion events to look for.")
+
+   (defun diverted--resolve (symbol)
+     "Resolve SYMBOL to event."
+     (seq-find (lambda (event)
+                 (equal symbol
+                        (diverted-event-from event)))
+               diverted-events))
+
+   (defun diverted--pop-to-mark-command (n)
+     "Invoke `pop-to-mark-command' N number of times."
+     (dotimes (_ n)
+       (pop-to-mark-command)))
+
+   (defun diverted--advice-fun (orig-fun &rest r)
+     "Get back to location prior to diversion using advice around `diverted-events' (ORIG-FUN and R)."
+     (let ((recognized-event (diverted--resolve last-command)))
+       (when recognized-event
+         (funcall (diverted-event-breadcrumb recognized-event))
+         (message "Breadcrumbed prior to `%s'"
+                  (diverted-event-from recognized-event)))))
+
+   (defun diverted-mode-enable ()
+     "Enable diverted-mode."
+     (interactive)
+     (diverted-mode-disable)
+     (mapc (lambda (event)
+             (advice-add (diverted-event-to event)
+                         :after
+                         'diverted--advice-fun)
+             (message "Looking for `%s' after `%s' diversions."
+                      (diverted-event-to event)
+                      (diverted-event-from event)))
+           diverted-events)
+     (message "diverted-mode enabled"))
+
+   (defun diverted-mode-disable ()
+     "Disable diverted-mode."
+     (interactive)
+     (mapc (lambda (event)
+             (advice-remove (diverted-event-to event)
+                            'diverted--advice-fun)
+             (message "Ignoring `%s' after `%s' diversions."
+                      (diverted-event-to event)
+                      (diverted-event-from event)))
+           diverted-events)
+     (message "diverted-mode disabled"))
+
+   (define-minor-mode diverted-mode
+     "Detect temporary diversions and restore point location."
+     :init-value nil
+     :lighter " diverted"
+     :global t
+     (if diverted-mode
+         (diverted-mode-enable)
+       (diverted-mode-disable)))
+
+   (provide 'diverted)
+
+   ;;; diverted.el ends here
+ #+end_src
+
+UPDATE(2019-04-20): Source [[https://github.com/xenodium/dotsies/blob/master/emacs/ar/diverted.el][on github]].
+
+* [2019-04-14 Sun] Wider web bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: wider-web-bookmarks
+  :END:
+  :MODIFIED:
+  [2019-04-14 Sun]
+  :END:
+- [[https://attic.city/][Attic: Search Hundreds of Small and Local Stores and Boutiques]].
+- [[https://awesomelists.top/][Awesome Search]].
+- [[https://indieseek.xyz/links/][Indieseek.xyz Directory]].
+- [[https://millionshort.com/][Million Short - What haven't you found?]].
+- [[https://pinboard.in/search/][Pinboard: social bookmarking for introverts]].
+- [[https://lite.qwant.com/][Qwant Lite]].
+- [[https://www.startpage.com][Startpage (claims most private seatch engine)]].
+- [[http://ubu.com/][UbuWeb]].
+- [[https://wiby.me/][wiby.me - the search engine for classic websites]].
+- [[https://www.wikiart.org/][WikiArt.org - Visual Art Encyclopedia]].
+* [2019-04-14 Sun] Compound interest calculations
+  :PROPERTIES:
+  :CUSTOM_ID: compound-interest-calculations
+  :END:
+
+Saving [[https://twitter.com/tonytechwriter][Tony Bedford's]] python snippets for [[https://coffeeandcode.neocities.org/financial-calculations-1.html][calculating compound interest]]. Really just an excuse to fire up Emacs and play with org babel.
+
+  #+begin_src python :results output :exports both
+    t = 20 # years
+    r = 0.07 # rate
+    pv = 200000.00 # present value
+    fv = pv * (1+r)**t # future value
+    print("Pension of %.2f at %d%% will be worth %.2f in %d years" % (pv, 100 * r, fv, t))
+  #+end_src
+
+  #+RESULTS:
+  : Pension of 200000.00 at 7% will be worth 773936.89 in 20 years
+
+
+  #+begin_src python :results output :exports both
+    t = 20 # years
+    r = 0.07 # rate
+    pv = 200000.00 # present value
+    n = 1
+    fv = pv * (1 + r/n)**(n*t) # future value
+    print ("First formula calculates final value to: %.2f" % fv)
+
+    fv = pv * (1 + r/n)**(n*1) # year 1 only
+    print("Year %d: %.2f" % (1, fv))
+    for i in range (2, t+1):
+        fv = fv * (1 + r/n)**(n*1) # Calculate one year at a time
+        print("Year %d: %.2f" % (i, fv))
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  First formula calculates final value to: 773936.89
+  Year 1: 214000.00
+  Year 2: 228980.00
+  Year 3: 245008.60
+  Year 4: 262159.20
+  Year 5: 280510.35
+  Year 6: 300146.07
+  Year 7: 321156.30
+  Year 8: 343637.24
+  Year 9: 367691.84
+  Year 10: 393430.27
+  Year 11: 420970.39
+  Year 12: 450438.32
+  Year 13: 481969.00
+  Year 14: 515706.83
+  Year 15: 551806.31
+  Year 16: 590432.75
+  Year 17: 631763.04
+  Year 18: 675986.46
+  Year 19: 723305.51
+  Year 20: 773936.89
+  #+end_example
+
+* [2019-04-11 Thu] Building mu/mu4e on macOS
+  :PROPERTIES:
+  :CUSTOM_ID: building-mumu4e-on-macos
+  :END:
+
+I've now built Emacs's [[http://www.djcbsoftware.nl/code/mu/][mu/mu4e]] releases a handful of times on macOS. These are the steps, so I don't forget.
+
+** 1.4
+Updated steps for building [[http://www.djcbsoftware.nl/code/mu/][mu/mu4e]] 1.4:
+
+#+begin_src sh
+  brew install gmime
+  export CPPFLAGS="-I$(brew --prefix)/Cellar/gmime/3.2.3/include -I$(brew --prefix)/include"
+  export LDFLAGS=-L$(brew --prefix)/Cellar/gmime/3.2.3/lib
+  export PKG_CONFIG_PATH=$(brew --prefix)/Cellar/gmime/3.2.3/lib/pkgconfig:$(brew --prefix)/opt/libffi/lib/pkgconfig
+  export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
+  ./configure --prefix=$(~/local)
+  make install
+#+end_src
+** 1.2
+Recently built Emacs's [[http://www.djcbsoftware.nl/code/mu/][mu/mu4e]] 1.2.0 from source on macOS. Steps:
+
+#+begin_src sh
+  brew install gmime
+  export CPPFLAGS=-I$(brew --prefix)/Cellar/gmime/3.2.3/include
+  export LDFLAGS=-L$(brew --prefix)/Cellar/gmime/3.2.3/lib
+  export PKG_CONFIG_PATH=$(brew --prefix)/Cellar/gmime/3.2.3/lib/pkgconfig:$(brew --prefix)/opt/libffi/lib/pkgconfig
+  ./configure --prefix=$(~/local) --disable-dependency-tracking
+  make install
+#+end_src
+
+UPDATE(2019-04-16): Another approach at Irreal's [[https://irreal.org/blog/?p=7976][Mu/mu4e 1.2 Available]].
+
+* [2019-03-30 Sat] Reading spreadsheets with python/pandas
+  :PROPERTIES:
+  :CUSTOM_ID: reading-spreadsheets-with-pythonpandas
+  :END:
+
+Via [[https://twitter.com/python_tip/status/1111349676106833920][Daily python tip]], a snippet to read xls files in python. This will come in handy. Saving for future.
+
+Get set up with:
+
+#+begin_src sh
+  pip install pandas
+  pip install xlrd
+#+end_src
+
+Read with:
+
+#+begin_src python :results output :exports both
+  import pandas
+  xlf = pandas.ExcelFile("sheet.xlsx")
+  print xlf.sheet_names
+#+end_src
+
+#+RESULTS:
+: [u'my sheet']
+
+* [2019-03-17 Sun] Inserting numbers with Emacs multiple cursors
+  :PROPERTIES:
+  :CUSTOM_ID: inserting-numbers-with-emacs-multiple-cursors
+  :END:
+  TIL that multiple cursor's /mc/insert-numbers/ enables you to quickly enter increasing numbers for each cursor. I have /mc/insert-numbers/ bound to # in /region-bindings-mode-map./ By default, sequence starts at 0, but invoking /mc/insert-numbers/ with prefix enables you to quickly change that.
+
+  Came in handy when numbering an org table:
+
+[[file:images/inserting-numbers-with-emacs-multiple-cursors/mc-number.gif]]
+
+* [2019-03-17 Sun] Brazil travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: brazil-travel-bookmarks
+  :END:
+  - [[http://www.uxua.com/][UXUA Casa Hotel and Spa in Trancoso, Brazil]].
+* [2019-03-17 Sun] Bath travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: bath-travel-bookmarks
+  :END:
+  - [[https://www.yelp.com/biz/beas-vintage-tea-rooms-bath][Beas Vintage Tea Rooms (Yelp)]].
+* [2019-03-17 Sun] Half marathon training
+  :PROPERTIES:
+  :CUSTOM_ID: half-marathon-training
+  :END:
+
+From https://assets.bupa.co.uk/~/media/images/healthmanagement/pdfs/half-marathon-beginner.pdf
+
+Starting from week 4:
+
+| Week | Monday | Tuesday      | Wednesday     | Thursday | Friday                 | Saturday | Sunday          |
+|------+--------+--------------+---------------+----------+------------------------+----------+-----------------|
+|    4 | *Rest*   | *40 mins easy* | *30 mins tempo* | *Rest*     | *40 mins cross*          | *Rest*     | *(03/24) 60 mins* |
+|      |        | 6.7 km       | 5.1 Km        |          | -                      |          | -               |
+|      |        | 41:51 m      | 30:00 m       |          |                        |          |                 |
+|      |        | 61.3 Kg      | 60.8 Kg       |          |                        |          |                 |
+|------+--------+--------------+---------------+----------+------------------------+----------+-----------------|
+|    5 | *Rest*   | *40 mins easy* | *30 mins tempo* | *Rest*     | *40 mins interval*       | *Rest*     | *(03/31) 11 Km*   |
+|      |        | 11.9 Km      | -             |          | 5.99 Km                |          | 11.0 Km         |
+|      |        | 80:00 m      |               |          | 40 m                   |          | 60:08 m         |
+|------+--------+--------------+---------------+----------+------------------------+----------+-----------------|
+|    6 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 40 mins interval/cross | Rest     | (04/07) 13 Km   |
+|    7 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 40 mins interval       | Rest     | (04/14) 60 mins |
+|    8 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 50 mins interval/cross | Rest     | (04/21) 16 Km   |
+|    9 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 50 mins interval       | Rest     | (04/28) 8 Km    |
+|   10 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 40 mins interval/cross | Rest     | (05/05) 19 Km   |
+|   11 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 40 mins interval       | Rest     | (05/12) 10 Km   |
+|   12 | Rest   | 40 mins easy | 30 mins tempo | Rest     | 50 mins easy           | Rest     | (05/19) Race    |
+
+* [2019-03-16 Sat] No Emacs frame refocus on macOS
+  :PROPERTIES:
+  :CUSTOM_ID: no-emacs-frame-refocus-on-macos
+  :END:
+  This one's been bugging me for a while. On macOS, Emacs automatically focuses (raises) other frames when one is closed.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/no-emacs-frame-refocus-on-macos/before.gif]]
+
+  This has the unfortunate side-effect that I could be moved from one macOS desktop/space to another when closing an Emacs frame.
+
+  Finally managed do something about it. Since I install Emacs on macOS via homebrew, a +[[https://github.com/xenodium/homebrew-emacs-plus/commit/79a8e98b222fa262746f6db620ddd1fdb151ece9][small patch on emacs-plus recipe]]+ [[https://github.com/d12frosted/homebrew-emacs-plus/pull/122/commits/71bf246930bfedb337bcc0e21587ccbbb917e5bf][small patch on emacs-plus recipe]] did the job.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/no-emacs-frame-refocus-on-macos/after.gif]]
+
+  UPDATE: Pull request [[https://github.com/d12frosted/homebrew-emacs-plus/pull/122][merged]] in d12frosted/emacs-plus.
+
+  The +[[https://github.com/xenodium/homebrew-emacs-plus/commit/79a8e98b222fa262746f6db620ddd1fdb151ece9][patch]]+ [[https://github.com/d12frosted/homebrew-emacs-plus/pull/122/commits/71bf246930bfedb337bcc0e21587ccbbb917e5bf][patch]] has been merged into [[https://github.com/d12frosted/homebrew-emacs-plus][d12frosted/homebrew-emacs-plus]]. To use:
+
+#+begin_src sh
+  brew tap d12frosted/emacs-plus
+  brew install emacs-plus --without-spacemacs-icon --with-no-frame-refocus
+#+end_src
+
+  Balance restored.
+
+* [2019-03-16 Sat] Checksums on linux/macOS
+  :PROPERTIES:
+  :CUSTOM_ID: checksums-on-linuxmacos
+  :END:
+** MD5
+    #+begin_src sh
+      md5 file
+    #+end_src
+** SHA-1
+    #+begin_src sh
+      shasum -a 1 file
+    #+end_src
+** SHA-256
+    #+begin_src sh
+      shasum -a 256 file
+    #+end_src
+* [2019-03-12 Tue] Language server protocol (LSP) bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: language-server-protocol-lsp-bookmarks
+  :END:
+  :MODIFIED:
+  [2019-04-14 Sun]
+  :END:
+- [[https://github.com/eclipse/eclipse.jdt.ls][Eclipse JDT Language Server]].
+- [[https://github.com/emacs-lsp/lsp-java][Emacs Java IDE using Eclipse JDT Language Server]].
+- [[https://github.com/vscode-langservers/vscode-html-languageserver-bin][vscode-html-languageserver extracted from VSCode]].
+* [2019-02-24 Sun] Copy from desktop to mobile via QR code
+  :PROPERTIES:
+  :CUSTOM_ID: copy-from-desktop-to-mobile-via-qr-code
+  :END:
+[[https://twitter.com/marcin_mbork][Marcin Borkowski]] has a nice [[http://mbork.pl/2019-02-24_Transferring_strings_to_a_phone_via_QR_codes][tip]] to quickly copy text or URLs between desktop and mobile using QR codes.
+
+Wrote a little elisp to do a similar thing using the clipboard via Emacs:
+
+#+begin_src emacs-lisp
+  (defun ar/misc-clipboard-to-qr ()
+    "Convert text in clipboard to qrcode and display within Emacs."
+    (interactive)
+    (let ((temp-file (concat (temporary-file-directory) "qr-code")))
+      (if (eq 0 (shell-command (format "qrencode -s10 -o %s %s"
+                                       temp-file
+                                       (shell-quote-argument (current-kill 0)))
+                               "*qrencode*"))
+          (switch-to-buffer (find-file-noselect temp-file t))
+        (error "Error: Could not create qrcode, check *qrencode* buffer"))))
+#+end_src
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/copy-from-desktop-to-mobile-via-qr-code/qrencode.gif]]
+
+ps. [[https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/][Encoding your WiFi access point password into a QR code]] shows how to encode WiFi access point passwords:
+
+#+begin_src sh
+  qrencode -o wifi.png "WIFI:T:WPA;S:<SSID>;P:<PASSWORD>;;"
+#+end_src
+
+More comprehensively:
+
+#+begin_src sh
+  SSID=SSID_GOES_HERE
+  pwgen -s 63 > 00wifi.txt
+  qrencode -o 00wifi.png "WIFI:T:WPA;S:${SSID};P:$(cat 00wifi.txt);;"
+#+end_src
+
+* [2019-02-19 Tue] Parsing dates in Go
+  :PROPERTIES:
+  :CUSTOM_ID: parsing-dates-in-go
+  :END:
+  Ensure the reference time ("Mon Jan 2 15:04:05 -0700 MST 2006") is used in layout string.
+
+  For example:
+
+  #+begin_src go :results verbatim :exports both
+    package main
+
+    import (
+            "fmt"
+            "time"
+    )
+
+    func main() {
+            goodLayout := "January 2 2006"
+            if t, err := time.Parse(goodLayout, "March 10 2019"); err != nil {
+                        fmt.Printf("%s\n", err)
+            } else {
+                        fmt.Printf("%v\n", t)
+            }
+
+            badLayout := "January 2 2009"
+            if t, err := time.Parse(badLayout, "March 10 2019"); err != nil {
+                        fmt.Printf("%s\n", err)
+            } else {
+                        fmt.Printf("%v\n", t)
+            }
+    }
+  #+end_src
+
+  #+RESULTS:
+  : 2019-03-10 00:00:00 +0000 UTC
+  : parsing time "March 10 2019" as "January 2 2009": cannot parse "19" as "009"
+
+* [2019-02-13 Wed] Life in the UK bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: life-in-the-uk-bookmarks
+  :END:
+  :MODIFIED:
+  [2019-02-13 Wed]
+  :END:
+- [[https://textuploader.com/5yfk0]['LitUK': notes by a Redditor (TextUploader.com)]].
+- [[https://lifeintheuktestweb.co.uk/][Life In The UK Test, Practice Tests 2017]].
+* [2019-02-10 Sun] C language bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: c-language-bookmarks
+  :END:
+- [[https://littlevgl.com/][LittlevGL - Open-source Embedded GUI Library]].
+* [2019-02-10 Sun] Video editing bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: video-editing-bookmarks
+  :END:
+:MODIFIED:
+[2020-12-31 Thu]
+:END:
+- [[https://bernd.dev/2020/04/adding-subtitles/][Adding subtitles to your videos the easy way - Bernd Verst]].
+- [[https://lars.ingebrigtsen.no/2019/02/14/adventures-in-netflix/][Adventures in Netflix (screenshotting HDMI)]].
+- [[https://blog.gregzaal.com/2014/05/30/camera-stabilisation-with-ffmpeg/][Camera Stabilisation with FFmpeg - Adaptive Samples]].
+- [[https://www.blackmagicdesign.com/products/davinciresolve/][DaVinci Resolve 17 | Blackmagic Design]].
+- [[https://www.digikam.org/news/2020-07-19-7.0.0_release_announcement/][digiKam]].
+- [[https://dragonquest64.blogspot.com/2019/11/non-rectangular-video-cropping.html][Dragon Quest 64: Non-Rectangular Video Cropping]].
+- [[https://superuser.com/questions/1270950/ffmpeg-how-to-achieve-a-circular-video-overlay][FFmpeg - How to achieve a circular video overlay..?]].
+- [[https://github.com/mifi/lossless-cut][GitHub - mifi/lossless-cut: The swiss army knife of lossless video/audio editing]].
+- [[https://github.com/moxuse/kusabi][GitHub - moxuse/Kusabi: Coding environment 3D graphics with PureScript.]].
+- [[https://github.com/whyboris/Video-Hub-App][GitHub - whyboris/Video-Hub-App: Official repository for Video Hub App 2]].
+- [[https://www.youtube.com/watch?v=tYytVzbPky8][HOW TO DATAMOSH: PART 1 - YouTube]].
+- [[https://news.ycombinator.com/item?id=22775502][How to trim video clips instantly without reencoding | Hacker News]].
+- [[http://www.linux-magazine.com/Issues/2018/206/Tutorials-FFmpeg][Inserting a Watermark with FFmpeg (Linux Magazine)]].
+- [[https://news.ycombinator.com/item?id=16192813][Learn FFmpeg the hard way (Hacker News)]].
+- [[https://news.ycombinator.com/item?id=21897293][Non-Rectangular Video Cropping with FFMpeg | Hacker News]].
+- [[https://bernd.dev/2020/04/trim-videos-instantly/][Trim Videos Instantly - Bernd Verst]].
+* [2019-02-10 Sun] Icons bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: icons-bookmarks
+  :END:
+  :MODIFIED:
+  [2019-10-04 Fri]
+  :END:
+- [[https://news.ycombinator.com/item?id=21039739][Absurd Design – Free Surrealist Illustrations and Vector Art (Hacker News)]].
+- [[http://compute.vision/nouns/index.html][Find Similar Icons (using Noun Project)]].
+- [[https://thenounproject.com/][Noun Project - Icons for Everything]].
+- [[https://t.co/ttqvpky3Te][shape.so icons]].
+- [[https://streamlineicons.com/][Streamline 3.0 – The World's Largest Icon Library]].
+* [2019-01-27 Sun] Salt beef recipe
+  :PROPERTIES:
+  :CUSTOM_ID: salt-beef-recipe
+  :END:
+  [[https://www.theguardian.com/lifeandstyle/gallery/2010/nov/03/how-to-make-salt-beef][How to make salt beef]] (use 1.8kg brisket instead) and [[https://www.theguardian.com/lifeandstyle/gallery/2010/nov/03/how-to-brine-a-brisket][brining a brisket]] (celery and peppercorns) both from The Guardian were recommended by a friend.
+* [2019-01-27 Sun] Geneva travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: geneva-travel-bookmarks
+  :END:
+- [[https://www.timeout.com/switzerland/restaurants-and-cafes/la-buvette-des-bains][La Buvette des Bains, Restaurants in Pâquis]].
+
+* [2019-01-13 Sun] Swapping Emacs ivy collections/sources
+  :PROPERTIES:
+  :CUSTOM_ID: swapping-emacs-ivy-collectionssources
+  :END:
+[[https://github.com/abo-abo/swiper][Ivy]] is great. I've been meaning to figure out a way to swap sources while running ivy. This would enable me to cycle through different sources using the existing search parameters.
+
+At first look, /'ivy-set-sources/ seemed like the right choice, but it's used during setup to agregate sources. Subsequent /'ivy-set-sources/ calls are ignored during an /'ivy-read/ session.
+
+There's an ivy [[https://github.com/abo-abo/swiper/issues/606][feature request]] over at github with a similar goal in mind. Although the feature is not yet supported, there's a handy suggestion to use /'ivy-quit-and-run/ to quit the current command and run a different one.
+
+With /'ivy-quit-and-run/ in mind, we can write our /'ar/ivy-read/ function to take a list of sources and add a little logic to cycle through them using a keybiding, in my case <left> and <right>.
+
+#+BEGIN_SRC emacs-lisp
+  ;;; -*- lexical-binding: t; -*-
+
+  (require 'cl)
+
+  (cl-defstruct
+      ar/ivy-source
+    prompt
+    collection
+    action)
+
+  (cl-defun ar/ivy-read (sources &key index initial-input)
+    (let ((kmap (make-sparse-keymap))
+          (source))
+      (cl-assert (> (length sources) 0))
+      (when (null index) (setq index 0))
+      (setq source (nth index sources))
+      (define-key kmap (kbd "<right>") (lambda ()
+                                         (interactive)
+                                         (ivy-quit-and-run (ar/ivy-read sources
+                                                                        :index (if (>= (1+ index)
+                                                                                       (length sources))
+                                                                                   0
+                                                                                 (1+ index))
+                                                                        :initial-input ivy-text))))
+      (define-key kmap (kbd "<left>") (lambda ()
+                                        (interactive)
+                                        (ivy-quit-and-run (ar/ivy-read sources
+                                                                       :index (if (< (1- index)
+                                                                                     0)
+                                                                                  (1- (length sources))
+                                                                                (1- index))
+                                                                       :initial-input ivy-text))))
+      (ivy-read (ar/ivy-source-prompt source)
+                (ar/ivy-source-collection source)
+                :action (ar/ivy-source-action source)
+                :initial-input initial-input
+                :keymap kmap)))
+
+  (defun ar/ivy-food-menu ()
+    (interactive)
+    (ar/ivy-read (list
+                  (make-ar/ivy-source :prompt "Pizza: "
+                                      :action (lambda (selection)
+                                                (message "Selected pizza: %s" selection))
+                                      :collection (lambda (str pred v)
+                                                    (list "Bianca Neve - Mozzarella, Ricotta, Sausage, Extra Virgin Olive Oil, Basil"
+                                                          "Boscaiola - Mozzarella, Tomato Sauce, Sausage, Mushrooms, Extra Virgin Olive Oil, Basil"
+                                                          "Calzone - Ricotta, Ham, Mushrooms, Artichokes. Topped with Tomato Sauce and Extra Virgin Olive Oil."
+                                                          "Capricciosa - Mozzarella,Tomato Sauce, Prosciutto Cotto Ham, Mushrooms, Artichokes, Extra Virgin Olive Oil."
+                                                          "Carciofi - Mozzarella, Tomato Sauce, Artichokes, Extra Virgin Olive Oil, Basil."
+                                                          "Diavola - Mozzarella, Tomato Sauce, Spicy Salami, Extra Virgin Olive Oil, Basil."
+                                                          "Funghi - Mozzarella, Tomato Sauce, Mushrooms, Extra Virgin Olive Oil, Basil.")))
+                  (make-ar/ivy-source :prompt "Tacos: "
+                                      :action (lambda (selection)
+                                                (message "Selected taco: %s" selection))
+                                      :collection (lambda (str pred v)
+                                                    (list "Pork pibil - Slow cooked in citrus & spices, with pink pickled onions."
+                                                          "Grilled chicken & avocado - Ancho rub, guacamole & green tomatillo salsa."
+                                                          "Plantain - Sweet & spicy chipotle & crumbled feta."
+                                                          "Poblano pepper - Caramelised onions, corn & cashew nut mole."
+                                                          "Buttermilk chicken - Served crispy fried with habanero & white onion relish & spiced mayo."
+                                                          "Sustainable battered cod - mSC certified cod with shredded slaw, chipotle mayo & pickled cucumber."
+                                                          "Chargrilled steak - Avocado & chipotle salsas.")))
+                  (make-ar/ivy-source :prompt "Burgers: "
+                                      :action (lambda (selection)
+                                                (message "Selected burger: %s" selection))
+                                      :collection (lambda (str pred v)
+                                                    (list "The cheese - Aged beef patty with american cheese, gherkins, ketchup & mustard."
+                                                          "The yeah! - Aged beef patty with american cheese, gherkins, yeah! sauce & salad."
+                                                          "The yfc or hot yfc - Crispy chicken with lime or chipotle crema, lettuce, pickled onion & slaw."
+                                                          "The rancher - Grilled chicken with ranch dressing, bacon & salad."
+                                                          "The bubbah - Aged beef patty with smokey aubergine, pickled red cabbage, lettuce, roast toms, onions & cheddar."
+                                                          "The bulgogi - Sesame-spiced beef patty with miso mayo, pickled radish, onion, cucumber & spring onion."
+                                                          "The summer - Aged beef patty with sriracha mayo, lettuce, onion, toms, avo, cheddar & bacon."))))))
+#+END_SRC
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/swapping-emacs-ivy-collectionssources/ivy-cycle-sources.gif]]
+
+ps. Menu data from [[https://starofkings.co.uk/food-and-drink/][Star of Kings]], [[https://www.wahaca.co.uk/menu/food/][Wahaca]], and [[https://pizzarino.us/menu][Pizzarino]].
+
+* [2019-01-12 Sat] Podcast bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: podcast-bookmarks
+  :END:
+  :MODIFIED:
+  [2019-01-12 Sat]
+  :END:
+- [[https://destinationlinux.org/][Destination Linux. A conversational podcast by people who love running Linux.]].
+- [[https://emacscast.org/][EmacsCast]].
+- [[http://faif.us/][Free as in Freedom]].
+- [[http://gnuworldorder.info/][Gnu World Order]].
+- [[https://latenightlinux.com/][Late Night Linux]].
+- [[https://librelounge.org/][Libre Lounge]].
+- [[https://linuxlads.com/][Linux Lads Podcast]].
+- [[https://www.thebinarytimes.net/][The Binary Times Podcast (Linux/free software/hardware/culture)]].
+- [[http://ubuntupodcast.org/][Ubuntu Podcast]].
+* [2019-01-12 Sat] Emacs on macOS Mojave
+  :PROPERTIES:
+  :CUSTOM_ID: emacs-on-macos-mojave
+  :END:
+Had issues running Emacs on macOS Mojave (blank unresponsive screen). Bleeding edge emacs-plus did the job:
+
+#+BEGIN_SRC sh
+  brew tap d12frosted/emacs-plus
+  brew install emacs-plus --without-spacemacs-icon --HEAD
+#+END_SRC
+
+#+BEGIN_SRC sh :results verbatim :exports both
+  brew info emacs-plus
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+d12frosted/emacs-plus/emacs-plus: stable 26.1, devel 26.1-rc1, HEAD
+GNU Emacs text editor
+https://www.gnu.org/software/emacs/
+/Users/some-user/homebrew/Cellar/emacs-plus/HEAD-8fe21b0 (3,985 files, 123.0MB) *
+  Built from source on 2019-01-12 at 09:26:09 with: --without-spacemacs-icon
+From: https://github.com/d12frosted/homebrew-emacs-plus/blob/master/Formula/emacs-plus.rb
+==> Dependencies
+Build: pkg-config
+Recommended: little-cms2, gnutls, librsvg, imagemagick@6
+Optional: dbus, mailutils
+==> Requirements
+Optional: x11
+==> Options
+--with-ctags
+	Don't remove the ctags executable that Emacs provides
+--with-dbus
+	Build with dbus support
+--with-emacs-icons-project-EmacsIcon1
+	Using Emacs icon project EmacsIcon1
+--with-emacs-icons-project-EmacsIcon2
+	Using Emacs icon project EmacsIcon2
+--with-emacs-icons-project-EmacsIcon3
+	Using Emacs icon project EmacsIcon3
+--with-emacs-icons-project-EmacsIcon4
+	Using Emacs icon project EmacsIcon4
+--with-emacs-icons-project-EmacsIcon5
+	Using Emacs icon project EmacsIcon5
+--with-emacs-icons-project-EmacsIcon6
+	Using Emacs icon project EmacsIcon6
+--with-emacs-icons-project-EmacsIcon7
+	Using Emacs icon project EmacsIcon7
+--with-emacs-icons-project-EmacsIcon8
+	Using Emacs icon project EmacsIcon8
+--with-emacs-icons-project-EmacsIcon9
+	Using Emacs icon project EmacsIcon9
+--with-emacs-icons-project-emacs-card-blue-deep
+	Using Emacs icon project emacs-card-blue-deep
+--with-emacs-icons-project-emacs-card-british-racing-green
+	Using Emacs icon project emacs-card-british-racing-green
+--with-emacs-icons-project-emacs-card-carmine
+	Using Emacs icon project emacs-card-carmine
+--with-emacs-icons-project-emacs-card-green
+	Using Emacs icon project emacs-card-green
+--with-mailutils
+	Build with mailutils support
+--with-modern-icon
+	Using a modern style Emacs icon by @tpanum
+--with-no-titlebar
+	Experimental: build without titlebar
+--with-pdumper
+	Experimental: build from pdumper branch and with
+         increasedremembered_data size (--HEAD only)
+--with-x11
+	Experimental: build with x11 support
+--with-xwidgets
+	Experimental: build with xwidgets support (--HEAD only)
+--without-cocoa
+	Build a non-Cocoa version of Emacs
+--without-gnutls
+	Build without gnutls support
+--without-imagemagick@6
+	Build without imagemagick@6 support
+--without-librsvg
+	Build without librsvg support
+--without-libxml2
+	Build without libxml2 support
+--without-little-cms2
+	Build without little-cms2 support
+--without-modules
+	Build without dynamic modules support
+--without-multicolor-fonts
+	Build without a patch that enables multicolor font support
+--without-spacemacs-icon
+	Build without Spacemacs icon by Nasser Alshammari
+--devel
+	Install development version 26.1-rc1
+--HEAD
+	Install HEAD version
+==> Caveats
+Emacs.app was installed to:
+  /Users/some-user/homebrew/Cellar/emacs-plus/26.1
+
+To link the application to default Homebrew App location:
+  brew linkapps
+or:
+  ln -s /Users/some-user/homebrew/Cellar/emacs-plus/26.1/Emacs.app /Applications
+
+--natural-title-bar option was removed from this formula, in order to
+  duplicate its effect add following line to your init.el file
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . dark))
+or:
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . light))
+
+If you are using macOS Mojave, please note that most of the experimental
+options are forbidden on Mojave. This is temporary decision.
+
+
+To have launchd start d12frosted/emacs-plus/emacs-plus now and restart at login:
+  brew services start d12frosted/emacs-plus/emacs-plus
+Or, if you don't want/need a background service you can just run:
+  emacs
+#+end_example
+
+* [2019-01-06 Sun] Trying out Emacs pdf tools
+  :PROPERTIES:
+  :CUSTOM_ID: trying-out-emacs-pdf-tools
+  :END:
+Late to the party, giving [[https://github.com/politza/pdf-tools][pdf-tools]] a try.
+
+The [[https://github.com/politza/pdf-tools#compiling-on-os-x][macOS install instructions]] have a prerequisite:
+
+#+BEGIN_SRC sh
+  brew install poppler automake
+#+END_SRC
+
+Installed with:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package pdf-tools
+    :ensure t
+    :mode ("\\.pdf\\'" . pdf-view-mode)
+    :config
+    (pdf-tools-install)
+    (setq-default pdf-view-display-size 'fit-page)
+    (setq pdf-annot-activate-created-annotations t))
+#+END_SRC
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/trying-out-emacs-pdf-tools/pdf-tools.png]]
+
+ps. (pdf-tools-install) may not find libffi on macOS. Try:
+
+#+begin_src emacs-lisp
+  (setenv "PKG_CONFIG_PATH"
+          (f-join
+           (file-name-as-directory
+            (nth 0
+                 (split-string
+                  (shell-command-to-string "brew --prefix"))))
+           "Cellar" "libffi" "3.2.1" "lib" "pkgconfig"))
+#+end_src
+
+* [2018-12-27 Thu] ASCII art generator bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: ascii-art-generator-bookmarks
+  :END:
+- [[http://antglove.com/erger/][𝓔𝓻𝓰𝓮𝓻𝓪𝓽𝓸𝓻/Ergerator (ascii generator)]].
+* [2018-12-26 Wed] Osaka travel bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: osaka-travel-bookmarks
+  :END:
+- [[https://www.tripadvisor.com/Attraction_Review-g298566-d1195795-Reviews-Tsutenkaku-Osaka_Osaka_Prefecture_Kinki.html][Tsutenkaku (Osaka) - 2018 All You Need to Know BEFORE You Go (with Photos) - TripAdvisor]].
+* [2018-12-25 Tue] Using OCR to create searchable pdfs from images
+  :PROPERTIES:
+  :CUSTOM_ID: using-ocr-to-create-searchable-pdfs-from-images
+  :END:
+Used my phone to take a handful of photos of an article from a magazine. Wanted to convert the images to a searchable pdf on macOS.
+
+This was straightforward, having [[http://xenodium.com/trying-out-tesseract][already installed tesseract]].
+
+#+BEGIN_SRC sh
+  for i in IMG_3*.jpg; do echo $i; tesseract $i $(basename $i .tif) pdf; done
+#+END_SRC
+
+Should now have a handful of OCR'd pdfs:
+
+#+BEGIN_SRC sh :results verbatim :exports both
+  ls *.jpg.pdf
+#+END_SRC
+
+#+RESULTS:
+: IMG_3104.jpg.pdf
+: IMG_3105.jpg.pdf
+: IMG_3106.jpg.pdf
+: IMG_3107.jpg.pdf
+
+Finally, join all pdfs into one. Turns out macOS has a handy python script already installed. We can use it as:
+
+#+BEGIN_SRC sh
+  /usr/bin/python "/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py" -o joined.pdf IMG_*pdf
+#+END_SRC
+
+ps. [[https://pdfgrep.org][pdfgrep]] is great for searching pdfs.
+
+** Useful references
+    - [[https://ryanfb.github.io/etc/2014/11/13/command_line_ocr_on_mac_os_x.html][Ryan Baumann's: Command-Line OCR with Tesseract on Mac OS X]].
+
+* [2018-12-25 Tue] Audiobook providers bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: audiobook-providers-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-01-26 Sun]
+  :END:
+- [[http://www.openculture.com/freeaudiobooks][1,000 Free Audio Books: Download Great Books for Free | Open Culture]].
+- [[http://bbcsfx.acropolis.org.uk/][BBC Sound Effects Archive Resource • Research & Education Space]].
+- [[https://libro.fm/][Libro.fm (Libro.fm, Your Independent Bookstore for Digital Audiobooks)]].
+- [[https://www.thegreatcourses.co.uk/][Online Courses & Lectures for Home Study and Lifelong Learning]].
+- [[http://www.openculture.com/][The best free cultural and educational media on the web (Open Culture)]].
+* [2018-12-25 Tue] Cookbook bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: cookbook-bookmarks
+  :END:
+  :MODIFIED:
+  [2018-12-25 Tue]
+  :END:
+- [[https://www.nancysingletonhachisu.com/the-attic-loft/][Japan: The Cookbook (Nancy Singleton Hachisu)]].
+- [[https://www.nancysingletonhachisu.com/the-woodhouse/][Japanese Farm Food (Nancy Singleton Hachisu)]].
+- [[https://www.nancysingletonhachisu.com/the-country-annex/][Preserving the Japanese Way (Nancy Singleton Hachisu)]].
+* [2018-12-25 Tue] Emailing pdfs to kindle from mu4e
+  :PROPERTIES:
+  :CUSTOM_ID: emailing-pdfs-to-kindle-from-mu4e
+  :END:
+Wanted to send a pdf to my kindle for some holiday reading. You can easily do this by emailing the pdf to your kindle-bound email address.
+
+Now, I typically attach files when composing mu4e emails by using /mml-attach-file/, which attaches the file using /<#part>...<#/part>/. However, the Amazon service did not find the attached pdf, so no pdf was added to my Kindle.
+
+Fortunately, I found a handy [[https://www.reddit.com/r/emacs/comments/97abs7/anyone_uses_mu4e_to_send_mobi_files_to_kindle][Reddit thread, leding me to a working solution]]. Wrapping the part using /<#multipart type=mixed>...<#/multipart>/ did the job, using /mml-insert-multipart/, followed by /mml-attach-file/.
+
+Resulting attachment should look something like:
+
+#+BEGIN_EXAMPLE
+  <#multipart type=mixed>
+  <#part type="application/pdf" filename="/path/to/file.pdf" disposition=attachment>
+  <#/part>
+  <#/multipart>
+#+END_EXAMPLE
+
+I should add a convenience elisp function for this, but that's for another time...
+
+* [2018-12-21 Fri] org tip: convert csv to table
+  :PROPERTIES:
+  :CUSTOM_ID: org-tip-convert-csv-to-table
+  :END:
+Needed to import some csv data to an org table. Turns out org's got you covered out of the box with /M-x org-table-create-or-convert-from-region/ bound to /C-c |/.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/org-tip-convert-csv-to-table/csv-to-org-table.gif]]
+
+* [2018-12-20 Thu] Sponsoring platform bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: sponsoring-platform-bookmarks
+  :END:
+  :MODIFIED:
+  [2018-12-25 Tue]
+  :END:
+- [[https://www.patreon.com/][Best way for artists and creators to get sustainable income and connect with fans (Patreon)]].
+- [[https://www.buymeacoffee.com/][Buy Me A Coffee — A free, fast and beautiful way for creators to monetise their content]].
+- [[https://tallyco.in/][Tallycoin is a Bitcoin fundraising platform and a Patreon alternative.]].
+* [2018-12-20 Thu] Artistic/creative bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: artisticcreative-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-09-22 Tue]
+  :END:
+- [[https://www.deviantart.com/boxtail/gallery/][BoxTail fractals (DeviantArt Gallery)]].
+- [[https://en.wikipedia.org/wiki/Fermat%27s_spiral][Fermat's spiral - Wikipedia]].
+- [[https://lostartpress.com/][Lost Art Press (woodworking books)]].
+- [[https://www.tomsachs.org][Tom Sachs (knolling exhibits)]].
+* [2018-12-20 Thu] Marketing bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: marketing-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-05-25 Mon]
+  :END:
+- [[https://news.ycombinator.com/item?id=23289185][Product Marketing for Engineers | Hacker News]].
+- [[https://www.launchaco.com/][Startup Website Builder - Launchaco]].
+* [2018-12-19 Wed] Bluetooth low energy (BLE) bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: bluetooth-low-energy-ble-bookmarks
+  :END:
+  :MODIFIED:
+  [2020-05-09 Sat]
+  :END:
+- [[http://www.frederikseiffert.de/blueutil/][blueutil » Command-Line Control of Bluetooth on the Mac]].
+- [[https://news.ycombinator.com/item?id=18704182][The Practical Guide to Hacking Bluetooth Low Energy (Hacker News)]].
+- [[https://blog.attify.com/the-practical-guide-to-hacking-bluetooth-low-energy/][The Practical Guide to Hacking Bluetooth Low Energy]].
+* [2018-12-18 Tue] Fun project bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: fun-project-bookmarks
+  :END:
+- [[https://www.designboom.com/art/echo-yang-programs-everyday-obsolete-machines-to-create-autonomous-art-02-28-2014/?mc_cid=31214c131d&mc_eid=add1859a90][echo yang programs everyday obsolete machines to create autonomous art (designboom)]].
+* [2018-12-14 Fri] Snowboarding bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: snowboarding-bookmarks
+  :END:
+- [[https://news.ycombinator.com/item?id=18680617][Snowboarding for Geeks (Hacker News)]].
+* [2018-12-11 Tue] Scam bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: scam-bookmarks
+  :END:
+  :MODIFIED:
+  [2018-12-11 Tue]
+  :END:
+- [[https://www.419eater.com/][419 Eater - The largest scambaiting community on the planet!]].
+- [[https://news.ycombinator.com/item?id=18577734][The little black book of scams (2016) (Hacker News)]].
+- [[https://www.accc.gov.au/publications/the-little-black-book-of-scams][The little black book of scams (ACCC)]].
+* [2018-12-11 Tue] Passive income bookmarks
+  :PROPERTIES:
+  :CUSTOM_ID: passive-income-bookmarks
+  :END:
+  :MODIFIED:
+  [2019-10-13 Sun]
+  :END:
+- [[https://www.redbubble.com][Awesome products designed by independent artists (Redbubble)]].
+- [[https://kit.com/pjrvs/gear-for-recording-videos-and-doing-interviews][Kit (Paul Jarvi's recording gear)]].
+- [[https://www.reddit.com/r/AmazonMerch/][Merch By Amazon Discussion (Reddit)]].
+- [[https://teespring.com/][Teespring]].
+- [[https://thesavingninja.com/what-is-merch-by-amazon/][What is Merch By Amazon?]].
+* [2018-12-08 Sat] DWIM ivy quit
+  :PROPERTIES:
+  :CUSTOM_ID: dwim-ivy-quit
+  :END:
+"Do-what-I-mean" (DWIM) functions enable us to introduce new Emacs powers to existing workflows without incurring the typical cost of remembering multiple related functions or introducing yet another key binding. DWIM functions invoke other functions, based on current context.
+
+I wanted a small tweak in Ivy's /`minibuffer-keyboard-quit'/ invocation, commonly invoked via /C-g/ key binding:
+
+1. If we have text selected in minibuffer, deselect it.
+2. If we have any text in minibuffer, clear it.
+3. If no text in minibuffer, quit.
+
+Added /`ar/ivy-keyboard-quit-dwim'/ for this purpose. Binding it to C-g in /ivy-minibuffer-map/:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ivy
+    :ensure t
+    :bind (:map ivy-minibuffer-map
+                ("C-g" . ar/ivy-keyboard-quit-dwim))
+    :config
+    (defun ar/ivy-keyboard-quit-dwim ()
+      "If region active, deactivate. If there's content, clear the minibuffer. Otherwise quit."
+      (interactive)
+      (cond ((and delete-selection-mode (region-active-p))
+             (setq deactivate-mark t))
+            ((> (length ivy-text) 0)
+             (delete-minibuffer-contents))
+            (t
+             (minibuffer-keyboard-quit)))))
+#+END_SRC
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/dwim-ivy-quit/ivy-keybqoard-quit-dwim.gif]]
+
+* [2018-12-05 Wed] Diffing directories content size
+  :PROPERTIES:
+  :CUSTOM_ID: diffing-directories-content-size
+  :END:
+Needed to diff two directories, but only interested in file size changes. diff, find, sort, and stat seem to do the job:
+
+#+BEGIN_SRC sh :results verbatim :exports both
+  diff <(find dir1 -type f -exec stat -f '%N %z' '{}' \; | sort) <(find dir2 -type f -exec stat -f '%N %z' '{}' \; | sort)
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+1,3c1,2
+< dir1/one.txt 14
+< dir1/subdir/file.txt 5
+< dir1/three.txt 7
+---
+> dir2/one.txt 19
+> dir2/two.txt 0
+#+end_example
+
+/Note: Using diff, find, sort, and stat on macOS./
+
+** Update 1
+  I've since learned about mtree (thanks [[https://twitter.com/romanzolotarev/status/1070249301815771137][Roman]]!). A nice utility to add to the toolbox.
+
+  #+BEGIN_SRC sh
+   mtree -p emacs-25.1 -c -k size -d
+  #+END_SRC
+
+  #+RESULTS:
+  #+begin_example
+  #	   user: me
+  #	machine: my-machine
+  #	   tree: /path/to/emacs-25.1
+  #	   date: Wed Dec  5 22:21:07 2018
+  # .
+  /set type=dir
+  .               size=1152
+  # ./admin
+  admin           size=960
+  # ./admin/charsets
+  charsets        size=544
+  # ./admin/charsets/glibc
+  glibc           size=3392
+  # ./admin/charsets/glibc
+  ..
+  # ./admin/charsets/mapfiles
+  mapfiles        size=640
+  # ./admin/charsets/mapfiles
+  ..
+  #+end_example
+
+** Update 2
+  I've added Emacs ediff to the mix:
+
+  #+BEGIN_SRC emacs-lisp
+    (require 'f)
+
+    (defun ar/ediff-dir-content-size ()
+        "Diff all subdirectories (sizes only) in two directories."
+        (interactive)
+        (let* ((dir1-path (read-directory-name "Dir 1: "))
+               (dir2-path (read-directory-name "Dir 2: "))
+               (buf1 (get-buffer-create (format "*Dir 1 (%s)*" (f-base dir1-path))))
+               (buf2 (get-buffer-create (format "*Dir 2 (%s)*" (f-base dir2-path)))))
+          (with-current-buffer buf1
+            (erase-buffer))
+          (with-current-buffer buf2
+            (erase-buffer))
+          (shell-command (format "cd %s; find . -type d | sort | du -h" dir1-path) buf1)
+          (shell-command (format "cd %s; find . -type d | sort | du -h" dir2-path) buf2)
+          (ediff-buffers buf1 buf2)))
+  #+END_SRC
+
+  #+ATTR_HTML: :width 75% :height 75%
+  [[file:images/diffing-directories-content-size/ediff-dir-content-size.png]]
+
+* [2018-12-02 Sun] Swift nil-coalescing operator
+  :PROPERTIES:
+  :CUSTOM_ID: swift-nil-coalescing-operator
+  :END:
+[[https://twitter.com/twostraws][Paul Hudson]], over at [[https://www.hackingwithswift.com/][Hacking with Swift]], has written [[https://www.hackingwithswift.com/articles/136/the-complete-guide-to-optionals-in-swift][The Complete Guide to Optionals in Swift]]. One of the many highlights is the [[https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID72][nil-coalescing operator]]. If you're a fan of the [[https://en.wikipedia.org/wiki/Ternary_operation][C-like syntax in ternary operations]], you'd enjoy chaining with Swift's nil-coalescing operator:
+
+#+BEGIN_SRC swift
+  let players = [ "goose": "run!" ]
+  let move = players["duck1"] ?? players["duck2"] ?? players["duck3"] ?? players["goose"]
+  print("\(String(describing: move))")
+#+END_SRC
+
+#+RESULTS:
+: Optional("run!")
+
+ps. Swift snippet run on Emacs [[https://orgmode.org/worg/org-contrib/babel/intro.html][org babel's]] [[https://github.com/zweifisch/ob-swift][ob-swift]]. See [[#multiline-swift-strings][Multiline Swift strings]] for details.
+
+* [2018-12-01 Sat] Ocado vs Asda (org table)
+  :PROPERTIES:
+  :CUSTOM_ID: ocado-vs-asda-org-table
+  :END:
+Someone handed me an [[https://www.ocado.com][Ocado]] shopping voucher for 30% off. Sounded promising, even for a one-off.
+
+With my [[https://www.amazon.co.uk/Transforming-Relationship-Achieving-Financial-Independence/dp/0143115766/][Money or Your Life]] hat on, I took a closer look for potential savings. Results were disappointing, when compared to alternatives like Asda.
+
+Here's a table comparing Ocado (30% off) and Asda (no discount):
+
+|-------------------------------------------------------------+--------+--------|
+|                                                             |  Ocado |   Asda |
+|-------------------------------------------------------------+--------+--------|
+| [[https://www.ocado.com/webshop/product/Coconut-Merchant-Organic-Raw-Extra-Virgin-Coconut-Oil/372144011][Coconut Merchant Organic Raw Extra Virgin Coconut Oil 500ml]] |   6.74 |        |
+| [[https://groceries.asda.com/product/oils/ktc-coconut-hair-oil/910000033621][KTC 100% pure coconut oil]]                                   |        |   2.00 |
+| [[https://www.ocado.com/webshop/product/Waitrose-Love-Life-Popcorn-Maize/25130011][Waitrose Love Life Popcorn Maize 510g]]                       |   1.50 |        |
+| [[https://groceries.asda.com/promotion/2-for-pound-1.50/ls89129][Cypressa Popping Corn 2x500g = 1000g]]                        |        |   1.50 |
+| [[https://www.ocado.com/webshop/product/Whitworths-Ground-Almonds/275684011][Whitworths Ground Almonds]]                                   |   2.00 |        |
+| [[https://groceries.asda.com/product/baking-nuts-seeds-fruit/whitworths-ground-almonds/910000797981][Whitworths Ground Almonds]]                                   |        |   1.60 |
+|-------------------------------------------------------------+--------+--------|
+| Total                                                       |        | £ 5.10 |
+|-------------------------------------------------------------+--------+--------|
+| -30%                                                        | £ 7.17 |        |
+|-------------------------------------------------------------+--------+--------|
+#+TBLFM: @8$3=vsum(@2$3..@7$3);£ %.2f::@9$2=vsum(@2$2..@7$2) * 0.7;£ %.2f
+
+
+On the upside, Ocado has plenty of items I cannot find at Asda. May be a good opportunity to get these items at a discount.
+
+** Emacs org tables
+
+Small tables are the perfect use-case for Emacs [[https://orgmode.org/manual/Tables.html][org-mode tables]]. Been a while since I used one, so great timing for a little refresh.
+
+Here's the org source for the table above (prior to exporting to HTML):
+
+#+BEGIN_SRC org :exports src
+  |-------------------------------------------------------------+--------+--------|
+  |                                                             |  Ocado |   Asda |
+  |-------------------------------------------------------------+--------+--------|
+  | [[https://www.ocado.com/webshop/product/Coconut-Merchant-Organic-Raw-Extra-Virgin-Coconut-Oil/372144011][Coconut Merchant Organic Raw Extra Virgin Coconut Oil 500ml]] |   6.74 |        |
+  | [[https://groceries.asda.com/product/oils/ktc-coconut-hair-oil/910000033621][KTC 100% pure coconut oil]]                                   |        |   2.00 |
+  | [[https://www.ocado.com/webshop/product/Waitrose-Love-Life-Popcorn-Maize/25130011][Waitrose Love Life Popcorn Maize 510g]]                       |   1.50 |        |
+  | [[https://groceries.asda.com/promotion/2-for-pound-1.50/ls89129][Cypressa Popping Corn 2x500g = 1000g]]                        |        |   1.50 |
+  | [[https://www.ocado.com/webshop/product/Whitworths-Ground-Almonds/275684011][Whitworths Ground Almonds]]                                   |   2.00 |        |
+  | [[https://groceries.asda.com/product/baking-nuts-seeds-fruit/whitworths-ground-almonds/910000797981][Whitworths Ground Almonds]]                                   |        |   1.60 |
+  |-------------------------------------------------------------+--------+--------|
+  | Total                                                       |        | £ 5.10 |
+  |-------------------------------------------------------------+--------+--------|
+  | -30%                                                        | £ 7.17 |        |
+  |-------------------------------------------------------------+--------+--------|
+  ,#+TBLFM: @8$3=vsum(@2$3..@7$3);£ %.2f::@9$2=vsum(@2$2..@7$2) * 0.7;£ %.2f
+#+END_SRC
+* [2018-11-24 Sat] Execute org blocks as root
+  :PROPERTIES:
+  :CUSTOM_ID: execute-org-blocks-as-root
+  :END:
+Been saving admin code snippets in my own [[https://orgmode.org/manual/Working-with-source-code.html][org source blocks]], some requiring root access. Handy for keeping tiny self-documented scripts to easily bootstrap other machines. TIL org source block's /:dir/ argument can be used to run block as root by using tramp syntax: /:dir /sudo::/
+
+#+BEGIN_SRC org :exports src
+
+As user:
+
+,#+BEGIN_SRC sh
+  whoami
+,#+END_SRC
+
+,#+RESULTS:
+: user
+
+As root:
+
+,#+BEGIN_SRC sh :dir /sudo::
+  whoami
+,#+END_SRC
+
+,#+RESULTS:
+: root
+
+#+END_SRC
+
+* [2018-11-23 Fri] Inline Swift computed properties
+  :PROPERTIES:
+  :CUSTOM_ID: inline-swift-computed-properties
+  :END:
+Via [[https://twitter.com/objcio][objc.io]] and [[https://twitter.com/mxcl][Max Howell's]] [[https://twitter.com/mxcl/status/1065802821700857856][retweet]], TIL about Swift's inline computed properties. Another one to try on Org [[https://orgmode.org/worg/org-contrib/babel/intro.html][Babel]].
+‏
+#+BEGIN_SRC swift
+  func greetWorld() {
+   var message = "hello"
+   var betterMessage: String {
+     return "\(message) world"
+   }
+   print(betterMessage)
+  }
+
+  greetWorld()
+#+END_SRC
+
+#+RESULTS:
+: hello world
+
+* [2018-11-23 Fri] Multiline Swift strings
+  :PROPERTIES:
+  :CUSTOM_ID: multiline-swift-strings
+  :END:
+[[https://twitter.com/twostraws][Paul Hudson's]] [[https://twitter.com/twostraws][tweet]] introduced me to Swift's multiline string indentation control using closing quotes. Neat!
+
+Being an org-mode fan, I thought I'd give Swift multiline strings a try using Org [[https://orgmode.org/worg/org-contrib/babel/intro.html][Babel's]] [[https://github.com/zweifisch/ob-swift][ob-swift]]. I get to verify it and document at the same time. Win.
+
+Swift org mode source blocks (ie. BEGIN_SRC/END_SRC) can be added as follows:
+
+#+BEGIN_SRC org :exports src
+  ,#+BEGIN_SRC swift :exports both
+    print("""
+         Hello World
+    """)
+
+    print("""
+         Hello World
+         """)
+  ,#+END_SRC
+
+  ,#+RESULTS:
+  :      Hello World
+  : Hello World
+#+END_SRC
+
+By pressing /C-c C-c/ anywhere in the code block, the snippet is executed and its output captured in the /RESULT/ block. Super handy for quickly trying out snippets and keeping as future reference.
+
+As a bonus, the above blocks can be exported to HTML ([[https://orgmode.org/manual/Exporting.html][amongst other formats]]). With some [[https://github.com/xenodium/dotsies/search?q=org-html-head-extra&unscoped_q=org-html-head-extra][styling]], it looks as follows:
+
+#+BEGIN_SRC swift :exports both
+  print("""
+       Hello World
+  """)
+
+  print("""
+       Hello World
+       """)
+#+END_SRC
+
+#+RESULTS:
+:      Hello World
+: Hello World
+
+* [2018-11-17 Sat] Quickly swapping elfeed filters
+  :PROPERTIES:
+  :CUSTOM_ID: quickly-swapping-elfeed-filters
+  :END:
+I seem to be more efficient in getting through rss feeds by individually browsing through related content. That is, I can get through all Emacs entries a lot faster if I look at Emacs content exclusively, instead of mixing with say BBC news. [[https://github.com/skeeto/elfeed][Elfeed]] filters are great for filtering related content.
+
+I wanted a way to easily switch through my typical categories of related content by quickly changing elfeed filters using a completion framework.
+
+Emacs's [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Minibuffer-Completion.html][completing-read]] plays nicely with your favorite completing framework (mine is [[https://github.com/abo-abo/swiper][ivy]]). With a couple of functions, we can get Emacs to ask us for the filtering category using human-readable options and quickly presenting related content. Binding the new functionality to <tab> is working well for me.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package elfeed :ensure t
+    :commands elfeed
+    :bind (:map elfeed-search-mode-map
+                ("<tab>" . ar/elfeed-completing-filter))
+    :config
+    (defun ar/elfeed-filter-results-count (search-filter)
+      "Count results for SEARCH-FILTER."
+      (let* ((filter (elfeed-search-parse-filter search-filter))
+             (head (list nil))
+             (tail head)
+             (count 0))
+        (let ((lexical-binding t)
+              (func (byte-compile (elfeed-search-compile-filter filter))))
+          (with-elfeed-db-visit (entry feed)
+            (when (funcall func entry feed count)
+              (setf (cdr tail) (list entry)
+                    tail (cdr tail)
+                    count (1+ count)))))
+        count))
+
+    (defun ar/elfeed-completing-filter ()
+      "Completing filter."
+      (interactive)
+      (let ((categories (-filter
+                         (lambda (item)
+                           (> (ar/elfeed-filter-results-count (cdr item))
+                              0))
+                         '(("All" . "@6-months-ago +unread")
+                           ("BBC" . "@6-months-ago +unread +bbc")
+                           ("Dev" . "@6-months-ago +unread +dev")
+                           ("Emacs" . "@6-months-ago +unread +emacs")
+                           ("Health" . "@6-months-ago +unread +health")
+                           ("Hacker News" . "@6-months-ago +unread +hackernews")
+                           ("iOS" . "@6-months-ago +unread +ios")
+                           ("Money" . "@6-months-ago +unread +money")))))
+        (if (> (length categories) 0)
+            (progn
+              (ar/elfeed-view-filtered (cdr (assoc (completing-read "Categories: " categories)
+                                                   categories)))
+              (goto-char (window-start)))
+          (message "All caught up \\o/")))))
+#+END_SRC
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/quickly-swapping-elfeed-filters/completing-elfeed.gif]]
+
+We don't actually need two functions, but /ar/elfeed-filter-results-count/ enables us to list only those feeds that actually have new content. The list will shrink as we get through our content. When no content is left, we get a little celebratory message.
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/quickly-swapping-elfeed-filters/no-left.png]]
+
+* [2018-11-14 Wed] Converting docx to pdf on macOS
+  :PROPERTIES:
+  :CUSTOM_ID: converting-docx-to-pdf-on-macos
+  :END:
+
+Wanted to convert a docx document to pdf on macOS. Pandoc to the rescue, but first needed pdflatex installed:
+
+#+BEGIN_SRC sh :results verbatim :exports both
+  pandoc -t latex some.docx -o some.pdf
+#+END_SRC
+#+RESULTS:
+: pdflatex not found. Please select a different --pdf-engine or install pdflatex
+
+Installed pdflatex on macOS with:
+
+#+BEGIN_SRC sh
+  brew install mactex
+#+END_SRC
+
+Can also use HTML5. Install wkhtmltopdf with:
+
+#+BEGIN_SRC sh
+  brew install Caskroom/cask/wkhtmltopdf
+#+END_SRC
+
+Convert with:
+
+#+BEGIN_SRC sh
+  pandoc -t html5 some.docx -o some.pdf
+#+END_SRC
+
+* [2018-11-13 Tue] Faster elfeed browsing with paging
+  :PROPERTIES:
+  :CUSTOM_ID: faster-elfeed-browsing-with-paging
+  :END:
+Following up from [[http://xenodium.com/#faster-junk-mail-deletion-with-mu4e][faster junk mail deletion with mu4e]], elfeed is another candidate for enabling actions on pages. In this case, marking rss entries as read, page by Page.
+
+If on [[https://github.com/jwiegley/use-package][use-package]], the function can defined and bound to the "v" key using:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package elfeed
+    :ensure t
+    :bind (:map elfeed-search-mode-map
+                ("v" . ar/elfeed-mark-visible-as-read))
+    :config
+    (defun ar/elfeed-mark-visible-as-read ()
+      (interactive)
+      (require 'window-end-visible)
+      (set-mark (window-start))
+      (goto-char (window-end-visible))
+      (activate-mark)
+      (elfeed-search-untag-all-unread)
+      (elfeed-search-update--force)
+      (deactivate-mark)
+      (goto-char (window-start))))
+#+END_SRC
+
+#+ATTR_HTML: :width 75% :height 75%

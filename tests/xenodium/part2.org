@@ -1,0 +1,3000 @@
+  </a>
+</div>
+#+END_EXPORT
+
+If you care about how your data is stored, Flat Habits is powered by [[https://orgmode.org][org]] plain text markup without any cloud component. You can use your [[https://xenodium.com/frictionless-org-habits-on-ios/][favorite editor]] (Emacs, Vim, VSCode, etc.) to poke at habit data, if that's your cup of tea.
+
+** What's new?
+
+- Quicker toggling, now exposing Done/Skip.
+  - Double tap marks Done.
+- Also display in 12 hour time format.
+- Overdue habits are now labelled "past" and coloured orange.
+- Don't dismiss creation dialog if tapping outside.
+- Set #+STARTUP: nologdrawer in new files.
+
+**  Are you a fan?
+
+Is Flat Habits helping you keep up with your habits? Please [[https://apps.apple.com/app/id1558358855?action=write-review][rate/review]] 😊
+
+* [2023-03-21 Tue] A ChatGPT Emacs shell
+:PROPERTIES:
+:CUSTOM_ID: a-chatgpt-emacs-shell
+:END:
+UPDATE: =chatgpt-shell= [[https://xenodium.com/chatgpt-shell-available-on-melpa/][has evolved a bit]] and is now [[https://melpa.org/#/chatgpt-shell][on MELPA]].
+
+I had been meaning to give [[https://openai.com/blog/chatgpt][ChatGPT]] a good try, preferably from Emacs. As an [[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html][eshell]] fan, ChatGPT seemed like the perfect fit for a shell interface of sorts. With that in mind, I set out to wire ChatGPT with Emacs's general command interpreter ([[https://www.gnu.org/software/emacs/manual/html_node/emacs/Shell-Prompts.html][comint]]).
+
+I had no previous experience building anything comint-related, so I figured I could just take a peek at an existing comint-derived mode to achieve a similar purpose. =inferior-emacs-lisp-mode= ([[https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Interaction.html][ielm]]) seemed to fit the bill just fine, so I borrowed quite a bit to assemble a basic shell experience.
+
+From then on, it was mostly about sending each request over to the ChatGPT API to get a response. For now, I'm relying on [[https://curl.se/docs/manpage.html][curl]] to make each request. The invocation is fairly straightforward:
+
+#+begin_src sh
+  curl "https://api.openai.com/v1/chat/completions" \
+       -H "Authorization: Bearer YOUR_OPENAI_KEY" \
+       -H "Content-Type: application/json" \
+       -d "{
+       \"model\": \"gpt-3.5-turbo\",
+       \"messages\": [{\"role\": \"user\", \"content\": \"YOUR PROMPT\"}]
+       }"
+#+end_src
+
+There are two bits of information needed in each request. The API key, which you must get from [[https://openai.com/][OpenAI]], and the prompt text itself (i.e. whatever you want ChatGPT to help you with). The results are not too shabby.
+
+#+ATTR_HTML: :width 80%
+[[file:images/a-chatgpt-emacs-shell/chatgpt.gif]]
+
+I've uploaded the code to GitHub as a tiny [[https://github.com/xenodium/chatgpt-shell][chatgpt-shell]] package. It's a little experimental and rough still, but hey, it does the job for now. Head over to [[https://github.com/xenodium/chatgpt-shell][github]] to take a look. The latest iteration handles multiline prompts (use C-j for newlines) and basic code highlighting.
+
+Let's see where it all goes. Pull requests for improvements totally welcome ;-)
+
+* [2023-03-04 Sat] =*scratch*= a new minimal org mode scratch area for iOS
+:PROPERTIES:
+:CUSTOM_ID: scratch-a-minimal-scratch-area
+:END:
+While we already have lots of note-taking apps on iOS, I wanted a minimal =*scratch*= area (à la Emacs), so I built one.
+
+#+BEGIN_EXPORT html
+<br/>
+<div style="text-align: center;">
+  <a href="https://apps.apple.com/app/id1671420139">
+    <img src="../images/scratch-a-minimal-scratch-area/icon.png" alt="*scratch* icon" width="150px">
+  </a>
+</div>
+#+END_EXPORT
+
+What's the use-case? You're on the go. Someone's telling you directions, or a phone number, name of a restaurant, anything really... you just need to write it down /right now, quickly/!
+
+No time to create a new contact, a note, a file, or spend time on additional taps, bring up keyboard... You just want to write it somewhere with the least amount of friction.
+
+#+ATTR_HTML: :width 50%
+[[file:images/scratch-a-minimal-scratch-area/scratch-download_no_audio_x2.6.webp]]
+
+Being an Emacs and org user, I had to sprinkle the app with basic markup support for headings, lists and checkboxes. Also, having a =*scratch*= "buffer" on my iPhone gives me that warm emacsy fuzzy feeling :)
+
+You can download =*scratch*= from the [[https://apps.apple.com/gb/app/scratch/id1671420139][App Store]].
+
+Find it useful? Please help me spread the word. Tell your friends.
+
+#+BEGIN_EXPORT html
+<br/>
+<div style="text-align: center;">
+  <a href="https://apps.apple.com/app/id1671420139">
+    <img src="../images/flat-habits-for-ios/download-on-app-store.png" alt="download-on-app-store.png" height="40px">
+  </a>
+</div>
+#+END_EXPORT
+* [2023-01-29 Sun] Chicken Karaage recipe
+:PROPERTIES:
+:CUSTOM_ID: chicken-karaage-recipe
+:END:
+
+Huge fan of Chicken Karaage, but never really made it at home until recently.
+
+#+ATTR_HTML: :width 60%
+[[file:images/chicken-karaage-recipe/frying.jpg]]
+
+#+ATTR_HTML: :width 60%
+[[file:images/chicken-karaage-recipe/fried.jpg]]
+
+#+ATTR_HTML: :width 60%
+[[file:images/chicken-karaage-recipe/dipping.jpg]]
+
+#+ATTR_HTML: :width 60%
+[[file:images/chicken-karaage-recipe/sauces.jpg]]
+
+** Dice the chicken
+- 350 grams boneless chicken thighs
+
+Dice the chicken up.
+
+** Marinade for 30 mins
+
+- 1 tablespoon soy sauce (Kikkoman or similar)
+- 1 tablespoon cooking Sake
+- 2 tablespoons of grated ginger (include liquids)
+- 1/2 teaspoon Mirin
+
+Mix all ingredients into a ziploc bag. Add the diced chicken and let it marinade for 30 minutes in the fridge.
+
+** Pat dry
+
+- Paper towels
+
+After marinating, pat the chicken dry with paper towels and set aside.
+
+** Breading
+
+- Potato starch
+
+Ok, not quite breading since we're using potato starch but same goal. Sprinkle the chicken pieces and make sure they are fully coated with the starch.
+
+** Frying (1st round)
+
+- Vegetable oil
+- Paper towels
+
+Heat up (roughly at 160°C) enough oil in a pan to cover the chicken pieces. Cook for about 3 minutes. The pieces don't have to be super golden at this point. There will be another round of frying for that.
+
+** Rest for 4 minutes
+
+- Paper towels
+
+Let the chicken rest on paper towels for about 4 minutes before frying again.
+
+** Frying (2nd round)
+
+- Vegetable oil
+- Paper towels
+
+This time heat up the oil at roughly 200°C. This is a quick in-and-out action to make the chicken crispy. Cook for 30 seconds. Take out and set aside on some paper towels. Let it cool and it's ready to eat.
+
+** Dipping
+
+- Kewpie mayo
+- Sriracha sauce
+
+This is totally optional, but I'm a fan of both Kewpie mayo and Sriracha sauce. You can dip your chicken in either or both!
+
+* [2023-01-10 Tue] Emacs: org-present in style
+:PROPERTIES:
+:CUSTOM_ID: emacs-org-present-in-style
+:END:
+I had been meaning to check out David Wilson's [[https://systemcrafters.cc][System Crafters]] post detailing [[https://systemcrafters.net/emacs-tips/presentations-with-org-present/][his presentations style]] achieved with the help of [[https://github.com/rlister/org-present][org-present]] and his own customizations. If you're looking for ways to present from Emacs itself, David's post is well worth a look.
+
+org-present's spartan but effective approach resonated with me. David's touches bring the wonderfully stylish icing to the cake. I personally liked his practice of collapsing slide subheadings by default. This lead me to think about slide navigation in general...
+
+There were two things I wanted to achieve:
+
+1. Easily jump between areas of interest. Subheadings, links, and code blocks would be a good start.
+2. Collapse all but the current top-level heading within the slide, as navigation focus changes.
+
+A quick search for existing functions led me to =org-next-visible-heading=, =org-next-link=, and =org-next-block=. While these make it easy to jump through jump between headings, links, org block on their own, I wanted to jump to whichever one of these is next (similar a web browser's tab behaviour). In a way, [[https://en.wikipedia.org/wiki/DWIM][DWIM]] style.
+
+I wrapped the existing functions to enable returning positions. This gave me =ar/rg-next-visible-heading-pos=, =ar/rg-next-link-pos=, and =ar/rg-next-block-pos= respectively. Now that I can find out the next location of either of these items, I can subsequently glue the navigation logic in a function like =ar/org-present-next-item=. To restore balance to the galaxy, I also added =ar/org-present-previous-item=.
+
+#+begin_src emacs-lisp :lexical no
+  (defun ar/org-present-next-item (&optional backward)
+    "Present and reveal next item."
+    (interactive "P")
+    ;; Beginning of slide, go to previous slide.
+    (if (and backward (eq (point) (point-min)))
+        (org-present-prev)
+      (let* ((heading-pos (ar/org-next-visible-heading-pos backward))
+             (link-pos (ar/org-next-link-pos backward))
+             (block-pos (ar/org-next-block-pos backward))
+             (closest-pos (when (or heading-pos link-pos block-pos)
+                            (apply (if backward #'max #'min)
+                                   (seq-filter #'identity
+                                               (list heading-pos
+                                                     link-pos
+                                                     block-pos))))))
+        (if closest-pos
+            (progn
+              (cond ((eq heading-pos closest-pos)
+                     (goto-char heading-pos))
+                    ((eq link-pos closest-pos)
+                     (goto-char link-pos))
+                    ((eq block-pos closest-pos)
+                     (goto-char block-pos)))
+              ;; Reveal relevant content.
+              (cond ((> (org-current-level) 1)
+                     (ar/org-present-reveal-level2))
+                    ((eq (org-current-level) 1)
+                     ;; At level 1. Collapse children.
+                     (org-overview)
+                     (org-show-entry)
+                     (org-show-children)
+                     (run-hook-with-args 'org-cycle-hook 'children))))
+          ;; End of slide, go to next slide.
+          (org-present-next)))))
+
+  (defun ar/org-present-previous-item ()
+    (interactive)
+    (ar/org-present-next-item t))
+
+  (defun ar/org-next-visible-heading-pos (&optional backward)
+    "Similar to `org-next-visible-heading' but for returning position.
+
+  Set BACKWARD to search backwards."
+    (save-excursion
+      (let ((pos-before (point))
+            (pos-after (progn
+                         (org-next-visible-heading (if backward -1 1))
+                         (point))))
+        (when (and pos-after (not (equal pos-before pos-after)))
+          pos-after))))
+
+  (defun ar/org-next-link-pos (&optional backward)
+    "Similar to `org-next-visible-heading' but for returning position.
+
+  Set BACKWARD to search backwards."
+    (save-excursion
+      (let* ((inhibit-message t)
+             (pos-before (point))
+             (pos-after (progn
+                          (org-next-link backward)
+                          (point))))
+        (when (and pos-after (or (and backward (> pos-before pos-after))
+                                 (and (not backward) (> pos-after pos-before))))
+          pos-after))))
+
+  (defun ar/org-next-block-pos (&optional backward)
+    "Similar to `org-next-block' but for returning position.
+
+  Set BACKWARD to search backwards."
+    (save-excursion
+      (when (and backward (org-babel-where-is-src-block-head))
+        (org-babel-goto-src-block-head))
+      (let ((pos-before (point))
+            (pos-after (ignore-errors
+                         (org-next-block 1 backward)
+                         (point))))
+        (when (and pos-after (not (equal pos-before pos-after)))
+          ;; Place point inside block body.
+          (goto-char (line-beginning-position 2))
+          (point)))))
+
+  (defun ar/org-present-reveal-level2 ()
+    (interactive)
+    (let ((loc (point))
+          (level (org-current-level))
+          (heading))
+      (ignore-errors (org-back-to-heading t))
+      (while (or (not level) (> level 2))
+        (setq level (org-up-heading-safe)))
+      (setq heading (point))
+      (goto-char (point-min))
+      (org-overview)
+      (org-show-entry)
+      (org-show-children)
+      (run-hook-with-args 'org-cycle-hook 'children)
+      (goto-char heading)
+      (org-show-subtree)
+      (goto-char loc)))
+#+end_src
+
+Beware, this was a minimal effort (with redundant code, duplication, etc) and should likely be considered a proof of concept of sorts, but the results look promising. You can see a demo in action.
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-org-present-in-style/org-navigate_x1.6.webp]]
+
+While this was a fun exercise, I can't help but think there must be a cleaner way of doing it or there are existing packages that already do this for you. If you do know, I'd love to know.
+
+Future versions of this code will likely be updated in [[https://github.com/xenodium/dotsies/blob/main/emacs/features/fe-org.el][my Emacs org config]].
+
+** Update
+
+Removed a bunch of duplication and now rely primarily on existing =org-next-visible-heading=, =org-next-link=, and =org-next-block=.
+
+* [2023-01-08 Sun] Emacs: insert and render SF symbols
+:PROPERTIES:
+:CUSTOM_ID: emacs-insert-and-render-sf-symbols
+:END:
+About a week ago, I added an Emacs [[https://xenodium.com/emacs-macro-me-some-sf-symbols/][function to insert SF symbol names]]. This is specially useful for SwiftUI. I didn't bother too much with inserting symbols themselves since I hadn't figured out a way to render them for all buffers. That's now changed.
+
+Christian Tietze and Alan Third both have useful posts in this space:
+
+- [[http://idiocy.org/emacs-fonts-and-fontsets.html][Emacs, fonts and fontsets]]
+- [[https://christiantietze.de/posts/2023/01/use-sf-pro-for-sf-symbols-everywhere-in-emacs/][Use San Francisco Font for SF Symbols Everywhere in Emacs]]
+
+I'm currently using the following to render SF symbols in all buffers (macOS only):
+
+#+begin_src emacs-lisp :lexical no
+  ;; Enable rendering SF symbols on macOS.
+  (when (memq system-type '(darwin))
+    (set-fontset-font t nil "SF Pro Display" nil 'append))
+#+end_src
+
+Now that I can render SF symbols everywhere, I /may/ be more included to use them to spif things up.
+
+I've added =sf-symbol-insert= to [[https://github.com/xenodium/dotsies/blob/main/emacs/ar/sf.el][sf.el]], let's see if usage sticks.
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-insert-and-render-sf-symbols/sf-insert-trimmed_x1.8.webp]]
+
+* [2022-12-31 Sat] Emacs: Macro me some SF Symbols
+:PROPERTIES:
+:CUSTOM_ID: emacs-macro-me-some-sf-symbols
+:END:
+For inserting SF Symbols in SwiftUI, I typically rely on Apple's [[https://developer.apple.com/sf-symbols/][SF Symbols app]] to browse the symbols's catalog. Once I find a symbol I'm happy with, I copy its name and paste it into my Swift source. This works fairly well.
+
+With Christian Tietze recently posting [[https://christiantietze.de/posts/2022/12/sf-symbols-emacs-tab-numbers/][how he rendered SF Symbols in Emacs]], I figured there may be a way to shift the above workflow to rely on Emacs completion instead. While I initially went down a rabbit hole to programmatically extract SF symbols (via something like [[https://github.com/SFSafeSymbols/SFSafeSymbols][SFSafeSymbols]]), I took a step back to rethink the strategy.
+
+From the [[https://developer.apple.com/sf-symbols/][SF Symbols app]], one can select multiple symbols and copy/paste either the symbols themselves or their respective names. The catch is you can only copy disjointed data. That is, you can copy the symbols or their names, but not both in one go. Let's take a look at what the disjointed data looks like. I've pasted both under separate sections in an Emacs buffer.
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/emacs-macro-me-some-sf-symbols/disjointed.png]]
+
+
+If I could rejoin these two sets, I would have a lookup table I could easily invoke from Emacs.
+
+There are roughly 4500 symbols, so copying, pasting, along with text manipulation isn't manually feasible. Lucky for us, an Emacs [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html][keyboard macro]] is the perfect hammer for this nail. You can see the macro in action below.
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/emacs-macro-me-some-sf-symbols/mini-macro_x1.6.webp]]
+
+This looks fairly magical (and it is), but when you break it down into its building blocks, it's nothing more than recording your keystrokes and replaying them. Starting with the cursor at the beginning of =square.and.arrow.up=, these are the keystrokes we'd need to record:
+
+- C-s :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Isearch.html][iseach-forward]] to search for a character and jump to it
+- = :: insert === so we jump to == Symbols ==
+- <return> :: runs [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Isearch.html][isearch-exit]] since we're done jumping.
+- C-n :: =next-line=.
+- C-a :: =beginning-of-line=.
+- C-SPC :: =set-mark-command= to activate the region.
+- C-f :: =forward-char= to select symbol.
+- C-w :: =kill-ring-save= to cut/kill the symbol.
+- C-u C-<space> :: =set-mark-command= (with prefix) to jump back to where we started before searching.
+- C-y :: =yank= to yank/paste the symbol.
+- C-<space> :: =set-mark-command= to activate the region.
+- C-e :: =end-of-line= to select the entire line.
+- " :: As a [[https://github.com/Fuco1/smartparens][smartparens]] user, inserting quote with region places quotes around selection.
+- C-n :: =next-line=.
+- C-a :: =beginning-of-line=. We are now at a strategic location where we can replay the above commands.
+
+To start/end recording and executing keyboard macros, use:
+
+- C-x ( :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Keyboard-Macro.html][kmacro-start-macro]]
+- C-x ) :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Keyboard-Macro.html][kmacro-end-macro]]
+- C-x e :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Keyboard-Macro.html][kmacro-end-and-call-macro]] runs your macro. Press =e= immediately after to execute again.
+- C-u 0 C-x e :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Keyboard-Macro.html][kmacro-end-and-call-macro]] (with zero prefix) repeat until there is an error.
+
+Our previous example ran on a handful of SF symbols. Let's bring out the big guns and run on the entire dataset. This time, we'll run the entire flow, including macro creation and executing until there is an error (i.e. process the whole lot).
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-macro-me-some-sf-symbols/sf-symbol-no-mouse-short_x1.4.webp]]
+
+Now that we have our data joined, we can feed it to the humble [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html][completing-read]].
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/emacs-macro-me-some-sf-symbols/sf-symbols-insert-name.png]]
+
+It's worth highlighting that to render SF Symbols in Emacs, we must [[https://christiantietze.de/posts/2022/12/sf-symbols-emacs-tab-numbers/][propertize our text with one of the macOS SF fonts]], for example "SF Pro".
+
+With all the pieces in place, let's use our new function to insert SF symbol names in a SwiftUI snippet. Since we're using =completing-read= we can fuzzy search our lookups with our favorite completion frameworks (in my case via [[https://github.com/abo-abo/swiper][ivy]]).
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-macro-me-some-sf-symbols/sf-search_x1.2.webp]]
+
+While this post is macOS-specific, it gives a taste of how powerful Emacs [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html][keyboard macros]] can be. Be sure to check out [[https://emacsrocks.com/e05.html][Emacs Rocks! Episode 05: Macros in style]] and [[https://www.masteringemacs.org/article/keyboard-macros-are-misunderstood][Keyboard Macros are Misunderstood - Mastering Emacs]]. For those that dabble in elisp, you can appreciate how handy  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html][completing-read]] is with very little code.
+
+The full source to [[https://github.com/xenodium/dotsies/blob/main/emacs/ar/sf.el][sf-symbol-insert-name]] is available in my [[https://github.com/xenodium/dotsies/][Emacs config repo]]. The function is fairly bare bones and has had fairly little testing. Patches totally welcome.
+
+** Update
+There is some redundancy in the snippet I had forgotten to remove. Either way, latest version at [[https://github.com/xenodium/dotsies/blob/main/emacs/ar/sf.el][sf.el]].
+
+* [2022-12-18 Sun] Emacs: ffmpeg and macOS aliasing commands
+:PROPERTIES:
+:CUSTOM_ID: emacs-ffmpeg-and-macos-alias-commands
+:END:
+On a recent mastodon [[https://twit.social/@chris_spackman/109531700714365786][post]], Chris Spackman mentioned he uses Emacs to save [[https://ffmpeg.org/][ffmpeg]] commands he's figured out for later usage. Emacs is great for this kind of thing. I've tried different approaches over time and eventually landed on [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]], a small package I wrote. Like Chris, I also wanted a way to invoke magical incantations of known shell commands without having to remember all the details.
+
+Chris's post reminded me of a few use-cases I'd been meaning to add DWIM shell commands for.
+
+*** ffmpeg
+
+1. Trimming seconds from videos
+   - =dwim-shell-commands-video-trim-beginning= using:
+     #+begin_src sh
+       ffmpeg -i '<<f>>' -y -ss <<Seconds:5>> -c:v copy -c:a copy '<<fne>>_trimmed.<<e>>'
+     #+end_src
+   - =dwim-shell-commands-video-trim-end= using:
+     #+begin_src sh
+       ffmpeg -sseof -<<Seconds:5>> -i '<<f>>' -y -c:v copy -c:a copy '<<fne>>_trimmed.<<e>>'
+     #+end_src
+
+     Side-node: The =<<Seconds:5>>= placeholder is recognized as a query, so Emacs will prompt you for a numeric value.
+2. Extracting audio from videos
+   - =dwim-shell-commands-video-to-mp3= using:
+     #+begin_src sh
+       ffmpeg -i '<<f>>' -vn -ab 128k -ar 44100 -y '<<fne>>.mp3'
+     #+end_src
+
+With these new dwim shell commands added, I can easily apply them one after the other. No need to remember command details.
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/emacs-ffmpeg-and-macos-alias-commands/trim_convert_mp3_x1.4.webp]]
+
+*** macOS aliases
+
+After rebuilding Emacs via the wonderful [[https://github.com/d12frosted/homebrew-emacs-plus][emacs-plus]], I recently broke my existing =/Applications/Emacs.app= alias. No biggie, one can easily add a [[https://support.apple.com/en-gb/guide/mac-help/mchlp1046/mac][new one alias from macOS Finder]], but I've been wanting to do it from Emacs. Turns out there's a bit of AppleScript we can turn into a more memorale command like =dwim-shell-commands-macos-make-finder-alias=:
+
+#+begin_src sh
+  osascript -e 'tell application \"Finder\" to make alias file to POSIX file \"<<f>>\" at POSIX file \"%s\"'
+#+end_src
+
+It's highly unlikely I'll remember the AppleScript snippet (are there better ways?), but I'll easily find and invoke my new command with fuzzy searching:
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-ffmpeg-and-macos-alias-commands/make-emacs-alias_x1.4.webp]]
+
+*** Included in dwim-shell-command
+
+All of these are now included in [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]], which you can optionally load after installing [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] from [[https://melpa.org/#/dwim-shell-command][MELPA]].
+* [2022-12-12 Mon] Emacs: Context-aware yasnippets
+:PROPERTIES:
+:CUSTOM_ID: emacs-generate-a-swift-initializer
+:END:
+Back in 2020, I wrote a semi-automatic [[https://github.com/joaotavora/yasnippet][yasnippet]] to [[https://xenodium.com/smarter-snippets/][generate Swift initializers]]. I say semi-automatic because it could have been a little smarter. While it helped generate some of the code, what I really wanted was full context-aware generation. The Swift struct already had a few properties defined, so a smarter yasnippet should have been able to use this info for code generation.
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/smarter-snippets/snippet.gif]]
+
+With an extra push, we could have written a smarter yasnippet, but it may require a fair bit of parsing logic. Fast forward to today, and bringing context-awareness seems like the right match for [[https://tree-sitter.github.io/tree-sitter/][Tree-sitter]]. While Tree-sitter can enable faster and more reliable syntax-highlighting in our beloved text editor, it can also power smarter tools. It does so by exposing a semantic snapshot of our source code using a syntax tree.
+
+Let's see how we can use Tree-sitter to realise our original yasnippet vision. We'll start with the same struct snippet we used back in 2020. The goal is to generate an initializer using the existing definitions.
+
+#+begin_src swift
+  struct Coordinate {
+    public let x: Int
+    public let y: Int
+    public let z: Int
+  }
+#+end_src
+
+While Emacs will [[https://lists.gnu.org/archive/html/emacs-devel/2022-11/msg01443.html][will soon ship its own Tree-sitter integration]], I've opted to try out the [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter]] package as Swift support is currently included in [[https://github.com/emacs-tree-sitter/tree-sitter-langs][tree-sitter-langs]].
+
+I have much to learn much about Tree-sitter syntax trees, but the package ships with a handy tool to dump the tree via =tree-sitter-debug-mode=.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-generate-a-swift-initializer/syntax-tree.png]]
+
+With a syntax tree in mind, one can craft a query to semantically extract parts of the code. In our case, we want property names and types.
+I've yet to get acquainted with Tree-sitter's [[https://tree-sitter.github.io/tree-sitter/using-parsers#query-syntax][query syntax]], but the package also ships with another handy tool that helps view query results via =tree-sitter-query-builder=.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-generate-a-swift-initializer/query-builder.png]]
+
+The following query extracts all the =let properties= in file. You can see the builder in action above, highlighting our query results.
+
+#+begin_src
+  (struct_declaration (constant_declaration (identifier) @name (type) @value))
+#+end_src
+
+If we want to be more thorough, we should likely cater for classes, vars, int/string literals, etc. so the query needs to be extended as follows. I'm sure it can be written differently, but for now, it does the job.
+
+#+begin_src
+  (struct_declaration (variable_declaration (identifier) @name (type) @type))
+  (struct_declaration (variable_declaration (identifier) @name (string) @value))
+  (struct_declaration (variable_declaration (identifier) @name (number) @value))
+  (struct_declaration (constant_declaration (identifier) @name (type) @value))
+  (struct_declaration (constant_declaration (identifier) @name (string) @value))
+  (struct_declaration (constant_declaration (identifier) @name (number) @value))
+  (class_declaration (variable_declaration (identifier) @name (type) @type))
+  (class_declaration (variable_declaration (identifier) @name (string) @value))
+  (class_declaration (variable_declaration (identifier) @name (number) @value))
+  (class_declaration (constant_declaration (identifier) @name (type) @type))
+  (class_declaration (constant_declaration (identifier) @name (string) @value))
+  (class_declaration (constant_declaration (identifier) @name (number) @value))
+#+end_src
+
+Now that we got our Tree-sitter query sorted, let's write a little elisp to extract the info we need from the generated tree. We'll write a =swift-class-or-struct-vars-at-point= function to extract the struct (or class) at point and subsequently filter its property names/types using our query. To simplify the result, we'll return a list of alists.
+
+#+begin_src emacs-lisp :lexical no
+  (defun swift-class-or-struct-vars-at-point ()
+    "Return a list of class or struct vars in the form '(((name . \"foo\") (type . \"Foo\")))."
+    (cl-assert (seq-contains local-minor-modes 'tree-sitter-mode) "tree-sitter-mode not enabled")
+    (let* ((node (or (tree-sitter-node-at-point 'struct_declaration)
+                     (tree-sitter-node-at-point 'class_declaration)))
+           (vars)
+           (var))
+      (unless node
+        (error "Neither in class nor struct"))
+      (mapc
+       (lambda (item)
+         (cond ((eq 'identifier
+                    (tsc-node-type (cdr item)))
+                (when var
+                  (setq vars (append vars (list var))))
+                (setq var (list (cons 'name (tsc-node-text
+                                             (cdr item))))))
+               ((eq 'type
+                    (tsc-node-type (cdr item)))
+                (setq var (map-insert var 'type (tsc-node-text
+                                                 (cdr item)))))
+               ((eq 'string
+                    (tsc-node-type (cdr item)))
+                (setq var (map-insert var 'type "String")))
+               ((eq 'number
+                    (tsc-node-type (cdr item)))
+                (setq var (map-insert var 'type "Int")))
+               (t (message "%s" (tsc-node-type (cdr item))))))
+       (tsc-query-captures
+        (tsc-make-query tree-sitter-language
+                        "(struct_declaration (variable_declaration (identifier) @name (type) @type))
+                         (struct_declaration (variable_declaration (identifier) @name (string) @value))
+                         (struct_declaration (variable_declaration (identifier) @name (number) @value))
+                         (struct_declaration (constant_declaration (identifier) @name (type) @value))
+                         (struct_declaration (constant_declaration (identifier) @name (string) @value))
+                         (struct_declaration (constant_declaration (identifier) @name (number) @value))
+                         (class_declaration (variable_declaration (identifier) @name (type) @type))
+                         (class_declaration (variable_declaration (identifier) @name (string) @value))
+                         (class_declaration (variable_declaration (identifier) @name (number) @value))
+                         (class_declaration (constant_declaration (identifier) @name (type) @type))
+                         (class_declaration (constant_declaration (identifier) @name (string) @value))
+                         (class_declaration (constant_declaration (identifier) @name (number) @value))")
+        node nil))
+      (when var
+        (setq vars (append vars (list var))))
+      vars))
+#+end_src
+
+#+RESULTS:
+: (((type . "Int") (name . "x"))
+:  ((type . "Int") (name . "y"))
+:  ((type . "Int") (name . "z")))
+
+Finally, we write a function to generate a Swift initializer from our property list.
+
+#+begin_src emacs-lisp :lexical no
+  (defun swift-class-or-struct-initializer-text (vars)
+    "Generate a Swift initializer from property VARS."
+    (cl-assert (seq-contains local-minor-modes 'tree-sitter-mode) "tree-sitter-mode not enabled")
+    (format
+     (string-trim
+      "
+  init(%s) {
+    %s
+  }")
+     (seq-reduce (lambda (reduced var)
+                   (format "%s%s%s: %s"
+                           reduced
+                           (if (string-empty-p reduced)
+                               "" ", ")
+                           (map-elt var 'name)
+                           (map-elt var 'type)))
+                 vars "")
+     (string-join
+      (mapcar (lambda (var)
+                (format "self.%s = %s"
+                        (map-elt var 'name)
+                        (map-elt var 'name)))
+              vars)
+      "\n  ")))
+#+end_src
+#+RESULTS:
+: init(x: Int, y: Int, z: Int) {
+:   self.x = x
+:   self.y = y
+:   self.z = z
+: }
+
+We're so close now. All we need is a simple way invoke our code generator. We can use yasnippet for that, making =init= our expandable keyword.
+
+#+begin_src
+  # -*- mode: snippet -*-
+  # name: init all
+  # key: init
+  # --
+  `(swift-class-or-struct-initializer-text (swift-class-or-struct-vars-at-point))`
+#+end_src
+
+And with all that, we've got our yasnippet vision accomplished!
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/emacs-generate-a-swift-initializer/init-sitter_x2.webp]]
+
+Be sure to check out this year's relevant [[https://emacsconf.org/][EmacsConf]] talk: [[https://emacsconf.org/2022/talks/treesitter/][Tree-sitter beyond syntax highlighting]].
+
+All code is now pushed to my [[https://github.com/xenodium/dotsies/commit/9a44606935e8d57d7b3bde2d8d051defbf254a9e][config repo]]. By the way, I'm not super knowledgable of neither yasnippet nor Tree-sitter. Improvements are totally welcome. Please reach out on the [[https://indieweb.social/@xenodium][Fediverse]] if you have suggestions!
+
+** Update
+[[https://gitlab.com/woolsweater][Josh Caswell]] kindly pointed out a couple of interesting items:
+
+  1. tree-sitter-langs's [[https://www.reddit.com/r/emacs/comments/zkb7aq/comment/izzjx3l/][Swift grammar is fairly outdated/incomplete]].
+  2. There are more up-to-date Swift grammar implementations currently available:
+     - [[https://gitlab.com/woolsweater/tree-sitter-swifter][tree-sitter-swifter]] (by Josh Caswell himself)
+     - [[https://github.com/alex-pinkus/tree-sitter-swift][tree-sitter-swift]] (by [[https://twitter.com/alexpinkus][Alex Pinkus]])
+
+* [2022-11-13 Sun] Emacs: quickly killing processes
+:PROPERTIES:
+:CUSTOM_ID: emacs-quick-kill-process
+:END:
+Every so often, I need to kill the odd unresponsive process. While I really like =proced= (check out Mickey Petersen's [[https://www.masteringemacs.org/article/displaying-interacting-processes-proced][article]]), I somehow find myself using macOS's [[https://support.apple.com/en-bw/guide/activity-monitor/actmaea30277/mac][Activity Monitor]] to this purpose. Kinda odd, considering I prefer to do these kinds of things from Emacs.
+
+What I'd really like is a way to quickly fuzzy search a list of active processes and choose the unresponsive culprid, using my preferred completion frontend (in my case [[https://github.com/abo-abo/swiper][ivy]]).
+
+#+ATTR_HTML: :width 95% :height 95%
+[[file:images/emacs-quick-kill-process/kill_x1.8.webp]]
+
+The function below gives us a fuzzy-searchable process utility. While we could use =ivy-read= directly in our implementation, we're better of using [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html][completing-read]] to remain compatible with other completion frameworks. I'm a big fan of the humble =completing-read=. You feed it a list of candidates and it prompts users to pick one.
+
+To build our process list, we can lean on =proced='s own source: =proced-process-attributes=. We transform its output to an [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Association-Lists.html][alist]], formatting the visible keys to contain the process id, owner, command name, and the command line which invoked the process. Once a process is chosen, we can send a kill signal using  +signal-process+ [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] and our /job is done/.
+
+#+begin_src emacs-lisp :lexical no
+  (require 'dwim-shell-command)
+  (require 'map)
+  (require 'proced)
+  (require 'seq)
+
+  (defun dwim-shell-commands-kill-process ()
+    "Select and kill process."
+    (interactive)
+    (let* ((pid-width 5)
+           (comm-width 25)
+           (user-width 10)
+           (processes (proced-process-attributes))
+           (candidates
+            (mapcar (lambda (attributes)
+                      (let* ((process (cdr attributes))
+                             (pid (format (format "%%%ds" pid-width) (map-elt process 'pid)))
+                             (user (format (format "%%-%ds" user-width)
+                                           (truncate-string-to-width
+                                            (map-elt process 'user) user-width nil nil t)))
+                             (comm (format (format "%%-%ds" comm-width)
+                                           (truncate-string-to-width
+                                            (map-elt process 'comm) comm-width nil nil t)))
+                             (args-width (- (window-width) (+ pid-width user-width comm-width 3)))
+                             (args (map-elt process 'args)))
+                        (cons (if args
+                                  (format "%s %s %s %s" pid user comm (truncate-string-to-width args args-width nil nil t))
+                                (format "%s %s %s" pid user comm))
+                              process)))
+                    processes))
+           (selection (map-elt candidates
+                               (completing-read "kill process: "
+                                                (seq-sort
+                                                 (lambda (p1 p2)
+                                                   (string-lessp (nth 2 (split-string (string-trim (car p1))))
+                                                                 (nth 2 (split-string (string-trim (car p2))))))
+                                                 candidates) nil t)))
+           (prompt-title (format "%s %s %s"
+                                 (map-elt selection 'pid)
+                                 (map-elt selection 'user)
+                                 (map-elt selection 'comm))))
+      (when (y-or-n-p (format "Kill? %s" prompt-title))
+        (dwim-shell-command-on-marked-files
+         (format "Kill %s" prompt-title)
+         (format "kill -9 %d" (map-elt selection 'pid))
+         :utils "kill"
+         :error-autofocus t
+         :silent-success t))))
+#+end_src
+
+I've pushed =dwim-shell-commands-kill-process= to my +[[https://github.com/xenodium/dotsies/][config]]+ [[https://github.com/xenodium/dwim-shell-command/commit/b98f45c7901446cf1ab60be2ab648c623e774427][dwim-shell-commands.el]]. Got suggestions? Alternatives? Lemme know.
+
+** Update
+
+I've moved =dwim-shell-commands-kill-process= from my Emacs [[https://github.com/xenodium/dotsies][config]] to [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]]. A few advantages:
+
+- Killing processes is now async.
+- Should anything go wrong, an error message is now accessible.
+- You can easily install via [[https://melpa.org/#/dwim-shell-command][MELPA]].
+
+If you prefer the previous version (without a dependency on [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]]), have a look at the [[https://github.com/xenodium/dotsies/commit/eac4f892eab7a80740ee8ce0c727381886442fb6][initial commit]].
+
+* [2022-11-06 Sun] Hey Emacs, change the default macOS app for...
+:PROPERTIES:
+:CUSTOM_ID: hey-emacs-change-the-default-macos-app-for
+:END:
+A few weeks ago, I [[https://xenodium.com/emacs-open-with-macos-app/][added an "open with"]] command to [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]]. It's pretty handy for opening files using an external app (ie. not Emacs) other than the default macOS one.
+
+=dwim-shell-commands-macos-open-with= and =dwim-shell-commands-open-externally= are typically enough for me to handle opening files outside of Emacs. But every now and then I'd like to change the default macOS app associated with specific file types. Now this isn't particularly challenging in macOS, but it does require a little navigating to get to the right place to change this default setting.
+
+Back in March 2020, I [[https://twitter.com/xenodium/status/1242879439932923909][tweeted]] about [[https://github.com/moretension/duti][duti]]: a command-line utility capable of setting default applications for various document types on macOS. While I liked the ability to change default apps from the command-line, the habit never quite stuck.
+
+Fast forward to 2022. I've been revisiting lots of my command-line usages (specially those that never stuck) and making them more accessible from Emacs via [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]]. I seldom change default apps on macOS, so my brain forgets about =duti= itself, let alone its arguments, order, etc. But with a dwim shell command like =dwim-shell-commands-macos-set-default-app=, I can easily invoke the command via [[https://github.com/abo-abo/swiper][swiper]]'s =counsel-M-x= fuzzy terms: /"dwim set"/.
+
+#+ATTR_HTML: :width 95% :height 95%
+[[file:images/hey-emacs-change-the-default-macos-app-for/set-default_x1.3.webp]]
+
+As an added bonus, I get to reuse =dwim-shell-commands--macos-apps= from "open with" to quickly pick the new default app, making the whole experience pretty snappy.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-macos-set-default-app ()
+    "Set default app for file(s)."
+    (interactive)
+    (let* ((apps (dwim-shell-commands-macos-apps))
+           (selection (progn
+                        (cl-assert apps nil "No apps found")
+                        (completing-read "Set default app: " apps nil t))))
+      (dwim-shell-command-on-marked-files
+       "Set default app"
+       (format "duti -s \"%s\" '<<e>>' all"
+               (string-trim
+                (shell-command-to-string (format "defaults read '%s/Contents/Info.plist' CFBundleIdentifier"
+                                                 (map-elt apps selection)))))
+       :silent-success t
+       :no-progress t
+       :utils "duti")))
+
+  (defun dwim-shell-commands--macos-apps ()
+    "Return alist of macOS apps (\"Emacs\" . \"/Applications/Emacs.app\")."
+    (mapcar (lambda (path)
+              (cons (file-name-base path) path))
+            (seq-sort
+             #'string-lessp
+             (seq-mapcat (lambda (paths)
+                           (directory-files-recursively
+                            paths "\\.app$" t (lambda (path)
+                                               (not (string-suffix-p ".app" path)))))
+                         '("/Applications" "~/Applications" "/System/Applications")))))
+#+end_src
+
+As usual, I've added =dwim-shell-commands-macos-set-default-app= to [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]], which you can install via [[https://melpa.org/#/dwim-shell-command][MELPA]].
+
+Did you find this tiny integration useful? Check out [[https://xenodium.com/hey-emacs-where-did-i-take-that-photo/][Hey Emacs, where did I take that photo?]]
+
+* [2022-11-02 Wed] Hey Emacs, where did I take that photo?
+:PROPERTIES:
+:CUSTOM_ID: hey-emacs-where-did-i-take-that-photo
+:END:
+I was recently browsing through an old archive of holiday photos (from [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] of course). I wanted to know where the photo was taken, which got me interested in extracting [[https://en.wikipedia.org/wiki/Exif][Exif]] metadata.
+
+Luckily the [[https://exiftool.org/][exiftool]] command line utility does the heavy lifting when it comes to extracting metadata. Since I want it quickly accessible from Emacs (in either dired or current buffer), a tiny elisp snippet would give me just that (via [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]]).
+
+#+ATTR_HTML: :width 95% :height 95%
+[[file:images/hey-emacs-where-did-i-take-that-photo/dwim-exif_x1.3.webp]]
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-image-exif-metadata ()
+    "View EXIF metadata in image(s)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "View EXIF"
+     "exiftool '<<f>>'"
+     :utils "exiftool"))
+#+end_src
+
+The above makes all Exif metadata easily accessible, including the photo's GPS coordinates. But I haven’t quite answered the original question. Where did I take the photo? I now know the coordinates, but I can’t realistically deduce neither the country nor city unless I /manually/ feed these values to a reverse geocoding service like [[https://www.openstreetmap.org/][OpenStreetMap]]. /Manually/ you say? This is Emacs, so we can throw more elisp glue at the problem, mixed in with a little shell script, and presto! We've now automated the process of extracting metadata, reverse geocoding, and displaying the photo's address in the minibuffer. Pretty nifty.
+
+#+ATTR_HTML: :width 95% :height 95%
+[[file:images/hey-emacs-where-did-i-take-that-photo/minibuffer-address_x1.3.webp]]
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-image-reverse-geocode-location ()
+    "Reverse geocode image(s) location."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Reverse geocode"
+     "lat=\"$(exiftool -csv -n -gpslatitude -gpslongitude '<<f>>' | tail -n 1 | cut -s -d',' -f2-2)\"
+      if [ -z \"$lat\" ]; then
+        echo \"no latitude\"
+        exit 1
+      fi
+      lon=\"$(exiftool -csv -n -gpslatitude -gpslongitude '<<f>>' | tail -n 1 | cut -s -d',' -f3-3)\"
+      if [ -z \"$lon\" ]; then
+        echo \"no longitude\"
+        exit 1
+      fi
+      json=$(curl \"https://nominatim.openstreetmap.org/reverse?format=json&accept-language=en&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1\")
+      echo \"json_start $json json_end\""
+     :utils '("exiftool" "curl")
+     :silent-success t
+     :error-autofocus t
+     :on-completion
+     (lambda (buffer)
+       (with-current-buffer buffer
+         (goto-char (point-min))
+         (let ((matches '()))
+           (while (re-search-forward "^json_start\\(.*?\\)json_end" nil t)
+             (push (match-string 1) matches))
+           (message "%s" (string-join (seq-map (lambda (json)
+                                                 (map-elt (json-parse-string json :object-type 'alist) 'display_name))
+                                               matches)
+                                      "\n")))
+         (kill-buffer buffer)))))
+#+end_src
+
+Displaying the photo's address in the minibuffer is indeed pretty nifty, but what if I’d like to drop a pin in a map for further exploration? This is actually simpler, as there's no need for reverse geocoding. Following a similar recipe, we merely construct an [[https://www.openstreetmap.org/][OpenStreetMap]] URL and open it in our favourite browser.
+
+#+ATTR_HTML: :width 95% :height 95%
+[[file:images/hey-emacs-where-did-i-take-that-photo/photo-map_x1.4.webp]]
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-image-browse-location ()
+    "Open image(s) location in browser."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Browse location"
+     "lat=\"$(exiftool -csv -n -gpslatitude -gpslongitude '<<f>>' | tail -n 1 | cut -s -d',' -f2-2)\"
+      if [ -z \"$lat\" ]; then
+        echo \"no latitude\"
+        exit 1
+      fi
+      lon=\"$(exiftool -csv -n -gpslatitude -gpslongitude '<<f>>' | tail -n 1 | cut -s -d',' -f3-3)\"
+      if [ -z \"$lon\" ]; then
+        echo \"no longitude\"
+        exit 1
+      fi
+      if [[ $OSTYPE == darwin* ]]; then
+        open \"http://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}&layers=C\"
+      else
+        xdg-open \"http://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}&layers=C\"
+      fi"
+     :utils "exiftool"
+     :error-autofocus t
+     :silent-success t))
+#+end_src
+
+Got suggestions? Improvements? All three functions are now included in [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]] as part of [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]]. Pull requests totally welcome ;)
+
+* [2022-10-24 Mon] Emacs: A welcoming experiment
+:PROPERTIES:
+:CUSTOM_ID: emacs-a-welcoming-experiment
+:END:
+The =*scratch*= buffer is the first thing I see when I launch an Emacs session. Coupled with [[https://github.com/Fanael/persistent-scratch][persistent-scratch]], it's served me well over the years. I gotta say though, my scratch buffer accumulates random bits and often becomes a little messy. It's not the most visually appealing landing buffer when launching Emacs. But who cares, I'm only a =C-x b= binding away from invoking =ivy-switch-buffer= to get me wherever I need to be. It's powered by =ivy-use-virtual-buffers=, which remembers recent files across sessions.
+
+Having said all of this, I recently ran into u/pearcidar43's [[https://www.reddit.com/r/unixporn/comments/yamj5f/exwm_emacs_is_kinda_comfy_as_a_wm/][post]] showcasing a wonderful Emacs banner. Lucky for us, they [[https://www.reddit.com/r/unixporn/comments/yamj5f/comment/itfusm0/?utm_source=share&utm_medium=web2x&context=3][shared]] the [[https://github.com/TanbinIslam43/mydotfiles/blob/main/.doom.d/emacs.png][image]], so I got curious about building a minimal welcome buffer of sorts. Nothing fancy, the only requirements being to load quickly and enable me to get on with my =C-x b= ritual. Throw in a little bonus to exit quickly by pressing just =q= if I so desire.
+
+#+ATTR_HTML: :width 95% :height 95%
+[[file:images/emacs-a-welcoming-experiment/welcome-minimal_x0.5.webp]]
+
+I didn't know a whole lot on how to go about it, so I took a peak at [[https://github.com/emacs-dashboard/emacs-dashboard][emacs-dashboard]] for inspiration. Turns out, I needed little code to get
+the desired effect in my =early-init.el=:
+
+#+begin_src emacs-lisp :lexical no
+  (defun ar/show-welcome-buffer ()
+    "Show *Welcome* buffer."
+    (with-current-buffer (get-buffer-create "*Welcome*")
+      (setq truncate-lines t)
+      (let* ((buffer-read-only)
+             (image-path "~/.emacs.d/emacs.png")
+             (image (create-image image-path))
+             (size (image-size image))
+             (height (cdr size))
+             (width (car size))
+             (top-margin (floor (/ (- (window-height) height) 2)))
+             (left-margin (floor (/ (- (window-width) width) 2)))
+             (prompt-title "Welcome to Emacs!"))
+        (erase-buffer)
+        (setq mode-line-format nil)
+        (goto-char (point-min))
+        (insert (make-string top-margin ?\n ))
+        (insert (make-string left-margin ?\ ))
+        (insert-image image)
+        (insert "\n\n\n")
+        (insert (make-string (floor (/ (- (window-width) (string-width prompt-title)) 2)) ?\ ))
+        (insert prompt-title))
+      (setq cursor-type nil)
+      (read-only-mode +1)
+      (switch-to-buffer (current-buffer))
+      (local-set-key (kbd "q") 'kill-this-buffer)))
+
+  (setq initial-scratch-message nil)
+  (setq inhibit-startup-screen t)
+
+  (when (< (length command-line-args) 2)
+    (add-hook 'emacs-startup-hook (lambda ()
+                                    (when (display-graphic-p)
+                                      (ar/show-welcome-buffer)))))
+#+end_src
+
+This being Emacs, I can bend it as far as needed. In my case, I didn't need much, so I can probably stop here. It was a fun experiment. I'll even [[https://github.com/xenodium/dotsies/commit/90c689def913a9bccdd408ef609c7f99a5cce1fb][try using it]] for a little while and see if it sticks. I'm sure there's plenty more that could be handled (edge cases, resizes, etc.), but if you want something more established, consider something like [[https://github.com/emacs-dashboard/emacs-dashboard][emacs-dashboard]] instead. I haven't used it myself, but is [[https://melpa.org/#/dashboard][pretty popular]].
+
+* [2022-10-14 Fri] Emacs: Open with macOS app
+:PROPERTIES:
+:CUSTOM_ID: emacs-open-with-macos-app
+:END:
+On a recent Reddit [[https://www.reddit.com/r/emacs/comments/y2dfma/comment/is4ygl8/?utm_source=share&utm_medium=web2x&context=3][comment]], tdstoff7 asked if I had considered writing an "Open with" DWIM shell command for those times one would like to open a file externally using an app other than the default. I hadn't, but nice idea.
+
+Take images as an example. Though Emacs can display them quickly, I also open images externally using the default app ([[https://en.wikipedia.org/wiki/Preview_(macOS)][Preview]] in my case). But then there are those times when I'd like to open with a different app for editing (maybe something like GIMP). It'd be nice to quickly choose which app to open with.
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-open-with-macos-app/open-with_x2.webp]]
+
+There isn't much to the code. Get a list of apps, ask user to pick one (via [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Programmed-Completion.html][completing-read]]), and launch the external app via =dwim-shell-command-on-marked-files=.
+
+There's likely a better way of getting a list of available apps (happy to take suggestions), but searching in "/Applications" "~/Applications" and "/System/Applications" does the job for now.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-macos-open-with ()
+    "Convert all marked images to jpg(s)."
+    (interactive)
+    (let* ((apps (seq-sort
+                  #'string-lessp
+                  (seq-mapcat (lambda (paths)
+                                (directory-files-recursively
+                                 paths "\\.app$" t (lambda (path)
+                                                    (not (string-suffix-p ".app" path)))))
+                              '("/Applications" "~/Applications" "/System/Applications"))))
+           (selection (progn
+                        (cl-assert apps nil "No apps found")
+                        (completing-read "Open with: "
+                                         (mapcar (lambda (path)
+                                                   (propertize (file-name-base path) 'path path))
+                                                 apps)))))
+      (dwim-shell-command-on-marked-files
+       "Open with"
+       (format "open -a '%s' '<<*>>'" (get-text-property 0 'path selection))
+       :silent-success t
+       :no-progress t
+       :utils "open")))
+#+end_src
+
+=dwim-shell-commands-macos-open-with= is now included in [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]], available on [[https://melpa.org/#/dwim-shell-command][melpa]]. What other uses can you find for it?
+
+* [2022-10-12 Wed] Improving on Emacs macOS sharing
+:PROPERTIES:
+:CUSTOM_ID: emacs-macos-sharing-dwim-style-improved
+:END:
+A quick follow-up to [[https://xenodium.com/emacs-macos-share-from-dired-dwim-style/][Emacs: macOS sharing (DWIM style)]]... Though functional, the implementation had a couple of drawbacks.
+
+Tohiko [[https://www.reddit.com/r/emacs/comments/y1tneh/comment/is0pgkf][noticed fullscreen wasn't working at all]] while Calvin [[https://lobste.rs/s/qga1px/emacs_macos_sharing_dwim_style#c_safiuw][proposed enumeration for tighter Emacs integration]].
+
+Calvin's suggestion enables using [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html][completing-read]] to pick the sharing service. This makes the integration feel more at home. As a bonus, it also enables sharing from fullscreen Emacs.
+
+As an [[https://github.com/abo-abo/swiper][ivy]] user, you can see a vertical list of sharing services.
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-macos-sharing-dwim-style-improved/share-completing_x1.4.webp]]
+
+Here's the new snippet, now [[https://github.com/xenodium/dwim-shell-command/commit/20e782b4bf1ea01fecfce3cc8ac4c5a74518cd80][pushed to dwim-shell-commands.el]]:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands--macos-sharing-services ()
+    "Return a list of sharing services."
+    (let* ((source (format "import AppKit
+                           NSSharingService.sharingServices(forItems: [
+                             %s
+                           ]).forEach {
+                             print(\"\\($0.prompt-title)\")
+                           }"
+                           (string-join (mapcar (lambda (file)
+                                                  (format "URL(fileURLWithPath: \"%s\")" file))
+                                                (dwim-shell-command--files))
+                                        ", ")))
+           (services (split-string (string-trim (shell-command-to-string (format "echo '%s' | swift -" source)))
+                                   "\n")))
+      (when (seq-empty-p services)
+        (error "No sharing services available"))
+      services))
+
+  (defun dwim-shell-commands-macos-share ()
+    "Share selected files from macOS."
+    (interactive)
+    (let* ((services (dwim-shell-commands--macos-sharing-services))
+           (service-name (completing-read "Share via: " services))
+           (selection (seq-position services service-name #'string-equal)))
+      (dwim-shell-command-on-marked-files
+       "Share"
+       (format
+        "import AppKit
+
+         _ = NSApplication.shared
+
+         NSApp.setActivationPolicy(.regular)
+
+         class MyWindow: NSWindow, NSSharingServiceDelegate {
+           func sharingService(
+             _ sharingService: NSSharingService,
+             didShareItems items: [Any]
+           ) {
+             NSApplication.shared.terminate(nil)
+           }
+
+           func sharingService(
+             _ sharingService: NSSharingService, didFailToShareItems items: [Any], error: Error
+           ) {
+             let error = error as NSError
+             if error.domain == NSCocoaErrorDomain && error.code == NSUserCancelledError {
+               NSApplication.shared.terminate(nil)
+             }
+             exit(1)
+           }
+         }
+
+         let window = MyWindow(
+           contentRect: NSRect(x: 0, y: 0, width: 0, height: 0),
+           styleMask: [],
+           backing: .buffered,
+           defer: false)
+
+         let services = NSSharingService.sharingServices(forItems: [\"<<*>>\"].map{URL(fileURLWithPath:$0)})
+         let service = services[%s]
+         service.delegate = window
+         service.perform(withItems: [\"<<*>>\"].map{URL(fileURLWithPath:$0)})
+
+         NSApp.run()" selection)
+       :silent-success t
+       :shell-pipe "swift -"
+       :join-separator ", "
+       :no-progress t
+       :utils "swift")))
+#+end_src
+
+[[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is available on [[https://melpa.org/#/dwim-shell-command][melpa]]. What other uses can you find for it?
+
+* [2022-10-12 Wed] Emacs: macOS sharing (DWIM style)
+:PROPERTIES:
+:CUSTOM_ID: emacs-macos-share-from-dired-dwim-style
+:END:
+UPDATE: See an improved implementation [[https://xenodium.com/emacs-macos-sharing-dwim-style-improved][here]].
+
+A few days ago, [[https://xenodium.com/emacs-reveal-in-finder-dwim-style/][I wrote dwim-shell-commands-macos-reveal-in-finder]]. While I've written a bunch of other [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands]], what set this case apart was the use of [[https://www.swift.org/][Swift]] to glue an Emacs workflow.
+
+#+begin_src emacs-lisp
+  (defun dwim-shell-commands-macos-reveal-in-finder ()
+    "Reveal selected files in macOS Finder."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Reveal in Finder"
+     "import AppKit
+      NSWorkspace.shared.activateFileViewerSelecting([\"<<*>>\"].map{URL(fileURLWithPath:$0)})"
+     :join-separator ", "
+     :silent-success t
+     :shell-pipe "swift -"))
+#+end_src
+
+There is hardly any Swift involved, yet it scratched a real itch I couldn't otherwise reach (reveal multiple dired files in macOS's [[https://en.wikipedia.org/wiki/Finder_(software)][Finder]]).
+
+divinedominion's [[https://www.reddit.com/r/emacs/comments/xzt3gx/comment/irrwoya/?utm_source=share&utm_medium=web2x&context=3][reddit comment]] got me thinking of other use-cases, so I figured why not push this Swift-elisp beeswax a little further... Let's add macOS's sharing ability via [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]], so I could invoke it from the comfort of my beloved [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] or any 'ol Emacs buffer visiting a file.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-macos-share ()
+    "Share selected files from macOS."
+    (interactive)
+    (let* ((position (window-absolute-pixel-position))
+           (x (car position))
+           (y (- (x-display-pixel-height)
+                 (cdr position))))
+      (dwim-shell-command-on-marked-files
+       "Share"
+       (format
+        "import AppKit
+
+         _ = NSApplication.shared
+
+         NSApp.setActivationPolicy(.regular)
+
+         let window = InvisibleWindow(
+           contentRect: NSRect(x: %d, y: %s, width: 0, height: 0),
+           styleMask: [],
+           backing: .buffered,
+           defer: false)
+
+         NSApp.activate(ignoringOtherApps: true)
+
+         DispatchQueue.main.async {
+           let picker = NSSharingServicePicker(items: [\"<<*>>\"].map{URL(fileURLWithPath:$0)})
+           picker.delegate = window
+           picker.show(
+             relativeTo: .zero, of: window.contentView!, preferredEdge: .minY)
+         }
+
+         NSApp.run()
+
+         class InvisibleWindow: NSWindow, NSSharingServicePickerDelegate, NSSharingServiceDelegate {
+           func sharingServicePicker(
+             _ sharingServicePicker: NSSharingServicePicker, didChoose service: NSSharingService?
+           ) {
+             if service == nil {
+               print(\"Cancelled\")
+
+               // Delay so \"More...\" menu can launch System Preferences
+               DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                 NSApplication.shared.terminate(nil)
+               }
+             }
+           }
+
+           func sharingServicePicker(
+             _ sharingServicePicker: NSSharingServicePicker,
+             delegateFor sharingService: NSSharingService
+           ) -> NSSharingServiceDelegate? {
+             return self
+           }
+
+           func sharingService(
+             _ sharingService: NSSharingService,
+             didShareItems items: [Any]
+           ) {
+             NSApplication.shared.terminate(nil)
+           }
+
+           func sharingService(
+             _ sharingService: NSSharingService, didFailToShareItems items: [Any], error: Error
+           ) {
+             let error = error as NSError
+             if error.domain == NSCocoaErrorDomain && error.code == NSUserCancelledError {
+               NSApplication.shared.terminate(nil)
+             }
+             exit(1)
+           }
+         }" x y)
+       :silent-success t
+       :shell-pipe "swift -"
+       :join-separator ", "
+       :no-progress t
+       :utils "swift")))
+#+end_src
+
+Sure there is some trickery involved here (like creating an invisible macOS window to anchor the menu), but hey the results are surprisingly usable. Take a look...
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-macos-share-from-dired-dwim-style/share-done_x1.4.webp]]
+
+I've pushed =dwim-shell-commands-macos-share= to [[https://github.com/xenodium/dwim-shell-command/blob/919817520fa507dd3c7e6859eb982976e28b2575/dwim-shell-commands.el#L370][dwim-shell-commands.el]] in case you'd like to give it a try. It's very much an experiment of sorts, so please treat it as such. For now, I'm looking forward to AirDropping more files and seeing if the flow sticks. Oh, and I just realised I can use this to send files to iOS Simulators. Win.
+
+[[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is available on [[https://melpa.org/#/dwim-shell-command][melpa]]. What other uses can you find for it?
+
+* [2022-10-09 Sun] Emacs: Reveal in macOS Finder (DWIM style)
+:PROPERTIES:
+:CUSTOM_ID: emacs-reveal-in-finder-dwim-style
+:END:
+Just the other day, [[https://github.com/gvoysey][Graham Voysey]] filed an [[https://github.com/xenodium/dwim-shell-command/issues/3][escaping bug]] against [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]]. Once he verified the the fix, he also posted [[https://github.com/xenodium/dwim-shell-command/issues/3#issuecomment-1272413459][two uses]] of =dwim-shell-command-on-marked-files=. I've made some small tweaks, but here's the gist of it:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-feh-marked-files ()
+    "View all marked files with feh."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "View with feh"
+     "feh --auto-zoom --scale-down '<<*>>'"
+     :silent-success t
+     :utils "feh"))
+
+  (defun dwim-shell-commands-dragon-marked-files ()
+    "Share all marked files with dragon."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "View with dragon"
+     "dragon --on-top '<<*>>'"
+     :silent-success t
+     :utils "dragon"))
+#+end_src
+
+I love seeing what others get up to by using =dwim-shell-command=. Are there new magical command-line utilities out there I don't know about? In this instance, I got to learn about [[https://feh.finalrewind.org/][feh]] and [[https://github.com/mwh/dragon][dragon]].
+
+[[https://feh.finalrewind.org/][feh]] is a no-frills image viewer for console users while [[https://github.com/mwh/dragon][dragon]] is a simple drag-and-drop source/sink for X or Wayland. Both utilities are great uses of =dwim-shell-command=, enabling a seamless transition from Emacs to the /outside world/. These days I'm rarely on a linux box, so I was keen to ensure macOS had these cases covered.
+
+[[https://en.wikipedia.org/wiki/Preview_(macOS)][Preview]] is a solid macOS equivalent to [[https://feh.finalrewind.org/][feh]]. =Preview= is already macOS's default image viewer. A simple =open '<<f>>'= would do the job, but if we'd like to make this command more portable, we can accomodate as follows:
+
+#+begin_src emacs-lisp
+  (defun dwim-shell-commands-open-externally ()
+    "Open file(s) externally."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Open externally"
+     (if (eq system-type 'darwin)
+         "open '<<f>>'"
+       "xdg-open '<<f>>'")
+     :silent-success t
+     :utils "open"))
+#+end_src
+
+Special mention goes to Bozhidar Batsov's [[https://github.com/bbatsov/crux][crux]] which achieves similar functionality via =crux-open-with=. [[https://github.com/bbatsov/crux][crux]] provides a bunch of other useful functions. Some of my favourites being =crux-duplicate-current-line-or-region=, =crux-transpose-windows=, =crux-delete-file-and-buffer=, and =crux-rename-buffer-and-file=, but I digress.
+
+Moving on to a [[https://github.com/mwh/dragon][dragon]] equivalent on macOS, I thought I had it covered via [[https://github.com/kaz-yos/reveal-in-osx-finder][reveal-in-osx-finder]] or [[https://github.com/jcs-elpa/reveal-in-folder][reveal-in-folder]]. Turns out, neither of these reveal multiple [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]]-selected files within [[https://en.wikipedia.org/wiki/Finder_(software)][Finder]]. At first, I thought this could be easily achieved by passing additional flags/params to macOS's =open= command, but it doesn't seem to be the case. Having said that, this [[https://stackoverflow.com/questions/7652928/launch-finder-window-with-specific-files-selected][Stack Overflow post]], has a solution in Objective-C, which is where things got a little more interesting. You see, back in July I [[https://xenodium.com/emacs-dwim-shell-command-multi-language/][added multi-language support]] to [[https://xenodium.com/emacs-dwim-shell-command-multi-language/][dwim-shell-command]] and while it highlighted language flexibility, I hadn't yet taken advantage of this feature myself. That is, until today.
+
+The Objective-C snippet from the Stack Overflow post can be written as a Swift one-liner. Ok I lie. It's actually two lines, counting the import, but you can see that this multi-language Emacs transition/integration is pretty easy to add.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-macos-reveal-in-finder ()
+    "Reveal selected files in macOS Finder."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Reveal in Finder"
+     "import AppKit
+      NSWorkspace.shared.activateFileViewerSelecting([\"<<*>>\"].map{URL(fileURLWithPath:$0)})"
+     :join-separator ", "
+     :silent-success t
+     :shell-pipe "swift -"))
+#+end_src
+
+ =<<*>>= is the centrepiece of the snippet above. It gets instantiated with a list of files joined using the =", "= separator.
+
+#+begin_src swift
+  NSWorkspace.shared.activateFileViewerSelecting(["/path/to/file1", "/path/to/file2"].map { URL(fileURLWithPath: $0) })
+#+end_src
+
+The proof of the pudding is of course in the eating, so ummm let's show it in action:
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/emacs-reveal-in-finder-dwim-style/dwim-reveal.webp]]
+
+I should mention the webp animation above was also created using my trusty =dwim-shell-commands-video-to-webp= also backed by [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]].
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-video-to-webp ()
+    "Convert all marked videos to webp(s)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert to webp"
+     "ffmpeg -i '<<f>>' -vcodec libwebp -filter:v fps=fps=10 -compression_level 3 -lossless 1 -loop 0 -preset default -an -vsync 0 '<<fne>>'.webp"
+     :utils "ffmpeg"))
+#+end_src
+
+[[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is available on [[https://melpa.org/#/dwim-shell-command][melpa]]. What other uses can you find for it?
+
+UPDATE: Most DWIM shell commands I use are available as part of [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]]. See =dwim-shell-command='s [[https://github.com/xenodium/dwim-shell-command#install-command-line-utilities][install command line utilities]].
+
+* [2022-10-01 Sat] Plain Org v1.5 released
+:PROPERTIES:
+:CUSTOM_ID: plain-org-v15-released
+:END:
+If you haven't heard of [[https://plainorg.com][Plain Org]], it gives you access to [[https://orgmode.org][org]] files on iOS while away from your beloved [[https://www.gnu.org/software/emacs/][Emacs]].
+
+Hadn't had time to post, but v1.5 has been available on the [[https://apps.apple.com/app/id1578965002][App Store]] for a couple of weeks now. The update is mostly a bugfix release, primarily addressing inline editing issues that appeared on iOS 16, along with a few other changes:
+
+- Render form feeds at end of headings at all times.
+- Fixes new files not recognized by org-roam.
+- Fixes share sheet saving from cold launch.
+- Fixes inline editing on iOS 16.
+
+#+ATTR_HTML: :width 60% :height 60%
+[[file:images/plain-org-v15-released/po.png]]
+
+I love org markup, but we (iPhone + org users) are a fairly niche bunch. If you're finding Plain Org useful, *please help support this effort* by getting the word out. Tell your friends, [[https://twitter.com/intent/tweet?text=Plain%20Org%20https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1578965002%20][tweet]], or blog about it. Or just support via the [[https://apps.apple.com/app/id1578965002][App Store]] :)
+
+* [2022-10-01 Sat] dwim-shell-command usages: pdftotext and scp
+:PROPERTIES:
+:CUSTOM_ID: dwim-shell-command-usages-pdftotext-and-scp
+:END:
+[[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is a little Emacs package I wrote to enable crafting more reusable shell commands. I intended to use it as an [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Shell.html][async-shell-command]] alternative (and I do these days). The more surprising win was bringing lots of command-line utilities (sometimes with complicated invocations) and making them quickly accessible. I no longer need to remember their respective parameters, order, flags, etc.
+
+I've migrated most [[https://xenodium.com/emacs-password-protect-current-pdf-revisited/][one-liners]] and [[https://xenodium.com/png-to-icns-emacs-dwim-style/][scripts]] I had to [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] equivalents. They are available at [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]]. Having said that, it's great to discover new usages from =dwim-shell-command= users.
+
+Take [[https://www.reddit.com/user/TiMueller/][u/TiMueller]]'s Reddit comment, [[https://www.reddit.com/r/emacs/comments/w8s2ov/comment/iq7idav/?utm_source=share&utm_medium=web2x&context=3][showcasing pdftotext]]. Neat utility I was unaware of. It does as it says on the tin and converts a pdf to text. Can be easily saved to your accessible repertoire with:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-pdf-to-txt ()
+    "Convert pdf to txt."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "pdf to txt"
+     "pdftotext -layout '<<f>>' '<<fne>>.txt'"
+     :utils "pdftotext"))
+#+end_src
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/dwim-shell-command-usages-pdftotext-and-scp/pdf-to-txt_x2.webp]]
+
+[[https://github.com/tareefdev][tareefdev]] wanted a quick command to [[https://linux.die.net/man/1/scp][secure copy]] remote files to a local directory. Though this use-case is already covered by Tramp, I suspect a DWIM command would make it a little more convenient (async by default). However, Tramp paths aren't usable from the shell unless we massage them a little. We can use =dwim-shell-command-on-marked-files='s =:post-process-template= to drop the "/ssh:" prefix.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-copy-remote-to-downloads ()
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Copy remote to local Downloads"
+     "scp '<<f>>' ~/Downloads/"
+     :utils "scp"
+     :post-process-template
+     (lambda (script file)
+       ;; Tramp file path start with "/ssh:". Drop it.
+       (string-replace file
+                       (string-remove-prefix "/ssh:" file)
+                       script))))
+#+end_src
+
+[[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is available on [[https://melpa.org/#/dwim-shell-command][MELPA]] (531 downloads as of 2022-10-01).
+
+* [2022-09-17 Sat] $ rm Important.txt (uh oh!)
+:PROPERTIES:
+:CUSTOM_ID: rm-important-txt-oh-sht
+:END:
+Setting Emacs up to use your system trash can potentially save your bacon if you mistakenly delete a file, say from [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]].
+
+Unsurprisingly, the trash safety net also extends to other Emacs areas. For example, discarding files from [[https://magit.vc/][Magit]] (via =magit-discard=) becomes a recoverable operation. As an [[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html][eshell]] user, the trash can also help you recover from =rm= blunders.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/rm-important-txt-oh-sht/recovered_x1.6.webp]]
+
+You can enable macOS system trash in Emacs by setting =trash-directory= along with defining =system-move-file-to-trash=:
+
+#+begin_src emacs-lisp :lexical no
+  (setq trash-directory "~/.Trash")
+
+  ;; See `trash-directory' as it requires defining `system-move-file-to-trash'.
+  (defun system-move-file-to-trash (file)
+    "Use \"trash\" to move FILE to the system trash."
+    (cl-assert (executable-find "trash") nil "'trash' must be installed. Needs \"brew install trash\"")
+    (call-process "trash" nil 0 nil "-F"  file))
+#+end_src
+
+* [2022-09-11 Sun] Cycling through window layouts (revisited)
+:PROPERTIES:
+:CUSTOM_ID: cycling-through-window-layout-revisited
+:END:
+Last year, I wrote a little script to [[https://xenodium.com/cycling-window-layouts-via-hammerspoon][cycle through window layouts via Hammerspoon]]. The cycling set I chose didn't stick, so here's another go.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/cycling-through-window-layout-revisited/cycle_layout.webp]]
+
+#+begin_src lua
+  function reframeFocusedWindow()
+     local win = hs.window.focusedWindow()
+     local maximizedFrame = win:screen():frame()
+     maximizedFrame.x = maximizedFrame.x + 15
+     maximizedFrame.y = maximizedFrame.y + 15
+     maximizedFrame.w = maximizedFrame.w - 30
+     maximizedFrame.h = maximizedFrame.h - 30
+
+     local leftFrame = win:screen():frame()
+     leftFrame.x = leftFrame.x + 15
+     leftFrame.y = leftFrame.y + 15
+     leftFrame.w = leftFrame.w / 2 - 15
+     leftFrame.h = leftFrame.h - 30
+
+     local rightFrame = win:screen():frame()
+     rightFrame.x = rightFrame.w / 2
+     rightFrame.y = rightFrame.y + 15
+     rightFrame.w = rightFrame.w / 2 - 15
+     rightFrame.h = rightFrame.h - 30
+
+     if win:frame() == maximizedFrame then
+       win:setFrame(leftFrame)
+       return
+     end
+
+     if win:frame() == leftFrame then
+       win:setFrame(rightFrame)
+       return
+     end
+
+     win:setFrame(maximizedFrame)
+  end
+
+  hs.hotkey.bind({"alt"}, "F", reframeFocusedWindow)
+#+end_src
+
+Looping through layouts is done with a global key-binding of =option f= or, if familiar with a macOS keyboard, =⌥ f=.
+
+For those unfamiliar with [[http://hammerspoon.org/][Hammerspoon]]... If you're a tinkerer and a macOS user, you'd love [[http://hammerspoon.org/][Hammerspoon]]. Like elisp gluing all things Emacs, Hammerspoon uses Lua to glue all things macOS. For example, here's a stint at [[https://xenodium.com/emacs-utilities-for-your-os/][writing a narrowing utility for macOS]] using [[http://www.hammerspoon.org/docs/hs.chooser.html][chooser]].
+
+* [2022-08-18 Thu] dwim-shell-command with template prompts
+:PROPERTIES:
+:CUSTOM_ID: dwim-shell-command-with-template-prompts
+:END:
+Somewhat recently, I wanted to quickly create an empty/transparent png file. [[https://imagemagick.org/][ImageMagick]]'s convert has you covered here. Say you want a transparent 200x400 image, you can get it with:
+
+#+begin_src sh
+  convert -verbose -size 200x400 xc:none empty200x400.png
+#+end_src
+
+Great, I now know the one-liner for it. But because I'm in the mood of saving these as [[https://xenodium.com/seamless-command-line-utils/][seamless command-line utils]], I figured I should save the
+[[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] equivalent.
+
+I wanted configurable image dimensions, so I used [[https://www.gnu.org/software/emacs/manual/html_node/calc/Formatting-Lisp-Functions.html][read-number]] together with [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Formatting-Strings.html][format]] to create the templated command and fed it to =dwim-shell-command-on-marked-files=. Job done:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-make-transparent-png ()
+    "Create a transparent png."
+    (interactive)
+    (let ((width (read-number "Width: " 200))
+          (height (read-number "Height: " 200)))
+      (dwim-shell-command-on-marked-files
+       "Create transparent png"
+       (format "convert -verbose -size %dx%d xc:none '<<empty%dx%d.png(u)>>'"
+               width height width height)
+       :utils "convert")))
+#+end_src
+
+The resulting =dwim-shell-commands-make-transparent-png= is fairly simple, but [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] aims to remove friction so you're more inclined to save reusable commands. In this case, we can shift querying and formatting into the template.
+
+=<<Width:200>>= can be interpreted as "ask the user for a value using the suggested prompt and default value."
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/dwim-shell-command-with-template-prompts/query.png]]
+
+With template queries in mind, =dwim-shell-commands-make-transparent-png= can be further reduced to essentially the interactive command boilerplate and the template itself:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-make-transparent-png ()
+    "Create a transparent png."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Create transparent png"
+     "convert -verbose -size <<Width:200>>x<<Height:200>> xc:none '<<empty<<Width:200>>x<<Height:200>>.png(u)>>'"
+     :utils "convert"))
+#+end_src
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/dwim-shell-command-with-template-prompts/empty.webp]]
+
+Note: Any repeated queries (same prompt and default) are treated as equal. That is, ask the user once and replace everywhere. If you'd like to request separate values, change either prompt or the default value.
+
+* [2022-08-14 Sun] Seamless command-line utils
+:PROPERTIES:
+:CUSTOM_ID: seamless-command-line-utils
+:END:
+Just the other day, I received a restaurant menu split into a handful of image files. I wanted to forward the menu to others but figured I should probably send it as a single file.
+
+ImageMagick's [[https://imagemagick.org/script/convert.php][convert]] command-line utility works great for this purpose. Feed it some images and it creates a pdf for you:
+
+#+begin_src sh
+  convert image1.png image2.png image3.png combined.pdf
+#+end_src
+
+Using =convert= for this purpose was pretty straightforward. I'm sure I'll use it again in a similar context, but what if I can make future usage more seamless? In the past, I would just make a note of usage and revisit when needed. Though this works well enough, it often requires some amount of manual work (looking things up, tweaking command, etc) if you happen to forget the command syntax.
+
+I wanted common one-liners (or [[https://xenodium.com/png-to-icns-emacs-dwim-style/][longer shell scripts]]) to be easily reusable and accessible from Emacs. Turns out, the [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] experiment is working fairly well for this purpose. In addition to providing template expansion, it generally [[https://xenodium.com/emacs-dwim-shell-command/][tries to do what I mean]] (focus when needed, reveal new files, rename buffers, etc).
+
+Here's how I saved the =convert= command instance for future usage:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-join-as-pdf ()
+    "Join all marked images as a single pdf."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Join as pdf"
+     "convert -verbose '<<*>>' '<<joined.pdf(u)>>'"
+     :utils "convert"))
+#+end_src
+
+From now on, any time I'd like to join multiple files into a pdf, I can now select them all and invoke =dwim-shell-commands-join-as-pdf=.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/seamless-command-line-utils/joined_minimal_x1.2.webp]]
+
+In the saved command, ='<<*>>'= expands to either [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] selected files or whatever file happens to be open in the current buffer. The buffer file isn't of much help for joining multiple items, but can be handy for other instances (say I want to convert current image to jpeg).
+
+Moving on to ='<<joined.pdf(u)>>'=, we could have just written as =joined.pdf=, but wrapping it ensures the resulting file name is unique. That is, if =joined.pdf= already exists, write =joined(1).pdf= instead.
+
+These kinds of command-line integrations are working well for me. Take the webp animation above, it was created by invoking =dwim-shell-commands-video-to-webp= on a =.mov= file. Easy peasy. While I can easily memorize the =convert= command for the pdf instance, I'm hopeless in the webp scenario:
+
+#+begin_src sh
+  ffmpeg -i '<<f>>' -vcodec libwebp -filter:v fps=fps=10 -compression_level 3 -lossless 1 -loop 0 -preset default -an -vsync 0 '<<fne>>'.webp
+#+end_src
+
+While searching through command line history helps to quickly re-spin previous commands, it requires remembering the actual utility used for any particular action. On the other hand, wrapping with Emacs functions enables me to remember the action itself, using more memorable names. Also, fuzzy searching works a treat.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/seamless-command-line-utils/fuzzy.png]]
+
+It's been roughly a month since I started playing around with this idea of wrapping command-line utilities more seamlessly. Since then, I've brought in a bunch of use-cases that are now quickly accessible (all in [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]]):
+
+- dwim-shell-commands-audio-to-mp3
+- dwim-shell-commands-clipboard-to-qr
+- dwim-shell-commands-copy-to-desktop
+- dwim-shell-commands-copy-to-downloads
+- dwim-shell-commands-docx-to-pdf
+- dwim-shell-commands-download-clipboard-stream-url
+- dwim-shell-commands-drop-video-audio
+- dwim-shell-commands-epub-to-org
+- dwim-shell-commands-external-ip
+- dwim-shell-commands-files-combined-size
+- dwim-shell-commands-git-clone-clipboard-url
+- dwim-shell-commands-git-clone-clipboard-url-to-downloads
+- dwim-shell-commands-http-serve-dir
+- dwim-shell-commands-image-browse-location
+- dwim-shell-commands-image-exif-metadata
+- dwim-shell-commands-image-reverse-geocode-location
+- dwim-shell-commands-image-to-grayscale
+- dwim-shell-commands-image-to-icns
+- dwim-shell-commands-image-to-jpg
+- dwim-shell-commands-image-to-png
+- dwim-shell-commands-install-iphone-device-ipa
+- dwim-shell-commands-join-as-pdf
+- dwim-shell-commands-kill-gpg-agent
+- dwim-shell-commands-kill-process
+- dwim-shell-commands-macos-bin-plist-to-xml
+- dwim-shell-commands-macos-caffeinate
+- dwim-shell-commands-macos-hardware-overview
+- dwim-shell-commands-macos-open-with
+- dwim-shell-commands-macos-reveal-in-finder
+- dwim-shell-commands-macos-set-default-app
+- dwim-shell-commands-macos-share
+- dwim-shell-commands-macos-toggle-dark-mode
+- dwim-shell-commands-macos-toggle-display-rotation
+- dwim-shell-commands-make-transparent-png
+- dwim-shell-commands-move-to-desktop
+- dwim-shell-commands-move-to-downloads
+- dwim-shell-commands-open-clipboard-url
+- dwim-shell-commands-open-externally
+- dwim-shell-commands-pdf-password-protect
+- dwim-shell-commands-pdf-to-txt
+- dwim-shell-commands-ping-google
+- dwim-shell-commands-rename-all
+- dwim-shell-commands-reorient-image
+- dwim-shell-commands-resize-gif
+- dwim-shell-commands-resize-image
+- dwim-shell-commands-resize-video
+- dwim-shell-commands-speed-up-gif
+- dwim-shell-commands-speed-up-video
+- dwim-shell-commands-stream-clipboard-url
+- dwim-shell-commands-svg-to-png
+- dwim-shell-commands-unzip
+- dwim-shell-commands-url-browse
+- dwim-shell-commands-video-to-gif
+- dwim-shell-commands-video-to-optimized-gif
+- dwim-shell-commands-video-to-webp
+
+What other use-cases would you consider? =dwim-shell-command= is [[https://melpa.org/#/dwim-shell-command][available on melpa]].
+
+** Update
+
+2022-11-14 dwim-shell-commands.el list updated.
+
+* [2022-08-03 Wed] Emacs freebie: macOS emoji picker
+:PROPERTIES:
+:CUSTOM_ID: emacs-freebie-macos-emoji-picker
+:END:
+I recently ran a little experiment to bring macOS's [[https://xenodium.com/an-accentuated-emacs-experiment/][long-press-accents-like behavior]] to Emacs. What I forgot to mention is that macOS's character viewer /just works/ from our beloved editor.
+
+If you have a newer MacBook model, you can press the 🌐 key to summon the emoji picker (character viewer). You may need to set this key binding [[https://support.apple.com/en-gb/guide/mac-help/mchlp1560/mac][from macOS keyboard preferences]].
+
+I'm happy to take this Emacs freebie, kthxbye.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-freebie-macos-emoji-picker/hearts_x1.5.webp]]
+
+Edits:
+
+- Like other macOS apps, this dialog can be invoked via control-command-space (thanks [[https://www.reddit.com/r/emacs/comments/wfja3n/comment/iiv7ptb/?utm_source=share&utm_medium=web2x&context=3][mtndewforbreakfast]]). Note: you'd lose this ability if you =(setq mac-command-modifier 'meta)= in your config.
+- The 🌐 key is a feature on newer MacBook hardware and likely needs configuration (thanks [[https://www.reddit.com/r/emacs/comments/wfja3n/comment/iivnwxt/?utm_source=share&utm_medium=web2x&context=3][Fabbi-]]).
+
+* [2022-08-01 Mon] dwim-shell-command video streams
+:PROPERTIES:
+:CUSTOM_ID: dwim-shell-command-video-streams
+:END:
+
+I continue hunting for use-cases I can migrate to [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]]... After adding [[https://xenodium.com/dwim-shell-command-improvements/][clipboard support]] (via <<cb>>) I found one more.
+
+1. Copy URL from browser.
+2. Invoke =dwim-shell-commands-mpv-stream-clipboard-url=.
+3. Enjoy picture in picture from Emacs ;)
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/dwim-shell-command-video-streams/mpv.webp]]
+
+What's the secret sauce? Very little. Invoke the awesome [[https://mpv.io/][mpv]] with a wrapping function using =dwim-shell-command-on-marked-files=.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-mpv-stream-clipboard-url ()
+    "Stream clipboard URL using mpv."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Streaming"
+     "mpv --geometry=30%x30%+100%+0% \"<<cb>>\""
+     :utils "mpv"
+     :no-progress t
+     :error-autofocus t
+     :silent-success t))
+#+end_src
+
+The typical progress bar kinda got in the way, so I added a new option =:no-progress= to =dwim-shell-command-on-marked-files=, so it can be used for cases like this one.
+
+* [2022-07-30 Sat] An accentuated Emacs experiment (à la macOS)
+:PROPERTIES:
+:CUSTOM_ID: an-accentuated-emacs-experiment
+:END:
+macOS has a wonderful input mechanism where you press and hold a key on your keyboard to display the accent menu. It's easy to internalize: /long press "a" if you want to input "á"/.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/an-accentuated-emacs-experiment/macosaccent.webp]]
+
+On Emacs, /C-x 8 ' a/ would be the equivalent, but it just didn't stick for me. Fortunately, there's an alternative, using dead keys. Mickey Petersen gives a [[https://www.masteringemacs.org/article/diacritics-in-emacs][wonderful introduction]]. Having said all this, I still longed for macOS's input mechanism.
+
+Thanks to Christian Tietze's [[https://twitter.com/ctietze/status/1552446492559958017][post]], I discovered the [[https://github.com/elias94/accent][accent]] package. While it doesn't handle /press-and-hold/, it does the heavy lifting of offering a menu with character options. If I could just bring that /press-and-hold/...
+
+My initial attempt was to use [[https://github.com/emacsorphanage/key-chord][key chords]] (via [[https://github.com/jwiegley/use-package][use-package]]):
+
+#+begin_src emacs-lisp :lexical no
+  (use-package accent
+    :ensure t
+    :chords (("aa" . ar/spanish-accent-menu)
+             ("ee" . ar/spanish-accent-menu)
+             ("ii" . ar/spanish-accent-menu)
+             ("oo" . ar/spanish-accent-menu)
+             ("uu" . ar/spanish-accent-menu)
+             ("AA" . ar/spanish-accent-menu)
+             ("EE" . ar/spanish-accent-menu)
+             ("II" . ar/spanish-accent-menu)
+             ("OO" . ar/spanish-accent-menu)
+             ("UU" . ar/spanish-accent-menu)
+             ("nn" . ar/spanish-accent-menu)
+             ("NN" . ar/spanish-accent-menu)
+             ("??" . ar/spanish-accent-menu)
+             ("!!" . ar/spanish-accent-menu))
+    :config
+    (defun ar/spanish-accent-menu ()
+      (interactive)
+      (let ((accent-diacritics
+             '((a (á))
+               (e (é))
+               (i (í))
+               (o (ó))
+               (u (ú ü))
+               (A (Á))
+               (E (É))
+               (I (Í))
+               (O (Ó))
+               (U (Ú Ü))
+               (n (ñ))
+               (N (Ñ))
+               (\? (¿))
+               (! (¡)))))
+        (ignore-error quit
+          (accent-menu)))))
+#+end_src
+
+While it kinda works, "nn" quickly got in the way of my n/p [[https://magit.vc/][magit]] navigation. Perhaps key chords are still an option for someone who doesn't need the "nn" chord, but being a Spanish speaker, I need that "ñ" from long "n" presses!
+
+I'm now trying a little experiment using an =after-change-functions= hook to monitor text input and present the accent menu. I'm sure there's a better way (anyone with ideas?). For now, it gives me something akin to /press-and-hold./
+
+#+ATTR_HTML: :width 80% :height 80%
+[[file:images/an-accentuated-emacs-experiment/accentuated.webp]]
+
+I'm wrapping the hook with a minor mode to easily enable/disable whenever needed. I'm also overriding =accent-diacritics= to only include the characters I typically need.
+
+#+begin_src emacs-lisp :lexical no
+  (use-package accent
+    :ensure t
+    :hook ((text-mode . accent-menu-mode)
+           (org-mode . accent-menu-mode)
+           (message-mode . accent-menu-mode))
+    :config
+    (setq accent-diacritics '((a (á))
+                              (e (é))
+                              (i (í))
+                              (o (ó))
+                              (u (ú ü))
+                              (A (Á))
+                              (E (É))
+                              (I (Í))
+                              (O (Ó))
+                              (U (Ú Ü))
+                              (n (ñ))
+                              (N (Ñ))
+                              (\? (¿))
+                              (! (¡))))
+    (defvar accent-menu-monitor--last-edit-time nil)
+
+    (define-minor-mode accent-menu-mode
+      "Toggle `accent-menu' if repeated keys are detected."
+      :lighter " accent-menu mode"
+      (if accent-menu-mode
+          (progn
+            (remove-hook 'after-change-functions #'accent-menu-monitor--text-change t)
+            (add-hook 'after-change-functions #'accent-menu-monitor--text-change 0 t))
+        (remove-hook 'after-change-functions #'accent-menu-monitor--text-change t)))
+
+    (defun accent-menu-monitor--text-change (beginning end length)
+      "Monitors text change BEGINNING, END, and LENGTH."
+      (let ((last-edit-time accent-menu-monitor--last-edit-time)
+            (edit-time (float-time)))
+        (when (and (> end beginning)
+                   (eq length 0)
+                   last-edit-time
+                   (not undo-in-progress)
+                   ;; 0.27 seems to work for my macOS keyboard settings.
+                   ;; Key Repeat: Fast | Delay Until Repeat: Short.
+                   (< (- edit-time last-edit-time) 0.27)
+                   (float-time (time-subtract (current-time) edit-time))
+                   (accent-menu-monitor--buffer-char-string (1- beginning))
+                   (seq-contains-p (mapcar (lambda (item)
+                                             (symbol-name (car item)))
+                                           accent-diacritics)
+                                   (accent-menu-monitor--buffer-char-string beginning))
+                   (string-equal (accent-menu-monitor--buffer-char-string (1- beginning))
+                                 (accent-menu-monitor--buffer-char-string beginning)))
+          (delete-backward-char 1)
+          (ignore-error quit
+            (accent-menu)))
+        (setq accent-menu-monitor--last-edit-time edit-time)))
+
+    (defun accent-menu-monitor--buffer-char-string (at)
+      (when (and (>= at (point-min))
+                 (< at (point-max)))
+        (buffer-substring-no-properties at (+ at 1)))))
+#+end_src
+
+As a bonus, it ocurred to me that I could use the same /press-and-hold/ to handle question marks in Spanish (from my UK keyboard).
+
+#+ATTR_HTML: :width 40% :height 40%
+[[file:images/an-accentuated-emacs-experiment/porque.webp]]
+
+* [2022-07-28 Thu] dwim-shell-command improvements
+:PROPERTIES:
+:CUSTOM_ID: dwim-shell-command-improvements
+:END:
+Added a few improvements to [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]].
+
+** Dired region
+In DWIM style, if you happen to have a [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] region selected, use region files instead. There's no need to explicitly mark them.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/dwim-shell-command-improvements/backup_x2.webp]]
+
+** Clipboard (kill-ring) replacement
+
+Use =<<cb>>= to substitute with clipboard content. This is handy for cloning git repos, using a URL copied from your browser.
+
+#+begin_src sh
+  git clone <<cb>>
+#+end_src
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/dwim-shell-command-improvements/clone.webp]]
+
+This illustrates =<<cb>>= usage, but you may want to use =dwim-shell-commands-git-clone-clipboard-url= from [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-commands.el][dwim-shell-commands.el]] instead. It does the same thing internally, but makes the command more accessible.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-git-clone-clipboard-url ()
+    "Clone git URL in clipboard to `default-directory'."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     (format "Clone %s" (file-name-base (current-kill 0)))
+     "git clone <<cb>>"
+     :utils "git"))
+#+end_src
+
+** Counter replacement
+
+Use =<<n>>= to substitute with a counter. You can also use =<<3n>>= to start the counter at 3.
+
+Handy if you'd like to consistently rename or copy files.
+
+#+begin_src sh
+  mv '<<f>>' 'image(<<n>>).png'
+#+end_src
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/dwim-shell-command-improvements/numberedsorted_x2.2.webp]]
+
+Can also use an alphabetic counter with =<<an>>=. Like the numeric version, can use any letter to start the counter with.
+
+#+begin_src sh
+mv '<<f>>' 'image(<<an>>).png'
+#+end_src
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/dwim-shell-command-improvements/alphacount_x2.2.webp]]
+
+** Prefix counter
+
+Use a [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Prefix-Command-Arguments.html][prefix command argument]] on =dwim-shell-commands= to repeat the command a number of times. Combined with a counter, you can make multiple copies of a single file.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/dwim-shell-command-improvements/repeat.webp]]
+
+** Optional error prompt
+
+Set =dwim-shell-command-prompt-on-error= to nil to skip error prompts. Focus process buffers automatically instead.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/dwim-shell-command-improvements/couldnt.png]]
+
+** Configurable prompt
+
+By default, =dwim-shell-command= shows all supported placeholders. You can change that prompt to something shorter using =dwim-shell-command-prompt=.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/dwim-shell-command-improvements/prompt.jpg]]
+
+** ⚠️ Use with care ⚠️
+
+The changes are pretty fresh. Please use with caution (specially the counter support).
+
+* [2022-07-24 Sun] dwim-shell-command on Melpa
+:PROPERTIES:
+:CUSTOM_ID: dwim-shell-command-on-melpa
+:END:
+#+ATTR_HTML: :width 70% :height 70%
+#+CAPTION: =<<cb>>= gets replaced by a clipboard (kill ring) URL
+[[file:images/dwim-shell-command-on-melpa/clone.webp]]
+
+My pull request to add [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] to [[https://melpa.org/][melpa]] has been [[https://github.com/melpa/melpa/pull/8129][merged]]. Soon, you'll be able to install [[https://melpa.org/#/dwim-shell-command][directly]] from Milkypostman’s Emacs Lisp Package Archive.
+
+=dwim-shell-command= is another way to invoke shell commands from our beloved editor. Why a different way? It does lots of little things for you, removing friction you didn't realise you had. You can check out the [[https://github.com/xenodium/dwim-shell-command][README]], but you'll appreciate it much more once you try it out.
+
+In addition, it's enabled me to bring lots of command-line tools into my Emacs config and make them highly accessible. You can see my usages over at [[https://github.com/xenodium/dotsies/blob/main/emacs/ar/dwim-shell-command-commands.el][dwim-shell-command-commands.el]].
+
+What kind of command-line tools? ffmpeg, convert, gifsycle, atool, qdpf, plutil, qrencode, du, sips, iconutil, and git (so far anyway). Below is a simple example, but would love to [[https://twitter.com/xenodium][hear]] how you get to use it.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-audio-to-mp3 ()
+    "Convert all marked audio to mp3(s)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert to mp3"
+     "ffmpeg -stats -n -i '<<f>>' -acodec libmp3lame '<<fne>>.mp3'"
+     :utils "ffmpeg"))
+#+end_src
+
+I've written about =dwim-shell-command= before:
+
+- [[https://xenodium.com/emacs-dwim-shell-command-multi-language/][Emacs: DWIM shell command (multi-language)]]
+- [[https://xenodium.com/png-to-icns-emacs-dwim-style/][png to icns (Emacs DWIM style)]]
+- [[https://xenodium.com/emacs-password-protect-current-pdf-revisited/][Emacs: Password-protect current pdf (revisited)]]
+- [[https://xenodium.com/emacs-dwim-shell-command/][Emacs DWIM shell-command]]
+
+[[https://irreal.org/blog/][Irreal]]'s also covered it:
+
+- [[https://irreal.org/blog/?p=10674][DWIM Shell Now Supports Multiple Languages]]
+- [[https://irreal.org/blog/?p=10653][DWIM Shell Commands]]
+- [[https://irreal.org/blog/?p=10660  ][More Examples of DWIM Shell Commands]]
+
+* [2022-07-16 Sat] A lifehack for your shell
+:PROPERTIES:
+:CUSTOM_ID: a-lifehack-for-your-shell
+:END:
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/a-lifehack-for-your-shell/unzip_x2.gif]]
+
+I'm a fan of the [[http://infozip.sourceforge.net/mans/unzip.html][unzip]] command line utility that ships with macOS. I give it a .zip file and it unzips it for me. No flags or arguments to remember (for my typical usages anyway). Most importantly, I've fully internalized the =unzip= command into muscle memory, probably because of its /perfect mnemonic/.
+
+But then there's .tar, .tar.gz, .tar.xz, .rar, and a whole world of compression archives, often requiring different tools, flags, etc. and I need to remember those too.
+
+Can't remember where I got this "life hack" from, but it suggests something along the lines of...
+
+#+begin_center
+  /Once you find a lost item at home, place it in the first spot you looked./
+#+end_center
+
+Great, I'll find things quickly. Win.
+
+Now, I still remember a couple of unarchiving commands from memory (looking at you =tar xvzf=), but I've noticed the first word that pops into mind when extracting is always =unzip=.
+
+There's the great [[https://www.nongnu.org/atool/][atool]] wrapper out there to extract all kinds of archives (would love to hear of others), but unlucky for me, its name never comes to mind as quickly as =unzip= does.
+
+With "life hack" in mind, let's just create an =unzip= [[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html][eshell]] alias to =atool=. Next time I need to unarchive anything, the first word that comes to mind (unzip!) will quickly get me on my way...
+
+#+begin_src sh
+  alias unzip 'atool --extract --explain $1'
+#+end_src
+
+Or if you prefer to add to your Emacs config:
+
+#+begin_src emacs-lisp :lexical no
+  (eshell/alias "unzip" "atool --extract --explain $1")
+#+end_src
+
+While [[https://xenodium.com/yasnippet-in-emacs-eshell/][I'm fan of Emacs eshell]], it's not everyone's cup of tea. Lucky for us all, aliases are a popular feature across shells. Happy unzipping!
+
+** Bonus
+
+Since I'm a keen on using "unzip" mnemonic everywhere in Emacs (not just my shell), I now have a [[https://xenodium.com/emacs-dwim-shell-command/][DWIM shell-command]] for it:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-unzip ()
+    "Unzip all marked archives (of any kind) using `atool'."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Unzip" "atool --extract --explain '<<f>>'"
+     :utils "atool"))
+#+end_src
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/a-lifehack-for-your-shell/unzip-dired_x1.5.gif]]
+
+** UPDATE:
+[[https://lobste.rs/][Lobste.rs]] has great [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell][comments]]. Thanks all:
+
+*** Aliases missing on remote machines
+
+Concerns about aliases [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_mqxo73][not available on remote machines]]. Valid. Certainly brings challenges if you can't modify the environment on the remote machine. The severity would depend on how frequently you have to do this. Fortunately for me, it's infrequent.
+
+Additionally, if accessing remote machine via [[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html][eshell]], this is a non-issue. You get to transparently bring most of your environment with you anyway.
+
+*** Unzip keyword is overloaded
+
+The alias is [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_78nnwt][overloading the unzip command]]. I know. It's a little naughty. Going with it for now. I used to use "extract" (also in comments), which I still like but somehow "unzip" still wins my memory race. [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_73bzze][There's also "x"]] (nice option), which seems to originate from [[https://github.com/sorin-ionescu/prezto][prezto]]. I could consider unzipp, unzip1, or some other variation.
+
+
+Not sure how I missed this, but there's also an [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_ra6sbf][existing alias for atool]]: aunpack. Could be a great alternative.
+
+
+*** Pause before extracting archives
+
+Valid [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_73bzze][point]]. In my case, the pause typically happens /before/ I invoke the alias.
+
+*** Littering
+
+If the archive didn't have a root dir, it can [[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_7fsart][litter your current directory]]. Indeed a pain to clean up. For this, we can atool's =--subdir= param to /always create subdirectory when extracting/.
+
+*** Alias to retrain
+
+[[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_yr1jby][Neat trick]]: =alias unzip = “echo ‘use atool’”= to help retrain yourself. Reminds me of Emacs [[https://github.com/bbatsov/guru-mode][guru-mode]].
+
+*** atool alternatives
+
+Nice to see other options suggested [[https://github.com/moonpyk/dtrx][dtrx]] ([[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_mutdjl][comment]]), [[https://github.com/mholt/archiver][archiver]] ([[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_nlsk7w][comment]]), [[https://github.com/ashang/unar][unar]] ([[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_90dk1l][comment]]), bsdtar from [[https://github.com/libarchive/libarchive][libarchive]] ([[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_ojy6ah][comment]]), [[https://packages.debian.org/stable/unp][unp]], [[https://wummel.github.io/patool/][patool]], and the tangentially related [[https://www.nongnu.org/zutils/zutils.html][zgrep]] ([[https://lobste.rs/s/qaimmg/lifehack_for_your_shell#c_vp8fdw][comment]]).
+
+* [2022-07-13 Wed] Emacs zones to lift you up
+:PROPERTIES:
+:CUSTOM_ID: emacs-zones-to-lift-you-up
+:END:
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-zoneb-tob-lift-you-up/zone.gif]]
+
+As I prune my [[https://github.com/xenodium/dotsies/][Emacs config]] off, I came across a forgotten bit of elisp I wrote about 6 years ago. While it's not going to power up your Emacs fu, it may lift your spirits, or maybe just aid discovery of new words.
+
+You see, I had forgotten about [[https://github.com/emacs-mirror/emacs/blob/master/lisp/play/zone.el][zone.el]] altogether: a fabulous package to tickle your heart. You can think of it as screensaver built into Emacs.
+
+If the built-in zones don't do it for ya, check out the few on melpa ([[https://depp.brause.cc/zone-nyan/][nyan]], [[https://github.com/kawabata/zone-sl][sl]], and [[https://xenodium.com/added-emacs-zone-rainbow/][rainbow]]).
+
+So, my nostalgic bit of elisp dates =Jun 17 2016=: a basic but functional zone ([[https://github.com/xenodium/dotsies/blob/main/emacs/ar/zone-words.el][zone-words]]), displaying words from [[http://wordnet.princeton.edu/][WordNet]]. Surely the package can use plenty of improvements ([[https://github.com/xenodium/dotsies/commit/00215e215be1413ea9d0085dd2de5123c635b8c0][here's one]]), but hey this is Emacs and pretty much all existing code will run, no matter how old. In Emacs time, 2016 is practically yesterday!
+
+* [2022-07-10 Sun] Emacs: DWIM shell command (multi-language)
+  :PROPERTIES:
+  :CUSTOM_ID: emacs-dwim-shell-command-multi-language
+  :END:
+  UPDATE: [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is now available on [[https://melpa.org/#/dwim-shell-command][melpa]].
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-dwim-shell-command-multi-language/csv.gif]]
+
+I keep on [[https://xenodium.com/png-to-icns-emacs-dwim-style/][goofying around]] with [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] and it's sibling =dwim-shell-command-on-marked-files= from [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-command.el][dwim-shell-command.el]].
+
+In addition to defaulting to [[https://en.wikipedia.org/wiki/Z_shell][zsh]], =dwim-shell-command-on-marked-files= now support other shells and languages. This comes in handy if you have snippets in different languages and would like to easily invoke them from Emacs. Multi-language support enables "using the best tool for the job" kinda thing. Or maybe you just happen to know how to solve a particular problem in a specific language.
+
+Let's assume you have an existing Python snippet to convert files from csv to json. With =dwim-shell-command-on-marked-files=, you can invoke the Python snippet to operate on either [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] or buffer files.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-csv-to-json-via-python ()
+    "Convert csv file to json (via Python)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert csv file to json (via Python)."
+     "
+  import csv
+  import json
+  text = json.dumps({ \"values\": list(csv.reader(open('<<f>>')))})
+  fpath = '<<fne>>.json'
+  with open(fpath , 'w') as f:
+    f.write(text)"
+     :shell-util "python"
+     :shell-args "-c"))
+#+end_src
+
+Or, maybe you prefer Swift and already had a snippet for the same thing?
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-csv-to-json-via-swift ()
+    "Convert csv file to json (via Swift)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert csv file to json (via Swift)."
+     "
+      import Foundation
+      import TabularData
+      let filePath = \"<<f>>\"
+      print(\"reading \\(filePath)\")
+      let content = try String(contentsOfFile: filePath).trimmingCharacters(in: .whitespacesAndNewlines)
+      let parsedCSV = content.components(separatedBy: CSVWritingOptions().newline).map{
+        $0.components(separatedBy: \",\")
+      }
+      let jsonEncoder = JSONEncoder()
+      let jsonData = try jsonEncoder.encode([\"value\": parsedCSV])
+      let json = String(data: jsonData, encoding: String.Encoding.utf8)
+      let outURL = URL(fileURLWithPath:\"<<fne>>.json\")
+      try json!.write(to: outURL, atomically: true, encoding: String.Encoding.utf8)
+      print(\"wrote \\(outURL)\")"
+     :shell-pipe "swift -"))
+#+end_src
+
+You can surely solve the same problem in elisp, but hey it's nice to have options and flexibility.
+
+* [2022-07-09 Sat] png to icns (Emacs DWIM style)
+:PROPERTIES:
+:CUSTOM_ID: png-to-icns-emacs-dwim-style
+:END:
+UPDATE: [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is now available on [[https://melpa.org/#/dwim-shell-command][melpa]].
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/png-to-icns-emacs-dwim-style/icns.gif]]
+
+Since [[https://xenodium.com/emacs-dwim-shell-command/][writing a DWIM version of the shell-command]], I've been having a little fun [[https://xenodium.com/emacs-password-protect-current-pdf-revisited/][revisiting command line utilities]] I sometimes invoke from my beloved editor. In this instance, converting a png file to an icns icon. What's more interesting about this case is that it's not just a one-liner, but a short script in itself. Either way, it's just as easy to invoke from Emacs using =dwim-shell-command--on-marked-files=.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-convert-image-to-icns ()
+    "Convert png to icns icon."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert png to icns icon"
+     "
+      # Based on http://stackoverflow.com/questions/12306223/how-to-manually-create-icns-files-using-iconutil
+      # Note: png must be 1024x1024
+      mkdir <<fne>>.iconset
+      sips -z 16 16 '<<f>>' --out '<<fne>>.iconset/icon_16x16.png'
+      sips -z 32 32 '<<f>>' --out '<<fne>>.iconset/icon_16x16@2x.png'
+      sips -z 32 32 '<<f>>' --out '<<fne>>.iconset/icon_32x32.png'
+      sips -z 64 64 '<<f>>' --out '<<fne>>.iconset/icon_32x32@2x.png'
+      sips -z 128 128 '<<f>>' --out '<<fne>>.iconset/icon_128x128.png'
+      sips -z 256 256 '<<f>>' --out '<<fne>>.iconset/icon_128x128@2x.png'
+      sips -z 256 256 '<<f>>' --out '<<fne>>.iconset/icon_256x256@2x.png'
+      sips -z 512 512 '<<f>>' --out '<<fne>>.iconset/icon_512x512.png'
+      sips -z 512 512 '<<f>>' --out '<<fne>>.iconset/icon_256x256@2x.png'
+      sips -z 1024 1024 '<<f>>' --out '<<fne>>.iconset/icon_512x512@2x.png'
+      iconutil -c icns '<<fne>>.iconset'"
+     :utils '("sips" "iconutil")
+     :extensions "png"))
+#+end_src
+
+* [2022-07-09 Sat] Emacs: Password-protect current pdf (revisited)
+:PROPERTIES:
+:CUSTOM_ID: emacs-password-protect-current-pdf-revisited
+:END:
+UPDATE: [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is now available on [[https://melpa.org/#/dwim-shell-command][melpa]].
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-password-protect-current-pdf-revisited/passprotect.gif]]
+
+With a recent look at writing [[https://xenodium.com/emacs-dwim-shell-command/][DWIM shell commands]], I've been revisiting my custom Emacs functions invoking command line utilities.
+
+Take this [[https://xenodium.com/emacs-password-protect-current-pdf/][post]], for example, where I invoke [[https://github.com/qpdf/qpdf][qpdf]] via a elisp. Using the new =dwim-shell-command--on-marked-files= in [[https://github.com/xenodium/dwim-shell-command/blob/main/dwim-shell-command.el][dwim-shell-command.el]], the code is stripped down to a bare minimum:
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-commands-pdf-password-protect ()
+    "Password protect pdf."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Password protect pdf"
+     (format "qpdf --verbose --encrypt '%s' '%s' 256 -- '<<f>>' '<<fne>>_enc.<<e>>'"
+             (read-passwd "user-password: ")
+             (read-passwd "owner-password: "))
+     :utils "qpdf"
+     :extensions "pdf"))
+#+end_src
+
+Compare the above =dwim-shell-command--on-marked-files= usage to my [[https://xenodium.com/emacs-password-protect-current-pdf/][previous implementation]]:
+
+#+begin_src emacs-lisp :lexical no
+  (defun pdf-password-protect ()
+    "Password protect current pdf in buffer or `dired' file."
+    (interactive)
+    (unless (executable-find "qpdf")
+      (user-error "qpdf not installed"))
+    (unless (equal "pdf"
+                   (or (when (buffer-file-name)
+                         (downcase (file-name-extension (buffer-file-name))))
+                       (when (dired-get-filename nil t)
+                         (downcase (file-name-extension (dired-get-filename nil t))))))
+      (user-error "no pdf to act on"))
+    (let* ((user-password (read-passwd "user-password: "))
+           (owner-password (read-passwd "owner-password: "))
+           (input (or (buffer-file-name)
+                      (dired-get-filename nil t)))
+           (output (concat (file-name-sans-extension input)
+                           "_enc.pdf")))
+      (message
+       (string-trim
+        (shell-command-to-string
+         (format "qpdf --verbose --encrypt '%s' '%s' 256 -- '%s' '%s'"
+                 user-password owner-password input output))))))
+#+end_src
+
+This really changes things for me. I'll be more inclined to add more of these tiny integrations to lots of great command line utilities. Take this recent [[https://news.ycombinator.com/item?id=32028752][Hacker News post]] on [[https://github.com/ocrmypdf/OCRmyPDF][ocrmypdf]] as an example. Their [[https://ocrmypdf.readthedocs.io/en/latest/cookbook.html][cookbook]] has lots of examples that can be easily used via  =dwim-shell-command--on-marked-files=.
+
+What command line utils would you use?
+
+* [2022-07-07 Thu] Emacs DWIM shell-command
+:PROPERTIES:
+:CUSTOM_ID: emacs-dwim-shell-command
+:END:
+UPDATE: [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is now available on [[https://melpa.org/#/dwim-shell-command][melpa]].
+
+I've [[https://xenodium.com/emacs-dwim-do-what-i-mean/][talked about DWIM before]], where I bend Emacs to help me do what I mean. Emacs is also great for [[https://xenodium.com/emacs-password-protect-current-pdf/][wrapping command-line one-liners with elisp]], so I can quickly invoke commands without thinking too much about flags, arguments, etc.
+
+I keep thinking the [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Shell.html][shell-command]] is ripe for plenty of enhancements using our DWIM fairydust.
+
+** Do what I mean how?
+
+*** Smart template instantiation
+I've drawn inspiration from [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Shell-Commands-in-Dired.html][dired-do-shell-command]], which substitutes special characters like * and ? with marked files. I'm also drawing inspiration from [[https://orgmode.org/worg/org-contrib/babel/][org babel]]'s [[https://orgmode.org/manual/Noweb-Reference-Syntax.html][noweb]] syntax to substitute =<<f>>= (file path), =<<fne>>= (file path without extension), and =<<e>>= (extension). My initial preference was to use something like =$f=, =$fne=, and =$e=, but felt they clashed with shell variables.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-dwim-shell-command/template.png]]
+
+*** Operate on dired marked files
+This is DWIM, so if we're visiting a [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] buffer, the shell command should operate on all the marked files.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-dwim-shell-command/diredmark.gif]]
+
+*** Operate on current buffer file
+
+Similarly, if visiting a buffer with an associated file, operate on that file instead.
+
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-dwim-shell-command/blur.png]]
+
+*** Automatically take me to created files
+Did the command create a new file in the current directory? Take me to it, right away.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-dwim-shell-command/showme.png]]
+
+*** Show me output on error
+
+I'm not usually interested in the command output when generating new files, unless there was an error of course. Offer to show it.
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-dwim-shell-command/couldnt.png]]
+
+*** Show me output if no new files
+
+Not all commands generate new files, so automatically show me the output for these instances.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-dwim-shell-command/apple.gif]]
+
+*** Make it easy to create utilities
+
+[[https://ffmpeg.org/][ffmpeg]] is awesome, but man I can never remember all the flags and arguments. I may as well wrap commands like these in a convenient elisp function and invoke via [[https://www.gnu.org/software/emacs/manual/html_node/efaq/Extended-commands.html][execute-extended-command]], or my favorite [[http://oremacs.com/swiper/#minibuffer-key-bindings][counsel-M-x]] (with completion), bound to the vital =M-x=.
+
+All those gifs you see in this post were created with =dwim-shell-command-convert-to-gif=, powered by the same elisp magic.
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-convert-to-gif ()
+    "Convert all marked videos to optimized gif(s)."
+    (interactive)
+    (dwim-shell-command--on-marked-files
+     "Convert to gif"
+     "ffmpeg -loglevel quiet -stats -y -i <<f>> -pix_fmt rgb24 -r 15 <<fne>>.gif"
+     :utils "ffmpeg"))
+#+end_src
+
+#+ATTR_HTML: :width 70% :height 70%
+[[file:images/emacs-dwim-shell-command/togif_x1.5.gif]]
+
+This makes wrapping one-liners a breeze, so let's do some more...
+
+#+begin_src emacs-lisp :lexical no
+  (defun dwim-shell-command-convert-audio-to-mp3 ()
+    "Convert all marked audio to mp3(s)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert to mp3"
+     "ffmpeg -stats -n -i '<<f>>' -acodec libmp3lame '<<fne>>.mp3'"
+     :utils "ffmpeg"))
+
+  (defun dwim-shell-command-convert-image-to-jpg ()
+    "Convert all marked images to jpg(s)."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Convert to jpg"
+     "convert -verbose '<<f>>' '<<fne>>.jpg'"
+     :utils "convert"))
+
+  (defun dwim-shell-command-drop-video-audio ()
+    "Drop audio from all marked videos."
+    (interactive)
+    (dwim-shell-command-on-marked-files
+     "Drop audio" "ffmpeg -i '<<f>>' -c copy -an '<<fne>>_no_audio.<<e>>'"
+     :utils "ffmpeg"))
+#+end_src
+
+*** Make it spin ;)
+Ok, not quite, but use Emacs's [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Progress.html][progress-reporter]] just for kicks.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/emacs-dwim-shell-command/progress.gif]]
+
+** Use it everywhere
+
+=dwim-shell-command= covers my needs (so far anyway), so I'm binding it to existing bindings.
+
+#+begin_src emacs-lisp :lexical no
+  (use-package dwim-shell-command
+    :bind
+    ("M-!" . dwim-shell-command))
+
+  (use-package dired
+    :bind (:map dired-mode-map
+                ([remap dired-do-async-shell-command] . dwim-shell-command)
+                ([remap dired-do-shell-command] . dwim-shell-command)
+                ([remap dired-smart-shell-command] . dwim-shell-command)))
+#+end_src
+
+** Bring those command line utilities
+
+On the whole, this really changes things for me. I'll be more inclined to bring command line utilities to seamless Emacs usage. Take this recent [[https://news.ycombinator.com/item?id=32028752][Hacker News post]] on [[https://github.com/ocrmypdf/OCRmyPDF][ocrmypdf]] as an example. Their [[https://ocrmypdf.readthedocs.io/en/latest/cookbook.html][cookbook]] has lots of examples that can be easily used via =dwim-shell-command--on-marked-files=. What command line utilities would you bring?
+
+** Where's the code?
+
+UPDATE: [[https://github.com/xenodium/dwim-shell-command][dwim-shell-command]] is now available on [[https://melpa.org/#/dwim-shell-command][melpa]].
+
+The code for [[https://github.com/xenodium/dotsies/blob/main/emacs/ar/dwim-shell-command.el][dwim-shell-command.el]] is likely a bit rough still, but you can take a peak if interested. Keep in mind this is DWIM, tailored for what ✨I✨ mean. Some of the current behavior may not be your cup of tea, but this is Emacs. You can bend it to do what ✨you✨ mean. Happy Emacsing.
+
+* [2022-06-02 Thu] Emacs: Password-protect current pdf
+:PROPERTIES:
+:CUSTOM_ID: emacs-password-protect-current-pdf
+:END:
+UPDATE: Check out [[https://xenodium.com/emacs-password-protect-current-pdf-revisited][Password-protect current pdf (revisted)]] for a simpler version.
+
+Every so often, I need to password-protect a pdf. On macOS, [[https://support.apple.com/en-gb/guide/preview/prvw587dd90f/mac][Preview has a simple solution]], but I figured there must be a command line utility to make this happen. There are options, but [[https://github.com/qpdf/qpdf][qdf]] did the job just fine.
+
+#+begin_src sh
+  qpdf --verbose --encrypt USER-PASSWORD OWNER-PASSWORD KEY-LENGTH -- input.pdf output.pdf
+#+end_src
+
+So what does ~qpdf~ have to do with Emacs? Command-line utilities are easy to invoke from Emacs via ~shell-command~ (M-!), but I don't want to remember the command nor the parameters. I may as well add a function that [[https://xenodium.com/emacs-dwim-do-what-i-mean/][does what I mean]] and password-protect either buffers or [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]] files.
+
+#+begin_src emacs-lisp :lexical no
+  (defun pdf-password-protect ()
+      "Password protect current pdf in buffer or `dired' file."
+      (interactive)
+      (unless (executable-find "qpdf")
+        (user-error "qpdf not installed"))
+      (unless (equal "pdf"
+                     (or (when (buffer-file-name)
+                           (downcase (file-name-extension (buffer-file-name))))
+                         (when (dired-get-filename nil t)
+                           (downcase (file-name-extension (dired-get-filename nil t))))))
+        (user-error "no pdf to act on"))
+      (let* ((user-password (read-passwd "user-password: "))
+             (owner-password (read-passwd "owner-password: "))
+             (input (or (buffer-file-name)
+                        (dired-get-filename nil t)))
+             (output (concat (file-name-sans-extension input)
+                             "_enc.pdf")))
+        (message
+         (string-trim
+          (shell-command-to-string
+           (format "qpdf --verbose --encrypt '%s' '%s' 256 -- '%s' '%s'"
+                   user-password owner-password input output))))))
+#+end_src
+
+* [2022-04-24 Sun] Plain Org v1.4 released
+:PROPERTIES:
+:CUSTOM_ID: plain-org-v14-released
+:END:
+[[https://plainorg.com][Plain Org]] v1.4 is now available on the [[https://apps.apple.com/app/id1578965002][App Store]].
+
+I was on a long flight recently 🦘, so I gave list and checkbox editing a little love. There's a couple of other minor improvements included.
+
+If you haven't heard of [[https://plainorg.com][Plain Org]], it gives you access to [[https://orgmode.org][org]] files on iPhone while away from your beloved [[https://www.gnu.org/software/emacs/][Emacs]].
+
+I love org markup, but we (iPhone + org users) are a fairly niche bunch. If you're finding Plain Org useful, *please help support this effort* by getting the word out. Tell your friends, [[https://twitter.com/intent/tweet?text=Plain%20Org%20https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1578965002%20][tweet]], or blog about it.
+
+On to v1.4 release notes...
+
+** Improved list/checkbox editing
+
+Adding list or checkbox items is traditionally cumbersome via the iPhone's keyboard. This release adds new toolbar actions and smart return to simplify things.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v14-released/list_this.gif]]
+
+** Render form feed characters
+
+Form feed characters are now rendered within expanded headings.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v14-released/form_feed.jpg]]
+
+Note: There's a limitation. Form feed characters at the end of a heading aren't currently displayed.
+
+** Other
+
+Increased all button tap areas in edit toolbar. This should hopefully improve interaction.
+
+* [2022-04-15 Fri] Plain Org v1.3 released
+:PROPERTIES:
+:CUSTOM_ID: plain-org-v130-released
+:END:
+
+[[https://plainorg.com][Plain Org]] v1.3 is now available on the [[https://apps.apple.com/app/id1578965002][App Store]]. The update receives a few features, bug fixes, and improvements.
+
+If you haven't heard of [[https://plainorg.com][Plain Org]], it gives you access to [[https://orgmode.org][org]] files on iPhone while away from your beloved [[https://www.gnu.org/software/emacs/][Emacs]].
+
+I love org markup, but we (iPhone + org users) are a fairly niche bunch. If you're finding Plain Org useful, *please help support this effort* by getting the word out. Tell your friends, [[https://twitter.com/intent/tweet?text=Plain%20Org%20https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1578965002%20][tweet]], or blog about it.
+
+On to v1.3 release notes...
+
+** Toggle recurring tasks
+
+You can now toggle recurring tasks with either catchup =<2022-04-15 Fri ++1d>=, restart =<2022-04-15 Fri .+1d>=, or cumulate =<2022-04-15 Fri +1d>= repeaters.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v130-released/recurring.gif]]
+
+** Log state transitions
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v130-released/logging.gif]]
+
+** Fullscreen view
+
+The navigation bar now hides on scroll. This can be enabled/disabled via =View > Full Screen= menu.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v130-released/fullscreen.gif]]
+
+The previous screenshot text comes from [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text]], a magnificent org resource.
+
+** Deadline and scheduled date rendered
+
+In the past, =SCHEDULED= and =DEADLINE= were rendered (but only one of them at a time). Now both are rendered alongside each other (deadline has an orange tint).
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v130-released/deadline_scheduled.png]]
+
+** Roundtripping fidelity
+
+Many roundtripping fidelity improvements included in 1.3. Shoutout to [[https://www.reddit.com/user/Oerm/][u/Oerm]] who reported [[https://www.reddit.com/r/plainorg/comments/ty7onh/changing_todo_status_of_one_item_triggers/][unnecessary formatting changes]] in unmodified areas and helped test all fixes.
+
+** Other bug fixes improvements
+
+- Disable raw text edit menu when file is not accessible.
+- Minor improvements to inline editing layouts (vertical height and drawers).
+- ABRT and HABIT now recognized as a popular keywords.
+- Improve state transition alignment to match org mode behaviour.
+- Fixes roundtripping state transition notes (leading to data loss).
+- Log creation from share sheet.
+- Increment DEADLINE *and* SCHEDULED, not just first found.
+- Roundtrip more whitespace in untouched areas.
+- Fixes org syntax inadvertently parsed within begin_src blocks (leading to data loss).
+
+* [2022-03-27 Sun] Plain Org v1.2.1 released
+:PROPERTIES:
+:CUSTOM_ID: plain-org-v121-released
+:END:
+[[https://plainorg.com][Plain Org]] v1.2.1 is now available on the [[https://apps.apple.com/app/id1578965002][App Store]]. The update receives minor features, bug fixes, and improvements.
+
+If you haven't heard of [[https://plainorg.com][Plain Org]], it gives you access to [[https://orgmode.org][org]] files on iPhone while away from your beloved [[https://www.gnu.org/software/emacs/][Emacs]].
+
+I love org markup, but we (iPhone + org users) are a fairly niche userbase. If you're finding Plain Org useful, *please help support this effort* by getting the word out. Tell your friends, [[https://twitter.com/intent/tweet?text=Plain%20Org%20https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1578965002%20][tweet]], or blog about it.
+
+On to v1.2.1 release notes...
+
+** Render LOGBOOK
+State transitions and LOGBOOK drawers are now recognized and rendered as such.
+
+Either of the following snippets are rendered as togglable LOGBOOK drawers.
+
+#+begin_src org
+  ,* TODO Feed the fish
+  - State "DONE"       from "TODO"       [2022-03-11 Fri 12:23]
+#+end_src
+
+#+begin_src org
+  ,* TODO Feed the cat
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2022-03-11 Fri 12:23]
+  :END:
+#+end_src
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v121-released/logbook.jpg]]
+
+** Add task to top/bottom
+Up until now, tasks were always appended to the bottom of things. This didn't work so well if you like seeing recent items bubbling up to the top.
+
+This version adds a new setting: /Settings/ > /Add new tasks to/ > /Top/Bottom/, giving you the choice.
+
+Note: Top is the new default value, please change this setting if you'd like to keep the previous behaviour.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v121-released/top_bottom.png]]
+
+
+** Checking for changes
+Local file changes aren't always detected via [[https://developer.apple.com/documentation/uikit/uidocument/1619945-statechangednotification][state change notifications]], so additional checks are now in place to offer reloading files.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v121-released/reload.jpg]]
+
+** Open inactive files
+After adding new tasks via iOS's share sheet, if the item was added to a file other than the active one, offer to open that instead.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v121-released/load_other.jpg]]
+
+** Other improvements
+- Color keyword red/green depending on #+TODO: position.
+- Round-trip planning order (SCHEDULED, CLOSED, DEADLINE).
+- Improve tag alignment to match org mode behaviour (best effort, sorry).
+- Improve vertical spacing prior to lists.
+- Improve share sheet reliability.
+- Fix opening local links from list items.
+- Fix indent for list items without previous content.
+- Fix race condition in adding TITLE and ID to new files.
+- Fix incorrect keyword color selection in search toolbar.
+- Fix menu inadvertently closing.
+- Fix menu tapping for iPad.
+* [2022-03-26 Sat] Emacs DWIM: swiper vs isearch vs phi-search
+:PROPERTIES:
+:CUSTOM_ID: emacs-dwim-swiper-vs-isearch-vs-phi-search
+:END:
+
+#+ATTR_HTML: :width 75% :height 75%
+[[file:images/emacs-dwim-swiper-vs-isearch-vs-phi-search/search-dwim.gif]]
+
+I've [[https://xenodium.com/emacs-dwim-do-what-i-mean/][talked about DWIM]] in the past, that wonderful Emacs ability to [[https://en.wikipedia.org/wiki/DWIM][do what ✨I✨ mean]].
+
+Emacs being hyper-configurable, we can always teach it more things, so it can do exactly what we mean.
+
+There are no shortages of buffer searching packages for Emacs. I'm a fan of Oleh Krehel's [[https://github.com/abo-abo/swiper][swiper]], but before that, I often relied on the built-in [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Isearch.html][isearch]]. Swiper is my default goto mechanism and have it bound to =C-s= (replacing the built-in [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Isearch.html][isearch-forward]]).
+
+Swiper services most needs until I start combining with other tools. Take [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html][keyboard macros]] and [[https://github.com/magnars/multiple-cursors.el][multiple cursors]]. Both wonderful, but neither can rely on swiper to do their thing. Ok, swiper does, but [[https://xenodium.com/emacs-swiper-and-multiple-cursors/][in a different way]].
+
+Rather than binding =C-s= to swiper, let's write a DWIM function that's aware of macros and multiple cursors. It must switch between swiper, isearch, and [[https://github.com/avkoval/phi-search][phi-search]] depending on what I want (search buffer, define macro, or search multiple cursors).
+
+Let's also tweak swiper's behavior a little further and prepopulate its search term with the active region. Oh, and I also would like swiper to wrap around (see [[http://oremacs.com/swiper/][ivy-wrap]]). But only swiper, not other ivy utilities. I know, I'm picky, but that's the whole point of DWIM... so here's my function to search forward that does exactly what ✨I✨ mean:
+
+#+begin_src emacs-lisp :lexical no
+  (defun ar/swiper-isearch-dwim ()
+    (interactive)
+    ;; Are we using multiple cursors?
+    (cond ((and (boundp 'multiple-cursors-mode)
+                multiple-cursors-mode
+                (fboundp  'phi-search))
+           (call-interactively 'phi-search))
+          ;; Are we defining a macro?
+          (defining-kbd-macro
+            (call-interactively 'isearch-forward))
+          ;; Fall back to swiper.
+          (t
+           ;; Wrap around swiper results.
+           (let ((ivy-wrap t))
+             ;; If region is active, prepopulate swiper's search term.
+             (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
+                 (let ((region (buffer-substring-no-properties (mark) (point))))
+                   (deactivate-mark)
+                   (swiper-isearch region))
+               (swiper-isearch))))))
+#+end_src
+
+The above snippet searches forward, but I'm feeling a little off-balance. Let's write an equivalent to search backwards. We can then bind it to =C-r=, also overriding the built-in [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Basic-Isearch.html][isearch-backward]].
+
+#+begin_src emacs-lisp :lexical no
+  (defun ar/swiper-isearch-backward-dwim ()
+    (interactive)
+    ;; Are we using multiple cursors?
+    (cond ((and (boundp 'multiple-cursors-mode)
+                multiple-cursors-mode
+                (fboundp  'phi-search-backward))
+           (call-interactively 'phi-search-backward))
+          ;; Are we defining a macro?
+          (defining-kbd-macro
+            (call-interactively 'isearch-backward))
+          ;; Fall back to swiper.
+          (t
+           ;; Wrap around swiper results.
+           (let ((ivy-wrap t))
+             ;; If region is active, prepopulate swiper's search term.
+             (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
+                 (let ((region (buffer-substring-no-properties (mark) (point))))
+                   (deactivate-mark)
+                   (swiper-isearch-backward region))
+               (swiper-isearch-backward))))))
+#+end_src
+
+These may be on the hacky side of things, but hey... they do the job. If there are better/supported ways of accomplishing a similar thing, I'd love to [[https://twitter.com/xenodium][hear about it]].
+* [2022-03-12 Sat] Grandma's vanilla pound cake
+  :PROPERTIES:
+  :CUSTOM_ID: grandmas-vanilla-pound-cake
+  :END:
+  #+ATTR_HTML: :width 50% :height 50%
+  [[file:images/grandmas-vanilla-pound-cake/pound_cake.jpg]]
+
+  My grandmother Hilda used to bake this for us grandkids. I don't know the origin of the recipe, but my parents, aunts, and cousins, they all bake it too. I'm a big fan, but only get to eat it when visiting. Yesterday, I changed that. Finally baked it myself \o/
+** Ingredients
+- 200g salted butter
+- 2 cups (400 g) sugar
+- 4 eggs
+- 3 cups (375 g) plain flour
+- 3 teaspoons baking powder
+- 1 tablespoon (15 ml) vanilla extract
+- 1 cup (250 ml) milk
+- 2 tablespoons (30 ml) Málaga Virgen wine (port works too)
+** Prep
+- Ensure all ingredients are at room temperature before you start.
+- Preheat oven at 175C.
+- Separate egg yolks and whites. Keep both.
+- Consolidate liquids into a bowl (milk + wine + vanilla).
+- Consolidate sifted powders into a bowl (flour + baking powder).
+** Meringue
+- Beat egg whites into a snowy meringue. Set aside.
+** Mixer
+- Beat butter in the mixer until creamy (important).
+- Add sugar and mix thoroughly ensuring creamy consistency remains (important).
+- Mix yolks in thoroughly one by one.
+- Mix in the meringue.
+- You're done with the mixer.
+** Hand mixing
+- With a wooden spoon, alternate hand mixing the liquids and the powders. Start with liquids and end with powders.
+** Pour into mould
+- Pour the mix into a non-stick baking mould.
+** Bake
+- Bake in oven between 60 and 70 mins, but don’t be afraid to leave longer if needed. Mileage varies across ovens.
+- Use a cake tester after 60 minutes to decide how much longer to bake for (if needed).
+* [2022-03-05 Sat] Emacs: viewing webp images
+:PROPERTIES:
+:CUSTOM_ID: emacs-viewing-webp-images
+:END:
+There's a recent reddit post asking how to [[https://www.reddit.com/r/emacs/comments/t76isx/viewing_webp_images_in_emacs/][view webp images in Emacs]]. I didn't know the answer, but it's something I had wanted for some time. This post was a nice reminder to go and check things out. Was happy to [[https://www.reddit.com/r/emacs/comments/t76isx/comment/hzft7ww/?utm_source=share&utm_medium=web2x&context=3][contribute an answer]].
+
+Turns out, it's very simple. Just set =image-use-external-converter= and install relevant external tools.
+
+#+begin_src emacs-lisp :lexical no
+  (setq image-use-external-converter t)
+#+end_src
+
+I'm a =use-package= user, so I prefer to set with:
+
+#+begin_src emacs-lisp :lexical no
+  (use-package image
+    :custom
+    ;; Enable converting external formats (ie. webp) to internal ones.
+    (image-use-external-converter t))
+#+end_src
+
+So what are the external tools needed? =C-h v= =image-use-external-converter= gives us the info we need:
+
+#+begin_quote
+If non-nil, create-image will use external converters for exotic formats.
+
+Emacs handles most of the common image formats (SVG, JPEG, PNG, GIF
+and some others) internally, but images that don't have native
+support in Emacs can still be displayed if an external conversion
+program (like ImageMagick "convert", GraphicsMagick "gm"
+or "ffmpeg") is installed.
+
+This variable was added, or its default value changed, in Emacs 27.1.
+#+end_quote
+
+I happen to be a macOS user, so I install ImageMagick with:
+
+#+begin_src sh
+  brew install imagemagick
+#+end_src
+
+* [2022-02-21 Mon] Emacs: Fuzzy search Apple's online docs
+:PROPERTIES:
+:CUSTOM_ID: emacs-fuzzy-search-apples-online-docs
+:END:
+#+ATTR_HTML: :width 90% :height 90%
+[[file:images/emacs-fuzzy-search-apples-online-docs/color_search.gif]]
+
+When building software for the Apple ecosystem, Xcode is often the editor of choice. With [[https://www.gnu.org/software/emacs/][Emacs]] being my personal preference, I rarely find other iOS devs with a similar mindset.
+
+When I saw [[https://twitter.com/konrad1977][Mikael Konradsson]]'s post describing [[https://www.reddit.com/r/emacs/comments/sndriv/i_finally_got_full_autocompetion_in_swift_with/][his Emacs Swift development setup]], I reached out to say hello. While exchanging tips and tricks, the topic of searching Apple's docs came up. It had been a while since I looked into this, so it was a great reminder to revisit the space.
+
+Back in June 2020, I wrote a snippet to [[https://xenodium.com/emacs-search-hackingwithswiftcom/][fuzzy search hackingwithswift.com]], using Emacs's [[https://github.com/abo-abo/swiper][ivy]] completion framework. With a similar online API, we could also search Apple's docs. Turns out, there is and we can we can use it to search [[https://developer.apple.com/search][developer.apple.com]] from our beloved editor.
+
+#+begin_src emacs-lisp :lexical no
+  ;;; counsel-apple-search.el -*- lexical-binding: t; -*-
+
+  (defun ar/counsel-apple-search ()
+    "Ivy interface for dynamically querying apple.com docs."
+    (interactive)
+    (require 'request)
+    (require 'json)
+    (require 'url-http)
+    (ivy-read "apple docs: "
+              (lambda (input)
+                (let* ((url (url-encode-url (format "https://developer.apple.com/search/search_data.php?q=%s" input)))
+                       (c1-width (round (* (- (window-width) 9) 0.3)))
+                       (c2-width (round (* (- (window-width) 9) 0.5)))
+                       (c3-width (- (window-width) 9 c1-width c2-width)))
+                  (or
+                   (ivy-more-chars)
+                   (let ((request-curl-options (list "-H" (string-trim (url-http-user-agent-string)))))
+                     (request url
+                       :type "GET"
+                       :parser 'json-read
+                       :success (cl-function
+                                 (lambda (&key data &allow-other-keys)
+                                   (ivy-update-candidates
+                                    (mapcar (lambda (item)
+                                              (let-alist item
+                                                (propertize
+                                                 (format "%s   %s   %s"
+                                                         (truncate-string-to-width (propertize (or .title "")
+                                                                                               'face '(:foreground "yellow")) c1-width nil ?\s "…")
+                                                         (truncate-string-to-width (or .description "") c2-width nil ?\s "…")
+                                                         (truncate-string-to-width (propertize (string-join (or .api_ref_data.languages "") "/")
+                                                                                               'face '(:foreground "cyan1")) c3-width nil ?\s "…"))
+                                                 'url .url)))
+                                            (cdr (car data)))))))
+                     0))))
+              :action (lambda (selection)
+                        (browse-url (concat "https://developer.apple.com"
+                                            (get-text-property 0 'url selection))))
+              :dynamic-collection t
+              :caller 'ar/counsel-apple-search))
+#+end_src
+
+* [2022-02-13 Sun] Plain Org v1.2 released
+:PROPERTIES:
+:CUSTOM_ID: plain-org-v12-released
+:END:
+
+Although [[https://plainorg.com][Plain Org]] v1.2 has been in the [[https://apps.apple.com/app/id1578965002][App Store]] for a little while, the release write-up was overdue, sorry. The update receives some new features and bugfixes.
+
+If you haven't heard of [[https://plainorg.com][Plain Org]], it gives ya access to your [[https://orgmode.org][org files]] on iOS while away from your beloved [[https://www.gnu.org/software/emacs/][Emacs]].
+
+If you're finding Plain Org useful, *please help support this effort* by getting the word out. Tell your friends, [[https://twitter.com/intent/tweet?text=Plain%20Org%20https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1578965002%20][tweet]], or blog about it.
+
+Ok, now on to what's included in the v1.2 release...
+
+** Edit heading sections inline
+
+v1.0 introduced outline editing (for headings only). In v1.2, we can also edit section content. Press the =return=
+ key multiple times to exit out section editing.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/inline.gif]]
+
+** Filter by keyword/priority/tag
+
+From the search dialog, you can now filter by keyboard, priority, and tag.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/select_filter.png]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/filter_results.png]]
+
+** Render drawers and properties
+
+Drawers are now rendered and can be expanded to view their content.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/drawer.gif]]
+
+** Open files via the Files app's "Share" sheet
+
+From the Files app, you can now explicitly request launching files in Plain Org by using the "Share" menu.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/share.png]]
+
+** Render LaTeX src blocks (experimental)
+
+This one has its rough edges at the moment, so have to mark it _experimental_, but... you can can now render =#+begin_src latex= blocks.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/latex_src.png]]
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/latex_render.png]]
+
+** Insert title/id in new files
+New files created via Plain Org automatically get =#+TITLE:= and =:ID:= inserted by default as follows:
+
+#+begin_src org
+  ,#+TITLE: My favorite title
+  :PROPERTIES:
+  :ID:       7C845D38-8D80-41B5-BEB1-94F673807355
+  :END:
+#+end_src
+
+/UPDATE/: Sorry, this feature currently has a bug. You may not get these values inserted into your new document. Working on a fix.
+
+** Adding new tags quicker
+Add tags quicker via the new + button.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/new_tag.png]]
+
+** Enable/disable sticky tags
+
+Keywords, indent, and tags are maintained when adding new headings via outline editing. If you prefer disabling sticky tags, this can now be disabled.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/sticky_tags_setting.png]]
+
+** Improved navigation bar
+
+v1.2 makes the navigation bar feel more at home on your iPhone. It uses a large title which scrolls into the navigation bar.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v12-released/navbar.gif]]
+
+** Bugfixes
+- Fix table rendering for iPad width.
+- Fix image's horizontal padding.
+- Fix adding new tags on new headings.
+- Fix snapshotting bug resulting in Syncthing conflicts.
+- Fix tapping menu after presenting other dialogs.
+- Filter out parenthesis in file-local keywords like =TODO(t)=.
+- Commit pending inline changes if search is requested.
+- Fix opening local links inside tables.
+- Roundtrip whitespace in empty headings.
+- Roundtrip trailing whitespace when raw-editing heading content.
+- Tapping on body content should not toggle expansion.
+
+#+BEGIN_EXPORT html
+<br/>
+<div style="text-align: center;">
+  <a href="https://apps.apple.com/app/id1578965002">
+    <img src="../images/flat-habits-for-ios/download-on-app-store.png" alt="download-on-app-store.png" height="40px">
+  </a>
+</div>
+#+END_EXPORT
+* [2022-01-03 Mon] Happy New Year and forming new habits
+:PROPERTIES:
+:CUSTOM_ID: happy-new-year-and-forming-new-habits
+:END:
+Hacker News has a [[https://news.ycombinator.com/item?id=29774859][summary of Atomic Habits]] (the [[https://jamesclear.com/atomic-habits][book]]). In my case, I really enjoyed reading the entire book. I liked its narrative, mixing _actionable_ and _concrete_ advice with personal stories and experiments.
+
+After reading Atomic Habits during the first lockdown, I was excited to try out its actionables, specially tracking to keep me honest.
+
+I tried a bunch of iOS apps, but wanted no friction, no tracking, no cloud, no social, no analytics, no account, etc. so eventually
+[[https://xenodium.com/frictionless-org-habits-on-ios/][built Flat Habits]] ([[https://flathabits.com][flathabits.com]]). Also wanted to own my habit data (as plain text), so I made sure Flat Habits stored its data locally as an org file.
+
+I'm an Emacs nutter and can say the strength in habit tracking lies in removing daily friction from the tracking process itself. A quickly accessible mobile app can really help with that. For me, Emacs plays a less important role here. The plain text part is cherry on top (bringing piece of mind around lock-in). In my case, it's been months since I looked at the plain text file itself from an Emacs org buffer. The iOS app, on the other hand, gets daily usage.
+
+As for forming lasting habits (the actual goal here)... it's been well over a year since I started running as a regular form of exercise. While reading Atomic Habits really changed how I think of habits, a tracker played a crucial part in the daily grind. I happen to have built a tracker that [[https://xenodium.com/flat-habits-meets-org-agenda/][plays nice with Emacs]].
+
+It's a new year. If you're looking at forming new habits, you may want some inspiration and also practical and concrete guidance. The book Atomic Habits can help with that. You can decide on which apps and how to implement the tracking process later on. Pen and paper is also a viable option and there are plenty of templates you can download.
+
+There's a surplus of habit-tracking apps on the app stores. I built yet another one for iOS, modeled after my needs.
+
+#+BEGIN_EXPORT html
+<div style="text-align: center;">
+  <img src="../images/flat-habits-for-ios/today_no_filter.png" alt="today_no_filter.png" width="300px" style="padding: 10px;">
+  <img src="../images/flat-habits-for-ios/meditate.png" alt="today_no_filter.png" width="300px" style="padding: 10px;">
+  <a href="https://apps.apple.com/app/id1558358855">
+    <img src="../images/flat-habits-for-ios/download-on-app-store.png" alt="today_no_filter.png" height="40px">
+  </a>
+</div>
+#+END_EXPORT
+
+* [2021-12-12 Wed] Plain Org v1.1 released 🎄☃️
+:PROPERTIES:
+:CUSTOM_ID: plain-org-v11-released
+:END:
+[[https://plainorg.com][Plain Org]] v1.1 is now available on the [[https://apps.apple.com/app/id1578965002][App Store]]. The update receives new features and bugfixes.
+
+If you're finding Plain Org useful, *please help support this effort* by getting the word out. Tell your friends, [[https://twitter.com/intent/tweet?text=Plain%20Org%20https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1578965002%20][tweet]], or blog about it.
+
+** What is Plain Org?
+
+Ok, now on to what's included in the v1.1 release...
+
+** Compact mode
+
+By default, Plain Org layout uses generous padding. The new option =Menu -> View -> Compact mode= packs more content into your screen.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/compact.gif]]
+
+** Regroup active and inactive tasks
+
+Regrouping tasks now bubbles active ones up. Similarly, inactive tasks drop to the bottom of their node. Changes are persisted to the org file.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/regroup.gif]]
+
+** Native table rendering
+
+Tables are now rendered natively but also support displaying links and other formatting within cells.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/table.gif]]
+
+** Open local ID links
+
+If your file provider supports granting access to folders, local ID links (ie. ~id:eb155a82-92b2-4f25-a3c6-0304591af2f9~) can now be resolved and opened from Plain Org. Note that for ID links to resolve, other org files must live in either the same directory or a subdirectory.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/idlink.gif]]
+
+** Fill paragraphs
+
+If your org paragraphs contain newlines optimizing for bigger screens, you can toggle =Menu -> View -> Fill paragraph= to optimize rendering for your iPhone. This rendering option makes no file modifications.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/fillparagraph.gif]]
+
+By the way, the previous screenshot text comes from [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text]], a magnificent org resource.
+
+** Show/hide basic scheduling
+
+Use the new =Menu -> View -> Scheduling= to toggle showing ~SCHEDULED~ or ~DEADLINE~ dates.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/scheduling.gif]]
+
+
+** Show/hide tags
+
+Similarly, the new =Menu -> View -> Tags= option toggles displaying tags.
+
+#+ATTR_HTML: :width 50% :height 50%
+[[file:images/plain-org-v11-released/hidetags.gif]]
+
+
+** Native list rendering
+
+Lists are now rendered natively. With the exception of numbered cases, list items now share a common bullet icon. Description lists are also recognized and receive additional formatting when rendered.
+
+#+begin_src org
+ - First list item
+ * Second list item
+ + Third list item
+ 1. Numbered list item
+ + Term :: Description for term
+#+end_src
+
+#+ATTR_HTML: :width 30% :height 30%
+[[file:images/plain-org-v11-released/listitems.png]]
+
+Numbered checkboxes are now recognized and receive the same formatting and interaction as their non-numbered counterparts.
+
+#+begin_src org
+ 1. [ ] First checkbox
+ 2. [X] Second checkbox
+ 3. [X] Third checkbox
+#+end_src
+
+#+ATTR_HTML: :width 30% :height 30%
+[[file:images/plain-org-v11-released/numbered.png]]
+
+** Reload current file
+
+Plain Org may not be able to automatically reload files for some syncing providers. In those instances, use =Menu -> Reload= to explicitly request a reload.
+
+** Open .txt files
+
+Although .org files are plain text files, they aren't always recognized by other text-editing apps. This release enables opening .txt files, so you can choose to render them in Plain Org, while giving you the option to edit elsewhere.
+
+** Bugfixes
+
+- Improve vertical whitespace handling.
+- Fixes rendering edge cases.
+- Fail gracefully when creating new files on unsupported cloud providers.
+- Prevent creating new files with redundant extensions.
+- File access improvements.
+- Replicates property spacing behaviour using Emacs's ~org-property-format~ default value.
+- Fixes keyword picker border rendering.
+- Improves rendering performance for large nodes.
+
+#+BEGIN_EXPORT html
+<br/>
+<div style="text-align: center;">
+  <a href="https://apps.apple.com/app/id1578965002">
+    <img src="../images/flat-habits-for-ios/download-on-app-store.png" alt="download-on-app-store.png" height="40px">
+  </a>
+</div>
+#+END_EXPORT
+* [2021-11-28 Sun] Emacs bends again
+:PROPERTIES:
+:CUSTOM_ID: emacs-bends-again
+:END:
+While adding more rendering capabilities to [[https://plainorg.com][Plain Org]], it soon became apparent some sort of screenshot/snapshot testing was necessary to prevent regressing existing features. That is, we first generate a rendered snapshot from a given org snippet, followed by some visual inspection, right before we go and save the blessed snapshot (often referred to as golden) to our project. Future changes are validated against the golden snapshot to ensure rendering is still behaving as expected.
+
+Let's say we'd like to validate table rendering with links, we can write a test as follows:
+
+#+begin_src swift
+  func testTableWithLinks() throws {
+    assertSnapshot(
+      matching: OrgMarkupText.make(
+        """
+        | URL                    | Org link    |
+        |------------------------+-------------|
+        | https://flathabits.com | [[https://flathabits.com][Flat Habits]] |
+        | Regular text           | Here too    |
+        |------------------------+-------------|
+        """),
+      as: .image(layout: .sizeThatFits))
+  }
+#+end_src
+
+The corresponding snapshot golden can be seen below.
+
+#+ATTR_HTML: :width 50%
+[[file:images/emacs-bends-again/testTableWithLinks.1.png]]
+
+This is all done rather effortlessly thanks to [[https://twitter.com/pointfreeco][Point Free]]'s wonderful [[https://github.com/pointfreeco/swift-snapshot-testing][swift-snapshot-testing]] utilities.
+
+So what does any of this have to do with Emacs? You see, as I added more snapshot tests and made modifications to the rendering logic, I needed a quick way to visually inspect and override all goldens. All the main pieces were already there, I just needed some elisp glue to /bend Emacs my way™./
+
+First, I needed to run my Xcode builds from the command line. This is already [[https://developer.apple.com/library/archive/technotes/tn2339/_index.html][supported via xcodebuild]]. Next, I needed a way to parse test execution data to extract failing tests. [[https://twitter.com/davidahouse][David House]]'s [[https://github.com/davidahouse/xcodebuild-to-json][xcodebuild-to-json]] handles this perfectly. What's left? Glue it all up with some elisp.
+
+Beware, the following code snippet is packed with assumptions about my project, it's messy, surely has bugs, can be optimized, etc. But the important point here is that Emacs is such an amazing malleable power tool. Throw some elisp at it and you can to bend it to your liking. After all, it's _your_ editor.
+
+And so here we are, I can now run snapshot tests from Emacs using my hacked up ~plainorg-snapshot-test-all~ function and quickly override (or ignore) all newly generated snapshots by merely pressing y/n keys. Oh, and our beloved web browser was also invited to the party. Press "d" to open two browser tabs if you'd like to take a closer look (not demoed below).
+
+Success. /Emacs bends again/.
+
+#+ATTR_HTML: :width 95%
+[[file:images/emacs-bends-again/diff.gif]]
+
+#+begin_src emacs-lisp :lexical no
+  ;;; -*- lexical-binding: t; -*-
+
+  (defun plainorg-snapshot-test-all ()
+    "Invoke xcodebuild, compare failed tests screenshots side-to-side,
+  and offer to override them."
+    (interactive)
+    (let* ((project (cdr (project-current)))
+           (json-tmp-file (make-temp-file "PlainOrg_Tests_" nil ".json"))
+           (default-directory project))
+      (unless (file-exists-p (concat project "PlainOrg.xcodeproj"))
+        (user-error "Not in PlainOrg project"))
+      (set-process-sentinel
+       (start-process
+        "xcodebuild"
+        (with-current-buffer
+            (get-buffer-create "*xcodebuild*")
+          (let ((inhibit-read-only t))
+            (erase-buffer))
+          (current-buffer))
+        "/usr/bin/xcodebuild"
+        "-scheme" "PlainOrg" "-target" "PlainOrgTests" "-destination" "name=iPhone 13" "-quiet" "test")
+       (lambda (p e)
+         (with-current-buffer (get-buffer "*xcodebuild*")
+           (let ((inhibit-read-only t))
+             (insert (format "xcodebuild exit code: %d\n\n" (process-exit-status p)))))
+         (when (not (eq 0 (process-exit-status p)))
+           (set-process-sentinel
+            (start-process
+             "xcodebuild-to-json"
+             "*xcodebuild*"
+             "/opt/homebrew/bin/xcodebuild-to-json"
+             "--derived-data-folder" (format "/Users/%s/Library/Developer/Xcode/DerivedData/"
+                                             (user-login-name)) "--output" json-tmp-file)
+            (lambda (p e)
+              (with-current-buffer (get-buffer "*xcodebuild*")
+                (let ((inhibit-read-only t))
+                  (insert (format "xcodebuild-to-json exit code: %d\n\n" (process-exit-status p)))))
+              (when (= 0 (process-exit-status p))
+                (with-current-buffer (get-buffer "*xcodebuild*")
+                  (let ((inhibit-read-only t))
+                    (insert "Screenshot comparison started\n\n")))
+                (plainorg--snapshot-process-json (get-buffer "*xcodebuild*") json-tmp-file)
+                (with-current-buffer (get-buffer "*xcodebuild*")
+                  (let ((inhibit-read-only t))
+                    (insert "\nScreenshot comparison finished\n"))
+                  (read-only-mode +1))))))))
+      (switch-to-buffer-other-window "*xcodebuild*")))
+
+  (defun plainorg--snapshot-process-json (result-buffer json)
+    "Find all failed snapshot tests in JSON and offer to override
+   screenshots, comparing them side to side."
+    (let ((hashtable (with-current-buffer (get-buffer-create "*build json*")
+                       (erase-buffer)
+                       (insert-file-contents json)
+                       (json-parse-buffer))))
+      (mapc
+       (lambda (item)
+         (when (equal (gethash "id" item)
+                      "SnapshotTests")
+           (mapc
+            (lambda (testCase)
+              (when (and (gethash "failureMessage" testCase)
+                         (string-match-p "Snapshot does not match reference"
+                                         (gethash "failureMessage" testCase)))
+                (let* ((paths (plainorg--snapshot-screenshot-paths
+                               (gethash "failureMessage" testCase)))
+                       (override-result (plainorg--snapshot-override-image
+                                         "Expected screenshot"
+                                         (nth 0 paths) ;; old
+                                         "Actual screenshot"
+                                         (nth 1 paths) ;; new
+                                         (nth 0 paths))))
+                  (when override-result
+                    (with-current-buffer result-buffer
+                      (let ((inhibit-read-only t))
+                        (insert override-result)
+                        (insert "\n")))))))
+            (gethash "testCases" item))))
+       (gethash "classes" (gethash "details" hashtable)))))
+
+  (defun plainorg--snapshot-screenshot-paths (failure-message)
+    "Extract a paths list from FAILURE-MESSAGE of the form:
+
+  failed - Snapshot does not match reference.
+
+  @−
+  \"/path/to/expected/screenshot.1.png\"
+  @+
+  \"/path/to/actual/screenshot.1.png\"
+
+  Newly-taken snapshot does not match reference.
+  "
+    (mapcar
+     (lambda (line)
+       (string-remove-suffix "\""
+                             (string-remove-prefix "\"" line)))
+     (seq-filter
+      (lambda (line)
+        (string-prefix-p "\"" line))
+      (split-string failure-message "\n"))))
