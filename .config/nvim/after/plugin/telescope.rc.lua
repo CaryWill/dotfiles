@@ -89,15 +89,15 @@ telescope.setup({
 			-- },
 			-- undo = {},
 			-- harpoon = {},
-			frecency = {
-				show_scores = true,
-				disable_devicons = true,
-				ignore_patterns = {
-					"node_modules/",
-				},
-				auto_validate = false,
-				db_safe_mode = false,
-			},
+			-- frecency = {
+			-- 	show_scores = true,
+			-- 	disable_devicons = true,
+			-- 	ignore_patterns = {
+			-- 		"node_modules/",
+			-- 	},
+			-- 	auto_validate = false,
+			-- 	db_safe_mode = false,
+			-- },
 			-- media_files = {
 			-- 	-- filetypes whitelist
 			-- 	-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
@@ -112,12 +112,20 @@ telescope.setup({
 	},
 })
 
-telescope.load_extension("frecency")
+-- require('telescope').extensions.smart_open.smart_open {
+--   cwd_only = true,
+--   filename_first = false,
+-- }
+
+
+-- telescope.load_extension("frecency")
 -- telescope.load_extension("media_files")
 -- telescope.load_extension('fzf')
 -- telescope.load_extension("undo")
 -- telescope.load_extension("recent_files")
 -- telescope.load_extension('harpoon')
+-- telescope.load_extension('smart_open')
 
-vim.keymap.set("n", "<leader><leader>", "<Cmd>Telescope frecency workspace=CWD<CR>")
+-- vim.keymap.set("n", "<leader><leader>", "<Cmd>Telescope frecency workspace=CWD<CR>")
 -- vim.keymap.set("n", "<leader><leader>", "<Cmd>lua require('telescope').extensions.recent_files.pick()<CR>")
+-- vim.keymap.set("n", "<leader><leader>", "<Cmd>lua require('telescope').extensions.smart_open.smart_open()<CR>")
