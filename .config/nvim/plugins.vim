@@ -128,6 +128,7 @@ Plug 'RRethy/vim-illuminate'
 Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'Wansmer/treesj'
 Plug 'LunarVim/bigfile.nvim'
+" Plug 'sontungexpt/url-open'
 " Plug 'folke/todo-comments.nvim'
 
 " ai"
