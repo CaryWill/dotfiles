@@ -48,4 +48,5 @@ vim.api.nvim_command("highlight TabLineSel          guifg=#444444 guibg=#e4e4e4 
 -- orgmode
 vim.api.nvim_command("highlight OrgDone guifg=#56949f guibg=NONE gui=NONE")
 vim.api.nvim_command("highlight OrgTODO guifg=#f6c0c0 guibg=NONE gui=NONE")
+vim.api.nvim_command("highlight OrgAgendaScheduled  guifg=#f6c0c0 guibg=NONE gui=NONE")
 

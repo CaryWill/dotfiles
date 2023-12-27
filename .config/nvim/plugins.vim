@@ -106,6 +106,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
+" Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
 " orgmode related plugin"
 " https://github.com/topics/orgmode-nvim
 
