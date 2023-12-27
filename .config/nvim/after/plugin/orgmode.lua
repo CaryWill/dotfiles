@@ -49,7 +49,7 @@ require("orgmode").setup({
 		},
 	},
 	-- org_log_into_drawer = "LOGBOOK",
-	org_startup_folded = "showeverything",
+	org_startup_folded = "overview",
 	org_custom_exports = {
 		-- NOTE: there's also other options, like to html then to markdown
 		g = {
