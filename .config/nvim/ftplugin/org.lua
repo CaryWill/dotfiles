@@ -5,4 +5,4 @@ vim.opt_local.concealcursor = "nc"
 -- vim.opt_local.linebreak= false
 -- vim.opt_local.textwidth= 0
 -- vim.opt_local.wrapmargin= 0
-vim.opt_local.shellslash = true
+-- vim.opt_local.shellslash = true

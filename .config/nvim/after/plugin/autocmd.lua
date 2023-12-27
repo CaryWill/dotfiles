@@ -40,3 +40,12 @@
 -- autocmd FileType org setlocal noai nocin nosi inde=
 -- autocmd FileType org setlocal concealcursor=nc
 -- tocmd FileType org setlocal conceallevel=2
+
+-- vim.api.nvim_exec([[
+--   autocmd FileType netrw lua vim.cmd(':new | :only')
+-- ]], true)
+
+-- vim.cmd([[
+--   autocmd VimEnter * :Vexplore
+--   autocmd FileType netrw setlocal bufhidden=hide
+-- ]])
