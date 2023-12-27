@@ -4,6 +4,8 @@ if not status then
 	return
 end
 
+-- partial config from https://github.com/kristijanhusak/neovim-config/blob/master/nvim/lua/partials/plugins/orgmode.lua
+
 -- TODO: ios plain org purchase if i found
 -- orgmode is really useful, for now like
 -- using for a month then decide
@@ -29,11 +31,6 @@ require("orgmode").setup({
 			description = "Todo",
 			template = "* TODO %?\n %u",
 			target = icloud_org_dir_path .. "todo.org",
-		},
-		j = {
-			description = "Journal",
-			template = "\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?",
-			target = icloud_org_dir_path .. "journal.org",
 		},
 		n = {
 			description = "Notes",
@@ -79,4 +76,8 @@ require("orgmode").setup({
 			end,
 		},
 	},
+  org_hide_emphasis_markers = true,
+  org_agenda_text_search_extra_files = { 'agenda-archives' },
+  org_agenda_start_on_weekday = false,
+  org_todo_keywords = { 'TODO(t)', 'PROGRESS(p)', '|', 'DONE(d)', 'REJECTED(r)' },
 })
