@@ -27,21 +27,26 @@ require("orgmode").setup({
 	org_agenda_files = { icloud_org_dir_path .. "gtd/agenda/**/*" },
 	org_default_notes_file = icloud_org_dir_path .. "refile.org",
 	org_capture_templates = {
-		T = {
-			description = "Todo",
-			template = "* TODO %?\n %u",
-			target = icloud_org_dir_path .. "todo.org",
-		},
+		-- T = {
+		-- 	description = "Todo",
+		-- 	template = "* TODO %?\n %u",
+		-- 	target = icloud_org_dir_path .. "todo.org",
+		-- },
 		n = {
 			description = "Notes",
 			template = "* %?\n %u",
 			target = icloud_org_dir_path .. "notes.org",
-		}, 
-    w = {
-      description = 'Work todo',
-      template = '* TODO %?\n  DEADLINE: %T',
+		},
+		w = {
+			description = "Work todo",
+			template = "* TODO %?\n  DEADLINE: %T",
 			target = icloud_org_dir_path .. "gtd/agenda/work.org",
-    },
+		},
+		d = {
+			description = "daily todo",
+			template = "* TODO %?\n  DEADLINE: %T",
+			target = icloud_org_dir_path .. "todo.org",
+		},
 	},
 	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
 	-- https://github.com/nvim-orgmode/orgmode/blob/master/lua/orgmode/config/defaults.lua
@@ -52,7 +57,7 @@ require("orgmode").setup({
 	},
 	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "overview",
-  org_todo_keywords = {'TODO', 'WAITING', '|', 'DONE'},
+	org_todo_keywords = { "TODO", "WAITING", "|", "DONE" },
 	org_custom_exports = {
 		-- NOTE: there's also other options, like to html then to markdown
 		g = {
@@ -82,7 +87,7 @@ require("orgmode").setup({
 			end,
 		},
 	},
-  org_hide_emphasis_markers = true,
-  org_agenda_text_search_extra_files = { 'agenda-archives' },
-  org_agenda_start_on_weekday = false,
+	org_hide_emphasis_markers = true,
+	org_agenda_text_search_extra_files = { "agenda-archives" },
+	org_agenda_start_on_weekday = false,
 })
