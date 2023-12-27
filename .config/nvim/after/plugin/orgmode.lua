@@ -47,6 +47,7 @@ require("orgmode").setup({
 	},
 	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "overview",
+  org_todo_keywords = {'TODO', 'WAITING', '|', 'DONE'},
 	org_custom_exports = {
 		-- NOTE: there's also other options, like to html then to markdown
 		g = {
@@ -79,5 +80,4 @@ require("orgmode").setup({
   org_hide_emphasis_markers = true,
   org_agenda_text_search_extra_files = { 'agenda-archives' },
   org_agenda_start_on_weekday = false,
-  org_todo_keywords = { 'TODO(t)', 'PROGRESS(p)', '|', 'DONE(d)', 'REJECTED(r)' },
 })
