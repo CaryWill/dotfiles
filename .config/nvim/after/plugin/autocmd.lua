@@ -41,11 +41,11 @@
 -- autocmd FileType org setlocal concealcursor=nc
 -- tocmd FileType org setlocal conceallevel=2
 
--- vim.api.nvim_exec([[
---   autocmd FileType netrw lua vim.cmd(':new | :only')
--- ]], true)
-
--- vim.cmd([[
---   autocmd VimEnter * :Vexplore
---   autocmd FileType netrw setlocal bufhidden=hide
--- ]])
+-- orgmode hack, i use nvim-tree, but if disable or hijack the
+-- netrw tree, then <leader>oo open link will not work
+vim.api.nvim_exec(
+	[[
+    autocmd FileType netrw lua vim.cmd('NvimTreeToggle')
+  ]],
+	false
+)
