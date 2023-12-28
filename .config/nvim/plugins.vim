@@ -35,8 +35,10 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 
 " tree"
-Plug 'nvim-tree/nvim-tree.lua'
+" Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim'
 
 " buffer"
 Plug 'norcalli/nvim-colorizer.lua'

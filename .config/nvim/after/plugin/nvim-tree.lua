@@ -337,3 +337,5 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		},
 	},
 })
+
+vim.api.nvim_set_keymap("n", ";e", "<cmd>NvimTreeToggle<CR>", { noremap = true, silent = true })

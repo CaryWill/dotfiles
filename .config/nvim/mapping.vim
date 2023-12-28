@@ -60,7 +60,7 @@ xmap dp :diffput<CR>
 nnoremap <Leader>gy :!git remote get-url origin \| xclip -selection c<CR>
 
 " nnoremap <silent>;e <cmd>Neotree toggle<CR>
-nnoremap <silent>;e <cmd>NvimTreeToggle<CR>
+" nnoremap <silent>;e <cmd>NvimTreeToggle<CR>
 nnoremap <silent>fi :NvimTreeFindFileToggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
 nnoremap <leader>pi :PlugInstall<CR>
