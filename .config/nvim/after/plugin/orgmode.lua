@@ -24,7 +24,7 @@ end
 require("orgmode").setup_ts_grammar()
 local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 require("orgmode").setup({
-	org_agenda_files = { icloud_org_dir_path .. "gtd/agenda/**/*" },
+	org_agenda_files = { icloud_org_dir_path .. "agenda/**/*" },
 	org_default_notes_file = icloud_org_dir_path .. "refile.org",
 	org_capture_templates = {
 		-- T = {
@@ -45,7 +45,7 @@ require("orgmode").setup({
 		w = {
 			description = "Work todo",
 			template = "* TODO %?\n  DEADLINE: %T",
-			target = icloud_org_dir_path .. "gtd/agenda/work.org",
+			target = icloud_org_dir_path .. "agenda/work.org",
 		},
 	},
 	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
