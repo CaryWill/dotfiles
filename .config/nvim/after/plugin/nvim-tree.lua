@@ -247,7 +247,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		dotfiles = false,
 		git_clean = false,
 		no_buffer = false,
-		custom = { icloud_org_dir_path .. "**/*.org_archive" },
+		custom = { "**/*.org_archive" },
 		exclude = {},
 	},
 	live_filter = {
