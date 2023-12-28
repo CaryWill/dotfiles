@@ -45,12 +45,12 @@
 -- netrw tree, then <leader>oo open link will not work
 -- autocmd FileType netrw lua vim.cmd('NvimTreeToggle')
 
-vim.api.nvim_exec(
-	[[
-    autocmd FileType netrw lua vim.cmd(':new | :only')
-  ]],
-	false
-)
+-- vim.api.nvim_exec(
+-- 	[[
+--     autocmd FileType netrw lua vim.cmd(':new | :only')
+--   ]],
+-- 	false
+-- )
 -- vim.api.nvim_create_autocmd("VimEnter", {
 -- 	pattern = "*",
 -- 	command = "NvimTreeToggle",

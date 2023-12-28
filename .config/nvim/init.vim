@@ -41,7 +41,7 @@ set undodir=~/tmp/.undo//
 set backupdir=~/tmp/.backup//
 
 " hide vim startup welcome message"
-set shortmess=I
+" set shortmess=I
 
 " treesitter fold"
 " if i put it in autocmd, it does not work
