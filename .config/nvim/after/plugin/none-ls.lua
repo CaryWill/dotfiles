@@ -42,18 +42,21 @@ null_ls.setup({
 
 			-- https://github.com/MunifTanjim/prettier.nvim
 			-- format on save
-			-- local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
-			-- local event = "BufWritePre" -- or "BufWritePost"
-			-- local async = event == "BufWritePost"
-			-- vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })
-			-- vim.api.nvim_create_autocmd(event, {
-			-- 	buffer = bufnr,
-			-- 	group = group,
-			-- 	callback = function()
-			-- 		vim.lsp.buf.format({ bufnr = bufnr, async = async })
-			-- 	end,
-			-- 	desc = "[lsp] format on save",
-			-- })
+			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+			if client.supports_method("textDocument/formatting") then
+				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+				vim.api.nvim_create_autocmd("BufWritePre", {
+					pattern = { "*.lua" },
+					group = augroup,
+					-- buffer = bufnr,
+					callback = function()
+						-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+						-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
+						-- vim.lsp.buf.formatting_sync()
+						vim.lsp.buf.format()
+					end,
+				})
+			end
 		end
 
 		if client.supports_method("textDocument/rangeFormatting") then
