@@ -37,15 +37,15 @@ require("orgmode").setup({
 			template = "* %?\n %u",
 			target = icloud_org_dir_path .. "notes.org",
 		},
+		d = {
+			description = "Daily todo",
+			template = "* TODO %?\n  DEADLINE: %T",
+			target = icloud_org_dir_path .. "todo.org",
+		},
 		w = {
 			description = "Work todo",
 			template = "* TODO %?\n  DEADLINE: %T",
 			target = icloud_org_dir_path .. "gtd/agenda/work.org",
-		},
-		d = {
-			description = "daily todo",
-			template = "* TODO %?\n  DEADLINE: %T",
-			target = icloud_org_dir_path .. "todo.org",
 		},
 	},
 	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
