@@ -23,19 +23,7 @@ nmap <C-a> gg<S-v>G
 nnoremap ;b :Git blame<CR>
 
 "Telescope
-function! IsFileInGitRepository()
-    let result = system('git rev-parse --is-inside-work-tree 2>/dev/null')
-    return result =~ '^true$' ? 1 : 0
-endfunction
-function! ToggleTelescopeGitFiles()
-    if IsFileInGitRepository()
-        execute "lua require('telescope.builtin').git_files({ show_untracked = true })"
-    else
-        execute "lua require('telescope.builtin').find_files()"
-    endif
-endfunction
-" nnoremap ;g <cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<CR>
-nnoremap ;g :call ToggleTelescopeGitFiles()<CR>
+nnoremap ;g <cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<CR>
 nnoremap ;f <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
