@@ -43,7 +43,7 @@
 
 -- orgmode hack, i use nvim-tree, but if disable or hijack the
 -- netrw tree, then <leader>oo open link will not work
---     -- autocmd FileType netrw lua vim.cmd('NvimTreeToggle')
+-- autocmd FileType netrw lua vim.cmd('NvimTreeToggle')
 
 vim.api.nvim_exec(
 	[[
