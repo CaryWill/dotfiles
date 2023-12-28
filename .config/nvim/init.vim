@@ -39,6 +39,8 @@ set undofile
 set directory=~/tmp/.directory//
 set undodir=~/tmp/.undo//
 set backupdir=~/tmp/.backup//
+
+" hide vim startup welcome message"
 set shortmess=I
 
 " treesitter fold"
