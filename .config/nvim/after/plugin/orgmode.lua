@@ -57,7 +57,7 @@ require("orgmode").setup({
 	},
 	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "overview",
-	org_todo_keywords = { "TODO", "WAITING", "|", "DONE" },
+	org_todo_keywords = { "TODO(t)", "WAITING(w)", "PROGRESS", "|", "DONE(d)" },
 	org_custom_exports = {
 		-- NOTE: there's also other options, like to html then to markdown
 		g = {
