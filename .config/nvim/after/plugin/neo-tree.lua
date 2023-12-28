@@ -14,12 +14,22 @@ plugin.setup({
 		},
 		use_libuv_file_watcher = true,
 		filtered_items = {
-			visible = true,
+			visible = false,
 			show_hidden_count = true,
 			hide_dotfiles = false,
 			hide_gitignored = true,
 			hide_by_name = {},
 			never_show = {},
+			hide_by_pattern = {
+				"*.org_archive",
+			},
+			always_show = { -- remains visible even if other settings would normally hide it
+				--".gitignored",
+			},
+			never_show_by_pattern = { -- uses glob style patterns
+				--".null-ls_*",
+				-- "*.org_archive",
+			},
 		},
 		-- 因为默认如果打开了一个 buffer，telescope 第一次搜索
 		-- 后进行跳转就会跳到第一行
