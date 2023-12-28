@@ -7,6 +7,7 @@ end
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 
+local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 local api = require("nvim-tree.api")
 
 local function on_attach(bufnr)
@@ -246,7 +247,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		dotfiles = false,
 		git_clean = false,
 		no_buffer = false,
-		custom = {},
+		custom = { icloud_org_dir_path .. "**/*.org_archive" },
 		exclude = {},
 	},
 	live_filter = {
