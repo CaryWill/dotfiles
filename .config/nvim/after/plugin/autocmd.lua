@@ -51,3 +51,7 @@ vim.api.nvim_exec(
   ]],
 	false
 )
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- 	pattern = "*",
+-- 	command = "NvimTreeToggle",
+-- })
