@@ -117,7 +117,6 @@ Plug 'akinsho/org-bullets.nvim'
 " Plug 'jceb/vim-orgmode'
 " Plug 'tpope/vim-speeddating'
 
-
 " image"
 " only support kitty for now, iterm2 not support 
 " Plug '3rd/image.nvim'
@@ -141,5 +140,9 @@ Plug 'LunarVim/bigfile.nvim'
 
 " virtual text"
 " Plug 'soulis-1256/hoverhints.nvim'
+
+" development for lua/neovim"
+" Plug 'jbyuki/one-small-step-for-vimkind'
+" Plug 'mfussenegger/nvim-dap'
 
 call plug#end()
