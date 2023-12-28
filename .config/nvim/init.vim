@@ -39,6 +39,7 @@ set undofile
 set directory=~/tmp/.directory//
 set undodir=~/tmp/.undo//
 set backupdir=~/tmp/.backup//
+set shortmess=I
 
 " treesitter fold"
 " if i put it in autocmd, it does not work
