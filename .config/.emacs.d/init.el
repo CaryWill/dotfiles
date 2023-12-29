@@ -8,6 +8,7 @@
   (when (< emacs-major-version 27) (package-initialize)))
 
 ;; https://emacs.stackexchange.com/questions/73403/install-packages-with-one-command
+;; auto install package
 
 (setq
  ;; archives to install packages from
