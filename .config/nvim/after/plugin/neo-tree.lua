@@ -29,6 +29,7 @@ plugin.setup({
 			never_show_by_pattern = { -- uses glob style patterns
 				--".null-ls_*",
 				-- "*.org_archive",
+				".DS_Store",
 			},
 		},
 		-- 因为默认如果打开了一个 buffer，telescope 第一次搜索
