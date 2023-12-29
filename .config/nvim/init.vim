@@ -21,7 +21,7 @@ set signcolumn=yes
 set colorcolumn=80
 set foldmethod=indent
 set nofoldenable
-" set foldlevel=99
+set foldlevel=99
 set clipboard+=unnamedplus
 set cursorline
 set splitright
