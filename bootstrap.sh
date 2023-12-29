@@ -18,7 +18,8 @@ brew install reattach-to-user-namespace
 brew install im-select
 brew install stylua
 # for export org file to other format
-brew install emacs
+# brew install emacs
+brew install --cask emacs
 brew install pandoc
 # you need install it to make it work with
 # 3rd/image neovim plugin
@@ -60,6 +61,7 @@ ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
 ln -sf "$(pwd)/coc-settings.json" ~/.vim/coc-settings.json
 # kitty config
 ln -s "$(pwd)/.config/kitty" ~/.config/kitty
+ln -s "$(pwd)/.config/.emacs.d" ~/.emacs.d
 
 # 安装 vim 插件
 vim +PlugInstall +qall

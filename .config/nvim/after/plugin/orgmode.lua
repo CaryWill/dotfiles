@@ -91,4 +91,5 @@ require("orgmode").setup({
 	org_agenda_text_search_extra_files = { "agenda-archives" },
 	-- org_agenda_start_on_weekday = false,
 	org_blank_before_new_entry = { heading = false, plain_list_item = false },
+	-- emacs_config = { executable_path = "emacs", config_path = "$HOME/.emacs.d/init.el" },
 })
