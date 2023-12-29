@@ -15,7 +15,7 @@
  package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                     ("melpa" . "https://melpa.org/packages/"))
  ;; packages to have installed
- package-selected-packages '(magit))
+ package-selected-packages '(org-ref))
 
 (unless package-archive-contents
   (package-refresh-contents))
