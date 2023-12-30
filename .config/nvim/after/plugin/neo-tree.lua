@@ -85,6 +85,7 @@ plugin.setup({
 			["o"] = function(state)
 				local node = state.tree:get_node()
 				local path = node:get_id()
+				vim.g.p = path
 				vim.api.nvim_command("silent !open " .. path)
 			end,
 			["."] = "toggle_hidden",
