@@ -6,6 +6,7 @@ end
 local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 local home = vim.fn.expand(icloud_org_dir_path .. "zettelkasten")
 require("telekasten").setup({
+	media_previewer = "viu-previewer",
 	home = home,
 	extension = ".org",
 	templates = home .. "/" .. "templates",
