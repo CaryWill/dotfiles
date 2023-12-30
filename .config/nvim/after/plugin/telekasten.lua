@@ -1,4 +1,4 @@
-local status, tabnine = pcall(require, "telekasten")
+local status, telekasten = pcall(require, "telekasten")
 if not status then
 	return
 end
