@@ -10,6 +10,15 @@ require("telekasten").setup({
 	extension = ".org",
 	templates = home .. "/" .. "templates",
 	template_new_note = home .. "/" .. "templates/template_new_note.org",
+	plug_into_calendar = true,
+	calendar_opts = {
+		-- calendar week display mode: 1 .. 'WK01', 2 .. 'WK 1', 3 .. 'KW01', 4 .. 'KW 1', 5 .. '1'
+		weeknm = 4,
+		-- use monday as first day of week: 1 .. true, 0 .. false
+		calendar_monday = 1,
+		-- calendar mark: where to put mark for marked days: 'left', 'right', 'left-fit'
+		calendar_mark = "left-fit",
+	},
 })
 
 -- Launch panel if nothing is typed after <leader>z
