@@ -8,11 +8,32 @@ local actions = require("telescope.actions")
 local previewers = require("telescope.previewers")
 local previewers_utils = require("telescope.previewers.utils")
 
+local is_image = function(filepath)
+	local image_extensions = { "png", "jpg", "jpeg" } -- Supported image formats
+	local split_path = vim.split(filepath:lower(), ".", { plain = true })
+	local extension = split_path[#split_path]
+	return vim.tbl_contains(image_extensions, extension)
+end
+
+local api = require("image")
+local last_image = nil
+local clear_last_image = function()
+	if last_image ~= nil then
+		last_image:clear()
+		last_image = nil
+	end
+end
+
 -- Faster preview large file
 -- current condition: preview large file stucks
 -- https://github.com/nvim-telescope/telescope.nvim/issues/623#issuecomment-853164470
 local max_size = 100000
 local truncate_large_files = function(filepath, bufnr, opts)
+	if is_image(filepath) then
+	else
+		clear_last_image()
+	end
+
 	opts = opts or {}
 	filepath = vim.fn.expand(filepath)
 	vim.loop.fs_stat(filepath, function(_, stat)
@@ -28,30 +49,26 @@ local truncate_large_files = function(filepath, bufnr, opts)
 	end)
 end
 
+-- TODO: file size window height -
 telescope.setup({
 	defaults = {
 		preview = {
 			mime_hook = function(filepath, bufnr, opts)
-				local is_image = function(filepath)
-					local image_extensions = { "png", "jpg", "jpeg" } -- Supported image formats
-					local split_path = vim.split(filepath:lower(), ".", { plain = true })
-					local extension = split_path[#split_path]
-					return vim.tbl_contains(image_extensions, extension)
-				end
 				if is_image(filepath) then
-					local term = vim.api.nvim_open_term(bufnr, {})
-					local function send_output(_, data, _)
-						for _, d in ipairs(data) do
-							vim.api.nvim_chan_send(term, d .. "\r\n")
-						end
-					end
-					vim.fn.jobstart({
-						-- "kitten icat",
-						"chafa",
-						-- "catimg",
-						filepath, -- Terminal image viewer command
-					}, { on_stdout = send_output, stdout_buffered = true, pty = true })
+					local image = api.from_file(filepath, {
+						buffer = bufnr,
+						x = vim.api.nvim_win_get_width(opts.winid or 0) + 40,
+						-- y = vim.api.nvim_win_get_height(opts.winid or 0) - 20,
+						-- y = 5,
+						width = 40,
+						-- height = 10,
+					})
+					vim.g.last_image = last_image
+					clear_last_image()
+					image:render()
+					last_image = image
 				else
+					clear_last_image()
 					require("telescope.previewers.utils").set_preview_message(
 						bufnr,
 						opts.winid,
@@ -84,6 +101,8 @@ telescope.setup({
 		},
 		mappings = {
 			n = {
+				["<ESC>"] = actions.close,
+				["<C-[>"] = actions.close,
 				["q"] = actions.close,
 			},
 			i = {
@@ -93,8 +112,9 @@ telescope.setup({
 				-- ["<C-y>"] = require("telescope.actions.layout").toggle_preview,
 				["<C-j>"] = actions.move_selection_next,
 				["<C-k>"] = actions.move_selection_previous,
-				["<Esc>"] = actions.close,
+				["<ESC>"] = actions.close,
 				["<C-[>"] = actions.close,
+				["q"] = actions.close,
 			},
 		},
 		-- https://github.com/BurntSushi/ripgrep/issues/299#issuecomment-270102901
@@ -153,6 +173,13 @@ telescope.setup({
 			-- }
 		},
 	},
+})
+
+vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
+	pattern = "*",
+	callback = function()
+		clear_last_image()
+	end,
 })
 
 -- require('telescope').extensions.smart_open.smart_open {
