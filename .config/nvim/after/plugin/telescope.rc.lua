@@ -57,10 +57,10 @@ telescope.setup({
 				if is_image(filepath) then
 					local image = api.from_file(filepath, {
 						buffer = bufnr,
-						x = vim.api.nvim_win_get_width(opts.winid or 0) + 40,
-						-- y = vim.api.nvim_win_get_height(opts.winid or 0) - 20,
-						-- y = 5,
-						width = 40,
+						-- it seems like you can not use float for the x,y
+						x = math.floor(vim.api.nvim_win_get_width(opts.winid or 0) * 2),
+						y = math.floor(vim.api.nvim_win_get_height(opts.winid or 0) / 2),
+						-- width = 40,
 						-- height = 10,
 					})
 					vim.g.last_image = last_image
