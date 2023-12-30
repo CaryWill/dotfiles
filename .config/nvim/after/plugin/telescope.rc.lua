@@ -30,6 +30,36 @@ end
 
 telescope.setup({
 	defaults = {
+		preview = {
+			mime_hook = function(filepath, bufnr, opts)
+				local is_image = function(filepath)
+					local image_extensions = { "png", "jpg", "jpeg" } -- Supported image formats
+					local split_path = vim.split(filepath:lower(), ".", { plain = true })
+					local extension = split_path[#split_path]
+					return vim.tbl_contains(image_extensions, extension)
+				end
+				if is_image(filepath) then
+					local term = vim.api.nvim_open_term(bufnr, {})
+					local function send_output(_, data, _)
+						for _, d in ipairs(data) do
+							vim.api.nvim_chan_send(term, d .. "\r\n")
+						end
+					end
+					vim.fn.jobstart({
+						"kitten icat",
+						-- "chafa",
+						-- "catimg",
+						filepath, -- Terminal image viewer command
+					}, { on_stdout = send_output, stdout_buffered = true, pty = true })
+				else
+					require("telescope.previewers.utils").set_preview_message(
+						bufnr,
+						opts.winid,
+						"Binary cannot be previewed"
+					)
+				end
+			end,
+		},
 		layout_config = {
 			-- prompt_position = "bottom",
 			-- preview_cutoff = 170,
@@ -111,13 +141,13 @@ telescope.setup({
 			-- 	auto_validate = false,
 			-- 	db_safe_mode = false,
 			-- },
-			-- media_files = {
-			-- 	-- filetypes whitelist
-			-- 	-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-			-- 	filetypes = { "png", "webp", "jpg", "jpeg" },
-			-- 	-- find command (defaults to `fd`)
-			-- 	find_cmd = "rg",
-			-- },
+			media_files = {
+				-- filetypes whitelist
+				-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+				-- filetypes = { "png", "webp", "jpg", "jpeg" },
+				-- find command (defaults to `fd`)
+				-- find_cmd = "rg",
+			},
 			-- recent_files = {
 			--   only_cwd = true
 			-- }
@@ -133,6 +163,8 @@ telescope.setup({
 -- require("telescope").load_extension("file_browser")
 -- telescope.load_extension("frecency")
 -- telescope.load_extension("media_files")
+require("telescope").load_extension("media_files")
+require("telescope").load_extension("bibtex")
 -- telescope.load_extension('fzf')
 -- telescope.load_extension("undo")
 -- telescope.load_extension("recent_files")

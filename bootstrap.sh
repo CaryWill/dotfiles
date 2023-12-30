@@ -28,6 +28,11 @@ brew install imagemagick
 brew install chafa
 # telescope smart-open.nvim
 brew install sqlite3
+# telekasten
+brew install catimg
+brew install viu
+brew install xclip
+# brew install meson
 
 # 如果是 neovim 的话，那么需要改一下位置，在 ~/.config/nvim/autoload/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
