@@ -19,6 +19,7 @@ require("telekasten").setup({
 		-- calendar mark: where to put mark for marked days: 'left', 'right', 'left-fit'
 		calendar_mark = "left-fit",
 	},
+	auto_set_filetype = false,
 })
 
 -- Launch panel if nothing is typed after <leader>z
