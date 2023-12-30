@@ -38,8 +38,11 @@ Plug 'akinsho/bufferline.nvim'
 " tree"
 " Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'CaryWill/nui.nvim'
+" i dont know how to add options from neo-tree, so i removed the line from
+" nui.nvim, so foldmethold will be set right on my init.vim
+" Plug 'MunifTanjim/nui.nvim'
 
 " buffer"
 Plug 'norcalli/nvim-colorizer.lua'
