@@ -58,8 +58,10 @@ telescope.setup({
 					local image = api.from_file(filepath, {
 						buffer = bufnr,
 						-- it seems like you can not use float for the x,y
+						-- and i should take image width/height into account
+						-- but here i just hard-coded
 						x = math.floor(vim.api.nvim_win_get_width(opts.winid or 0) * 2),
-						y = math.floor(vim.api.nvim_win_get_height(opts.winid or 0) / 2),
+						y = math.floor(vim.api.nvim_win_get_height(opts.winid or 0) / 2) - 0,
 						-- width = 40,
 						-- height = 10,
 					})
