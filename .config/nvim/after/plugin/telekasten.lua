@@ -4,9 +4,12 @@ if not status then
 end
 
 local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
+local home = vim.fn.expand(icloud_org_dir_path .. "zettelkasten")
 require("telekasten").setup({
-	home = vim.fn.expand(icloud_org_dir_path .. "zettelkasten"), -- Put the name of your notes directory here
+	home = home,
 	extension = ".org",
+	templates = home .. "/" .. "templates",
+	template_new_note = home .. "/" .. "templates/template_new_note.org",
 })
 
 -- Launch panel if nothing is typed after <leader>z
