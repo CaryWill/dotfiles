@@ -57,9 +57,9 @@
 -- })
 
 -- disable autopairs for org file(need to work with telekasten)
-vim.api.nvim_exec(
-	[[
-    autocmd FileType org lua vim.b.minipairs_disable = true
-  ]],
-	false
-)
+-- vim.api.nvim_exec(
+-- 	[[
+--     autocmd FileType org lua vim.b.minipairs_disable = true
+--   ]],
+-- 	false
+-- )
