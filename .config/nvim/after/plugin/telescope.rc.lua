@@ -65,7 +65,6 @@ telescope.setup({
 						-- width = 40,
 						-- height = 10,
 					})
-					vim.g.last_image = last_image
 					clear_last_image()
 					image:render()
 					last_image = image
