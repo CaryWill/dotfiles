@@ -46,8 +46,8 @@ telescope.setup({
 						end
 					end
 					vim.fn.jobstart({
-						"kitten icat",
-						-- "chafa",
+						-- "kitten icat",
+						"chafa",
 						-- "catimg",
 						filepath, -- Terminal image viewer command
 					}, { on_stdout = send_output, stdout_buffered = true, pty = true })
