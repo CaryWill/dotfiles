@@ -54,6 +54,7 @@ telescope.setup({
 	defaults = {
 		preview = {
 			mime_hook = function(filepath, bufnr, opts)
+				-- get the idea from https://www.reddit.com/r/neovim/comments/18f8sbd/help_configure_telescope_to_preview_images/
 				if is_image(filepath) then
 					local image = api.from_file(filepath, {
 						buffer = bufnr,
