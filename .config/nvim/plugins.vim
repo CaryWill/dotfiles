@@ -135,7 +135,7 @@ Plug 'CaryWill/image.nvim'
 " other"
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'psliwka/vim-smoothie'
+Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
 Plug 'LunarVim/bigfile.nvim'
 " Plug 'Bekaboo/deadcolumn.nvim'
