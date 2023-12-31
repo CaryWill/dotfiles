@@ -25,4 +25,4 @@ autocmd FileType javascript,typescript,javascriptreact,typescriptreact nnoremap 
 autocmd FileType lua nnoremap <buffer> <leader>t <Plug>PlenaryTestFile
 
 " orgmode image live render
-autocmd BufWritePost *.org :edit
+" autocmd BufWritePost *.org call timer_start(300, { -> execute('edit') })
