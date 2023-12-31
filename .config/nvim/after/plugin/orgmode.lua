@@ -25,6 +25,7 @@ require("orgmode").setup_ts_grammar()
 local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 require("orgmode").setup({
 	org_agenda_files = { icloud_org_dir_path .. "agenda/**/*" },
+	-- if you just use `t` when in capture mode, it goes here
 	org_default_notes_file = icloud_org_dir_path .. "refile.org",
 	org_capture_templates = {
 		-- T = {
