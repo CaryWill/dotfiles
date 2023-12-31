@@ -7,7 +7,8 @@ local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plai
 local home = vim.fn.expand(icloud_org_dir_path .. "zettelkasten")
 require("telekasten").setup({
 	media_previewer = "viu-previewer",
-	home = home,
+	-- note created default goes to here
+	home = home .. "/fleeting/",
 	extension = ".org",
 	templates = home .. "/" .. "templates",
 	template_new_note = home .. "/" .. "templates/template_new_note.org",
