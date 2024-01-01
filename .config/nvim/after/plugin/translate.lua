@@ -12,4 +12,4 @@ require("translate").setup({
 	},
 })
 
-vim.keymap.set("v", "<localleader>t", ":Translate en<CR>")
+vim.keymap.set("v", "<leader>gt", ":Translate en<CR>")
