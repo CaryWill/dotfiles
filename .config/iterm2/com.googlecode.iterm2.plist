@@ -6690,7 +6690,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -6710,7 +6710,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
-			<true/>
+			<false/>
 			<key>Faint Text Alpha</key>
 			<real>0.5</real>
 			<key>Faint Text Alpha (Dark)</key>
@@ -6880,7 +6880,7 @@ Make Text Bigger</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>BerkeleyMonoNF-Regular 14</string>
+			<string>DroidSansMonoNerdFontComplete- 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
