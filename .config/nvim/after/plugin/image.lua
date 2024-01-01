@@ -32,8 +32,8 @@ require("image").setup({
 			filetypes = { "org" },
 		},
 	},
-	max_width = 30,
-	max_height = 30,
+	max_width = nil,
+	max_height = nil,
 	max_width_window_percentage = nil,
 	max_height_window_percentage = nil,
 	window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
