@@ -46,6 +46,8 @@ npm install -g prettier
 # then use the global one
 npm install -g typescript typescript-language-server
 npm install -g eslint
+# grammar
+npm install -g write-good
 
 # jest related
 npm install -g jest 
