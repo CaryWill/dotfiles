@@ -19,6 +19,8 @@ end
 -- 我看了下如果是 jsx 的片段，我用 vscode 也是这样，如果有两个地方修改了缩进
 -- 但是我选中了一个地方进行格式化，vscode 会将两个地方都格式化，所以这个应该
 -- 还是 lsp 的问题
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 null_ls.setup({
 	-- debug = true,
 	-- NOTE: if you have problem with speed then use _d
