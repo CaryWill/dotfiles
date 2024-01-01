@@ -1,5 +1,7 @@
 local status, plugin = pcall(require, "lspconfig")
-if (not status) then return end
+if not status then
+	return
+end
 
 -- LSP config doc
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
@@ -129,11 +131,24 @@ local servers = {
 	"cssls",
 	-- "stylelint_lsp",
 	"vimls",
+	"grammarly",
+}
+
+local filetypes = {
+	grammarly = { "markdown", "org" },
 }
 
 for _, lsp in ipairs(servers) do
-	nvim_lsp[lsp].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+	if lsp == "grammarly" then
+		nvim_lsp[lsp].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = filetypes[lsp],
+		})
+	else
+		nvim_lsp[lsp].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+	end
 end

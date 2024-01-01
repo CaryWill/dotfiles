@@ -30,9 +30,9 @@ null_ls.setup({
 		-- null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.diagnostics.write_good.with({
-			filetypes = { "org", "markdown" },
-		}),
+		-- null_ls.builtins.diagnostics.write_good.with({
+		-- 	filetypes = { "org", "markdown" },
+		-- }),
 		-- null_ls.builtins.formatting.eslint.with({
 		-- 	extra_args = { "--fix-dry-run", "$FILENAME" },
 		-- 	method = { null_ls.methods.FORMATTING },
@@ -40,6 +40,20 @@ null_ls.setup({
 		-- null_ls.builtins.formatting.eslint_d,
 	},
 	on_attach = function(client, bufnr)
+		local opts = {
+			noremap = true,
+			silent = true,
+			buffer = bufnr,
+		}
+
+		-- lsp saga
+		-- i should combine it with lspconfig onattach function
+		-- the key mapping here is duplicated
+		vim.keymap.set("n", "<leader>j", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+		vim.keymap.set("n", "<leader>k", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+		vim.keymap.set("n", "gl", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts)
+		vim.keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)
+
 		if client.supports_method("textDocument/formatting") then
 			vim.keymap.set("n", "<Leader>f", function()
 				vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })

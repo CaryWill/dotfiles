@@ -48,6 +48,7 @@ npm install -g typescript typescript-language-server
 npm install -g eslint
 # grammar
 npm install -g write-good
+npm i -g grammarly-languageserver
 
 # jest related
 npm install -g jest 
