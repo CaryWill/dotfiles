@@ -119,6 +119,7 @@ Plug 'akinsho/org-bullets.nvim'
 Plug 'renerocksai/telekasten.nvim'
 Plug 'renerocksai/calendar-vim'
 Plug 'uga-rosa/translate.nvim'
+" Plug 'CaryWill/translate.nvim'
 " Plug 'potamides/pantran.nvim'
 " Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
 " orgmode related plugin"
