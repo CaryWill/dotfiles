@@ -21,8 +21,11 @@ require("image").setup({
 			only_render_image_at_cursor = false,
 			filetypes = { "norg" },
 		},
+		-- actually, i can just <leader>oo
+		-- to open the image in a new buffer
+		-- to review the image
 		org = {
-			enabled = true,
+			enabled = false,
 			clear_in_insert_mode = true,
 			download_remote_images = true,
 			only_render_image_at_cursor = true,
