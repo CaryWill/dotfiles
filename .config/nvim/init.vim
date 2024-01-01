@@ -75,6 +75,9 @@ let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" undercurl"
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
 
 " netrw"
 " i need open url using netrw with orgmode

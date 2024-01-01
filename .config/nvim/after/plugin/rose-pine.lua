@@ -50,3 +50,5 @@ vim.api.nvim_command("highlight OrgDone guifg=#56949f guibg=NONE gui=NONE")
 vim.api.nvim_command("highlight OrgTODO guifg=#f6c0c0 guibg=NONE gui=NONE")
 vim.api.nvim_command("highlight OrgAgendaScheduled  guifg=#f6c0c0 guibg=NONE gui=NONE")
 vim.api.nvim_command("highlight netrwTreeBar guifg=#faf4ed guibg=NONE gui=NONE")
+-- lsp
+-- vim.api.nvim_command("highlight DiagnosticUnderlineError guisp=#f6c0c0 gui=undercurl guifg=NONE guibg=NONE")
