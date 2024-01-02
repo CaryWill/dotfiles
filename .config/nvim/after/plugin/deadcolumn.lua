@@ -25,4 +25,4 @@ local opts = {
 }
 
 plugin.setup(opts)
-vim.cmd("set colorcolumn=80")
+-- vim.cmd("set colorcolumn=80")
