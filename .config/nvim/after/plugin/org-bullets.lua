@@ -6,7 +6,7 @@ end
 require("org-bullets").setup({
 	symbols = {
 		list = "•",
-		headlines = { "󰪥", "", "✸", "✿" },
+		-- headlines = { "󰪥", "", "✸", "✿" },
 		checkboxes = {
 			half = { "-", "OrgTSCheckboxHalfChecked" },
 			done = { "✓", "OrgDone" },
