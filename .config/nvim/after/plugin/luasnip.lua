@@ -24,8 +24,8 @@ end, { silent = true })
 require("luasnip").filetype_extend("javascriptreact", { "html" })
 require("luasnip").filetype_extend("typescriptreact", { "html" })
 -- since legacy react files are in .js extension
-require("luasnip").filetype_extend("javascript", { "html" })
-require("luasnip").filetype_extend("typescript", { "html" })
+require("luasnip").filetype_extend("javascript", { "javascriptreact" })
+require("luasnip").filetype_extend("typescript", { "javascriptreact" })
 
 -- https://github.com/rafamadriz/friendly-snippets/wiki/Javascript,-Typescript,-Javascriptreact,-Typescriptreact
 -- load pre defined snippets
