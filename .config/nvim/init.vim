@@ -1,5 +1,5 @@
 scriptencoding utf-8
-syntax on
+syntax on1
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
 set fileencodings=utf-8
