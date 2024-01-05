@@ -105,7 +105,7 @@ telescope.setup({
 			n = {
 				["<ESC>"] = actions.close,
 				["<C-[>"] = actions.close,
-				["q"] = actions.close,
+				-- ["q"] = actions.close,
 			},
 			i = {
 				["<C-s>"] = actions.file_split,
@@ -116,7 +116,7 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_previous,
 				["<ESC>"] = actions.close,
 				["<C-[>"] = actions.close,
-				["q"] = actions.close,
+				-- ["q"] = actions.close,
 			},
 		},
 		-- https://github.com/BurntSushi/ripgrep/issues/299#issuecomment-270102901
