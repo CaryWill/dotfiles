@@ -1,13 +1,12 @@
-local dbpath = "/Users/cary/dotfiles/tests/lua/test.db"
-local sqlite = require("sqlite.db")
+local dbpath = vim.loop.cwd() .. "/tests/lua/test.db"
+local sqlite = require("sqlite")
 local table_name = "example_table"
 
 describe("sql", function()
 	it("test", function()
-		sqlite:with_open(dbpath, function(db)
-			local data = db:select(table_name, {})
-			vim.print(data)
-		end)
-		assert.equals(1, 6)
+		local db = sqlite:open(dbpath)
+		db:insert(table_name, { { name = "test", id = 1234 } })
+		db:close()
+		assert.equals(vim.loop.cwd(), 6)
 	end)
 end)
