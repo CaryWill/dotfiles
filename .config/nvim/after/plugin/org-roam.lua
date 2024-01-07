@@ -8,6 +8,8 @@ org_roam.setup({
 	-- required
 	-- org_roam_directory = "~/OrgRoam",
 	org_roam_directory = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/zettelkasten",
+	-- file will created at
+	org_roam_capture_directory = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/zettelkasten/fleeting",
 	-- required (not checked if present)
 	org_roam_database_file = "~/.config/emacs/org-roam.db",
 })
