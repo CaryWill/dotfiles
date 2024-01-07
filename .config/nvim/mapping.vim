@@ -29,6 +29,7 @@ nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
+nnoremap ;p <cmd>lua require('telescope.builtin').planets()<CR>
 nnoremap <leader><leader> <cmd>lua require('telescope.builtin').oldfiles()<CR>
 
 " conform plugin"
