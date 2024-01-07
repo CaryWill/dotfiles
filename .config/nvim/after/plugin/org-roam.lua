@@ -14,5 +14,5 @@ org_roam.setup({
 	org_roam_database_file = "~/.config/emacs/org-roam.db",
 })
 
-vim.keymap.set("n", "<Leader>zf", org_roam.org_roam_node_find)
+vim.keymap.set("n", "<Leader>nf", org_roam.org_roam_node_find)
 vim.keymap.set("n", "<Leader>zn", org_roam.org_roam_capture)
