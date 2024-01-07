@@ -97,6 +97,7 @@ Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 " Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Plug 'danielfalk/smart-open.nvim'
 Plug 'kkharji/sqlite.lua'
+" Plug 'kristijanhusak/vim-dadbod-ui'
 " Plug 'nvim-telescope/telescope-frecency.nvim'
 " Plug 'nvim-telescope/telescope-media-files.nvim'
 " Plug 'nvim-telescope/telescope-bibtex.nvim'
