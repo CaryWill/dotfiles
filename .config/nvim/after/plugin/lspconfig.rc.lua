@@ -144,6 +144,10 @@ for _, lsp in ipairs(servers) do
 			on_attach = on_attach,
 			capabilities = capabilities,
 			filetypes = filetypes[lsp],
+			-- i want to get my own grammarly clientId
+			-- but it stopped providing grammarly clientId for developers
+			-- so for now used the default clientId `client_BaDkMgx4X19X9UxxYRCXZo`
+			-- init_options = { clientId = "" }
 		})
 	else
 		nvim_lsp[lsp].setup({
