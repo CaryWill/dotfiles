@@ -3,9 +3,24 @@ if not status then
 	return
 end
 
+local function contains(table, element)
+	for _, value in pairs(table) do
+		if value == element then
+			return true
+		end
+	end
+	return false
+end
+
 local opts = {
-	scope = "line",
-	modes = { "i", "ic", "ix", "R", "Rc", "Rx", "Rv", "Rvc", "Rvx" },
+	scope = "buffer",
+	modes = function(mode)
+		if vim.bo.filetype == "org" then
+			return true
+		else
+			return contains({ "i", "ic", "ix", "R", "Rc", "Rx", "Rv", "Rvc", "Rvx" }, mode)
+		end
+	end,
 	blending = {
 		threshold = 0.75,
 		colorcode = "#000000",
@@ -26,4 +41,4 @@ local opts = {
 }
 
 plugin.setup(opts)
--- vim.cmd("set colorcolumn=80")
+vim.cmd("set colorcolumn=80")
