@@ -5,21 +5,18 @@ mkdir -p ~/.vim/.nvim/.directory
 mkdir -p ~/.vim/.nvim/.undo
 mkdir -p ~/.vim/.nvim/.backup
 
-# 管理 neovim 的版本
-brew install bob
 # 安装 vim plugin 依赖
 brew install neovim --HEAD
 brew install ripgrep # 安装 fzf 的话需要
+brew install fd
 brew tap daipeihust/tap && brew install im-select # 自动切换输入法
-brew install bat
-brew install ripgrep
-brew install fzf
+# brew install bat
+# brew install fzf
 brew install reattach-to-user-namespace
-brew install im-select
 brew install stylua
 # for export org file to other format
-# brew install emacs
-brew install --cask emacs
+brew install emacs
+# brew install --cask emacs
 brew install pandoc
 # you need install it to make it work with
 # 3rd/image neovim plugin

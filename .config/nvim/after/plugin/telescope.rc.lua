@@ -8,32 +8,11 @@ local actions = require("telescope.actions")
 local previewers = require("telescope.previewers")
 local previewers_utils = require("telescope.previewers.utils")
 
-local is_image = function(filepath)
-	local image_extensions = { "png", "jpg", "jpeg" } -- Supported image formats
-	local split_path = vim.split(filepath:lower(), ".", { plain = true })
-	local extension = split_path[#split_path]
-	return vim.tbl_contains(image_extensions, extension)
-end
-
-local api = require("image")
-local last_image = nil
-local clear_last_image = function()
-	if last_image ~= nil then
-		last_image:clear()
-		last_image = nil
-	end
-end
-
 -- Faster preview large file
 -- current condition: preview large file stucks
 -- https://github.com/nvim-telescope/telescope.nvim/issues/623#issuecomment-853164470
 local max_size = 100000
 local truncate_large_files = function(filepath, bufnr, opts)
-	if is_image(filepath) then
-	else
-		clear_last_image()
-	end
-
 	opts = opts or {}
 	filepath = vim.fn.expand(filepath)
 	vim.loop.fs_stat(filepath, function(_, stat)
@@ -52,33 +31,6 @@ end
 -- TODO: file size window height -
 telescope.setup({
 	defaults = {
-		preview = {
-			mime_hook = function(filepath, bufnr, opts)
-				-- get the idea from https://www.reddit.com/r/neovim/comments/18f8sbd/help_configure_telescope_to_preview_images/
-				if is_image(filepath) then
-					local image = api.from_file(filepath, {
-						buffer = bufnr,
-						-- it seems like you can not use float for the x,y
-						-- and i should take image width/height into account
-						-- but here i just hard-coded
-						x = math.floor(vim.api.nvim_win_get_width(opts.winid or 0) * 2),
-						y = math.floor(vim.api.nvim_win_get_height(opts.winid or 0) / 2) - 0,
-						-- width = 40,
-						-- height = 10,
-					})
-					clear_last_image()
-					image:render()
-					last_image = image
-				else
-					clear_last_image()
-					require("telescope.previewers.utils").set_preview_message(
-						bufnr,
-						opts.winid,
-						"Binary cannot be previewed"
-					)
-				end
-			end,
-		},
 		layout_config = {
 			-- prompt_position = "bottom",
 			-- preview_cutoff = 170,
@@ -87,9 +39,6 @@ telescope.setup({
 		-- and click copy icon then you can use the icon
 		-- from nerdfont
 		prompt_prefix = "   ",
-		selection_caret = "  ",
-		entry_prefix = "  ",
-		results_title = false,
 		-- sorting_strategy = "ascending",
 		buffer_previewer_maker = truncate_large_files,
 		file_ignore_patterns = {
@@ -166,9 +115,9 @@ telescope.setup({
 			media_files = {
 				-- filetypes whitelist
 				-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-				-- filetypes = { "png", "webp", "jpg", "jpeg" },
+				filetypes = { "png", "webp", "jpg", "jpeg" },
 				-- find command (defaults to `fd`)
-				-- find_cmd = "rg",
+				find_cmd = "rg",
 			},
 			-- recent_files = {
 			--   only_cwd = true
@@ -177,12 +126,12 @@ telescope.setup({
 	},
 })
 
-vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
-	pattern = "*",
-	callback = function()
-		clear_last_image()
-	end,
-})
+-- vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		clear_last_image()
+-- 	end,
+-- })
 
 -- require('telescope').extensions.smart_open.smart_open {
 --   cwd_only = true,
@@ -192,6 +141,7 @@ vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
 -- require("telescope").load_extension("file_browser")
 -- telescope.load_extension("frecency")
 -- telescope.load_extension("media_files")
+require("telescope").load_extension("media_files")
 -- require("telescope").load_extension("media_files")
 -- require("telescope").load_extension("bibtex")
 -- telescope.load_extension('fzf')
