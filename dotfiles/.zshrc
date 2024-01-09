@@ -102,3 +102,8 @@ xpgcl() {
 
     git clone "git@gitlab.alibaba-inc.com:${group}/${repo}.git"
 }
+
+export CRYPTO_DIR=$(brew --prefix openssl) 
+export OPENSSL_DIR=$(brew --prefix openssl)
+export LIBEV_DIR=$(brew --prefix libev)
+# export CRYPTO_INCDIR=/usr/local/include
