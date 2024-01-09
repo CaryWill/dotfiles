@@ -31,6 +31,10 @@ brew install viu
 brew install xclip
 # brew install meson
 
+# nodejs plugin for neovim
+# https://github.com/neovim/node-client
+npm install -g neovim
+
 # 如果是 neovim 的话，那么需要改一下位置，在 ~/.config/nvim/autoload/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
