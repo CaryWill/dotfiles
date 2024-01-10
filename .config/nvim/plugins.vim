@@ -122,6 +122,7 @@ Plug 'renerocksai/calendar-vim'
 Plug 'uga-rosa/translate.nvim'
 Plug 'kkharji/sqlite.lua'
 Plug '~/workspace/github/org-roam-ui-neovim-server'
+
 " Plug '~/workspace/github/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug 'CaryWill/org-roam.nvim'
