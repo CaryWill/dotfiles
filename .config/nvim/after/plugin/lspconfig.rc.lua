@@ -131,7 +131,8 @@ local servers = {
 	"cssls",
 	-- "stylelint_lsp",
 	"vimls",
-	"grammarly",
+	-- TODO: grammarly does not provide service any more for developers
+	-- "grammarly",
 }
 
 local filetypes = {

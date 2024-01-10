@@ -122,10 +122,10 @@ Plug 'renerocksai/calendar-vim'
 Plug 'uga-rosa/translate.nvim'
 Plug 'kkharji/sqlite.lua'
 Plug '~/workspace/github/org-roam-ui-neovim-server'
-
+Plug '/Users/cary/workspace/org-roam.nvim'
 " Plug '~/workspace/github/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam.nvim'
-Plug 'CaryWill/org-roam.nvim'
+" Plug 'CaryWill/org-roam.nvim'
 " Plug 'CaryWill/translate.nvim'
 " Plug 'potamides/pantran.nvim'
 " Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
