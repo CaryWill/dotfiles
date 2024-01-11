@@ -124,10 +124,12 @@ Plug 'kkharji/sqlite.lua'
 " Plug '~/workspace/github/org-roam-ui-neovim-server'
 " Plug '/Users/cary/workspace/org-roam.nvim'
 
-" home dev"
-Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
+" company dev"
+" I make thoes paths the same for company and home
 Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
+Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
+
 " Plug '~/workspace/github/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam.nvim'
 " Plug 'CaryWill/org-roam.nvim'
