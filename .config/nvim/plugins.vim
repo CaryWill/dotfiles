@@ -121,8 +121,6 @@ Plug 'akinsho/org-bullets.nvim'
 Plug 'renerocksai/calendar-vim'
 Plug 'uga-rosa/translate.nvim'
 Plug 'kkharji/sqlite.lua'
-" Plug '~/workspace/github/org-roam-ui-neovim-server'
-" Plug '/Users/cary/workspace/org-roam.nvim'
 
 " company dev"
 " I make thoes paths the same for company and home
@@ -130,8 +128,9 @@ Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
 
-" Plug '~/workspace/github/org-roam.nvim'
-" Plug '/Users/cary/workspace/github/org-roam.nvim'
+" org roam related"
+" Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
+
 " Plug 'CaryWill/org-roam.nvim'
 " Plug 'CaryWill/translate.nvim'
 " Plug 'potamides/pantran.nvim'
