@@ -14,13 +14,9 @@ noremap k gk
 nmap ss :split<CR>
 nmap sv :vsplit<CR>
 nmap st :tab split<CR>
-nnoremap <silent><leader>r :source $MYVIMRC<CR>
 nnoremap <silent><leader>q :q<CR>
-nnoremap <silent><leader>Q :qa!<CR>
-
 " Select all
 nmap <C-a> gg<S-v>G
-nnoremap ;b :Git blame<CR>
 
 "Telescope
 nnoremap ;g <cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<CR>
@@ -29,40 +25,21 @@ nnoremap ;r <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap ;s <cmd>lua require('telescope.builtin').grep_string()<CR>
 nnoremap ;h <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap ;q <cmd>lua require('telescope.builtin').quickfix()<CR>
-nnoremap ;p <cmd>lua require('telescope.builtin').planets()<CR>
 nnoremap <leader><leader> <cmd>lua require('telescope.builtin').oldfiles()<CR>
-
-" conform plugin"
-" nnoremap <leader>f <cmd>:Format<CR>
-" vnoremap <leader>f <cmd>:Format<CR>
-" nnoremap <leader>df <cmd>:FormatDisable<CR>
-" nnoremap <leader>ef <cmd>:FormatEnable<CR>
-" nnoremap <leader>f :Neoformat<CR>
-" nnoremap <leader>f <cmd>lua vim.lsp.buf.format()<CR>
+nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
+nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
+nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
+nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
+nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
+nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 
 " Lsp
 " nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
 " nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
 nnoremap <leader>ff <cmd>:EslintFixAll<CR>
-nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
-nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
-nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
-nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 
-" Git
-nnoremap ;c <cmd>lua require('telescope.builtin').git_commits()<CR>
-nnoremap ;d <cmd>lua require('telescope.builtin').git_bcommits()<CR>
-nmap <C-s> <M-q>
-xmap do :diffget<CR>
-xmap dp :diffput<CR>
-" copy git url of current project"
-nnoremap <Leader>gy :!git remote get-url origin \| xclip -selection c<CR>
-
-" nnoremap <silent>;e <cmd>Neotree toggle<CR>
-" nnoremap <silent>;e <cmd>NvimTreeToggle<CR>
-nnoremap <silent>fi :NvimTreeFindFileToggle<CR>
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>pp :PlugUpdate<CR>
@@ -99,17 +76,11 @@ inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
 
-" Git diff"
-" diff with last commit"
 nnoremap <silent><leader>g :DiffviewOpen<CR>
-" see all the changes, diff with master
-" just like the def platform CR changes
 nnoremap <silent><leader>gm :DiffviewOpen master<CR>
-" cnoremap G tabnew diffview \| Git \| only
 
 " undotree"
 nnoremap <silent><leader>u :UndotreeToggle<CR>
-" nnoremap <silent><leader>u <cmd>Telescope undo<cr>
 
 " buffer switch by number, <leader>b3 -> 3 <c-w> <c-w>
 nnoremap <silent><leader>b1 1<C-w>w
@@ -121,9 +92,5 @@ nnoremap <silent><leader>b6 6<C-w>w
 nnoremap <silent><leader>b7 7<C-w>w
 nnoremap <silent><leader>b8 8<C-w>w
 nnoremap <silent><leader>b9 9<C-w>w
-
-" vim have built-in join lines keymapping, J"
-" but with an extra space, so i just removed it here
-" nnoremap J Jx
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
