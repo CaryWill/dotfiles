@@ -125,8 +125,8 @@ Plug 'kkharji/sqlite.lua'
 " company dev"
 " I make thoes paths the same for company and home
 Plug '/Users/cary/workspace/github/org-roam.nvim'
-Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
+" Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 
 " org roam related"
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
