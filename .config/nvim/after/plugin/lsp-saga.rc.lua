@@ -25,10 +25,12 @@ plugin.setup({
 
 -- diagnostics navigation
 vim.keymap.set("n", "[e", function()
-	require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
+	-- require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
+	require("lspsaga.diagnostic"):goto_prev()
 end)
 vim.keymap.set("n", "]e", function()
-	require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
+	-- require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
+	require("lspsaga.diagnostic"):goto_next()
 end)
 
 -- code action
