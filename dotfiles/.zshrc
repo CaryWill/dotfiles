@@ -106,4 +106,5 @@ xpgcl() {
 export CRYPTO_DIR=$(brew --prefix openssl) 
 export OPENSSL_DIR=$(brew --prefix openssl)
 export LIBEV_DIR=$(brew --prefix libev)
+
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home"
