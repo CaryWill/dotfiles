@@ -157,3 +157,12 @@ for _, lsp in ipairs(servers) do
 		})
 	end
 end
+
+-- https://www.azul.com/downloads/#downloads-table-zulu version 21
+-- brew install --cask zulu21
+nvim_lsp.ltex.setup({
+	on_attach = on_attach,
+	cmd = { "ltex-ls" },
+	filetypes = { "markdown", "text", "org" },
+	flags = { debounce_text_changes = 300 },
+})

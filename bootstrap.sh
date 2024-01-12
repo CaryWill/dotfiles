@@ -31,6 +31,13 @@ brew install viu
 brew install xclip
 # brew install meson
 
+# language tool
+# since grammarly is not work anymore
+# for developers
+# so, install zulu21 and configure java home
+# to make it work
+brew install --cask zulu21
+
 # nodejs plugin for neovim
 # https://github.com/neovim/node-client
 npm install -g neovim
