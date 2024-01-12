@@ -164,5 +164,5 @@ nvim_lsp.ltex.setup({
 	on_attach = on_attach,
 	cmd = { "ltex-ls" },
 	filetypes = { "markdown", "org" },
-	flags = { debounce_text_changes = 2000 },
+	flags = { debounce_text_changes = 800 },
 })
