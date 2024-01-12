@@ -4,9 +4,12 @@ if not status then
 end
 
 plugin.setup({
+	progress = {
+		ignore = { "ltex" },
+	},
 	notification = {
 		window = {
-			max_width = vim.fn.winwidth(0) / 3,
+			-- max_width = vim.fn.winwidth(0) / 3,
 		},
 	},
 })
