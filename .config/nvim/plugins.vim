@@ -106,6 +106,7 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 " Plug 'smartpde/telescope-recent-files'
 " Plug 'axkirillov/easypick.nvim'
 " Plug 'debugloop/telescope-undo.nvim'
+Plug 'benfowler/telescope-luasnip.nvim'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'
