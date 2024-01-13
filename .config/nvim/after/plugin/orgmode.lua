@@ -27,7 +27,7 @@ require("orgmode").setup({
 	-- org_agenda_files = { icloud_org_dir_path .. "agenda/**/*", icloud_org_dir_path },
 	org_agenda_files = { icloud_org_dir_path .. "**/*" },
 	-- if you just use `t` when in capture mode, it goes here
-	org_default_notes_file = icloud_org_dir_path .. "todo.org",
+	org_default_notes_file = icloud_org_dir_path .. "inbox.org",
 	org_capture_templates = {
 		-- T = {
 		-- 	description = "Todo",
@@ -37,12 +37,12 @@ require("orgmode").setup({
 		n = {
 			description = "Notes",
 			template = "* %?\n %u",
-			target = icloud_org_dir_path .. "notes.org",
+			target = icloud_org_dir_path .. "inbox.org",
 		},
 		d = {
 			description = "Daily todo",
 			template = "* TODO %?\n  DEADLINE: %T",
-			target = icloud_org_dir_path .. "todo.org",
+			target = icloud_org_dir_path .. "inbox.org",
 		},
 		w = {
 			description = "Work todo",
@@ -91,6 +91,7 @@ require("orgmode").setup({
 	},
 	-- org_hide_emphasis_markers = true,
 	org_agenda_text_search_extra_files = { "agenda-archives" },
+	org_archive_location = "assets/archives/%s_archive",
 	-- org_agenda_start_on_weekday = false,
 	-- org_blank_before_new_entry = { heading = false, plain_list_item = false },
 	-- emacs_config = { executable_path = "emacs", config_path = "$HOME/.emacs.d/init.el" },
