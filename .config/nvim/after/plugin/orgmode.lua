@@ -34,6 +34,13 @@ require("orgmode").setup({
 		-- 	template = "* TODO %?\n %u",
 		-- 	target = icloud_org_dir_path .. "todo.org",
 		-- },
+		-- org-roam-zettle
+		r = {
+			description = "Notes",
+			template = "* %?\n %u",
+			target = icloud_org_dir_path .. "reference/%t.org",
+		},
+		-- orgmode-refile
 		n = {
 			description = "Notes",
 			template = "* %?\n %u",
