@@ -93,6 +93,7 @@ Plug 'CaryWill/SingleComment.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
+Plug 'nvim-telescope/telescope-symbols.nvim'
 " Plug 'mbbill/undotree'
 " Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Plug 'danielfalk/smart-open.nvim'

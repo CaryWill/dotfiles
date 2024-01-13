@@ -32,6 +32,7 @@ nnoremap gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>
 nnoremap gi <cmd>lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap gd <cmd>lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
+nnoremap ;o <cmd>lua require('telescope.builtin').symbols()<CR>
 
 " Lsp
 " nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
