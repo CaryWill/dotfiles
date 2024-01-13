@@ -5,4 +5,7 @@ end
 
 plugin.setup({
 	signs = false,
+	highlight = {
+		exclude = { "org" },
+	},
 })
