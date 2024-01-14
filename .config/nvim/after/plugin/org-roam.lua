@@ -30,7 +30,7 @@ local open_org_roam_ui = function()
 	-- org-roam-ui default on 3000 port
 	local urlToOpen = "http://localhost:3000"
 	openURL(urlToOpen)
-	vim.fn.InitWs()
+	vim.cmd("InitWs")
 end
 
 vim.keymap.set("n", "<Leader>nf", org_roam.org_roam_node_find)
