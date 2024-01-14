@@ -13,7 +13,7 @@ org_roam.setup({
 	-- required (not checked if present)
 	org_roam_database_file = "~/.config/emacs/org-roam.db",
 	-- paths you want to save zettle when do a capture
-	org_roam_zettle_paths = { "articles", "reference", "main" },
+	org_roam_zettle_paths = { "reference", "main", "articles" },
 })
 
 vim.keymap.set("n", "<Leader>nf", org_roam.org_roam_node_find)
