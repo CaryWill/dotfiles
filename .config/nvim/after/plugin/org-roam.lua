@@ -17,4 +17,6 @@ org_roam.setup({
 })
 
 vim.keymap.set("n", "<Leader>nf", org_roam.org_roam_node_find)
+vim.keymap.set("n", "<Leader>ni", org_roam.org_roam_node_insert)
+vim.keymap.set("n", "<Leader>nl", org_roam.org_roam_buffer_toggle)
 vim.keymap.set("n", "<Leader>zn", org_roam.org_roam_capture)

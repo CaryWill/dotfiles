@@ -15,7 +15,7 @@ R = function(name)
 	return require(name)
 end
 
-vim.api.nvim_set_keymap("n", "<leader>r", ":lua R('SingleComment')<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>r", ":lua R('SingleComment')<cr>", { noremap = true, silent = true })
 
 -- Define the Lua function to copy the Git URL
 -- code from chatgpt
@@ -33,8 +33,8 @@ local function copy_git_url_to_clipboard()
 	-- Optional: display a message in Neovim
 	print("Copied Git URL to clipboard: " .. git_url)
 end
-vim.api.nvim_set_keymap("n", "<leader>cg", "", {
-	noremap = true,
-	silent = true,
-	callback = copy_git_url_to_clipboard,
-})
+-- vim.api.nvim_set_keymap("n", "<leader>cg", "", {
+-- 	noremap = true,
+-- 	silent = true,
+-- 	callback = copy_git_url_to_clipboard,
+-- })

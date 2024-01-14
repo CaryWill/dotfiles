@@ -114,7 +114,7 @@ Plug 'David-Kunz/jester'
 Plug 'voldikss/vim-floaterm'
 
 " writing"
-Plug 'nvim-orgmode/orgmode'
+" Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
@@ -128,6 +128,7 @@ Plug 'kkharji/sqlite.lua'
 " I make thoes paths the same for company and home
 Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
+Plug '/Users/cary/workspace/github/orgmode'
 " Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 
 " org roam related"
