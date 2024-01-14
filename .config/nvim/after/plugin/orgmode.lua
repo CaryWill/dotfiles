@@ -57,6 +57,7 @@ require("orgmode").setup({
 			org_toggle_checkbox = "<leader>cc",
 		},
 	},
+	org_use_tag_inheritance = false,
 	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "showeverything",
 	org_todo_keywords = { "TODO(t)", "WAITING(w)", "PROGRESS(p)", "CONFIRMING(c)", "|", "DONE(d)" },
