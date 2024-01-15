@@ -123,9 +123,9 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
+" Plug 'uga-rosa/translate.nvim'
 " Plug 'renerocksai/telekasten.nvim'
 Plug 'renerocksai/calendar-vim'
-Plug 'uga-rosa/translate.nvim'
 Plug 'kkharji/sqlite.lua'
 " Plug 'ranjithshegde/orgWiki.nvim'
 
@@ -135,6 +135,7 @@ Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
 Plug '/Users/cary/workspace/github/orgmode'
 " Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
+Plug '/Users/cary/workspace/github/translate.nvim'
 
 " org roam related"
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
