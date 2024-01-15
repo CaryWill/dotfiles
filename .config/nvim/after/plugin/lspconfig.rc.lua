@@ -23,7 +23,7 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<leader>j", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 	vim.keymap.set("n", "<leader>k", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 	vim.keymap.set("n", "gl", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts)
-	vim.keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)
+	-- vim.keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)
 
 	-- formatting
 	-- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts

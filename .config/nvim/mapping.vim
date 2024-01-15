@@ -40,7 +40,7 @@ nnoremap <leader>r <cmd>lua require('telescope.builtin').reloader()<CR>
 " nnoremap <silent> <leader>j  :lua vim.diagnostic.goto_next()<CR>
 " nnoremap <silent> <leader>k  :lua vim.diagnostic.goto_prev()<CR>
 nnoremap <leader>ff <cmd>:EslintFixAll<CR>
-nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
+" nnoremap K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 
 nnoremap <silent><leader>et :silent !open ~/.local\/share\/nvim\/plugged\/<CR>
