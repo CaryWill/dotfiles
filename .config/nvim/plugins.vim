@@ -110,6 +110,8 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'benfowler/telescope-luasnip.nvim'
 Plug 'nvim-telescope/telescope-bibtex.nvim'
 Plug 'jghauser/papis.nvim'
+" -- https://github.com/topics/orgmode-nvim
+" Plug 'joaomsa/telescope-orgmode.nvim'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'
