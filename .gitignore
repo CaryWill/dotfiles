@@ -65,3 +65,5 @@ Pods/
 .DS_Store
 .vim-bookmarks
 yarn.lock
+
+.config/nvim/after/plugin/ai-config.lua
