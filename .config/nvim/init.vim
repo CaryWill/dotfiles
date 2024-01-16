@@ -98,6 +98,7 @@ runtime ./plugins.vim
 runtime ./mapping.vim
 runtime ./colors.vim
 runtime ./kitty.vim
+runtime ../../.local.config.lua
 
 " Set custom package.path
 lua << EOF
