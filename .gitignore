@@ -67,4 +67,4 @@ Pods/
 yarn.lock
 
 .config/nvim/after/plugin/ai-config.lua
-.local.config
+.local.config.lua

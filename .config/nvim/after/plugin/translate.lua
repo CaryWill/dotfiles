@@ -2,7 +2,6 @@ local status, plugin = pcall(require, "translate")
 if not status then
 	return
 end
-
 local function show_floating_popup(lines, selection)
 	-- Get the current cursor position
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
