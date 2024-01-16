@@ -92,7 +92,8 @@ end
 function _G.translateInChatGPT()
 	local selection = _G.get_visual_selection()
 	local selected_text = selection.text
-	local apiKey = ""
+	-- creat a .local.config.lua file
+	local apiKey = vim.g.chatgpt
 	-- TODO: role? change to assistant? will it be better?
 	local script = string.format(
 		[[
