@@ -3,71 +3,43 @@ if not status then
 	return
 end
 
--- part code floating window are from translate package itself
-local api = vim.api
-local M = {
-	window = {},
-}
-function M.max_width_in_string_list(list)
-	local max = api.nvim_strwidth(list[1])
-	for i = 2, #list do
-		local v = api.nvim_strwidth(list[i])
-		if v > max then
-			max = v
+local function show_floating_popup(lines, selection)
+	-- Get the current cursor position
+	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+	-- Define the buffer and window options
+	local opts = {
+		style = "minimal",
+		relative = "cursor",
+		row = 1,
+		col = 0,
+		width = 30,
+		height = 2,
+		border = "rounded",
+	}
+	-- Create a buffer for the floating window
+	local buf = vim.api.nvim_create_buf(false, true)
+	-- Set lines in the buffer (your popup text)
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+	-- Create the floating window
+	local win = vim.api.nvim_open_win(buf, false, opts)
+
+	-- Define a function to close the floating window
+	local function close_window()
+		if vim.api.nvim_win_is_valid(win) then
+			vim.api.nvim_win_close(win, true)
 		end
 	end
-	return max
-end
 
-function M.cmd(lines, _)
-	if type(lines) == "string" then
-		lines = { lines }
-	end
-
-	M.window.close()
-
-	local options = {
-		row = 1,
-		col = 1,
-		border = "single",
-		filetype = "translate",
-		relative = "cursor",
-		style = "minimal",
-		zindex = 50,
-	}
-
-	local buf = api.nvim_create_buf(false, true)
-	api.nvim_buf_set_lines(buf, 0, -1, true, lines)
-	api.nvim_set_option_value("filetype", options.filetype, { buf = buf })
-
-	local width = M.max_width_in_string_list(lines)
-	local height = #lines
-
-	local win = api.nvim_open_win(buf, false, {
-		relative = options.relative,
-		style = options.style,
-		width = width,
-		height = height,
-		row = options.row,
-		col = options.col,
-		border = options.border,
-		zindex = options.zindex,
-	})
-
-	M.window._current = { win = win, buf = buf }
-
-	api.nvim_create_autocmd("CursorMoved", {
-		callback = M.window.close,
-		once = true,
-	})
-end
-
-function M.window.close()
-	if M.window._current then
-		api.nvim_win_close(M.window._current.win, false)
-		api.nvim_buf_delete(M.window._current.buf, {})
-		M.window._current = nil
-	end
+	-- Set a buffer-local autocmd to close the window when the cursor moves
+	-- I dont know why the cursor moved, maybe becasuse it exit visual mode?
+	-- I see the cursor col jumped, so i wrapped it into a defer_fn
+	vim.defer_fn(function()
+		vim.api.nvim_create_autocmd("CursorMoved", {
+			callback = close_window,
+			buffer = 0, -- the buffer number 0 is the current buffer
+			once = true, -- ensure the autocmd only runs once
+		})
+	end, 1000)
 end
 
 require("translate").setup({
@@ -86,26 +58,24 @@ local function doubleTranslateToOrignal()
 	-- vim.cmd("Translate zh -output=register<CR>")
 end
 
-local function get_visual_selection()
-	-- Save the original cursor position
-	local original_cursor = vim.api.nvim_win_get_cursor(0)
-
-	-- Get the start and end position of the last visual selection
-	-- '< and '> are marks for the start and end of the visual selection
-	local start_pos = vim.api.nvim_buf_get_mark(0, "<")
-	local end_pos = vim.api.nvim_buf_get_mark(0, ">")
-
-	-- Adjust the end position to include the last character in the selection
-	end_pos[2] = end_pos[2] + 1
-
-	-- Get the text of the visual selection
-	local lines = vim.api.nvim_buf_get_text(0, start_pos[1] - 1, start_pos[2], end_pos[1] - 1, end_pos[2], {})
-
-	-- Restore the original cursor position
-	vim.api.nvim_win_set_cursor(0, original_cursor)
-
-	-- Join the lines and return the text
-	return table.concat(lines, "\n")
+-- TODO: get selected not right
+-- https://neovim.discourse.group/t/function-that-return-visually-selected-text/1601
+function _G.get_visual_selection()
+	local s_start = vim.fn.getpos("'<")
+	local s_end = vim.fn.getpos("'>")
+	local n_lines = math.abs(s_end[2] - s_start[2]) + 1
+	local lines = vim.api.nvim_buf_get_lines(0, s_start[2] - 1, s_end[2], false)
+	lines[1] = string.sub(lines[1], s_start[3], -1)
+	if n_lines == 1 then
+		lines[n_lines] = string.sub(lines[n_lines], 1, s_end[3] - s_start[3] + 1)
+	else
+		lines[n_lines] = string.sub(lines[n_lines], 1, s_end[3])
+	end
+	vim.g.lines = lines
+	return {
+		pos = { start = s_start, ["end"] = s_end },
+		text = table.concat(lines, "\n"),
+	}
 end
 
 local function trimStringWithEllipsis(str, maxLength)
@@ -120,9 +90,11 @@ local function trimStringWithEllipsis(str, maxLength)
 	end
 end
 
-local function callBaizhiApi()
-	local selected_text = get_visual_selection()
+function _G.translateInChatGPT()
+	local selection = _G.get_visual_selection()
+	local selected_text = selection.text
 	local apiKey = ""
+	-- TODO: role? change to assistant? will it be better?
 	local script = string.format(
 		[[
     curl --location 'https://api.baizhi.ai/v1/chat/completions' \
@@ -132,7 +104,7 @@ local function callBaizhiApi()
       "model": "gpt-3.5-turbo",
       "messages": [
         {
-          "role": "assistant",
+          "role": "user",
           "content": "%s"
         }
       ],
@@ -158,22 +130,26 @@ local function callBaizhiApi()
 	end
 
 	-- TODO: try catch
-	local result = vim.json.decode(extract_json(vim.fn.system(script)))
+	local original = extract_json(vim.fn.system(script))
+	local result = vim.json.decode(original)
 	local _lines = { "original text: " .. trimStringWithEllipsis(selected_text, 10) }
 	for _, choice in ipairs(result.choices) do
 		local msg = choice.message.content
 		table.insert(_lines, msg)
 	end
-	M.cmd(_lines)
-	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
+	vim.g.o = { selected_text, _lines }
+	show_floating_popup(_lines, selection)
+	-- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
 
 	-- Check if the command was successful
 	if vim.v.shell_error == 0 then
-		print("API call successful!")
-		print(result) -- Print the result from the API call
+	-- print("API call successful!")
+	-- print(result) -- Print the result from the API call
 	else
 		print("API call failed. Check your configuration and try again.")
 	end
 end
 
-vim.keymap.set("v", "<leader>go", callBaizhiApi, { silent = true })
+-- NOTE: 看上去 <c-u> 非常的重要，或者说直接写函数名是不会生效的
+-- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
+vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent = true })

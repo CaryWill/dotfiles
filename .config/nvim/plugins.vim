@@ -80,7 +80,7 @@ Plug 'echasnovski/mini.indentscope'
 Plug 'echasnovski/mini.pairs'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-" Plug 'echasnovski/mini.surround'
+Plug 'echasnovski/mini.surround'
 " Plug 'echasnovski/mini.ai'
 " Plug 'echasnovski/mini.comment'
 
