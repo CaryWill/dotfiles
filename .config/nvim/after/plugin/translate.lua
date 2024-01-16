@@ -2,6 +2,18 @@ local status, plugin = pcall(require, "translate")
 if not status then
 	return
 end
+
+local function max_width_in_string_list(list)
+	local max = vim.api.nvim_strwidth(list[1])
+	for i = 2, #list do
+		local v = vim.api.nvim_strwidth(list[i])
+		if v > max then
+			max = v
+		end
+	end
+	return max
+end
+
 local function show_floating_popup(lines, selection)
 	-- Get the current cursor position
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -11,8 +23,8 @@ local function show_floating_popup(lines, selection)
 		relative = "cursor",
 		row = 1,
 		col = 0,
-		width = 30,
-		height = 2,
+		width = max_width_in_string_list(lines),
+		height = #lines,
 		border = "rounded",
 	}
 	-- Create a buffer for the floating window
@@ -92,8 +104,14 @@ end
 function _G.translateInChatGPT()
 	local selection = _G.get_visual_selection()
 	local selected_text = selection.text
+	vim.g.selection = selection
 	-- creat a .local.config.lua file
 	local apiKey = vim.g.chatgpt
+	if apiKey == nil then
+		print("api key not found")
+		return
+	end
+	local input = "show me the authentic way to express this sentense: " .. selected_text .. ""
 	-- TODO: role? change to assistant? will it be better?
 	local script = string.format(
 		[[
@@ -111,7 +129,7 @@ function _G.translateInChatGPT()
       "stream": false
     }']],
 		apiKey,
-		"show me the authentic way to express this sentense: '" .. selected_text .. "'"
+		input:gsub('"', '\\"')
 	)
 
 	local function extract_json(text)
