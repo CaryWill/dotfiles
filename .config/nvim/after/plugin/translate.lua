@@ -3,8 +3,19 @@ if not status then
 	return
 end
 
+local function max_width_in_string_list(list)
+	local max = vim.api.nvim_strwidth(list[1])
+	for i = 2, #list do
+		local v = vim.api.nvim_strwidth(list[i])
+		if v > max then
+			max = v
+		end
+	end
+	return max
+end
+
 local function get_wrapped_lines(text_lines, max_width)
-	max_width = max_width or 35
+	max_width = max_width_in_string_list(text_lines) or 35
 
 	local wrapped_lines = {}
 
@@ -16,25 +27,14 @@ local function get_wrapped_lines(text_lines, max_width)
 			-- If the line is longer, split it into wrapped lines
 			local current_line = line
 			while #current_line > max_width do
-				-- Try to find a space character to break the line nicely
-				local break_index = max_width
-				while break_index > 1 and current_line:sub(break_index, break_index) ~= " " do
-					break_index = break_index - 1
-				end
-
-				-- If no space was found, or it was found at the beginning, force break the line
-				if break_index == 1 then
-					break_index = max_width
-				end
-
-				local wrapped_line = current_line:sub(1, break_index)
-				table.insert(wrapped_lines, wrapped_line:match("^%s*(.-)%s*$")) -- Trim whitespaces
-				current_line = current_line:sub(break_index + 1) -- Get the remaining part of the line
+				local wrapped_line = current_line:sub(1, max_width)
+				table.insert(wrapped_lines, wrapped_line) -- Trim whitespaces
+				current_line = current_line:sub(max_width + 1) -- Get the remaining part of the line
 			end
 
 			-- Don't forget to add the last part of the wrapped line
 			if #current_line > 0 then
-				table.insert(wrapped_lines, current_line:match("^%s*(.-)%s*$")) -- Trim whitespaces
+				table.insert(wrapped_lines, current_line)
 			end
 		end
 	end
@@ -56,16 +56,6 @@ local function extract_json(text)
 	else
 		return "No JSON object found."
 	end
-end
-local function max_width_in_string_list(list)
-	local max = vim.api.nvim_strwidth(list[1])
-	for i = 2, #list do
-		local v = vim.api.nvim_strwidth(list[i])
-		if v > max then
-			max = v
-		end
-	end
-	return max
 end
 
 local function show_floating_popup(lines, selection)
@@ -256,14 +246,15 @@ function _G.translateInChatGPTV2()
 		on_exit = function(j, exit_code)
 			local res = table.concat(j:result(), "\n")
 			local result = vim.json.decode(res)
-			local _lines = { "original text: " .. trimStringWithEllipsis(selected_text, 10) }
-			vim.g.res = res
+			-- local _lines = { "original text: " .. trimStringWithEllipsis(selected_text, 10) }
+			local _lines = { selected_text }
 			for _, choice in ipairs(result.choices) do
 				local msg = choice.message.content
 				for line in msg:gmatch("([^\n]+)") do
 					table.insert(_lines, line)
 				end
 			end
+			vim.g.res = _lines
 			local type = "Success!"
 			if exit_code ~= 0 then
 				type = "Error!"
@@ -277,7 +268,7 @@ function _G.translateInChatGPTV2()
 				vim.schedule(function()
 					local wrapped_lines = get_wrapped_lines(_lines)
 					-- vim.api.nvim_echo({ { "First line\nSecond line\nThird line", "" } }, false, {})
-					show_floating_popup(_lines)
+					show_floating_popup(wrapped_lines)
 				end)
 				-- print(table.concat({ a = "123", b = "2323" }, " \n"))
 			end
