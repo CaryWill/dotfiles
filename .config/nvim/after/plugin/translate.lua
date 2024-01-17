@@ -181,6 +181,11 @@ function _G.translateInChatGPTV2()
 	-- TODO: role? change to assistant? will it be better?
 	-- input:gsub('"', '\\"')
 
+	-- https://www.reddit.com/r/neovim/comments/ulslly/how_can_i_recieve_api_data_through_curl_gunzip/
+	-- https://github.com/nvim-lua/plenary.nvim/blob/master/lua/plenary/curl.lua
+	-- https://github.com/nvim-lua/plenary.nvim/blob/master/tests/plenary/job_spec.lua
+	-- https://github.com/nvim-lua/plenary.nvim/blob/master/lua/plenary/curl.lua#L259
+	-- https://www.reddit.com/r/backtickbot/comments/pa6sfi/httpsnpredditcomrneovimcommentspa4ylehelp_with/
 	local job = require("plenary.job")
 	job:new({
 		command = "curl",
