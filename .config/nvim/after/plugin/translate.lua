@@ -299,6 +299,72 @@ function _G.translateInChatGPTV2()
 	-- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
 end
 
+function _G.askChatGPT()
+	-- creat a .local.config.lua file
+	local apiKey = vim.g.chatgpt
+	if apiKey == nil then
+		print("api key not found")
+		return
+	end
+	local input = vim.fn.input("What do you want buddy: ")
+	local job = require("plenary.job")
+	job:new({
+		command = "curl",
+		args = {
+			"--location",
+			"https://api.baizhi.ai/v1/chat/completions",
+			"--header",
+			"Authorization: Bearer " .. vim.g.chatgpt,
+			"--header",
+			"Content-Type: application/json",
+			"--data",
+			string.format(
+				[[{
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "%s"
+        }
+      ],
+      "stream": false
+    }]],
+				input:gsub('"', '\\"')
+			),
+		},
+		on_exit = function(j, exit_code)
+			local res = table.concat(j:result(), "\n")
+			local result = vim.json.decode(res)
+			local _lines = { "original text: " .. trimStringWithEllipsis(input, 10) }
+			vim.g.res = res
+			for _, choice in ipairs(result.choices) do
+				local msg = choice.message.content
+				for line in msg:gmatch("([^\n]+)") do
+					table.insert(_lines, line)
+				end
+			end
+			local type = "Success!"
+			if exit_code ~= 0 then
+				type = "Error!"
+				print("error: " .. res)
+			else
+				-- The error message you're encountering in Neovim indicates that you are trying to call nvim_echo from within a libuv event loop callback. Neovim has a safety mechanism that prevents some API functions from being called directly within certain asynchronous contexts in order to avoid potential deadlocks and other concurrency issues.
+				-- To work around this, you should use vim.schedule to defer the execution of nvim_echo until it is safe to call. Here's how you can do it:
+				-- vim.schedule defers the function passed to it until the next iteration of Neovim's event loop, at which point it is safe to call the restricted API functions like nvim_echo.
+				-- By wrapping the call to nvim_echo inside a vim.schedule, you make sure that it will be executed at the appropriate time, avoiding the error you've been experiencing.
+				-- notes from chatgpt
+				vim.schedule(function()
+					local wrapped_lines = get_wrapped_lines(_lines)
+					-- vim.api.nvim_echo({ { "First line\nSecond line\nThird line", "" } }, false, {})
+					show_floating_popup(_lines)
+				end)
+				-- print(table.concat({ a = "123", b = "2323" }, " \n"))
+			end
+		end,
+	}):start()
+end
+
 -- NOTE: 看上去 <c-u> 非常的重要，或者说直接写函数名是不会生效的
 -- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
 vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPTV2()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gt", ":<C-u>lua askChatGPT()<CR>", { silent = true })
