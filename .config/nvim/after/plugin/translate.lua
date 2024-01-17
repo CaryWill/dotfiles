@@ -5,6 +5,21 @@ end
 
 local utils = require("cary.utils")
 local model = "gpt-4"
+local prompts = {
+	translate = { label = "translate", desc = "translate", prePrompt = "what does '", sufPrompt = "'mean?" },
+	grammarCheck = {
+		label = "grammar check",
+		desc = "check grammar",
+		prePrompt = "Check the grammar of sentence '",
+		sufPrompt = "'",
+	},
+	betterExpression = {
+		label = "better expression",
+		desc = "authentic way to express",
+		prePrompt = "What is the authentic way to express '",
+		sufPrompt = "'",
+	},
+}
 local max_width_in_string_list = utils.max_width_in_string_list
 local get_wrapped_lines = utils.get_wrapped_lines
 local extract_json = utils.extract_json
@@ -85,7 +100,7 @@ end
 local function translateInChatGPT()
 	local selection = _G.get_visual_selection()
 	local selected_text = selection.text
-	ask(selected_text)
+	ask(selected_text, prompts.betterExpression)
 end
 
 local function askChatGPT()
@@ -93,25 +108,9 @@ local function askChatGPT()
 	ask(input)
 end
 
-local function askChatGPTByPrompt()
+local function askChatGPTByPromptLookUp()
 	local selection = _G.get_visual_selection()
 	local selected_text = selection.text
-
-	local prompts = {
-		translate = { label = "translate", desc = "translate", prePrompt = "what does '", sufPrompt = "'mean?" },
-		grammarCheck = {
-			label = "grammar check",
-			desc = "check grammar",
-			prePrompt = "Check the grammar of sentence '",
-			sufPrompt = "'",
-		},
-		betterExpression = {
-			label = "better expression",
-			desc = "authentic way to express",
-			prePrompt = "What is the authentic way to express '",
-			sufPrompt = "'",
-		},
-	}
 
 	local options = {}
 	local options_key = {}
@@ -136,10 +135,10 @@ end
 
 _G.askChatGPT = askChatGPT
 _G.translateInChatGPT = translateInChatGPT
-_G.askChatGPTByPrompt = askChatGPTByPrompt
+_G.askChatGPTByPromptLookUp = askChatGPTByPromptLookUp
 
 -- NOTE: 看上去 <c-u> 非常的重要，或者说直接写函数名是不会生效的
 -- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
 vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent = true })
-vim.keymap.set("n", "<leader>gt", ":<C-u>lua askChatGPT()<CR>", { silent = true })
-vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPrompt()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gi", ":<C-u>lua askChatGPT()<CR>", { silent = true })
+vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { silent = true })
