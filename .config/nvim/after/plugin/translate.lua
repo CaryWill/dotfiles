@@ -37,9 +37,6 @@ require("translate").setup({
 	},
 })
 
-vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
-vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
-
 -- TODO: different prompt key mapping
 -- async version
 -- creat a .local.config.lua file
@@ -142,3 +139,6 @@ _G.askChatGPTByPromptLookUp = askChatGPTByPromptLookUp
 vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gi", ":<C-u>lua askChatGPT()<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { silent = true })
+
+vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
+vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
