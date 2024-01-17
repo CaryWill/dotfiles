@@ -3,9 +3,8 @@ if not status then
 	return
 end
 
-local model = "gpt-4"
-
 local utils = require("cary.utils")
+local model = "gpt-4"
 local max_width_in_string_list = utils.max_width_in_string_list
 local get_wrapped_lines = utils.get_wrapped_lines
 local extract_json = utils.extract_json
@@ -22,7 +21,7 @@ require("translate").setup({
 		output = "replace",
 	},
 })
--- vim.keymap.set("v", "<leader>gt", ":Translate en -output=replace<CR>")
+
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
 
@@ -30,6 +29,9 @@ vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent
 -- async version
 -- creat a .local.config.lua file
 local function ask(input, opts)
+	opts = opts or {}
+	local prePrompt = opts.prePrompt or ""
+	local sufPrompt = opts.sufPrompt or ""
 	local job = require("plenary.job")
 	job:new({
 		command = "curl",
@@ -53,14 +55,13 @@ local function ask(input, opts)
       "stream": false
     }]],
 				model,
-				input:gsub('"', '\\"')
+				prePrompt .. input:gsub('"', '\\"') .. sufPrompt
 			),
 		},
 		on_exit = function(j, exit_code)
 			local res = table.concat(j:result(), "\n")
 			local result = vim.json.decode(res)
-			local _lines = { "original text: " .. trimStringWithEllipsis(input, 10) }
-			vim.g.res = res
+			local _lines = {}
 			for _, choice in ipairs(result.choices) do
 				local msg = choice.message.content
 				for line in msg:gmatch("([^\n]+)") do
@@ -81,26 +82,29 @@ local function ask(input, opts)
 	}):start()
 end
 
-function _G.translateInChatGPT()
+local function translateInChatGPT()
 	local selection = _G.get_visual_selection()
 	local selected_text = selection.text
-	vim.g.selection = selection
 	ask(selected_text)
 end
 
 local function askChatGPT()
-	local apiKey = vim.g.chatgpt
-	if apiKey == nil then
-		print("api key not found")
-		return
-	end
 	local input = vim.fn.input("What do you want buddy: ")
 	ask(input)
 end
 
+local function askChatGPTLookUp()
+	local selection = _G.get_visual_selection()
+	local selected_text = selection.text
+	ask(selected_text, { prePrompt = "what does '", sufPrompt = "'mean?" })
+end
+
 _G.askChatGPT = askChatGPT
+_G.translateInChatGPT = translateInChatGPT
+_G.askChatGPTLookUp = askChatGPTLookUp
 
 -- NOTE: 看上去 <c-u> 非常的重要，或者说直接写函数名是不会生效的
 -- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
 vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gt", ":<C-u>lua askChatGPT()<CR>", { silent = true })
+vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTLookUp()<CR>", { silent = true })
