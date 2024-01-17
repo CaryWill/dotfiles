@@ -3,6 +3,8 @@ if not status then
 	return
 end
 
+local model = "gpt-4"
+
 local function max_width_in_string_list(list)
 	local max = vim.api.nvim_strwidth(list[1])
 	for i = 2, #list do
@@ -15,7 +17,10 @@ local function max_width_in_string_list(list)
 end
 
 local function get_wrapped_lines(text_lines, max_width)
-	max_width = max_width_in_string_list(text_lines) or 35
+	local current_win = vim.api.nvim_get_current_win()
+	local width = vim.api.nvim_win_get_width(current_win)
+	max_width = width / 2 or 35
+	vim.g.max_width = max_width
 
 	local wrapped_lines = {}
 
@@ -164,7 +169,7 @@ function _G.translateInChatGPT()
     --header 'Authorization: Bearer %s' \
     --header 'Content-Type: application/json' \
     --data '{
-      "model": "gpt-3.5-turbo",
+      "model": "%s",
       "messages": [
         {
           "role": "user",
@@ -174,6 +179,7 @@ function _G.translateInChatGPT()
       "stream": false
     }']],
 		apiKey,
+		model,
 		input:gsub('"', '\\"')
 	)
 
@@ -231,7 +237,7 @@ function _G.translateInChatGPTV2()
 			"--data",
 			string.format(
 				[[{
-      "model": "gpt-3.5-turbo",
+      "model": "%s",
       "messages": [
         {
           "role": "user",
@@ -240,6 +246,7 @@ function _G.translateInChatGPTV2()
       ],
       "stream": false
     }]],
+				model,
 				input:gsub('"', '\\"')
 			),
 		},
@@ -311,7 +318,7 @@ function _G.askChatGPT()
 			"--data",
 			string.format(
 				[[{
-      "model": "gpt-3.5-turbo",
+      "model": "%s",
       "messages": [
         {
           "role": "user",
@@ -320,6 +327,7 @@ function _G.askChatGPT()
       ],
       "stream": false
     }]],
+				model,
 				input:gsub('"', '\\"')
 			),
 		},
