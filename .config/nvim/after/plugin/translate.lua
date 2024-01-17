@@ -3,6 +3,46 @@ if not status then
 	return
 end
 
+local function get_wrapped_lines(text_lines, max_width)
+	max_width = max_width or 35
+
+	local wrapped_lines = {}
+
+	for _, line in ipairs(text_lines) do
+		-- If the line is shorter than the max width, just add it to the result
+		if #line <= max_width then
+			table.insert(wrapped_lines, line)
+		else
+			-- If the line is longer, split it into wrapped lines
+			local current_line = line
+			while #current_line > max_width do
+				-- Try to find a space character to break the line nicely
+				local break_index = max_width
+				while break_index > 1 and current_line:sub(break_index, break_index) ~= " " do
+					break_index = break_index - 1
+				end
+
+				-- If no space was found, or it was found at the beginning, force break the line
+				if break_index == 1 then
+					break_index = max_width
+				end
+
+				local wrapped_line = current_line:sub(1, break_index)
+				table.insert(wrapped_lines, wrapped_line:match("^%s*(.-)%s*$")) -- Trim whitespaces
+				current_line = current_line:sub(break_index + 1) -- Get the remaining part of the line
+			end
+
+			-- Don't forget to add the last part of the wrapped line
+			if #current_line > 0 then
+				table.insert(wrapped_lines, current_line:match("^%s*(.-)%s*$")) -- Trim whitespaces
+			end
+		end
+	end
+
+	vim.g.l = wrapped_lines
+	return wrapped_lines
+end
+
 local function extract_json(text)
 	-- Pattern to match a JSON object. This is a simplistic pattern and might need to be adjusted
 	-- for more complex JSON structures. It looks for the opening and closing braces of the JSON object.
@@ -178,7 +218,8 @@ function _G.translateInChatGPTV2()
 		print("api key not found")
 		return
 	end
-	local input = "show me the authentic way to express this sentense: " .. selected_text .. ""
+	-- local input = "show me the authentic way to express this sentense: " .. selected_text .. ""
+	local input = selected_text
 	-- TODO: role? change to assistant? will it be better?
 	-- input:gsub('"', '\\"')
 
@@ -216,9 +257,12 @@ function _G.translateInChatGPTV2()
 			local res = table.concat(j:result(), "\n")
 			local result = vim.json.decode(res)
 			local _lines = { "original text: " .. trimStringWithEllipsis(selected_text, 10) }
+			vim.g.res = res
 			for _, choice in ipairs(result.choices) do
 				local msg = choice.message.content
-				table.insert(_lines, msg)
+				for line in msg:gmatch("([^\n]+)") do
+					table.insert(_lines, line)
+				end
 			end
 			local type = "Success!"
 			if exit_code ~= 0 then
@@ -231,6 +275,7 @@ function _G.translateInChatGPTV2()
 				-- By wrapping the call to nvim_echo inside a vim.schedule, you make sure that it will be executed at the appropriate time, avoiding the error you've been experiencing.
 				-- notes from chatgpt
 				vim.schedule(function()
+					local wrapped_lines = get_wrapped_lines(_lines)
 					-- vim.api.nvim_echo({ { "First line\nSecond line\nThird line", "" } }, false, {})
 					show_floating_popup(_lines)
 				end)
