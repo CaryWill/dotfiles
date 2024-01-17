@@ -1,0 +1,34 @@
+test
+
+	local job = require("plenary.job")
+	job:new({
+		command = "curl",
+		args = {
+			url = "https://api.baizhi.ai/v1/chat/completions",
+			method = "request",
+			headers = {
+				"Authorization: Bearer " .. vim.g.chatgpt,
+				"Content-Type: application/json",
+			},
+			data = [['{
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "what is your name"
+        }
+      ],
+      "stream": false
+    }']],
+		},
+		on_exit = function(j, exit_code)
+			local res = table.concat(j:result(), "\n")
+			local type = "Success!"
+
+			if exit_code ~= 0 then
+				type = "Error!"
+			end
+			print(type, res)
+		end,
+	}):start()
+

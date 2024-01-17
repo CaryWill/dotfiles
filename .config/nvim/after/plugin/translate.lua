@@ -3,6 +3,20 @@ if not status then
 	return
 end
 
+local function extract_json(text)
+	-- Pattern to match a JSON object. This is a simplistic pattern and might need to be adjusted
+	-- for more complex JSON structures. It looks for the opening and closing braces of the JSON object.
+	local json_pattern = "{.*}"
+
+	-- Find the JSON object in the text
+	local json_object = text:match(json_pattern)
+
+	if json_object then
+		return json_object
+	else
+		return "No JSON object found."
+	end
+end
 local function max_width_in_string_list(list)
 	local max = vim.api.nvim_strwidth(list[1])
 	for i = 2, #list do
@@ -132,21 +146,6 @@ function _G.translateInChatGPT()
 		input:gsub('"', '\\"')
 	)
 
-	local function extract_json(text)
-		-- Pattern to match a JSON object. This is a simplistic pattern and might need to be adjusted
-		-- for more complex JSON structures. It looks for the opening and closing braces of the JSON object.
-		local json_pattern = "{.*}"
-
-		-- Find the JSON object in the text
-		local json_object = text:match(json_pattern)
-
-		if json_object then
-			return json_object
-		else
-			return "No JSON object found."
-		end
-	end
-
 	-- TODO: try catch
 	local original = extract_json(vim.fn.system(script))
 	local result = vim.json.decode(original)
@@ -168,6 +167,50 @@ function _G.translateInChatGPT()
 	end
 end
 
+function _G.translateInChatGPTV2()
+	local selection = _G.get_visual_selection()
+	local selected_text = selection.text
+	vim.g.selection = selection
+	-- creat a .local.config.lua file
+	local apiKey = vim.g.chatgpt
+	if apiKey == nil then
+		print("api key not found")
+		return
+	end
+	local input = "show me the authentic way to express this sentense: " .. selected_text .. ""
+	-- TODO: role? change to assistant? will it be better?
+	-- input:gsub('"', '\\"')
+
+	local job = require("plenary.job")
+	job:new({
+		command = "curl",
+		args = {
+			"--compressed",
+			"https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow",
+		},
+		on_exit = function(j, exit_code)
+			local res = table.concat(j:result(), "\n")
+			local type = "Success!"
+
+			if exit_code ~= 0 then
+				type = "Error!"
+			end
+			print(type, res)
+		end,
+	}):start()
+
+	-- TODO: try catch
+	-- local original = extract_json(vim.fn.system(script))
+	-- local result = vim.json.decode(original)
+	-- local _lines = { "original text: " .. trimStringWithEllipsis(selected_text, 10) }
+	-- for _, choice in ipairs(result.choices) do
+	-- 	local msg = choice.message.content
+	-- 	table.insert(_lines, msg)
+	-- end
+	-- show_floating_popup(_lines, selection)
+	-- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
+end
+
 -- NOTE: 看上去 <c-u> 非常的重要，或者说直接写函数名是不会生效的
 -- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
-vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent = true })
+vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPTV2()<CR>", { silent = true })
