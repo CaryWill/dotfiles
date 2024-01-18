@@ -23,6 +23,12 @@ local prompts = {
 		prePrompt = "What is the authentic way to express '",
 		sufPrompt = "'",
 	},
+	ask = {
+		label = "ask question",
+		desc = "selected text will be the question",
+		prePrompt = "",
+		sufPrompt = "",
+	},
 }
 local max_width_in_string_list = utils.max_width_in_string_list
 local get_wrapped_lines = utils.get_wrapped_lines
@@ -89,9 +95,9 @@ local function ask(input, opts)
 				type = "Error!"
 				print("error: " .. res)
 			else
-				lastResult = _lines
 				vim.schedule(function()
 					local wrapped_lines = get_wrapped_lines(_lines)
+					lastResult = wrapped_lines
 					show_floating_popup(wrapped_lines)
 				end)
 			end
@@ -135,11 +141,8 @@ local function askChatGPTByPromptLookUp()
 	ask(selected_text, ask_options)
 end
 
-local function printTable()
-	vim.g.c = lastResult
-	for _, line in ipairs(lastResult) do
-		print(line)
-	end
+local function showLastResult()
+	show_floating_popup(lastResult)
 end
 
 _G.askChatGPT = askChatGPT
@@ -154,4 +157,4 @@ vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { 
 
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
-vim.keymap.set("n", "<leader>gr", printTable, { silent = true })
+vim.keymap.set("n", "<leader>gr", showLastResult, { silent = true })
