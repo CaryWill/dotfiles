@@ -4,7 +4,11 @@ if not status then
 end
 
 local utils = require("cary.utils")
+-- TODO: 后面可以让用户选通过一个变量 vim.g.model 一类的
 local model = "gpt-4"
+-- for review, after you dismissed the floating
+local lastResult = {}
+
 local prompts = {
 	translate = { label = "translate", desc = "translate", prePrompt = "what does '", sufPrompt = "'mean?" },
 	grammarCheck = {
@@ -85,9 +89,10 @@ local function ask(input, opts)
 				type = "Error!"
 				print("error: " .. res)
 			else
+				lastResult = _lines
 				vim.schedule(function()
 					local wrapped_lines = get_wrapped_lines(_lines)
-					show_floating_popup(_lines)
+					show_floating_popup(wrapped_lines)
 				end)
 			end
 		end,
@@ -130,6 +135,13 @@ local function askChatGPTByPromptLookUp()
 	ask(selected_text, ask_options)
 end
 
+local function printTable()
+	vim.g.c = lastResult
+	for _, line in ipairs(lastResult) do
+		print(line)
+	end
+end
+
 _G.askChatGPT = askChatGPT
 _G.translateInChatGPT = translateInChatGPT
 _G.askChatGPTByPromptLookUp = askChatGPTByPromptLookUp
@@ -142,3 +154,4 @@ vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { 
 
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gr", printTable, { silent = true })
