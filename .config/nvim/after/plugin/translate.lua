@@ -4,8 +4,34 @@ if not status then
 end
 
 local utils = require("cary.utils")
--- TODO: 后面可以让用户选通过一个变量 vim.g.model 一类的
-local model = "gpt-4"
+vim.g.model = "gpt-4-turbo"
+local all_models = {
+	"gpt-4-turbo",
+	"gpt-3.5-turbo",
+	"dall-e-2",
+	"google-imagen",
+	"theb-ai",
+	"gpt-3.5-turbo-16k",
+	"gpt-4-1106-preview",
+	"gpt-4",
+	"gpt-4-32k",
+	"claude-2",
+	"claude-1",
+	"claude-1-100k",
+	"claude-instant-1",
+	"claude-instant-1-100k",
+	"gemini-pro",
+	"palm-2",
+	"palm-2-codey",
+	"vicuna-13b-v1.5",
+	"llama-2-7b-chat",
+	"llama-2-13b-chat",
+	"llama-2-70b-chat",
+	"code-llama-7b",
+	"code-llama-13b",
+	"code-llama-34b",
+	"qwen-7b-chat",
+}
 -- for review, after you dismissed the floating
 local lastResult = {}
 
@@ -76,7 +102,7 @@ local function ask(input, opts)
       ],
       "stream": false
     }]],
-				model,
+				vim.g.model,
 				prePrompt .. input:gsub('"', '\\"') .. sufPrompt
 			),
 		},
@@ -145,6 +171,15 @@ local function showLastResult()
 	show_floating_popup(lastResult)
 end
 
+local function selectAiModel()
+	local options = {}
+	for index, item in ipairs(all_models) do
+		options[index] = string.format("%d. %s", index, item)
+	end
+	local choice = vim.fn.inputlist(options) or 1
+	vim.g.model = all_models[choice]
+end
+
 _G.askChatGPT = askChatGPT
 _G.translateInChatGPT = translateInChatGPT
 _G.askChatGPTByPromptLookUp = askChatGPTByPromptLookUp
@@ -158,3 +193,4 @@ vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { 
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gr", showLastResult, { silent = true })
+vim.keymap.set("n", "<leader>gm", selectAiModel, { silent = true })
