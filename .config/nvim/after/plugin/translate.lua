@@ -4,7 +4,7 @@ if not status then
 end
 
 local utils = require("cary.utils")
-vim.g.model = "gpt-3-turbo"
+vim.g.model = "gpt-3.5-turbo"
 local url = "https://api.theb.ai/v1"
 local url2 = "https://api.baizhi.ai/v1"
 local all_models = {
