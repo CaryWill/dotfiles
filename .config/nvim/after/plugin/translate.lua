@@ -86,6 +86,11 @@ local function ask(input, opts)
 
 	table.insert(messages, { role = "user", content = prePrompt .. input:gsub('"', '\\"') .. sufPrompt })
 
+	if #messages > 50 then
+		-- 可以考虑清空下, 不然还是很费钱的
+		print("you have a long chat!")
+	end
+
 	local job = require("plenary.job")
 	job:new({
 		command = "curl",
