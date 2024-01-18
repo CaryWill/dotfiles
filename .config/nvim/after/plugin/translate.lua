@@ -143,7 +143,7 @@ local function askChatGPT(isNewConversation)
 		messages = {}
 	end
 	local welcome_msg = "What do you want to ask buddy: "
-	if #messages then
+	if #messages ~= 0 then
 		welcome_msg = "input: "
 	end
 	local input = vim.fn.input(welcome_msg)
