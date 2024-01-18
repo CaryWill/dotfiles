@@ -34,6 +34,8 @@ local all_models = {
 	"code-llama-34b",
 	"qwen-7b-chat",
 }
+-- 用来记录历史消息这样就可以和chatgpt聊天了
+local messages = {}
 -- for review, after you dismissed the floating
 local lastResult = {}
 
@@ -75,13 +77,15 @@ require("translate").setup({
 	},
 })
 
--- TODO: different prompt key mapping
 -- async version
 -- creat a .local.config.lua file
 local function ask(input, opts)
 	opts = opts or {}
 	local prePrompt = opts.prePrompt or ""
 	local sufPrompt = opts.sufPrompt or ""
+
+	table.insert(messages, { role = "user", content = prePrompt .. input:gsub('"', '\\"') .. sufPrompt })
+
 	local job = require("plenary.job")
 	job:new({
 		command = "curl",
@@ -95,17 +99,12 @@ local function ask(input, opts)
 			"--data",
 			string.format(
 				[[{
-      "model": "%s",
-      "messages": [
-        {
-          "role": "user",
-          "content": "%s"
-        }
-      ],
-      "stream": false
-    }]],
+           "model": "%s",
+           "messages": %s,
+           "stream": false
+        }]],
 				vim.g.model,
-				prePrompt .. input:gsub('"', '\\"') .. sufPrompt
+				vim.json.encode(messages)
 			),
 		},
 		on_exit = function(j, exit_code)
@@ -139,8 +138,15 @@ local function translateInChatGPT()
 	ask(selected_text, prompts.betterExpression)
 end
 
-local function askChatGPT()
-	local input = vim.fn.input("What do you want buddy: ")
+local function askChatGPT(isNewConversation)
+	if isNewConversation then
+		messages = {}
+	end
+	local welcome_msg = "What do you want to ask buddy: "
+	if #messages then
+		welcome_msg = "input: "
+	end
+	local input = vim.fn.input(welcome_msg)
 	ask(input)
 end
 
@@ -190,6 +196,7 @@ _G.askChatGPTByPromptLookUp = askChatGPTByPromptLookUp
 -- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
 vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gi", ":<C-u>lua askChatGPT()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gc", ":<C-u>lua askChatGPT(true)<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { silent = true })
 
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
