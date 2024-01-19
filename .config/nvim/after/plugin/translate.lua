@@ -59,6 +59,12 @@ local prompts = {
 		prePrompt = "",
 		sufPrompt = "",
 	},
+	lookup = {
+		label = "look up the word in the current sentence",
+		desc = "selected text will be the question",
+		prePrompt = "",
+		sufPrompt = "",
+	},
 }
 local max_width_in_string_list = utils.max_width_in_string_list
 local get_wrapped_lines = utils.get_wrapped_lines
@@ -83,8 +89,9 @@ local function ask(input, opts)
 	opts = opts or {}
 	local prePrompt = opts.prePrompt or ""
 	local sufPrompt = opts.sufPrompt or ""
+	local question = prePrompt .. input:gsub('"', '\\"') .. sufPrompt
 
-	table.insert(messages, { role = "user", content = prePrompt .. input:gsub('"', '\\"') .. sufPrompt })
+	table.insert(messages, { role = "user", content = question })
 
 	if #messages > 50 then
 		-- 可以考虑清空下, 不然还是很费钱的
@@ -115,7 +122,7 @@ local function ask(input, opts)
 		on_exit = function(j, exit_code)
 			local res = table.concat(j:result(), "\n")
 			local result = vim.json.decode(res)
-			local _lines = {}
+			local _lines = { "<<input: " .. question .. ">>" }
 			for _, choice in ipairs(result.choices) do
 				local msg = choice.message.content
 				for line in msg:gmatch("([^\n]+)") do
