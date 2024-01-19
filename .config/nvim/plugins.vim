@@ -90,7 +90,7 @@ Plug 'CaryWill/SingleComment.nvim'
 " Plug '/Users/cary/workspace/SingleComment.nvim'
 
 " Telescope"
-Plug 'nvim-lua/ple nary.nvim'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 Plug 'nvim-telescope/telescope-symbols.nvim'
