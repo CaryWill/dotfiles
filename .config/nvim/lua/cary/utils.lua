@@ -126,6 +126,13 @@ local function trimStringWithEllipsis(str, maxLength)
 	end
 end
 
+local function table_merge(t1, t2)
+	for k, v in ipairs(t2) do
+		table.insert(t1, v)
+	end
+	return t1
+end
+
 return {
 	max_width_in_string_list = max_width_in_string_list,
 	get_wrapped_lines = get_wrapped_lines,
@@ -133,4 +140,5 @@ return {
 	show_floating_popup = show_floating_popup,
 	get_visual_selection = get_visual_selection,
 	trimStringWithEllipsis = trimStringWithEllipsis,
+	table_merge = table_merge,
 }

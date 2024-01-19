@@ -187,6 +187,61 @@ local function askChatGPTByPromptLookUp()
 	ask(selected_text, ask_options)
 end
 
+local function googleTranslate(text, opts, cb)
+	opts = opts or {}
+	local target = opts.target or "en"
+	local job = require("plenary.job")
+	job
+		:new({
+			command = "curl",
+			args = {
+				"-sL",
+				"https://script.google.com/macros/s/AKfycbxLRZgWI3UyHvHuYVyH1StiXbzJDHyibO5XpVZm5kMlXFlzaFVtLReR0ZteEkUbecRpPQ/exec",
+				"-d",
+				vim.json.encode({
+					text = { text },
+					target = target,
+				}),
+			},
+			on_exit = function(j, exit_code)
+				local res = table.concat(j:result(), "\n")
+				local result = vim.json.decode(res)
+				local type = "Success!"
+				if exit_code ~= 0 then
+					type = "Error!"
+					print("error: " .. res)
+				else
+					vim.schedule(function()
+						if cb then
+							cb(result)
+						end
+					end)
+				end
+			end,
+		})
+		:start()
+end
+
+-- TODO: replaceInPlace
+local function replaceInPlace(pos, text)
+	local start_row = pos[2]
+	local start_col = pos[3]
+	local end_row = pos[2]
+	local end_col = pos[3]
+end
+
+local function googleDoubleTranslate()
+	local selection = _G.get_visual_selection()
+	local selected_text = selection.text
+	googleTranslate(selected_text, { target = "zh" }, function(translated_text)
+		vim.g.translated_text = translated_text
+		googleTranslate(translated_text, { target = "en" }, function(double_translated_text)
+			vim.g.double_translated_text = double_translated_text
+			show_floating_popup(utils.table_merge(translated_text, double_translated_text))
+		end)
+	end)
+end
+
 local function showLastResult()
 	show_floating_popup(lastResult)
 end
@@ -203,6 +258,7 @@ end
 _G.askChatGPT = askChatGPT
 _G.translateInChatGPT = translateInChatGPT
 _G.askChatGPTByPromptLookUp = askChatGPTByPromptLookUp
+_G.googleDoubleTranslate = googleDoubleTranslate
 
 -- NOTE: 看上去 <c-u> 非常的重要，或者说直接写函数名是不会生效的
 -- When you enter command-line mode from visual mode with :, Neovim automatically inserts '<,'> to indicate that the command should operate on the visually selected lines. The <C-u> is used to clear the command line, which is useful when you don't want to operate on the range '<,'>. - from chatgpt
@@ -210,6 +266,7 @@ vim.keymap.set("v", "<leader>go", ":<C-u>lua translateInChatGPT()<CR>", { silent
 vim.keymap.set("n", "<leader>gi", ":<C-u>lua askChatGPT()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gc", ":<C-u>lua askChatGPT(true)<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { silent = true })
+vim.keymap.set("v", "<leader>gt", ":<C-u>lua googleDoubleTranslate()<CR>", { silent = true })
 
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
