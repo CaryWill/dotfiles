@@ -90,7 +90,7 @@ Plug 'CaryWill/SingleComment.nvim'
 " Plug '/Users/cary/workspace/SingleComment.nvim'
 
 " Telescope"
-Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/ple nary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 Plug 'nvim-telescope/telescope-symbols.nvim'
@@ -139,7 +139,6 @@ Plug '/Users/cary/workspace/github/translate.nvim'
 
 " org roam related"
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
-
 " Plug 'CaryWill/org-roam.nvim'
 " Plug 'CaryWill/translate.nvim'
 " Plug 'potamides/pantran.nvim'
@@ -161,8 +160,8 @@ Plug 'CaryWill/image.nvim'
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
-" Plug 'RRethy/vim-illuminate'
-" Plug 'LunarVim/bigfile.nvim'
+Plug 'RRethy/vim-illuminate'
+Plug 'LunarVim/bigfile.nvim'
 Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'folke/todo-comments.nvim'
 " Plug 'Wansmer/treesj'
