@@ -1,3 +1,24 @@
+local function replaceSingleLine(text, pos)
+	if type(text) == "table" then
+		text = text[1]
+	end
+
+	local start_row = pos.start[2]
+	local start_col = pos.start[3]
+	local end_row = pos["end"][2]
+	local end_col = pos["end"][3]
+
+	-- Get the current window and buffer
+	local buf = vim.api.nvim_get_current_buf()
+	local line_num = start_row - 1 -- Convert to 0-index
+	local line = vim.api.nvim_buf_get_lines(buf, line_num, line_num + 1, false)[1]
+	-- Replace the substring within the line
+	local line_start = line:sub(1, start_col - 1)
+	local line_end = line:sub(end_col + 1)
+	local new_line = line_start .. text .. line_end
+	vim.api.nvim_buf_set_lines(buf, line_num, line_num + 1, false, { new_line })
+end
+
 local function max_width_in_string_list(list)
 	local max = vim.api.nvim_strwidth(list[1])
 	for i = 2, #list do
@@ -97,6 +118,7 @@ end
 
 -- https://neovim.discourse.group/t/function-that-return-visually-selected-text/1601
 local function get_visual_selection()
+	-- [bufnum, lnum, col, off]
 	local s_start = vim.fn.getpos("'<")
 	local s_end = vim.fn.getpos("'>")
 	local n_lines = math.abs(s_end[2] - s_start[2]) + 1
@@ -141,4 +163,5 @@ return {
 	get_visual_selection = get_visual_selection,
 	trimStringWithEllipsis = trimStringWithEllipsis,
 	table_merge = table_merge,
+	replaceInPlace = replaceSingleLine,
 }

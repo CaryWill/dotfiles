@@ -222,12 +222,18 @@ local function googleTranslate(text, opts, cb)
 		:start()
 end
 
--- TODO: replaceInPlace
-local function replaceInPlace(pos, text)
-	local start_row = pos[2]
-	local start_col = pos[3]
-	local end_row = pos[2]
-	local end_col = pos[3]
+local function replaceInPlace(text, pos)
+	local start_row = pos.start[2]
+	local start_col = pos.start[3]
+	local end_row = pos["end"][2]
+	local end_col = pos["end"][3]
+
+	if start_row == end_row then
+		-- 单行直接替换
+		utils.replaceInPlace(text, pos)
+	else
+		-- 多行直接替换
+	end
 end
 
 local function googleDoubleTranslate()
@@ -237,7 +243,8 @@ local function googleDoubleTranslate()
 		vim.g.translated_text = translated_text
 		googleTranslate(translated_text, { target = "en" }, function(double_translated_text)
 			vim.g.double_translated_text = double_translated_text
-			show_floating_popup(utils.table_merge(translated_text, double_translated_text))
+			replaceInPlace(double_translated_text, selection.pos)
+			-- show_floating_popup(utils.table_merge(translated_text, double_translated_text))
 		end)
 	end)
 end

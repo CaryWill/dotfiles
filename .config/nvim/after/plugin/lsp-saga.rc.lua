@@ -20,6 +20,7 @@ plugin.setup({
 	},
 	outline = {
 		auto_preview = false,
+		detail = false,
 	},
 })
 
@@ -36,4 +37,4 @@ end)
 -- code action
 -- grammarly can use it to do a auto correct, or eslint,...
 vim.keymap.set({ "n", "v" }, "<leader>a", "<cmd>Lspsaga code_action<CR>")
--- vim.keymap.set({ "n", "v" }, "<leader>o", "<cmd>Lspsaga outline<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>o", "<cmd>Lspsaga outline<CR>")
