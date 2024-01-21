@@ -95,16 +95,17 @@ Plug 'kkharji/sqlite.lua'
 
 " company dev"
 " I make thoes paths the same for company and home
-Plug '/Users/cary/workspace/github/org-roam.nvim'
-Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
-Plug '/Users/cary/workspace/github/orgmode'
-Plug '/Users/cary/workspace/github/translate.nvim'
+" Plug '/Users/cary/workspace/github/org-roam.nvim'
+Plug 'CaryWill/org-roam.nvim'
+" Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
+Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
+Plug 'CaryWill/orgmode'
+" Plug '/Users/cary/workspace/github/orgmode'
+" Plug '/Users/cary/workspace/github/translate.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 
 " org roam related"
 " https://github.com/topics/orgmode-nvim
-" Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
-" Plug 'CaryWill/org-roam.nvim'
 " Plug 'CaryWill/translate.nvim'
 
 " image"
