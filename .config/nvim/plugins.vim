@@ -74,7 +74,7 @@ Plug 'CaryWill/SingleComment.nvim'
 " Telescope"
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-bibtex.nvim'
+" Plug 'nvim-telescope/telescope-bibtex.nvim'
 " Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 " Plug 'jghauser/papis.nvim'
 " -- https://github.com/topics/orgmode-nvim
@@ -90,7 +90,6 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
-Plug 'renerocksai/calendar-vim'
 Plug 'kkharji/sqlite.lua'
 " Plug 'uga-rosa/translate.nvim'
 
