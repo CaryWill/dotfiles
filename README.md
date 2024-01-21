@@ -81,6 +81,9 @@ https://stackoverflow.com/a/47294150
 23. E490: No fold found 是因为 neo-tree 导致的
 24. 手动安装下 :Mason prettier 或者直接 npm -g install prettier 就行了
 25. https://github.com/rose-pine/kitty using kitty +kitten themes
+26. [[https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/NerdFontsSymbolsOnly.zip][NerdFontsSymbolsOnly.zip]] 
+    https://sw.kovidgoyal.net/kitty/faq/#kitty-is-not-able-to-use-my-favorite-font 
+    这样你就可以用任何你喜欢的字体而不用考虑 patch 了
 
 ## TODO
 
