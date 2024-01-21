@@ -39,45 +39,10 @@ set directory=~/tmp/.directory//
 set undodir=~/tmp/.undo//
 set backupdir=~/tmp/.backup//
 
-" hide vim startup welcome message"
-" set shortmess=I
-
-" treesitter fold"
-" if i put it in autocmd, it does not work
-" but i put it here i can fold using <CR>
-" to org file
-" i found it's actually set on the orgmode 
-" plugin, https://github.com/nvim-orgmode/orgmode/blob/92bfc3fb7ee845d9e58326b0b69f3ed89e84253f/ftplugin/org.vim#L25
-" but i dont know why it did not work
-" it feels like it get's overriden by system
-" and i checked $VIMRUNTIME, it shows
-" /Users/cary/.local/share/bob/v0.9.4/nvim-macos/share/nvim/runtime
-" i dont actually see org.vim there
-" but no, it actually should not be there
-" then i used  nvim -u NORC --cmd 'filetype plugin on' tests/index.org
-" it worked, so i opened it again, then i see the flash on nvim-tree
-" i got an idea, maybe, because the tree, and it is
-" no, i found out, if i use harpoon to go to the file
-" it wont work
-" set nofoldenable
-" set foldmethod=expr
-" set foldexpr=nvim_treesitter#foldexpr()
-" set foldlevel=99
-
 " color theme
 set termguicolors
 set t_Co=256
 set background=light
-
-" Cursor shape
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-" undercurl"
-let &t_Cs = "\e[4:3m"
-let &t_Ce = "\e[4:0m"
 
 " netrw"
 " i need open url using netrw with orgmode
@@ -90,14 +55,12 @@ let g:netrw_liststyle=3
 let g:netrw_altv = 1
 let g:netrw_keepdir = 0
 let g:netrw_fastbrowse = 0
-" let g:netrw_winsize = 1 
-" let g:netrw_browse_split = 4
 
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 runtime ./plugins.vim
 runtime ./mapping.vim
-runtime ./colors.vim
 runtime ./kitty.vim
+runtime ./colors.vim
 runtime ../../.local.config.lua
 
 " Set custom package.path

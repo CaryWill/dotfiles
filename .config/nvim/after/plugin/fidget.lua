@@ -7,9 +7,4 @@ plugin.setup({
 	progress = {
 		ignore = { "ltex" },
 	},
-	notification = {
-		window = {
-			-- max_width = vim.fn.winwidth(0) / 3,
-		},
-	},
 })

@@ -28,25 +28,18 @@ export NVM_DIR="$HOME/.nvm"
 # TERM="xterm" #防止删除键变成空格键
 # TERM=xterm-256color
 # https://github.com/neovim/neovim/issues/13734#issuecomment-758357517
-# undercurl style
 export TERM="xterm-kitty"
 export LANG=en_US.UTF-8
 export TERM_ITALICS=true
-# export TERM=xterm-256color
 alias vim=nvim
 export VISUAL="nvim -u NORC"
-#alias python=python3
-#alias tsnode=ts-node
+
 # 用当前文件夹名直接创建一个 tmux session
-# alias 'tmux-s'='tmux new -s ${PWD##*/}'
 # 用当前文件夹名和父目录直接创建一个 tmux session
-alias 'tmux-s'='tmux new-session -s "$(basename $(dirname $(pwd)))/$(basename $(pwd))"'
-alias 'tx'='tmux-s'
+alias 'tx'='tmux new-session -s "$(basename $(dirname $(pwd)))/$(basename $(pwd))"'
 alias 'ta'='tmux attach'
 alias 'aidc'='cd ~/workspace/aidc-xspace'
 
-# for nested tmux
-# unset TMUX
 # change `clean` zsh theme to full path
 export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
 export CPATH="$CPATH:/opt/procursus/include"
@@ -66,44 +59,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 DISABLE_UPDATE_PROMPT=true
 # stop brew downloading the formula each time when using services command
 export HOMEBREW_NO_INSTALL_FROM_API=1
-
-# dev
-# usage: xp xspace/component-case-view
-xp() {
-  local param="$1"
-  local output="https://code.alibaba-inc.com/${param}"
-  open "$output"
-}
-
+# speed up downloading
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-
-# clone repo
-# usage: xpgcl --g=other-group --c=other-repo
-xpgcl() {
-    local group="aidc-xspace"
-    local repo=""
-
-    for arg in "$@"; do
-        case $arg in
-            --g=*)
-                group="${arg#*=}"
-                shift
-                ;;
-            --c=*)
-                repo="${arg#*=}"
-                shift
-                ;;
-            *)
-                # Ignore other arguments or handle them as needed
-                ;;
-        esac
-    done
-
-    git clone "git@gitlab.alibaba-inc.com:${group}/${repo}.git"
-}
-
 export CRYPTO_DIR=$(brew --prefix openssl) 
 export OPENSSL_DIR=$(brew --prefix openssl)
 export LIBEV_DIR=$(brew --prefix libev)
-
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home"
