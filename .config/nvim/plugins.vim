@@ -14,14 +14,6 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'FelipeLema/cmp-async-path'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'chrisgrieser/cmp-nerdfont'
-" Plug 'ludovicchabant/vim-gutentags'
-" Plug 'kristijanhusak/vim-js-file-import'
-" Plug 'hrsh7th/cmp-nvim-lua'
-" Plug 'David-Kunz/cmp-npm'
-" Plug 'hrsh7th/cmp-cmdline'
-" Plug 'hrsh7th/cmp-path'
-" Plug 'max397574/cmp-greek'
-" Plug 'mmolhoek/cmp-scss'
 
 " snipets"
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
@@ -36,13 +28,10 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 
 " tree"
-" Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-neo-tree/neo-tree.nvim'
+" foldmethold will be set right on my init.vim
 Plug 'CaryWill/nui.nvim'
-" i dont know how to add options from neo-tree, so i removed the line from
-" nui.nvim, so foldmethold will be set right on my init.vim
-" Plug 'MunifTanjim/nui.nvim'
 
 " buffer"
 Plug 'norcalli/nvim-colorizer.lua'
@@ -51,8 +40,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvimtools/none-ls.nvim'
 " Plug 'joechrisellis/lsp-format-modifications.nvim'
 " Plug 'stevearc/conform.nvim'
-" Plug 'MunifTanjim/prettier.nvim'
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " color theme
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
@@ -60,11 +47,6 @@ Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
 " Plug 'dstein64/vim-startuptime'
-" Plug 'lukas-reineke/virt-column.nvim'
-" Plug 'folke/neodev.nvim'
-" Plug 'j-hui/fidget.nvim'
-" Plug 'chentoast/marks.nvim'
-" Plug nvim-pack/nvim-spectre
 
 " Git"
 Plug 'lewis6991/gitsigns.nvim'
@@ -92,24 +74,9 @@ Plug 'CaryWill/SingleComment.nvim'
 " Telescope"
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
-Plug 'nvim-telescope/telescope-symbols.nvim'
-" Plug 'mbbill/undotree'
-" Plug 'nvim-telescope/telescope-file-browser.nvim'
-" Plug 'danielfalk/smart-open.nvim'
-" Plug 'kkharji/sqlite.lua'
-" Plug 'kristijanhusak/vim-dadbod-ui'
-" Plug 'nvim-telescope/telescope-frecency.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-telescope/telescope-media-files.nvim'
-" Plug 'nvim-telescope/telescope-bibtex.nvim'
-" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-" Plug 'smartpde/telescope-recent-files'
-" Plug 'axkirillov/easypick.nvim'
-" Plug 'debugloop/telescope-undo.nvim'
-Plug 'benfowler/telescope-luasnip.nvim'
 Plug 'nvim-telescope/telescope-bibtex.nvim'
-Plug 'jghauser/papis.nvim'
+" Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
+" Plug 'jghauser/papis.nvim'
 " -- https://github.com/topics/orgmode-nvim
 " Plug 'joaomsa/telescope-orgmode.nvim'
 
@@ -123,32 +90,23 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
-" Plug 'uga-rosa/translate.nvim'
-" Plug 'renerocksai/telekasten.nvim'
 Plug 'renerocksai/calendar-vim'
 Plug 'kkharji/sqlite.lua'
-" Plug 'ranjithshegde/orgWiki.nvim'
+" Plug 'uga-rosa/translate.nvim'
 
 " company dev"
 " I make thoes paths the same for company and home
 Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
 Plug '/Users/cary/workspace/github/orgmode'
-" Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 Plug '/Users/cary/workspace/github/translate.nvim'
+" Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 
 " org roam related"
+" https://github.com/topics/orgmode-nvim
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
 " Plug 'CaryWill/org-roam.nvim'
 " Plug 'CaryWill/translate.nvim'
-" Plug 'potamides/pantran.nvim'
-" Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
-" orgmode related plugin"
-" https://github.com/topics/orgmode-nvim
-
-" vim-orgmode"
-" Plug 'jceb/vim-orgmode'
-" Plug 'tpope/vim-speeddating'
 
 " image"
 " only support kitty for now, iterm2 not support 
@@ -164,22 +122,6 @@ Plug 'RRethy/vim-illuminate'
 Plug 'LunarVim/bigfile.nvim'
 Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'folke/todo-comments.nvim'
-" Plug 'Wansmer/treesj'
-" Plug 'tpope/vim-repeat'
-" Plug 'anuvyklack/pretty-fold.nvim'
 "Plug 'mattn/vim-nyancat'
-" Plug 'sontungexpt/url-open'
-" Plug 'folke/todo-comments.nvim'
-
-" ai"
-" Plug 'jpmcb/nvim-llama'
-" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-
-" virtual text"
-" Plug 'soulis-1256/hoverhints.nvim'
-
-" development for lua/neovim"
-" Plug 'jbyuki/one-small-step-for-vimkind'
-" Plug 'mfussenegger/nvim-dap'
 
 call plug#end()

@@ -144,9 +144,9 @@ telescope.setup({
 -- > I use Alacritty and the image quality is pretty shit but at least I got a peek of what the images look like,
 -- maybe iterm2 and kitty would be better. - https://github.com/nvim-telescope/telescope-media-files.nvim/issues/17#issuecomment-1229801090
 -- > Überzug doesn't support MacOs,
-require("telescope").load_extension("media_files")
+-- require("telescope").load_extension("media_files")
 -- require("telescope").load_extension("luasnip")
-require("telescope").load_extension("bibtex")
+-- require("telescope").load_extension("bibtex")
 -- require("telescope").load_extension("media_files")
 -- require("telescope").load_extension("bibtex")
 -- telescope.load_extension('fzf')
