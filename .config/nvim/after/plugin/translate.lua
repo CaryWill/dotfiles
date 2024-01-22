@@ -275,6 +275,9 @@ vim.keymap.set("n", "<leader>gc", ":<C-u>lua askChatGPT(true)<CR>", { silent = t
 vim.keymap.set("v", "<leader>gl", ":<C-u>lua askChatGPTByPromptLookUp()<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gt", ":<C-u>lua googleDoubleTranslate()<CR>", { silent = true })
 
+-- TODO: context-aware word lookup feature
+-- ask chatgpt the work meaning in the sentence.
+
 vim.keymap.set("v", "<leader>gg", ":Translate en<CR>", { silent = true })
 vim.keymap.set("v", "<leader>gp", ":Translate en -output=floating<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gr", showLastResult, { silent = true })
