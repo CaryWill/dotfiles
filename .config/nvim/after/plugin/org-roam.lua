@@ -4,7 +4,8 @@ if not status then
 end
 
 -- after you config this, you can run `:InitWs` to open org_roam_ui url
-vim.g.org_roam_ui_root = "/Users/cary/workspace/github/org-roam-ui.nvim"
+-- vim.g.org_roam_ui_root = "/Users/cary/workspace/github/org-roam-ui.nvim"
+vim.g.org_roam_ui_root = "/Users/cary/.local/share/nvim/plugged/org-roam-ui.nvim"
 
 local org_roam = require("org-roam")
 org_roam.setup({
