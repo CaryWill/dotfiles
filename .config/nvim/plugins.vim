@@ -91,7 +91,7 @@ Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
 Plug 'akinsho/org-bullets.nvim'
 Plug 'kkharji/sqlite.lua'
-" Plug 'uga-rosa/translate.nvim'
+Plug 'uga-rosa/translate.nvim'
 
 " company dev"
 " I make thoes paths the same for company and home
