@@ -60,14 +60,14 @@ command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 runtime ./plugins.vim
 runtime ./mapping.vim
 runtime ./colors.vim
-runtime ../../.local.config.lua
+" runtime ../../.local.config.lua
 
 " Set custom package.path
 lua << EOF
 -- Example for configuring Neovim to load user-installed installed Lua rocks:
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/lib/lua/5.1/?.so;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/lib/lua/5.1/?.so;"
 EOF
 
 " vim: set foldmethod=marker foldlevel=0 foldenable:
