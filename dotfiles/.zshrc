@@ -30,7 +30,8 @@ export NVM_DIR="$HOME/.nvm"
 export LANG=en_US.UTF-8
 export TERM_ITALICS=true
 alias vim=nvim
-export VISUAL="nvim -u NORC"
+# export VISUAL="nvim -u NORC"
+export VISUAL="nvim"
 export TERM="xterm-256color"
 # export VISUAL="nvim"
 
