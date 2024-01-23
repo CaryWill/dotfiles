@@ -10,22 +10,22 @@
 -- https://jestjs.io/docs/next/configuration
 local status, plugin = pcall(require, "jester")
 if not status then
-	return
+  return
 end
 
 local config = {
-	moduleFileExtensions = { "js", "cjs", "ts", "mjs" },
-	testEnvironment = "node",
-	-- so yourfile should end .ts to make it work with esm
-	extensionsToTreatAsEsm = { ".ts" },
+  moduleFileExtensions = { "js", "cjs", "ts", "mjs" },
+  testEnvironment = "node",
+  -- so yourfile should end .ts to make it work with esm
+  extensionsToTreatAsEsm = { ".ts" },
 }
 -- remove whitespaces(like newline and space)
 local jsonConfig = "'" .. vim.fn.json_encode(config) .. "'"
 local jestcmd = "NODE_OPTIONS=--experimental-vm-modules jest --config " .. jsonConfig .. " $file"
 
 require("jester").setup({
-	cmd = jestcmd,
-	terminal_cmd = ":FloatermNew",
+  cmd = jestcmd,
+  terminal_cmd = ":FloatermNew",
 })
 
 -- vim.g.floaterm_autoinsert = false

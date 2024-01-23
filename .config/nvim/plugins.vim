@@ -61,14 +61,14 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'echasnovski/mini.indentscope'
 Plug 'echasnovski/mini.pairs'
 Plug 'nvim-treesitter/playground'
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'echasnovski/mini.surround'
-" Plug 'echasnovski/mini.ai'
-" Plug 'echasnovski/mini.comment'
+Plug 'echasnovski/mini.ai'
+Plug 'echasnovski/mini.comment'
 
 " comment"
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-Plug 'CaryWill/SingleComment.nvim'
+" Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+" Plug 'CaryWill/SingleComment.nvim'
 " Plug '/Users/cary/workspace/SingleComment.nvim'
 
 " Telescope"
@@ -110,18 +110,18 @@ Plug 'CaryWill/orgmode'
 
 " image"
 " only support kitty for now, iterm2 not support 
-" Plug '3rd/image.nvim'
+Plug '3rd/image.nvim'
 " TODO: use my fork first since, it will support orgmode
-Plug 'CaryWill/image.nvim'
+" Plug 'CaryWill/image.nvim'
 
 " other"
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'psliwka/vim-smoothie'
-Plug 'RRethy/vim-illuminate'
-Plug 'LunarVim/bigfile.nvim'
-Plug 'Bekaboo/deadcolumn.nvim'
-Plug 'folke/todo-comments.nvim'
+" Plug 'psliwka/vim-smoothie'
+" Plug 'RRethy/vim-illuminate'
+" Plug 'LunarVim/bigfile.nvim'
+" Plug 'Bekaboo/deadcolumn.nvim'
+" Plug 'folke/todo-comments.nvim'
 "Plug 'mattn/vim-nyancat'
 
 call plug#end()
