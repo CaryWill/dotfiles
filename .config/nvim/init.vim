@@ -1,5 +1,5 @@
 scriptencoding utf-8
-syntax on1
+syntax on
 filetype plugin indent on
 set clipboard^=unnamed,unnamedplus
 set fileencodings=utf-8
@@ -59,7 +59,6 @@ let g:netrw_fastbrowse = 0
 command! -nargs=0 Code execute ":!code -g %:p\:" . line('.') . ":" . col('.')
 runtime ./plugins.vim
 runtime ./mapping.vim
-runtime ./kitty.vim
 runtime ./colors.vim
 runtime ../../.local.config.lua
 
