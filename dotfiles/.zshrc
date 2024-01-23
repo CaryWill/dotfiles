@@ -31,6 +31,7 @@ export LANG=en_US.UTF-8
 export TERM_ITALICS=true
 alias vim=nvim
 export VISUAL="nvim -u NORC"
+export TERM="xterm-256color"
 # export VISUAL="nvim"
 
 # 用当前文件夹名直接创建一个 tmux session
