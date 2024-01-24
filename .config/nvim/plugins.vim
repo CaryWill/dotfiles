@@ -49,7 +49,7 @@ Plug 'nvimtools/none-ls.nvim'
 " Plug 'dstein64/vim-startuptime'
 
 " Git"
-Plug 'lewis6991/gitsigns.nvim'
+" Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
 Plug 'sindrets/diffview.nvim'
 " Plug 'tpope/vim-fugitive'
