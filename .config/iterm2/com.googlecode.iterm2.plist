@@ -6390,8 +6390,6 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<key>Red Component</key>
 				<real>0.098039217293262482</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/cary/Downloads/manuel-cosentino-n--CMLApjfI-unsplash.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
