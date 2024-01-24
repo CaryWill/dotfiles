@@ -34,7 +34,7 @@ Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'CaryWill/nui.nvim'
 
 " buffer"
-Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'norcalli/nvim-colorizer.lua'
 
 " formatter"
 Plug 'nvimtools/none-ls.nvim'
@@ -42,7 +42,7 @@ Plug 'nvimtools/none-ls.nvim'
 " Plug 'stevearc/conform.nvim'
 
 " color theme
-Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
+" Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Plug 'rmehri01/onenord.nvim'
 " Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
@@ -51,8 +51,8 @@ Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Git"
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
-Plug 'tpope/vim-fugitive'
 Plug 'sindrets/diffview.nvim'
+" Plug 'tpope/vim-fugitive'
 
 " treesitter"
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
@@ -60,11 +60,11 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'echasnovski/mini.indentscope'
 Plug 'echasnovski/mini.pairs'
-Plug 'nvim-treesitter/playground'
-" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'echasnovski/mini.surround'
-Plug 'echasnovski/mini.ai'
 Plug 'echasnovski/mini.comment'
+" Plug 'nvim-treesitter/playground'
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'echasnovski/mini.ai'
+" Plug 'echasnovski/mini.surround'
 
 " comment"
 " Plug 'JoosepAlviste/nvim-ts-context-commentstring'

@@ -25,7 +25,8 @@ local jestcmd = "NODE_OPTIONS=--experimental-vm-modules jest --config " .. jsonC
 
 require("jester").setup({
   cmd = jestcmd,
-  terminal_cmd = ":FloatermNew",
+  -- terminal_cmd = ":FloatermNew",
+  terminal_cmd = ":vsplit | terminal",
 })
 
 -- vim.g.floaterm_autoinsert = false
