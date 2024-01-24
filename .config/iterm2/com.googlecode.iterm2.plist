@@ -5753,7 +5753,19 @@ Respond with one or more commands. Do not include any explanation or additional 
 	<key>EnterCopyModeAutomatically</key>
 	<true/>
 	<key>GlobalKeyMap</key>
-	<dict/>
+	<dict>
+		<key>0x70-0x80000-0x23</key>
+		<dict>
+			<key>Action</key>
+			<integer>3</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>GlobalTouchBarMap</key>
 	<dict/>
 	<key>HTMLTabTitles</key>
@@ -8855,7 +8867,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>127.0.0.1</string>
+			<string>fe80::3c06:30ff:fe2a:fdb1</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Brighten Bold Text</key>
@@ -8871,7 +8883,7 @@ Make Text Bigger</string>
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>ssh 127.0.0.1</string>
+			<string>ssh fe80::3c06:30ff:fe2a:fdb1</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Boost (Dark)</key>
@@ -9055,7 +9067,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Guid</key>
-			<string>D53783C4-34D8-41C3-ADF9-33D80EECB0FA</string>
+			<string>E68601C0-C59E-4983-B7A5-18DC5E647184</string>
 			<key>Has Hotkey</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -9338,7 +9350,7 @@ Make Text Bigger</string>
 			<key>Use Bright Bold (Light)</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<false/>
+			<true/>
 			<key>Use Cursor Guide (Dark)</key>
 			<false/>
 			<key>Use Cursor Guide (Light)</key>
