@@ -102,4 +102,4 @@ plugin.setup({
 })
 
 vim.api.nvim_set_keymap("n", ";e", "<cmd>Neotree toggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fi", "<cmd>Neotree reveal<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "fi", "<cmd>Neotree reveal<CR>", { noremap = true, silent = true })
