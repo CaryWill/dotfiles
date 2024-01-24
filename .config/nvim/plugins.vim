@@ -82,7 +82,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " unit test for jest"
 Plug 'David-Kunz/jester'
-Plug 'voldikss/vim-floaterm'
+" Plug 'voldikss/vim-floaterm'
 
 " writing"
 " Plug 'nvim-orgmode/orgmode'
@@ -98,7 +98,7 @@ Plug 'uga-rosa/translate.nvim'
 " Plug '/Users/cary/workspace/github/org-roam.nvim'
 Plug 'CaryWill/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
-Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
+" Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
 Plug 'CaryWill/orgmode'
 " Plug '/Users/cary/workspace/github/orgmode'
 " Plug '/Users/cary/workspace/github/translate.nvim'
