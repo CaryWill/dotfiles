@@ -6644,15 +6644,15 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Cursor Guide Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.25</real>
+				<real>0.3369293212890625</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.89178396405372951</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.92681378126144409</real>
+				<real>0.82356129493564367</real>
 				<key>Red Component</key>
-				<real>0.70214027166366577</real>
+				<real>0.97906494140625</real>
 			</dict>
 			<key>Cursor Guide Color (Dark)</key>
 			<dict>
@@ -7066,7 +7066,7 @@ Make Text Bigger</string>
 			<key>Use Bright Bold (Light)</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<false/>
+			<true/>
 			<key>Use Cursor Guide (Dark)</key>
 			<false/>
 			<key>Use Cursor Guide (Light)</key>
@@ -9581,7 +9581,7 @@ Make Text Bigger</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
-	<false/>
+	<true/>
 	<key>kCPKUseSystemColorPicker</key>
 	<false/>
 </dict>
