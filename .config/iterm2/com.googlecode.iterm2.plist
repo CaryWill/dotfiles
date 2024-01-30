@@ -7066,7 +7066,7 @@ Make Text Bigger</string>
 			<key>Use Bright Bold (Light)</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Cursor Guide (Dark)</key>
 			<false/>
 			<key>Use Cursor Guide (Light)</key>
@@ -8276,7 +8276,7 @@ Make Text Bigger</string>
 			<key>Allow Change Cursor Blink</key>
 			<true/>
 			<key>Allow Title Reporting</key>
-			<true/>
+			<false/>
 			<key>Allow Title Setting</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
@@ -9165,7 +9165,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Guid</key>
-			<string>EE069B19-C4FD-43B4-A7A2-15A393393093</string>
+			<string>BFC581AC-1A24-4A5A-89A0-633A46BBA073</string>
 			<key>Has Hotkey</key>
 			<false/>
 			<key>Horizontal Spacing</key>
