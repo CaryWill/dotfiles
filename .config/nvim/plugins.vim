@@ -120,7 +120,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
 " Plug 'LunarVim/bigfile.nvim'
-Plug 'Bekaboo/deadcolumn.nvim'
+" Plug 'Bekaboo/deadcolumn.nvim'
 Plug 'folke/todo-comments.nvim'
 "Plug 'mattn/vim-nyancat'
 
