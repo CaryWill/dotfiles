@@ -49,7 +49,7 @@ Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Plug 'dstein64/vim-startuptime'
 
 " Git"
-" Plug 'lewis6991/gitsigns.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
 Plug 'sindrets/diffview.nvim'
 " Plug 'tpope/vim-fugitive'
@@ -61,10 +61,10 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'echasnovski/mini.indentscope'
 Plug 'echasnovski/mini.pairs'
 Plug 'echasnovski/mini.comment'
-" Plug 'nvim-treesitter/playground'
-" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-" Plug 'echasnovski/mini.ai'
-" Plug 'echasnovski/mini.surround'
+Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'echasnovski/mini.ai'
+Plug 'echasnovski/mini.surround'
 
 " comment"
 " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -117,11 +117,11 @@ Plug '3rd/image.nvim'
 " other"
 Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'psliwka/vim-smoothie'
-" Plug 'RRethy/vim-illuminate'
+Plug 'psliwka/vim-smoothie'
+Plug 'RRethy/vim-illuminate'
 " Plug 'LunarVim/bigfile.nvim'
-" Plug 'Bekaboo/deadcolumn.nvim'
-" Plug 'folke/todo-comments.nvim'
+Plug 'Bekaboo/deadcolumn.nvim'
+Plug 'folke/todo-comments.nvim'
 "Plug 'mattn/vim-nyancat'
 
 call plug#end()
