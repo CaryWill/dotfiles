@@ -26,7 +26,7 @@ local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plai
 require("orgmode").setup({
 	org_agenda_files = { icloud_org_dir_path .. "agenda/**/*" },
 	-- agenda will also search org_default_notes_file file
-	org_default_notes_file = icloud_org_dir_path .. "reference/inbox.org",
+	org_default_notes_file = icloud_org_dir_path .. "inbox.org",
 	-- if you just use `t` when in capture mode, it goes here
 	org_capture_templates = {
 		-- T = {
