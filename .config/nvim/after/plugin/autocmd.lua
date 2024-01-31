@@ -13,6 +13,19 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 local hr = tonumber(os.date("%H", os.time()))
 if hr > 9 and hr < 18 then
 	vim.opt.background = "light"
+
+	-- change kitty theme asyncly
+	local job = require("plenary.job")
+	job:new({
+		command = "kitty",
+		args = { "+kitten", "themes", "--reload-in", "all", "Rosé Pine Dawn" },
+	}):start()
 else -- night
 	vim.opt.background = "dark"
+	-- change kitty theme asyncly
+	local job = require("plenary.job")
+	job:new({
+		command = "kitty",
+		args = { "+kitten", "themes", "--reload-in", "all", "Rosé Pine Moon" },
+	}):start()
 end

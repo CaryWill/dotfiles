@@ -6,7 +6,9 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family     JetBrainsMono Nerd Font 
+# font_family   BerkeleyMono Nerd Font
+font_family JetBrainsMono Nerd Font Mono
+# font_family JetBrainsMono Nerd Font
 # font_family      MonoLisa Nerd Font
 bold_font        true
 italic_font      true
@@ -25,7 +27,7 @@ bold_italic_font true
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 13.0
+font_size 14.0
 
 #: Font size (in pts)
 
@@ -48,7 +50,7 @@ font_size 13.0
 #: support, because it will force kitty to always treat the text as
 #: LTR, which FriBidi expects for terminals.
 
-adjust_line_height  120%
+adjust_line_height  140%
 adjust_column_width 100%
 
 #: Change the size of each character cell kitty renders. You can use
@@ -2082,4 +2084,23 @@ term xterm-256color
 
 #: }}}
 
-include rose-pine-dawn.conf
+# https://github.com/kovidgoyal/kitty/issues/1891
+# Keyboard shortcut to navigate to specific tab
+map cmd+1 goto_tab 1
+map cmd+2 goto_tab 2
+map cmd+3 goto_tab 3
+map cmd+4 goto_tab 4
+map cmd+5 goto_tab 5
+map cmd+6 goto_tab 6
+map cmd+7 goto_tab 7
+map cmd+8 goto_tab 8
+map cmd+9 goto_tab 9
+
+# https://sw.kovidgoyal.net/kitty/actions/#action-nth_os_window
+map alt+l nth_os_window -1
+map cmd+p previous_tab
+
+# BEGIN_KITTY_THEME
+# Rosé Pine Moon
+include current-theme.conf
+# END_KITTY_THEME
