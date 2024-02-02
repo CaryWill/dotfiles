@@ -40,6 +40,7 @@ export VISUAL="nvim"
 alias 'tx'='tmux new-session -s "$(basename $(dirname $(pwd)))/$(basename $(pwd))"'
 alias 'ta'='tmux attach'
 alias 'aidc'='cd ~/workspace/aidc-xspace'
+alias 'org'='cd "/Users/cary/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"'
 
 # change `clean` zsh theme to full path
 export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
