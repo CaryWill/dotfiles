@@ -41,7 +41,9 @@ local function change_theme()
 		}):start()
 	end
 end
+
 change_theme()
+
 -- if set background then call this function
 vim.api.nvim_create_autocmd("OptionSet", {
 	pattern = "background",
