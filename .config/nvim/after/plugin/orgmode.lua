@@ -50,6 +50,7 @@ require("orgmode").setup({
 			target = icloud_org_dir_path .. "reference/work.org",
 		},
 	},
+	org_id_link_to_org_use_id = true,
 	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
 	-- https://github.com/nvim-orgmode/orgmode/blob/master/lua/orgmode/config/defaults.lua
 	mappings = {
@@ -57,7 +58,7 @@ require("orgmode").setup({
 			org_toggle_checkbox = "<leader>cc",
 		},
 	},
-	org_use_tag_inheritance = false,
+	-- org_use_tag_inheritance = false,
 	-- org_log_into_drawer = "LOGBOOK",
 	org_startup_folded = "showeverything",
 	org_todo_keywords = { "TODO(t)", "WAITING(w)", "PROGRESS(p)", "CONFIRMING(c)", "|", "DONE(d)" },

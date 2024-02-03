@@ -85,7 +85,7 @@ Plug 'David-Kunz/jester'
 " Plug 'voldikss/vim-floaterm'
 
 " writing"
-Plug 'nvim-orgmode/orgmode'
+" Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
@@ -100,7 +100,7 @@ Plug 'CaryWill/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
 " Plug 'CaryWill/orgmode'
-" Plug '/Users/cary/workspace/github/orgmode'
+Plug '/Users/cary/workspace/github/orgmode'
 " Plug '/Users/cary/workspace/github/translate.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
 
