@@ -113,6 +113,7 @@ Plug 'CaryWill/org-roam.nvim'
 " Plug '3rd/image.nvim'
 " TODO: use my fork first since, it will support orgmode
 Plug 'CaryWill/image.nvim'
+" Plug '/Users/cary/workspace/github/image.nvim'
 
 " other"
 Plug 'keaising/im-select.nvim'
