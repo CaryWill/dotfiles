@@ -33,7 +33,6 @@ alias vim=nvim
 # export VISUAL="nvim -u NORC"
 export VISUAL="nvim"
 # export TERM="xterm-256color"
-# export VISUAL="nvim"
 
 # 用当前文件夹名直接创建一个 tmux session
 # 用当前文件夹名和父目录直接创建一个 tmux session
