@@ -37,8 +37,8 @@ local open_org_roam_ui = function()
 	vim.cmd("InitWs")
 end
 
-vim.keymap.set("n", "<Leader>nf", org_roam.org_roam_node_find)
-vim.keymap.set("n", "<Leader>ni", org_roam.org_roam_node_insert)
-vim.keymap.set("n", "<Leader>nl", org_roam.org_roam_buffer_toggle)
+-- vim.keymap.set("n", "<Leader>nf", org_roam.org_roam_node_find)
+-- vim.keymap.set("n", "<Leader>ni", org_roam.org_roam_node_insert)
+vim.keymap.set("n", "<Leader>bl", org_roam.org_roam_buffer_toggle)
 vim.keymap.set("n", "<Leader>zn", org_roam.org_roam_capture)
-vim.keymap.set("n", "<Leader>zo", open_org_roam_ui)
+-- vim.keymap.set("n", "<Leader>zo", open_org_roam_ui)
