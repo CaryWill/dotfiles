@@ -24,7 +24,11 @@ end
 require("orgmode").setup_ts_grammar()
 local icloud_org_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"
 require("orgmode").setup({
-	org_agenda_files = { icloud_org_dir_path .. "agenda/**/*", icloud_org_dir_path .. "**/*" },
+	org_agenda_files = {
+		icloud_org_dir_path .. "agenda/**/*",
+		icloud_org_dir_path .. "**/*",
+		-- "/Users/cary/workspace/github/dotfiles/tests/org/test.org",
+	},
 	-- agenda will also search org_default_notes_file file
 	org_default_notes_file = icloud_org_dir_path .. "inbox.org",
 	-- if you just use `t` when in capture mode, it goes here
@@ -50,7 +54,7 @@ require("orgmode").setup({
 			target = icloud_org_dir_path .. "work.org",
 		},
 	},
-	-- org_id_link_to_org_use_id = true,
+	org_id_link_to_org_use_id = true,
 	-- https://github.com/BartSte/dotfiles/blob/master/dotfiles/nvim/lua/config/orgmode.lua
 	-- https://github.com/nvim-orgmode/orgmode/blob/master/lua/orgmode/config/defaults.lua
 	mappings = {

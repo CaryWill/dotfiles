@@ -4,3 +4,11 @@ thiss is test.
   :PROPERTIES:
   :ID: 5BFAF355-EAFF-41F4-8094-812B67B4F000
   :END:
+  [[id:A988B36E-4374-4409-A2D4-ADA253DE3AE5][head id]]
+* head id
+  :PROPERTIES:
+  :ID: A988B36E-4374-4409-A2D4-ADA253DE3AE5
+  :END:
+  +so, here's the thing, currently, it has a bug, when files inside icloud,
+  the id link will not work, because, most probably the white space in the 
+  file path.+
