@@ -85,7 +85,7 @@ Plug 'David-Kunz/jester'
 " Plug 'voldikss/vim-floaterm'
 
 " writing"
-" Plug 'nvim-orgmode/orgmode'
+Plug 'nvim-orgmode/orgmode'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Gelio/cmp-natdat'
 Plug 'lukas-reineke/headlines.nvim'
@@ -99,7 +99,7 @@ Plug 'uga-rosa/translate.nvim'
 Plug 'CaryWill/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
-Plug 'CaryWill/orgmode'
+" Plug 'CaryWill/orgmode'
 " Plug '/Users/cary/workspace/github/orgmode'
 " Plug '/Users/cary/workspace/github/translate.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui-neovim-server'
@@ -110,9 +110,9 @@ Plug 'CaryWill/orgmode'
 
 " image"
 " only support kitty for now, iterm2 not support 
-Plug '3rd/image.nvim'
+" Plug '3rd/image.nvim'
 " TODO: use my fork first since, it will support orgmode
-" Plug 'CaryWill/image.nvim'
+Plug 'CaryWill/image.nvim'
 
 " other"
 Plug 'keaising/im-select.nvim'
