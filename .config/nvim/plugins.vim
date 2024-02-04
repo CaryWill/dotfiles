@@ -112,6 +112,8 @@ Plug 'CaryWill/org-roam.nvim'
 " only support kitty for now, iterm2 not support 
 " Plug '3rd/image.nvim'
 " TODO: use my fork first since, it will support orgmode
+
+" this todo comment plugin will cause git commit error
 Plug 'CaryWill/image.nvim'
 " Plug '/Users/cary/workspace/github/image.nvim'
 
@@ -120,10 +122,9 @@ Plug 'keaising/im-select.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'RRethy/vim-illuminate'
+Plug 'folke/todo-comments.nvim'
 " Plug 'LunarVim/bigfile.nvim'
 " Plug 'Bekaboo/deadcolumn.nvim'
 "Plug 'mattn/vim-nyancat'
 
-" this todo comment plugin will cause git commit error
-" Plug 'folke/todo-comments.nvim'
 call plug#end()
