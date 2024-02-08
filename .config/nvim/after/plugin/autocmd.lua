@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 local function change_theme()
 	-- 9AM - 18 AM 自动切换主题
 	local hr = tonumber(os.date("%H", os.time()))
-	if hr > 9 and hr < 17 then
+	if hr > 7 and hr < 17 then
 		vim.opt.background = "light"
 		vim.cmd("colorscheme rose-pine")
 		-- change kitty theme asyncly
