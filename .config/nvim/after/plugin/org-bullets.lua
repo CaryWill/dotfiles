@@ -4,6 +4,7 @@ if not status then
 end
 
 require("org-bullets").setup({
+	concealcursor = true,
 	symbols = {
 		-- list = "•",
 		-- headlines = { "󰪥", "", "✸", "✿" },
