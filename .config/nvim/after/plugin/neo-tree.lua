@@ -30,7 +30,7 @@ plugin.setup({
 				--".null-ls_*",
 				-- "*.org_archive",
 				".DS_Store",
-				"*.org~",
+				-- "*.org~",
 			},
 		},
 		-- 因为默认如果打开了一个 buffer，telescope 第一次搜索
