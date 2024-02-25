@@ -37,7 +37,7 @@ plugin.setup({
 		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {
-			get_backlines,
+			-- get_backlines,
 			"filesize",
 			"filetype",
 		},
