@@ -78,6 +78,7 @@ ln -sf "$(pwd)/coc-settings.json" ~/.vim/coc-settings.json
 # kitty config
 ln -s "$(pwd)/.config/kitty" ~/.config/kitty
 ln -s "$(pwd)/.config/.emacs.d" ~/.emacs.d
+ln -s "$(pwd)/.config/emacs" ~/config/emacs
 
 # how to install neovim nightly
 1. download the file from github
