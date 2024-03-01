@@ -24,3 +24,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(eval-after-load "org"
+  '(require 'ox-md nil t))
+
+(load-theme 'timu-rouge t)
