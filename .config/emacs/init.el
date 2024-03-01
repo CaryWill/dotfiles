@@ -25,13 +25,21 @@
  ;; If there is more than one, they won't work right.
  )
 
+(load-theme 'timu-rouge t)
+
+; config
+(set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
+
+; orgmode
+(setq org-startup-with-inline-images t)
+(setq org-startup-folded 'content)
 (eval-after-load "org"
   '(require 'ox-md nil t))
 
-(load-theme 'timu-rouge t)
-(setq org-startup-with-inline-images t)
+; auto refresh buffer
+(global-auto-revert-mode t)
 
-(set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
+; gui options
 (menu-bar-mode -1)
 ; (scroll-bar-mode -1)
 (tool-bar-mode -1)
