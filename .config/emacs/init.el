@@ -32,3 +32,6 @@
 (setq org-startup-with-inline-images t)
 
 (set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
