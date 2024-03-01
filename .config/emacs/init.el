@@ -29,3 +29,6 @@
   '(require 'ox-md nil t))
 
 (load-theme 'timu-rouge t)
+(setq org-startup-with-inline-images t)
+
+(set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
