@@ -37,7 +37,7 @@
 
 ; orgmode
 (setq org-startup-with-inline-images t)
-(setq org-startup-folded 'content)
+(setq org-startup-folded t)
 (eval-after-load "org"
   '(require 'ox-md nil t))
 (setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org"))
@@ -55,7 +55,7 @@
 (global-set-key (kbd "C-c c") #'org-capture)
 ; add done task time
 (setq org-log-done 'time)
-(setq org-image-actual-width nil)
+(setq org-image-actual-width '600)
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
@@ -87,3 +87,4 @@
 (require 'helm)
 (recentf-mode 1)
 (setq-default recent-save-file "~/.emacs.d/recentf")  
+
