@@ -34,6 +34,7 @@
 
 ; config
 (set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
+(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono 14")
 
 ; orgmode
 (setq org-startup-with-inline-images t)
