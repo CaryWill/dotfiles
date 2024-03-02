@@ -22,7 +22,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(helm org-roam org-bullets evil)))
+ '(package-selected-packages '(helm-ag ivy helm org-roam org-bullets evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -112,3 +112,8 @@
   (org-roam-db-autosync-mode)
   ;; If using org-roam-protocol
   (require 'org-roam-protocol))
+
+; live grep like telescope in vim
+(unless (package-installed-p 'helm-ag)
+  (package-install 'helm-ag))
+(require 'helm-ag)
