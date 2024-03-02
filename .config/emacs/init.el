@@ -55,25 +55,7 @@
 (global-set-key (kbd "C-c c") #'org-capture)
 ; add done task time
 (setq org-log-done 'time)
-
-; org roam
-(use-package org-roam
-  :ensure t
-  :custom
-  (org-roam-directory (file-truename "./orgroam/"))
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-         ("C-c n f" . org-roam-node-find)
-         ("C-c n g" . org-roam-graph)
-         ("C-c n i" . org-roam-node-insert)
-         ("C-c n c" . org-roam-capture)
-         ;; Dailies
-         ("C-c n j" . org-roam-dailies-capture-today))
-  :config
-  ;; If you're using a vertical completion framework, you might want a more informative completion interface
-  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
-  (org-roam-db-autosync-mode)
-  ;; If using org-roam-protocol
-  (require 'org-roam-protocol))
+(setq org-image-actual-width nil)
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
@@ -103,5 +85,5 @@
 (unless (package-installed-p 'helm)
   (package-install 'helm))
 (require 'helm)
- (recentf-mode 1)
- (setq-default recent-save-file "~/.emacs.d/recentf")  
+(recentf-mode 1)
+(setq-default recent-save-file "~/.emacs.d/recentf")  
