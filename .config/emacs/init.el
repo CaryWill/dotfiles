@@ -88,3 +88,5 @@
 (recentf-mode 1)
 (setq-default recent-save-file "~/.emacs.d/recentf")  
 
+(setq initial-buffer-choice "/Users/cary/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/work.org")
+(setq inhibit-splash-screen t)
