@@ -79,9 +79,10 @@
 (global-auto-revert-mode t)
 
 ; gui options
-(menu-bar-mode -1)
-; (scroll-bar-mode -1)
-(tool-bar-mode -1)
+(menu-bar-mode -1) 
+(when (display-graphic-p)
+   (tool-bar-mode -1)
+   (scroll-bar-mode -1))
 
 ; copy & paste
 (unless (package-installed-p 'pbcopy)
@@ -102,3 +103,5 @@
 (unless (package-installed-p 'helm)
   (package-install 'helm))
 (require 'helm)
+ (recentf-mode 1)
+ (setq-default recent-save-file "~/.emacs.d/recentf")  
