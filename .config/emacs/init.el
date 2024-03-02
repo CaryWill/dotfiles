@@ -117,6 +117,3 @@
 (unless (package-installed-p 'helm-ag)
   (package-install 'helm-ag))
 (require 'helm-ag)
-
-; line-height
-(setq-default line-spacing 0.5)
