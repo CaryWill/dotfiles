@@ -22,7 +22,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(org-roam org-bullets evil)))
+ '(package-selected-packages '(helm org-roam org-bullets evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -95,3 +95,8 @@
 
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
+
+; heml
+(unless (package-installed-p 'helm)
+  (package-install 'helm))
+(require 'helm)
