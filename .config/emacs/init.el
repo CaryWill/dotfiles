@@ -11,6 +11,11 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+(unless (package-installed-p 'undo-tree)
+  (package-install 'undo-tree))
+(require 'undo-tree)
+(evil-set-undo-system 'undo-tree)
+(global-undo-tree-mode 1)
 
 ;; neotree
 (add-to-list 'load-path "./neotree")
