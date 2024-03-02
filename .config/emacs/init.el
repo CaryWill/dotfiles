@@ -43,6 +43,10 @@
 (setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org"))
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
+; auto indent
+(setq org-startup-indented t)
+; emacs orgmode do not insert line between headers?
+(setf org-blank-before-new-entry '((heading . nil) (plain-list-item . nil)))
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
