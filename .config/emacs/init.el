@@ -87,9 +87,9 @@
   (package-install 'helm))
 (require 'helm)
 (recentf-mode 1)
-(setq-default recent-save-file "~/.emacs.d/recentf")  
+(setq-default recent-save-file "~/tmp")  
 
-(setq initial-buffer-choice "/Users/cary/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/work.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/work.org")
 (setq inhibit-splash-screen t)
 
 ; org roam
@@ -99,7 +99,7 @@
 (use-package org-roam
   :ensure t
   :custom
-  (org-roam-directory (file-truename "./orgroam"))
+  (org-roam-directory (file-truename "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/orgroam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)
