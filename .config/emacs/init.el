@@ -44,7 +44,7 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 ; auto indent
-(setq org-startup-indented t)
+(setq org-adapt-indentation t)
 ; emacs orgmode do not insert line between headers?
 (setf org-blank-before-new-entry '((heading . nil) (plain-list-item . nil)))
 ; orgmode id link
