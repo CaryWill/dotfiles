@@ -2,9 +2,11 @@ let mapleader = ' '
 let maplocalleader = ','
 
 nmap te :tabedit
+" gt is the keyboard shortcut for :tabnext and gT for :tabprevious"
 nmap tq :tabclose<CR>
 nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>

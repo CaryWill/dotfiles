@@ -8,10 +8,15 @@
 ;; Download Evil
 (unless (package-installed-p 'evil)
   (package-install 'evil))
-
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+
+;; neotree
+(add-to-list 'load-path "./neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -35,6 +40,7 @@
 (setq org-startup-folded 'content)
 (eval-after-load "org"
   '(require 'ox-md nil t))
+(setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org"))
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
