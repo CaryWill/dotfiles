@@ -62,6 +62,7 @@
 ; add done task time
 (setq org-log-done 'time)
 (setq org-image-actual-width '600)
+(setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/inbox.org")
 
 ; auto refresh buffer
 (global-auto-revert-mode t)

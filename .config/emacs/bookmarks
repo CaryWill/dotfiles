@@ -1,0 +1,11 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-capture-last-stored"
+ (filename . "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/inbox.org")
+ (front-context-string . "** TODO test\n   ")
+ (rear-context-string . "24 Sat]\n* Tasks\n")
+ (position . 17139)
+ (last-modified 26084 14048 751042 0))
+)
