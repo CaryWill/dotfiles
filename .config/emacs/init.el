@@ -10,7 +10,6 @@
   (package-install 'evil))
 ;; Enable Evil
 (require 'evil)
-; (evil-set-leader nil (kbd "C-SPC"))
 (evil-mode 1)
 (unless (package-installed-p 'undo-tree)
   (package-install 'undo-tree))
@@ -132,10 +131,11 @@
 (define-key evil-normal-state-map (kbd "C-k") #'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") #'evil-window-right)
 
-; (evil-leader/set-key
-;   "s" 'split-window-vertically
-;   ; "ss" 'split-window-vertically
-;   "sv" 'split-window-horizontally
-;   "S-l" 'evil-next-buffer
-;   "S-h" 'evil-prev-buffer
-; )
+(define-key evil-normal-state-map "j" 'evil-next-visual-line)
+(define-key evil-normal-state-map "k" 'evil-previous-visual-line)
+
+(evil-set-leader 'normal (kbd "SPC"))
+(evil-define-key 'normal 'global (kbd "<leader>ss") 'split-window-vertically)
+(evil-define-key 'normal 'global (kbd "<leader>sv") 'split-window-horizontally)
+(evil-define-key 'normal 'global (kbd "<leader>l") 'evil-next-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>h") 'evil-prev-buffer)
