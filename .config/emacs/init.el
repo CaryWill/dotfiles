@@ -10,6 +10,7 @@
   (package-install 'evil))
 ;; Enable Evil
 (require 'evil)
+; (evil-set-leader nil (kbd "C-SPC"))
 (evil-mode 1)
 (unless (package-installed-p 'undo-tree)
   (package-install 'undo-tree))
@@ -124,3 +125,17 @@
 (unless (package-installed-p 'helm-ag)
   (package-install 'helm-ag))
 (require 'helm-ag)
+
+;; vim keymapping
+(define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
+(define-key evil-normal-state-map (kbd "C-j") #'evil-window-down)
+(define-key evil-normal-state-map (kbd "C-k") #'evil-window-up)
+(define-key evil-normal-state-map (kbd "C-l") #'evil-window-right)
+
+; (evil-leader/set-key
+;   "s" 'split-window-vertically
+;   ; "ss" 'split-window-vertically
+;   "sv" 'split-window-horizontally
+;   "S-l" 'evil-next-buffer
+;   "S-h" 'evil-prev-buffer
+; )
