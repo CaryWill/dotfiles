@@ -139,3 +139,8 @@
 (evil-define-key 'normal 'global (kbd "<leader>sv") 'split-window-horizontally)
 (evil-define-key 'normal 'global (kbd "<leader>l") 'evil-next-buffer)
 (evil-define-key 'normal 'global (kbd "<leader>h") 'evil-prev-buffer)
+
+;; code evaluation
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((js . t)))
