@@ -62,8 +62,8 @@
 (global-set-key (kbd "C-c c") #'org-capture)
 ; add done task time
 (setq org-log-done 'time)
-; (setq org-image-actual-width '600)
-(setq org-image-actual-width nil)
+(setq org-image-actual-width '600)
+; (setq org-image-actual-width nil)
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/inbox.org")
 
 ; auto refresh buffer
@@ -90,41 +90,8 @@
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
 
-; heml
-(unless (package-installed-p 'helm)
-  (package-install 'helm))
-(require 'helm)
-(recentf-mode 1)
-(setq-default recent-save-file "~/tmp")  
-
 (setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/work.org")
 (setq inhibit-splash-screen t)
-
-; org roam
-(unless (package-installed-p 'org-roam)
-  (package-install 'org-roam))
-(require 'org-roam)
-(use-package org-roam
-  :ensure t
-  :custom
-  (org-roam-directory (file-truename "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/orgroam"))
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-         ("C-c n f" . org-roam-node-find)
-         ("C-c n g" . org-roam-graph)
-         ("C-c n i" . org-roam-node-insert)
-         ("C-c n c" . org-roam-capture)
-         ("C-c n j" . org-roam-dailies-capture-today))
-  :config
-  ;; If you're using a vertical completion framework, you might want a more informative completion interface
-  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
-  (org-roam-db-autosync-mode)
-  ;; If using org-roam-protocol
-  (require 'org-roam-protocol))
-
-; live grep like telescope in vim
-(unless (package-installed-p 'helm-ag)
-  (package-install 'helm-ag))
-(require 'helm-ag)
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
