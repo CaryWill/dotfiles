@@ -62,7 +62,8 @@
 (global-set-key (kbd "C-c c") #'org-capture)
 ; add done task time
 (setq org-log-done 'time)
-(setq org-image-actual-width '600)
+; (setq org-image-actual-width '600)
+(setq org-image-actual-width nil)
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/inbox.org")
 
 ; auto refresh buffer
@@ -144,3 +145,6 @@
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((js . t)))
+;; orgmode export setting
+;; html
+(setq org-html-head-extra "<style> img {width: 600px;}</style>")
