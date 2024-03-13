@@ -114,4 +114,4 @@
       '((js . t)))
 ;; orgmode export setting
 ;; html
-(setq org-html-head-extra "<style> img {width: 600px;}</style>")
+(setq org-html-head-extra "<style> img {width: 600px; max-width: 100vw;}</style>")
