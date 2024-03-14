@@ -47,7 +47,11 @@
 (setq org-startup-folded t)
 (eval-after-load "org"
   '(require 'ox-md nil t))
-(setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org"))
+(setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/"))
+(setq org-agenda-text-search-extra-files
+      '(agenda-archives
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/orgroam/"
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/blog"))
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 ; auto indent
