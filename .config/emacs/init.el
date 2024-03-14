@@ -114,4 +114,4 @@
       '((js . t)))
 ;; orgmode export setting
 ;; html
-(setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css'>")
+(setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css' /><script src='../assets/orgmode.js'></script>")
