@@ -64,7 +64,7 @@
 (setq org-log-done 'time)
 (setq org-image-actual-width '600)
 ; (setq org-image-actual-width nil)
-(setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/inbox.org")
+(setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
@@ -90,7 +90,7 @@
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
 
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/work.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
 (setq inhibit-splash-screen t)
 
 ;; vim keymapping
@@ -115,3 +115,4 @@
 ;; orgmode export setting
 ;; html
 (setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css' /><script src='../assets/orgmode.js'></script>")
+; (setq org-export-preserve-breaks t)
