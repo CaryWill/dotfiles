@@ -114,5 +114,5 @@
       '((js . t)))
 ;; orgmode export setting
 ;; html
-(setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css' /><script src='../assets/orgmode.js'></script>")
+(setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css' /><script src='../assets/orgmode.js'></script><link rel='stylesheet' href='../assets/css/quail.css' />")
 ; (setq org-export-preserve-breaks t)
