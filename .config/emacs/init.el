@@ -120,3 +120,21 @@
 ;; html
 (setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css' /><script src='../assets/orgmode.js'></script><link rel='stylesheet' href='../assets/css/quail.css' />")
 ; (setq org-export-preserve-breaks t)
+
+; https://chat.openai.com/share/70827a10-f0b0-4115-8d0c-82a731b3a4fa
+; i use chatgpt to help me do the converion
+(defun add-lazy-loading-to-img-tags (html)
+  "Add loading=\"lazy\" attribute to img tags in the HTML content."
+  (with-temp-buffer
+    (insert html)
+    (goto-char (point-min))
+    (while (re-search-forward "<img\\([^>]*\\)>" nil t)
+      (replace-match "<img\\1 loading=\"lazy\">"))
+    (buffer-string)))
+
+(defun return-modified-html-content (contents backend info)
+  "Return HTML content with added lazy loading to img tags."
+  (when (eq backend 'html)
+    (add-lazy-loading-to-img-tags contents)))
+
+(add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
