@@ -134,8 +134,8 @@
 ; 并且将所有相对路径的图片放到当前目录下的 assets 目录
 ; 这样你可以直接将导出的 html 或者 md 文件放进去打包
 ; 然后就可以导入到yuque中了
+
 (defun copy-files-from-img-tags (html)
-  "Add loading=\"lazy\" attribute to img tags in the HTML content and copy local images to a new folder."
   (let* ((org-buffer (current-buffer))
          (default-directory (file-name-directory (buffer-file-name org-buffer)))
          (output-folder (concat default-directory "assets/")))
@@ -154,11 +154,7 @@
                 (let ((src-file img-src))
                   (when (file-exists-p src-file)
                     (let ((dest-file (expand-file-name (file-name-nondirectory img-src) output-folder)))
-                      (copy-file src-file dest-file t))
-                    ;; Replace the img tag with lazy loading attribute
-                    (replace-match (concat "<img " img-attrs "src=\"" (concat "assets/" (file-name-nondirectory img-src)) "\" loading=\"lazy\"" img-rest) t nil nil)))))
-          )
-        )
+                      (copy-file src-file dest-file t))))))))
       (buffer-string))))
 
 (defun add-lazy-loading-to-img-tags (html)
