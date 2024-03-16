@@ -94,7 +94,7 @@
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
 
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/weekly.org")
 (setq inhibit-splash-screen t)
 
 ;; vim keymapping
@@ -123,14 +123,34 @@
 
 ; https://chat.openai.com/share/70827a10-f0b0-4115-8d0c-82a731b3a4fa
 ; i use chatgpt to help me do the converion
+; 会给导出的 html 加上 lazy loading
+; 并且将所有相对路径的图片放到当前目录下的 assets 目录
+; 这样你可以直接将导出的 html 或者 md 文件放进去打包
+; 然后就可以导入到yuque中了
 (defun add-lazy-loading-to-img-tags (html)
-  "Add loading=\"lazy\" attribute to img tags in the HTML content."
-  (with-temp-buffer
-    (insert html)
-    (goto-char (point-min))
-    (while (re-search-forward "<img\\([^>]*\\)>" nil t)
-      (replace-match "<img\\1 loading=\"lazy\">"))
-    (buffer-string)))
+  "Add loading=\"lazy\" attribute to img tags in the HTML content and copy local images to a new folder."
+  (let* ((org-buffer (current-buffer))
+         (default-directory (file-name-directory (buffer-file-name org-buffer)))
+         (output-folder (concat default-directory "assets/")))
+    (make-directory output-folder t)
+    (with-temp-buffer
+      (insert html)
+      (goto-char (point-min))
+      (while (re-search-forward "<img +\\([^>]*?\\)src=\"\\([^\"]+\\)\"\\([^>]*\\)>" nil t)
+        (let* ((match-string (match-string 0))
+               (img-attrs (match-string 1))
+               (img-src (match-string 2))
+               (img-rest (match-string 3)))
+          (if (file-name-absolute-p img-src)
+              ;; If the image source is absolute, just add loading="lazy" attribute
+              (replace-match (concat "<img " img-attrs "src=\"" img-src "\" loading=\"lazy\"" img-rest))
+            ;; If the image source is relative, copy the image to the output folder and add loading="lazy" attribute
+            (let ((src-file (expand-file-name img-src default-directory)))
+              (when (file-exists-p src-file)
+                (let ((dest-file (expand-file-name (file-name-nondirectory img-src) output-folder)))
+                  (copy-file src-file dest-file t)
+                  (replace-match (concat "<img " img-attrs "src=\"" (file-relative-name dest-file default-directory) "\" loading=\"lazy\"" img-rest))))))))
+      (buffer-string))))
 
 (defun return-modified-html-content (contents backend info)
   "Return HTML content with added lazy loading to img tags."
@@ -138,3 +158,4 @@
     (add-lazy-loading-to-img-tags contents)))
 
 (add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
+
