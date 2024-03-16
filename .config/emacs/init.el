@@ -69,6 +69,7 @@
 (setq org-image-actual-width '600)
 ; (setq org-image-actual-width nil)
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
+(setq org-html-head-include-default-style nil)
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
@@ -118,9 +119,15 @@
       '((js . t)))
 ;; orgmode export setting
 ;; html
-(setq org-html-head-extra "<link rel='stylesheet' href='../assets/orgmode.css' /><script src='../assets/orgmode.js'></script><link rel='stylesheet' href='../assets/css/quail.css' />")
+(setq org-html-head-extra
+      "<link rel='stylesheet' href='../assets/orgmode.css' />
+       <script src='../assets/orgmode.js'></script>
+       <link rel='stylesheet' href='../assets/css/quail.css' />
+       <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'></script>
+       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css'>")
 ; (setq org-export-preserve-breaks t)
 
+; ---- start ----
 ; https://chat.openai.com/share/70827a10-f0b0-4115-8d0c-82a731b3a4fa
 ; i use chatgpt to help me do the converion
 ; 会给导出的 html 加上 lazy loading
@@ -158,4 +165,4 @@
     (add-lazy-loading-to-img-tags contents)))
 
 (add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
-
+; ---- end ----
