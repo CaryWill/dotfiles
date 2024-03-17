@@ -160,9 +160,9 @@ end
 
 -- https://www.azul.com/downloads/#downloads-table-zulu version 21
 -- brew install --cask zulu21
-nvim_lsp.ltex.setup({
-	on_attach = on_attach,
-	cmd = { "ltex-ls" },
-	filetypes = { "markdown", "org" },
-	flags = { debounce_text_changes = 800 },
-})
+-- nvim_lsp.ltex.setup({
+-- 	on_attach = on_attach,
+-- 	cmd = { "ltex-ls" },
+-- 	filetypes = { "markdown", "org" },
+-- 	flags = { debounce_text_changes = 800 },
+-- })
