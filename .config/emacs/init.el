@@ -70,6 +70,7 @@
 ; (setq org-image-actual-width nil)
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 (setq org-html-head-include-default-style nil)
+(setq org-agenda-span 'month)
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
@@ -96,7 +97,7 @@
 (setq backup-directory-alist '(("." . "~/tmp")))
 
 (setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/weekly.org")
-(setq inhibit-splash-screen t)
+(setq inhibit-startup-screen t)
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
@@ -236,3 +237,5 @@
    (cl-case backend
      (html (format local-video-format
                    path (or desc ""))))))
+
+
