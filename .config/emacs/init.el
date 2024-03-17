@@ -218,3 +218,21 @@
                    path (or desc "")))
      (latex (format "\href{%s}{%s}"
                     path (or desc "video"))))))
+
+; add video link - local 
+(defvar local-video-format
+  ;; You may want to change your width and height.
+  (concat "<video controls preload='false'>"
+          "<source src='%s' type='video/mp4'>"
+          "</video>"))
+
+(org-add-link-type
+ "video"
+ (lambda (handle)
+   (browse-url
+    (concat ""
+            handle)))
+ (lambda (path desc backend)
+   (cl-case backend
+     (html (format local-video-format
+                   path (or desc ""))))))
