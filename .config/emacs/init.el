@@ -238,4 +238,7 @@
      (html (format local-video-format
                    path (or desc ""))))))
 
-
+; orgmode agenda on the right
+(defadvice org-agenda (around split-vertically activate)
+  (let ((split-width-threshold 80))  ; or whatever width makes sense for you
+    ad-do-it))
