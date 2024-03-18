@@ -71,6 +71,8 @@
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 (setq org-html-head-include-default-style nil)
 (setq org-agenda-span 'month)
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAIT(w)" "VERIFY(v)" "|" "DONE(d)" "CANCELLED(c)")))
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
@@ -96,7 +98,7 @@
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
 
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/weekly.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
 (setq inhibit-startup-screen t)
 
 ;; vim keymapping
