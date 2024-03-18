@@ -74,6 +74,11 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAIT(w)" "VERIFY(v)" "|" "DONE(d)" "CANCELLED(c)")))
 
+(setq org-todo-keyword-faces
+  '(("WAIT" . "#E35DBF")
+    ("CANCELED" . (:foreground "white" :background "#4d4d4d" :weight bold))
+    ("VERIFY" . "pink")))
+
 ; auto refresh buffer
 (global-auto-revert-mode t)
 
