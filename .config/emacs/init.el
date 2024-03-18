@@ -18,17 +18,12 @@
 (global-undo-tree-mode 1)
 (setq undo-tree-history-directory-alist '(("." . "/tmp")))
 
-;; neotree
-(add-to-list 'load-path "./neotree")
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(helm-ag ivy helm org-roam org-bullets evil)))
+ '(package-selected-packages '(org-bullets evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -48,10 +43,10 @@
 (eval-after-load "org"
   '(require 'ox-md nil t))
 (setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/"))
-(setq org-agenda-text-search-extra-files
-      '(agenda-archives
-        "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/orgroam/"
-        "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/blog"))
+; (setq org-agenda-text-search-extra-files
+;       '(agenda-archives
+;         "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/orgroam/"
+;         "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/blog"))
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 ; auto indent
@@ -249,8 +244,11 @@
                    path (or desc ""))))))
 
 ; orgmode agenda on the right
-(defadvice org-agenda (around split-vertically activate)
-  (let ((split-width-threshold 80))  ; or whatever width makes sense for you
-    ad-do-it))
+; (defadvice org-agenda (around split-vertically activate)
+;   (let ((split-width-threshold 80))  ; or whatever width makes sense for you
+;     ad-do-it))
 
 ; (setq org-agenda-start-with-follow-mode t)
+
+(setq org-agenda-window-setup 'current-window)
+; (setq org-agenda-window-setup 'other-window)
