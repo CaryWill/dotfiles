@@ -79,6 +79,8 @@
   '(("WAIT" . "#E35DBF")
     ("CANCELED" . (:foreground "white" :background "#4d4d4d" :weight bold))
     ("VERIFY" . "pink")))
+;; write todo state changes into LOGBOOK drawer
+(setq org-log-into-drawer “LOGBOOK”)
 
 ; auto refresh buffer
 (global-auto-revert-mode t)
