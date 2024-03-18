@@ -248,7 +248,7 @@
 ;   (let ((split-width-threshold 80))  ; or whatever width makes sense for you
 ;     ad-do-it))
 
-; (setq org-agenda-start-with-follow-mode t)
+(setq org-agenda-start-with-follow-mode t)
 
 (setq org-agenda-window-setup 'current-window)
 ; (setq org-agenda-window-setup 'other-window)
