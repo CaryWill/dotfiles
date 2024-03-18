@@ -71,8 +71,9 @@
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 (setq org-html-head-include-default-style nil)
 (setq org-agenda-span 'month)
+; https://orgmode.org/manual/Tracking-TODO-state-changes.html
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAIT(w)" "VERIFY(v)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "TODO(t)" "WAIT(w!)" "VERIFY(v!)" "|" "DONE(d!)" "CANCELLED(c!)")))
 
 (setq org-todo-keyword-faces
   '(("WAIT" . "#E35DBF")
