@@ -31,6 +31,7 @@
  ;; If there is more than one, they won't work right.
  )
 
+(add-to-list 'load-path "./timu-rouge-theme.el")
 (load-theme 'timu-rouge t)
 
 ; config
