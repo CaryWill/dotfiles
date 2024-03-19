@@ -258,3 +258,4 @@
 
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t) 
+(setq org-use-tag-inheritance nil)
