@@ -31,8 +31,11 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'load-path "./timu-rouge-theme.el")
-(load-theme 'timu-rouge t)
+; theme
+; (add-to-list 'load-path "./timu-rouge-theme.el")
+; (load-theme 'timu-rouge t)
+; (add-to-list 'custom-theme-load-path "~/path/to/directory/with/downloaded/copy")
+; (load-theme 'kuronami t)
 
 ; config
 (set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
