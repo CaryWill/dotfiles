@@ -58,6 +58,7 @@
 ; see here https://orgmode.org/manual/Activation.html#Activation-1
 (setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
 (global-set-key (kbd "C-c l") #'org-store-link)
+; C-c C-l 是 insert link
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 ; add done task time
