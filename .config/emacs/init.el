@@ -23,16 +23,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(kuronami-theme org-bullets evil)))
+ '(package-selected-packages '(spacemacs-theme solarized-theme org-bullets evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil)))))
 
 ; theme
-(load-theme 'kuronami t)
+(load-theme 'spacemacs-light t)
 
 ; config
 (set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
