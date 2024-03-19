@@ -101,8 +101,9 @@
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
 
+; (setq inhibit-startup-screen t
+;       initial-buffer-choice  nil)
 (setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
-(setq inhibit-startup-screen t)
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
@@ -252,3 +253,6 @@
 
 (setq org-agenda-window-setup 'current-window)
 ; (setq org-agenda-window-setup 'other-window)
+
+(setq initial-scratch-message "")
+(setq inhibit-startup-message t) 
