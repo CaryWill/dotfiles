@@ -35,8 +35,9 @@
 (load-theme 'spacemacs-light t)
 
 ; config
-(set-frame-font "JetBrainsMono Nerd Font Mono 14" nil t)
-(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono 14")
+(set-frame-font "JetBrainsMono Nerd Font Mono-14" t t)
+(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono-14")
+(set-face-attribute 'mode-line nil :family "JetBrainsMono Nerd Font Mono-14" :height 140)
 
 ; orgmode
 (setq org-startup-with-inline-images t)
@@ -259,3 +260,4 @@
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t) 
 (setq org-use-tag-inheritance nil)
+(setq-default line-spacing 5)
