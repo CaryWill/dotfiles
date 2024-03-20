@@ -261,3 +261,14 @@
 (setq inhibit-startup-message t) 
 (setq org-use-tag-inheritance nil)
 (setq-default line-spacing 5)
+
+; http://doc.norang.ca/org-mode.html#GettingOrgModeWithGit
+(setq org-catch-invisible-edits 'error)
+(setq org-insert-heading-respect-content nil)
+; (setq org-startup-indented t)
+(setq org-cycle-separator-lines 0)
+(setq org-agenda-persistent-filter t)
+(setq org-src-fontify-natively t)
+(setq org-blank-before-new-entry (quote ((heading)
+                                         (plain-list-item . auto))))
+
