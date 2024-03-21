@@ -125,148 +125,16 @@
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((js . t)))
-;; orgmode export setting
-;; html
-(setq org-html-head-extra
-      "<link rel='stylesheet' href='../assets/orgmode.css' />
-       <script src='../assets/orgmode.js'></script>
-       <link rel='stylesheet' href='../assets/css/quail.css' />
-       <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'></script>
-       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css'>")
-; (setq org-export-preserve-breaks t)
-
-; ---- start ----
-; https://chat.openai.com/share/70827a10-f0b0-4115-8d0c-82a731b3a4fa
-; i use chatgpt to help me do the converion
-; 会给导出的 html 加上 lazy loading
-; 并且将所有相对路径的图片放到当前目录下的 assets 目录
-; 这样你可以直接将导出的 html 或者 md 文件放进去打包
-; 然后就可以导入到yuque中了
-
-(defun copy-files-from-img-tags (html)
-  (let* ((org-buffer (current-buffer))
-         (default-directory (file-name-directory (buffer-file-name org-buffer)))
-         (output-folder (concat default-directory "assets/")))
-    (make-directory output-folder t)
-    (with-temp-buffer
-      (insert html)
-      (goto-char (point-min))
-      (while (re-search-forward "<img +\\([^>]*?\\)src=\"\\([^\"]+\\)\"\\([^>]*\\)>" nil t)
-        (let* ((match-string (match-string 0))
-               (img-attrs (match-string 1))
-               (img-src (expand-file-name (match-string 2) default-directory)) ;; Get absolute path
-               (img-rest (match-string 3)))
-          (if (file-name-absolute-p img-src)
-              ;; If the image source is relative, copy the image to the output folder and add loading="lazy" attribute
-              (progn
-                (let ((src-file img-src))
-                  (when (file-exists-p src-file)
-                    (let ((dest-file (expand-file-name (file-name-nondirectory img-src) output-folder)))
-                      (copy-file src-file dest-file t))))))))
-      (buffer-string))))
-
-(defun add-lazy-loading-to-img-tags (html)
-  "Add loading=\"lazy\" attribute to img tags in the HTML content."
-  (with-temp-buffer
-    (insert html)
-    (goto-char (point-min))
-    (while (re-search-forward "<img\\([^>]*\\)>" nil t)
-      (replace-match "<img\\1 loading=\"lazy\">"))
-    (buffer-string)))
-
-(defun return-modified-html-content (contents backend info)
-  "Return HTML content with added lazy loading to img tags."
-  (when (eq backend 'html)
-    (add-lazy-loading-to-img-tags contents)))
-    ; (copy-files-from-img-tags contents)))
-
-(add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
-; ---- end ----
-
-; add video link - bilibili
-; http://endlessparentheses.com/embedding-youtube-videos-with-org-mode-links.html
-(defvar bilibili-iframe-format
-    ;; You may want to change your width and height.
-  (concat "<iframe src=\"%s\&autoplay=0&danmaku=1&high_quality=1\"
-          border=\"0\"
-          frameborder=\"no\"
-          framespacing=\"0\" 
-          sandbox=\"allow-top-navigation allow-same-origin allow-forms allow-scripts\"
-          scrolling=\"no\">
-          </iframe>"))
-
-(org-add-link-type
- "bilibili"
-  (lambda (handle)
-   (browse-url handle))
- (lambda (path desc backend)
-   (cl-case backend
-     (html (format bilibili-iframe-format
-                   path (or desc "")))
-     (latex (format "\href{%s}{%s}"
-                    path (or desc "video"))))))
-
-; add video link - youtube
-(defvar yt-iframe-format
-  ;; You may want to change your width and height.
-  (concat "<iframe"
-          " src=\"%s\""
-          " frameborder=\"0\""
-          " allowfullscreen>%s</iframe>"))
-
-(org-add-link-type
- "yt"
- (lambda (handle)
-   (browse-url
-    (concat ""
-            handle)))
- (lambda (path desc backend)
-   (cl-case backend
-     (html (format yt-iframe-format
-                   path (or desc "")))
-     (latex (format "\href{%s}{%s}"
-                    path (or desc "video"))))))
-
-; add video link - local 
-(defvar local-video-format
-  ;; You may want to change your width and height.
-  (concat "<video controls preload='false'>"
-          "<source src='%s' type='video/mp4'>"
-          "</video>"))
-
-(org-add-link-type
- "video"
- (lambda (handle)
-   (browse-url
-    (concat ""
-            handle)))
- (lambda (path desc backend)
-   (cl-case backend
-     (html (format local-video-format
-                   path (or desc ""))))))
-
-; orgmode agenda on the right
-; (defadvice org-agenda (around split-vertically activate)
-;   (let ((split-width-threshold 80))  ; or whatever width makes sense for you
-;     ad-do-it))
 
 (setq org-agenda-start-with-follow-mode t)
 
 (setq org-agenda-window-setup 'current-window)
-; (setq org-agenda-window-setup 'other-window)
 
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t) 
 (setq org-use-tag-inheritance nil)
 (setq-default line-spacing 5)
 
-; http://doc.norang.ca/org-mode.html#GettingOrgModeWithGit
-; (setq org-catch-invisible-edits 'error)
-; (setq org-insert-heading-respect-content nil)
-; (setq org-startup-indented t)
-; (setq org-cycle-separator-lines 0)
-(setq org-agenda-persistent-filter t)
-; (setq org-src-fontify-natively t)
-; (setq org-blank-before-new-entry (quote ((heading)
-;                                          (plain-list-item . auto))))
-
+(load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-link.el")
+(load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-html-export.el")
+(load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-md-export.el")
