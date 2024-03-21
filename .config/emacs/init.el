@@ -35,7 +35,7 @@
 
 ; theme
 (load-theme 'spacemacs-light t)
-(set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 140)
+; (set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 140)
 
 ; orgmode
 (setq org-startup-with-inline-images t)
