@@ -11,7 +11,7 @@
 ; i use chatgpt to help me do the converion
 ; 会给导出的 html 加上 lazy loading
 ; 并且将所有相对路径的图片放到当前目录下的 assets 目录
-; 这样你可以直接将导出的 html 或者 md 文件放进去打包
+; 这样你可以直接将导出的 html 或者 md 文件放到 assets 目录进去打包
 ; 然后就可以导入到yuque中了
 
 (defun copy-files-from-img-tags (html)
@@ -48,8 +48,8 @@
 (defun return-modified-html-content (contents backend info)
   "Return HTML content with added lazy loading to img tags."
   (when (eq backend 'html)
-    (add-lazy-loading-to-img-tags contents)))
-    ; (copy-files-from-img-tags contents)))
+    (add-lazy-loading-to-img-tags contents)
+    (copy-files-from-img-tags contents)))
 
 (add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
 ; ---- end ----

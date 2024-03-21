@@ -1,3 +1,7 @@
+; 并且将所有相对路径的图片放到当前目录下的 assets 目录
+; 这样你可以直接将导出的 html 或者 md 文件放到 assets 目录进去打包
+; 然后就可以导入到yuque中了
+
 (require 'org)
 (require 'ox-md)
 
