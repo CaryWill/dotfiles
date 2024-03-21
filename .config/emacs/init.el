@@ -24,20 +24,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages '(pbcopy spacemacs-theme solarized-theme org-bullets evil)))
-(custom-set-faces
+
+
+; (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background nil)))))
+ ; '(default ((t (:background nil)))))
 
 ; theme
 (load-theme 'spacemacs-light t)
-
-; config
-(set-frame-font "JetBrainsMono Nerd Font Mono-14" t t)
-(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono-14")
-(set-face-attribute 'mode-line nil :family "JetBrainsMono Nerd Font Mono-14" :height 140)
+(set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 140)
 
 ; orgmode
 (setq org-startup-with-inline-images t)
