@@ -9,6 +9,17 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 	pattern = { "*" },
 })
 
+local function load_theme()
+	vim.opt.background = "light"
+	vim.cmd("colorscheme rose-pine")
+	-- change kitty theme asyncly
+	local job = require("plenary.job")
+	job:new({
+		command = "kitty",
+		args = { "+kitten", "themes", "--reload-in", "all", "Rosé Pine Dawn" },
+	}):start()
+end
+
 local function change_theme()
 	-- 9AM - 18 AM 自动切换主题
 	local hr = tonumber(os.date("%H", os.time()))
@@ -42,12 +53,12 @@ local function change_theme()
 	end
 end
 
-change_theme()
+load_theme()
 
 -- if set background then call this function
-vim.api.nvim_create_autocmd("OptionSet", {
-	pattern = "background",
-	callback = function()
-		change_theme()
-	end,
-})
+-- vim.api.nvim_create_autocmd("OptionSet", {
+-- 	pattern = "background",
+-- 	callback = function()
+-- 		change_theme()
+-- 	end,
+-- })
