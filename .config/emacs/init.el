@@ -104,7 +104,7 @@
 
 ; (setq inhibit-startup-screen t
 ;       initial-buffer-choice  nil)
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/test.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
