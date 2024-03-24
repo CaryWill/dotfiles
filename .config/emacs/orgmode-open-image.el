@@ -37,4 +37,4 @@
     (when path
       (open-with-kitten-icat path))))
 
-(define-key org-mode-map (kbd "C-x v") 'open-org-link-with-kitten-icat)
+(define-key org-mode-map (kbd "C-c o") 'open-org-link-with-kitten-icat)
