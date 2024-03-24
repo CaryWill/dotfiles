@@ -104,7 +104,7 @@
 
 ; (setq inhibit-startup-screen t
 ;       initial-buffer-choice  nil)
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/test.org")
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
@@ -139,3 +139,4 @@
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-html-export.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-md-export.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-common-export.el")
+(load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-image.el")
