@@ -140,3 +140,4 @@
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-md-export.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-common-export.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-image.el")
+(load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-file.el")
