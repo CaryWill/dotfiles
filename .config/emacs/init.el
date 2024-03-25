@@ -144,3 +144,5 @@
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-common-export.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-image.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-file.el")
+
+(setq org-archive-location "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/assets/archives/%s_archive::")
