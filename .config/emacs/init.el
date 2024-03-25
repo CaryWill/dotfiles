@@ -11,6 +11,9 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+; orgmode tab to org-cycle
+(with-eval-after-load 'evil-maps (define-key evil-motion-state-map (kbd "TAB") nil))
+
 (unless (package-installed-p 'undo-tree)
   (package-install 'undo-tree))
 (require 'undo-tree)
