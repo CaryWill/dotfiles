@@ -59,10 +59,11 @@
 ; orgmode id link
 ; see here https://orgmode.org/manual/Activation.html#Activation-1
 (setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
-(global-set-key (kbd "C-c l") #'org-store-link)
 ; C-c C-l 是 insert link
+(global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
+(global-set-key (kbd "C-c n") 'tab-next)
 ; add done task time
 (setq org-log-done 'time)
 (setq org-image-actual-width '600)
@@ -121,8 +122,8 @@
 (evil-set-leader 'normal (kbd "SPC"))
 (evil-define-key 'normal 'global (kbd "<leader>ss") 'split-window-vertically)
 (evil-define-key 'normal 'global (kbd "<leader>sv") 'split-window-horizontally)
-(evil-define-key 'normal 'global (kbd "<leader>l") 'evil-next-buffer)
-(evil-define-key 'normal 'global (kbd "<leader>h") 'evil-prev-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>l") 'tab-next)
+(evil-define-key 'normal 'global (kbd "<leader>h") 'tab-prev)
 
 ;; code evaluation
 (org-babel-do-load-languages
@@ -131,7 +132,10 @@
 
 (setq org-agenda-start-with-follow-mode t)
 
-(setq org-agenda-window-setup 'current-window)
+;; M-x customize-group org-agenda-windows
+;; you can see all the options
+;; https://stackoverflow.com/a/10638665
+(setq org-agenda-window-setup 'other-tab)
 
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t) 
