@@ -122,8 +122,8 @@
 (evil-set-leader 'normal (kbd "SPC"))
 (evil-define-key 'normal 'global (kbd "<leader>ss") 'split-window-vertically)
 (evil-define-key 'normal 'global (kbd "<leader>sv") 'split-window-horizontally)
-(evil-define-key 'normal 'global (kbd "<leader>l") 'tab-next)
-(evil-define-key 'normal 'global (kbd "<leader>h") 'tab-prev)
+; (evil-define-key 'normal 'global (kbd "<leader>l") 'tab-next)
+; (evil-define-key 'normal 'global (kbd "<leader>h") 'tab-prev)
 
 ;; code evaluation
 (org-babel-do-load-languages
@@ -140,7 +140,7 @@
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t) 
 (setq org-use-tag-inheritance nil)
-(setq-default line-spacing 5)
+; (setq-default line-spacing 5)
 
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-link.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-html-export.el")
