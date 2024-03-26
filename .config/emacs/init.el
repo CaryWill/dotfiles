@@ -149,5 +149,24 @@
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-common-export.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-image.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-open-file.el")
+(load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-mapping.el")
 
 (setq org-archive-location "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/assets/archives/%s_archive::")
+
+(setq org-default-journal"~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/diary.org")
+
+; https://gist.github.com/spacebat/097f3e7469edf2eaa6a9
+; https://www.zmonster.me/2018/02/28/org-mode-capture.html#org2d1ad24
+; https://orgmode.org/guide/Capture.html
+(setq org-capture-templates nil)
+(add-to-list 'org-capture-templates
+             '("j" "Journal" entry (file org-default-journal)
+               "* %U - %^{heading}\n  %?"))
+(add-to-list 'org-capture-templates
+             '("t" "Task" entry (file+headline "" "Tasks") "* TODO %?\n  %u\n  %a"))
+(add-to-list 'org-capture-templates
+             '("i" "Inbox" entry (file org-default-notes-file)
+               "* %U - %^{heading} %?\n"))
+(add-to-list 'org-capture-templates
+             '("n" "Notes" entry (file org-default-notes-file)
+               "* %^{heading} %t %?\n"))
