@@ -4,7 +4,9 @@
        <script src='../assets/orgmode.js'></script>
        <link rel='stylesheet' href='../assets/css/quail.css' />
        <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'></script>
-       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css'>")
+       <script type='text/javascript' src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
+       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css'>
+       <div id='google_translate_element'></div>")
 
 ; ---- start ----
 ; https://chat.openai.com/share/70827a10-f0b0-4115-8d0c-82a731b3a4fa
