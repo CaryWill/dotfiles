@@ -69,7 +69,7 @@
 (setq org-log-done 'time)
 (setq org-image-actual-width '600)
 ; (setq org-image-actual-width nil)
-(setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
+(setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/index.org")
 (setq org-html-head-include-default-style nil)
 
 ; (setq org-agenda-span 'month)
@@ -110,7 +110,7 @@
 
 ; (setq inhibit-startup-screen t
 ;       initial-buffer-choice  nil)
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
+(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/index.org")
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
@@ -153,24 +153,30 @@
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-mapping.el")
 
 (setq org-archive-location "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/assets/archives/%s_archive::")
-
-(setq org-default-journal"~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/diary.org")
+; (setq org-default-journal"~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/diary.org")
 
 ; https://gist.github.com/spacebat/097f3e7469edf2eaa6a9
 ; https://www.zmonster.me/2018/02/28/org-mode-capture.html#org2d1ad24
 ; https://orgmode.org/guide/Capture.html
 (setq org-capture-templates nil)
 (add-to-list 'org-capture-templates
-             '("j" "Journal" entry (file org-default-journal)
+             '("j" "Journal" entry (file+headline org-default-notes-file "Journal")
                "* %U - %^{heading}\n  %?"))
 (add-to-list 'org-capture-templates
              '("t" "Task" entry (file+headline "" "Tasks") "* TODO %?\n  %u\n  %a"))
 (add-to-list 'org-capture-templates
-             '("i" "Inbox" entry (file org-default-notes-file)
+             '("i" "Inbox" entry (file+headline org-default-notes-file "Inbox")
                "* %U - %^{heading} %?\n"))
 (add-to-list 'org-capture-templates
-             '("n" "Notes" entry (file org-default-notes-file)
+             '("n" "Notes" entry (file+headline org-default-notes-file "Notes")
                "* %^{heading} %t %?\n"))
 
 ; How can I get a ruler at column 80?
 ; (add-hook 'org-mode-hook #'display-fill-column-indicator-mode)
+
+(defun my/org-depromote-all-headings ()
+  (interactive)
+  (org-map-entries
+   (lambda ()
+     (org-demote-subtree))
+   nil 'file))
