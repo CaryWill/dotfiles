@@ -33,4 +33,5 @@
         ))))
 
 ;; Add the function to org-export-filter-final-output-functions
-(add-to-list 'org-export-filter-final-output-functions 'my-copy-images-to-folder)
+; copy files to assets folder
+; (add-to-list 'org-export-filter-final-output-functions 'my-copy-images-to-folder)
