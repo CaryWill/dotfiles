@@ -180,3 +180,6 @@
    (lambda ()
      (org-demote-subtree))
    nil 'file))
+
+; (set-frame-font "Menlo:size=12")
+; (setq default-frame-alist nil)
