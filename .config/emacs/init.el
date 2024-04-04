@@ -37,7 +37,7 @@
  ; '(default ((t (:background nil)))))
 
 ; theme
-(load-theme 'spacemacs-light t)
+; (load-theme 'spacemacs-light t)
 ; (set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 140)
 
 ; orgmode
@@ -88,10 +88,10 @@
 (global-auto-revert-mode t)
 
 ; gui options
-(menu-bar-mode -1) 
-(when (display-graphic-p)
-   (tool-bar-mode -1)
-   (scroll-bar-mode -1))
+; (menu-bar-mode -1) 
+; (when (display-graphic-p)
+;    (tool-bar-mode -1)
+;    (scroll-bar-mode -1))
 
 ; copy & paste
 (unless (package-installed-p 'pbcopy)
