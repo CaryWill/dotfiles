@@ -85,18 +85,18 @@ Plug 'David-Kunz/jester'
 " Plug 'voldikss/vim-floaterm'
 
 " writing"
-Plug 'nvim-orgmode/orgmode'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'Gelio/cmp-natdat'
-Plug 'lukas-reineke/headlines.nvim'
-Plug 'akinsho/org-bullets.nvim'
-Plug 'kkharji/sqlite.lua'
+" Plug 'nvim-orgmode/orgmode'
+" Plug 'dhruvasagar/vim-table-mode'
+" Plug 'Gelio/cmp-natdat'
+" Plug 'lukas-reineke/headlines.nvim'
+" Plug 'akinsho/org-bullets.nvim'
+" Plug 'kkharji/sqlite.lua'
 Plug 'uga-rosa/translate.nvim'
 
 " company dev"
 " I make thoes paths the same for company and home
 " Plug '/Users/cary/workspace/github/org-roam.nvim'
-Plug 'CaryWill/org-roam.nvim'
+" Plug 'CaryWill/org-roam.nvim'
 " Plug '/Users/cary/workspace/github/org-roam-ui.nvim'
 " Plug 'CaryWill/org-roam-ui.nvim', { 'do': 'npm install --force' }
 " Plug 'CaryWill/orgmode'
