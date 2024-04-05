@@ -37,7 +37,7 @@
  ; '(default ((t (:background nil)))))
 
 ; theme
-; (load-theme 'spacemacs-light t)
+(load-theme 'spacemacs-light t)
 ; (set-face-attribute 'default nil :family "Menlo-16")
 ; (set-face-attribute 'variable-pitch nil :font "JetBrainsMono Nerd Font-16") ; normal org font
 ; (set-face-attribute 'default nil :font "Consolas-16") 
@@ -91,9 +91,9 @@
 
 ; gui options
 ; (menu-bar-mode -1) 
-; (when (display-graphic-p)
-;    (tool-bar-mode -1)
-;    (scroll-bar-mode -1))
+(when (display-graphic-p)
+   (tool-bar-mode -1)
+   (scroll-bar-mode -1))
 
 ; copy & paste
 (unless (package-installed-p 'pbcopy)
