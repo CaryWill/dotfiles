@@ -114,7 +114,7 @@ Plug 'uga-rosa/translate.nvim'
 " TODO: use my fork first since, it will support orgmode
 
 " this todo comment plugin will cause git commit error
-Plug 'CaryWill/image.nvim'
+" Plug 'CaryWill/image.nvim'
 " Plug '/Users/cary/workspace/github/image.nvim'
 
 " other"

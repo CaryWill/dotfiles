@@ -9,7 +9,7 @@ mkdir -p ~/.vim/.nvim/.backup
 brew install neovim --HEAD
 brew install ripgrep # 安装 fzf 的话需要
 #brew install fd
-#brew tap daipeihust/tap && brew install im-select # 自动切换输入法
+brew tap daipeihust/tap && brew install im-select # 自动切换输入法
 # brew install bat
 # brew install fzf
 #brew install reattach-to-user-namespace
@@ -48,12 +48,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # neovim lsp
 # npm install -g eslint_d 
-#npm install -g prettier
+npm install -g prettier
 # npm install -g @fsouza/prettierd
 # default lsp if your project dont have ts as dependency
 # then use the global one
-#npm install -g typescript typescript-language-server
-#npm install -g eslint
+npm install -g typescript typescript-language-server
+npm install -g eslint
 # grammar
 #npm install -g write-good
 #npm i -g grammarly-languageserver
