@@ -38,8 +38,10 @@
 
 ; theme
 ; (load-theme 'spacemacs-light t)
-; (set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 140)
-
+; (set-face-attribute 'default nil :family "Menlo-16")
+; (set-face-attribute 'variable-pitch nil :font "JetBrainsMono Nerd Font-16") ; normal org font
+; (set-face-attribute 'default nil :font "Consolas-16") 
+; (set-face-attribute 'fixed-pitch nil :font  "Consolas-16") 
 ; orgmode
 (setq org-startup-with-inline-images t)
 (setq org-startup-folded t)
@@ -177,6 +179,3 @@
 
 ; How can I get a ruler at column 80?
 ; (add-hook 'org-mode-hook #'display-fill-column-indicator-mode)
-
-; (set-frame-font "Menlo:size=12")
-; (setq default-frame-alist nil)
