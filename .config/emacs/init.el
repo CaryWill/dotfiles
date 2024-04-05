@@ -144,7 +144,9 @@
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t) 
 (setq org-use-tag-inheritance nil)
-; (setq-default line-spacing 5)
+(setq-default line-spacing 5)
+; (setq display-line-numbers-type 'visual)
+(setq display-line-numbers-type 'mixed)
 
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-link.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-html-export.el")
