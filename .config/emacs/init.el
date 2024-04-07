@@ -48,6 +48,7 @@
 (eval-after-load "org"
   '(require 'ox-md nil t))
 (setq org-agenda-files '("~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/"))
+(setq org-agenda-files (remove "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/ulysses.org" org-agenda-files))
 ; (setq org-agenda-text-search-extra-files
 ;       '(agenda-archives
 ;         "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/orgroam/"
@@ -74,7 +75,6 @@
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 (setq org-html-head-include-default-style nil)
 
-; (setq org-agenda-span 'month)
 ; https://orgmode.org/manual/Tracking-TODO-state-changes.html
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAIT(w!)" "VERIFY(v!)" "|" "DONE(d!)" "CANCELLED(c!)")))
@@ -181,3 +181,15 @@
 
 ; How can I get a ruler at column 80?
 ; (add-hook 'org-mode-hook #'display-fill-column-indicator-mode)
+
+; hide date if there's no item under that date
+(setq org-agenda-show-all-dates nil)
+; view next 90 days
+; (setq org-agenda-span 90)
+(setq org-agenda-span 'month)
+; (setq org-agenda-skip-scheduled-if-deadline-is-shown 'repeated-after-deadline)
+; (setq org-agenda-skip-deadline-if-done t)
+; (setq org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled)
+; (setq org-agenda-skip-deadline-if-done 'repeated-after-deadline)
+; (setq org-agenda-skip-scheduled-if-done t)
+; (setq org-agenda-skip-timestamp-if-done t)
