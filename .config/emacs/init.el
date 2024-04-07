@@ -190,7 +190,6 @@
 ; (setq org-agenda-skip-timestamp-if-done t)
 
 ; save emacs layout after quit
-(evil-mode 1)
 (desktop-save-mode 1)
 (add-hook 'kill-emacs-hook 'desktop-save-in-desktop-dir)
 (add-hook 'after-init-hook 'desktop-read)
