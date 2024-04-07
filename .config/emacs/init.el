@@ -8,7 +8,6 @@
 ;; Download Evil
 (unless (package-installed-p 'evil)
   (package-install 'evil))
-;; Enable Evil
 (require 'evil)
 (evil-mode 1)
 ; orgmode tab to org-cycle
@@ -112,7 +111,7 @@
 
 ; (setq inhibit-startup-screen t
 ;       initial-buffer-choice  nil)
-(setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
+; (setq initial-buffer-choice "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/work.org")
 
 ;; vim keymapping
 (define-key evil-normal-state-map (kbd "C-h") #'evil-window-left)
@@ -126,8 +125,6 @@
 (evil-set-leader 'normal (kbd "SPC"))
 (evil-define-key 'normal 'global (kbd "<leader>ss") 'split-window-vertically)
 (evil-define-key 'normal 'global (kbd "<leader>sv") 'split-window-horizontally)
-; (evil-define-key 'normal 'global (kbd "<leader>l") 'tab-next)
-; (evil-define-key 'normal 'global (kbd "<leader>h") 'tab-prev)
 
 ;; code evaluation
 (org-babel-do-load-languages
@@ -141,12 +138,10 @@
 ;; https://stackoverflow.com/a/10638665
 (setq org-agenda-window-setup 'other-tab)
 
-(setq initial-scratch-message "")
-(setq inhibit-startup-message t) 
+; (setq initial-scratch-message "")
+; (setq inhibit-startup-message t) 
 (setq org-use-tag-inheritance nil)
 (setq-default line-spacing 5)
-; (setq display-line-numbers-type 'visual)
-(setq display-line-numbers-type 'mixed)
 
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-link.el")
 (load-file "~/workspace/github/dotfiles/.config/emacs/orgmode-html-export.el")
@@ -193,3 +188,9 @@
 ; (setq org-agenda-skip-deadline-if-done 'repeated-after-deadline)
 ; (setq org-agenda-skip-scheduled-if-done t)
 ; (setq org-agenda-skip-timestamp-if-done t)
+
+; save emacs layout after quit
+(evil-mode 1)
+(desktop-save-mode 1)
+(add-hook 'kill-emacs-hook 'desktop-save-in-desktop-dir)
+(add-hook 'after-init-hook 'desktop-read)
