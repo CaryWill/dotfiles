@@ -76,11 +76,12 @@
 
 ; https://orgmode.org/manual/Tracking-TODO-state-changes.html
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAIT(w!)" "VERIFY(v!)" "|" "DONE(d!)" "CANCELLED(c!)")))
+      '((sequence "TODO(t)" "WAIT(w!)" "VERIFY(v!)" "RELEASING(r!)" "|" "DONE(d!)" "CANCELLED(c!)")))
 
 (setq org-todo-keyword-faces
   '(("WAIT" . "#E35DBF")
     ("CANCELED" . (:foreground "white" :background "#4d4d4d" :weight bold))
+    ("RELEASING" . "red")
     ("VERIFY" . "pink")))
 ;; write todo state changes into LOGBOOK drawer
 (setq org-log-into-drawer "LOGBOOK")
