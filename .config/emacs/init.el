@@ -173,7 +173,7 @@
 
 (add-to-list 'org-capture-templates
              '("n" "Notes" entry (file org-default-notes-file)
-               "* %^{heading} %U %?\n"))
+               "* %U - %^{heading}\n  %?"))
 
 ; How can I get a ruler at column 80?
 ; (add-hook 'org-mode-hook #'display-fill-column-indicator-mode)
