@@ -6644,15 +6644,15 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Cursor Guide Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.3369293212890625</real>
+				<real>0.25</real>
 				<key>Blue Component</key>
-				<real>0.89178396405372951</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.82356129493564367</real>
+				<real>0.92681378126144409</real>
 				<key>Red Component</key>
-				<real>0.97906494140625</real>
+				<real>0.70214027166366577</real>
 			</dict>
 			<key>Cursor Guide Color (Dark)</key>
 			<dict>
