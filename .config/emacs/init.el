@@ -22,6 +22,8 @@
 
 (unless (package-installed-p 'spacemacs-theme)
   (package-install 'spacemacs-theme))
+; theme
+(load-theme 'spacemacs-light t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -38,8 +40,6 @@
  ;; If there is more than one, they won't work right.
  ; '(default ((t (:background nil)))))
 
-; theme
-(load-theme 'spacemacs-light t)
 ; (set-face-attribute 'default nil :family "Menlo-16")
 ; (set-face-attribute 'variable-pitch nil :font "JetBrainsMono Nerd Font-16") ; normal org font
 ; (set-face-attribute 'default nil :font "Consolas-16") 
