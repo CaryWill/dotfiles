@@ -6626,15 +6626,15 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Badge Font</key>
 			<string>NotoSansNKo-Regular</string>
 			<key>Badge Max Height</key>
-			<real>0.10000000000000001</real>
+			<real>0.050000000000000003</real>
 			<key>Badge Max Width</key>
 			<real>0.94999999999999996</real>
 			<key>Badge Right Margin</key>
 			<real>10</real>
 			<key>Badge Text</key>
-			<string>こんにちわ</string>
+			<string></string>
 			<key>Badge Top Margin</key>
-			<real>-10</real>
+			<real>0.0</real>
 			<key>Blend</key>
 			<real>0.13224637681159421</real>
 			<key>Blink Allowed</key>
