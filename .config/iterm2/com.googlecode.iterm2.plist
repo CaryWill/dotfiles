@@ -8232,7 +8232,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Guid</key>
-			<string>6178D4D7-81DD-40B6-A4F2-0A9BA9EF84AE</string>
+			<string>724B2145-44ED-41CA-B401-C8E26A3F362F</string>
 			<key>Has Hotkey</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -8355,7 +8355,7 @@ Make Text Bigger</string>
 			<key>Non-ASCII Ligatures</key>
 			<false/>
 			<key>Normal Font</key>
-			<string>BerkeleyMonoNF-Regular 14</string>
+			<string>Osaka-Mono 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -8538,7 +8538,7 @@ Make Text Bigger</string>
 			<key>Use Bright Bold (Light)</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Cursor Guide (Dark)</key>
 			<false/>
 			<key>Use Cursor Guide (Light)</key>

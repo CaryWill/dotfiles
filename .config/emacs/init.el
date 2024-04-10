@@ -20,12 +20,15 @@
 (global-undo-tree-mode 1)
 (setq undo-tree-history-directory-alist '(("." . "/tmp")))
 
+(unless (package-installed-p 'spacemacs-theme)
+  (package-install 'spacemacs-theme))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(pbcopy spacemacs-theme solarized-theme org-bullets evil)))
+ '(package-selected-packages '(pbcopy spacemacs-theme evil)))
 
 
 ; (custom-set-faces
@@ -104,10 +107,10 @@
 (turn-on-pbcopy)
 
 ; org-bullets
-(unless (package-installed-p 'org-bullets)
-  (package-install 'org-bullets))
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+; (unless (package-installed-p 'org-bullets)
+;   (package-install 'org-bullets))
+; (require 'org-bullets)
+; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ; backup dir
 (setq backup-directory-alist '(("." . "~/tmp")))
@@ -196,3 +199,9 @@
 (desktop-save-mode 1)
 (add-hook 'kill-emacs-hook 'desktop-save-in-desktop-dir)
 (add-hook 'after-init-hook 'desktop-read)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
