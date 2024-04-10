@@ -85,5 +85,8 @@ ln -s "$(pwd)/.config/emacs/init.el" ~/.config/emacs
 #2. chmod u+x nvim
 #3. sudo mv nvim $(which nvim)
 
+# add emacs non-standard strikethrough
+tic -x xterm-256color.ti
+
 # 安装 vim 插件
 vim +PlugInstall +qall
