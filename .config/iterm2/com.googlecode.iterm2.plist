@@ -6812,7 +6812,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -6832,7 +6832,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
-			<false/>
+			<true/>
 			<key>Faint Text Alpha</key>
 			<real>0.5</real>
 			<key>Faint Text Alpha (Dark)</key>
