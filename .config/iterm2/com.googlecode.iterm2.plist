@@ -5762,13 +5762,6 @@ Respond with one or more commands. Do not include any explanation or additional 
 	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
-		<key>0x19-0x60000</key>
-		<dict>
-			<key>Action</key>
-			<integer>39</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
 		<key>0x70-0x100000-0x23</key>
 		<dict>
 			<key>Action</key>
@@ -5779,97 +5772,6 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<string></string>
 			<key>Version</key>
 			<integer>1</integer>
-		</dict>
-		<key>0x9-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>32</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf700-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>7</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf701-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>6</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>2</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>33</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>0</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>34</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf729-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>5</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72b-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>4</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72c-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72c-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
-			<key>Text</key>
-			<string></string>
 		</dict>
 	</dict>
 	<key>GlobalTouchBarMap</key>
@@ -5913,6 +5815,8 @@ Respond with one or more commands. Do not include any explanation or additional 
 			<false/>
 			<key>Allow Title Setting</key>
 			<true/>
+			<key>Allow modifyOtherKeys</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -6540,7 +6444,7 @@ Respond with one or more commands. Do not include any explanation or additional 
 				<real>0.92156863212585449</real>
 			</dict>
 			<key>Application Keypad Allowed</key>
-			<true/>
+			<false/>
 			<key>BM Growl</key>
 			<true/>
 			<key>Background Color</key>
@@ -6958,6 +6862,8 @@ Make Text Bigger</string>
 					<integer>2</integer>
 				</dict>
 			</dict>
+			<key>Left Option Key Changeable</key>
+			<true/>
 			<key>Link Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -7007,6 +6913,8 @@ Make Text Bigger</string>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
+			<false/>
 			<key>Name</key>
 			<string>default</string>
 			<key>Non Ascii Font</key>
@@ -7025,6 +6933,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
+			<key>Right Option Key Changeable</key>
+			<true/>
 			<key>Right Option Key Sends</key>
 			<integer>2</integer>
 			<key>Rows</key>
@@ -7230,6 +7140,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Use Underline Color (Light)</key>
 			<false/>
+			<key>Use libtickit protocol</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1.3999999999999999</real>
 			<key>Visual Bell</key>
@@ -7250,6 +7162,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Allow Title Setting</key>
 			<true/>
+			<key>Allow modifyOtherKeys</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -7877,7 +7791,7 @@ Make Text Bigger</string>
 				<real>0.92156863212585449</real>
 			</dict>
 			<key>Application Keypad Allowed</key>
-			<true/>
+			<false/>
 			<key>BM Growl</key>
 			<true/>
 			<key>Background Color</key>
@@ -8169,7 +8083,7 @@ Make Text Bigger</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Custom Icon Path</key>
-			<string>/Users/cary/workspace/github/dotfiles/assets/SPY x FAMILY celebra su noveno episodio con más ilustraciones — Kudasai.jpg</string>
+			<string>/Users/cary/Downloads/Hayao-Miyazaki_HeroImage_Totoro.jpg</string>
 			<key>Custom Locale</key>
 			<string>en_AU.UTF-8</string>
 			<key>Default Bookmark</key>
@@ -8232,7 +8146,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Guid</key>
-			<string>2F046DFA-5648-41DB-B9B4-78390EDBC3FF</string>
+			<string>DAE50DE0-A0C5-418A-A591-098DF38CA78D</string>
 			<key>Has Hotkey</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -8297,6 +8211,8 @@ Make Text Bigger</string>
 					<integer>2</integer>
 				</dict>
 			</dict>
+			<key>Left Option Key Changeable</key>
+			<true/>
 			<key>Link Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -8346,6 +8262,8 @@ Make Text Bigger</string>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
+			<false/>
 			<key>Name</key>
 			<string>MacBook Pro</string>
 			<key>Non Ascii Font</key>
@@ -8364,6 +8282,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
+			<key>Right Option Key Changeable</key>
+			<true/>
 			<key>Right Option Key Sends</key>
 			<integer>2</integer>
 			<key>Rows</key>
@@ -8567,6 +8487,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Use Underline Color (Light)</key>
 			<false/>
+			<key>Use libtickit protocol</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1.3999999999999999</real>
 			<key>Visual Bell</key>
@@ -8647,7 +8569,7 @@ Make Text Bigger</string>
 	<key>StretchTabsToFillBar</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
-	<integer>5</integer>
+	<integer>9</integer>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -8674,6 +8596,8 @@ Make Text Bigger</string>
 	<false/>
 	<key>UseMetal</key>
 	<true/>
+	<key>UseVirtualKeyCodesForDetectingDigits</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>

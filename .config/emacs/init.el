@@ -205,3 +205,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+; emacs in terminal meta arrow keybindings
+; https://stackoverflow.com/a/10867354
+(add-hook 'term-setup-hook
+  (lambda ()
+    (define-key function-key-map "\e[1;9A" [M-up])
+    (define-key function-key-map "\e[1;9B" [M-down])
+    (define-key function-key-map "\e[1;9C" [M-right])
+    (define-key function-key-map "\e[1;9D" [M-left])))
