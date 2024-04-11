@@ -55,3 +55,13 @@
 
 (add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
 ; ---- end ----
+
+; (defun my-org-export-docview-to-html (backend)
+;   (when (org-export-derived-backend-p backend 'html)
+;     (goto-char (point-min))
+;     (while (re-search-forward "\\[\\[docview:\\([^]]+\\)\\]\\[\\([^]]+\\)\\]\\]" nil t)
+;       (let ((path (match-string 1))
+;             (description (match-string 2)))
+;         (replace-match (format "@@html:<object data=\"%s\" type=\"application/pdf\"><p>%s</p></object>@@" path description))))))
+;
+; (add-hook 'org-export-before-processing-hook 'my-org-export-docview-to-html)
