@@ -8146,7 +8146,7 @@ Make Text Bigger</string>
 				<real>0.87843137979507446</real>
 			</dict>
 			<key>Guid</key>
-			<string>DAE50DE0-A0C5-418A-A591-098DF38CA78D</string>
+			<string>EE140887-C2FC-4944-AE6B-F1FF84E5B4F3</string>
 			<key>Has Hotkey</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -8604,6 +8604,8 @@ Make Text Bigger</string>
 	<true/>
 	<key>WorkAroundBigSurBug</key>
 	<true/>
+	<key>disableMetalWhenUnplugged</key>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
