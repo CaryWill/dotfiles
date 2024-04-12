@@ -50,7 +50,7 @@
 (defun return-modified-html-content (contents backend info)
   "Return HTML content with added lazy loading to img tags."
   (when (eq backend 'html)
-    ; (copy-files-from-img-tags contents)
+    (copy-files-from-img-tags contents)
     (add-lazy-loading-to-img-tags contents)))
 
 (add-to-list 'org-export-filter-final-output-functions 'return-modified-html-content)
