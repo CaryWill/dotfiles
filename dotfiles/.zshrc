@@ -26,8 +26,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # https://github.com/neovim/neovim/issues/13734#issuecomment-758357517
-# export TERM="xterm-kitty"
-export TERM="xterm-256color"
+export TERM="xterm-kitty"
+# export TERM="xterm-256color"
 export LANG=en_US.UTF-8
 export TERM_ITALICS=true
 alias vim=nvim
