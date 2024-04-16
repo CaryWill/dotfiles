@@ -84,10 +84,12 @@
 (setq org-todo-keyword-faces
   '(("WAIT" . "#E35DBF")
     ("CANCELED" . (:foreground "white" :background "#4d4d4d" :weight bold))
-    ("BLOCK" . "red")
-    ("RELEASING" . "blue")
-    ("PROCESSING" . "gold")
-    ("VERIFY" . "pink")))
+    ("TODO" . "brightblue")
+    ("BLOCK" . "darkorange1")
+    ("RELEASING" . "firebrick1")
+    ("PROCESSING" . "seagreen")
+    ("DONE" . "gray")
+    ("VERIFY" . "salmon")))
 ;; write todo state changes into LOGBOOK drawer
 (setq org-log-into-drawer "LOGBOOK")
 
