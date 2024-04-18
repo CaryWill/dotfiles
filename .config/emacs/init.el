@@ -227,3 +227,5 @@
 ; command+p
 (global-set-key (kbd "s-p") 'tab-next)
 
+(setq fill-column 80)
+; then use can use M-x fill-paragraph to format it.
