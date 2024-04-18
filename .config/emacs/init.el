@@ -45,7 +45,8 @@
 ; (set-face-attribute 'default nil :font "Consolas-16") 
 ; (set-face-attribute 'fixed-pitch nil :font  "Consolas-16") 
 ; orgmode
-(setq org-startup-with-inline-images t)
+; C-c C-x C-v 来 toggle
+; (setq org-startup-with-inline-images t)
 (setq org-startup-folded t)
 (eval-after-load "org"
   '(require 'ox-md nil t))
