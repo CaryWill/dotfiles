@@ -72,7 +72,8 @@
 (global-set-key (kbd "C-c L") 'tab-next)
 ; add done task time
 (setq org-log-done 'time)
-(setq org-image-actual-width '600)
+; (setq org-image-actual-width '600)
+; (setq org-image-actual-width 400)
 ; (setq org-image-actual-width nil)
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 (setq org-html-head-include-default-style nil)
