@@ -45,8 +45,6 @@
 ; (set-face-attribute 'default nil :font "Consolas-16") 
 ; (set-face-attribute 'fixed-pitch nil :font  "Consolas-16") 
 ; orgmode
-; C-c C-x C-v 来 toggle
-; (setq org-startup-with-inline-images t)
 (setq org-startup-folded t)
 (eval-after-load "org"
   '(require 'ox-md nil t))
@@ -73,9 +71,13 @@
 (global-set-key (kbd "C-c L") 'tab-next)
 ; add done task time
 (setq org-log-done 'time)
+
+; C-c C-x C-v 来 toggle
+(setq org-startup-with-inline-images t)
 ; (setq org-image-actual-width '600)
-; (setq org-image-actual-width 400)
+(setq org-image-actual-width '300)
 ; (setq org-image-actual-width nil)
+
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
 (setq org-html-head-include-default-style nil)
 
