@@ -75,7 +75,7 @@
 ; C-c C-x C-v 来 toggle
 (setq org-startup-with-inline-images t)
 ; (setq org-image-actual-width '600)
-(setq org-image-actual-width '300)
+(setq org-image-actual-width '250)
 ; (setq org-image-actual-width nil)
 
 (setq org-default-notes-file "~/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/references/inbox.org")
