@@ -72,7 +72,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home"
 # export COLORTERM=truecolor
 
 download_m3u8() {
-    ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy "$2"
+    ffmpeg -i "$1" -c copy "$2"
     if [ $? -eq 0 ]; then
         echo "Download completed successfully."
     else
