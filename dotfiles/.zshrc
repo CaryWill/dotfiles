@@ -72,8 +72,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home"
 # export COLORTERM=truecolor
 
 download_m3u8() {
-    output_file="$HOME/Downloads/${2:-video.mp4}"  # Default output file is "video.mp4" in Downloads directory
-    ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy "$output_file"
+    ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy "$2"
     if [ $? -eq 0 ]; then
         echo "Download completed successfully."
     else
