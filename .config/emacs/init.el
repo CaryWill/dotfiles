@@ -87,7 +87,7 @@
 
 (setq org-todo-keyword-faces
   '(("WAIT" . "#E35DBF")
-    ("CANCELED" . (:foreground "white" :background "#4d4d4d" :weight bold))
+    ("CANCELED" . "gray")
     ("TODO" . "brightblue")
     ("BLOCK" . "darkorange1")
     ("RELEASING" . "firebrick1")
