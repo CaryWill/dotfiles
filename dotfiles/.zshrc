@@ -79,3 +79,6 @@ download_m3u8() {
         echo "Error: Download failed."
     fi
 }
+
+alias python=python3
+alias pip=pip3
