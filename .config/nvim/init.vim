@@ -38,6 +38,10 @@ set undofile
 set directory=~/tmp/.directory//
 set undodir=~/tmp/.undo//
 set backupdir=~/tmp/.backup//
+set backup
+set backupcopy=yes
+set backupext=.bak
+set writebackup
 
 " color theme
 set termguicolors
