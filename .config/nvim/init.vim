@@ -37,6 +37,8 @@ map <Up> <C-y>
 set undofile
 set directory=~/tmp/.directory//
 set undodir=~/tmp/.undo//
+
+"auto backup"
 set backupdir=~/tmp/.backup//
 set backup
 set backupcopy=yes
