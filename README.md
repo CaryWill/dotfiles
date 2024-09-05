@@ -12,6 +12,12 @@ Since the neovim API is not stable, I quit using neovim, so this is the configua
 
 Note: all fonts are nerd-font patched.
 
+## kitty themes
+
+just run following cmd
+
+> kitty +kitten themes
+
 ## Notes
 
 // https://vi.stackexchange.com/questions/28489/how-to-make-vim-colorscheme-work-on-big-sur-terminal?newreg=30ec2c296a4b4287b7f255754c8b8443
