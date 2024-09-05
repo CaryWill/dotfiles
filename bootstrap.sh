@@ -79,6 +79,8 @@ ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
 ln -sf "$(pwd)/.config/kitty" ~/.config
 ln -sf "$(pwd)/.config/emacs/init.el" ~/.config/emacs
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # how to install neovim nightly
 #1. download the file from github
 #https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-download
