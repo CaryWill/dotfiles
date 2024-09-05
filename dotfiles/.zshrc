@@ -39,46 +39,39 @@ export VISUAL="nvim -u NORC"
 alias 'tx'='tmux new-session -s "$(basename $(dirname $(pwd)))/$(basename $(pwd))"'
 alias 'ta'='tmux attach'
 alias 'aidc'='cd ~/workspace/aidc-xspace'
-alias 'org'='cd "/Users/cary/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"'
-alias backup='"/Users/cary/workspace/github/dotfiles/dotfiles/backup_script.sh"'
+# alias 'org'='cd "/Users/cary/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"'
+# alias backup='"/Users/cary/workspace/github/dotfiles/dotfiles/backup_script.sh"'
 
 # change `clean` zsh theme to full path
-export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
-export CPATH="$CPATH:/opt/procursus/include"
-export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
-export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
-export CPATH="$CPATH:/opt/procursus/include"
-export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
-
-# bun completions
-[ -s "/Users/cary/.bun/_bun" ] && source "/Users/cary/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
+# export CPATH="$CPATH:/opt/procursus/include"
+# export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
+# export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
+# export CPATH="$CPATH:/opt/procursus/include"
+# export LIBRARY_PATH="$LIBRARY_PATH:/opt/procursus/lib"
 
 # disable zsh update
-DISABLE_UPDATE_PROMPT=true
+# DISABLE_UPDATE_PROMPT=true
 # stop brew downloading the formula each time when using services command
-export HOMEBREW_NO_INSTALL_FROM_API=1
+# export HOMEBREW_NO_INSTALL_FROM_API=1
 # speed up downloading
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-export CRYPTO_DIR=$(brew --prefix openssl) 
-export OPENSSL_DIR=$(brew --prefix openssl)
-export LIBEV_DIR=$(brew --prefix libev)
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+# export CRYPTO_DIR=$(brew --prefix openssl) 
+# export OPENSSL_DIR=$(brew --prefix openssl)
+# export LIBEV_DIR=$(brew --prefix libev)
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home"
 
 # emacs colors
 # export COLORTERM=truecolor
 
-download_m3u8() {
-    ffmpeg -i "$1" -c copy "$2"
-    if [ $? -eq 0 ]; then
-        echo "Download completed successfully."
-    else
-        echo "Error: Download failed."
-    fi
-}
+# download_m3u8() {
+#     ffmpeg -i "$1" -c copy "$2"
+#     if [ $? -eq 0 ]; then
+#         echo "Download completed successfully."
+#     else
+#         echo "Error: Download failed."
+#     fi
+# }
 
 alias python=python3
 alias pip=pip3
