@@ -63,15 +63,3 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home"
 
 # emacs colors
 # export COLORTERM=truecolor
-
-# download_m3u8() {
-#     ffmpeg -i "$1" -c copy "$2"
-#     if [ $? -eq 0 ]; then
-#         echo "Download completed successfully."
-#     else
-#         echo "Error: Download failed."
-#     fi
-# }
-
-alias python=python3
-alias pip=pip3
