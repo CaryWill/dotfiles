@@ -18,10 +18,14 @@ set laststatus=2
 set smartindent
 set autoread
 set signcolumn=yes
+
+" https://vi.stackexchange.com/a/3495
+" use mouse to fold/unfold
+set foldcolumn=1
+" set nofoldenable
 set foldmethod=indent
-set nofoldenable
 set foldlevel=99
-set clipboard+=unnamedplus
+
 set cursorline
 set splitright
 set splitbelow
