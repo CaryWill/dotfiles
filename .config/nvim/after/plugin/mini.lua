@@ -1,6 +1,6 @@
 local status, indentscope = pcall(require, "mini.indentscope")
 if status then
-	indentscope.setup({})
+  indentscope.setup({})
 end
 
 -- TODO: how to disable on certain filetypes
@@ -8,20 +8,25 @@ end
 
 local status1, pairs = pcall(require, "mini.pairs")
 if status1 then
-	pairs.setup()
+  pairs.setup()
 end
 
 local status2, surround = pcall(require, "mini.surround")
 if status2 then
-	surround.setup()
+  surround.setup()
 end
 
 local status3, ai = pcall(require, "mini.ai")
 if status3 then
-	ai.setup()
+  ai.setup()
 end
 
 local status4, comment = pcall(require, "mini.comment")
 if status4 then
-	comment.setup()
+  comment.setup()
+end
+
+local status5, bufremove = pcall(require, "mini.bufremove")
+if status5 then
+  bufremove.setup()
 end

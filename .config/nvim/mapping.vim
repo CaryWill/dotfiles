@@ -98,4 +98,7 @@ nnoremap <silent><leader>b7 7<C-w>w
 nnoremap <silent><leader>b8 8<C-w>w
 nnoremap <silent><leader>b9 9<C-w>w
 
+" alt + 点击 在新 tab 看"
+nnoremap <M-LeftMouse> <cmd>tab split<CR><cmd>lua vim.lsp.buf.definition()<CR>
+
 " vim: set foldmethod=marker foldlevel=0 foldenable:

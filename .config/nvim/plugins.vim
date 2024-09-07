@@ -129,5 +129,6 @@ Plug 'folke/todo-comments.nvim'
 
 " mouse related"
 Plug 'soulis-1256/eagle.nvim'
+Plug 'echasnovski/mini.bufremove'
 
 call plug#end()
