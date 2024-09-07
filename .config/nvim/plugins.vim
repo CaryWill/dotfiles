@@ -35,6 +35,7 @@ Plug 'CaryWill/nui.nvim'
 
 " buffer"
 " Plug 'norcalli/nvim-colorizer.lua'
+Plug 'brenoprata10/nvim-highlight-colors'
 
 " formatter"
 Plug 'nvimtools/none-ls.nvim'
