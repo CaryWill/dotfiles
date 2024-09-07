@@ -127,4 +127,7 @@ Plug 'folke/todo-comments.nvim'
 " Plug 'Bekaboo/deadcolumn.nvim'
 "Plug 'mattn/vim-nyancat'
 
+" mouse related"
+Plug 'soulis-1256/eagle.nvim'
+
 call plug#end()
