@@ -5,6 +5,12 @@ end
 
 plugin.setup({
   options = {
+    -- groups = {
+    --   items = {
+    --     require('bufferline.groups').builtin.pinned:with({ icon = "" })
+    --   }
+    -- },
+
     show_duplicate_prefix = true,
     -- close_command = function(n)
     --   require("mini.bufremove").delete(n, false)
@@ -38,7 +44,7 @@ plugin.setup({
     truncate_names = false,
     max_prefix_length = 100,
     max_name_length = 100,
-    show_buffer_icons = true,
+    show_buffer_icons = false,
     show_buffer_close_icons = true,
     show_close_icon = true,
     show_tab_indicators = false,
