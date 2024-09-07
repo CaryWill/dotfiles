@@ -127,6 +127,7 @@ Plug 'folke/todo-comments.nvim'
 " Plug 'LunarVim/bigfile.nvim'
 " Plug 'Bekaboo/deadcolumn.nvim'
 "Plug 'mattn/vim-nyancat'
+Plug 'f-person/auto-dark-mode.nvim'
 
 " mouse related"
 Plug 'soulis-1256/eagle.nvim'
