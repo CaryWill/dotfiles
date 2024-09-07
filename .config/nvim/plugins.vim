@@ -132,6 +132,7 @@ Plug 'f-person/auto-dark-mode.nvim'
 " mouse related"
 Plug 'soulis-1256/eagle.nvim'
 Plug 'echasnovski/mini.bufremove'
-Plug 'gorbit99/codewindow.nvim'
+Plug 'lewis6991/satellite.nvim'
+" Plug 'gorbit99/codewindow.nvim'
 
 call plug#end()
