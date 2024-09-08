@@ -48,6 +48,8 @@ Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 " Plug 'pappasam/papercolor-theme-slim'
 " Plug 'sainnhe/gruvbox-material'
 " Plug 'dstein64/vim-startuptime'
+Plug 'rktjmp/lush.nvim'
+Plug 'metalelf0/jellybeans-nvim'
 
 " Git"
 Plug 'lewis6991/gitsigns.nvim'
