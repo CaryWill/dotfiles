@@ -9,6 +9,7 @@ plugin.setup({
   exclude_filetypes = { "" },
 })
 
+--[[
 vim.api.nvim_create_autocmd({
   "WinScrolled", -- or WinResized on NVIM-v0.9 and higher
   "BufWinEnter",
@@ -22,3 +23,4 @@ vim.api.nvim_create_autocmd({
     require("barbecue.ui").update()
   end,
 })
+--]]
