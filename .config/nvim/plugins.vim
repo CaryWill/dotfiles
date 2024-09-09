@@ -132,7 +132,7 @@ Plug 'folke/todo-comments.nvim'
 Plug 'f-person/auto-dark-mode.nvim'
 
 " mouse related"
-Plug 'soulis-1256/eagle.nvim'
+" Plug 'soulis-1256/eagle.nvim'
 Plug 'echasnovski/mini.bufremove'
 Plug 'lewis6991/satellite.nvim'
 " Plug 'gorbit99/codewindow.nvim'
