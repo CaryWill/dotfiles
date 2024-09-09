@@ -37,7 +37,7 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- typescript
-nvim_lsp.tsserver.setup({
+nvim_lsp.ts_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },

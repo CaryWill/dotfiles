@@ -2,17 +2,17 @@
 
 local status, plugin = pcall(require, "mason")
 if not status then
-  return
+	return
 end
 
 plugin.setup({})
 
 local status2, plugin2 = pcall(require, "mason-lspconfig")
 if not status2 then
-  return
+	return
 end
 
 plugin2.setup({
-  ensure_installed = { "tsserver", "eslint", "lua_ls", "cssls" },
-  automatic_installation = true,
+	ensure_installed = { "ts_ls", "eslint", "lua_ls", "cssls" },
+	automatic_installation = true,
 })
