@@ -55,7 +55,7 @@ alias 'aidc'='cd ~/workspace/aidc-xspace'
 # stop brew downloading the formula each time when using services command
 # export HOMEBREW_NO_INSTALL_FROM_API=1
 # speed up downloading
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # export CRYPTO_DIR=$(brew --prefix openssl) 
 # export OPENSSL_DIR=$(brew --prefix openssl)
 # export LIBEV_DIR=$(brew --prefix libev)
