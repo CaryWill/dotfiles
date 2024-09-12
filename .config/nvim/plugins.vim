@@ -55,6 +55,7 @@ Plug 'metalelf0/jellybeans-nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'f-person/git-blame.nvim'
 Plug 'sindrets/diffview.nvim'
+Plug 'mbbill/undotree'
 " Plug 'tpope/vim-fugitive'
 
 " treesitter"
