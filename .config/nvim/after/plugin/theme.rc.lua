@@ -22,7 +22,8 @@ function jellybeansdark()
 	local job = require("plenary.job")
 	job:new({
 		command = "kitty",
-		args = { "+kitten", "themes", "--reload-in", "all", "Rosé Pine Moon" },
+		-- args = { "+kitten", "themes", "--reload-in", "all", "Rosé Pine Moon" },
+		args = { "+kitten", "themes", "--reload-in", "all", "Atelier Dune Dark" },
 	}):start()
 end
 
