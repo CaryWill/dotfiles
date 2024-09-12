@@ -43,10 +43,12 @@ auto_dark_mode.setup({
 	-- update_interval = 1000 * 60,
 	update_interval = 1000,
 	set_dark_mode = function()
-		jellybeansdark()
+		-- jellybeansdark()
+		rosedark()
 	end,
 	set_light_mode = function()
 		-- roseLight()
-		jellybeansdark()
+		-- jellybeansdark()
+		rosedark()
 	end,
 })
