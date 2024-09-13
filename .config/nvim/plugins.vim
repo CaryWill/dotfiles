@@ -138,4 +138,10 @@ Plug 'echasnovski/mini.bufremove'
 Plug 'lewis6991/satellite.nvim'
 " Plug 'gorbit99/codewindow.nvim'
 
+" debugger"
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'mxsdev/nvim-dap-vscode-js'
+Plug 'microsoft/vscode-js-debug', { 'do': 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out' }
+
 call plug#end()

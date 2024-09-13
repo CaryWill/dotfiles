@@ -68,3 +68,4 @@ yarn.lock
 
 .config/nvim/after/plugin/ai-config.lua
 .local.config.lua
+.vscode
