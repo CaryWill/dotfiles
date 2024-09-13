@@ -93,4 +93,9 @@ vim.keymap.set("n", "<leader>dui", require("dapui").toggle)
 
 -- 不知道这行有没有用
 -- https://github.com/mfussenegger/nvim-dap/pull/48
-require('dap.ext.vscode').load_launchjs()
+-- require('dap.ext.vscode').load_launchjs()
+
+-- icon
+-- https://miguelcrespo.co/posts/how-to-debug-like-a-pro-using-neovim/
+vim.fn.sign_define('DapBreakpoint', { text = '🟥', texthl = '', linehl = '', numhl = '' })
+vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
