@@ -90,3 +90,7 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 end
 
 vim.keymap.set("n", "<leader>dui", require("dapui").toggle)
+
+-- 不知道这行有没有用
+-- https://github.com/mfussenegger/nvim-dap/pull/48
+require('dap.ext.vscode').load_launchjs()
