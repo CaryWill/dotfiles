@@ -63,7 +63,7 @@ for _, language in ipairs(js_based_languages) do
       type = "pwa-chrome",
       request = "launch",
       name = 'Start Chrome with "localhost"',
-      url = "http://localhost:3000",
+      url = "http://localhost:5173",
       webRoot = "${workspaceFolder}",
       userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir",
     },
@@ -89,4 +89,4 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close({})
 end
 
-vim.keymap.set("n", "<leader>ui", require("dapui").toggle)
+vim.keymap.set("n", "<leader>dui", require("dapui").toggle)
