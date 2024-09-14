@@ -102,3 +102,4 @@ vim.keymap.set("n", "<leader>dui", require("dapui").toggle)
 vim.cmd('highlight DapBreakpointText guifg=#FF0000')
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointText', linehl = '', numhl = '' })
 -- vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
+-- BUG: https://github.com/rcarriga/nvim-dap-ui/issues/315
