@@ -97,5 +97,8 @@ vim.keymap.set("n", "<leader>dui", require("dapui").toggle)
 
 -- icon
 -- https://miguelcrespo.co/posts/how-to-debug-like-a-pro-using-neovim/
-vim.fn.sign_define('DapBreakpoint', { text = '🟥', texthl = '', linehl = '', numhl = '' })
-vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
+-- https://www.nerdfonts.com/cheat-sheet
+-- 这个是需要 kitty 里面配置 icon 为 Symbol Nerd Font 的
+vim.cmd('highlight DapBreakpointText guifg=#FF0000')
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointText', linehl = '', numhl = '' })
+-- vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
