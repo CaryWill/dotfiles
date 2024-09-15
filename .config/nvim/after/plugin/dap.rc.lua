@@ -41,31 +41,105 @@ require("dap-vscode-js").setup({
   -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
 })
 
-local js_based_languages = { "typescript", "javascript", "typescriptreact" }
+local js_based_languages = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
+local dap_utils = require("dap.utils")
 
+-- https://github.com/anasrar/.dotfiles/blob/fdf4b88dfd2255b90f03c62dfc0f3f9458dc99a9/neovim/.config/nvim/lua/rin/DAP/languages/typescript.lua
 for _, language in ipairs(js_based_languages) do
   require("dap").configurations[language] = {
     {
       type = "pwa-node",
       request = "launch",
-      name = "Launch file",
-      program = "${file}",
-      cwd = "${workspaceFolder}",
+      name = "Launch Current File (pwa-node)",
+      cwd = vim.fn.getcwd(),
+      args = { "${file}" },
+      sourceMaps = true,
+      protocol = "inspector",
     },
     {
       type = "pwa-node",
-      request = "attach",
-      name = "Attach",
-      processId = require("dap.utils").pick_process,
-      cwd = "${workspaceFolder}",
+      request = "launch",
+      name = "Launch Current File (pwa-node with ts-node)",
+      cwd = vim.fn.getcwd(),
+      runtimeArgs = { "--loader", "ts-node/esm" },
+      runtimeExecutable = "node",
+      args = { "${file}" },
+      sourceMaps = true,
+      protocol = "inspector",
+      skipFiles = { "<node_internals>/**", "node_modules/**" },
+      resolveSourceMapLocations = {
+        "${workspaceFolder}/**",
+        "!**/node_modules/**",
+      },
+    },
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Launch Current File (pwa-node with deno)",
+      cwd = vim.fn.getcwd(),
+      runtimeArgs = { "run", "--inspect-brk", "--allow-all", "${file}" },
+      runtimeExecutable = "deno",
+      attachSimplePort = 9229,
+    },
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Launch Test Current File (pwa-node with vitest)",
+      cwd = vim.fn.getcwd(),
+      program = "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      args = { "--inspect-brk", "--threads", "false", "run", "${file}" },
+      autoAttachChildProcesses = true,
+      smartStep = true,
+      console = "integratedTerminal",
+      skipFiles = { "<node_internals>/**", "node_modules/**" },
+    },
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Launch Test Current File (pwa-node with deno)",
+      cwd = vim.fn.getcwd(),
+      runtimeArgs = { "test", "--inspect-brk", "--allow-all", "${file}" },
+      runtimeExecutable = "deno",
+      smartStep = true,
+      console = "integratedTerminal",
+      attachSimplePort = 9229,
     },
     {
       type = "pwa-chrome",
       request = "launch",
-      name = 'Start Chrome with "localhost"',
-      url = "http://localhost:5173",
+      name = "Start Chrome with localhost(pwa-chrome, select port)",
+      program = "${file}",
+      cwd = vim.fn.getcwd(),
+      sourceMaps = true,
+      -- port = function()
+      --   return vim.fn.input("Select port: ", 9222)
+      -- end,
+      url = function()
+        local port = vim.fn.input("Select port: ", 9222);
+        return "http://localhost:" .. port;
+      end,
       webRoot = "${workspaceFolder}",
-      userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir",
+      userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir"
+    },
+    {
+      type = "pwa-chrome",
+      request = "attach",
+      name = "Attach Program (pwa-chrome, select port)",
+      program = "${file}",
+      cwd = vim.fn.getcwd(),
+      sourceMaps = true,
+      port = function()
+        return vim.fn.input("Select port: ", 9222)
+      end,
+      webRoot = "${workspaceFolder}",
+    },
+    {
+      type = "pwa-node",
+      request = "attach",
+      name = "Attach Program (pwa-node, select pid)",
+      cwd = vim.fn.getcwd(),
+      processId = dap_utils.pick_process,
+      skipFiles = { "<node_internals>/**" },
     },
   }
 end
@@ -100,7 +174,10 @@ vim.keymap.set("n", "<leader>dui", require("dapui").toggle)
 -- https://www.nerdfonts.com/cheat-sheet
 -- 这个是需要 kitty 里面配置 icon 为 Symbol Nerd Font 的
 vim.cmd('highlight DapBreakpointText guifg=#FF0000')
--- vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointText', linehl = '', numhl = '' })
-vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointText', linehl = '', numhl = '' })
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointText', linehl = '', numhl = '' })
+-- vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointText', linehl = '', numhl = '' })
 vim.fn.sign_define('DapStopped', { text = '', texthl = '', linehl = '', numhl = '' })
 -- BUG: https://github.com/rcarriga/nvim-dap-ui/issues/315
+
+-- 如果是 node 的话，先执行 node --inspect src/a.js
+-- 然后 F5 选择 current file
