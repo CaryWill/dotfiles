@@ -78,6 +78,7 @@ ln -sf "$(pwd)/dotfiles/.zshrc" ~/.zshrc
 # kitty config
 ln -sf "$(pwd)/.config/kitty" ~/.config
 ln -sf "$(pwd)/.config/emacs/init.el" ~/.config/emacs
+ln -sf "$(pwd)/.config/fish" ~/.config/fish
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
