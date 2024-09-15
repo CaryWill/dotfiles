@@ -1,4 +1,4 @@
-" colorscheme rose-pine
+" colorscheme rose-pine-moon
 
 " -- lsp --"
 " hi DiagnosticVirtualTextError guifg=#e73330 guibg=#f6c0c0

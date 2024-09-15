@@ -181,3 +181,5 @@ vim.fn.sign_define('DapStopped', { text = '', texthl = '', linehl = '', numhl
 
 -- 如果是 node 的话，先执行 node --inspect src/a.js
 -- 然后 F5 选择 current file
+
+-- persist breakpoints
