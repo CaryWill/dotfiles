@@ -43,6 +43,7 @@ alias 'ta'='tmux attach'
 alias 'aidc'='cd ~/workspace/aidc-xspace'
 # alias 'org'='cd "/Users/cary/Library/Mobile Documents/com~apple~CloudDocs/Plain Org/"'
 # alias backup='"/Users/cary/workspace/github/dotfiles/dotfiles/backup_script.sh"'
+alias rm="echo Use 'trash command', i.e. 'trash path'"
 
 # change `clean` zsh theme to full path
 # export PATH="/opt/procursus/bin:/opt/procursus/sbin:/opt/procursus/games:$PATH"
