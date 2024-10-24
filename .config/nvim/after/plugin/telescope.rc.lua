@@ -127,6 +127,7 @@ telescope.setup({
 		preview = {
 			-- https://github.com/nvim-telescope/telescope.nvim/issues/1379#issuecomment-996590765
 			treesitter = false,
+			filesize_limit = 0.5555,
 		},
 	},
 	pickers = {
