@@ -49,6 +49,7 @@ telescope.setup({
 			"^.husky/",
 			"package-lock.json",
 			"yarn.lock",
+			"build/",
 		},
 		mappings = {
 			n = {
@@ -79,7 +80,7 @@ telescope.setup({
 			"--smart-case",
 			"--fixed-strings",
 			"--hidden",
-			-- "--max-size=1M", -- Specify your size limit here
+			-- "--max-filesize=1M", -- Specify your size limit here
 		},
 		extensions = {
 			-- file_browser = {
