@@ -79,6 +79,7 @@ telescope.setup({
 			"--smart-case",
 			"--fixed-strings",
 			"--hidden",
+			-- "--max-size=1M", -- Specify your size limit here
 		},
 		extensions = {
 			-- file_browser = {
@@ -123,9 +124,19 @@ telescope.setup({
 			--   only_cwd = true
 			-- }
 		},
+		preview = {
+			-- https://github.com/nvim-telescope/telescope.nvim/issues/1379#issuecomment-996590765
+			treesitter = false,
+		},
+	},
+	pickers = {
+		live_grep = {
+			additional_args = function(opts)
+				-- https://github.com/nvim-telescope/telescope.nvim/issues/855
+			end,
+		},
 	},
 })
-
 -- vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
 -- 	pattern = "*",
 -- 	callback = function()
