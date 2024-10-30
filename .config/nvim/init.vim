@@ -18,6 +18,8 @@ set laststatus=2
 set smartindent
 set autoread
 set signcolumn=yes
+" set nowrap           " do not automatically wrap on load
+" set formatoptions-=t " do not automatically wrap text when typing
 
 " https://vi.stackexchange.com/a/3495
 " use mouse to fold/unfold
