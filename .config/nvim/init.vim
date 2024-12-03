@@ -28,7 +28,7 @@ set foldcolumn=1
 set foldmethod=indent
 set foldlevel=99
 
-set relativenumber
+" set relativenumber
 
 set cursorline
 set splitright
