@@ -133,7 +133,7 @@ Plug 'folke/todo-comments.nvim'
 "Plug 'mattn/vim-nyancat'
 Plug 'f-person/auto-dark-mode.nvim'
 " Plug 'tris203/precognition.nvim'
-Plug 'm4xshen/hardtime.nvim'
+" Plug 'm4xshen/hardtime.nvim'
 
 " mouse related"
 " Plug 'soulis-1256/eagle.nvim'
