@@ -139,6 +139,8 @@ Plug 'f-person/auto-dark-mode.nvim'
 " Plug 'soulis-1256/eagle.nvim'
 Plug 'echasnovski/mini.bufremove'
 Plug 'lewis6991/satellite.nvim'
+Plug 'kdheepak/lazygit.nvim'
+Plug 'voldikss/vim-floaterm'
 " Plug 'gorbit99/codewindow.nvim'
 
 " debugger"

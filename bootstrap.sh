@@ -31,6 +31,10 @@ brew install chafa
 #brew install xclip
 # brew install meson
 
+# lazygit
+# https://github.com/jesseduffield/lazygit?tab=readme-ov-file#homebrew
+brew install jesseduffield/lazygit/lazygit
+
 # language tool
 # since grammarly is not work anymore
 # for developers

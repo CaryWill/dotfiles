@@ -80,6 +80,8 @@ nnoremap <silent>;t :call <SID>termToggle()<CR>
 inoremap <silent>;t <Esc>:call <SID>termToggle()<CR>
 tnoremap <silent>;t <C-\><C-n>:call <SID>termToggle()<CR>
 tnoremap <silent>;q <C-\><C-n>
+" lazygit esc"
+tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent><leader>g :DiffviewOpen<CR>
 nnoremap <silent><leader>gm :DiffviewOpen master<CR>
