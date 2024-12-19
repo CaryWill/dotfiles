@@ -134,6 +134,7 @@ Plug 'folke/todo-comments.nvim'
 Plug 'f-person/auto-dark-mode.nvim'
 " Plug 'tris203/precognition.nvim'
 " Plug 'm4xshen/hardtime.nvim'
+Plug 'github/copilot.vim'
 
 " mouse related"
 " Plug 'soulis-1256/eagle.nvim'
