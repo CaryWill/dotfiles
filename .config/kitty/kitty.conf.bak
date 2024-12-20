@@ -27,7 +27,7 @@ bold_italic_font true
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 14.0
+font_size 13
 
 #: Font size (in pts)
 
@@ -2102,10 +2102,12 @@ map cmd+p previous_tab
 
 # BEGIN_KITTY_THEME
 # Rosé Pine Moon
-include current-theme.conf
+# include current-theme.conf
 # END_KITTY_THEME
-#
-#
+
+
+# ------ below ------
+# from https://github.com/anasrar/.dotfiles/blob/fdf4b88dfd2255b90f03c62dfc0f3f9458dc99a9/kitty/.config/kitty/kitty.conf
 # Recursive v1.085
 # font_size                10.5
 # font_family              Recursive Mono Csl St Medium Nerd Font Complete
@@ -2114,104 +2116,96 @@ include current-theme.conf
 # bold_italic_font         Recursive Mono Csl St ExtraBold Italic Nerd Font Complete
 # adjust_line_height       1
 # JetBrainsMono v2.242 Patch Nerd Font v2.3.0
-font_size                10.0
-font_family              JetBrains Mono Bold
-bold_font                JetBrains Mono ExtraBold
-italic_font              JetBrains Mono Bold Italic
-bold_italic_font         JetBrains Mono ExtraBold Italic
-adjust_line_height       0
+# font_size                10.0
+# font_family              JetBrains Mono Bold
+# bold_font                JetBrains Mono ExtraBold
+# italic_font              JetBrains Mono Bold Italic
+# bold_italic_font         JetBrains Mono ExtraBold Italic
+# adjust_line_height       0
 disable_ligatures        never
                          
 # Seti-UI + Custom
-symbol_map U+E5FA-U+E6AC Symbols Nerd Font
+# symbol_map U+E5FA-U+E6AC Symbols Nerd Font
 # Devicons
-symbol_map U+E700-U+E7C5 Symbols Nerd Font
+# symbol_map U+E700-U+E7C5 Symbols Nerd Font
 # Font Awesome
-symbol_map U+F000-U+F2E0 Symbols Nerd Font
+# symbol_map U+F000-U+F2E0 Symbols Nerd Font
 # Font Awesome Extension
-symbol_map U+E200-U+E2A9 Symbols Nerd Font
+# symbol_map U+E200-U+E2A9 Symbols Nerd Font
 # Material Design Icons
-symbol_map U+F0001-U+F1AF0 Symbols Nerd Font
+# symbol_map U+F0001-U+F1AF0 Symbols Nerd Font
 # Weather
-symbol_map U+E300-U+E3E3 Symbols Nerd Font
+# symbol_map U+E300-U+E3E3 Symbols Nerd Font
 # Octicons
-symbol_map U+F400-U+F532,U+2665,U+26A1 Symbols Nerd Font
+# symbol_map U+F400-U+F532,U+2665,U+26A1 Symbols Nerd Font
 # Powerline Symbols
-symbol_map U+E0A0-U+E0A2,U+E0B0-U+E0B3 Symbols Nerd Font
+# symbol_map U+E0A0-U+E0A2,U+E0B0-U+E0B3 Symbols Nerd Font
 # Powerline Extra Symbols
-symbol_map U+E0A3,U+E0B4-U+E0C8,U+E0CA,U+E0CC-U+E0D4 Symbols Nerd Font
+# symbol_map U+E0A3,U+E0B4-U+E0C8,U+E0CA,U+E0CC-U+E0D4 Symbols Nerd Font
 # IEC Power Symbols
-symbol_map U+23FB-U+23FE,U+2B58 Symbols Nerd Font
+# symbol_map U+23FB-U+23FE,U+2B58 Symbols Nerd Font
 # Font Logos
-symbol_map U+F300-U+F32F Symbols Nerd Font
+# symbol_map U+F300-U+F32F Symbols Nerd Font
 # Pomicons
-symbol_map U+E000-U+E00A Symbols Nerd Font
+# symbol_map U+E000-U+E00A Symbols Nerd Font
 # Codicons
-symbol_map U+EA60-U+EBEB Symbols Nerd Font
+# symbol_map U+EA60-U+EBEB Symbols Nerd Font
 # Heavy Angle Brackets
-symbol_map U+E276C-U+2771 Symbols Nerd Font
+# symbol_map U+E276C-U+2771 Symbols Nerd Font
 # Box Drawing
-symbol_map U+2500-U+259F Symbols Nerd Font
+# symbol_map U+2500-U+259F Symbols Nerd Font
 
-remember_window_size     no
+remember_window_size     yes
 initial_window_width     80c
 initial_window_height    24c
 
 window_resize_step_cells 2
 window_resize_step_lines 2
 
-background #1a1b26
-foreground #c0caf5
-selection_background #33467C
-selection_foreground #c0caf5
-url_color #73daca
-cursor #c0caf5
+# vim:ft=kitty
+
+## name: Kanagawa_dragon
+## license: MIT
+## author: Tommaso Laurenzi
+## upstream: https://github.com/rebelot/kanagawa.nvim/
+
+
+background #181616
+foreground #c5c9c5
+selection_background #2D4F67
+selection_foreground #C8C093
+url_color #72A7BC
+cursor #C8C093
 
 # Tabs
-active_tab_background #7aa2f7
-active_tab_foreground #1f2335
-inactive_tab_background #292e42
-inactive_tab_foreground #545c7e
+active_tab_background #12120f
+active_tab_foreground #C8C093
+inactive_tab_background  #12120f
+inactive_tab_foreground #a6a69c
 #tab_bar_background #15161E
 
 # normal
-color0 #15161E
-color1 #f7768e
-color2 #9ece6a
-color3 #e0af68
-color4 #7aa2f7
-color5 #bb9af7
-color6 #7dcfff
-color7 #a9b1d6
+color0 #0d0c0c
+color1 #c4746e
+color2 #8a9a7b
+color3 #c4b28a
+color4 #8ba4b0
+color5 #a292a3
+color6 #8ea4a2
+color7 #C8C093
 
 # bright
-color8 #414868
-color9 #f7768e
-color10 #9ece6a
-color11 #e0af68
-color12 #7aa2f7
-color13 #bb9af7
-color14 #7dcfff
-color15 #c0caf5
+color8  #a6a69c
+color9  #E46876
+color10 #87a987
+color11 #E6C384
+color12 #7FB4CA
+color13 #938AA9
+color14 #7AA89F
+color15 #c5c9c5
+
 
 # extended colors
-color16 #ff9e64
-color17 #db4b4b
-
-background_opacity        0.925
-
-clear_all_shortcuts       yes
-## keybindings
-### basic
-map ctrl+shift+c copy_to_clipboard
-map ctrl+shift+v paste_from_clipboard
-map ctrl+equal change_font_size all +1.0
-map ctrl+minus change_font_size all -1.0
-map ctrl+0 change_font_size all 0
-### new window
-map ctrl+shift+enter new_os_window_with_cwd
-### custom
-#### Muhenkan ➜ Escape
-map 0xff22 send_text all \x1b
-#### Hiragana Katakan ➜ Backslash
-map 0xff27 send_text all \x5c
+color16 #b6927b
+color17 #b98d7b
+  
